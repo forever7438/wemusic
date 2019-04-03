@@ -1,7 +1,8 @@
 <template>
 	<view>
-		<view>
-			text
+		<view class="meun_list">
+			<text class="active">满减券</text>
+			<text>折扣券</text>
 		</view>
 		<couponList></couponList>
 	</view>
@@ -19,4 +20,23 @@
 	};
 </script>
 
-<style lang="less"></style>
+<style lang="less">
+	view {
+		.meun_list {
+			height: 90upx;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+
+			text {
+				font-size: 28upx;
+				font-family: PingFangSC-Medium;
+				font-weight: 500;
+				color: rgba(51, 51, 51, 1);
+			}
+			.active {
+				border-bottom: 6upx solid #000;
+			}
+		}
+	}
+</style>
