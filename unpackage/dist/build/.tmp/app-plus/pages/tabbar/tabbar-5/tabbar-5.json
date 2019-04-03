@@ -1,0 +1,20 @@
+{
+  "usingComponents": {},
+  "titleNView": {
+    "buttons": [
+      {
+        "text": "",
+        "fontSrc": "/static/iconfont/iconfont.ttf",
+        "fontSize": "22px",
+        "fontWeight": "bold"
+      },
+      {
+        "text": "",
+        "fontSrc": "/static/iconfont/iconfont.ttf",
+        "fontSize": "22px",
+        "fontWeight": "bold",
+        "float": "left"
+      }
+    ]
+  }
+}

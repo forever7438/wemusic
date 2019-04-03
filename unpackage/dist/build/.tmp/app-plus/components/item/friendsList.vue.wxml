@@ -1,0 +1,1 @@
+<template name="c6b62dfa"><view class="_view c6b62dfa"><view class="_view c6b62dfa" wx:key="index" key="{{index}}" wx:for="{{12}}" wx:for-index="index" wx:for-item="item">列表{{ index }}</view></view></template>

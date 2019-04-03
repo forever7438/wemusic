@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="UTF-8" />
+        <script>
+            var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') || CSS.supports('top: constant(a)'))
+            document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' + (coverSupport ? ', viewport-fit=cover' : '') + '" />')
+        </script>
+        <title>View</title>
+        <style>
+            * {
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            input[type="search"i]::-webkit-search-cancel-button {
+                display: none;
+            }
+
+        </style>
+        <script>
+            var __wxConfig = {"debug":false,"appname":"text","entryPagePath":"pages/tabbar/tabbar-1/tabbar-1.html","page":{"pages/tabbar/tabbar-1/tabbar-1.html":{"window":{"usingComponents":{},"navigationBarTitleText":"选课"}},"pages/tabbar/tabbar-2/tabbar-2.html":{"window":{"usingComponents":{},"navigationBarTitleText":"课程表","titleNView":{"buttons":[{"text":"","fontSrc":"/static/iconfont/iconfont.ttf","fontSize":"22px","fontWeight":"bold"}]}}},"pages/tabbar/tabbar-5/tabbar-5.html":{"window":{"usingComponents":{},"titleNView":{"buttons":[{"text":"","fontSrc":"/static/iconfont/iconfont.ttf","fontSize":"22px","fontWeight":"bold"},{"text":"","fontSrc":"/static/iconfont/iconfont.ttf","fontSize":"22px","fontWeight":"bold","float":"left"}]}}},"pages/circleFriends/circleFriends.html":{"window":{"usingComponents":{},"navigationBarTitleText":"朋友圈"}},"pages/myCoupon/myCoupon.html":{"window":{"usingComponents":{},"navigationBarTitleText":"优惠卷"}},"pages/myEvaluate/myEvaluate.html":{"window":{"usingComponents":{},"navigationBarTitleText":"评价"}},"pages/feedback/feedback.html":{"window":{"usingComponents":{},"navigationBarTitleText":"意见反馈"}},"pages/aboutUs/aboutUs.html":{"window":{"usingComponents":{},"navigationBarTitleText":"关于我们"}},"pages/courseInvitation/courseInvitation.html":{"window":{"usingComponents":{},"navigationBarTitleText":"课程邀请"}}},"global":{"window":{"navigationBarTextStyle":"black","navigationBarTitleText":"","navigationBarBackgroundColor":"#F8F8F8","backgroundColor":"#F8F8F8"}},"tabBar":{"color":"#8F8F94","selectedColor":"#f33e54","backgroundColor":"","borderStyle":"black","list":[{"pagePath":"pages/tabbar/tabbar-1/tabbar-1.html","iconPath":"static/img/tabbar/home.png","selectedIconPath":"static/img/tabbar/homeactive.png","text":""},{"pagePath":"pages/tabbar/tabbar-2/tabbar-2.html","iconPath":"static/img/tabbar/class.png","selectedIconPath":"static/img/tabbar/classactive.png","text":""},{"pagePath":"pages/tabbar/tabbar-5/tabbar-5.html","iconPath":"static/img/tabbar/me.png","selectedIconPath":"static/img/tabbar/meactive.png","text":""}],"position":"bottom"},"networkTimeout":{"request":60000,"connectSocket":60000,"uploadFile":60000,"downloadFile":60000},"platform":"devtools","pages":["pages/tabbar/tabbar-1/tabbar-1","pages/tabbar/tabbar-2/tabbar-2","pages/tabbar/tabbar-5/tabbar-5","pages/circleFriends/circleFriends","pages/myCoupon/myCoupon","pages/myEvaluate/myEvaluate","pages/feedback/feedback","pages/aboutUs/aboutUs","pages/courseInvitation/courseInvitation"],"subPackages":[],"usingComponents":{},"splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false},"compilerVersion":"1.8.2"}
+
+        </script>
+        <script>
+            var __id__ = '';
+            window.__dispatchGenerateFunc__ = function(page) {
+                __id__ = page;
+                document.title = page;
+                // window.history.pushState('', '', page);
+                plus.webview.currentWebview().setJsFile('_www/' + page.replace('.html', '.js'));
+            };
+
+        </script>
+        <script src="__uniappes6.js"></script>
+        <script src="uniapp://ready"></script>
+    </head>
+
+    <body>
+        <div></div>
+    </body>
+
+</html>

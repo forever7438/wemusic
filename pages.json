@@ -1,0 +1,117 @@
+{
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/tabbar/tabbar-1/tabbar-1",
+			"style": {
+				"navigationBarTitleText": "选课"
+			}
+		},
+		{
+			"path": "pages/tabbar/tabbar-2/tabbar-2",
+			"style": {
+				"navigationBarTitleText": "课程表",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue618",
+							"fontSrc": "/static/iconfont/iconfont.ttf",
+							"fontSize": "22px",
+							"fontWeight": "bold"
+						}]
+					}
+				}
+
+			}
+		},
+		{
+			"path": "pages/tabbar/tabbar-5/tabbar-5",
+			"style": {
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+								"text": "\ue674",
+								"fontSrc": "/static/iconfont/iconfont.ttf",
+								"fontSize": "22px",
+								"fontWeight": "bold"
+							},
+							{
+								"text": "\ue633",
+								"fontSrc": "/static/iconfont/iconfont.ttf",
+								"fontSize": "22px",
+								"fontWeight": "bold",
+								"float": "left"
+							}
+						]
+					}
+				}
+			}
+		}, {
+			"path": "pages/circleFriends/circleFriends",
+			"style": {
+				"navigationBarTitleText": "朋友圈"
+			}
+		}, {
+			"path": "pages/myCoupon/myCoupon",
+			"style": {
+				"navigationBarTitleText": "优惠卷"
+			}
+		}, {
+			"path": "pages/myEvaluate/myEvaluate",
+			"style": {
+				"navigationBarTitleText": "评价"
+			}
+		}, {
+			"path": "pages/feedback/feedback",
+			"style": {
+				"navigationBarTitleText": "意见反馈"
+			}
+		}, {
+			"path": "pages/aboutUs/aboutUs",
+			"style": {
+				"navigationBarTitleText": "关于我们"
+			}
+		}, {
+			"path": "pages/courseInvitation/courseInvitation",
+			"style": {
+				"navigationBarTitleText": "课程邀请"
+			}
+		}, {
+			"path": "pages/myFriend/myFriend",
+			"style": {
+				"navigationBarTitleText": "我的朋友圈"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"borderStyle": "black",
+		"backgroundColor": "",
+		"color": "#8F8F94",
+		"selectedColor": "#f33e54",
+		"list": [{
+				"pagePath": "pages/tabbar/tabbar-1/tabbar-1",
+				"iconPath": "static/img/tabbar/home.png",
+				"selectedIconPath": "static/img/tabbar/homeactive.png",
+				"text": ""
+			},
+			{
+				"pagePath": "pages/tabbar/tabbar-2/tabbar-2",
+				"iconPath": "static/img/tabbar/class.png",
+				"selectedIconPath": "static/img/tabbar/classactive.png",
+				"text": ""
+			},
+			{
+				"pagePath": "pages/tabbar/tabbar-5/tabbar-5",
+				"iconPath": "static/img/tabbar/me.png",
+				"selectedIconPath": "static/img/tabbar/meactive.png",
+				"text": ""
+			}
+		]
+	}
+}
