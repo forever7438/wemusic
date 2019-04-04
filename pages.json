@@ -49,7 +49,17 @@
 		}, {
 			"path": "pages/circleFriends/circleFriends",
 			"style": {
-				"navigationBarTitleText": "朋友圈"
+				"navigationBarTitleText": "朋友圈",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue637",
+							"fontSrc": "/static/iconfont/iconfont.ttf",
+							"fontSize": "22px",
+							"fontWeight": "bold"
+						}]
+					}
+				}
 			}
 		}, {
 			"path": "pages/myCoupon/myCoupon",
@@ -59,7 +69,7 @@
 		}, {
 			"path": "pages/myEvaluate/myEvaluate",
 			"style": {
-				"navigationBarTitleText": "评价"
+				"navigationBarTitleText": "我的评价"
 			}
 		}, {
 			"path": "pages/feedback/feedback",
@@ -79,7 +89,124 @@
 		}, {
 			"path": "pages/myFriend/myFriend",
 			"style": {
-				"navigationBarTitleText": "我的朋友圈"
+				"navigationBarTitleText": "我的朋友圈",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue637",
+							"fontSrc": "/static/iconfont/iconfont.ttf",
+							"fontSize": "22px",
+							"fontWeight": "bold"
+						}]
+					}
+				}
+			}
+		}, {
+			"path": "pages/friendsDetail/friendsDetail",
+			"style": {
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
+			}
+		}, {
+			"path": "pages/releaseFriends/releaseFriends",
+			"style": {
+				"navigationBarTitleText": "发布朋友圈",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+								"text": "发布",
+								"fontSize": "16px",
+								"fontWeight": "bold"
+							}
+							// 							{
+							// 								"text": "取消",
+							// 								"fontSize": "16px",
+							// 								// "fontWeight": "bold",
+							// 								"float": "left"
+							// 							}
+						]
+					}
+				}
+			}
+		}, {
+			"path": "pages/setting/setting",
+			"style": {
+				"navigationBarTitleText": "设置"
+			}
+		}, {
+			"path": "pages/updatePass/updatePass",
+			"style": {
+				"navigationBarTitleText": "修改密码"
+			}
+		}, {
+			"path": "pages/updateEmial/updateEmial",
+			"style": {
+				"navigationBarTitleText": "修改邮箱"
+			}
+		}, {
+			"path": "pages/updatePhone/updatePhone",
+			"style": {
+				"navigationBarTitleText": "修改手机号"
+			}
+		}, {
+			"path": "pages/login/login",
+			"style": {}
+		}, {
+			"path": "pages/message/message",
+			"style": {
+				"navigationBarTitleText": "消息"
+			}
+		}, {
+			"path": "pages/lesson/lesson",
+			"style": {
+				"navigationBarTitleText": "我的课程"
+			}
+		}, {
+			"path": "pages/vipCenter/vipCenter",
+			"style": {
+				"navigationBarTitleText": "会员中心"
+			}
+		}, {
+			"path": "pages/rechargeRecord/rechargeRecord",
+			"style": {
+				"navigationBarTitleText": "充值记录"
+			}
+		}, {
+			"path": "pages/consumptionRecord/consumptionRecord",
+			"style": {
+				"navigationBarTitleText": "消费记录"
+			}
+		}, {
+			"path": "pages/pay/pay",
+			"style": {
+				"navigationBarTitleText": "支付"
+			}
+		}, {
+			"path": "pages/paySuccess/paySuccess",
+			"style": {
+				"navigationBarTitleText": "充值成功"
+			}
+		}, {
+			"path": "pages/evaluate/evaluate",
+			"style": {
+				"navigationBarTitleText": "评价"
+			}
+		}, {
+			"path": "pages/classAdjustment/classAdjustment",
+			"style": {
+				"navigationBarTitleText": "调课"
+			}
+		}, {
+			"path": "pages/lessonDetail/lessonDetail",
+			"style": {
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
 			}
 		}
 	],

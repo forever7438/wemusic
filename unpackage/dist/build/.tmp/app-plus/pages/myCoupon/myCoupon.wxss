@@ -1,0 +1,73 @@
+.coupon_list view {
+  width: 100%;
+  height: 200rpx;
+  margin-bottom: 10rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background: url(../../static/img/url@2x.43e00723.png) no-repeat center / 100%;
+}
+.coupon_list view .coupon_parise {
+  margin-left: -30rpx;
+  font-size: 46rpx;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+  color: #80611e;
+}
+.coupon_list view .coupon_message .coupon_title {
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #80611e;
+  margin-bottom: 10rpx;
+}
+.coupon_list view .coupon_message .coupon_date {
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #b0882f;
+  -webkit-background-clip: text;
+}
+.coupon_list view .coupon_use ._span {
+  padding: 10rpx;
+  background: #ffffff;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #775b1f;
+}
+
+view .meun_list {
+  height: 90rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+view .meun_list text {
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+}
+view .meun_list .active {
+  border-bottom: 6rpx solid #000;
+}
+

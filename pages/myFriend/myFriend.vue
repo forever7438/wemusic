@@ -1,7 +1,5 @@
 <template>
-	<view class="fridend_content">
-		<friendsList></friendsList>
-	</view>
+	<view class="fridend_content"><friendsList></friendsList></view>
 </template>
 
 <script>
@@ -12,6 +10,11 @@ export default {
 	},
 	data() {
 		return {};
+	},
+	onNavigationBarButtonTap(obj) {
+		uni.navigateTo({
+			url: '/pages/releaseFriends/releaseFriends'
+		});
 	}
 };
 </script>

@@ -1,5 +1,9 @@
 <template>
-	<view class="content">页面 - 1</view>
+	<view class="class_list">
+		<navigator url="/pages/lessonDetail/lessonDetail">
+			<image v-for="(item, index) in 10" :key="index" src="../../../static/img/wemusic.jpg"></image>
+		</navigator>
+		</view>
 </template>
 
 <script>
@@ -14,10 +18,17 @@ export default {
 };
 </script>
 
-<style>
-.content {
-	text-align: center;
-	height: 400upx;
-	margin-top: 200upx;
+<style lang="less">
+.class_list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+	image {
+		width: 344upx;
+		height: 284upx;
+		margin: 10upx;
+		border-radius: 8upx;
+	}
 }
 </style>

@@ -1,1 +1,1 @@
-<template name="ba892c92"><view class="_view ba892c92">优惠卷</view></template>
+<import src="/components/item/couponList.vue.wxml" /><template name="ba892c92"><view class="_view ba892c92"><view class="_view ba892c92 meun_list"><text class="_text ba892c92 active">满减券</text><text class="_text ba892c92">折扣券</text></view><template data="{{...$root['0'], ...$root[$kk+'ba892c92-0'],$root}}" is="26447298"></template></view></template>

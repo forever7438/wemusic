@@ -8,7 +8,10 @@
     "pages/myEvaluate/myEvaluate",
     "pages/feedback/feedback",
     "pages/aboutUs/aboutUs",
-    "pages/courseInvitation/courseInvitation"
+    "pages/courseInvitation/courseInvitation",
+    "pages/myFriend/myFriend",
+    "pages/friendsDetail/friendsDetail",
+    "pages/releaseFriends/releaseFriends"
   ],
   "subPackages": [],
   "window": {

@@ -1,0 +1,90 @@
+<template>
+	<div class="class">
+		<ul>
+			<li v-for="(item, index) in 6" :key="index">
+				<div class="class_title">
+					<h3>吉他快速入门</h3>
+					<p>9:00 -10:00</p>
+					<s>学生 姓名</s>
+				</div>
+				<div class="class_operation">
+					<span>打卡</span>
+					<span>作业</span>
+				</div>
+				<navigator url="/pages/classAdjustment/classAdjustment"><div class="class_adjustment">调课</div></navigator>
+			</li>
+		</ul>
+	</div>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style lang="less" scoped>
+.class {
+	ul {
+		li {
+			display: flex;
+			justify-content: space-around;
+			margin-top: 40upx;
+			padding: 20upx 0;
+			background: rgba(255, 255, 255, 1);
+			box-shadow: 0upx 8upx 20upx 4upx rgba(179, 188, 198, 0.2);
+			border-radius: 8upx;
+			&:last-child {
+				margin-bottom: 80upx;
+			}
+			.class_title {
+				h3 {
+					text-align: left;
+					font-size: 40upx;
+					font-family: PingFangSC-Medium;
+					font-weight: 500;
+					color: rgba(51, 51, 51, 1);
+				}
+				p {
+					margin: 20upx 0;
+					font-size: 32upx;
+					font-family: PingFangSC-Medium;
+					font-weight: 500;
+					color: rgba(51, 51, 51, 1);
+				}
+				s {
+					font-size: 28upx;
+					font-family: PingFangSC-Regular;
+					font-weight: 400;
+					color: rgba(153, 153, 153, 1);
+				}
+			}
+			.class_operation {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				span {
+					font-size: 28upx;
+					padding: 20upx 40upx;
+					border-radius: 8upx;
+					border: 2upx solid #ddd;
+					font-family: PingFangSC-Regular;
+					font-weight: 400;
+					color: rgba(51, 51, 51, 1);
+				}
+			}
+			.class_adjustment {
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: rgba(250, 212, 42, 1);
+				border-radius: 8upx;
+				padding: 0 20upx;
+				font-size: 28upx;
+				font-family: PingFangSC-Regular;
+				font-weight: 400;
+				color: rgba(51, 51, 51, 1);
+			}
+		}
+	}
+}
+</style>

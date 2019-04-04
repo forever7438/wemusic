@@ -3,6 +3,7 @@
 		<view class="" v-for="(item, index) in 12" :key="index">
 			<friendHead></friendHead>
 			<friendContent></friendContent>
+			<video src="../../static/cont-1531578-13707370_adpkg-ad_sd.mp4" controls></video>
 			<friendOperation></friendOperation>
 		</view>
 	</view>
@@ -28,6 +29,11 @@ export default {
 .list {
 	view {
 		margin-bottom: 20upx;
+		video {
+			width: 100%;
+			height: 410upx;
+			border-radius: 12upx;
+		}
 	}
 }
 </style>

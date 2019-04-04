@@ -18,6 +18,11 @@ export default {
 	},
 	data() {
 		return {};
+	},
+	onNavigationBarButtonTap(obj) {
+		uni.navigateTo({
+			url: '/pages/releaseFriends/releaseFriends'
+		});
 	}
 };
 </script>

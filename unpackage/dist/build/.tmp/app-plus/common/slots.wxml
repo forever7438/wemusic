@@ -1,2 +1,7 @@
 <import src="/components/item/friendsList.vue.wxml" />
+<import src="/components/item/couponList.vue.wxml" />
+<import src="/components/friendsAssembly/friendHead.vue.wxml" />
+<import src="/components/friendsAssembly/friendContent.vue.wxml" />
+<import src="/components/friendsAssembly/friendOperation.vue.wxml" />
+<import src="/components/comment/comment.vue.wxml" />
 

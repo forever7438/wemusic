@@ -1,5 +1,5 @@
 <template>
-	<view class="content">
+	<view class="content_head">
 		<image src="../../static/img/lf.jpg"></image>
 		<view class="user_info">
 			<text>Jennifer Harris</text>
@@ -13,7 +13,7 @@
 </script>
 
 <style lang="less">
-.content {
+.content_head {
 	display: flex;
 	align-items: center;
 	image {
