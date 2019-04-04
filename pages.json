@@ -2,6 +2,14 @@
 	"pages": [
 		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/login/login",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
 			"path": "pages/tabbar/tabbar-1/tabbar-1",
 			"style": {
 				"navigationBarTitleText": "选课"
@@ -152,9 +160,6 @@
 				"navigationBarTitleText": "修改手机号"
 			}
 		}, {
-			"path": "pages/login/login",
-			"style": {}
-		}, {
 			"path": "pages/message/message",
 			"style": {
 				"navigationBarTitleText": "消息"
@@ -207,6 +212,29 @@
 						"type": "transparent"
 					}
 				}
+			}
+		}, {
+			"path": "pages/lessonCopy/lessonCopy",
+			"style": {
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
+			}
+		}, {
+			"path": "pages/teacherDetail/teacherDetail",
+			"style": {
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
+			}
+		}, {
+			"path": "pages/myCode/myCode",
+			"style": {
+				"navigationBarTitleText": "我的邀请码"
 			}
 		}
 	],

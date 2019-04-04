@@ -1,8 +1,9 @@
 <template>
 	<view class="class_list">
-		<navigator url="/pages/lessonDetail/lessonDetail">
+		<navigator url="/pages/lessonCopy/lessonCopy">
 			<image v-for="(item, index) in 10" :key="index" src="../../../static/img/wemusic.jpg"></image>
 		</navigator>
+		<navigator url="/pages/myCode/myCode">我的邀请码</navigator>
 		</view>
 </template>
 
