@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/tabbar/tabbar-1/tabbar-1",
     "pages/tabbar/tabbar-2/tabbar-2",
     "pages/tabbar/tabbar-5/tabbar-5",
@@ -9,7 +10,29 @@
     "pages/feedback/feedback",
     "pages/aboutUs/aboutUs",
     "pages/courseInvitation/courseInvitation",
-    "pages/myFriend/myFriend"
+    "pages/myFriend/myFriend",
+    "pages/friendsDetail/friendsDetail",
+    "pages/releaseFriends/releaseFriends",
+    "pages/setting/setting",
+    "pages/updatePass/updatePass",
+    "pages/updateEmial/updateEmial",
+    "pages/updatePhone/updatePhone",
+    "pages/message/message",
+    "pages/lesson/lesson",
+    "pages/vipCenter/vipCenter",
+    "pages/rechargeRecord/rechargeRecord",
+    "pages/consumptionRecord/consumptionRecord",
+    "pages/pay/pay",
+    "pages/paySuccess/paySuccess",
+    "pages/evaluate/evaluate",
+    "pages/classAdjustment/classAdjustment",
+    "pages/lessonDetail/lessonDetail",
+    "pages/lessonCopy/lessonCopy",
+    "pages/teacherDetail/teacherDetail",
+    "pages/myCode/myCode",
+    "pages/register/register",
+    "pages/classNotice/classNotice",
+    "pages/codeSuccess/codeSuccess"
   ],
   "subPackages": [],
   "window": {
@@ -49,6 +72,6 @@
     "alwaysShowBeforeRender": true,
     "autoclose": false
   },
-  "appname": "text",
+  "appname": "weMusic",
   "compilerVersion": "1.8.2"
 }

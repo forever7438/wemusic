@@ -102,6 +102,7 @@
   line-height: 54rpx;
 }
 .content .messgae .user_money .pay_btn {
+  display: inline-block;
   width: 116rpx;
   line-height: 46rpx;
   background: #ffffff;

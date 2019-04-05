@@ -2,13 +2,13 @@
 	<view class="lesson_comment">
 		<text class="teacher_class">{{title}}</text>
 		<view class="comment" v-for="(item,index) in 6" :key='index'>
-			<view class="">
+			<view class="comment_infos">
 				<image src="../../static/img/lf.jpg"></image>
 				<view class="comment_info">
 					<text class="comment_title">Edward Williams</text>
 					<text class="lesson_class">吉他速成班19期</text>
 				</view>
-				<startclass></startclass>
+				<startclass size="16"></startclass>
 			</view>
 			<text class="comment_content">
 				教室整洁舒适，老师很有耐心，教育质量优秀。
@@ -23,8 +23,8 @@
 		components: {
 			startclass
 		},
-		props:{
-			title:String
+		props: {
+			title: String
 		}
 	}
 </script>
@@ -43,12 +43,12 @@
 
 		.comment {
 			margin: 20upx 0;
-			view {
+
+			.comment_infos {
 				display: flex;
 				align-items: center;
-				justify-content: space-between;
 				padding: 0 20upx;
-			
+
 				image {
 					width: 80upx;
 					height: 80upx;
@@ -56,6 +56,7 @@
 				}
 
 				.comment_info {
+					margin: 0 20upx;
 					display: flex;
 					align-items: end;
 					flex-direction: column;

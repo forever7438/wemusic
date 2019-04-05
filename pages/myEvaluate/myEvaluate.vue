@@ -9,43 +9,46 @@
 </template>
 
 <script>
-import lessonList from '../../components/item/lessonList.vue';
-export default {
-	components: {
-		lessonList
-	},
-	data() {
-		return {
-			lessonType: '',
-			isActive: true,
-			isActives: false
-		};
-	},
-	onLoad(obj) {
-		this.lessonType = obj.type;
-	}
-};
+	import lessonList from '../../components/item/lessonList.vue';
+	export default {
+		components: {
+			lessonList
+		},
+		data() {
+			return {
+				lessonType: '',
+				isActive: true,
+				isActives: false
+			};
+		},
+		onLoad(obj) {
+			this.lessonType = obj.type;
+		}
+	};
 </script>
 
 <style lang="less" scoped>
-.my_evaluate_content {
-	padding: 0 15upx;
-	ul {
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-		font-size: 36upx;
-		font-family: PingFangSC-Regular;
-		font-weight: 600;
-		color: rgba(51, 51, 51, 1);
-		height: 90upx;
-		li {
+	.my_evaluate_content {
+		padding: 0 15upx;
+
+		ul {
 			display: flex;
 			align-items: center;
-		}
-		.isActive {
-			border-bottom: 6upx solid #333333ff;
+			justify-content: space-around;
+			font-size: 36upx;
+			font-family: PingFangSC-Regular;
+			font-weight: 600;
+			color: rgba(51, 51, 51, 1);
+			height: 90upx;
+
+			li {
+				display: flex;
+				align-items: center;
+			}
+
+			.isActive {
+				color: #fad42a;
+			}
 		}
 	}
-}
 </style>

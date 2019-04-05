@@ -117,7 +117,7 @@ export default {
 	padding: 0 15upx;
 
 	.messgae {
-		height: 146 * 2upx;
+		height: 270upx;
 		padding: 30upx;
 		background: linear-gradient(135deg, rgba(217, 179, 121, 1) 0%, rgba(162, 127, 74, 1) 100%);
 		border-radius: 16upx;

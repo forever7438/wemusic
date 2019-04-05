@@ -1,0 +1,1 @@
+<import src="/components/item/messageList.vue.wxml" /><template name="bc80208a"><view class="_div bc80208a messgae_content"><template data="{{...$root['0'], ...$root[$kk+'bc80208a-0'],$root}}" is="2eb0622e"></template></view></template>

@@ -1,0 +1,98 @@
+.register {
+  padding: 0 144rpx;
+}
+.register .register_image {
+  margin: 164rpx 190rpx;
+  text-align: center;
+}
+.register .register_image image {
+  width: 102rpx;
+  height: 102rpx;
+}
+.register .register_acount {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30rpx;
+}
+.register .register_acount text {
+  width: 100rpx;
+  height: 44rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+}
+.register .register_acount input {
+  padding-left: 10rpx;
+  border-bottom: 2rpx solid #000;
+}
+.register .register_pass {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30rpx;
+}
+.register .register_pass text {
+  width: 100rpx;
+  height: 44rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+}
+.register .register_pass input {
+  padding-left: 10rpx;
+  border-bottom: 2rpx solid #000;
+}
+.register .register_code {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 100rpx;
+}
+.register .register_code text {
+  width: 190rpx;
+  height: 44rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+}
+.register .register_code input {
+  width: 370rpx;
+  padding-left: 10rpx;
+  border-bottom: 2rpx solid #000;
+}
+.register .register_code .get_code {
+  width: 320rpx;
+  border: 1px solid #000;
+  border-radius: 8rpx;
+  padding: 2rpx;
+}
+.register button {
+  width: auto;
+  line-height: 88rpx;
+  background: #fad42a;
+  border-radius: 12rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+}
+

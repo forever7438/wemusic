@@ -20,8 +20,8 @@ export default {
 view {
 	padding: 0 15upx;
 	textarea {
+		width: auto;
 		margin: 30upx 0;
-		width: 100%;
 		height: 500upx;
 		padding: 30upx;
 		background: rgba(249, 249, 249, 1);
@@ -32,7 +32,6 @@ view {
 		color: rgba(144, 144, 144, 1);
 	}
 	.uni-input {
-		width: 100%;
 		height: 92upx;
 		padding-left: 30upx;
 		background: rgba(249, 249, 249, 1);

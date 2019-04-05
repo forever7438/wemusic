@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"messgae_content { padding: 0 ",[0,15],"; }\n",],undefined,{path:"./pages/message/message.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/message/message.wxml') } }));

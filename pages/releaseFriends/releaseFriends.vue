@@ -62,8 +62,8 @@ export default {
 view {
 	padding: 0 15upx;
 	textarea {
-		width: 100%;
-		height: 1000upx;
+		width: auto;
+		height: 800upx;
 		padding: 38upx;
 	}
 	.choose_image {

@@ -207,6 +207,7 @@
 		}, {
 			"path": "pages/lessonDetail/lessonDetail",
 			"style": {
+				"navigationBarTitleText": "课程详情",
 				"app-plus": {
 					"titleNView": {
 						"type": "transparent"
@@ -216,6 +217,7 @@
 		}, {
 			"path": "pages/lessonCopy/lessonCopy",
 			"style": {
+				"navigationBarTitleText": "课程类型",
 				"app-plus": {
 					"titleNView": {
 						"type": "transparent"
@@ -225,6 +227,7 @@
 		}, {
 			"path": "pages/teacherDetail/teacherDetail",
 			"style": {
+				"navigationBarTitleText": "教师详情",
 				"app-plus": {
 					"titleNView": {
 						"type": "transparent"
@@ -235,6 +238,23 @@
 			"path": "pages/myCode/myCode",
 			"style": {
 				"navigationBarTitleText": "我的邀请码"
+			}
+		}, {
+			"path": "pages/register/register",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+		}, {
+			"path": "pages/classNotice/classNotice",
+			"style": {
+				"navigationBarTitleText": "调整通知"
+			}
+		}, {
+			"path": "pages/codeSuccess/codeSuccess",
+			"style": {
+				"navigationBarTitleText": "打卡",
+				"navigationBarTextStyle":"white",
+				"navigationBarBackgroundColor": "#333333"
 			}
 		}
 	],

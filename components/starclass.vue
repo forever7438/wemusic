@@ -34,7 +34,7 @@ export default {
 
 <style lang="less" scoped>
 .start_class {
-	margin-top: 40upx;
+	margin-top: 10upx;
 	p {
 		font-size: 32upx;
 		font-family: PingFangSC-Medium;

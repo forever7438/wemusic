@@ -1,6 +1,37 @@
 <template>
-	<view>
-		登录
+	<view class="login">
+		<view class="login_image">
+			<image src="../../static/img/open_ico.png"></image>
+		</view>
+		<view class="login_acount">
+			<text>账号</text>
+			<input type="text" />
+		</view>
+		<view class="login_pass">
+			<text>密码</text>
+			<input type="password" />
+		</view>
+		<button @click="login">登录</button>
+		<view class="login_option">
+			<navigator url="/pages/register/register">
+				<text>注册</text>
+			</navigator>
+			<text>忘记密码</text>
+		</view>
+		<button style="background-color: #fff;border: 2upx solid #000;">教师端</button>
+		<view class="login_third">
+			<text>第三方快捷登录</text>
+		</view>
+		<view class="login_party">
+			<view class="login_weixin">
+				<image src="../../static/img/weixin.png"></image>
+				<text>Wechat</text>
+			</view>
+			<view class="login_facebook">
+				<image src="../../static/img/facebook.png"></image>
+				<text>Facebook</text>
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -8,12 +39,134 @@
 	export default {
 		data() {
 			return {
-				
+
 			};
+		},
+		methods: {
+			//登录
+			login() {
+				uni.switchTab({
+					url: "/pages/tabbar/tabbar-1/tabbar-1"
+				})
+			}
 		}
 	}
 </script>
 
 <style lang="less">
+	.login {
+		padding: 0 144upx;
 
+		.login_image {
+			margin: 164upx 190upx;
+			text-align: center;
+
+			image {
+				width: 102upx;
+				height: 102upx;
+			}
+
+		}
+
+		.login_acount {
+			display: flex;
+			align-items: center;
+			margin-bottom: 30upx;
+
+			text {
+				width: 100upx;
+				height: 44upx;
+				font-size: 32upx;
+				font-family: PingFangSC-Regular;
+				font-weight: 400;
+				color: rgba(51, 51, 51, 1);
+			}
+
+			input {
+				padding-left: 10upx;
+				border-bottom: 2upx solid #000;
+			}
+		}
+
+		.login_pass {
+			display: flex;
+			align-items: center;
+			margin-bottom: 100upx;
+
+			text {
+				width: 100upx;
+				height: 44upx;
+				font-size: 32upx;
+				font-family: PingFangSC-Regular;
+				font-weight: 400;
+				color: rgba(51, 51, 51, 1);
+			}
+
+			input {
+				padding-left: 10upx;
+				border-bottom: 2upx solid #000;
+			}
+		}
+
+		button {
+			width: auto;
+			line-height: 88upx;
+			background: rgba(250, 212, 42, 1);
+			border-radius: 12upx;
+			font-size: 32upx;
+			font-family: PingFangSC-Medium;
+			font-weight: 500;
+			color: rgba(51, 51, 51, 1);
+		}
+
+		.login_option {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin: 30upx 0 50upx;
+
+			text {
+				font-size: 32upx;
+				font-family: PingFangSC-Regular;
+				font-weight: 400;
+				color: rgba(51, 51, 51, 1);
+			}
+		}
+
+		.login_third {
+			margin: 40upx 0;
+			width: auto;
+			text-align: center;
+			font-size: 24upx;
+			font-family: PingFangSC-Regular;
+			font-weight: 400;
+			color: rgba(153, 153, 153, 1);
+		}
+
+		.login_party {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0 90upx;
+
+			view {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				image {
+					width: 44upx;
+					height: 44upx;
+					margin-bottom: 10upx;
+				}
+
+				text {
+					font-size: 20upx;
+					font-family: PingFangSC-Regular;
+					font-weight: 400;
+					color: rgba(153, 153, 153, 1);
+				}
+			}
+		}
+	}
 </style>

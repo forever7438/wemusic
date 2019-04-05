@@ -26,9 +26,9 @@ export default {
 	align-items: center;
 	justify-content: space-around;
 	image {
-		width: 344upx;
+		width: 350upx;
 		height: 284upx;
-		margin: 10upx;
+		margin: 12upx;
 		border-radius: 8upx;
 	}
 }

@@ -8,83 +8,107 @@
 					<s>学生 姓名</s>
 				</div>
 				<div class="class_operation">
-					<span>打卡</span>
+					<span @click="sendCard">打卡</span>
 					<span>作业</span>
 				</div>
-				<navigator url="/pages/classAdjustment/classAdjustment"><div class="class_adjustment">调课</div></navigator>
+				<navigator url="/pages/classAdjustment/classAdjustment">
+					<div class="class_adjustment">调课</div>
+				</navigator>
 			</li>
 		</ul>
 	</div>
 </template>
 
 <script>
-export default {};
+	export default {
+		methods: {
+			//开启扫码功能
+			sendCard() {
+				// 				uni.scanCode({
+				// 					success: function(res) {
+				// 						console.log('条码类型：' + res.scanType);
+				// 						console.log('条码内容：' + res.result);
+				// 					}
+				// 				});
+				uni.navigateTo({
+					url: "/pages/codeSuccess/codeSuccess"
+				})
+			}
+		}
+	};
 </script>
 
 <style lang="less" scoped>
-.class {
-	ul {
-		li {
-			display: flex;
-			justify-content: space-around;
-			margin-top: 40upx;
-			padding: 20upx 0;
-			background: rgba(255, 255, 255, 1);
-			box-shadow: 0upx 8upx 20upx 4upx rgba(179, 188, 198, 0.2);
-			border-radius: 8upx;
-			&:last-child {
-				margin-bottom: 80upx;
-			}
-			.class_title {
-				h3 {
-					text-align: left;
-					font-size: 40upx;
-					font-family: PingFangSC-Medium;
-					font-weight: 500;
-					color: rgba(51, 51, 51, 1);
-				}
-				p {
-					margin: 20upx 0;
-					font-size: 32upx;
-					font-family: PingFangSC-Medium;
-					font-weight: 500;
-					color: rgba(51, 51, 51, 1);
-				}
-				s {
-					font-size: 28upx;
-					font-family: PingFangSC-Regular;
-					font-weight: 400;
-					color: rgba(153, 153, 153, 1);
-				}
-			}
-			.class_operation {
+	.class {
+		ul {
+			li {
 				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				span {
-					font-size: 28upx;
-					padding: 20upx 40upx;
-					border-radius: 8upx;
-					border: 2upx solid #ddd;
-					font-family: PingFangSC-Regular;
-					font-weight: 400;
-					color: rgba(51, 51, 51, 1);
-				}
-			}
-			.class_adjustment {
-				height: 100%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				background: rgba(250, 212, 42, 1);
+				justify-content: space-around;
+				margin-top: 40upx;
+				padding: 20upx 0;
+				background: rgba(255, 255, 255, 1);
+				box-shadow: 0upx 8upx 20upx 4upx rgba(179, 188, 198, 0.2);
 				border-radius: 8upx;
-				padding: 0 20upx;
-				font-size: 28upx;
-				font-family: PingFangSC-Regular;
-				font-weight: 400;
-				color: rgba(51, 51, 51, 1);
+
+				&:last-child {
+					margin-bottom: 80upx;
+				}
+
+				.class_title {
+					h3 {
+						text-align: left;
+						font-size: 40upx;
+						font-family: PingFangSC-Medium;
+						font-weight: 500;
+						color: rgba(51, 51, 51, 1);
+					}
+
+					p {
+						margin: 20upx 0;
+						font-size: 32upx;
+						font-family: PingFangSC-Medium;
+						font-weight: 500;
+						color: rgba(51, 51, 51, 1);
+					}
+
+					s {
+						font-size: 28upx;
+						font-family: PingFangSC-Regular;
+						font-weight: 400;
+						color: rgba(153, 153, 153, 1);
+					}
+				}
+
+				.class_operation {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+
+					span {
+						font-size: 28upx;
+						padding: 20upx 40upx;
+						border-radius: 8upx;
+						border: 2upx solid #ddd;
+						font-family: PingFangSC-Regular;
+						font-weight: 400;
+						color: rgba(51, 51, 51, 1);
+					}
+				}
+
+				.class_adjustment {
+					height: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background: rgba(250, 212, 42, 1);
+					border-radius: 8upx;
+					padding: 0 20upx;
+					font-size: 28upx;
+					font-family: PingFangSC-Regular;
+					font-weight: 400;
+					color: rgba(51, 51, 51, 1);
+				}
 			}
 		}
 	}
-}
 </style>

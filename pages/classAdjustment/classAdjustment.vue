@@ -26,104 +26,118 @@
 </template>
 
 <script>
-import uniRate from '@/components/uni-rate/uni-rate.vue';
-export default {
-	components: {
-		uniRate
-	},
-	data() {
-		return {
-			value: 3
-		};
-	}
-};
+	import uniRate from '@/components/uni-rate/uni-rate.vue';
+	export default {
+		components: {
+			uniRate
+		},
+		data() {
+			return {
+				value: 3
+			};
+		}
+	};
 </script>
 
 <style lang="less" scoped>
-h3 {
-	text-align: left;
-	margin: 30upx 0;
-	font-size: 48upx;
-	font-family: PingFangSC-Medium;
-	font-weight: 500;
-	color: rgba(51, 51, 51, 1);
-}
-.classAdjustment {
-	padding: 0 15upx;
-	.lesson_message {
-		margin-top: 20upx;
-		display: flex;
-		align-items: center;
-		image {
-			width: 254upx;
-			height: 160upx;
-		}
-		p {
-			text-align: left;
-			margin-left: 40upx;
-			span {
-				font-size: 32upx;
-				font-family: PingFangSC-Medium;
-				font-weight: 500;
-				color: rgba(26, 26, 26, 1);
+	h3 {
+		text-align: left;
+		margin: 30upx 0;
+		font-size: 48upx;
+		font-family: PingFangSC-Medium;
+		font-weight: 500;
+		color: rgba(51, 51, 51, 1);
+	}
+
+	.classAdjustment {
+		padding: 0 15upx;
+
+		.lesson_message {
+			margin-top: 20upx;
+			display: flex;
+			align-items: center;
+
+			image {
+				width: 254upx;
+				height: 160upx;
 			}
-			s {
-				font-size: 24upx;
+
+			p {
+				text-align: left;
+				margin-left: 40upx;
+
+				span {
+					font-size: 32upx;
+					font-family: PingFangSC-Medium;
+					font-weight: 500;
+					color: rgba(26, 26, 26, 1);
+				}
+
+				s {
+					font-size: 24upx;
+					font-family: PingFangSC-Regular;
+					font-weight: 400;
+					color: rgba(153, 153, 153, 1);
+				}
+			}
+		}
+
+		.lesson_date {
+			text-align: left;
+
+			span {
+				display: inline-block;
+				padding: 20upx;
+				background: rgba(51, 51, 51, 1);
+				border-radius: 8upx;
+				font-size: 28upx;
+				font-family: PingFangSC-Regular;
+				color: rgba(255, 255, 255, 1);
+				font-size: 14px;
+				font-weight: 400;
+			}
+
+			p {
+				margin-top: 30upx;
+				font-size: 32upx;
 				font-family: PingFangSC-Regular;
 				font-weight: 400;
-				color: rgba(153, 153, 153, 1);
+				color: rgba(102, 102, 102, 1);
+			}
+		}
+
+		.lesson_time {
+			text-align: left;
+
+			span {
+				display: inline-block;
+				padding: 20upx;
+				background: rgba(51, 51, 51, 1);
+				border-radius: 8upx;
+				font-size: 24upx;
+				font-family: PingFangSC-Regular;
+				color: rgba(255, 255, 255, 1);
+			}
+
+			p {
+				margin-top: 30upx;
+				font-size: 28upx;
+				font-family: PingFangSC-Regular;
+				font-weight: 400;
+				color: rgba(102, 102, 102, 1);
+			}
+		}
+
+		.adjustment_reason {
+			text-align: left;
+
+			textarea {
+				width: auto;
+				height: 266upx;
+				padding: 20upx;
+				background: rgba(249, 249, 249, 1);
+				border-radius: 12upx;
 			}
 		}
 	}
-	.lesson_date {
-		text-align: left;
-		span {
-			display: inline-block;
-			padding: 20upx;
-			background: rgba(51, 51, 51, 1);
-			border-radius: 8upx;
-			font-size: 28upx;
-			font-family: PingFangSC-Regular;
-			color: rgba(255, 255, 255, 1);
-			font-size: 14px;
-			font-weight: 400;
-		}
-		p {
-			margin-top: 30upx;
-			font-size: 32upx;
-			font-family: PingFangSC-Regular;
-			font-weight: 400;
-			color: rgba(102, 102, 102, 1);
-		}
-	}
-	.lesson_time {
-		text-align: left;
-		span {
-			display: inline-block;
-			padding: 20upx;
-			background: rgba(51, 51, 51, 1);
-			border-radius: 8upx;
-			font-size: 24upx;
-			font-family: PingFangSC-Regular;
-			color: rgba(255, 255, 255, 1);
-		}
-		p {
-			margin-top: 30upx;
-			font-size: 28upx;
-			font-family: PingFangSC-Regular;
-			font-weight: 400;
-			color: rgba(102, 102, 102, 1);
-		}
-	}
-	.adjustment_reason {
-		text-align: left;
-		textarea {
-			width: 100%;
-			height: 266upx;
-			padding: 20upx;
-			background: rgba(249, 249, 249, 1);
-			border-radius: 12upx;
-		}
-	}
-}
 </style>

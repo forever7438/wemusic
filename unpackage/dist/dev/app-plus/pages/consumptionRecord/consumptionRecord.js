@@ -1,0 +1,2 @@
+setCssToHead(["wx-view { padding: 0 ",[0,15],"; }\n",],undefined,{path:"./pages/consumptionRecord/consumptionRecord.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/consumptionRecord/consumptionRecord.wxml') } }));

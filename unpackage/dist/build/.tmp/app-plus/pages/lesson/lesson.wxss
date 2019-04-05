@@ -1,0 +1,35 @@
+.my_lesson_content.data-v-175da12f {
+  padding: 0 15rpx;
+}
+.my_lesson_content ._ul.data-v-175da12f {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  font-size: 36rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 600;
+  color: #333333;
+  height: 90rpx;
+}
+.my_lesson_content ._ul ._li.data-v-175da12f {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.my_lesson_content ._ul .isActive.data-v-175da12f {
+  border-bottom: 6rpx solid #333333ff;
+}
+

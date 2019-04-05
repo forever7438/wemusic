@@ -81,7 +81,7 @@ export default {
 			margin-bottom: 20upx;
 		}
 		textarea {
-			width: 100%;
+			width: auto;
 			height: 262upx;
 			background: rgba(249, 249, 249, 1);
 			padding: 20upx;

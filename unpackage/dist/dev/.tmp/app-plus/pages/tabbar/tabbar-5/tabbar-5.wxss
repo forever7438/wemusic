@@ -4,7 +4,7 @@
   padding: 0 15rpx;
 }
 .content .messgae {
-  height: 292rpx;
+  height: 270rpx;
   padding: 30rpx;
   background: -o-linear-gradient(315deg, #d9b379 0%, #a27f4a 100%);
   background: linear-gradient(135deg, #d9b379 0%, #a27f4a 100%);
@@ -102,6 +102,7 @@
   line-height: 54rpx;
 }
 .content .messgae .user_money .pay_btn {
+  display: inline-block;
   width: 116rpx;
   line-height: 46rpx;
   background: #ffffff;

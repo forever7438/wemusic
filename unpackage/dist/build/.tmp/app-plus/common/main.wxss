@@ -1,4 +1,13 @@
 
+._ul {
+	padding-left: 0;
+}
+._li {
+	list-style: none;
+}
+._s {
+	text-decoration: none;
+}
 uni-image > ._img {
 	opacity: 1;
 }

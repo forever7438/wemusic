@@ -195,7 +195,7 @@ page {
 
 .calendar-content {
 	padding: 10upx 0;
-	/* padding-bottom: 60upx; */
+	box-sizing: border-box;
 	font-size: 26upx;
 }
 
