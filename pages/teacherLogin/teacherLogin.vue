@@ -1,38 +1,22 @@
 <template>
-	<view class="login">
-		<view class="login_image">
+	<view class="teacher_login">
+		<view class="teacher_login_image">
 			<image src="../../static/img/open_ico.png"></image>
 		</view>
-		<view class="login_acount">
+		<view class="teacher_login_acount">
 			<text>账号</text>
 			<input type="text" />
 		</view>
-		<view class="login_pass">
+		<view class="teacher_login_pass">
 			<text>密码</text>
 			<input type="password" />
 		</view>
-		<button @click="login">登录</button>
-		<view class="login_option">
-			<navigator url="/pages/register/register">
-				<text>注册</text>
+		<button @click="teacher_login">登录</button>
+		<view class="teacher_login_option">
+			<navigator url="/pages/addTeacher/addTeacher">
+				<text>教师入驻</text>
 			</navigator>
 			<text>忘记密码</text>
-		</view>
-		<navigator url="/pages/teacherLogin/teacherLogin">
-			<button style="background-color: #fff;border: 2upx solid #000;">教师端</button>
-		</navigator>
-		<view class="login_third">
-			<text>第三方快捷登录</text>
-		</view>
-		<view class="login_party">
-			<view class="login_weixin">
-				<image src="../../static/img/weixin.png"></image>
-				<text>Wechat</text>
-			</view>
-			<view class="login_facebook">
-				<image src="../../static/img/facebook.png"></image>
-				<text>Facebook</text>
-			</view>
 		</view>
 	</view>
 </template>
@@ -46,7 +30,7 @@
 		},
 		methods: {
 			//登录
-			login() {
+			teacher_login() {
 				uni.switchTab({
 					url: "/pages/tabbar/tabbar-1/tabbar-1"
 				})
@@ -56,10 +40,10 @@
 </script>
 
 <style lang="less">
-	.login {
+	.teacher_login {
 		padding: 0 144upx;
 
-		.login_image {
+		.teacher_login_image {
 			margin: 164upx 190upx;
 			text-align: center;
 
@@ -70,7 +54,7 @@
 
 		}
 
-		.login_acount {
+		.teacher_login_acount {
 			display: flex;
 			align-items: center;
 			margin-bottom: 30upx;
@@ -90,7 +74,7 @@
 			}
 		}
 
-		.login_pass {
+		.teacher_login_pass {
 			display: flex;
 			align-items: center;
 			margin-bottom: 100upx;
@@ -121,7 +105,7 @@
 			color: rgba(51, 51, 51, 1);
 		}
 
-		.login_option {
+		.teacher_login_option {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
@@ -135,7 +119,7 @@
 			}
 		}
 
-		.login_third {
+		.teacher_login_third {
 			margin: 40upx 0;
 			width: auto;
 			text-align: center;
@@ -145,7 +129,7 @@
 			color: rgba(153, 153, 153, 1);
 		}
 
-		.login_party {
+		.teacher_login_party {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;

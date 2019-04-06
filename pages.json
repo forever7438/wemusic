@@ -253,8 +253,19 @@
 			"path": "pages/codeSuccess/codeSuccess",
 			"style": {
 				"navigationBarTitleText": "打卡",
-				"navigationBarTextStyle":"white",
+				"navigationBarTextStyle": "white",
 				"navigationBarBackgroundColor": "#333333"
+			}
+		}, {
+			"path": "pages/teacherLogin/teacherLogin",
+			"style": {
+				"navigationBarBackgroundColor": "#FFF"
+			}
+		}, {
+			"path": "pages/addTeacher/addTeacher",
+			"style": {
+				"navigationBarTitleText": "教师入驻",
+				"navigationBarBackgroundColor": "#FFF"
 			}
 		}
 	],

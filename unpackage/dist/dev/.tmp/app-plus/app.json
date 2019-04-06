@@ -32,7 +32,9 @@
     "pages/myCode/myCode",
     "pages/register/register",
     "pages/classNotice/classNotice",
-    "pages/codeSuccess/codeSuccess"
+    "pages/codeSuccess/codeSuccess",
+    "pages/teacherLogin/teacherLogin",
+    "pages/addTeacher/addTeacher"
   ],
   "subPackages": [],
   "window": {

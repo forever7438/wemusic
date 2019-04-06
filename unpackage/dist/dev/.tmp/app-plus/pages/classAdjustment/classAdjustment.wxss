@@ -6,10 +6,10 @@
   font-weight: 500;
   color: #333333;
 }
-.classAdjustment.data-v-17c91b1a {
+.classAdjustment ._div.data-v-17c91b1a {
   padding: 0 15rpx;
 }
-.classAdjustment .lesson_message.data-v-17c91b1a {
+.classAdjustment ._div .lesson_message.data-v-17c91b1a {
   margin-top: 20rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -20,30 +20,30 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.classAdjustment .lesson_message image.data-v-17c91b1a {
+.classAdjustment ._div .lesson_message image.data-v-17c91b1a {
   width: 254rpx;
   height: 160rpx;
 }
-.classAdjustment .lesson_message ._p.data-v-17c91b1a {
+.classAdjustment ._div .lesson_message ._p.data-v-17c91b1a {
   text-align: left;
   margin-left: 40rpx;
 }
-.classAdjustment .lesson_message ._p ._span.data-v-17c91b1a {
+.classAdjustment ._div .lesson_message ._p ._span.data-v-17c91b1a {
   font-size: 32rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   color: #1a1a1a;
 }
-.classAdjustment .lesson_message ._p ._s.data-v-17c91b1a {
+.classAdjustment ._div .lesson_message ._p ._s.data-v-17c91b1a {
   font-size: 24rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;
   color: #999999;
 }
-.classAdjustment .lesson_date.data-v-17c91b1a {
+.classAdjustment ._div .lesson_date.data-v-17c91b1a {
   text-align: left;
 }
-.classAdjustment .lesson_date ._span.data-v-17c91b1a {
+.classAdjustment ._div .lesson_date ._span.data-v-17c91b1a {
   display: inline-block;
   padding: 20rpx;
   background: #333333;
@@ -54,17 +54,17 @@
   font-size: 14px;
   font-weight: 400;
 }
-.classAdjustment .lesson_date ._p.data-v-17c91b1a {
+.classAdjustment ._div .lesson_date ._p.data-v-17c91b1a {
   margin-top: 30rpx;
   font-size: 32rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;
   color: #666666;
 }
-.classAdjustment .lesson_time.data-v-17c91b1a {
+.classAdjustment ._div .lesson_time.data-v-17c91b1a {
   text-align: left;
 }
-.classAdjustment .lesson_time ._span.data-v-17c91b1a {
+.classAdjustment ._div .lesson_time ._span.data-v-17c91b1a {
   display: inline-block;
   padding: 20rpx;
   background: #333333;
@@ -73,21 +73,33 @@
   font-family: PingFangSC-Regular;
   color: #ffffff;
 }
-.classAdjustment .lesson_time ._p.data-v-17c91b1a {
+.classAdjustment ._div .lesson_time ._p.data-v-17c91b1a {
   margin-top: 30rpx;
   font-size: 28rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;
   color: #666666;
 }
-.classAdjustment .adjustment_reason.data-v-17c91b1a {
+.classAdjustment ._div .adjustment_reason.data-v-17c91b1a {
   text-align: left;
 }
-.classAdjustment .adjustment_reason textarea.data-v-17c91b1a {
+.classAdjustment ._div .adjustment_reason textarea.data-v-17c91b1a {
   width: auto;
   height: 266rpx;
   padding: 20rpx;
   background: #f9f9f9;
   border-radius: 12rpx;
+}
+.classAdjustment .sign_up.data-v-17c91b1a {
+  text-align: center;
+  margin-top: 40rpx;
+  display: inline-block;
+  width: 100%;
+  line-height: 100rpx;
+  background: #fad42a;
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
 }
 

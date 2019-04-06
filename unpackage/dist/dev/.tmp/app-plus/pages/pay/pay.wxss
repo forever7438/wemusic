@@ -88,4 +88,17 @@
   font-weight: 400;
   color: #ffffff;
 }
+.pay_content .sign_up {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  width: 100%;
+  line-height: 100rpx;
+  background: #fad42a;
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+}
 
