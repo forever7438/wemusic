@@ -1,16 +1,16 @@
 <template>
 	<div class="lesson_content">
 		<ul>
-			<li v-for="(item, index) in 6" :key="index">
-				<navigator v-if="lessonType==='lessonCopy'" url="/pages/lessonDetail/lessonDetail">
-					<image src="../../static/img/demo.jpg">
+			<li v-for="(item, index) in listInfo" :key="index">
+				<navigator v-if="lessonType==='lessonCopy'" :url="'/pages/lessonDetail/lessonDetail?lessonId='+item.id">
+					<image :src="item.photo || image">
 					</image>
 				</navigator>
-				<image v-else src="../../static/img/demo.jpg">
+				<image v-else :src="item.photo || image">
 				</image>
 				<div class="lesson_messgae">
-					<p class="lesson_title">吉他快速入门</p>
-					<startclass v-if="lessonType==='lessonCopy' || lessonType==='teacherDetail'" size='14'></startclass>
+					<p class="lesson_title">{{item.name}}</p>
+					<startclass :star='item.star' v-if="lessonType==='lessonCopy' || lessonType==='teacherDetail'" size='14'></startclass>
 					<p v-else class="lesson_winer">教师 Jennifer Young</p>
 					<div class="lesson_pay">
 						<span v-if="lessonType==='lessonCopy' || lessonType==='teacherDetail'" class="teacher_number">共5名教师</span>
@@ -19,7 +19,8 @@
 						<navigator url="/pages/evaluate/evaluate" v-if="lessonType === '2'"><span class="go_pay">去支付</span></navigator>
 						<navigator url="/pages/evaluate/evaluate" v-if="lessonType === '3'"><span class="go_pay">查看</span></navigator>
 						<navigator url="/pages/evaluate/evaluate" v-if="lessonType === '4'"><span class="go_pay">去评价</span></navigator>
-						<navigator url="/pages/evaluate/evaluate" v-if="lessonType==='lessonCopy' || lessonType==='teacherDetail'"><span class="go_pay">报名</span></navigator>
+						<navigator url="/pages/evaluate/evaluate" v-if="lessonType==='lessonCopy' || lessonType==='teacherDetail'"><span
+							 class="go_pay">报名</span></navigator>
 					</div>
 				</div>
 			</li>
@@ -38,7 +39,13 @@
 				type: String,
 				default: '4'
 			}, //lessonType类型判断  1为全部  2为待支付  3为待开课  4为已完成
-		}
+			listInfo: Array
+		},
+		data() {
+			return {
+				image: '../../static/img/demo.jpg'
+			}
+		},
 	};
 </script>
 

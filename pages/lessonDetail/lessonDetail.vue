@@ -24,7 +24,32 @@
 			lessonScience
 		},
 		data() {
-			return {};
+			return {
+				musicIndexInfo: {}
+			};
+		},
+		onLoad(obj) {
+			this.getMusicIndexInfo(obj.lessonId)
+		},
+		methods: {
+			//获取课程详情
+			getMusicIndexInfo(lessonId) {
+				this.ajax({
+					url: 'music/index_info',
+					data: {
+						music_id: lessonId
+					},
+					method: 'post',
+					success: (res) => {
+						if (res.data.body === 'success') {
+							this.musicIndexInfo = res.data.data;
+							uni.setNavigationBarTitle({
+								title: res.data.data.name
+							})
+						}
+					}
+				})
+			}
 		}
 	};
 </script>

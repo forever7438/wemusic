@@ -8,9 +8,10 @@
 ._s {
 	text-decoration: none;
 }
-uni-image > ._img {
+uni-image>._img {
 	opacity: 1;
 }
+
 /*每个页面公共css */
 .iconfont {
 	font-family: 'iconfont' !important;

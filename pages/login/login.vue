@@ -5,11 +5,11 @@
 		</view>
 		<view class="login_acount">
 			<text>账号</text>
-			<input type="text" />
+			<input type="text" v-model="email" />
 		</view>
 		<view class="login_pass">
 			<text>密码</text>
-			<input type="password" />
+			<input type="password" v-model="pass" />
 		</view>
 		<button @click="login">登录</button>
 		<view class="login_option">
@@ -41,14 +41,55 @@
 	export default {
 		data() {
 			return {
-
+				email: '',
+				pass: ''
 			};
 		},
+		onLoad() {},
 		methods: {
 			//登录
 			login() {
-				uni.switchTab({
-					url: "/pages/tabbar/tabbar-1/tabbar-1"
+				if (!this.email) {
+					uni.showToast({
+						title: '账号不得为空'
+					});
+					return
+				}
+				if (!this.pass) {
+					uni.showToast({
+						title: '密码不得为空'
+					});
+					return
+				}
+				this.ajax({
+					url: 'index/login',
+					data: {
+						email: this.email,
+						pass: this.pass
+					},
+					header: {
+						"Content-Type": "application/json",
+						"role": "student"
+					},
+					success: (res) => {
+						if (res.data.data === 'success') {
+							//登录成功,存储token全局使用
+							uni.setStorage({
+									key: "token",
+									data: res.data.body.token
+								}),
+								uni.switchTab({
+									url: "/pages/tabbar/tabbar-1/tabbar-1"
+								})
+						} else {
+							uni.showToast({
+								title: res.data.msg
+							});
+						}
+					},
+					error: (error) => {
+
+					}
 				})
 			}
 		}

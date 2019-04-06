@@ -8,4 +8,10 @@
   font-weight: 500;
   color: #333333;
 }
+.lesson_copy .all_lesson .lesson_nothing {
+  font-size: 40rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+}
 

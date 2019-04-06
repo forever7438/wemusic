@@ -36,6 +36,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _HBu
 
 /***/ }),
 
+/***/ "../../../wemusic/common.js":
+/*!****************************!*\
+  !*** E:/wemusic/common.js ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.ajax = void 0; //后台服务地址\n//  h5环境\n\n\n\n//  app环境\n\nvar ApiUrl = 'http://wemusic.ikenweb.com/api/';\n\n\nvar ajax = function ajax(opt) {\n  uni.showLoading({\n    title: 'loading' });\n\n  opt = opt || {};\n  opt.url = opt.url || '';\n  opt.data = opt.data || null;\n  opt.method = opt.method || 'POST';\n  if (uni.getStorageSync('token')) {\n    opt.header = opt.header || {\n      \"Content-Type\": \"application/json\",\n      \"role\": \"student\",\n      \"Authorization\": uni.getStorageSync('token') };\n\n  }\n  opt.success = opt.success || function () {};\n\n  uni.request({\n    url: ApiUrl + opt.url,\n    data: opt.data,\n    method: opt.method,\n    header: opt.header,\n    dataType: 'json',\n    success: function success(res) {\n      uni.hideLoading();\n      opt.success(res);\n    },\n    fail: function fail() {\n      uni.showToast({\n        title: '请稍后重试' });\n\n    } });\n\n};exports.ajax = ajax;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ \"./node_modules/@dcloudio/uni-app-plus/dist/index.js\")[\"default\"]))\n\n//# sourceURL=uni-app:///common.js?a051");
+
+/***/ }),
+
 /***/ "../../../wemusic/main.js":
 /*!**************************!*\
   !*** E:/wemusic/main.js ***!
@@ -44,7 +56,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _HBu
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__(/*! uni-pages */ \"../../../wemusic/pages.json\");\nvar _vue = _interopRequireDefault(__webpack_require__(/*! vue */ \"./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mpvue/index.js\"));\nvar _App = _interopRequireDefault(__webpack_require__(/*! ./App */ \"../../../wemusic/App.vue\"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}\n\n_vue.default.config.productionTip = false;\n\n_App.default.mpType = 'app';\n\nvar app = new _vue.default(_objectSpread({},\n_App.default));\n\napp.$mount();\n\n//# sourceURL=uni-app:///main.js?b490");
+eval("__webpack_require__(/*! uni-pages */ \"../../../wemusic/pages.json\");\nvar _vue = _interopRequireDefault(__webpack_require__(/*! vue */ \"./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mpvue/index.js\"));\nvar _App = _interopRequireDefault(__webpack_require__(/*! ./App */ \"../../../wemusic/App.vue\"));\nvar _common = __webpack_require__(/*! ./common.js */ \"../../../wemusic/common.js\");function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}\n\n\n_vue.default.config.productionTip = false;\n//封装请求方法\n_vue.default.prototype.ajax = _common.ajax;\n_App.default.mpType = 'app';\nvar app = new _vue.default(_objectSpread({},\n_App.default));\n\napp.$mount();\n\n//# sourceURL=uni-app:///main.js?b490");
 
 /***/ }),
 

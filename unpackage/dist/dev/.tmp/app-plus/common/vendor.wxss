@@ -592,7 +592,7 @@ uni-icon {
           align-items: center;
 }
 .start_class .start_class_in .number.data-v-67be1db3 {
-  margin-left: 0.3rem;
+  margin-left: 10rpx;
   font-size: 40rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;

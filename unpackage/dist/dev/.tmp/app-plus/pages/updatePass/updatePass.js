@@ -68,7 +68,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _HBu
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;var _default =\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  data: function data() {\n    return {\n      pass: '',\n      new_pass: '',\n      rest_pass: '' };\n\n  } };exports.default = _default;\n\n//# sourceURL=uni-app:///pages/updatePass/updatePass.vue?vue&type=script&lang=js&?5818");
+eval("/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;var _default =\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{\n  data: function data() {\n    return {\n      pass: '',\n      new_pass: '',\n      rest_pass: '' };\n\n  },\n  methods: {\n    //修改密码\n    updatePassword: function updatePassword() {\n      if (!this.pass) {\n        uni.showToast({\n          title: \"请输入原密码\" });\n\n        return;\n      }\n      if (!this.new_pass) {\n        uni.showToast({\n          title: \"请输入新密码\" });\n\n        return;\n      }\n\n    } } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ \"./node_modules/@dcloudio/uni-app-plus/dist/index.js\")[\"default\"]))\n\n//# sourceURL=uni-app:///pages/updatePass/updatePass.vue?vue&type=script&lang=js&?5818");
 
 /***/ }),
 

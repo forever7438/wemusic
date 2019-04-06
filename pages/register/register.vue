@@ -5,15 +5,15 @@
 		</view>
 		<view class="register_acount">
 			<text>账号</text>
-			<input type="text" />
+			<input type="text" v-model="email" />
 		</view>
 		<view class="register_pass">
 			<text>密码</text>
-			<input type="password" />
+			<input type="password" v-model="pass" />
 		</view>
 		<view class="register_code">
 			<text>验证码</text>
-			<input type="number" />
+			<input type="number" v-model="code" />
 			<text class="get_code">获取验证码</text>
 		</view>
 		<button @click="register">注册</button>
@@ -24,14 +24,54 @@
 	export default {
 		data() {
 			return {
-
+				email: '',
+				pass: '',
+				code: ''
 			};
 		},
 		methods: {
-			//登录
+			//注册
 			register() {
-				uni.switchTab({
-					url: "/pages/tabbar/tabbar-1/tabbar-1"
+				if (!this.email) {
+					uni.showToast({
+						title: '请填写邮箱'
+					})
+					return
+				}
+				if (!this.pass) {
+					uni.showToast({
+						title: '请填写密码'
+					})
+					return
+				}
+				if (!this.code) {
+					uni.showToast({
+						title: '验证码不得为空'
+					})
+					return
+				}
+				this.ajax({
+					url: 'index/registered',
+					header: {
+						"Content-Type": "application/json",
+						"role": "student"
+					},
+					success: (res) => {
+						if (res.data.data === 'success') {
+							uni.showToast({
+								title: '注册成功,快去登录吧！'
+							})
+							setTimeout(() => {
+								uni.switchTab({
+									url: "/pages/login/login"
+								})
+							}, 1500)
+						} else {
+							uni.showToast({
+								title: res.data.msg
+							})
+						}
+					}
 				})
 			}
 		}

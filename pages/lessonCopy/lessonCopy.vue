@@ -1,9 +1,12 @@
 <template>
 	<view class="lesson_copy">
-		<lessonHead title='吉他' headType='lessonCopy' content='吉他在流行音乐、摇滚音乐、蓝调、民歌、佛朗明哥中，常被视为主要乐器。而在古典音乐的领域里，吉他常以独奏或二重奏的型式演出；当然，在室内乐和管弦乐中，吉他亦扮演着相当程度的陪衬角色。'></lessonHead>
+		<lessonHead v-if='flag' :title='musicInfo.info.name' headType='lessonCopy' :content='musicInfo.info.content || "暂无介绍"'></lessonHead>
 		<view class="all_lesson">
-			<text class="lesson_tips">全部课程</text>
-			<lessonList lessonType='lessonCopy'></lessonList>
+			<view v-if="flag">
+				<text class="lesson_tips">全部课程</text>
+				<lessonList v-if='musicInfo.list.length' :listInfo='musicInfo.list' lessonType='lessonCopy'></lessonList>
+				<view class="lesson_nothing" v-else>暂无课程</view>
+			</view>
 		</view>
 	</view>
 </template>
@@ -18,8 +21,34 @@
 		},
 		data() {
 			return {
-
+				musicInfo: {},
+				flag: false
 			};
+		},
+		onLoad(obj) {
+			this.getMusicInfo(obj.musicId);
+		},
+		methods: {
+			//获取艺术详情
+			getMusicInfo(musicId) {
+				this.ajax({
+					url: 'music/info',
+					data: {
+						music_id: musicId
+					},
+					method: 'post',
+					success: (res) => {
+						if (res.data.body === 'success') {
+							this.flag = true;
+							this.musicInfo = res.data.data;
+							//设置tabbar标题
+							uni.setNavigationBarTitle({
+								title: res.data.data.info.name
+							})
+						}
+					}
+				})
+			}
 		}
 	}
 </script>
@@ -32,6 +61,13 @@
 
 			.lesson_tips {
 				font-size: 48upx;
+				font-family: PingFangSC-Medium;
+				font-weight: 500;
+				color: rgba(51, 51, 51, 1);
+			}
+
+			.lesson_nothing {
+				font-size: 40upx;
 				font-family: PingFangSC-Medium;
 				font-weight: 500;
 				color: rgba(51, 51, 51, 1);
