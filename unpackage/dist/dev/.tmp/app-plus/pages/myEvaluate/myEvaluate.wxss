@@ -1,7 +1,7 @@
-.my_evaluate_content.data-v-35f3bba4 {
+.my_evaluate_content.data-v-501717e0 {
   padding: 0 15rpx;
 }
-.my_evaluate_content ._ul.data-v-35f3bba4 {
+.my_evaluate_content ._ul.data-v-501717e0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19,7 +19,7 @@
   color: #333333;
   height: 90rpx;
 }
-.my_evaluate_content ._ul ._li.data-v-35f3bba4 {
+.my_evaluate_content ._ul ._li.data-v-501717e0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -29,7 +29,7 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.my_evaluate_content ._ul .isActive.data-v-35f3bba4 {
+.my_evaluate_content ._ul .isActive.data-v-501717e0 {
   color: #fad42a;
 }
 

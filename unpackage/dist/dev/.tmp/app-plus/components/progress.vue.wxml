@@ -1,0 +1,1 @@
+<template name="73e3af4e"><view class="_view 73e3af4e shode"><view class="_view 73e3af4e uni-padding-wrap uni-common-mt"><view class="_view 73e3af4e progress-box"><progress percent="{{progress}}" show-info="true" active stroke-width="10" class="_progress 73e3af4e" /></view></view></view></template>

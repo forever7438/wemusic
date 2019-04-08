@@ -1,2 +1,2 @@
 <import src="./circleFriends.vue.wxml" />
-    <template is="0a852477" data="{{ ...$root['0'], $root }}"/>
+    <template is="41049303" data="{{ ...$root['0'], $root }}"/>

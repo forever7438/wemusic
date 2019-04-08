@@ -12,7 +12,7 @@
 			</li>
 		</ul>
 		<s>绑定手机号后，您可以使用手机号或邮箱登录</s>
-		<span class="btn" @click="update_email">确&nbsp;&nbsp;定</span>
+		<span class="btn" @click="updatePhone">确&nbsp;&nbsp;定</span>
 	</div>
 </template>
 
@@ -24,6 +24,52 @@ export default {
 			new_email: '',
 			reg: new RegExp('^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$')
 		};
+	},
+	methods: {
+		//修改手机号
+		updatePhone() {
+			if (!this.new_email) {
+				uni.showToast({
+					title: '请输入手机号',
+					icon: 'none'
+				});
+				return;
+			}
+			if (!this.reg.test(this.new_email)) {
+				uni.showToast({
+					title: '手机号格式不正确',
+					icon: 'none'
+				});
+				return;
+			}
+			if (!this.code) {
+				uni.showToast({
+					title: '请输入验证码',
+					icon: 'none'
+				});
+				return;
+			}
+			this.ajax({
+				url: 'user/update_email',
+				data: {
+					new_email: this.new_email,
+					code: this.code
+				},
+				success: res => {
+					if (res.data.body === 'success') {
+						uni.showToast({
+							title: '邮箱修改成功',
+							icon: 'none'
+						});
+					} else {
+						uni.showToast({
+							title: res.data.msg,
+							icon: 'none'
+						});
+					}
+				}
+			});
+		}
 	}
 };
 </script>

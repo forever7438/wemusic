@@ -58,6 +58,7 @@
 			"path": "pages/circleFriends/circleFriends",
 			"style": {
 				"navigationBarTitleText": "朋友圈",
+				"enablePullDownRefresh": true,
 				"app-plus": {
 					"titleNView": {
 						"buttons": [{
@@ -98,6 +99,7 @@
 			"path": "pages/myFriend/myFriend",
 			"style": {
 				"navigationBarTitleText": "我的朋友圈",
+				"enablePullDownRefresh": true,
 				"app-plus": {
 					"titleNView": {
 						"buttons": [{
@@ -125,17 +127,10 @@
 				"app-plus": {
 					"titleNView": {
 						"buttons": [{
-								"text": "发布",
-								"fontSize": "16px",
-								"fontWeight": "bold"
-							}
-							// 							{
-							// 								"text": "取消",
-							// 								"fontSize": "16px",
-							// 								// "fontWeight": "bold",
-							// 								"float": "left"
-							// 							}
-						]
+							"text": "发布",
+							"fontSize": "16px",
+							"fontWeight": "bold"
+						}]
 					}
 				}
 			}
@@ -266,6 +261,20 @@
 			"style": {
 				"navigationBarTitleText": "教师入驻",
 				"navigationBarBackgroundColor": "#FFF"
+			}
+		}, {
+			"path": "pages/updateUserinfo/updateUserinfo",
+			"style": {
+				"navigationBarTitleText": "修改个人资料",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "确定",
+							"fontSize": "16px",
+							"fontWeight": "bold"
+						}]
+					}
+				}
 			}
 		}
 	],

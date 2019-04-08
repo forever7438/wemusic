@@ -1,2 +1,2 @@
-setCssToHead([".",[1],"messgae_content.",[1],"data-v-11d50470 { padding: 0 ",[0,15],"; }\n",],undefined,{path:"./pages/classNotice/classNotice.wxss"})();
+setCssToHead([".",[1],"messgae_content.",[1],"data-v-070154bc { padding: 0 ",[0,15],"; }\n",],undefined,{path:"./pages/classNotice/classNotice.wxss"})();
 document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/classNotice/classNotice.wxml') } }));

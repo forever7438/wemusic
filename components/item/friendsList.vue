@@ -1,8 +1,8 @@
 <template>
 	<view class="list">
-		<view class="" v-for="(item, index) in 12" :key="index">
-			<friendHead></friendHead>
-			<friendContent></friendContent>
+		<view class="" v-for="(item, index) in friendsList" :key="index">
+			<friendHead :itemHead="item"></friendHead>
+			<friendContent :content="item.body" :listId='item.id'></friendContent>
 			<video src="../../static/cont-1531578-13707370_adpkg-ad_sd.mp4" controls></video>
 			<friendOperation></friendOperation>
 		</view>
@@ -18,6 +18,9 @@ export default {
 		friendHead,
 		friendContent,
 		friendOperation
+	},
+	props: {
+		friendsList: Array
 	},
 	data() {
 		return {};

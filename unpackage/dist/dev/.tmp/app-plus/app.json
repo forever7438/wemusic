@@ -34,7 +34,8 @@
     "pages/classNotice/classNotice",
     "pages/codeSuccess/codeSuccess",
     "pages/teacherLogin/teacherLogin",
-    "pages/addTeacher/addTeacher"
+    "pages/addTeacher/addTeacher",
+    "pages/updateUserinfo/updateUserinfo"
   ],
   "subPackages": [],
   "window": {
@@ -69,6 +70,9 @@
         "text": ""
       }
     ]
+  },
+  "networkTimeout": {
+    "uploadFile": 86400000
   },
   "splashscreen": {
     "alwaysShowBeforeRender": true,

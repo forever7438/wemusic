@@ -2,7 +2,7 @@
 	<div class="comment_list">
 		<h3>
 			评论
-			<span>(25)</span>
+			<span>({{ message }})</span>
 		</h3>
 		<ul>
 			<li v-for="(item, index) in 5" :key="index">
@@ -19,7 +19,14 @@
 	</div>
 </template>
 
-<script></script>
+<script>
+export default {
+	props: {
+		message: Number,
+		list: Array
+	}
+};
+</script>
 
 <style lang="less">
 .comment_list {

@@ -1,2 +1,2 @@
 <import src="./classAdjustment.vue.wxml" />
-    <template is="1707bdb7" data="{{ ...$root['0'], $root }}"/>
+    <template is="0bd50643" data="{{ ...$root['0'], $root }}"/>

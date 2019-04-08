@@ -1,6 +1,7 @@
 {
   "usingComponents": {},
   "navigationBarTitleText": "我的朋友圈",
+  "enablePullDownRefresh": true,
   "titleNView": {
     "buttons": [
       {

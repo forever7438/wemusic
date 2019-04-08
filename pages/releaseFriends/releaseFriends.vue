@@ -1,46 +1,37 @@
 <template>
 	<view>
-		<textarea placeholder="分享学习心得…" />
-		<view class="choose_image" @click="chooseImage">照片/拍摄</view>
+		<progress-bar v-if="show" :progress="progress"></progress-bar>
+		<textarea placeholder="分享学习心得…" v-model="body" />
+		<view v-if="video" class="choose_images"><video :src="video" controls></video></view>
+		<view v-else class="choose_image" @click="chooseVideo">照片/拍摄</view>
 	</view>
 </template>
 
 <script>
+import { ApiUrl } from '../../common/common.js';
+import progressBar from '../../components/progress.vue';
+let _this = '';
 export default {
+	components: {
+		progressBar
+	},
 	data() {
-		return {};
+		return {
+			video: '',
+			body: '',
+			show: false,
+			progress: 0
+		};
+	},
+	onLoad() {
+		_this = this;
 	},
 	methods: {
-		chooseImage: function() {
-			uni.chooseImage({
+		chooseVideo: e => {
+			uni.chooseVideo({
 				count: 1,
-				sizeType: ['compressed'],
-				sourceType: ['album'],
 				success: res => {
-					console.log('chooseImage success, temp path is', res.tempFilePaths[0]);
-					var imageSrc = res.tempFilePaths[0];
-					uni.uploadFile({
-						url: 'https://unidemo.dcloud.net.cn/upload',
-						filePath: imageSrc,
-						fileType: 'image',
-						name: 'data',
-						success: res => {
-							console.log('uploadImage success, res is:', res);
-							uni.showToast({
-								title: '上传成功',
-								icon: 'success',
-								duration: 1000
-							});
-							// this.imageSrc = imageSrc;
-						},
-						fail: err => {
-							console.log('uploadImage fail', err);
-							uni.showModal({
-								content: err.errMsg,
-								showCancel: false
-							});
-						}
-					});
+					_this.video = res.tempFilePath;
 				},
 				fail: err => {
 					console.log('chooseImage fail', err);
@@ -49,10 +40,51 @@ export default {
 		}
 	},
 	onNavigationBarButtonTap(obj) {
-		uni.showToast({
-			title: '成功',
-			icon: 'success',
-			duration: 1000
+		if (!this.video) {
+			uni.showToast({
+				title: '请选择视频',
+				icon: 'none'
+			});
+			return;
+		}
+		if (!this.body) {
+			uni.showToast({
+				title: '请填写内容',
+				icon: 'none'
+			});
+			return;
+		}
+		const uploadTask = uni.uploadFile({
+			url: ApiUrl + 'friend/add_friend',
+			filePath: this.video,
+			name: 'video',
+			header: {
+				'Content-Type': 'application/json',
+				role: 'student',
+				Authorization: uni.getStorageSync('token')
+			},
+			formData: {
+				body: this.body
+			},
+			success: res => {
+				const info = JSON.parse(res.data);
+				if (info.body === 'success') {
+					this.show = false;
+					uni.showToast({
+						title: '发布成功',
+						icon: 'none'
+					});
+				} else {
+					uni.showToast({
+						title: info.msg,
+						icon: 'none'
+					});
+				}
+			}
+		});
+		uploadTask.onProgressUpdate(res => {
+			_this.show = true;
+			_this.progress = res.progress;
 		});
 	}
 };
@@ -74,6 +106,18 @@ view {
 		font-size: 24upx;
 		font-family: PingFangSC-Medium;
 		font-weight: 500;
+	}
+	.choose_images {
+		width: 200upx;
+		line-height: 200upx;
+		text-align: center;
+		font-size: 24upx;
+		font-family: PingFangSC-Medium;
+		font-weight: 500;
+		video {
+			width: 200upx;
+			height: 200upx;
+		}
 	}
 }
 </style>

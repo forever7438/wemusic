@@ -1,15 +1,26 @@
 <template>
 	<view class="content_head">
-		<image src="../../static/img/lf.jpg"></image>
+		<image :src="itemHead.people_photo || imageUrl"></image>
 		<view class="user_info">
-			<text>Jennifer Harris</text>
-			<text>3小时前</text>
+			<text>{{ itemHead.people_name }}</text>
+			<text>{{ itemHead.add_time }}</text>
 		</view>
 	</view>
 </template>
 
 <script>
-	
+import { sysTime } from '../../common/common.js';
+export default {
+	props: {
+		itemHead: Object
+	},
+	data() {
+		return {
+			imageUrl: '../../static/img/lf.jpg',
+			add_time: ''
+		};
+	},
+};
 </script>
 
 <style lang="less">

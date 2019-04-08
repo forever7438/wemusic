@@ -1,3 +1,15 @@
+.shode {
+  z-index: 999999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 600rpx 100rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 view {
   padding: 0 15rpx;
 }
@@ -14,5 +26,17 @@ view .choose_image {
   font-size: 24rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
+}
+view .choose_images {
+  width: 200rpx;
+  line-height: 200rpx;
+  text-align: center;
+  font-size: 24rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+}
+view .choose_images video {
+  width: 200rpx;
+  height: 200rpx;
 }
 

@@ -2,20 +2,28 @@
 	<view class="operation">
 		<view>
 			<image src="../../static/img/zhuanfa@2x.png"></image>
-			<text>12</text>
+			<text>{{ forward }}</text>
 		</view>
 		<view>
 			<image src="../../static/img/comment@2x.png"></image>
-			<text>66</text>
+			<text>{{ message }}</text>
 		</view>
 		<view>
 			<image src="../../static/img/dianzan@2x.png"></image>
-			<text>88</text>
+			<text>{{ praise }}</text>
 		</view>
 	</view>
 </template>
 
-<script></script>
+<script>
+export default {
+	props: {
+		message: Number,
+		praise: Number,
+		forward: Number
+	}
+};
+</script>
 
 <style lang="less">
 .operation {

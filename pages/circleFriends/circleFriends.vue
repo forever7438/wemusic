@@ -6,7 +6,7 @@
 				<image src="../../static/img/arrow.png"></image>
 			</view>
 		</navigator>
-		<friendsList></friendsList>
+		<friendsList :friendsList="friendsList"></friendsList>
 	</view>
 </template>
 
@@ -17,12 +17,34 @@ export default {
 		friendsList
 	},
 	data() {
-		return {};
+		return {
+			friendsList: []
+		};
+	},
+	onLoad() {
+		this.getFriendList();
 	},
 	onNavigationBarButtonTap(obj) {
 		uni.navigateTo({
 			url: '/pages/releaseFriends/releaseFriends'
 		});
+	},
+	methods: {
+		//获取朋友圈列表
+		getFriendList() {
+			this.ajax({
+				url: 'friend/list',
+				data: {
+					val: 5,
+					list: 1
+				},
+				success: res => {
+					if (res.data.body === 'success') {
+						this.friendsList = res.data.data;
+					}
+				}
+			});
+		}
 	}
 };
 </script>

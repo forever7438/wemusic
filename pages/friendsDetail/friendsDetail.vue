@@ -1,10 +1,10 @@
 <template>
 	<view class="content">
 		<video src="../../static/cont-1531578-13707370_adpkg-ad_sd.mp4" controls></video>
-		<friendHead></friendHead>
-		<friendContent></friendContent>
-		<friendOperation></friendOperation>
-		<comment></comment>
+		<friendHead :itemHead="friendDetail"></friendHead>
+		<friendContent :content="friendDetail.body"></friendContent>
+		<friendOperation :message="friendDetail.message" :praise="friendDetail.praise" :forward="friendDetail.forward"></friendOperation>
+		<comment :list="friendDetail.list" :message="friendDetail.message"></comment>
 	</view>
 </template>
 
@@ -21,7 +21,27 @@ export default {
 		comment
 	},
 	data() {
-		return {};
+		return {
+			friendDetail: {}
+		};
+	},
+	onLoad(obj) {
+		this.getFriendDetail(obj.listId);
+	},
+	methods: {
+		//获取朋友圈详情
+		getFriendDetail(listId) {
+			this.ajax({
+				url: 'friend/info',
+				data: {
+					friend_id: listId
+				},
+				success: res => {
+					console.log(res);
+					this.friendDetail = res.data.data;
+				}
+			});
+		}
 	}
 };
 </script>
