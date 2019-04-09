@@ -13,7 +13,10 @@
 					<startclass :star='item.star' v-if="lessonType==='lessonCopy' || lessonType==='teacherDetail'" size='14'></startclass>
 					<p v-else class="lesson_winer">教师 Jennifer Young</p>
 					<div class="lesson_pay">
-						<span v-if="lessonType==='lessonCopy' || lessonType==='teacherDetail'" class="teacher_number">共5名教师</span>
+						<span v-if="lessonType==='lessonCopy' 
+							  || lessonType==='teacherDetail'" 
+							  class="teacher_number">
+							  {{item.teacher_count > 0 ? '共 '+item.teacher_count+' 名教师' : '暂无教师'}}</span>
 						<span v-else class="start_time">2019年3月15日开课</span>
 						<navigator url="/pages/evaluate/evaluate" v-if="lessonType === '1'"><span class="go_pay">去评价</span></navigator>
 						<navigator url="/pages/evaluate/evaluate" v-if="lessonType === '2'"><span class="go_pay">去支付</span></navigator>
