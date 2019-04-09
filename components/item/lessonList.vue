@@ -55,15 +55,15 @@
 			li {
 				display: flex;
 				border-top: 2upx solid #ddd;
-				padding: 15upx 0;
+				padding: 30upx 0;
 
 				&:first-child {
 					border-top: 0;
 				}
 
 				image {
-					width: 400upx;
-					height: 160upx;
+					width: 254upx;
+					height: 100%;
 				}
 
 				.lesson_messgae {

@@ -1,2 +1,2 @@
 <import src="./updateUserinfo.vue.wxml" />
-    <template is="c758e412" data="{{ ...$root['0'], $root }}"/>
+    <template is="07f5926b" data="{{ ...$root['0'], $root }}"/>

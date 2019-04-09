@@ -1,2 +1,0 @@
-setCssToHead([".",[1],"about_us { padding: 0 ",[0,15],"; }\n.",[1],"about_us wx-image { width: 100%; height: ",[0,210],"; border-radius: ",[0,12],"; }\n.",[1],"about_us wx-text { font-size: ",[0,28],"; font-family: PingFangSC-Regular; font-weight: 400; color: #333333; line-height: ",[0,50],"; }\n",],undefined,{path:"./pages/aboutUs/aboutUs.wxss"})();
-document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/aboutUs/aboutUs.wxml') } }));

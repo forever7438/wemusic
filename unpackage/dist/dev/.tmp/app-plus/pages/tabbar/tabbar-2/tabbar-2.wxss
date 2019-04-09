@@ -260,7 +260,7 @@
 	font-size: 28rpx
 }
 
-.class ._ul ._li.data-v-321a176f {
+.class ._ul ._li.data-v-a7794586 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -275,30 +275,30 @@
           box-shadow: 0rpx 8rpx 20rpx 4rpx rgba(179, 188, 198, 0.2);
   border-radius: 8rpx;
 }
-.class ._ul ._li.data-v-321a176f:last-child {
+.class ._ul ._li.data-v-a7794586:last-child {
   margin-bottom: 80rpx;
 }
-.class ._ul ._li .class_title ._h3.data-v-321a176f {
+.class ._ul ._li .class_title ._h3.data-v-a7794586 {
   text-align: left;
   font-size: 40rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   color: #333333;
 }
-.class ._ul ._li .class_title ._p.data-v-321a176f {
+.class ._ul ._li .class_title ._p.data-v-a7794586 {
   margin: 20rpx 0;
   font-size: 32rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   color: #333333;
 }
-.class ._ul ._li .class_title ._s.data-v-321a176f {
+.class ._ul ._li .class_title ._s.data-v-a7794586 {
   font-size: 28rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;
   color: #999999;
 }
-.class ._ul ._li .class_operation.data-v-321a176f {
+.class ._ul ._li .class_operation.data-v-a7794586 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -313,7 +313,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.class ._ul ._li .class_operation ._span.data-v-321a176f {
+.class ._ul ._li .class_operation ._span.data-v-a7794586 {
   font-size: 28rpx;
   padding: 20rpx 40rpx;
   border-radius: 8rpx;
@@ -322,7 +322,7 @@
   font-weight: 400;
   color: #333333;
 }
-.class ._ul ._li .class_adjustment.data-v-321a176f {
+.class ._ul ._li .class_adjustment.data-v-a7794586 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;

@@ -15,7 +15,7 @@
       -ms-flex-pack: distribute;
           justify-content: space-around;
 }
-.my_code .code_option input {
+.my_code .code_option ._input {
   width: 426rpx;
   height: 88rpx;
   padding-left: 20rpx;

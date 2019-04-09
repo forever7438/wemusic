@@ -1,2 +1,2 @@
 <import src="./rechargeRecord.vue.wxml" />
-    <template is="c44bf992" data="{{ ...$root['0'], $root }}"/>
+    <template is="097c07ab" data="{{ ...$root['0'], $root }}"/>

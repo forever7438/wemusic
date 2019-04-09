@@ -1,7 +1,7 @@
 view {
   padding: 0 15rpx;
 }
-view textarea {
+view ._textarea {
   width: auto;
   margin: 30rpx 0;
   height: 500rpx;
@@ -22,7 +22,7 @@ view .uni-input {
   font-weight: 400;
   color: #909090;
 }
-view button {
+view ._button {
   margin-top: 80rpx;
   background: #fad42a;
   font-size: 32rpx;

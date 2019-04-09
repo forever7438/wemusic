@@ -33,7 +33,7 @@
   font-size: 32rpx;
   font-weight: 600;
 }
-.change_emial ._ul ._li input {
+.change_emial ._ul ._li ._input {
   border: none;
   margin-bottom: 0;
 }

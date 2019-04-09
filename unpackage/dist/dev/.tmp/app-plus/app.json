@@ -78,6 +78,5 @@
     "alwaysShowBeforeRender": true,
     "autoclose": false
   },
-  "appname": "weMusic",
-  "compilerVersion": "1.8.2"
+  "appname": "weMusic"
 }

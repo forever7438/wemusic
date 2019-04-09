@@ -47,7 +47,7 @@
 			// justify-content: center;
 			.number {
 				margin-left: 10upx;
-				font-size: 40upx;
+				font-size: 24upx;
 				font-family: PingFangSC-Regular;
 				font-weight: 400;
 				color: rgba(51, 51, 51, 1);
