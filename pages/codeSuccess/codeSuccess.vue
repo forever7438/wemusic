@@ -53,14 +53,15 @@
 
 <style lang="less">
 	.code_success {
-		padding: 0 15upx;
+		padding: 64upx 30upx 40upx 30upx;
 		background-color: #333;
 
 		.code_content {
 			width: 100%;
 			background-color: #fff;
 			text-align: center;
-
+			border-radius:12upx;
+			
 			image {
 				width: 120upx;
 				height: 120upx;
@@ -172,6 +173,10 @@
 					height: 262upx;
 					background: rgba(249, 249, 249, 1);
 					padding: 20upx;
+					font-size:28upx;
+					font-weight:400;
+					color:rgba(153,153,153,1);
+					line-height:40upx;
 				}
 			}
 
