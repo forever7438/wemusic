@@ -1,0 +1,13 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "财务管理",
+  "titleNView": {
+    "buttons": [
+      {
+        "text": "切换年份",
+        "fontSize": "16px",
+        "fontWeight": "bold"
+      }
+    ]
+  }
+}

@@ -8,7 +8,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;var _default =\n\n\n\n\n\n\n\n\n{\n  props: {\n    progress: Number } };exports.default = _default;\n\n//# sourceURL=uni-app:///components/progress.vue?vue&type=script&lang=js&?db89");
+eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;var _default =\n\n\n\n\n\n\n\n\n\n\n{\n  props: {\n    progress: Number } };exports.default = _default;\n\n//# sourceURL=uni-app:///components/progress.vue?vue&type=script&lang=js&?db89");
 
 /***/ }),
 
@@ -54,7 +54,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=E:/wemusic/pages/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"view\", { staticClass: \"shode\" }, [\n    _c(\"view\", { staticClass: \"uni-padding-wrap uni-common-mt\" }, [\n      _c(\n        \"view\",\n        { staticClass: \"progress-box\" },\n        [\n          _c(\"progress\", {\n            attrs: {\n              percent: _vm.progress,\n              \"show-info\": \"true\",\n              active: \"\",\n              \"stroke-width\": \"10\"\n            }\n          })\n        ],\n        1\n      )\n    ])\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=E:/wemusic/components/progress.vue?vue&type=template&id=cb2e68bc&");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _vm._m(0)\n}\nvar staticRenderFns = [\n  function() {\n    var _vm = this\n    var _h = _vm.$createElement\n    var _c = _vm._self._c || _h\n    return _c(\"view\", { staticClass: \"shode\" }, [\n      _c(\"view\", { staticClass: \"uni-padding-wrap uni-common-mt\" }, [\n        _c(\"view\", { staticClass: \"progress-box\" })\n      ])\n    ])\n  }\n]\nrender._withStripped = true\n\n\n\n//# sourceURL=E:/wemusic/components/progress.vue?vue&type=template&id=cb2e68bc&");
 
 /***/ }),
 

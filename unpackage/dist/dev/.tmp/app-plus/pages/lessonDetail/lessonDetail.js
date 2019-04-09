@@ -20,7 +20,7 @@ eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.de
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar _starclass = _interopRequireDefault(__webpack_require__(/*! ../starclass.vue */ \"E:\\\\wemusic\\\\components\\\\starclass.vue\"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =\n{\n  components: {\n    startclass: _starclass.default },\n\n  data: function data() {\n    return {\n      indicatorDots: false,\n      autoplay: false,\n      interval: 2000,\n      duration: 500 };\n\n  },\n  methods: {} };exports.default = _default;\n\n//# sourceURL=uni-app:///components/lesson/lessonTeacher.vue?vue&type=script&lang=js&?5a05");
+eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar _starclass = _interopRequireDefault(__webpack_require__(/*! ../starclass.vue */ \"E:\\\\wemusic\\\\components\\\\starclass.vue\"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =\n{\n  components: {\n    startclass: _starclass.default },\n\n  data: function data() {\n    return {\n      indicatorDots: false,\n      autoplay: false,\n      interval: 2000,\n      duration: 500 };\n\n  },\n  methods: {} };exports.default = _default;\n\n//# sourceURL=uni-app:///components/lesson/lessonTeacher.vue?vue&type=script&lang=js&?5a05");
 
 /***/ }),
 

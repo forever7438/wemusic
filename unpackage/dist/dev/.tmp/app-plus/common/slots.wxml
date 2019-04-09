@@ -1,1 +1,5 @@
+<import src="/components/mpvue-citypicker/mpvueCityPicker.vue.wxml" />
+<import src="/components/neil-modal/neil-modal.vue.wxml" />
+
+<template name="c758e412-default-c758e412-1"><input type="text" class="_input c758e412 new_name" placeholder="请输入用户名" value="{{userName}}" bindinput="handleProxy" data-eventid="{{'c758e412-1'}}" data-comkey="{{$k}}" /></template>
 
