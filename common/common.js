@@ -38,7 +38,17 @@ const ajax = (opt) => {
 		success: function(res) {
 			uni.hideLoading();
 			opt.success(res);
-			console.log(res)
+			if (res.data.msg === 'role error') {
+				uni.showToast({
+					title: "token过期,请重新登录!",
+					icon: "none"
+				})
+				setTimeout(() => {
+					uni.navigateTo({
+						url: '/pages/login/login'
+					})
+				}, 1500)
+			}
 		},
 		fail: function() {
 			uni.showToast({

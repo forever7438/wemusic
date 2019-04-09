@@ -1,7 +1,9 @@
 <template>
 	<view class="shode">
 		<view class="uni-padding-wrap uni-common-mt">
-			<view class="progress-box"><progress :percent="progress" show-info="true" active stroke-width="10" /></view>
+			<view class="progress-box">
+				<!-- <progress :percent="progress" show-info="true" active stroke-width="10" /> -->
+			</view>
 		</view>
 	</view>
 </template>
