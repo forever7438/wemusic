@@ -68,7 +68,7 @@
 .content {
   padding: 0 15rpx;
 }
-.content video {
+.content ._video {
   width: 100%;
   height: 410rpx;
   border-radius: 12rpx;

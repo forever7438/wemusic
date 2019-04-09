@@ -1,7 +1,7 @@
 .add_teacher {
   padding: 0 24rpx;
 }
-.add_teacher label {
+.add_teacher ._label {
   font-size: 32rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
@@ -30,7 +30,7 @@
   font-weight: 400;
   color: #333333;
 }
-.add_teacher view input {
+.add_teacher view ._input {
   padding-left: 10rpx;
   border-bottom: 2rpx solid #000;
 }
@@ -69,7 +69,7 @@
   width: 60rpx;
   height: 60rpx;
 }
-.add_teacher button {
+.add_teacher ._button {
   width: auto;
   line-height: 88rpx;
   margin: 0 110rpx 20rpx;

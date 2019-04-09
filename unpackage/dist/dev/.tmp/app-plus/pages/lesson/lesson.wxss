@@ -1,7 +1,7 @@
-.my_lesson_content.data-v-60fc1280 {
+.my_lesson_content.data-v-246d6a64 {
   padding: 0 15rpx;
 }
-.my_lesson_content ._ul.data-v-60fc1280 {
+.my_lesson_content ._ul.data-v-246d6a64 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19,7 +19,7 @@
   color: #333333;
   height: 90rpx;
 }
-.my_lesson_content ._ul ._li.data-v-60fc1280 {
+.my_lesson_content ._ul ._li.data-v-246d6a64 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -29,7 +29,7 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.my_lesson_content ._ul .isActive.data-v-60fc1280 {
+.my_lesson_content ._ul .isActive.data-v-246d6a64 {
   border-bottom: 6rpx solid #333333ff;
 }
 

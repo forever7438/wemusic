@@ -28,7 +28,7 @@
   font-weight: 400;
   color: #333333;
 }
-.teacher_login .teacher_login_acount input {
+.teacher_login .teacher_login_acount ._input {
   padding-left: 10rpx;
   border-bottom: 2rpx solid #000;
 }
@@ -51,11 +51,11 @@
   font-weight: 400;
   color: #333333;
 }
-.teacher_login .teacher_login_pass input {
+.teacher_login .teacher_login_pass ._input {
   padding-left: 10rpx;
   border-bottom: 2rpx solid #000;
 }
-.teacher_login button {
+.teacher_login ._button {
   width: auto;
   line-height: 88rpx;
   background: #fad42a;

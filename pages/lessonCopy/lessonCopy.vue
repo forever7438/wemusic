@@ -56,7 +56,7 @@
 <style lang="less">
 	.lesson_copy {
 		.all_lesson {
-			padding: 0 15upx;
+			padding: 0 30upx;
 			margin-top: 40upx;
 
 			.lesson_tips {

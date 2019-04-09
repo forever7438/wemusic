@@ -123,10 +123,6 @@
       "bottom": {
         "offset": "auto"
       }
-    },
-    "uni-app": {
-      "compilerVersion": "1.8.2",
-      "control": "webview"
     }
   }
 }

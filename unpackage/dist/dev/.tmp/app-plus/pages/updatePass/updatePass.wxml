@@ -1,2 +1,2 @@
 <import src="./updatePass.vue.wxml" />
-    <template is="1877d577" data="{{ ...$root['0'], $root }}"/>
+    <template is="2760e42a" data="{{ ...$root['0'], $root }}"/>

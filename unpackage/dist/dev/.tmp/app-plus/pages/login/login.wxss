@@ -28,7 +28,7 @@
   font-weight: 400;
   color: #333333;
 }
-.login .login_acount input {
+.login .login_acount ._input {
   padding-left: 10rpx;
   border-bottom: 2rpx solid #000;
 }
@@ -51,11 +51,11 @@
   font-weight: 400;
   color: #333333;
 }
-.login .login_pass input {
+.login .login_pass ._input {
   padding-left: 10rpx;
   border-bottom: 2rpx solid #000;
 }
-.login button {
+.login ._button {
   width: auto;
   line-height: 88rpx;
   background: #fad42a;

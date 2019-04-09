@@ -1,1 +1,0 @@
-<template name="15e724eb"><view class="_view 15e724eb"><textarea placeholder="分享学习心得…" class="_textarea 15e724eb" /><view class="_view 15e724eb choose_image" bindtap="handleProxy" data-eventid="{{'15e724eb-0'}}" data-comkey="{{$k}}">照片/拍摄</view></view></template>

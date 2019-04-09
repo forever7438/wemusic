@@ -1,10 +1,13 @@
 <template>
-	<div class="start_class">
+	<div class="start_class" v-if="star > 0">
 		<p>{{ title }}</p>
 		<div class="start_class_in">
 			<uni-rate :size="size" :value="3" :isFill="false"></uni-rate>
 			<span class="number">{{ star }}</span>
 		</div>
+	</div>
+	<div class="start_class" v-else>
+		<span style="font-size: 24upx;">暂无评分</span>
 	</div>
 </template>
 
@@ -47,7 +50,7 @@
 			// justify-content: center;
 			.number {
 				margin-left: 10upx;
-				font-size: 40upx;
+				font-size: 24upx;
 				font-family: PingFangSC-Regular;
 				font-weight: 400;
 				color: rgba(51, 51, 51, 1);

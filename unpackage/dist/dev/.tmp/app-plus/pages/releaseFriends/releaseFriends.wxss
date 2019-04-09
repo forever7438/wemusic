@@ -13,7 +13,7 @@
 view {
   padding: 0 15rpx;
 }
-view textarea {
+view ._textarea {
   width: auto;
   height: 800rpx;
   padding: 38rpx;
@@ -35,7 +35,7 @@ view .choose_images {
   font-family: PingFangSC-Medium;
   font-weight: 500;
 }
-view .choose_images video {
+view .choose_images ._video {
   width: 200rpx;
   height: 200rpx;
 }

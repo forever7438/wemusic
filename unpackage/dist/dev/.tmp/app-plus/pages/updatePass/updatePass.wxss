@@ -26,7 +26,7 @@
   font-size: 32rpx;
   font-weight: 600;
 }
-.change_password ._ul ._li input {
+.change_password ._ul ._li ._input {
   width: 100%;
   border: none;
   margin-bottom: 0;
