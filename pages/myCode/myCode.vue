@@ -29,7 +29,7 @@
 		padding: 0 15upx;
 
 		.code_option {
-			margin: 50upx 0;
+			margin: 94upx 0 50upx 0;
 			display: flex;
 			align-items: center;
 			justify-content: space-around;
@@ -37,12 +37,11 @@
 			input {
 				width: 426upx;
 				height: 88upx;
-				padding-left: 20upx;
 				border: 2upx solid rgba(51, 51, 51, 1);
 				font-size: 48upx;
 				font-family: PingFangSC-Medium;
 				font-weight: 500;
-				color: rgba(51, 51, 51, 1);
+				color: rgba(51, 51, 51, 1);				text-align: center;
 			}
 
 			text {
@@ -59,34 +58,31 @@
 		}
 
 		.send_btn {
-			margin-bottom: 50upx;
 			display: inline-block;
 			text-align: center;
-			width: 100%;
+			width: 96%;
 			line-height: 88upx;
 			background: rgba(250, 212, 42, 1);
 			border-radius: 12upx;
 			font-size: 32upx;
 			font-family: PingFangSC-Medium;
 			font-weight: 500;
-			color: rgba(51, 51, 51, 1);
+			color: rgba(51, 51, 51, 1);			margin: 0 16upx 76upx 16upx;
 		}
 
 		h4 {
 			font-size: 32upx;
 			font-family: PingFangSC-Medium;
 			font-weight: 500;
-			color: rgba(51, 51, 51, 1);
+			color: rgba(51, 51, 51, 1);			padding:0 14upx 10upx 14upx;
 		}
 
 		.code_list {
 			display: flex;
 			flex-direction: column;
-			align-items: center;
-
+			align-items: center;			padding:0 12upx;
 			text {
 				width: 100%;
-				height: 34upx;
 				margin: 10upx 0;
 				font-size: 24upx;
 				font-family: PingFangSC-Regular;
