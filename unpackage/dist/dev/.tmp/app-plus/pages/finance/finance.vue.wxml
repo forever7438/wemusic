@@ -1,0 +1,1 @@
+<import src="/components/item/financeList.vue.wxml" /><template name="3782eced"><view class="_view 3782eced finance"><template data="{{...$root['0'], ...$root[$kk+'3782eced-0'],$root}}" is="496744c8"></template></view></template>

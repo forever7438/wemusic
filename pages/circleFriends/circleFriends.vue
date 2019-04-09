@@ -18,29 +18,48 @@ export default {
 	},
 	data() {
 		return {
-			friendsList: []
+			friendsList: [],
+			isEnd: false,
+			index: 1
 		};
 	},
 	onLoad() {
-		this.getFriendList();
+		this.getFriendList(this.index);
 	},
 	onNavigationBarButtonTap(obj) {
 		uni.navigateTo({
 			url: '/pages/releaseFriends/releaseFriends'
 		});
 	},
+	onReachBottom() {
+		if (this.isEnd) {
+			return;
+		}
+		this.index++;
+		setTimeout(() => {
+			this.getFriendList(this.index);
+		}, 300);
+	},
 	methods: {
 		//获取朋友圈列表
-		getFriendList() {
+		getFriendList(val) {
 			this.ajax({
 				url: 'friend/list',
 				data: {
 					val: 5,
-					list: 1
+					list: val
 				},
 				success: res => {
 					if (res.data.body === 'success') {
-						this.friendsList = res.data.data;
+						if (res.data.data.length === 0) {
+							this.isEnd = true;
+							uni.showToast({
+								title: '没有更多数据了',
+								icon: 'none'
+							});
+							return;
+						}
+						this.friendsList = this.friendsList.concat(res.data.data);
 					}
 				}
 			});

@@ -7,6 +7,9 @@
 			@onCancel="onCancel"
 			@onConfirm="onConfirm"
 		></mpvue-city-picker>
+		<neil-modal :show="show" @cancel="bindBtn('cancel')" @confirm="bindBtn('confirm')" @close="show = false" title="请输入用户名">
+			<input type="text" class="new_name" placeholder="请输入用户名" v-model="userName" />
+		</neil-modal>
 		<ul>
 			<li>
 				<span>头像</span>
@@ -17,7 +20,7 @@
 			</li>
 			<li>
 				<span>姓名</span>
-				<view @click="updateName">
+				<view @click="show = true">
 					<text>{{ userName }}</text>
 					<s>></s>
 				</view>
@@ -63,12 +66,15 @@
 <script>
 import { ApiUrl, getDate, getImgToBase64 } from '../../common/common.js';
 import mpvueCityPicker from '../../components/mpvue-citypicker/mpvueCityPicker.vue';
+import neilModal from '@/components/neil-modal/neil-modal.vue';
 export default {
 	components: {
-		mpvueCityPicker
+		mpvueCityPicker,
+		neilModal
 	},
 	data() {
 		return {
+			show: false,
 			userImage: '../../static/img/lf.jpg',
 			array: ['男', '女'],
 			arrays: ['吃饭', '睡觉', '打豆豆'],
@@ -136,18 +142,8 @@ export default {
 			this.date = e.target.value;
 			console.log(this.birthday);
 		},
-		//app原生prompt框
-		updateName() {
-			plus.nativeUI.prompt(
-				'请输入您的姓名',
-				e => {
-					e.index == 0 ? (this.userName = e.value) : (this.userName = '测试人员');
-				},
-				'',
-				'您的姓名',
-				['确定', '取消']
-			);
-		},
+
+		bindBtn(type) {},
 		// 三级联动选择
 		showMulLinkageThreePicker() {
 			this.$refs.mpvueCityPicker.show();
@@ -172,7 +168,11 @@ export default {
 <style lang="less">
 .update_userinfo {
 	padding: 0 15upx;
-
+	.new_name {
+		margin: 0 40upx;
+		padding-left: 10upx;
+		line-height: 80upx;
+	}
 	ul {
 		display: flex;
 		align-items: center;

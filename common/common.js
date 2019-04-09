@@ -38,7 +38,17 @@ const ajax = (opt) => {
 		success: function(res) {
 			uni.hideLoading();
 			opt.success(res);
-			console.log(res)
+			if (res.data.msg === 'role error' || res.data.msg === 'Token expired') {
+				uni.showToast({
+					title: "token过期,请重新登录!",
+					icon: "none"
+				})
+				setTimeout(() => {
+					uni.navigateTo({
+						url: '/pages/login/login'
+					})
+				}, 1500)
+			}
 		},
 		fail: function() {
 			uni.showToast({
@@ -83,31 +93,9 @@ function getImgToBase64(url, callback) { //将图片转换为Base64
 	img.src = url;
 }
 
-//时间格式化处理2
-function sysTime(str) {
-
-	var myDate = new Date(str);
-
-	var year = myDate.getFullYear();
-
-	var month = myDate.getMonth() + 1;
-
-	var date = myDate.getDate();
-
-	var h = myDate.getHours();
-
-	var m = myDate.getMinutes();
-
-	var s = myDate.getSeconds();
-
-	var now = year + '-' + getMakeZero(month) + "-" + getMakeZero(date) + " " + getMakeZero(h) + ':' + getMakeZero(m) +
-		":" + getMakeZero(s);
-	return now;
-}
 export {
 	ApiUrl,
 	ajax,
 	getDate,
-	getImgToBase64,
-	sysTime
+	getImgToBase64
 }

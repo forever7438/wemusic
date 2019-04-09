@@ -35,7 +35,11 @@
     "pages/codeSuccess/codeSuccess",
     "pages/teacherLogin/teacherLogin",
     "pages/addTeacher/addTeacher",
-    "pages/updateUserinfo/updateUserinfo"
+    "pages/updateUserinfo/updateUserinfo",
+    "pages/wagesDetail/wagesDetail",
+    "pages/authentication/authentication",
+    "pages/uploadFile/uploadFile",
+    "pages/finance/finance"
   ],
   "subPackages": [],
   "window": {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <import src="/components/item/friendsList.vue.wxml" />
 <import src="/components/item/couponList.vue.wxml" />
 <import src="/components/item/lessonList.vue.wxml" />
@@ -21,4 +22,10 @@
 <import src="/components/item/classList.vue.wxml" />
 <import src="/components/uni-calendar/uni-calendar-item.vue.wxml" />
 <import src="/components/uni-icon/uni-icon.vue.wxml" />
+=======
+<import src="/components/mpvue-citypicker/mpvueCityPicker.vue.wxml" />
+<import src="/components/neil-modal/neil-modal.vue.wxml" />
+
+<template name="c758e412-default-c758e412-1"><input type="text" class="_input c758e412 new_name" placeholder="请输入用户名" value="{{userName}}" bindinput="handleProxy" data-eventid="{{'c758e412-1'}}" data-comkey="{{$k}}" /></template>
+>>>>>>> b5a7ff9525a1acfb6702528478dd5f04c0124d7e
 
