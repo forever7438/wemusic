@@ -86,6 +86,10 @@ view {
 	h3 {
 		text-align: left;
 		font-size: 48upx;
+		font-family:PingFangSC-Medium;
+		font-weight:500;
+		color:rgba(51,51,51,1);
+		padding-left: 20upx;
 	}
 }
 </style>

@@ -4,7 +4,7 @@
 			<li v-for="(item, index) in 6" :key="index">
 				<div class="class_title">
 					<h3>吉他快速入门</h3>
-					<p>9:00 -10:00</p>
+					<p>9:00 - 10:00</p>
 					<s>学生 姓名</s>
 				</div>
 				<div class="class_operation">
@@ -44,17 +44,21 @@
 			li {
 				display: flex;
 				justify-content: space-around;
-				margin-top: 40upx;
-				padding: 20upx 0;
+				margin-top: 30upx;
+				margin-left: 15upx;
+				margin-right: 15upx;
+				padding: 30upx 0;
 				background: rgba(255, 255, 255, 1);
 				box-shadow: 0upx 8upx 20upx 4upx rgba(179, 188, 198, 0.2);
-				border-radius: 8upx;
+				border-radius: 16upx;
 
 				&:last-child {
 					margin-bottom: 80upx;
 				}
 
 				.class_title {
+					padding-left: 20upx;
+					padding-right: 80upx;
 					h3 {
 						text-align: left;
 						font-size: 40upx;
@@ -64,7 +68,7 @@
 					}
 
 					p {
-						margin: 20upx 0;
+						margin: 20upx 0 36upx 0;
 						font-size: 32upx;
 						font-family: PingFangSC-Medium;
 						font-weight: 500;
@@ -83,15 +87,21 @@
 					display: flex;
 					flex-direction: column;
 					justify-content: space-between;
-
+					padding-left: 30upx;
 					span {
 						font-size: 28upx;
 						padding: 20upx 40upx;
 						border-radius: 8upx;
-						border: 2upx solid #ddd;
+						border: 2upx solid rgba(153,153,153,1);
 						font-family: PingFangSC-Regular;
 						font-weight: 400;
 						color: rgba(51, 51, 51, 1);
+						&:nth-of-type(1) {
+							margin-bottom: 18upx;
+						}
+						&:nth-of-type(2) {
+							margin-top: 18upx;
+						}
 					}
 				}
 
@@ -107,6 +117,8 @@
 					font-family: PingFangSC-Regular;
 					font-weight: 400;
 					color: rgba(51, 51, 51, 1);
+					margin-right: 20upx;
+					margin-left: 10upx;
 				}
 			}
 		}

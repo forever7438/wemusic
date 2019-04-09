@@ -175,7 +175,6 @@
 					padding: 20upx;
 					font-size:28upx;
 					font-weight:400;
-					color:rgba(153,153,153,1);
 					line-height:40upx;
 				}
 			}
