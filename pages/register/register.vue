@@ -3,15 +3,21 @@
 		<view class="register_image"><image src="../../static/img/open_ico.png"></image></view>
 		<view class="register_acount">
 			<text>账号</text>
-			<input type="text" v-model="email" />
+			<input type="text" 
+				   placeholder="请输入您的邮箱"
+				   v-model="email" 
+				   maxlength="30"/>
 		</view>
 		<view class="register_pass">
 			<text>密码</text>
-			<input type="password" v-model="pass" />
+			<input type="password" 
+				   placeholder="不超过16个字符"
+				   v-model="pass" 
+				   maxlength="16"/>
 		</view>
 		<view class="register_code">
 			<text>验证码</text>
-			<input type="number" v-model="code" />
+			<input type="number" v-model="code" maxlength="6"/>
 			<text class="get_code">获取验证码</text>
 		</view>
 		<button @click="register">注册</button>
@@ -95,6 +101,10 @@ export default {
 </script>
 
 <style lang="less">
+	input{
+		font-size: 24upx;
+		width: 100%;
+	}
 .register {
 	padding: 0 144upx;
 
@@ -124,7 +134,7 @@ export default {
 
 		input {
 			padding-left: 10upx;
-			border-bottom: 2upx solid #000;
+			border-bottom: 2upx solid rgba(185,185,185,1);
 		}
 	}
 
@@ -144,7 +154,7 @@ export default {
 
 		input {
 			padding-left: 10upx;
-			border-bottom: 2upx solid #000;
+			border-bottom: 2upx solid rgba(185,185,185,1);
 		}
 	}
 
@@ -163,16 +173,19 @@ export default {
 		}
 
 		input {
-			width: 370upx;
+			width: 170upx;
 			padding-left: 10upx;
-			border-bottom: 2upx solid #000;
+			border-bottom: 2upx solid rgba(185,185,185,1);;
 		}
 
 		.get_code {
-			width: 320upx;
-			border: 1px solid #000;
-			border-radius: 8upx;
-			padding: 2upx;
+			width: 280upx;
+			border: 2upx solid rgba(185,185,185,1);;
+			border-radius: 16upx;
+			text-align: center;
+			height: 60upx;
+			display: inline-block;
+			padding: 8upx 16upx;
 		}
 	}
 

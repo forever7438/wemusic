@@ -27,8 +27,10 @@ export default {
 	}
 
 	.teacher_content {
+		margin-top: 30upx;
 		padding: 0 24upx;
 		font-size: 26upx;
+		line-height: 44upx;
 		font-family: PingFangSC-Regular;
 		font-weight: 400;
 		color: rgba(51, 51, 51, 1);

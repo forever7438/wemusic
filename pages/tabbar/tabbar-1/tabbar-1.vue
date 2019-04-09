@@ -1,6 +1,8 @@
 <template>
 	<view class="class_list">
-		<navigator v-for="(item, index) in musicList" :key="index" :url="'/pages/lessonCopy/lessonCopy?musicId=' + item.id">
+		<navigator style="height: 268upx;margin-bottom: 30upx;" 
+				   v-for="(item, index) in musicList" :key="index" 
+				   :url="'/pages/lessonCopy/lessonCopy?musicId=' + item.id">
 			<image src="../../../static/img/wemusic.jpg"></image>
 		</navigator>
 		<navigator url="/pages/myCode/myCode">我的邀请码</navigator>
@@ -41,15 +43,16 @@ export default {
 <style lang="less">
 .class_list {
 	display: flex;
+	padding: 0 15upx;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-around;
 
 	image {
-		width: 350upx;
-		height: 284upx;
-		margin: 12upx;
-		border-radius: 8upx;
+		width: 330upx;
+		height: 268upx;
+		margin: 15upx;
+		border-radius: 16upx;
 	}
 }
 </style>

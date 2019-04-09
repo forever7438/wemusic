@@ -1,5 +1,8 @@
 <template>
-	<view class="uni-icon" :class="'uni-icon-' + type" :style="{ color: color, 'font-size': size + 'px' }" @click="_onClick"></view>
+	<view class="uni-icon" 
+		  :class="'uni-icon-' + type" 
+		  :style="{ color: color, 'font-size': size + 'px' }" 
+		  @click="_onClick"></view>
 </template>
 
 <script>

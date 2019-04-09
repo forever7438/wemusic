@@ -31,10 +31,9 @@
 
 <style lang='less'>
 	.lesson_comment {
-		padding: 20upx 15upx 0;
-
+		padding: 20upx 30upx 0;
 		.teacher_class {
-			margin: 40upx 20upx;
+			margin: 40upx 0;
 			font-size: 48upx;
 			font-family: PingFangSC-Medium;
 			font-weight: 500;
@@ -43,12 +42,13 @@
 
 		.comment {
 			margin: 20upx 0;
-
+			padding-bottom: 20upx;
+			border-bottom: 2upx solid rgba(231,232,234,1);
 			.comment_infos {
 				display: flex;
 				align-items: center;
-				padding: 0 20upx;
-
+				margin-bottom: 20upx;
+				/* padding: 0 20upx; */
 				image {
 					width: 80upx;
 					height: 80upx;
@@ -60,7 +60,6 @@
 					display: flex;
 					align-items: end;
 					flex-direction: column;
-
 					.comment_title {
 						font-size: 28upx;
 						font-family: PingFangSC-Medium;
@@ -79,7 +78,7 @@
 		}
 
 		.comment_content {
-			padding: 0 20upx;
+			/* padding: 0 20upx; */
 			font-size: 32upx;
 			font-family: PingFangSC-Regular;
 			font-weight: 400;

@@ -14,7 +14,7 @@
 			<navigator url="/pages/register/register"><text>注册</text></navigator>
 			<text>忘记密码</text>
 		</view>
-		<navigator url="/pages/teacherLogin/teacherLogin"><button style="background-color: #fff;border: 2upx solid #000;">教师端</button></navigator>
+		<navigator url="/pages/teacherLogin/teacherLogin"><button style="background-color: #fff;border: 2upx solid rgba(102,102,102,1);;">教师端</button></navigator>
 		<view class="login_third"><text>第三方快捷登录</text></view>
 		<view class="login_party">
 			<view class="login_weixin">
@@ -90,6 +90,12 @@ export default {
 </script>
 
 <style lang="less">
+input {
+	font-size: 24upx;
+	width: 100%;
+	padding-left: 10upx;
+	border-bottom: 2upx solid rgba(185,185,185,1);
+}
 .login {
 	padding: 0 144upx;
 
@@ -116,11 +122,6 @@ export default {
 			font-weight: 400;
 			color: rgba(51, 51, 51, 1);
 		}
-
-		input {
-			padding-left: 10upx;
-			border-bottom: 2upx solid #000;
-		}
 	}
 
 	.login_pass {
@@ -135,11 +136,6 @@ export default {
 			font-family: PingFangSC-Regular;
 			font-weight: 400;
 			color: rgba(51, 51, 51, 1);
-		}
-
-		input {
-			padding-left: 10upx;
-			border-bottom: 2upx solid #000;
 		}
 	}
 

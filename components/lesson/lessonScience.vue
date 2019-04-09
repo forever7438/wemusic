@@ -41,10 +41,10 @@
 			align-items: center;
 			justify-content: space-between;
 			margin-top: 20upx;
-
+			padding: 0 30upx;
 			image {
-				width: 454upx;
-				height: 452upx;
+				width: 434upx;
+				height: 432upx;
 			}
 
 			view {
@@ -53,8 +53,8 @@
 				flex-direction: column;
 
 				image {
-					width: 216upx;
-					height: 216upx;
+					width: 206upx;
+					height: 206upx;
 
 					&:nth-of-type(1) {
 						margin-bottom: 20upx;
@@ -68,10 +68,10 @@
 			align-items: center;
 			justify-content: space-between;
 			margin: 20upx 0;
-
+			padding: 0 30upx;
 			image {
-				width: 216upx;
-				height: 216upx;
+				width: 206upx;
+				height: 206upx;
 			}
 		}
 	}
