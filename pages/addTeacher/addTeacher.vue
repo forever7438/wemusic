@@ -2,24 +2,35 @@
 	<view class="add_teacher">
 		<view>
 			<text>名字</text>
-			<input type="text" v-model="name" />
+			<input type="text" 
+				   maxlength="10"
+				   v-model="name" />
 		</view>
 		<view>
 			<text>性别</text>
 			<radio-group class="uni-flex" name="sex">
 				<label style="margin-right: 80upx;">
-					<radio value="0" />
+					<radio value="0" checked="true" color="#fad42a"/>
 					男
 				</label>
 				<label>
-					<radio value="1" />
+					<radio value="1" color="#fad42a"/>
 					女
 				</label>
 			</radio-group>
 		</view>
 		<view>
 			<text>生日</text>
-			<input type="text" v-model="birthday" />
+			<!-- <input type="text" v-model="birthday" /> -->
+			<ruiDatePicker
+				fields="day"
+				start="1970-00-00"
+				end="2030-12-30"
+				style='width: 100%;border: none;'
+				:value="birthday"
+				@change="bindChange"
+				@cancel="bindCancel"
+			></ruiDatePicker>
 		</view>
 		<view>
 			<text>住址</text>
@@ -61,11 +72,11 @@
 			<text style="width: 140upx;">多人授课</text>
 			<radio-group class="uni-flex" name="type">
 				<label>
-					<radio value="接受" />
+					<radio value="接受" checked="true" color="#fad42a"/>
 					接受
 				</label>
 				<label>
-					<radio value="拒绝" />
+					<radio value="拒绝" color="#fad42a"/>
 					拒绝
 				</label>
 			</radio-group>
@@ -79,7 +90,11 @@
 </template>
 
 <script>
+import ruiDatePicker from '@/components/rattenking-dtpicker/rattenking-dtpicker.vue';
 export default {
+	components: {
+		ruiDatePicker
+	},
 	data() {
 		return {
 			name: '',
@@ -96,11 +111,25 @@ export default {
 			j_photo: '',
 			class: ''
 		};
+	},
+	methods:{
+		bindChange(){
+			
+		},
+		bindCancel(){
+			
+		}
 	}
 };
 </script>
 
 <style lang="less">
+	input{
+		padding-left: 10upx;
+		font-size: 24upx;
+		width: 100%;
+		border-bottom: 2upx solid rgba(185,185,185,1);
+	}
 .add_teacher {
 	padding: 0 24upx;
 
@@ -126,10 +155,10 @@ export default {
 			color: rgba(51, 51, 51, 1);
 		}
 
-		input {
-			padding-left: 10upx;
-			border-bottom: 2upx solid #000;
-		}
+// 		input {
+// 			padding-left: 10upx;
+// 			border-bottom: 2upx solid #000;
+// 		}
 	}
 
 	.diffrent {
