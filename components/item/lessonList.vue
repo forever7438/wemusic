@@ -67,6 +67,7 @@
 				image {
 					width: 254upx;
 					height: 100%;
+					border-radius:6upx;
 				}
 
 				.lesson_messgae {

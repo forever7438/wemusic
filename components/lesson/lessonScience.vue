@@ -26,10 +26,10 @@
 
 <style lang='less'>
 	.lesson_science {
-		padding: 20upx 15upx 0;
+		padding: 20upx 0;
 
 		.teacher_class {
-			margin: 40upx 20upx;
+			margin: 40upx 30upx;
 			font-size: 48upx;
 			font-family: PingFangSC-Medium;
 			font-weight: 500;
@@ -43,8 +43,8 @@
 			margin-top: 20upx;
 			padding: 0 30upx;
 			image {
-				width: 434upx;
-				height: 432upx;
+				width: 454upx;
+				height: 452upx;
 			}
 
 			view {
@@ -53,8 +53,8 @@
 				flex-direction: column;
 
 				image {
-					width: 206upx;
-					height: 206upx;
+					width: 216upx;
+					height: 216upx;
 
 					&:nth-of-type(1) {
 						margin-bottom: 20upx;
@@ -70,8 +70,8 @@
 			margin: 20upx 0;
 			padding: 0 30upx;
 			image {
-				width: 206upx;
-				height: 206upx;
+				width: 216upx;
+				height: 216upx;
 			}
 		}
 	}

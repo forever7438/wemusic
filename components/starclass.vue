@@ -2,7 +2,7 @@
 	<div class="start_class" v-if="star > 0">
 		<p>{{ title }}</p>
 		<div class="start_class_in">
-			<uni-rate :size="size" :value="3" :isFill="false"></uni-rate>
+			<uni-rate :size="size" :value="3" :isFill="false" :disabled="true"></uni-rate>
 			<span class="number">{{ star }}</span>
 		</div>
 	</div>

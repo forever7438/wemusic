@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<lessonHead headType='teacherDetail' title='吉他快速入门' content='通过本科课程的学习，您将会快速掌握吉他基础知识，以及简单的乐理知识，在未来的的学习中打下坚实的基础'></lessonHead>
+		<teacherHead headType='teacherDetail' title='吉他快速入门' content='通过本科课程的学习，您将会快速掌握吉他基础知识，以及简单的乐理知识，在未来的的学习中打下坚实的基础'></teacherHead>
 		<view class="all_lesson">
 			<text class="lesson_tips">全部课程</text>
 			<lessonList lessonType='teacherDetail'></lessonList>
@@ -11,13 +11,13 @@
 </template>
 
 <script>
-	import lessonHead from '../../components/lesson/lessonHead.vue';
+	import teacherHead from '../../components/lesson/teacherHead.vue';
 	import lessonList from '../../components/item/lessonList.vue';
 	import lessonComment from '../../components/lesson/lessonComment.vue';
 	import lessonScience from '../../components/lesson/lessonScience.vue';
 	export default {
 		components: {
-			lessonHead,
+			teacherHead,
 			lessonList,
 			lessonComment,
 			lessonScience
@@ -33,7 +33,7 @@
 <style lang="less">
 	view {
 		.all_lesson {
-			padding: 0 15upx;
+			padding: 0 30upx;
 			margin-top: 40upx;
 
 			.lesson_tips {
