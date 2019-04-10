@@ -18,11 +18,11 @@ export default {
 
 <style lang="less">
 view {
-	padding: 0 15upx;
+	padding: 0 30upx;
 	textarea {
 		width: auto;
 		margin: 30upx 0;
-		height: 500upx;
+		height: 600upx;
 		padding: 30upx;
 		background: rgba(249, 249, 249, 1);
 		border-radius: 12upx;

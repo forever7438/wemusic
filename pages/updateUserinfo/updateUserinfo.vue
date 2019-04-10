@@ -167,7 +167,7 @@ export default {
 
 <style lang="less">
 .update_userinfo {
-	padding: 0 15upx;
+	padding: 0 0 0 25upx;
 	.new_name {
 		margin: 0 40upx;
 		padding-left: 10upx;
@@ -177,8 +177,7 @@ export default {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		padding-left: 0;
-
+		padding-left: 0;
 		li {
 			width: 100%;
 			height: 120upx;
@@ -190,7 +189,7 @@ export default {
 			font-family: PingFangSC-Regular;
 			font-weight: 400;
 			color: rgba(51, 51, 51, 1);
-			border-bottom: 2upx solid #ddd;
+			border-bottom: 2upx solid rgba(231,232,234,1);			padding-right: 30upx;
 			view {
 				display: flex;
 				align-items: center;
@@ -210,7 +209,7 @@ export default {
 
 			s {
 				text-decoration: none;
-				margin-left: 10upx;
+				margin-left: 20upx;
 			}
 		}
 	}

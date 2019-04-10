@@ -28,13 +28,13 @@ export default {};
 			width: 100%;
 			display: flex;
 			flex-direction: column;
-			padding: 20upx 0;
-			border-bottom: 2upx solid #ddd;
+			padding: 30upx 25upx;
+			border-bottom: 2upx solid rgba(231,232,234,1);
 			font-weight: 500;
 			p {
 				display: flex;
 				justify-content: space-between;
-				margin-bottom: 0;
+				margin-bottom: 20upx;
 				span {
 					font-weight: 600;
 					font-size: 32upx;

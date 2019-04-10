@@ -23,7 +23,7 @@ export default {
 	.invitation_content {
 		display: flex;
 		align-items: flex-end;
-		margin-top: 78upx;
+		margin-top: 78upx;		margin-bottom: 60upx;
 		text {
 			font-size: 32upx;
 			font-family: PingFangSC-Regular;
@@ -46,7 +46,7 @@ export default {
 		line-height: 36upx;
 	}
 	button {
-		margin-top: 80upx;
+		margin-top: 120upx;
 		background: rgba(250, 212, 42, 1);
 		color: rgba(51, 51, 51, 1);
 		font-size: 32upx;

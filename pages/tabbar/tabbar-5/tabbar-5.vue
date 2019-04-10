@@ -12,8 +12,8 @@
 			</view>
 			<view class="user_money">
 				<view class="money_info">
-					<text>账户余额</text>
-					<text>￥ {{ userInfo.money }}</text>
+					<text>账户余额</text>					<view class="money_word">
+						<text>￥</text>						<text>{{ userInfo.money }}</text>					</view>
 				</view>
 				<navigator url="/pages/vipCenter/vipCenter"><text class="pay_btn">充值</text></navigator>
 			</view>
@@ -133,14 +133,13 @@ export default {
 <style lang="less">
 .content {
 	text-align: center;
-	height: 400upx;
-	padding: 0 15upx;
-
+	// height: 445upx;
+	padding: 30upx 30upx 0 30upx;
 	.messgae {
-		height: 270upx;
+		height: 285upx;
 		padding: 30upx;
 		background: linear-gradient(135deg, rgba(217, 179, 121, 1) 0%, rgba(162, 127, 74, 1) 100%);
-		border-radius: 16upx;
+		border-radius: 16upx;		
 
 		.user_info {
 			display: flex;
@@ -157,14 +156,13 @@ export default {
 				display: flex;
 				flex-direction: column;
 				text-align: left;
-				margin-left: 10upx;
+				margin-left: 18upx;
 
 				.user_name {
 					font-size: 36upx;
 					font-family: PingFangSC-Medium;
 					font-weight: 600;
-					color: rgba(255, 230, 190, 1);
-
+					color: rgba(255, 230, 190, 1);					display: inline-block;					padding-bottom: 22upx;
 					::after {
 						display: inline-block;
 						width: 10upx;
@@ -192,8 +190,7 @@ export default {
 				display: flex;
 				flex-direction: column;
 				text-align: left;
-				margin-top: 40upx;
-
+				margin-top: 40upx;
 				text {
 					&:nth-of-type(1) {
 						width: 100upx;
@@ -210,7 +207,7 @@ export default {
 						font-family: DINAlternate-Bold;
 						font-weight: bold;
 						color: rgba(255, 255, 255, 1);
-						line-height: 54upx;
+						line-height: 54upx;						padding-left: 8upx;
 					}
 				}
 			}
@@ -234,7 +231,7 @@ export default {
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
-		margin-top: 20upx;
+		margin-top: 60upx;
 
 		view {
 			display: flex;
@@ -259,7 +256,7 @@ export default {
 	}
 
 	.user_meun {
-		padding: 0 15upx;
+		padding: 60upx 15upx 0 15upx;
 
 		view {
 			display: flex;

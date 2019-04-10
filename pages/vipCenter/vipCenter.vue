@@ -81,17 +81,14 @@
 		.vip_center_message {
 			width: 100%;
 			height: 300upx;
-			background-image: linear-gradient(180deg, #434445ff 50%, #fff 50%);
-
+			background-image: linear-gradient(180deg, #434445ff 50%, #fff 50%);
 			.vip_center_info {
 				display: flex;
 				flex-direction: column;
 				text-align: left;
 				font-weight: 500;
 				padding: 30upx 40upx;
-				border-radius: 8upx;
-				background: url('../../static/img/vipbg@2x.png') no-repeat center/100%;
-
+				background: url('../../static/img/vipbg@2x.png') no-repeat center/100%;				border-radius: 8upx;
 				.vip_name {
 					font-size: 48upx;
 					font-family: PingFangSC-Medium;

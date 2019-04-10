@@ -16,6 +16,6 @@ export default {
 
 <style lang="less">
 .messgae_content {
-	padding: 0 15upx;
+	// padding: 0 15upx;
 }
 </style>

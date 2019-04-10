@@ -14,12 +14,11 @@
 <script></script>
 
 <style lang="less">
-	.coupon_list {
+	.coupon_list {		padding: 0 20upx;
 		.item_list {
 			width: 100%;
 			height: 200upx;
-			margin-bottom: 10upx;
-			display: flex;
+			margin-bottom: 10upx;			display: flex;
 			align-items: center;
 			justify-content: space-around;
 			background: url('../../static/img/url@2x.png') no-repeat center/100%;
@@ -38,7 +37,7 @@
 					font-family: PingFangSC-Medium;
 					font-weight: 500;
 					color: rgba(128, 97, 30, 1);
-					margin-bottom: 10upx;
+					padding-bottom: 36upx;
 				}
 
 				.coupon_date {
@@ -46,15 +45,14 @@
 					font-family: PingFangSC-Regular;
 					font-weight: 400;
 					color: rgba(176, 136, 47, 1);
-					-webkit-background-clip: text;
+					-webkit-background-clip: text;					margin-bottom: 20upx;
 				}
 			}
 
-			.coupon_use {
-				span {
-					padding: 10upx;
+			.coupon_use {				margin-right: 16upx;				margin-bottom: 24upx;
+				span {					padding: 10upx;
 					background: rgba(255, 255, 255, 1);
-					border-radius: 10upx;
+					border-radius: 22upx;
 					font-size: 24upx;
 					font-family: PingFangSC-Regular;
 					font-weight: 400;

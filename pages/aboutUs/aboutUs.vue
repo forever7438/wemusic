@@ -26,20 +26,19 @@
 
 <style lang="less">
 	.about_us {
-		padding: 0 15upx;
+		padding: 30upx 30upx 0upx 30upx;
 
-		image {
+		image {			display: block;
 			width: 100%;
 			height: 210upx;
-			border-radius: 12upx;
+			border-radius: 12upx;			margin-bottom: 30upx;
 		}
 
 		text {
-			font-size: 28upx;
+			font-size: 30upx;
 			font-family: PingFangSC-Regular;
 			font-weight: 400;
 			color: rgba(51, 51, 51, 1);
-			line-height: 50upx;
-		}
+			line-height: 50upx;		}
 	}
 </style>
