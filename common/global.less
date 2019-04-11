@@ -1,0 +1,35 @@
+/* 自制梯形 */
+.global-fun-tag(@border-width,@color,@content) {
+	position: relative;
+	width: 0;
+	height: 0;
+	border-width: 0 @border-width @border-width;
+	border-style: solid;
+	border-color: transparent transparent @color;
+	/*透明 透明  灰*/
+	transform: rotate(45deg);
+
+	&::before {
+		font-size: 24upx;
+		position: absolute;
+		top: 14upx;
+		right: -14upx;
+		color: #fff;
+		content: @content;
+		transform: rotate(-90deg);
+	}
+
+	&::after {
+		position: absolute;
+		top: -2upx;
+		right: -@border-width / 2;
+		width: 0;
+		height: 0;
+		content: '';
+		border-width: 0 @border-width / 2 @border-width / 2;
+		border-style: solid;
+		border-color: transparent transparent #fff;
+		/*透明 透明  灰*/
+		transform: rotate(0deg);
+	}
+}

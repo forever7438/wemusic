@@ -91,6 +91,7 @@ export default {
 
 <style lang="less">
 input {
+	text-align: center;
 	font-size: 24upx;
 	width: 100%;
 	padding-left: 10upx;

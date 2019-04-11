@@ -9,7 +9,27 @@ export default {
 		rechargeList
 	},
 	data() {
-		return {};
+		return {
+			rechargeList: []
+		};
+	},
+	onLoad() {
+		this.getRechargeList();
+	},
+	methods: {
+		//获取充值记录
+		getRechargeList() {
+			this.ajax({
+				url: 'studentclass/money_list',
+				data: {
+					list: 1,
+					val: 5
+				},
+				success: res => {
+					console.log(res);
+				}
+			});
+		}
 	}
 };
 </script>

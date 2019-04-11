@@ -18,6 +18,6 @@ export default {
 
 <style lang="less">
 .finance {
-	padding: 0 15upx;
+	// padding: 0 30upx;
 }
 </style>

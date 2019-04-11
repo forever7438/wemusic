@@ -305,6 +305,11 @@
 					}
 				}
 			}
+		}, {
+			"path": "pages/adjustmentDetail/adjustmentDetail",
+			"style": {
+				"navigationBarTitleText": "调整详情"
+			}
 		}
 	],
 	"globalStyle": {

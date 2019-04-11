@@ -104,6 +104,7 @@ export default {
 	input{
 		font-size: 24upx;
 		width: 100%;
+		text-align: center;
 	}
 .register {
 	padding: 0 144upx;
