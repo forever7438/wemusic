@@ -76,7 +76,7 @@
 
 <style lang="less" scoped>
 	.vip_center_content {
-		padding: 0 15upx;
+		padding: 0 30upx;
 
 		.vip_center_message {
 			width: 100%;

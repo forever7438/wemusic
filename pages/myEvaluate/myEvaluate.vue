@@ -29,7 +29,7 @@
 
 <style lang="less" scoped>
 	.my_evaluate_content {
-		padding: 0 15upx;
+		padding: 0 30upx;
 
 		ul {
 			display: flex;

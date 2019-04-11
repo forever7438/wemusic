@@ -70,7 +70,7 @@ export default {
 
 <style lang="less">
 .fridend_content {
-	padding: 0 15upx;
+	padding: 0 30upx;
 	.toMyFriend {
 		height: 104upx;
 		display: flex;

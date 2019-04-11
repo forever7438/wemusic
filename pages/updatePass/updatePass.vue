@@ -78,7 +78,7 @@ export default {
 
 <style lang="less">
 .change_password {
-	padding: 0 15upx;
+	padding: 0 30upx;
 
 	ul {
 		padding-left: 0;

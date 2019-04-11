@@ -19,7 +19,7 @@ export default {
 
 <style lang="less">
 .course_invitation {
-	padding: 0 15upx;
+	padding: 0 30upx;
 	.invitation_content {
 		display: flex;
 		align-items: flex-end;
