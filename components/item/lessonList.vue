@@ -49,6 +49,14 @@
 				image: '../../static/img/demo.jpg'
 			}
 		},
+		methods:{
+			getCourseList(){
+				console.log('ok')
+			}
+		},
+		created() {
+			this.getCourseList();
+		}
 	};
 </script>
 

@@ -1,10 +1,10 @@
 <template>
 	<div class="my_lesson_content">
 		<ul>
-			<li class="isActive">全部课程</li>
-			<li>待支付</li>
-			<li>待开课</li>
-			<li>已完成</li>
+			<li :class="lessonType == -1 ? 'isActive' : ''" @click="lessonType='-1'">全部课程</li>
+			<li :class="lessonType == 0  ? 'isActive' : ''" @click="lessonType='0'">待支付</li>
+			<li :class="lessonType == 1  ? 'isActive' : ''" @click="lessonType='1'">待开课</li>
+			<li :class="lessonType == 2  ? 'isActive' : ''" @click="lessonType='2'">已完成</li>
 		</ul>
 		<lesson-list :lessonType="lessonType"></lesson-list>
 	</div>
@@ -18,7 +18,7 @@ export default {
 	},
 	data() {
 		return {
-			lessonType: ''
+			lessonType: -1
 		};
 	},
 	onLoad(obj) {
@@ -34,9 +34,9 @@ export default {
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
-		font-size: 36upx;
+		font-size: 28upx;
 		font-family: PingFangSC-Regular;
-		font-weight: 600;
+		font-weight: 500;
 		color: rgba(51, 51, 51, 1);
 		height: 90upx;
 		li {
