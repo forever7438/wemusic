@@ -35,7 +35,9 @@ export default {
 		return {
 			showPicker: false,
 			type: 'rangetime',
-			value: ''
+			value: '',
+			start_time: '',
+			end_time: ''
 		};
 	},
 	onReady() {
@@ -55,11 +57,26 @@ export default {
 		},
 		onSelected(e) {
 			//选择
-			// this.showPicker = false;
 			if (e) {
 				this[this.type] = e.value;
-				console.log(e);
+				this.start_time = new Date(e.date[0]).getTime();
+				this.end_time = new Date(e.date[1]).getTime();
+				this.getLessonList()
 			}
+		},
+
+		//获取课程列表
+		getLessonList() {
+			this.ajax({
+				url: 'teacherclass/class_list',
+				data: {
+					start_time: this.start_time,
+					end_time: this.end_time
+				},
+				success: res => {
+					console.log(res);
+				}
+			});
 		}
 	}
 };
@@ -86,9 +103,9 @@ view {
 	h3 {
 		text-align: left;
 		font-size: 48upx;
-		font-family:PingFangSC-Medium;
-		font-weight:500;
-		color:rgba(51,51,51,1);
+		font-family: PingFangSC-Medium;
+		font-weight: 500;
+		color: rgba(51, 51, 51, 1);
 		padding-left: 20upx;
 	}
 }

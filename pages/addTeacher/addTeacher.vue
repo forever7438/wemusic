@@ -133,8 +133,8 @@ export default {
 				name: 'j_photo',
 				header: {
 					// 'Content-Type': 'application/json',
-					// role: 'student',
-					// Authorization: uni.getStorageSync('token')
+					role: 'student',
+					Authorization: uni.getStorageSync('token')
 				},
 				formData: {
 					name: this.name,

@@ -101,14 +101,14 @@ export default {
 			filePath: this.userImage,
 			name: 'photo',
 			header: {
-				// 'Content-Type': 'application/json',
+				'Content-Type': 'application/json',
 				role: 'student',
 				Authorization: uni.getStorageSync('token')
 			},
 			formData: {
 				name: this.userName,
 				sex: this.sex,
-				birthday: this.birthday,
+				birthday: new Date(this.birthday).getTime(),
 				interest: this.interest,
 				address: this.address
 			},
@@ -177,7 +177,8 @@ export default {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		padding-left: 0;
+		padding-left: 0;
+
 		li {
 			width: 100%;
 			height: 120upx;
@@ -189,7 +190,8 @@ export default {
 			font-family: PingFangSC-Regular;
 			font-weight: 400;
 			color: rgba(51, 51, 51, 1);
-			border-bottom: 2upx solid rgba(231,232,234,1);			padding-right: 30upx;
+			border-bottom: 2upx solid rgba(231, 232, 234, 1);
+			padding-right: 30upx;
 			view {
 				display: flex;
 				align-items: center;
