@@ -37,7 +37,6 @@ export default {
 		startclass
 	},
 	props: {
-		musicId: String,
 		lessonType: {
 			type: String,
 			default: '4'
@@ -48,6 +47,14 @@ export default {
 		return {
 			image: '../../static/img/demo.jpg'
 		};
+	},
+	methods: {
+		getCourseList() {
+			console.log('ok');
+		}
+	},
+	created() {
+		this.getCourseList();
 	}
 };
 </script>

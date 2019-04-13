@@ -35,9 +35,9 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-around;
-			font-size: 36upx;
+			font-size: 28upx;
 			font-family: PingFangSC-Regular;
-			font-weight: 600;
+			font-weight: 500;
 			color: rgba(51, 51, 51, 1);
 			height: 90upx;
 
@@ -47,7 +47,7 @@
 			}
 
 			.isActive {
-				color: #fad42a;
+				border-bottom: 6upx solid #333333ff;
 			}
 		}
 	}
