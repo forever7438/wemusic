@@ -34,6 +34,9 @@ export default {
 				},
 				success: res => {
 					console.log(res);
+				},
+				error:(res)=>{
+					console.log(res)
 				}
 			});
 		}

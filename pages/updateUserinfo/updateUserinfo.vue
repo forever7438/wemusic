@@ -101,7 +101,7 @@ export default {
 			filePath: this.userImage,
 			name: 'photo',
 			header: {
-				'Content-Type': 'application/json',
+				// 'Content-Type': 'application/json',
 				role: 'student',
 				Authorization: uni.getStorageSync('token')
 			},

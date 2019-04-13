@@ -59,7 +59,7 @@ export default {
 			filePath: this.video,
 			name: 'video',
 			header: {
-				'Content-Type': 'application/json',
+				// 'Content-Type': 'application/json',
 				role: 'student',
 				Authorization: uni.getStorageSync('token')
 			},
