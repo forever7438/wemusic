@@ -3,7 +3,7 @@
 		<navigator url="/pages/myFriend/myFriend">
 			<view class="toMyFriend">
 				<text>我的朋友圈</text>
-				<image src="../../static/img/arrow.png"></image>
+				<uni-icon type="forward" size="20"></uni-icon>
 			</view>
 		</navigator>
 		<friendsList :friendsList="friendsList"></friendsList>
@@ -12,9 +12,11 @@
 
 <script>
 import friendsList from '../../components/item/friendsList.vue';
+import uniIcon     from '../../components/uni-icon/uni-icon.vue';
 export default {
 	components: {
-		friendsList
+		friendsList,
+		uniIcon
 	},
 	data() {
 		return {

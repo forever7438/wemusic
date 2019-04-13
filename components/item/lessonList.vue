@@ -37,6 +37,7 @@ export default {
 		startclass
 	},
 	props: {
+		musicId:String,
 		lessonType: {
 			type: String,
 			default: '4'
@@ -54,6 +55,7 @@ export default {
 		}
 	},
 	created() {
+		console.log(this.musicId)
 		this.getCourseList();
 	}
 };
