@@ -1,17 +1,23 @@
 <template>
 	<view>
-		<lessonHead headType="teacherDetail" :title="choiseTeacherInfo.music_sun.name" :content="choiseTeacherInfo.music_sun.content || '暂无课程介绍'"></lessonHead>
-		<lessonList v-if="choiseTeacherInfo.list.length" :listInfo="choiseTeacherInfo.list" lessonType="lessonCopy"></lessonList>
+		<lessonHead headType="lessonDetail" 
+					:title="choiseTeacherInfo.music_sun.name" 
+					:content="choiseTeacherInfo.music_sun.content || '暂无课程介绍'"></lessonHead>
+		
+		<teacherList v-if="!choiseTeacherInfo.list.length" 
+					:listInfo="choiseTeacherInfo.list" 
+					title='选择教师'
+					lessonType="lessonCopy"></teacherList>
 	</view>
 </template>
 
 <script>
 import lessonHead from '../../components/lesson/lessonHead.vue';
-import lessonList from '../../components/item/lessonList.vue';
+import teacherList from '../../components/item/teacherList.vue';
 export default {
 	components: {
 		lessonHead,
-		lessonList
+		teacherList
 	},
 	data() {
 		return {
