@@ -1,16 +1,15 @@
 <template>
 	<div class="lesson_content">
-		<text class="teacher_class">{{title}}</text>
+		<text class="teacher_class" v-if="!selectFlag">{{title}}</text>
 		<ul>
-			<li v-for="(item, index) in 5" :key="index">
+			<li v-for="(item, index) in listInfo" :key="index" :class="{select:selectFlag}">
 				<navigator v-if="lessonType === 'lessonCopy'" :url="'/pages/lessonDetail/lessonDetail?lessonId=' + item.id"><image :src="item.photo || image"></image></navigator>
 				<image v-else :src="item.photo || image"></image>
 				<div class="lesson_messgae">
 					<p class="lesson_title">
 					{{ item.name }}Laura Johnson
-					<navigator :url="'/pages/confirmTeacher/confirmTeacher?musicId=' + musicId + '&musicSunId=' + item.id">
-						<span class="go_pay" >选择</span>
-					</navigator>
+					<span class="go_pay" 
+						  @click="selectTeacherFunc(item)">选择</span>
 					</p>
 					<startclass :star="item.star" v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'" size="14"></startclass>
 					<p v-else class="lesson_winer">教师 Jennifer Young</p>
@@ -37,6 +36,7 @@ export default {
 		startclass
 	},
 	props: {
+		selectFlag:Boolean,
 		musicId:String,
 		lessonType: {
 			type: String,
@@ -53,6 +53,9 @@ export default {
 	methods: {
 		getCourseList() {
 			console.log('ok');
+		},
+		selectTeacherFunc(item){
+			this.$emit('selectFunction',item);
 		}
 	},
 	created() {
@@ -72,6 +75,13 @@ export default {
 		color: rgba(51, 51, 51, 1);
 	}
 	ul {
+		li.select{
+			padding-top: 0;
+			.go_pay{
+				color:rgba(153,153,153,1);
+				background:rgba(229,229,229,1);
+			}
+		}
 		li {
 			position: relative;
 			overflow: hidden;

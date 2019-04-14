@@ -369,10 +369,6 @@
                     }
                 }
             }
-        },
-        {
-            "path" : "pages/confirmTeacher/confirmTeacher",
-            "style" : {}
         }
     ],
     "globalStyle" : {

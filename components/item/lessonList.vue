@@ -108,7 +108,7 @@ export default {
 					justify-content: space-between;
 
 					.go_pay {
-						padding: 2upx 15upx;
+						padding: 2upx 36upx;
 						background: rgba(250, 212, 42, 1);
 						border-radius: 8upx;
 						font-size: 30upx;
