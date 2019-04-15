@@ -2,13 +2,16 @@
 	<div class="lesson_content">
 		<text class="teacher_class">选择授课方式</text>
 		<ul>
-			<li class="active">
+			<li :class="{active:info.people_num === 0}" 
+				@click="info.people_num=0">
 				一对一
 			</li>
-			<li>
+			<li :class="{active:info.people_num === 1}" 
+				@click="info.people_num=1">
 				一对二
 			</li>
-			<li>
+			<li :class="{active:info.people_num === 2}" 
+				@click="info.people_num=2">
 				一对三
 			</li>
 		</ul>
@@ -21,7 +24,8 @@
 			<span>开通会员</span>
 		</p>
 		<text class="teacher_class">选择时长</text>
-		<selectTime></selectTime>
+		<selectTime :time_checked="time_checked"></selectTime>
+		<span class="sign_up">下一步</span>
 	</div>
 </template>
 
@@ -44,7 +48,11 @@ export default {
 	},
 	data() {
 		return {
-			image: '../../static/img/demo.jpg'
+			image: '../../static/img/demo.jpg',
+			info:{
+				'people_num':0,
+				'time_checked':0
+			}
 		};
 	},
 	methods: {
@@ -61,19 +69,31 @@ export default {
 
 <style lang="less" scoped>
 .lesson_content {
-	padding: 0 30upx;
+	.sign_up {
+			text-align: center;
+			margin-top: 40upx;
+			display: inline-block;
+			width: 100%;
+			line-height: 100upx;
+			background: rgba(250, 212, 42, 1);
+			font-size: 28upx;
+			font-family: PingFangSC-Medium;
+			font-weight: 500;
+			color: rgba(51, 51, 51, 1);
+	}
 	.teacher_class {
 		font-size: 48upx;
 		font-family: PingFangSC-Medium;
 		font-weight: 500;
 		color: rgba(51, 51, 51, 1);
+		margin: 0 30upx;
 	}
 	.vipMessage{
 		background:linear-gradient(135deg,rgba(255,234,188,1) 0%,rgba(234,192,100,1) 100%);
 		border-radius:16upx;
 		padding: 30upx;
 		overflow: hidden;
-		margin-bottom: 60upx;
+		margin: 0 30upx 60upx 30upx;
 		span:first-child{
 			width:480upx;
 			display: inline-block;
@@ -99,7 +119,7 @@ export default {
 	.message{
 		overflow: hidden;
 		position: relative;
-		margin: 34upx 0 60upx 0;
+		margin: 34upx 30upx 60upx 30upx;
 		font-size:24upx;
 		font-family:PingFangSC-Medium;
 		font-weight:500;
@@ -121,6 +141,7 @@ export default {
 		}
 	}
 	ul {
+		margin: 0 30upx;
 		padding-top: 40upx;
 		.active{
 			background: #FAD42A;

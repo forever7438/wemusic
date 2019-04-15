@@ -1,6 +1,7 @@
 <template>
 	<ul class="time_list">
-		<li v-for="(item,index) in 3" @click="flag && selctitem(index)" :class="{'active':item.active}" :key="index">
+		<li v-for="(item,index) in 3" @click="flag && selctitem(index)" 
+			:class="{'active':item.active}" :key="index">
 			<p>
 				<span class="date">2019年11月11日</span>
 				<span class="price">
@@ -47,7 +48,7 @@
 			}
 		},
 		props:{
-			time_list:Array,	//时间数组
+			timeChecked:Number,	//时间数组
 			flag : Boolean,		//事件开关
 			select:Array
 		},
