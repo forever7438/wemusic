@@ -1,8 +1,8 @@
 <template>
 	<view>
 		<view class="meun_list">
-			<text class="active">满减券</text>
-			<text>折扣券</text>
+			<text :class="type == 0 ? 'active' : ''" @click="type='0'">满减券</text>
+			<text :class="type == 1 ? 'active' : ''" @click="type='1'">折扣券</text>
 		</view>
 		<couponList></couponList>
 	</view>
@@ -16,11 +16,13 @@ export default {
 	},
 	data() {
 		return {
-			couponList: []
+			couponList: [],
+			type:0
 		};
 	},
-	onLoad() {
-		this.getCouponList(0);
+	onLoad(obj) {
+		this.type = obj.type
+		this.getCouponList();
 	},
 	methods: {
 		//获取优惠卷列表
@@ -28,12 +30,15 @@ export default {
 			this.ajax({
 				url: 'studentclass/coupom_list',
 				data: {
-					type: type,
+					type: this.type,
 					list: 1,
 					val: 5
 				},
 				success: res => {
 					console.log(res);
+				},
+				error:(res)=>{
+					console.log(res)
 				}
 			});
 		}

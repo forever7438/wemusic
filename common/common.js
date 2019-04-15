@@ -22,8 +22,8 @@ const ajax = (opt) => {
 	opt.async = false;
 	if (uni.getStorageSync('token')) {
 		opt.header = opt.header || {
-			"Content-Type": "application/json",
-			"role": "student",
+			// "Content-Type": "application/json",
+			"Role": "student",
 			"Authorization": uni.getStorageSync('token')
 		};
 	}

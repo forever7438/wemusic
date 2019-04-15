@@ -2,34 +2,29 @@
 	<view class="add_teacher">
 		<view>
 			<text>名字</text>
-			<input type="text" 
-				   maxlength="10"
-				   v-model="name" />
+			<input type="text" maxlength="10" v-model="name" />
 		</view>
 		<view>
 			<text>性别</text>
 			<radio-group class="uni-flex" name="sex">
 				<label style="margin-right: 80upx;">
-					<radio value="0" checked="true" color="#fad42a"/>
+					<radio value="0" checked="true" color="#fad42a" />
 					男
 				</label>
 				<label>
-					<radio value="1" color="#fad42a"/>
+					<radio value="1" color="#fad42a" />
 					女
 				</label>
 			</radio-group>
 		</view>
 		<view>
 			<text>生日</text>
-			<!-- <input type="text" v-model="birthday" /> -->
 			<ruiDatePicker
 				fields="day"
 				start="1970-00-00"
 				end="2030-12-30"
-				style='width: 100%;border: none;'
+				style="width: 100%;border: none;"
 				:value="birthday"
-				@change="bindChange"
-				@cancel="bindCancel"
 			></ruiDatePicker>
 		</view>
 		<view>
@@ -72,33 +67,38 @@
 			<text style="width: 140upx;">多人授课</text>
 			<radio-group class="uni-flex" name="type">
 				<label>
-					<radio value="接受" checked="true" color="#fad42a"/>
+					<radio value="接受" checked="true" color="#fad42a" />
 					接受
 				</label>
 				<label>
-					<radio value="拒绝" color="#fad42a"/>
+					<radio value="拒绝" color="#fad42a" />
 					拒绝
 				</label>
 			</radio-group>
 		</view>
 		<view class="diffrent">
 			<text style="width: 212upx;">上传简历</text>
-			<view class="upload_file"><image src="../../static/img/creame@2x.png"></image></view>
+			<view class="upload_file" @click="chooseVideo"><image src="../../static/img/creame@2x.png"></image></view>
 		</view>
-		<button>注册</button>
+		<button @click="addTeacherInfo">注册</button>
 	</view>
 </template>
 
 <script>
+let _this = '';
 import ruiDatePicker from '@/components/rattenking-dtpicker/rattenking-dtpicker.vue';
+import { ApiUrl } from '../../common/common.js';
 export default {
 	components: {
 		ruiDatePicker
 	},
+	onLoad() {
+		_this = this;
+	},
 	data() {
 		return {
 			name: '',
-			sex: '',
+			sex: '0',
 			birthday: '',
 			address: '',
 			phone: '',
@@ -106,30 +106,80 @@ export default {
 			ABN: '',
 			culture: '',
 			card: '',
-			gz_s_time: '',
-			gz_d_time: '',
+			gz_s_time: '2019-04-24',
+			gz_d_time: '2019-12-23',
 			j_photo: '',
-			class: ''
+			class: '1=>2'
 		};
 	},
-	methods:{
-		bindChange(){
-			
+	methods: {
+		//选择文件
+		chooseVideo: e => {
+			uni.chooseVideo({
+				count: 1,
+				success: res => {
+					_this.j_photo = res.tempFilePath;
+				},
+				fail: err => {
+					console.log('chooseImage fail', err);
+				}
+			});
 		},
-		bindCancel(){
-			
+		//教师入驻
+		addTeacherInfo() {
+			const uploadTask = uni.uploadFile({
+				url: ApiUrl + 'index/teacher_registered',
+				filePath: this.j_photo,
+				name: 'j_photo',
+				header: {
+					// 'Content-Type': 'application/json',
+					role: 'student',
+					Authorization: uni.getStorageSync('token')
+				},
+				formData: {
+					name: this.name,
+					sex: this.sex,
+					birthday: this.birthday,
+					address: this.address,
+					phone: this.phone,
+					email: this.email,
+					ABN: this.ABN,
+					culture: this.culture,
+					card: this.card,
+					gz_s_time: this.gz_s_time,
+					gz_d_time: this.gz_d_time,
+					class: this.class
+				},
+				success: res => {
+					const info = JSON.parse(res.data);
+					if (info.body === 'success') {
+						uni.showToast({
+							title: '发布成功',
+							icon: 'none'
+						});
+					} else {
+						uni.showToast({
+							title: info.msg,
+							icon: 'none'
+						});
+					}
+				}
+			});
+			uploadTask.onProgressUpdate(res => {
+				console.log(res);
+			});
 		}
 	}
 };
 </script>
 
 <style lang="less">
-	input{
-		padding-left: 10upx;
-		font-size: 24upx;
-		width: 100%;
-		border-bottom: 2upx solid rgba(185,185,185,1);
-	}
+input {
+	padding-left: 10upx;
+	font-size: 24upx;
+	width: 100%;
+	border-bottom: 2upx solid rgba(185, 185, 185, 1);
+}
 .add_teacher {
 	padding: 0 24upx;
 
@@ -155,10 +205,10 @@ export default {
 			color: rgba(51, 51, 51, 1);
 		}
 
-// 		input {
-// 			padding-left: 10upx;
-// 			border-bottom: 2upx solid #000;
-// 		}
+		// 		input {
+		// 			padding-left: 10upx;
+		// 			border-bottom: 2upx solid #000;
+		// 		}
 	}
 
 	.diffrent {

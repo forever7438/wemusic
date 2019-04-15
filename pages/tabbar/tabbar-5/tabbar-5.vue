@@ -19,7 +19,7 @@
 			</view>
 		</view>
 		<view class="class_list">
-			<navigator url="/pages/lesson/lesson?type=1">
+			<navigator url="/pages/lesson/lesson?type=-1">
 				<view>
 					<image src="../../../static/img/group(1).png"></image>
 					<text>全部课程</text>
@@ -55,13 +55,13 @@
 				<text>语言/Language</text>
 				<text>中文</text>
 			</view>
-			<navigator url="/pages/myCoupon/myCoupon">
+			<navigator url="/pages/myCoupon/myCoupon?type=0">
 				<view>
 					<text>我的优惠券</text>
 					<image src="../../../static/img/coupon@2x.png"></image>
 				</view>
 			</navigator>
-			<navigator url="/pages/myEvaluate/myEvaluate">
+			<navigator url="/pages/myEvaluate/myEvaluate?type=4">
 				<view>
 					<text>我的评价</text>
 					<image src="../../../static/img/evaluate@2x.png"></image>
