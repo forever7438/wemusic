@@ -11,7 +11,7 @@ const ApiUrl = 'http://wemusic.ikenweb.com/api/';
 //封装网络请求
 const ajax = (opt) => {
 	uni.showLoading({
-		title: 'loading'
+		title: ''
 	});
 	opt = opt || {};
 	opt.url = opt.url || '';

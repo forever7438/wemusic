@@ -1,17 +1,32 @@
 <template>
 	<view class="finance">
 		<financeList></financeList>
+		<w-picker mode="date" :defaultVal="[0, 1, 0]" @confirm="onConfirm" ref="picker"></w-picker>
 	</view>
 </template>
 
 <script>
 import financeList from '../../components/item/financeList.vue';
+import wPicker from '@/components/w-picker/w-picker.vue';
 export default {
-	components:{
-		financeList
+	components: {
+		financeList,
+		wPicker
 	},
 	data() {
-		return {};
+		return {
+		};
+	},
+	onNavigationBarButtonTap(obj) {
+		this.toggleTab();
+	},
+	methods: {
+		toggleTab() {
+			this.$refs.picker.show();
+		},
+		onConfirm(val) {
+			console.log(val);
+		}
 	}
 };
 </script>
