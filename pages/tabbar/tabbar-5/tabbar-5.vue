@@ -21,7 +21,7 @@
 		<view class="class_list">
 			<navigator url="/pages/lesson/lesson?type=-1">
 				<view>
-					<image src="../../../static/img/group(1).png"></image>
+					<image src="../../../static/img/group(3).png"></image>
 					<text>全部课程</text>
 				</view>
 			</navigator>
@@ -161,13 +161,16 @@ export default {
 				.user_name {
 					font-size: 36upx;
 					font-family: PingFangSC-Medium;
-					font-weight: 600;
+					font-weight: 500;
 					color: rgba(255, 230, 190, 1);					display: inline-block;					padding-bottom: 22upx;
 					::after {
 						display: inline-block;
-						width: 10upx;
-						height: 10upx;
-						content: '>';
+						width: 12upx;
+						height: 22upx;
+						content: '';
+						background: url('/static/img/arrow.png') no-repeat;
+						background-size: 100% 100%;
+						margin-left: 20upx;
 						margin-left: 20upx;
 					}
 				}
