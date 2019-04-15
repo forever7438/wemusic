@@ -9,7 +9,7 @@
 			<text>密码</text>
 			<input type="password" v-model="pass" />
 		</view>
-		<button @click="login">登录</button>
+		<button @tap="login">登录</button>
 		<view class="login_option">
 			<navigator url="/pages/register/register"><text>注册</text></navigator>
 			<text>忘记密码</text>
