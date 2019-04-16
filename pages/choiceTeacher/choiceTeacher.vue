@@ -1,7 +1,9 @@
 <template>
 	<view>
-		<lessonHead headType="lessonDetail" :title="choiseTeacherInfo.music_sun.name" :content="choiseTeacherInfo.music_sun.content || '暂无课程介绍'"></lessonHead>
-
+		<lessonHead 
+			headType="lessonDetail" 
+			:title="choiseTeacherInfo.music_sun.name" 
+			:content="choiseTeacherInfo.music_sun.content || '暂无课程介绍'"></lessonHead>
 		<teacherList
 			v-if="!choiseTeacherInfo.list.length"
 			:listInfo="selectFlag ? selectItem : listInfo"
@@ -34,6 +36,9 @@ export default {
 	},
 	onLoad(obj) {
 		this.getChoiseTeacherInfo(obj.musicId, obj.musicSunId);
+	},
+	onBackPress(obj){
+		console.log('test')
 	},
 	methods: {
 		select(item) {

@@ -12,7 +12,13 @@
         {
             "path" : "pages/tabbar/tabbar-1/tabbar-1",
             "style" : {
-                "navigationBarTitleText" : "选课"
+                "navigationBarTitleText" : "选课",
+				"app-plus" : {
+				    "titleNView" : {
+						"backgroundColor":"#ffff",
+						"titleSize":"17px"
+				    }
+				}
             }
         },
         {
@@ -21,6 +27,8 @@
                 "navigationBarTitleText" : "课程表",
                 "app-plus" : {
                     "titleNView" : {
+						"backgroundColor":"#ffff",
+						"titleSize":"17px",
                         "buttons" : [
                             {
                                 "text" : "\ue618",
@@ -365,8 +373,14 @@
             "style" : {
                 "app-plus" : {
                     "titleNView" : {
-                        "type" : "transparent"
-                    }
+						"type":"transparent",
+						"buttons":[
+							{
+								"type":"back",
+								"float":"left"
+							}
+						]
+					}
                 }
             }
         }
