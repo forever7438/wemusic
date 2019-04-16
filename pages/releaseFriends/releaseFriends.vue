@@ -1,9 +1,9 @@
 <template>
 	<view>
-		<progress-bar v-if="show" :progress="progress"></progress-bar>
+		<!-- <progress-bar v-if="show" :progress="progress"></progress-bar> -->
 		<textarea placeholder="分享学习心得…" v-model="body" />
 		<view v-if="video" class="choose_images"><video :src="video" controls></video></view>
-		<view v-else class="choose_image" @click="chooseVideo">照片/拍摄</view>
+		<view v-else class="choose_image" @click="chooseImage">照片/拍摄</view>
 	</view>
 </template>
 
@@ -27,11 +27,26 @@ export default {
 		_this = this;
 	},
 	methods: {
-		chooseVideo: e => {
-			uni.chooseVideo({
+		chooseImage: e => {
+			uni.chooseImage({
 				count: 1,
 				success: res => {
-					_this.video = res.tempFilePath;
+					_this.video = res.tempFilePaths[0];
+					uni.uploadFile({
+						url: ApiUrl + 'index/photo_add',
+						filePath: res.tempFilePaths[0],
+						name: 'file',
+						header: {
+							role: 'student',
+							Authorization: uni.getStorageSync('token')
+						},
+						success: res => {
+							const info = JSON.parse(res.data);
+							if (info.data === 'success') {
+								_this.video = info.body.photo;
+							}
+						}
+					});
 				},
 				fail: err => {
 					console.log('chooseImage fail', err);
@@ -42,7 +57,7 @@ export default {
 	onNavigationBarButtonTap(obj) {
 		if (!this.video) {
 			uni.showToast({
-				title: '请选择视频',
+				title: '请选择图片',
 				icon: 'none'
 			});
 			return;
@@ -54,37 +69,25 @@ export default {
 			});
 			return;
 		}
-		const uploadTask = uni.uploadFile({
-			url: ApiUrl + 'friend/add_friend',
-			filePath: this.video,
-			name: 'video',
-			header: {
-				// 'Content-Type': 'application/json',
-				role: 'student',
-				Authorization: uni.getStorageSync('token')
-			},
-			formData: {
-				body: this.body
+		this.ajax({
+			url: 'friend/add_friend',
+			data: {
+				body: this.body,
+				video: this.video
 			},
 			success: res => {
-				const info = JSON.parse(res.data);
-				if (info.body === 'success') {
-					this.show = false;
+				if (res.data.body === 'success') {
 					uni.showToast({
 						title: '发布成功',
 						icon: 'none'
 					});
 				} else {
 					uni.showToast({
-						title: info.msg,
+						title: res.data.msg,
 						icon: 'none'
 					});
 				}
 			}
-		});
-		uploadTask.onProgressUpdate(res => {
-			_this.show = true;
-			_this.progress = res.progress;
 		});
 	}
 };

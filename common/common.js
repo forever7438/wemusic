@@ -92,7 +92,6 @@ function getImgToBase64(url, callback) { //将图片转换为Base64
 	};
 	img.src = url;
 }
-
 export {
 	ApiUrl,
 	ajax,

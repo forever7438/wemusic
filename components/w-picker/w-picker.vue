@@ -25,10 +25,10 @@
 						<view class="item" v-for="(item, index) in data.days" :key="index">{{ item }}日</view>
 					</picker-view-column>
 					<picker-view-column v-if="mode == 'dateTime'">
-						<view class="item" v-for="(item, index) in data.hours" :key="index">{{ item }}</view>
+						<view class="item" v-for="(item, index) in data.hours" :key="index">{{ item }}时</view>
 					</picker-view-column>
 					<picker-view-column v-if="mode == 'dateTime'">
-						<view class="item" v-for="(item, index) in data.minutes" :key="index">{{ item }}</view>
+						<view class="item" v-for="(item, index) in data.minutes" :key="index">{{ item }}分</view>
 					</picker-view-column>
 				</picker-view>
 			</view>

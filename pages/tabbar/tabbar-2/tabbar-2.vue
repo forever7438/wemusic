@@ -68,7 +68,7 @@ export default {
 		//获取课程列表
 		getLessonList() {
 			this.ajax({
-				url: 'teacherclass/class_list',
+				url: 'studentclass/class_list',
 				data: {
 					start_time: this.start_time,
 					end_time: this.end_time

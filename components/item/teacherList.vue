@@ -1,26 +1,22 @@
 <template>
 	<div class="lesson_content">
-		<text class="teacher_class" v-if="!selectFlag">{{title}}</text>
+		<text class="teacher_class" v-if="!selectFlag">{{ title }}</text>
 		<ul>
-			<li v-for="(item, index) in listInfo" :key="index" :class="{select:selectFlag}">
+			<li v-for="(item, index) in listInfo" :key="index" :class="{ select: selectFlag }">
 				<navigator v-if="lessonType === 'lessonCopy'" :url="'/pages/lessonDetail/lessonDetail?lessonId=' + item.id"><image :src="item.photo || image"></image></navigator>
 				<image v-else :src="item.photo || image"></image>
 				<div class="lesson_messgae">
 					<p class="lesson_title">
-					{{ item.name }}Laura Johnson
-					<span class="go_pay" 
-						  @click="selectTeacherFunc(item)">选择</span>
+						{{ item.name }}Laura Johnson
+						<span class="go_pay" @click="selectTeacherFunc(item)">选择</span>
 					</p>
 					<startclass :star="item.star" v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'" size="14"></startclass>
 					<p v-else class="lesson_winer">教师 Jennifer Young</p>
 					<div class="lesson_pay">
 						<span class="teacher_number">
-							从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。
-							从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。
-							从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。
-							从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。
-							从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。
-							从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。
+							从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。 从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。
+							从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。 从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。
+							从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。 从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。
 						</span>
 					</div>
 				</div>
@@ -36,14 +32,14 @@ export default {
 		startclass
 	},
 	props: {
-		selectFlag:Boolean,
-		musicId:String,
+		selectFlag: Boolean,
+		musicId: String,
 		lessonType: {
 			type: String,
 			default: '4'
 		}, //lessonType类型判断  1为全部  2为待支付  3为待开课  4为已完成
 		listInfo: Array,
-		title:String
+		title: String
 	},
 	data() {
 		return {
@@ -54,12 +50,12 @@ export default {
 		getCourseList() {
 			console.log('ok');
 		},
-		selectTeacherFunc(item){
-			this.$emit('selectFunction',item);
+		selectTeacherFunc(item) {
+			this.$emit('selectFunction', item);
 		}
 	},
 	created() {
-		console.log(this.musicId)
+		console.log(this.musicId);
 		this.getCourseList();
 	}
 };
@@ -75,11 +71,11 @@ export default {
 		color: rgba(51, 51, 51, 1);
 	}
 	ul {
-		li.select{
+		li.select {
 			padding-top: 0;
-			.go_pay{
-				color:rgba(153,153,153,1);
-				background:rgba(229,229,229,1);
+			.go_pay {
+				color: rgba(153, 153, 153, 1);
+				background: rgba(229, 229, 229, 1);
 			}
 		}
 		li {
@@ -100,8 +96,8 @@ export default {
 				position: absolute;
 				top: 30upx;
 				right: 0;
-				color: rgba(51,51,51,1);
-				font-weight: 400
+				color: rgba(51, 51, 51, 1);
+				font-weight: 400;
 			}
 			image {
 				width: 180upx;
@@ -145,10 +141,10 @@ export default {
 					.teacher_number {
 						font-size: 24upx;
 						margin-top: 20upx;
-						display:-webkit-box;  
-						-webkit-box-orient:vertical;  
-						-webkit-line-clamp:2;  
-						overflow:hidden;  
+						display: -webkit-box;
+						-webkit-box-orient: vertical;
+						-webkit-line-clamp: 2;
+						overflow: hidden;
 						font-family: PingFangSC-Regular;
 						color: rgba(153, 153, 153, 1);
 					}

@@ -2,8 +2,8 @@
 	<view class="list">
 		<view class="" v-for="(item, index) in friendsList" :key="index">
 			<friendHead :itemHead="item"></friendHead>
-			<friendContent :content="item.body" :listId='item.id'></friendContent>
-			<video src="../../static/cont-1531578-13707370_adpkg-ad_sd.mp4" controls></video>
+			<friendContent :content="item.body" :listId="item.id"></friendContent>
+			<image :src="item.video || userImage"></image>
 			<friendOperation></friendOperation>
 		</view>
 	</view>
@@ -23,7 +23,9 @@ export default {
 		friendsList: Array
 	},
 	data() {
-		return {};
+		return {
+			userImage: '../../static/img/lf.jpg'
+		};
 	}
 };
 </script>
@@ -32,7 +34,7 @@ export default {
 .list {
 	view {
 		margin-bottom: 20upx;
-		video {
+		image {
 			width: 100%;
 			height: 410upx;
 			border-radius: 12upx;

@@ -1,6 +1,6 @@
 <template>
 	<view class="content_head">
-		<image :src="itemHead.people_photo || imageUrl"></image>
+		<image :src="itemHead.photo || imageUrl"></image>
 		<view class="user_info">
 			<text>{{ itemHead.people_name }}</text>
 			<text>{{ itemHead.add_time }}</text>
@@ -19,7 +19,7 @@ export default {
 			imageUrl: '../../static/img/lf.jpg',
 			add_time: ''
 		};
-	},
+	}
 };
 </script>
 

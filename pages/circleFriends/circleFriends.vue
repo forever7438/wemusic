@@ -22,7 +22,7 @@ export default {
 		return {
 			friendsList: [],
 			isEnd: false,
-			index: 1
+			index: 0
 		};
 	},
 	onLoad() {

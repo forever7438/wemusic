@@ -1,8 +1,8 @@
 <template>
 	<view>
-		<textarea placeholder="请留下您宝贵的意见" />
-		<input class="uni-input" placeholder="请输入联系方式(手机或邮箱)" v-model="inputClearValue" />
-		<button>提交</button>
+		<textarea placeholder="请留下您宝贵的意见" v-model="contact" />
+		<input class="uni-input" placeholder="请输入联系方式(手机或邮箱)" v-model="body" />
+		<button @tap="submitFeedback">提交</button>
 	</view>
 </template>
 
@@ -10,8 +10,38 @@
 export default {
 	data() {
 		return {
-			inputClearValue: ''
+			body: '',
+			contact: ''
 		};
+	},
+	methods: {
+		//提交意见反馈
+		submitFeedback() {
+			if (!this.contact) {
+				uni.showToast({
+					title: '反馈内容不得为空',
+					icon: 'none'
+				});
+				return;
+			}
+			if (!this.body) {
+				uni.showToast({
+					title: '联系方式不得为空',
+					icon: 'none'
+				});
+				return;
+			}
+			this.ajax({
+				url: 'studentclass/feed_back',
+				data: {
+					body: this.body,
+					contact: this.contact
+				},
+				success: res => {
+					console.log(res);
+				}
+			});
+		}
 	}
 };
 </script>
