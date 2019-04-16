@@ -6,14 +6,14 @@
 				<view class="w-picker-btn" @tap="pickerCancel">取消</view>
 				<view class="w-picker-btn" :style="{ color: themeColor }" @tap="pickerConfirm">确定</view>
 			</view>
-			<view class="w-picker-view" v-if="mode == 'date'">
+			<view class="w-picker-view" v-if="mode == 'dates'">
 				<picker-view indicator-style="height: 40px;" :value="pickVal" @change="bindChange">
 					<picker-view-column>
 						<view class="item" v-for="(item, index) in data.years" :key="index">{{ item }}年</view>
 					</picker-view-column>
 				</picker-view>
 			</view>
-			<view class="w-picker-view" v-if="mode == 'dateTime'">
+			<view class="w-picker-view" v-if="mode == 'date' || mode == 'dateTime'">
 				<picker-view indicator-style="height: 40px;" :value="pickVal" @change="bindChange">
 					<picker-view-column>
 						<view class="item" v-for="(item, index) in data.years" :key="index">{{ item }}年</view>
@@ -156,6 +156,14 @@ export default {
 						days = initDays(year, month);
 						this.data.days = days;
 					}
+					this.checkArr = [year, month, day];
+					break;
+				case 'dates':
+					year = this.data.years[arr[0]];
+					if (year != checkArr[0]) {
+						days = initDays(year, month);
+						this.data.days = days;
+					}
 					this.checkArr = [year];
 					break;
 				case 'dateTime':
@@ -218,10 +226,14 @@ export default {
 			this.pickVal = this.defaultVal;
 			switch (mode) {
 				case 'date':
-					// year=data.years[this.defaultVal[0]];
-					// month=data.months[this.defaultVal[1]];
-					// day=data.days[this.defaultVal[2]];
-					// this.checkArr=[year,month,day];
+					year = data.years[this.defaultVal[0]];
+					month = data.months[this.defaultVal[1]];
+					day = data.days[this.defaultVal[2]];
+					this.checkArr = [year, month, day];
+					break;
+				case 'dates':
+					year = data.years[this.defaultVal[0]];
+					this.checkArr = [year];
 					break;
 				case 'dateTime':
 					year = data.years[this.defaultVal[0]];

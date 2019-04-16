@@ -1,5 +1,6 @@
 <template>
 	<view class="add_teacher">
+		<w-picker mode="date" @confirm="onConfirmDate" ref="pickerDate"></w-picker>
 		<view>
 			<text>名字</text>
 			<input type="text" maxlength="10" v-model="name" />
@@ -19,13 +20,7 @@
 		</view>
 		<view>
 			<text>生日</text>
-			<ruiDatePicker
-				fields="day"
-				start="1970-00-00"
-				end="2030-12-30"
-				style="width: 100%;border: none;"
-				:value="birthday"
-			></ruiDatePicker>
+			<input @tap="toggleTabDate" type="text" v-model="birthday" />
 		</view>
 		<view>
 			<text>住址</text>
@@ -86,11 +81,11 @@
 
 <script>
 let _this = '';
-import ruiDatePicker from '@/components/rattenking-dtpicker/rattenking-dtpicker.vue';
+import wPicker from '@/components/w-picker/w-picker.vue';
 import { ApiUrl } from '../../common/common.js';
 export default {
 	components: {
-		ruiDatePicker
+		wPicker
 	},
 	onLoad() {
 		_this = this;
@@ -113,6 +108,12 @@ export default {
 		};
 	},
 	methods: {
+		toggleTabDate() {
+			this.$refs.pickerDate.show();
+		},
+		onConfirmDate(val) {
+			this.birthday = `${val[0]}-${val[1]}-${val[2]}`;
+		},
 		//选择文件
 		chooseVideo: e => {
 			uni.chooseVideo({

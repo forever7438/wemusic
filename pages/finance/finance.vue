@@ -1,7 +1,7 @@
 <template>
 	<view class="finance">
 		<financeList></financeList>
-		<w-picker mode="date" :defaultVal="[0, 1, 0]" @confirm="onConfirm" ref="picker"></w-picker>
+		<w-picker mode="dates" :defaultVal="[0, 1, 0]" @confirm="onConfirm" ref="picker"></w-picker>
 	</view>
 </template>
 

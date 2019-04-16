@@ -1,12 +1,12 @@
 <template>
 	<div class="update_userinfo">
-		<mpvue-city-picker
+		<!-- <mpvue-city-picker
 			:themeColor="themeColor"
 			ref="mpvueCityPicker"
 			:pickerValueDefault="cityPickerValueDefault"
 			@onCancel="onCancel"
 			@onConfirm="onConfirm"
-		></mpvue-city-picker>
+		></mpvue-city-picker> -->
 		<neil-modal :show="show" @cancel="bindBtn('cancel')" @confirm="bindBtn('confirm')" @close="show = false" title="请输入用户名">
 			<input type="text" class="new_name" placeholder="请输入用户名" v-model="userName" />
 		</neil-modal>
@@ -37,9 +37,8 @@
 			<li>
 				<span>生日</span>
 				<view>
-					<picker mode="date" :value="date" :start="startDate" :end="endDate" @change="bindDateChange">
-						<text>{{ date }}</text>
-					</picker>
+					<text @tap="toggleTabDate">{{ date }}</text>
+					<w-picker mode="date" :defaultVal="[0, 1, 0]" @confirm="onConfirmDate" ref="pickerDate"></w-picker>
 					<s>></s>
 				</view>
 			</li>
@@ -54,9 +53,10 @@
 			</li>
 			<li>
 				<span>住址</span>
-				<view @click="showMulLinkageThreePicker">
-					<text>{{ address }}</text>
+				<view>
+					<text @click="toggleTabAdress">{{ address }}</text>
 					<s>></s>
+					<w-picker mode="region" @confirm="onConfirmAdress" ref="pickerAdress"></w-picker>
 				</view>
 			</li>
 		</ul>
@@ -65,11 +65,11 @@
 
 <script>
 import { ApiUrl, getDate, getImgToBase64 } from '../../common/common.js';
-import mpvueCityPicker from '../../components/mpvue-citypicker/mpvueCityPicker.vue';
+import wPicker from '@/components/w-picker/w-picker.vue';
 import neilModal from '@/components/neil-modal/neil-modal.vue';
 export default {
 	components: {
-		mpvueCityPicker,
+		wPicker,
 		neilModal
 	},
 	data() {
@@ -83,11 +83,6 @@ export default {
 			date: getDate({
 				format: true
 			}),
-			startDate: getDate('start'),
-			endDate: getDate('end'),
-			cityPickerValueDefault: [0, 0, 1],
-			themeColor: '#007AFF',
-
 			userName: '测试人员',
 			sex: 1,
 			birthday: '',
@@ -129,6 +124,18 @@ export default {
 		});
 	},
 	methods: {
+		toggleTabDate() {
+			this.$refs.pickerDate.show();
+		},
+		onConfirmDate(val) {
+			this.date = `${val[0]}-${val[1]}-${val[2]}`;
+		},
+		toggleTabAdress() {
+			this.$refs.pickerAdress.show();
+		},
+		onConfirmAdress(val) {
+			this.address = `${val[0]}-${val[1]}-${val[2]}`;
+		},
 		bindPickerChangeSex: function(e) {
 			this.index = e.target.value;
 			e.target.value = 0 ? (this.sex = 1) : (this.sex = 2);
@@ -136,21 +143,6 @@ export default {
 		bindPickerChangeInterest: function(e) {
 			this.indexs = e.target.value;
 			this.interest = this.arrays[e.target.value];
-		},
-		bindDateChange: function(e) {
-			this.birthday = e.target.value;
-			this.date = e.target.value;
-			console.log(this.birthday);
-		},
-
-		bindBtn(type) {},
-		// 三级联动选择
-		showMulLinkageThreePicker() {
-			this.$refs.mpvueCityPicker.show();
-		},
-		onCancel(e) {},
-		onConfirm(e) {
-			this.address = e.label;
 		},
 		//选择头像上传
 		updateUserImage() {
