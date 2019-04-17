@@ -7,8 +7,13 @@
 					Guitar
 				</text>
 			</view>
-			<startclass v-if="headType==='lessonDetail'||headType==='teacherDetail'"></startclass>
-			<text class="lesson_time" v-if="headType==='lessonDetail'">课程时长：30min - 180min</text>
+			<startclass size=14 
+						:star="star"
+						starColor="#FFFFFF"
+						v-if="headType==='lessonDetail'||headType==='teacherDetail'"></startclass>
+			<view style="margin-top: 34upx;">
+				<text class="lesson_time" v-if="headType==='lessonDetail'">课程时长：{{mixTime}}min - {{maxTime}}min</text>
+			</view>
 			<text class="lesson_type" v-if="headType==='teacherDetail'">主授课程 吉他</text>
 			<view style="margin-top:60upx;"><text class="lesson_desc">{{content}}</text></view>
 		</view>
@@ -22,9 +27,12 @@
 			startclass
 		},
 		props: {
+			star:Number,
 			headType: String,
 			title: String,
-			content: String
+			content: String,
+			maxTime: String,
+			mixTime: String
 		},
 		data() {
 			return {};

@@ -4,7 +4,10 @@
 		<view class="all_lesson">
 			<view v-if="flag">
 				<text class="lesson_tips">全部课程</text>
-				<lessonList v-if="musicInfo.list.length" :listInfo="musicInfo.list" lessonType="lessonCopy" :musicId="musicId"></lessonList>
+				<lessonList v-if="musicInfo.list.length" 
+							:listInfo="musicInfo.list" 
+							lessonType="lessonCopy" 
+							:musicId="musicId"></lessonList>
 				<view class="lesson_nothing" v-else>暂无课程</view>
 			</view>
 		</view>

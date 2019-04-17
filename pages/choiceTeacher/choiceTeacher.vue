@@ -1,11 +1,18 @@
 <template>
 	<view>
+		<view class="top">
+			<span @click="backEvent">
+				<img src="/static/img/nav_back_light.png"/>
+			</span>
+		</view>
 		<lessonHead 
 			headType="lessonDetail" 
-			:title="choiseTeacherInfo.music_sun.name" 
-			:content="choiseTeacherInfo.music_sun.content || '暂无课程介绍'"></lessonHead>
+			:star="Number(courseInfo.star)"
+			:title="courseInfo.name" 
+			:mixTime="courseInfo.mix_time_type"
+			:maxTime="courseInfo.max_time_type"
+			:content="courseInfo.content || '暂无课程介绍'"></lessonHead>
 		<teacherList
-			v-if="!choiseTeacherInfo.list.length"
 			:listInfo="selectFlag ? selectItem : listInfo"
 			:selectFlag="selectFlag"
 			title="选择教师"
@@ -28,42 +35,57 @@ export default {
 	},
 	data() {
 		return {
+			courseInfo:{},
 			selectFlag: false,
 			selectItem: [],
-			listInfo: [{ id: 1, name: 'test-1' }, { id: 2, name: 'test-2' }, { id: 3, name: 'test-3' }, { id: 4, name: 'test-4' }, { id: 5, name: 'test-5' }],
+			listInfo: [],
 			choiseTeacherInfo: {}
 		};
 	},
 	onLoad(obj) {
 		this.getChoiseTeacherInfo(obj.musicId, obj.musicSunId);
-	},
-	onBackPress(obj){
-		console.log('test')
+		this.getCourseInfo(obj.musicSunId);
 	},
 	methods: {
+		backEvent(){
+			if(this.selectFlag)
+				this.selectFlag = false
+			else
+				window.history.back(-1); 
+		},
 		select(item) {
 			console.log(item);
 			this.selectItem = [];
 			this.selectItem.push(item);
-			console.log(this.selectItem);
 			this.selectFlag = true;
 		},
-		//获取选择老师列表
+		/**获取课程信息*/
+		getCourseInfo(classId){
+			this.ajax({
+				url: 'music/index_info',
+				data: {
+					music_id: classId,
+				},
+				success: res => {
+					console.log(res);
+					if (res.data.body === 'success') {
+						this.courseInfo = res.data.data.info
+					}
+				}
+			});
+		},
+		/**获取选择老师列表*/
 		getChoiseTeacherInfo(musicId, musicSunId) {
 			this.ajax({
-				url: 'user_order/teacher_list',
+				url: 'music/teacher_list',
 				data: {
-					music_id: musicId,
-					music_sun_id: musicSunId,
-					list: 1,
+					music_id: musicSunId,
+					list: 0,
 					val: 5
 				},
 				success: res => {
 					if (res.data.body === 'success') {
-						this.choiseTeacherInfo = res.data.data;
-						// 						uni.setNavigationBarTitle({
-						// 							title: res.data.data.name
-						// 						});
+						this.listInfo = res.data.data.list;
 					}
 				}
 			});
@@ -74,6 +96,19 @@ export default {
 
 <style lang="less">
 view {
+	.top{
+		position: absolute;
+		span{
+			display: inline-block;
+			width: 64upx;
+			height: 64upx;
+			background: #999;
+			text-align: center;
+			border-radius: 64upx;
+			margin: 20upx;
+			padding: 10upx 14upx;
+		}
+	}
 	.sign_up {
 		text-align: center;
 		margin-top: 40upx;

@@ -1,8 +1,13 @@
 <template>
 	<view class="uni-rate">
 		<view class="uni-rate-icon" v-for="(star, index) in stars" :key="index" :style="{ marginLeft: margin + 'px' }" @click="_onClick(index)">
-			<uni-icon :size="size" :color="color" :type="isFill ? 'star-filled' : 'star'"></uni-icon>
-			<view class="uni-rate-icon-on" :style="{ width: star.activeWitch }">
+			<uni-icon 	style="margin-right: 4upx;" 
+						:size="size" 
+						:color="color" 
+						:type="isFill ? 'star-filled' : 'star'"></uni-icon>
+			<view class="uni-rate-icon-on"  
+				  style="margin-right: 4upx;" 
+				  :style="{ width: star.activeWitch }">
 				<uni-icon :size="size" :color="activeColor" type="star-filled"></uni-icon>
 			</view>
 		</view>
