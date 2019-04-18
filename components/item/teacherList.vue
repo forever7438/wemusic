@@ -7,16 +7,14 @@
 				<image v-else :src="item.photo || image"></image>
 				<div class="lesson_messgae">
 					<p class="lesson_title">
-						{{ item.name }}Laura Johnson
+						{{ item.name }}
 						<span class="go_pay" @click="selectTeacherFunc(item)">选择</span>
 					</p>
-					<startclass :star="item.star" v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'" size="14"></startclass>
-					<p v-else class="lesson_winer">教师 Jennifer Young</p>
+					<startclass :star="Number(item.star)" v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'" size="14"></startclass>
+					<!-- <p v-else class="lesson_winer">教师 Jennifer Young</p> -->
 					<div class="lesson_pay">
 						<span class="teacher_number">
-							从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。 从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。
-							从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。 从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。
-							从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。 从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。
+							{{item.content || '暂无介绍'}}
 						</span>
 					</div>
 				</div>

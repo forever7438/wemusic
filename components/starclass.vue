@@ -2,8 +2,8 @@
 	<div class="start_class" v-if="star > 0">
 		<p>{{ title }}</p>
 		<div class="start_class_in">
-			<uni-rate :size="size" :value="3" :isFill="false" :disabled="true"></uni-rate>
-			<span class="number">{{ star }}</span>
+			<uni-rate :size="size" :value="star" :isFill="false" :disabled="true"></uni-rate>
+			<span class="number" :style="{color:starColor}">{{ star }}</span>
 		</div>
 	</div>
 	<div class="start_class" v-else>
@@ -20,7 +20,8 @@
 		props: {
 			title: String,
 			size: String,
-			star: Number
+			star: Number,
+			starColor: String
 		},
 		data() {
 			return {
