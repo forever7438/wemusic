@@ -1,420 +1,404 @@
 {
-    "pages" : [
-        //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-        {
-            "path" : "pages/login/login",
-            "style" : {
-                "app-plus" : {
-                    "titleNView" : false
-                }
-            }
-        },
-        {
-            "path" : "pages/tabbar/tabbar-1/tabbar-1",
-            "style" : {
-                "navigationBarTitleText" : "选课",
-				"app-plus" : {
-				    "titleNView" : {
-						"backgroundColor":"#ffff",
-						"titleSize":"17px"
-				    }
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/login/login",
+			"style": {
+				"app-plus": {
+					"titleNView": false
 				}
-            }
-        },
-        {
-            "path" : "pages/tabbar/tabbar-2/tabbar-2",
-            "style" : {
-                "navigationBarTitleText" : "课程表",
-                "app-plus" : {
-                    "titleNView" : {
-						"backgroundColor":"#ffff",
-						"titleSize":"17px",
-                        "buttons" : [
-                            {
-                                "text" : "\ue618",
-                                "fontSrc" : "/static/iconfont/iconfont.ttf",
-                                "fontSize" : "22px",
-                                "fontWeight" : "bold"
-                            }
-                        ]
-                    }
-                }
-            }
-        },
-        {
-            "path" : "pages/tabbar/tabbar-5/tabbar-5",
-            "style" : {
-                "app-plus" : {
-                    "titleNView" : {
-                        "buttons" : [
-                            {
-                                "text" : "\ue674",
-                                "fontSrc" : "/static/iconfont/iconfont.ttf",
-                                "fontSize" : "22px",
-                                "fontWeight" : "bold"
-                            },
-                            {
-                                "text" : "\ue633",
-                                "fontSrc" : "/static/iconfont/iconfont.ttf",
-                                "fontSize" : "22px",
-                                "fontWeight" : "bold",
-                                "float" : "left"
-                            }
-                        ]
-                    }
-                }
-            }
-        },
-        {
-            "path" : "pages/circleFriends/circleFriends",
-            "style" : {
-                "navigationBarTitleText" : "朋友圈",
-                "enablePullDownRefresh" : false,
-                "app-plus" : {
-                    "titleNView" : {
-                        "buttons" : [
-                            {
-                                "text" : "\ue637",
-                                "fontSrc" : "/static/iconfont/iconfont.ttf",
-                                "fontSize" : "22px",
-                                "fontWeight" : "bold"
-                            }
-                        ]
-                    }
-                }
-            }
-        },
-        {
-            "path" : "pages/myCoupon/myCoupon",
-            "style" : {
-                "navigationBarTitleText" : "优惠卷"
-            }
-        },
-        {
-            "path" : "pages/myEvaluate/myEvaluate",
-            "style" : {
-                "navigationBarTitleText" : "我的评价"
-            }
-        },
-        {
-            "path" : "pages/feedback/feedback",
-            "style" : {
-                "navigationBarTitleText" : "意见反馈"
-            }
-        },
-        {
-            "path" : "pages/aboutUs/aboutUs",
-            "style" : {
-                "navigationBarTitleText" : "关于我们"
-            }
-        },
-        {
-            "path" : "pages/courseInvitation/courseInvitation",
-            "style" : {
-                "navigationBarTitleText" : "课程邀请"
-            }
-        },
-        {
-            "path" : "pages/myFriend/myFriend",
-            "style" : {
-                "navigationBarTitleText" : "我的朋友圈",
-                "enablePullDownRefresh" : false,
-                "app-plus" : {
-                    "titleNView" : {
-                        "buttons" : [
-                            {
-                                "text" : "\ue637",
-                                "fontSrc" : "/static/iconfont/iconfont.ttf",
-                                "fontSize" : "22px",
-                                "fontWeight" : "bold"
-                            }
-                        ]
-                    }
-                }
-            }
-        },
-        {
-            "path" : "pages/friendsDetail/friendsDetail",
-            "style" : {
-                "app-plus" : {
-                    "titleNView" : {
-                        "type" : "transparent"
-                    }
-                }
-            }
-        },
-        {
-            "path" : "pages/releaseFriends/releaseFriends",
-            "style" : {
-                "navigationBarTitleText" : "发布朋友圈",
-                "app-plus" : {
-                    "titleNView" : {
-                        "buttons" : [
-                            {
-                                "text" : "发布",
-                                "fontSize" : "16px",
-                                "fontWeight" : "bold"
-                            }
-                        ]
-                    }
-                }
-            }
-        },
-        {
-            "path" : "pages/setting/setting",
-            "style" : {
-                "navigationBarTitleText" : "设置"
-            }
-        },
-        {
-            "path" : "pages/updatePass/updatePass",
-            "style" : {
-                "navigationBarTitleText" : "修改密码"
-            }
-        },
-        {
-            "path" : "pages/updateEmial/updateEmial",
-            "style" : {
-                "navigationBarTitleText" : "修改邮箱"
-            }
-        },
-        {
-            "path" : "pages/updatePhone/updatePhone",
-            "style" : {
-                "navigationBarTitleText" : "修改手机号"
-            }
-        },
-        {
-            "path" : "pages/message/message",
-            "style" : {
-                "navigationBarTitleText" : "消息"
-            }
-        },
-        {
-            "path" : "pages/lesson/lesson",
-            "style" : {
-                "navigationBarTitleText" : "我的课程"
-            }
-        },
-        {
-            "path" : "pages/vipCenter/vipCenter",
-            "style" : {
-                "navigationBarTitleText" : "会员中心"
-            }
-        },
-        {
-            "path" : "pages/rechargeRecord/rechargeRecord",
-            "style" : {
-                "navigationBarTitleText" : "充值记录"
-            }
-        },
-        {
-            "path" : "pages/consumptionRecord/consumptionRecord",
-            "style" : {
-                "navigationBarTitleText" : "消费记录"
-            }
-        },
-        {
-            "path" : "pages/pay/pay",
-            "style" : {
-                "navigationBarTitleText" : "支付"
-            }
-        },
-        {
-            "path" : "pages/paySuccess/paySuccess",
-            "style" : {
-                "navigationBarTitleText" : "充值成功"
-            }
-        },
-        {
-            "path" : "pages/evaluate/evaluate",
-            "style" : {
-                "navigationBarTitleText" : "评价"
-            }
-        },
-        {
-            "path" : "pages/classAdjustment/classAdjustment",
-            "style" : {
-                "navigationBarTitleText" : "调课"
-            }
-        },
-        {
-            "path" : "pages/lessonDetail/lessonDetail",
-            "style" : {
-                "navigationBarTitleText" : "课程详情",
-                "app-plus" : {
-                    "titleNView" : {
-                        "type" : "transparent"
-                    }
-                }
-            }
-        },
-        {
-            "path" : "pages/lessonCopy/lessonCopy",
-            "style" : {
-                "navigationBarTitleText" : "课程类型",
-                "app-plus" : {
-                    "titleNView" : {
-                        "type" : "transparent"
-                    }
-                }
-            }
-        },
-        {
-            "path" : "pages/teacherDetail/teacherDetail",
-            "style" : {
-                "navigationBarTitleText" : "教师详情",
-                "app-plus" : {
-                    "titleNView" : {
-                        "type" : "transparent"
-                    }
-                }
-            }
-        },
-        {
-            "path" : "pages/myCode/myCode",
-            "style" : {
-                "navigationBarTitleText" : "我的邀请码"
-            }
-        },
-        {
-            "path" : "pages/register/register",
-            "style" : {
-                "navigationBarTitleText" : "注册"
-            }
-        },
-        {
-            "path" : "pages/classNotice/classNotice",
-            "style" : {
-                "navigationBarTitleText" : "调整通知"
-            }
-        },
-        {
-            "path" : "pages/codeSuccess/codeSuccess",
-            "style" : {
-                "navigationBarTitleText" : "打卡",
-                "navigationBarTextStyle" : "white",
-                "navigationBarBackgroundColor" : "#333333"
-            }
-        },
-        {
-            "path" : "pages/teacherLogin/teacherLogin",
-            "style" : {
-                "navigationBarBackgroundColor" : "#FFF"
-            }
-        },
-        {
-            "path" : "pages/addTeacher/addTeacher",
-            "style" : {
-                "navigationBarTitleText" : "教师入驻",
-                "navigationBarBackgroundColor" : "#FFF"
-            }
-        },
-        {
-            "path" : "pages/updateUserinfo/updateUserinfo",
-            "style" : {
-                "navigationBarTitleText" : "修改个人资料",
-                "app-plus" : {
-                    "titleNView" : {
-                        "buttons" : [
-                            {
-                                "text" : "确定",
-                                "fontSize" : "16px",
-                                "fontWeight" : "bold"
-                            }
-                        ]
-                    }
-                }
-            }
-        },
-        {
-            "path" : "pages/wagesDetail/wagesDetail",
-            "style" : {
-                "navigationBarTitleText" : "工资详情"
-            }
-        },
-        {
-            "path" : "pages/authentication/authentication",
-            "style" : {
-                "navigationBarTitleText" : "认证中心"
-            }
-        },
-        {
-            "path" : "pages/uploadFile/uploadFile",
-            "style" : {
-                "navigationBarTitleText" : "资料上传"
-            }
-        },
-        {
-            "path" : "pages/finance/finance",
-            "style" : {
-                "navigationBarTitleText" : "财务管理",
-                "app-plus" : {
-                    "titleNView" : {
-                        "buttons" : [
-                            {
-                                "text" : "切换年份",
-                                "fontSize" : "16px",
-                                "fontWeight" : "bold"
-                            }
-                        ]
-                    }
-                }
-            }
-        },
-        {
-            "path" : "pages/adjustmentDetail/adjustmentDetail",
-            "style" : {
-                "navigationBarTitleText" : "调整详情"
-            }
-        },
-        {
-            "path" : "pages/choiceTeacher/choiceTeacher",
-            "style" : {
-                "app-plus" : {
-                    "titleNView" : {
-						"type":"transparent",
-						"buttons":[
+			}
+		},
+		{
+			"path": "pages/tabbar/tabbar-1/tabbar-1",
+			"style": {
+				"navigationBarTitleText": "选课",
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#ffff",
+						"titleSize": "17px"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/tabbar/tabbar-2/tabbar-2",
+			"style": {
+				"navigationBarTitleText": "课程表",
+				"app-plus": {
+					"titleNView": {
+						"backgroundColor": "#ffff",
+						"titleSize": "17px",
+						"buttons": [{
+							"text": "\ue618",
+							"fontSrc": "/static/iconfont/iconfont.ttf",
+							"fontSize": "22px",
+							"fontWeight": "bold"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/tabbar/tabbar-5/tabbar-5",
+			"style": {
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+								"text": "\ue674",
+								"fontSrc": "/static/iconfont/iconfont.ttf",
+								"fontSize": "22px",
+								"fontWeight": "bold"
+							},
 							{
-								"type":"back",
-								"float":"left"
+								"text": "\ue633",
+								"fontSrc": "/static/iconfont/iconfont.ttf",
+								"fontSize": "22px",
+								"fontWeight": "bold",
+								"float": "left"
 							}
 						]
 					}
-                }
-            }
-        }
-    ],
-    "globalStyle" : {
-        "navigationBarTextStyle" : "black",
-        "navigationBarTitleText" : "",
-        "navigationBarBackgroundColor" : "#F8F8F8",
-        "backgroundColor" : "#F8F8F8"
-    },
-    "tabBar" : {
-        "borderStyle" : "black",
-        "backgroundColor" : "",
-        "color" : "#8F8F94",
-        "selectedColor" : "#f33e54",
-        "list" : [
-            {
-                "pagePath" : "pages/tabbar/tabbar-1/tabbar-1",
-                "iconPath" : "static/img/tabbar/home.png",
-                "selectedIconPath" : "static/img/tabbar/homeactive.png",
-                "text" : ""
-            },
-            {
-                "pagePath" : "pages/tabbar/tabbar-2/tabbar-2",
-                "iconPath" : "static/img/tabbar/class.png",
-                "selectedIconPath" : "static/img/tabbar/classactive.png",
-                "text" : ""
-            },
-            {
-                "pagePath" : "pages/tabbar/tabbar-5/tabbar-5",
-                "iconPath" : "static/img/tabbar/me.png",
-                "selectedIconPath" : "static/img/tabbar/meactive.png",
-                "text" : ""
-            }
-        ]
-    }
+				}
+			}
+		},
+		{
+			"path": "pages/circleFriends/circleFriends",
+			"style": {
+				"navigationBarTitleText": "朋友圈",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue637",
+							"fontSrc": "/static/iconfont/iconfont.ttf",
+							"fontSize": "22px",
+							"fontWeight": "bold"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/myCoupon/myCoupon",
+			"style": {
+				"navigationBarTitleText": "优惠卷"
+			}
+		},
+		{
+			"path": "pages/myEvaluate/myEvaluate",
+			"style": {
+				"navigationBarTitleText": "我的评价"
+			}
+		},
+		{
+			"path": "pages/feedback/feedback",
+			"style": {
+				"navigationBarTitleText": "意见反馈"
+			}
+		},
+		{
+			"path": "pages/aboutUs/aboutUs",
+			"style": {
+				"navigationBarTitleText": "关于我们"
+			}
+		},
+		{
+			"path": "pages/courseInvitation/courseInvitation",
+			"style": {
+				"navigationBarTitleText": "课程邀请"
+			}
+		},
+		{
+			"path": "pages/myFriend/myFriend",
+			"style": {
+				"navigationBarTitleText": "我的朋友圈",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue637",
+							"fontSrc": "/static/iconfont/iconfont.ttf",
+							"fontSize": "22px",
+							"fontWeight": "bold"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/friendsDetail/friendsDetail",
+			"style": {
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/releaseFriends/releaseFriends",
+			"style": {
+				"navigationBarTitleText": "发布朋友圈",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "发布",
+							"fontSize": "16px",
+							"fontWeight": "bold"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/setting/setting",
+			"style": {
+				"navigationBarTitleText": "设置"
+			}
+		},
+		{
+			"path": "pages/updatePass/updatePass",
+			"style": {
+				"navigationBarTitleText": "修改密码"
+			}
+		},
+		{
+			"path": "pages/updateEmial/updateEmial",
+			"style": {
+				"navigationBarTitleText": "修改邮箱"
+			}
+		},
+		{
+			"path": "pages/updatePhone/updatePhone",
+			"style": {
+				"navigationBarTitleText": "修改手机号"
+			}
+		},
+		{
+			"path": "pages/message/message",
+			"style": {
+				"navigationBarTitleText": "消息"
+			}
+		},
+		{
+			"path": "pages/lesson/lesson",
+			"style": {
+				"navigationBarTitleText": "我的课程"
+			}
+		},
+		{
+			"path": "pages/vipCenter/vipCenter",
+			"style": {
+				"navigationBarTitleText": "会员中心"
+			}
+		},
+		{
+			"path": "pages/rechargeRecord/rechargeRecord",
+			"style": {
+				"navigationBarTitleText": "充值记录"
+			}
+		},
+		{
+			"path": "pages/consumptionRecord/consumptionRecord",
+			"style": {
+				"navigationBarTitleText": "消费记录"
+			}
+		},
+		{
+			"path": "pages/pay/pay",
+			"style": {
+				"navigationBarTitleText": "支付"
+			}
+		},
+		{
+			"path": "pages/paySuccess/paySuccess",
+			"style": {
+				"navigationBarTitleText": "充值成功"
+			}
+		},
+		{
+			"path": "pages/evaluate/evaluate",
+			"style": {
+				"navigationBarTitleText": "评价"
+			}
+		},
+		{
+			"path": "pages/classAdjustment/classAdjustment",
+			"style": {
+				"navigationBarTitleText": "调课"
+			}
+		},
+		{
+			"path": "pages/lessonDetail/lessonDetail",
+			"style": {
+				"navigationBarTitleText": "课程详情",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/lessonCopy/lessonCopy",
+			"style": {
+				"navigationBarTitleText": "课程类型",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/teacherDetail/teacherDetail",
+			"style": {
+				"navigationBarTitleText": "教师详情",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/myCode/myCode",
+			"style": {
+				"navigationBarTitleText": "我的邀请码"
+			}
+		},
+		{
+			"path": "pages/register/register",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+		},
+		{
+			"path": "pages/classNotice/classNotice",
+			"style": {
+				"navigationBarTitleText": "调整通知"
+			}
+		},
+		{
+			"path": "pages/codeSuccess/codeSuccess",
+			"style": {
+				"navigationBarTitleText": "打卡",
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#333333"
+			}
+		},
+		{
+			"path": "pages/teacherLogin/teacherLogin",
+			"style": {
+				"navigationBarBackgroundColor": "#FFF"
+			}
+		},
+		{
+			"path": "pages/addTeacher/addTeacher",
+			"style": {
+				"navigationBarTitleText": "教师入驻",
+				"navigationBarBackgroundColor": "#FFF"
+			}
+		},
+		{
+			"path": "pages/updateUserinfo/updateUserinfo",
+			"style": {
+				"navigationBarTitleText": "修改个人资料",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "确定",
+							"fontSize": "16px",
+							"fontWeight": "bold"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/wagesDetail/wagesDetail",
+			"style": {
+				"navigationBarTitleText": "工资详情"
+			}
+		},
+		{
+			"path": "pages/authentication/authentication",
+			"style": {
+				"navigationBarTitleText": "认证中心"
+			}
+		},
+		{
+			"path": "pages/uploadFile/uploadFile",
+			"style": {
+				"navigationBarTitleText": "资料上传"
+			}
+		},
+		{
+			"path": "pages/finance/finance",
+			"style": {
+				"navigationBarTitleText": "财务管理",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "切换年份",
+							"fontSize": "16px",
+							"fontWeight": "bold"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/adjustmentDetail/adjustmentDetail",
+			"style": {
+				"navigationBarTitleText": "调整详情"
+			}
+		},
+		{
+			"path": "pages/choiceTeacher/choiceTeacher",
+			"style": {
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+						// 						"buttons": [{
+						// 							"type": "back",
+						// 							"float": "left"
+						// 						}]
+					}
+				}
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"borderStyle": "black",
+		"backgroundColor": "",
+		"color": "#8F8F94",
+		"selectedColor": "#f33e54",
+		"list": [{
+				"pagePath": "pages/tabbar/tabbar-1/tabbar-1",
+				"iconPath": "static/img/tabbar/home.png",
+				"selectedIconPath": "static/img/tabbar/homeactive.png",
+				"text": ""
+			},
+			{
+				"pagePath": "pages/tabbar/tabbar-2/tabbar-2",
+				"iconPath": "static/img/tabbar/class.png",
+				"selectedIconPath": "static/img/tabbar/classactive.png",
+				"text": ""
+			},
+			{
+				"pagePath": "pages/tabbar/tabbar-5/tabbar-5",
+				"iconPath": "static/img/tabbar/me.png",
+				"selectedIconPath": "static/img/tabbar/meactive.png",
+				"text": ""
+			}
+		]
+	}
 }

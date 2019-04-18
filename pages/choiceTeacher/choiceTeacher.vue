@@ -1,9 +1,7 @@
 <template>
 	<view>
-		<lessonHead 
-			headType="lessonDetail" 
-			:title="choiseTeacherInfo.music_sun.name" 
-			:content="choiseTeacherInfo.music_sun.content || '暂无课程介绍'"></lessonHead>
+		<!-- <view class="top">头部占位符</view> -->
+		<lessonHead headType="lessonDetail" :title="choiseTeacherInfo.music_sun.name" :content="choiseTeacherInfo.music_sun.content || '暂无课程介绍'"></lessonHead>
 		<teacherList
 			v-if="!choiseTeacherInfo.list.length"
 			:listInfo="selectFlag ? selectItem : listInfo"
@@ -37,8 +35,8 @@ export default {
 	onLoad(obj) {
 		this.getChoiseTeacherInfo(obj.musicId, obj.musicSunId);
 	},
-	onBackPress(obj){
-		console.log('test')
+	onBackPress(obj) {
+		console.log('test');
 	},
 	methods: {
 		select(item) {
@@ -74,6 +72,11 @@ export default {
 
 <style lang="less">
 view {
+	.top {
+		position: fixed;
+		background-color: transparent;
+		color: red;
+	}
 	.sign_up {
 		text-align: center;
 		margin-top: 40upx;

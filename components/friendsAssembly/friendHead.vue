@@ -3,13 +3,14 @@
 		<image :src="itemHead.photo || imageUrl"></image>
 		<view class="user_info">
 			<text>{{ itemHead.people_name }}</text>
-			<text>{{ itemHead.add_time }}</text>
+			<text>{{ itemHead.add_time*1000 | formatDate }}</text>
 		</view>
 	</view>
 </template>
 
 <script>
 import { sysTime } from '../../common/common.js';
+import { dateUtils } from '../../common/util.js';
 export default {
 	props: {
 		itemHead: Object
@@ -17,8 +18,12 @@ export default {
 	data() {
 		return {
 			imageUrl: '../../static/img/lf.jpg',
-			add_time: ''
 		};
+	},
+	filters: {
+		formatDate: add_time => {
+			return dateUtils.humanize(add_time);
+		}
 	}
 };
 </script>

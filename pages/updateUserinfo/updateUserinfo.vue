@@ -1,12 +1,5 @@
 <template>
 	<div class="update_userinfo">
-		<!-- <mpvue-city-picker
-			:themeColor="themeColor"
-			ref="mpvueCityPicker"
-			:pickerValueDefault="cityPickerValueDefault"
-			@onCancel="onCancel"
-			@onConfirm="onConfirm"
-		></mpvue-city-picker> -->
 		<neil-modal :show="show" @cancel="bindBtn('cancel')" @confirm="bindBtn('confirm')" @close="show = false" title="请输入用户名">
 			<input type="text" class="new_name" placeholder="请输入用户名" v-model="userName" />
 		</neil-modal>
@@ -91,35 +84,18 @@ export default {
 		};
 	},
 	onNavigationBarButtonTap(obj) {
-		uni.uploadFile({
-			url: ApiUrl + 'user/update_info',
-			filePath: this.userImage,
-			name: 'photo',
-			header: {
-				'Content-Type': 'application/json',
-				role: 'student',
-				Authorization: uni.getStorageSync('token')
-			},
-			formData: {
+		this.ajax({
+			url: 'user/update_info',
+			data: {
+				photo: this.userImage,
 				name: this.userName,
 				sex: this.sex,
-				birthday: new Date(this.birthday).getTime(),
+				birthday: this.birthday,
 				interest: this.interest,
 				address: this.address
 			},
 			success: res => {
-				const info = JSON.parse(res.data);
-				if (info.body === 'success') {
-					uni.showToast({
-						title: '个人信息修改成功',
-						icon: 'none'
-					});
-				} else {
-					uni.showToast({
-						title: info.msg,
-						icon: 'none'
-					});
-				}
+				console.log(res);
 			}
 		});
 	},
@@ -150,6 +126,21 @@ export default {
 				count: 1,
 				success: res => {
 					this.userImage = res.tempFilePaths[0];
+					uni.uploadFile({
+						url: ApiUrl + 'index/photo_add',
+						filePath: res.tempFilePaths[0],
+						name: 'file',
+						header: {
+							role: 'student',
+							Authorization: uni.getStorageSync('token')
+						},
+						success: res => {
+							const info = JSON.parse(res.data);
+							if (info.data === 'success') {
+								this.userImage = info.body.photo;
+							}
+						}
+					});
 				}
 			});
 		}
