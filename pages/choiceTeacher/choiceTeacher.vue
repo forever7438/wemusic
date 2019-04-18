@@ -36,7 +36,7 @@ export default {
 		};
 	},
 	onLoad(obj) {
-		this.getChoiseTeacherInfo(obj.musicId, obj.musicSunId);
+		this.getChoiseTeacherInfo(obj.musicSunId);
 		this.getCourseInfo(obj.musicSunId);
 	},
 	methods: {
@@ -66,7 +66,7 @@ export default {
 			});
 		},
 		/**获取选择老师列表*/
-		getChoiseTeacherInfo(musicId, musicSunId) {
+		getChoiseTeacherInfo(musicSunId) {
 			this.ajax({
 				url: 'music/teacher_list',
 				data: {

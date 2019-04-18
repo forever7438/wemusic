@@ -1,10 +1,13 @@
 <template>
 	<view>
 		<lessonHead headType='lessonDetail' 
+					:star="Number(musicIndexInfo.star)"
 					:title='musicIndexInfo.name' 
+					:maxTime="musicIndexInfo.max_time_type"
+					:mixTime="musicIndexInfo.mix_time_type"
 					:content='musicIndexInfo.content || "暂无课程介绍"'></lessonHead>
-		<lessonTeacher></lessonTeacher>
-		<lessonDesc title='课程介绍'  content='该课程立足于钢琴官方，结合本机构的深入研究，帮助学员快速了解钢琴特点，帮助学员快速了解钢琴特点， 通过听说读写分项授课，难点各个击破，掌握熟练钢琴。'></lessonDesc>
+		<lessonTeacher :teacherList="teacherList"></lessonTeacher>
+		<lessonDesc title='课程介绍'  :content='musicIndexInfo.content || "暂无课程介绍"'></lessonDesc>
 		<lessonComment title='课程评价'></lessonComment>
 		<lessonScience title='教学环境'></lessonScience>
 		<span class="sign_up">报名</span>
@@ -27,11 +30,14 @@
 		},
 		data() {
 			return {
-				musicIndexInfo: {}
+				musicIndexInfo: {},
+				scienceImg:[],
+				teacherList:[]
 			};
 		},
 		onLoad(obj) {
 			this.getMusicIndexInfo(obj.lessonId)
+			this.getTeacher(obj.lessonId)
 		},
 		methods: {
 			//获取课程详情
@@ -44,13 +50,30 @@
 					method: 'post',
 					success: (res) => {
 						if (res.data.body === 'success') {
-							this.musicIndexInfo = res.data.data;
+							this.musicIndexInfo = res.data.data.info;
 							uni.setNavigationBarTitle({
 								title: res.data.data.name
 							})
 						}
 					}
 				})
+			},
+			
+			/**获取老师列表*/
+			getTeacher(musicSunId) {
+				this.ajax({
+					url: 'music/teacher_list',
+					data: {
+						music_id: musicSunId,
+						list: 0,
+						val: 12
+					},
+					success: res => {
+						if (res.data.body === 'success') {
+							this.teacherList = res.data.data.list;
+						}
+					}
+				});
 			}
 		}
 	};

@@ -3,14 +3,15 @@
 		<text class="teacher_class" v-if="!selectFlag">{{ title }}</text>
 		<ul>
 			<li v-for="(item, index) in listInfo" :key="index" :class="{ select: selectFlag }">
-				<navigator v-if="lessonType === 'lessonCopy'" :url="'/pages/lessonDetail/lessonDetail?lessonId=' + item.id"><image :src="item.photo || image"></image></navigator>
-				<image v-else :src="item.photo || image"></image>
+				<navigator :url="'/pages/teacherDetail/teacherDetail?teacherId=' + item.id">
+					<image :src="item.photo || image"></image>
+				</navigator>
 				<div class="lesson_messgae">
 					<p class="lesson_title">
 						{{ item.name }}
 						<span class="go_pay" @click="selectTeacherFunc(item)">选择</span>
 					</p>
-					<startclass :star="Number(item.star)" v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'" size="14"></startclass>
+					<startclass :star="Number(item.star)"  size="14"></startclass>
 					<!-- <p v-else class="lesson_winer">教师 Jennifer Young</p> -->
 					<div class="lesson_pay">
 						<span class="teacher_number">

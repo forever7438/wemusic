@@ -1,11 +1,19 @@
 <template>
 	<view class="lesson_teacher">
 		<text class="teacher_class">授课教师</text>
-		<swiper class="swiper" :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval">
-			<swiper-item v-for="(item, index) in 6" :key="index">
-				<navigator url="/pages/teacherDetail/teacherDetail"><image src="../../static/img/lf.jpg"></image></navigator>
-				<text class="teacher_name">Kevin Young</text>
-				<startclass size="18"></startclass>
+		<swiper class="swiper" 
+				:indicator-dots="indicatorDots" 
+				display-multiple-items="2"
+				next-margin="90px"
+				:autoplay="autoplay" 
+				:interval="interval">
+			<swiper-item v-for="(item, index) in teacherList" 
+						 :key="index">
+				<view class="teacher-item">
+					<navigator :url="'/pages/teacherDetail/teacherDetail?teacherId='+item.id"><image src="../../static/img/lf.jpg"></image></navigator>
+					<text class="teacher_name">{{item.name}}</text>
+					<startclass size="18"></startclass>
+				</view>
 			</swiper-item>
 		</swiper>
 	</view>
@@ -16,6 +24,9 @@ import startclass from '../starclass.vue';
 export default {
 	components: {
 		startclass
+	},
+	props:{
+		teacherList:Array
 	},
 	data() {
 		return {
@@ -31,10 +42,10 @@ export default {
 
 <style lang="less">
 .lesson_teacher {
-	padding: 20upx 15upx 0;
+	padding: 30upx 30upx 0 30upx;
 
 	.teacher_class {
-		margin: 40upx 20upx;
+		margin: 40upx 0;
 		font-size: 48upx;
 		font-family: PingFangSC-Medium;
 		font-weight: 500;
@@ -42,30 +53,40 @@ export default {
 	}
 
 	.swiper {
-		swiper-item {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			width: 280upx;
-			height: 360upx;
-			padding: 20upx;
-			background: rgba(255, 255, 255, 1);
-			box-shadow: 0upx 12upx 16upx 0upx rgba(143, 152, 188, 0.2);
-			border-radius: 8upx;
-
-			image {
-				width: 120upx;
-				height: 120upx;
-				border-radius: 50%;
-				border: 2upx solid #d9b379;
-			}
-
-			.teacher_name {
-				margin-top: 20upx;
-				font-size: 28upx;
-				font-family: PingFangSC-Medium;
-				font-weight: 500;
-				color: rgba(51, 51, 51, 1);
+		margin-top: 30upx;
+		height: 360upx;
+		swiper-item{
+			.teacher-item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				height: 92.78%;
+				width: 92%;
+				padding: 42upx 0 34upx 0;
+				background: rgba(255, 255, 255, 1);
+				box-shadow: 0upx 12upx 16upx 0upx rgba(143, 152, 188, 0.2);
+				border-radius: 8upx;
+				margin-right: 30upx;
+				margin-left: 10upx;
+				image {
+					width: 120upx;
+					height: 120upx;
+					border-radius: 50%;
+					border: 2upx solid #d9b379;
+				}
+			
+				.teacher_name {
+					text-align: center;
+					margin-top: 20upx;
+					width: 100%;
+					font-size: 28upx;
+					font-family: PingFangSC-Medium;
+					font-weight: 500;
+					color: rgba(51, 51, 51, 1);
+					overflow:hidden;
+					text-overflow:ellipsis;
+					white-space:nowrap
+				}
 			}
 		}
 	}
