@@ -104,7 +104,7 @@
             "mode" : "hash"
         },
         "devServer" : {
-            "https" : true,
+            "https" : false,
             "disableHostCheck" : true,
             "proxy" : {
                 "/api" : {

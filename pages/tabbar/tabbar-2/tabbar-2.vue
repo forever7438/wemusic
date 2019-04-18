@@ -16,8 +16,8 @@
 			/>
 		</view>
 		<view class="class_arrange">
-			<h3>1月6日全部课程</h3>
-			<classList></classList>
+			<h3>全部课程</h3>
+			<classList :classList="classList"></classList>
 		</view>
 	</view>
 </template>
@@ -37,7 +37,8 @@ export default {
 			type: 'rangetime',
 			value: '',
 			start_time: '',
-			end_time: ''
+			end_time: '',
+			classList: []
 		};
 	},
 	onReady() {
@@ -61,7 +62,7 @@ export default {
 				this[this.type] = e.value;
 				this.start_time = new Date(e.date[0]).getTime();
 				this.end_time = new Date(e.date[1]).getTime();
-				this.getLessonList()
+				this.getLessonList();
 			}
 		},
 
@@ -74,7 +75,9 @@ export default {
 					end_time: this.end_time
 				},
 				success: res => {
-					console.log(res);
+					if (res.data.body === 'success') {
+						this.classList = res.data.data;
+					}
 				}
 			});
 		}

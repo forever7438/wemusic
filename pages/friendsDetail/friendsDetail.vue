@@ -1,10 +1,11 @@
 <template>
 	<view class="content">
-		<video src="../../static/cont-1531578-13707370_adpkg-ad_sd.mp4" controls></video>
+		<image :src="friendDetail.video"></image>
 		<friendHead :itemHead="friendDetail"></friendHead>
 		<friendContent :content="friendDetail.body"></friendContent>
 		<friendOperation :message="friendDetail.message" :praise="friendDetail.praise" :forward="friendDetail.forward"></friendOperation>
 		<comment :list="friendDetail.list" :message="friendDetail.message"></comment>
+		<submitBtn :friend_id="friendDetail.id"></submitBtn>
 	</view>
 </template>
 
@@ -13,12 +14,14 @@ import friendHead from '../../components/friendsAssembly/friendHead.vue';
 import friendContent from '../../components/friendsAssembly/friendContent.vue';
 import friendOperation from '../../components/friendsAssembly/friendOperation.vue';
 import comment from '../../components/comment/comment.vue';
+import submitBtn from '../../components/submitBtn.vue';
 export default {
 	components: {
 		friendHead,
 		friendContent,
 		friendOperation,
-		comment
+		comment,
+		submitBtn
 	},
 	data() {
 		return {
@@ -37,7 +40,6 @@ export default {
 					friend_id: listId
 				},
 				success: res => {
-					console.log(res);
 					this.friendDetail = res.data.data;
 				}
 			});
@@ -49,7 +51,7 @@ export default {
 <style lang="less">
 .content {
 	padding: 0 15upx;
-	video {
+	image {
 		width: 100%;
 		height: 410upx;
 		border-radius: 12upx;

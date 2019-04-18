@@ -1,5 +1,5 @@
 <template>
-	<view><recharge-list></recharge-list></view>
+	<view><recharge-list :moneyList="rechargeList"></recharge-list></view>
 </template>
 
 <script>
@@ -22,11 +22,13 @@ export default {
 			this.ajax({
 				url: 'studentclass/money_list',
 				data: {
-					list: 1,
+					list: 0,
 					val: 5
 				},
 				success: res => {
-					console.log(res);
+					if (res.data.body === 'success') {
+						this.rechargeList = res.data.data;
+					}
 				}
 			});
 		}

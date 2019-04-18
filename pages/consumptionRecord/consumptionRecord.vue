@@ -1,5 +1,5 @@
 <template>
-	<view><recharge-list></recharge-list></view>
+	<view><recharge-list :moneyList="consumptionList"></recharge-list></view>
 </template>
 
 <script>
@@ -9,7 +9,29 @@ export default {
 		rechargeList
 	},
 	data() {
-		return {};
+		return {
+			consumptionList: []
+		};
+	},
+	onLoad() {
+		this.getConumptionList();
+	},
+	methods: {
+		//获取消费记录
+		getConumptionList() {
+			this.ajax({
+				url: 'studentclass/consumption_list',
+				data: {
+					list: 0,
+					val: 5
+				},
+				success: res => {
+					if (res.data.body === 'success') {
+						this.consumptionList = res.data.data;
+					}
+				}
+			});
+		}
 	}
 };
 </script>

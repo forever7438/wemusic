@@ -2,7 +2,7 @@
 	<view class="content">
 		<view class="messgae">
 			<view class="user_info">
-				<image src="../../../static/img/lf.jpg"></image>
+				<image :src="userInfo.photo"></image>
 				<view>
 					<navigator url="/pages/updateUserinfo/updateUserinfo">
 						<text class="user_name">{{ userInfo.name || 'null' }}</text>
@@ -12,8 +12,11 @@
 			</view>
 			<view class="user_money">
 				<view class="money_info">
-					<text>账户余额</text>					<view class="money_word">
-						<text>￥</text>						<text>{{ userInfo.money }}</text>					</view>
+					<text>账户余额</text>
+					<view class="money_word">
+						<text>￥</text>
+						<text>{{ userInfo.money }}</text>
+					</view>
 				</view>
 				<navigator url="/pages/vipCenter/vipCenter"><text class="pay_btn">充值</text></navigator>
 			</view>
@@ -134,12 +137,13 @@ export default {
 .content {
 	text-align: center;
 	// height: 445upx;
-	padding: 30upx 30upx 0 30upx;
+	padding: 30upx 30upx 0 30upx;
+
 	.messgae {
 		height: 285upx;
 		padding: 30upx;
 		background: linear-gradient(135deg, rgba(217, 179, 121, 1) 0%, rgba(162, 127, 74, 1) 100%);
-		border-radius: 16upx;		
+		border-radius: 16upx;
 
 		.user_info {
 			display: flex;
@@ -162,7 +166,10 @@ export default {
 					font-size: 36upx;
 					font-family: PingFangSC-Medium;
 					font-weight: 500;
-					color: rgba(255, 230, 190, 1);					display: inline-block;					padding-bottom: 22upx;
+					color: rgba(255, 230, 190, 1);
+					display: inline-block;
+					padding-bottom: 22upx;
+
 					::after {
 						display: inline-block;
 						width: 12upx;
@@ -193,10 +200,11 @@ export default {
 				display: flex;
 				flex-direction: column;
 				text-align: left;
-				margin-top: 40upx;
+				margin-top: 40upx;
+
 				text {
 					&:nth-of-type(1) {
-						width: 100upx;
+						width: 120upx;
 						line-height: 28upx;
 						font-size: 20upx;
 						font-family: PingFangSC-Regular;
@@ -210,7 +218,8 @@ export default {
 						font-family: DINAlternate-Bold;
 						font-weight: bold;
 						color: rgba(255, 255, 255, 1);
-						line-height: 54upx;						padding-left: 8upx;
+						line-height: 54upx;
+						padding-left: 8upx;
 					}
 				}
 			}

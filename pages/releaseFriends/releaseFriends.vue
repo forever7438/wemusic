@@ -1,9 +1,9 @@
 <template>
 	<view>
-		<!-- <progress-bar v-if="show" :progress="progress"></progress-bar> -->
+		<progress-bar v-if="show" :progress="progress"></progress-bar>
 		<textarea placeholder="分享学习心得…" v-model="body" />
-		<view v-if="video" class="choose_images"><video :src="video" controls></video></view>
-		<view v-else class="choose_image" @click="chooseImage">照片/拍摄</view>
+		<view v-if="video" class="choose_images"><image :src="video"></image></view>
+		<view v-else class="choose_image" @tap="chooseImage">照片/拍摄</view>
 	</view>
 </template>
 
@@ -117,7 +117,7 @@ view {
 		font-size: 24upx;
 		font-family: PingFangSC-Medium;
 		font-weight: 500;
-		video {
+		image {
 			width: 200upx;
 			height: 200upx;
 		}

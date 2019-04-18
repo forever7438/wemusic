@@ -1,20 +1,18 @@
 <template>
 	<div class="update_userinfo">
-		<neil-modal :show="show" @cancel="bindBtn('cancel')" @confirm="bindBtn('confirm')" @close="show = false" title="请输入用户名">
-			<input type="text" class="new_name" placeholder="请输入用户名" v-model="userName" />
-		</neil-modal>
+		<neil-modal :show="show" @close="show = false" title="请输入用户名"><input type="text" class="new_name" placeholder="请输入用户名" v-model="userName" /></neil-modal>
 		<ul>
 			<li>
 				<span>头像</span>
 				<view @click="updateUserImage">
-					<image :src="userImage"></image>
+					<image :src="userInfo.photo"></image>
 					<s>></s>
 				</view>
 			</li>
 			<li>
 				<span>姓名</span>
 				<view @click="show = true">
-					<text>{{ userName }}</text>
+					<text>{{ userInfo.name }}</text>
 					<s>></s>
 				</view>
 			</li>
@@ -67,21 +65,28 @@ export default {
 	},
 	data() {
 		return {
+			userInfo: {},
 			show: false,
 			userImage: '../../static/img/lf.jpg',
 			array: ['男', '女'],
 			arrays: ['吃饭', '睡觉', '打豆豆'],
-			index: 0,
+			index: '',
 			indexs: 0,
-			date: getDate({
-				format: true
-			}),
+			date: getDate(1855574459426),
 			userName: '测试人员',
-			sex: 1,
-			birthday: '',
+			sex: '',
 			interest: '',
 			address: '**省**市**县'
 		};
+	},
+	onLoad() {
+		this.getUserInfo();
+		if (this.userInfo.sex === '2') {
+			this.index = 1;
+		} else {
+			this.index = 0;
+		}
+		this.date = getDate(this.userInfo.birthday * 1000);
 	},
 	onNavigationBarButtonTap(obj) {
 		this.ajax({
@@ -90,7 +95,7 @@ export default {
 				photo: this.userImage,
 				name: this.userName,
 				sex: this.sex,
-				birthday: this.birthday,
+				birthday: new Date(this.date).getTime() / 1000,
 				interest: this.interest,
 				address: this.address
 			},
@@ -100,6 +105,21 @@ export default {
 		});
 	},
 	methods: {
+		//获取个人资料
+		getUserInfo() {
+			this.ajax({
+				url: 'user/info',
+				success: res => {
+					if (res.data.body === 'success') {
+						this.userInfo = res.data.data;
+					} else {
+						uni.showToast({
+							title: res.data.msg
+						});
+					}
+				}
+			});
+		},
 		toggleTabDate() {
 			this.$refs.pickerDate.show();
 		},
@@ -137,7 +157,7 @@ export default {
 						success: res => {
 							const info = JSON.parse(res.data);
 							if (info.data === 'success') {
-								this.userImage = info.body.photo;
+								this.userInfo.photo = info.body.photo;
 							}
 						}
 					});

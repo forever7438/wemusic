@@ -1,6 +1,6 @@
 <template>
 	<div class="recharge_content">
-		<ul>
+		<ul v-if="moneyList.length">
 			<li v-for="(item, index) in 8" :key="index">
 				<div class="recharge_message">
 					<p class="recharge_title">支付宝充值</p>
@@ -9,11 +9,19 @@
 				<div class="recharge_money"><p>+￥ 1000</p></div>
 			</li>
 		</ul>
+		<view class="no_content" v-else>
+			<image src="../../static/img/nothing.png"></image>
+			<text>暂无记录</text>
+		</view>
 	</div>
 </template>
 
 <script>
-export default {};
+export default {
+	props: {
+		moneyList: Array
+	}
+};
 </script>
 
 <style lang="less" scoped>
@@ -55,6 +63,23 @@ export default {};
 					color: rgba(250, 212, 42, 1);
 				}
 			}
+		}
+	}
+	.no_content {
+		height: 600upx;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		image {
+			width: 216upx;
+			height: 244upx;
+		}
+		text {
+			font-size: 32upx;
+			font-family: PingFangSC-Medium;
+			font-weight: 500;
+			color: rgba(0, 0, 0, 0.5);
 		}
 	}
 }

@@ -4,7 +4,7 @@
 			评论
 			<span>({{ message }})</span>
 		</h3>
-		<ul>
+		<ul v-if="list.length">
 			<li v-for="(item, index) in 5" :key="index">
 				<div class="comment_title">
 					<image src="../../static/img/lf.jpg"></image>
@@ -16,6 +16,10 @@
 				<div class="comment_content">你真棒！加油</div>
 			</li>
 		</ul>
+		<view class="no_content" v-else>
+			<image src="../../static/img/nothing.png"></image>
+			<text>暂无评论</text>
+		</view>
 	</div>
 </template>
 
@@ -84,6 +88,23 @@ export default {
 				font-weight: 400;
 				color: rgba(51, 51, 51, 1);
 			}
+		}
+	}
+	.no_content {
+		height: 600upx;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		image {
+			width: 216upx;
+			height: 244upx;
+		}
+		text {
+			font-size: 32upx;
+			font-family: PingFangSC-Medium;
+			font-weight: 500;
+			color: rgba(0, 0, 0, 0.5);
 		}
 	}
 }

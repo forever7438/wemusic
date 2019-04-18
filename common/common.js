@@ -22,7 +22,7 @@ const ajax = (opt) => {
 	opt.async = false;
 	if (uni.getStorageSync('token')) {
 		opt.header = opt.header || {
-			// "Content-Type": "application/json",
+			"Content-Type": "application/json",
 			"Role": "student",
 			"Authorization": uni.getStorageSync('token')
 		};
@@ -60,17 +60,10 @@ const ajax = (opt) => {
 
 //时间格式化处理
 function getDate(type) {
-	const date = new Date();
-
+	const date = new Date(type);
 	let year = date.getFullYear();
 	let month = date.getMonth() + 1;
 	let day = date.getDate();
-
-	if (type === 'start') {
-		year = year - 60;
-	} else if (type === 'end') {
-		year = year + 2;
-	}
 	month = month > 9 ? month : '0' + month;
 	day = day > 9 ? day : '0' + day;
 
