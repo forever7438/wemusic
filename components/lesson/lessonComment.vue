@@ -1,30 +1,43 @@
 <template>
 	<view class="lesson_comment">
 		<text class="teacher_class">{{title}}</text>
-		<view class="comment" v-for="(item,index) in 6" :key='index'>
-			<view class="comment_infos">
-				<image src="../../static/img/lf.jpg"></image>
-				<view class="comment_info">
-					<text class="comment_title">Edward Williams</text>
-					<text class="lesson_class">吉他速成班19期</text>
+		<view v-if="comment.length">
+			<view class="comment" v-for="item in comment">
+				<view class="comment_infos">
+					<image :src="item.photo || image"></image>
+					<view class="comment_info">
+						<text class="comment_title">{{item.student_name}}</text>
+						<text class="lesson_class">{{item.class_name}}</text>
+					</view>
+					<view style="position: absolute;right: 30upx;">
+						<startclass :star="Number(item.assess_star)" starColor="#666666"></startclass>
+					</view>
 				</view>
-				<startclass size="16"></startclass>
+				<text class="comment_content">
+					{{item.assess_content}}
+				</text>
 			</view>
-			<text class="comment_content">
-				教室整洁舒适，老师很有耐心，教育质量优秀。
-			</text>
 		</view>
+		<noContent v-else title='暂无评价'></noContent>
 	</view>
 </template>
 
 <script>
 	import startclass from '../starclass.vue';
+	import noContent from '../noContent.vue';
 	export default {
 		components: {
-			startclass
+			startclass,
+			noContent
 		},
 		props: {
-			title: String
+			title: String,
+			comment:Array
+		},
+		data(){
+			return{
+				image: '../../static/img/demo.jpg'
+			}
 		}
 	}
 </script>
@@ -56,6 +69,7 @@
 				}
 
 				.comment_info {
+					position: relative;
 					margin: 0 20upx;
 					display: flex;
 					align-items: end;

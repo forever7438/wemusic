@@ -6,11 +6,11 @@
 				<image v-else :src="item.photo || image"></image>
 				<div class="lesson_messgae">
 					<p class="lesson_title">{{ item.name }}</p>
-					<startclass :star="Number(item.star)" v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'" size="14"></startclass>
+					<startclass :star="Number(item.star)" v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'"></startclass>
 					<p v-else class="lesson_winer">教师 Jennifer Young</p>
 					<div class="lesson_pay">
 						<span v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'" class="teacher_number">
-							{{ item.teacher_count > 0 ? '共 ' + item.teacher_count + ' 名教师' : '暂无教师' }}
+							{{ item.teacher_count > 0 ? '共' + item.teacher_count + '名教师' : '暂无教师' }}
 						</span>
 						<span v-else class="start_time">2019年3月15日开课</span>
 						<navigator url="/pages/evaluate/evaluate" v-if="lessonType === '-1'"><span class="go_pay">去评价</span></navigator>
@@ -27,18 +27,17 @@
 				</div>
 			</li>
 		</ul>
-		<view class="no_content" v-else>
-			<image src="../../static/img/nothing.png"></image>
-			<text>暂无课程</text>
-		</view>
+		<noContent v-else title="暂无课程"></noContent>
 	</div>
 </template>
 
 <script>
 import startclass from '../starclass.vue';
+import noContent from '../noContent.vue';
 export default {
 	components: {
-		startclass
+		startclass,
+		noContent
 	},
 	props: {
 		musicId: String,
@@ -57,6 +56,9 @@ export default {
 		this.getCourseList();
 	},
 	methods: {
+		error(){
+			consoel.log('ok')
+		},
 		getCourseList() {
 			console.log('ok');
 		}
@@ -71,7 +73,8 @@ export default {
 			display: flex;
 			border-top: 2upx solid #ddd;
 			padding: 30upx 0;
-
+			height: 220upx;
+			overflow: hidden;
 			&:first-child {
 				border-top: 0;
 			}
@@ -125,6 +128,11 @@ export default {
 
 					.teacher_number {
 						font-size: 24upx;
+						max-width: 240upx;
+						overflow:hidden;
+						text-overflow:ellipsis;
+						white-space:nowrap;
+						margin-top: 36upx;
 						font-family: PingFangSC-Regular;
 						color: rgba(153, 153, 153, 1);
 					}

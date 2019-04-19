@@ -8,8 +8,8 @@
 					:content='musicIndexInfo.content || "暂无课程介绍"'></lessonHead>
 		<lessonTeacher :teacherList="teacherList"></lessonTeacher>
 		<lessonDesc title='课程介绍'  :content='musicIndexInfo.content || "暂无课程介绍"'></lessonDesc>
-		<lessonComment title='课程评价'></lessonComment>
-		<lessonScience title='教学环境'></lessonScience>
+		<lessonComment title='课程评价' :comment="comment"></lessonComment>
+		<lessonScience title='教学环境' :science="scienceImg"></lessonScience>
 		<span class="sign_up">报名</span>
 	</view>
 </template>
@@ -32,12 +32,14 @@
 			return {
 				musicIndexInfo: {},
 				scienceImg:[],
-				teacherList:[]
+				teacherList:[],
+				comment:[]
 			};
 		},
 		onLoad(obj) {
 			this.getMusicIndexInfo(obj.lessonId)
 			this.getTeacher(obj.lessonId)
+			this.getComment(obj.lessonId)
 		},
 		methods: {
 			//获取课程详情
@@ -51,9 +53,10 @@
 					success: (res) => {
 						if (res.data.body === 'success') {
 							this.musicIndexInfo = res.data.data.info;
-							uni.setNavigationBarTitle({
-								title: res.data.data.name
-							})
+							this.scienceImg = res.data.data.style;
+// 							uni.setNavigationBarTitle({
+// 								title: res.data.data.name
+// 							})
 						}
 					}
 				})
@@ -74,6 +77,23 @@
 						}
 					}
 				});
+			},
+			getComment(id){
+				this.ajax({
+					url: 'music/assess_list',
+					data: {
+						type:0,
+						id: id,
+						list:0,
+						val:12
+					},
+					method: 'post',
+					success: (res) => {
+						if (res.data.body === 'success') {
+							this.comment = res.data.data
+						}
+					}
+				})
 			}
 		}
 	};
@@ -83,7 +103,7 @@
 	view {
 		.sign_up {
 			text-align: center;
-			margin-top: 40upx;
+			margin-top: 166upx;
 			display: inline-block;
 			width: 100%;
 			line-height: 100upx;

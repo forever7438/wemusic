@@ -2,16 +2,16 @@
 	<view class="lesson_science">
 		<text class="teacher_class">{{title}}</text>
 		<view class="lesson_image">
-			<image src="../../static/img/lesson.jpg"></image>
+			<image :src="science[1] || image"></image>
 			<view class="">
-				<image src="../../static/img/lesson1.jpg"></image>
-				<image src="../../static/img/lesson2.jpg"></image>
+				<image :src="science[2] || image"></image>
+				<image :src="science[3] || image"></image>
 			</view>
 		</view>
 		<view class="lesson_images">
-			<image src="../../static/img/lesson3.jpg"></image>
-			<image src="../../static/img/lesson4.jpg"></image>
-			<image src="../../static/img/lesson1.jpg"></image>
+			<image :src="science[4] || image"></image>
+			<image :src="science[5] || image"></image>
+			<image :src="science[6] || image"></image>
 		</view>
 	</view>
 </template>
@@ -19,7 +19,13 @@
 <script>
 	export default {
 		props: {
-			title: String
+			title: String,
+			science:Array
+		},
+		data(){
+			return {
+				image: '../../static/img/demo.jpg'
+			}
 		}
 	}
 </script>

@@ -1,5 +1,6 @@
 <template>
 	<view class="lesson_contentss">
+		<image class="back_photo" src="/static/img/demo.jpg"></image>
 		<view class="lesson_shade">
 			<text class="lesson_name">{{title}}</text>
 			<view style="margin-top: 10upx;">
@@ -7,10 +8,12 @@
 					Guitar
 				</text>
 			</view>
-			<startclass v-if="headType==='lessonDetail'||headType==='teacherDetail'"></startclass>
+			<view v-if="headType==='lessonDetail'||headType==='teacherDetail'" style="margin-bottom: 34upx;">
+				<startclass :star="star"></startclass>
+			</view>
 			<text class="lesson_time" v-if="headType==='lessonDetail'">课程时长：30min - 180min</text>
-			<text class="lesson_type" v-if="headType==='teacherDetail'">主授课程 吉他</text>
-			<view style="margin-top:274upx;"><text class="lesson_desc">{{content}}</text></view>
+			<text class="lesson_type" v-if="headType==='teacherDetail'">主授课程 {{musicName}}</text>
+			<view style="margin-top:274upx;"><text class="lesson_desc">{{content || '暂无介绍'}}</text></view>
 		</view>
 	</view>
 </template>
@@ -24,7 +27,9 @@
 		props: {
 			headType: String,
 			title: String,
-			content: String
+			content: String,
+			musicName:String,
+			star:Number
 		},
 		data() {
 			return {};
@@ -36,9 +41,16 @@
 
 <style lang="less">
 	.lesson_contentss {
+		position: relative;
+		.back_photo{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: -1
+		}
 		width: 100%;
 		height: 728upx;
-		background: url('../../static/img/demo.jpg') no-repeat center/100%;
+		//background: url('../../static/img/demo.jpg') no-repeat center/100%;
 		background-size: 100% 100%;
 
 		.lesson_shade {

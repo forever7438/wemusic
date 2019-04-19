@@ -10,9 +10,11 @@
 			<swiper-item v-for="(item, index) in teacherList" 
 						 :key="index">
 				<view class="teacher-item">
-					<navigator :url="'/pages/teacherDetail/teacherDetail?teacherId='+item.id"><image src="../../static/img/lf.jpg"></image></navigator>
+					<navigator :url="'/pages/teacherDetail/teacherDetail?teacherId='+item.id" style="height: 120upx;">
+						<image :src="item.photo || image"></image>
+					</navigator>
 					<text class="teacher_name">{{item.name}}</text>
-					<startclass size="18"></startclass>
+					<startclass :star="Number(item.star)" starColor="#666666"></startclass>
 				</view>
 			</swiper-item>
 		</swiper>
@@ -30,6 +32,7 @@ export default {
 	},
 	data() {
 		return {
+			image: '../../static/img/demo.jpg',
 			indicatorDots: false,
 			autoplay: false,
 			interval: 2000,
@@ -77,7 +80,7 @@ export default {
 			
 				.teacher_name {
 					text-align: center;
-					margin-top: 20upx;
+					margin-top: 60upx;
 					width: 100%;
 					font-size: 28upx;
 					font-family: PingFangSC-Medium;
@@ -85,7 +88,7 @@ export default {
 					color: rgba(51, 51, 51, 1);
 					overflow:hidden;
 					text-overflow:ellipsis;
-					white-space:nowrap
+					white-space:nowrap;
 				}
 			}
 		}

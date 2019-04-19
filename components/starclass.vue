@@ -1,14 +1,14 @@
 <template>
-	<div class="start_class" v-if="star > 0">
+	<div class="start_class">
 		<p>{{ title }}</p>
 		<div class="start_class_in">
 			<uni-rate :size="size" :value="star" :isFill="false" :disabled="true"></uni-rate>
 			<span class="number" :style="{color:starColor}">{{ star }}</span>
 		</div>
 	</div>
-	<div class="start_class" v-else>
+	<!-- <div class="start_class" v-else>
 		<span style="font-size: 24upx;">暂无评分</span>
-	</div>
+	</div> -->
 </template>
 
 <script>
@@ -19,9 +19,18 @@
 		},
 		props: {
 			title: String,
-			size: String,
-			star: Number,
-			starColor: String
+			size: {
+				type:String,
+				default:'13'
+			},
+			star: {
+				type:Number,
+				default:0
+			},
+			starColor: {
+				type:String,
+				default:'#FFFFFF'
+			}
 		},
 		data() {
 			return {

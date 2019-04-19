@@ -7,6 +7,7 @@ const ApiUrl = '/api/';
 // #ifdef APP-PLUS
 const ApiUrl = 'http://wemusic.ikenweb.com/api/';
 // #endif
+const errorImg01 = 'this.src="/static/img/wemusic.jpg"';
 
 //封装网络请求
 const ajax = (opt) => {
@@ -88,6 +89,7 @@ function getImgToBase64(url, callback) { //将图片转换为Base64
 export {
 	ApiUrl,
 	ajax,
+	errorImg01,
 	getDate,
 	getImgToBase64
 }

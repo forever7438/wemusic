@@ -1,12 +1,21 @@
 <template>
 	<view>
-		<teacherHead headType='teacherDetail' title='吉他快速入门' content='通过本科课程的学习，您将会快速掌握吉他基础知识，以及简单的乐理知识，在未来的的学习中打下坚实的基础'></teacherHead>
+		<teacherHead headType='teacherDetail' 
+		:star="Number(info.star)"
+		:musicName="info.music_name"
+		:title='info.name' 
+		:content='info.experience'></teacherHead>
 		<view class="all_lesson">
 			<text class="lesson_tips">全部课程</text>
-			<lessonList lessonType='teacherDetail'></lessonList>
+			<lessonList lessonType="lessonCopy" 
+						:listInfo="courseList"></lessonList>
 		</view>
-		<lessonComment title='学生评价'></lessonComment>
-		<lessonScience title='教师风采'></lessonScience>
+		<lessonComment  title='学生评价' 
+						v-if="comment.length" 
+						:comment="comment"></lessonComment>
+		<lessonScience  title='教师风采' 
+						v-if="science.length" 
+						:science="science"></lessonScience>
 	</view>
 </template>
 
@@ -24,8 +33,51 @@
 		},
 		data() {
 			return {
-
+				info:{},
+				courseList:[],
+				comment:[],
+				science:[]
 			};
+		},
+		onLoad(obj) {
+			this.getTeacherInfo(obj.teacherId)
+			this.getComment(obj.teacherId)
+		},
+		methods:{
+			getTeacherInfo(id){
+				this.ajax({
+					url: 'userorder/teacher_info',
+					data: {
+						teacher_id: id
+					},
+					method: 'post',
+					success: (res) => {
+						if (res.data.body === 'success') {
+							let data = res.data.data
+							this.info = data.info
+							this.courseList = data.list
+							this.science = data.style
+						}
+					}
+				})
+			},
+			getComment(id){
+				this.ajax({
+					url: 'music/assess_list',
+					data: {
+						type:1,
+						id: id,
+						list:0,
+						val:12
+					},
+					method: 'post',
+					success: (res) => {
+						if (res.data.body === 'success') {
+							this.comment = res.data.data
+						}
+					}
+				})
+			}
 		}
 	}
 </script>
