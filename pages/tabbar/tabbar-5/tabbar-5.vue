@@ -28,19 +28,19 @@
 					<text>全部课程</text>
 				</view>
 			</navigator>
-			<navigator url="/pages/lesson/lesson?type=2">
+			<navigator url="/pages/lesson/lesson?type=0">
 				<view>
 					<image src="../../../static/img/fenzu7@2x.png"></image>
 					<text>待支付</text>
 				</view>
 			</navigator>
-			<navigator url="/pages/lesson/lesson?type=3">
+			<navigator url="/pages/lesson/lesson?type=1">
 				<view>
 					<image src="../../../static/img/group(1).png"></image>
 					<text>待开课</text>
 				</view>
 			</navigator>
-			<navigator url="/pages/lesson/lesson?type=4">
+			<navigator url="/pages/lesson/lesson?type=2">
 				<view>
 					<image src="../../../static/img/group(2).png"></image>
 					<text>已完成</text>
@@ -64,7 +64,7 @@
 					<image src="../../../static/img/coupon@2x.png"></image>
 				</view>
 			</navigator>
-			<navigator url="/pages/myEvaluate/myEvaluate?type=4">
+			<navigator url="/pages/myEvaluate/myEvaluate?type=0">
 				<view>
 					<text>我的评价</text>
 					<image src="../../../static/img/evaluate@2x.png"></image>

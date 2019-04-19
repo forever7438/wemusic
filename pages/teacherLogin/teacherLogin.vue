@@ -3,11 +3,11 @@
 		<view class="teacher_login_image"><image src="../../static/img/open_ico.png"></image></view>
 		<view class="teacher_login_acount">
 			<text>账号</text>
-			<input type="text" />
+			<input type="text" v-model="email" />
 		</view>
 		<view class="teacher_login_pass">
 			<text>密码</text>
-			<input type="password" />
+			<input type="password" v-model="pass" />
 		</view>
 		<button @click="teacher_login">登录</button>
 		<view class="teacher_login_option">
@@ -20,13 +20,61 @@
 <script>
 export default {
 	data() {
-		return {};
+		return {
+			email: '',
+			pass: ''
+		};
 	},
 	methods: {
 		//登录
 		teacher_login() {
-			uni.switchTab({
-				url: '/pages/tabbar/tabbar-1/tabbar-1'
+			if (!this.email) {
+				uni.showToast({
+					title: '账号不得为空',
+					icon: 'none'
+				});
+				return;
+			}
+			if (!this.pass) {
+				uni.showToast({
+					title: '密码不得为空',
+					icon: 'none'
+				});
+				return;
+			}
+			this.ajax({
+				url: 'index/login',
+				data: {
+					email: this.email,
+					pass: this.pass
+				},
+				header: {
+					'Content-Type': 'application/json',
+					role: 'teacher'
+				},
+				success: res => {
+					if (res.data.data === 'success') {
+						//登录成功,存储token全局使用
+						uni.setStorage({
+							key: 'token',
+							data: res.data.body.token
+						}),
+							//存储做类型判断
+							uni.setStorage({
+								key: 'type',
+								data: res.data.type
+							}),
+							uni.switchTab({
+								url: '/pages/tabbar/tabbar-1/tabbar-1'
+							});
+					} else {
+						uni.showToast({
+							title: res.data.msg,
+							icon: 'none'
+						});
+					}
+				},
+				error: error => {}
 			});
 		}
 	}

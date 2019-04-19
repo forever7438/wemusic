@@ -10,11 +10,22 @@ export default {
 	},
 	data() {
 		return {
+			index: 0,
+			isEnd: false,
 			rechargeList: []
 		};
 	},
 	onLoad() {
 		this.getRechargeList();
+	},
+	onReachBottom() {
+		if (this.isEnd) {
+			return;
+		}
+		this.index++;
+		setTimeout(() => {
+			this.getRechargeList();
+		}, 300);
 	},
 	methods: {
 		//获取充值记录
@@ -22,12 +33,20 @@ export default {
 			this.ajax({
 				url: 'studentclass/money_list',
 				data: {
-					list: 0,
+					list: this.index,
 					val: 5
 				},
 				success: res => {
 					if (res.data.body === 'success') {
-						this.rechargeList = res.data.data;
+						if (res.data.data.length === 0) {
+							this.isEnd = true;
+							uni.showToast({
+								title: '没有更多数据了',
+								icon: 'none'
+							});
+							return;
+						}
+						this.rechargeList = this.rechargeList.concat(res.data.data);
 					}
 				}
 			});

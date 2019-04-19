@@ -1,8 +1,9 @@
 <template>
 	<view class="contents">
-		<navigator :url="'/pages/friendsDetail/friendsDetail?listId=' + listId">
+		<navigator v-if="type" :url="'/pages/friendsDetail/friendsDetail?listId=' + listId">
 			<text>{{ content }}</text>
 		</navigator>
+		<text v-else>{{ content }}</text>
 	</view>
 </template>
 
@@ -10,7 +11,8 @@
 export default {
 	props: {
 		content: String,
-		listId: String
+		listId: String,
+		type: Boolean
 	}
 };
 </script>

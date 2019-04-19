@@ -1,6 +1,6 @@
 <template>
 	<div class="lesson_content">
-		<ul>
+		<ul v-if="listInfo.length">
 			<li v-for="(item, index) in listInfo" :key="index">
 				<navigator v-if="lessonType === 'lessonCopy'" :url="'/pages/lessonDetail/lessonDetail?lessonId=' + item.id"><image :src="item.photo || image"></image></navigator>
 				<image v-else :src="item.photo || image"></image>
@@ -13,10 +13,10 @@
 							{{ item.teacher_count > 0 ? '共 ' + item.teacher_count + ' 名教师' : '暂无教师' }}
 						</span>
 						<span v-else class="start_time">2019年3月15日开课</span>
-						<navigator url="/pages/evaluate/evaluate" v-if="lessonType === '1'"><span class="go_pay">去评价</span></navigator>
-						<navigator url="/pages/evaluate/evaluate" v-if="lessonType === '2'"><span class="go_pay">去支付</span></navigator>
-						<navigator url="/pages/evaluate/evaluate" v-if="lessonType === '3'"><span class="go_pay">查看</span></navigator>
-						<navigator url="/pages/evaluate/evaluate" v-if="lessonType === '4'"><span class="go_pay">去评价</span></navigator>
+						<navigator url="/pages/evaluate/evaluate" v-if="lessonType === '-1'"><span class="go_pay">去评价</span></navigator>
+						<navigator url="/pages/evaluate/evaluate" v-if="lessonType === '0'"><span class="go_pay">去支付</span></navigator>
+						<navigator url="/pages/evaluate/evaluate" v-if="lessonType === '1'"><span class="go_pay">查看</span></navigator>
+						<navigator url="/pages/evaluate/evaluate" v-if="lessonType === '2'"><span class="go_pay">去评价</span></navigator>
 						<navigator
 							:url="'/pages/choiceTeacher/choiceTeacher?musicId=' + musicId + '&musicSunId=' + item.id"
 							v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'"
@@ -27,6 +27,10 @@
 				</div>
 			</li>
 		</ul>
+		<view class="no_content" v-else>
+			<image src="../../static/img/nothing.png"></image>
+			<text>暂无课程</text>
+		</view>
 	</div>
 </template>
 
@@ -37,11 +41,11 @@ export default {
 		startclass
 	},
 	props: {
-		musicId:String,
+		musicId: String,
 		lessonType: {
 			type: String,
-			default: '4'
-		}, //lessonType类型判断  1为全部  2为待支付  3为待开课  4为已完成
+			default: '-1'
+		}, //lessonType类型判断  -1为全部  0为待支付  1为待开课  2为已完成
 		listInfo: Array
 	},
 	data() {
@@ -49,14 +53,13 @@ export default {
 			image: '../../static/img/demo.jpg'
 		};
 	},
+	onLoad() {
+		this.getCourseList();
+	},
 	methods: {
 		getCourseList() {
 			console.log('ok');
 		}
-	},
-	created() {
-		console.log(this.musicId)
-		this.getCourseList();
 	}
 };
 </script>
@@ -127,6 +130,23 @@ export default {
 					}
 				}
 			}
+		}
+	}
+	.no_content {
+		height: 600upx;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		image {
+			width: 216upx;
+			height: 244upx;
+		}
+		text {
+			font-size: 32upx;
+			font-family: PingFangSC-Medium;
+			font-weight: 500;
+			color: rgba(0, 0, 0, 0.5);
 		}
 	}
 }

@@ -38,7 +38,18 @@ export default {
 					contact: this.contact
 				},
 				success: res => {
-					console.log(res);
+					if (res.data.body === 'success') {
+						uni.showToast({
+							title: '感谢您的反馈',
+							icon: 'none'
+						});
+						(this.contact = ''), (this.body = '');
+					} else {
+						uni.showToast({
+							title: res.data.msg,
+							icon: 'none'
+						});
+					}
 				}
 			});
 		}

@@ -1,8 +1,8 @@
 <template>
 	<view>
 		<view class="meun_list">
-			<text :class="type == 0 ? 'active' : ''" @click="type = '0'">满减券</text>
-			<text :class="type == 1 ? 'active' : ''" @click="type = '1'">折扣券</text>
+			<text :class="type == 0 ? 'active' : ''" @click="getCouponList('0')">满减券</text>
+			<text :class="type == 1 ? 'active' : ''" @click="getCouponList('1')">折扣券</text>
 		</view>
 		<couponList v-if="couponList.length" :coupomList="couponList"></couponList>
 		<view class="no_content" v-else>
@@ -20,27 +20,47 @@ export default {
 	},
 	data() {
 		return {
+			isEnd: false,
 			couponList: [],
-			type: 0
+			type: 0,
+			index: 0
 		};
 	},
 	onLoad(obj) {
 		this.type = obj.type;
 		this.getCouponList(this.type);
 	},
+	onReachBottom() {
+		if (this.isEnd) {
+			return;
+		}
+		this.index++;
+		setTimeout(() => {
+			this.getCouponList(this.type);
+		}, 300);
+	},
 	methods: {
 		//获取优惠卷列表
 		getCouponList(type) {
+			this.type = type;
 			this.ajax({
 				url: 'studentclass/coupom_list',
 				data: {
 					type: type,
-					list: 0,
+					list: this.index,
 					val: 5
 				},
 				success: res => {
 					if (res.data.body === 'success') {
-						this.couponList = res.data.data;
+						if (res.data.data.length === 0) {
+							this.isEnd = true;
+							uni.showToast({
+								title: '没有更多数据了',
+								icon: 'none'
+							});
+							return;
+						}
+						this.couponList = this.couponList.concat(res.data.data);
 					}
 				}
 			});

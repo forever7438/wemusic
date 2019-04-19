@@ -72,6 +72,11 @@ export default {
 							key: 'token',
 							data: res.data.body.token
 						}),
+							//存储做类型判断
+							uni.setStorage({
+								key: 'type',
+								data: res.data.type
+							}),
 							uni.switchTab({
 								url: '/pages/tabbar/tabbar-1/tabbar-1'
 							});
@@ -95,7 +100,7 @@ input {
 	font-size: 24upx;
 	width: 100%;
 	padding-left: 10upx;
-	border-bottom: 2upx solid rgba(185,185,185,1);
+	border-bottom: 2upx solid rgba(185, 185, 185, 1);
 }
 .login {
 	padding: 0 144upx;

@@ -1,6 +1,6 @@
 <template>
 	<view class="operation">
-		<view>
+		<view @tap="share">
 			<image src="../../static/img/zhuanfa@2x.png"></image>
 			<text>{{ forward }}</text>
 		</view>
@@ -8,7 +8,7 @@
 			<image src="../../static/img/comment@2x.png"></image>
 			<text>{{ message }}</text>
 		</view>
-		<view>
+		<view @tap="liked">
 			<image src="../../static/img/dianzan@2x.png"></image>
 			<text>{{ praise }}</text>
 		</view>
@@ -20,7 +20,34 @@ export default {
 	props: {
 		message: Number,
 		praise: Number,
-		forward: Number
+		forward: Number,
+		listId: String
+	},
+	methods: {
+		//点赞
+		liked() {
+			this.ajax({
+				url: 'friend/praise',
+				data: {
+					friend_id: this.listId
+				},
+				success: res => {
+					console.log(res);
+				}
+			});
+		},
+		//转发
+		share() {
+			this.ajax({
+				url: 'friend/forward',
+				data: {
+					friend_id: this.listId
+				},
+				success: res => {
+					console.log(res);
+				}
+			});
+		}
 	}
 };
 </script>

@@ -2,10 +2,10 @@
 	<view class="content">
 		<image :src="friendDetail.video"></image>
 		<friendHead :itemHead="friendDetail"></friendHead>
-		<friendContent :content="friendDetail.body"></friendContent>
-		<friendOperation :message="friendDetail.message" :praise="friendDetail.praise" :forward="friendDetail.forward"></friendOperation>
-		<comment :list="friendDetail.list" :message="friendDetail.message"></comment>
-		<submitBtn :friend_id="friendDetail.id"></submitBtn>
+		<friendContent :type="false" :content="friendDetail.body"></friendContent>
+		<friendOperation :message="friendDetail.message" :praise="friendDetail.praise" :forward="friendDetail.forward" :listId="friendDetail.id"></friendOperation>
+		<comment :list="commentList" :message="friendDetail.message"></comment>
+		<submitBtn :friend_id="friendDetail.id" @refreshFriend="snedComment"></submitBtn>
 	</view>
 </template>
 
@@ -25,24 +25,56 @@ export default {
 	},
 	data() {
 		return {
-			friendDetail: {}
+			friendDetail: {},
+			commentList: [],
+			listId: '',
+			index: 0,
+			isEnd: false
 		};
 	},
 	onLoad(obj) {
-		this.getFriendDetail(obj.listId);
+		this.listId = obj.listId;
+		this.getFriendDetail(this.listId, this.index);
+	},
+	onReachBottom() {
+		if (this.isEnd) {
+			return;
+		}
+		this.index++;
+		setTimeout(() => {
+			this.getFriendDetail(this.listId, this.index);
+		}, 300);
 	},
 	methods: {
 		//获取朋友圈详情
-		getFriendDetail(listId) {
+		getFriendDetail(listId, list) {
 			this.ajax({
 				url: 'friend/info',
 				data: {
-					friend_id: listId
+					friend_id: listId,
+					list: list,
+					val: 5
 				},
 				success: res => {
-					this.friendDetail = res.data.data;
+					if (res.data.body === 'success') {
+						this.friendDetail = res.data.data;
+						if (res.data.data.list.length === 0) {
+							this.isEnd = true;
+							uni.showToast({
+								title: '没有更多数据了',
+								icon: 'none'
+							});
+							return;
+						}
+						this.commentList = this.commentList.concat(this.friendDetail.list);
+					}
 				}
 			});
+		},
+		//发表评论
+		snedComment() {
+			this.commentList = [];
+			this.getFriendDetail(this.listId, 0);
 		}
 	}
 };

@@ -5,14 +5,14 @@
 			<li>
 				<span>头像</span>
 				<view @click="updateUserImage">
-					<image :src="userInfo.photo"></image>
+					<image :src="userImage"></image>
 					<s>></s>
 				</view>
 			</li>
 			<li>
 				<span>姓名</span>
 				<view @click="show = true">
-					<text>{{ userInfo.name }}</text>
+					<text>{{ userName }}</text>
 					<s>></s>
 				</view>
 			</li>
@@ -67,26 +67,20 @@ export default {
 		return {
 			userInfo: {},
 			show: false,
-			userImage: '../../static/img/lf.jpg',
+			userImage: '',
 			array: ['男', '女'],
 			arrays: ['吃饭', '睡觉', '打豆豆'],
 			index: '',
 			indexs: 0,
-			date: getDate(1855574459426),
-			userName: '测试人员',
+			date: '',
+			userName: '',
 			sex: '',
 			interest: '',
-			address: '**省**市**县'
+			address: ''
 		};
 	},
 	onLoad() {
 		this.getUserInfo();
-		if (this.userInfo.sex === '2') {
-			this.index = 1;
-		} else {
-			this.index = 0;
-		}
-		this.date = getDate(this.userInfo.birthday * 1000);
 	},
 	onNavigationBarButtonTap(obj) {
 		this.ajax({
@@ -100,7 +94,17 @@ export default {
 				address: this.address
 			},
 			success: res => {
-				console.log(res);
+				if (res.data.body === 'success') {
+					uni.showToast({
+						title: '个人信息修改成功',
+						icon: 'none'
+					});
+				} else {
+					uni.showToast({
+						title: res.data.msg,
+						icon: 'none'
+					});
+				}
 			}
 		});
 	},
@@ -112,6 +116,19 @@ export default {
 				success: res => {
 					if (res.data.body === 'success') {
 						this.userInfo = res.data.data;
+						this.index = this.userInfo.sex;
+						switch (this.userInfo.sex) {
+							case '2':
+								this.index = 1;
+								break;
+							default:
+								this.index = 0;
+						}
+						this.indexs = this.userInfo.interest || 0;
+						this.userName = this.userInfo.name;
+						this.userImage = this.userInfo.photo;
+						this.date = getDate(this.userInfo.birthday * 1000);
+						this.address = this.userInfo.address;
 					} else {
 						uni.showToast({
 							title: res.data.msg
@@ -138,14 +155,14 @@ export default {
 		},
 		bindPickerChangeInterest: function(e) {
 			this.indexs = e.target.value;
-			this.interest = this.arrays[e.target.value];
+			this.interest = this.indexs;
 		},
 		//选择头像上传
 		updateUserImage() {
 			uni.chooseImage({
 				count: 1,
 				success: res => {
-					this.userImage = res.tempFilePaths[0];
+					// this.userImage = res.tempFilePaths[0];
 					uni.uploadFile({
 						url: ApiUrl + 'index/photo_add',
 						filePath: res.tempFilePaths[0],
@@ -157,7 +174,7 @@ export default {
 						success: res => {
 							const info = JSON.parse(res.data);
 							if (info.data === 'success') {
-								this.userInfo.photo = info.body.photo;
+								this.userImage = info.body.photo;
 							}
 						}
 					});

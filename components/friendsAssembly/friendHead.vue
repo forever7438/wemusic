@@ -3,7 +3,7 @@
 		<image :src="itemHead.photo || imageUrl"></image>
 		<view class="user_info">
 			<text>{{ itemHead.people_name }}</text>
-			<text>{{ itemHead.add_time*1000 | formatDate }}</text>
+			<text>{{ (itemHead.add_time * 1000) | formatDate }}</text>
 		</view>
 	</view>
 </template>
@@ -17,7 +17,7 @@ export default {
 	},
 	data() {
 		return {
-			imageUrl: '../../static/img/lf.jpg',
+			imageUrl: '../../static/img/lf.jpg'
 		};
 	},
 	filters: {

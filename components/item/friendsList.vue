@@ -2,7 +2,7 @@
 	<view class="list">
 		<view class="" v-for="(item, index) in friendsList" :key="index">
 			<friendHead :itemHead="item"></friendHead>
-			<friendContent :content="item.body" :listId="item.id"></friendContent>
+			<friendContent :type="true" :content="item.body" :listId="item.id"></friendContent>
 			<image :src="item.video || userImage"></image>
 			<friendOperation></friendOperation>
 		</view>

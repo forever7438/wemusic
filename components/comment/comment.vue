@@ -4,16 +4,16 @@
 			评论
 			<span>({{ message }})</span>
 		</h3>
-		<ul v-if="list.length">
-			<li v-for="(item, index) in 5" :key="index">
+		<ul v-if="message != 0">
+			<li v-for="(item, index) in list" :key="index">
 				<div class="comment_title">
-					<image src="../../static/img/lf.jpg"></image>
+					<image :src="item.people_photo"></image>
 					<span>
-						<p class="comment_name">George Davis</p>
-						<p class="comment_time">2018/11/12 10:55</p>
+						<p class="comment_name">{{ item.people_name }}</p>
+						<p class="comment_time">{{ item.time | formatDate }}</p>
 					</span>
 				</div>
-				<div class="comment_content">你真棒！加油</div>
+				<div class="comment_content">{{ item.body }}</div>
 			</li>
 		</ul>
 		<view class="no_content" v-else>
@@ -24,10 +24,16 @@
 </template>
 
 <script>
+import { dateUtils } from '../../common/util.js';
 export default {
 	props: {
 		message: Number,
 		list: Array
+	},
+	filters: {
+		formatDate: time => {
+			return dateUtils.format(time);
+		}
 	}
 };
 </script>
@@ -35,6 +41,7 @@ export default {
 <style lang="less">
 .comment_list {
 	// padding: 0 0.2rem;
+	margin-bottom: 70upx;
 	h3 {
 		text-align: left;
 		font-size: 48upx;

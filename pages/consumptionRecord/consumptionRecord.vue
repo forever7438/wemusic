@@ -10,11 +10,22 @@ export default {
 	},
 	data() {
 		return {
+			index: 0,
+			isEnd: false,
 			consumptionList: []
 		};
 	},
 	onLoad() {
 		this.getConumptionList();
+	},
+	onReachBottom() {
+		if (this.isEnd) {
+			return;
+		}
+		this.index++;
+		setTimeout(() => {
+			this.getRechargeList();
+		}, 300);
 	},
 	methods: {
 		//获取消费记录
@@ -22,12 +33,20 @@ export default {
 			this.ajax({
 				url: 'studentclass/consumption_list',
 				data: {
-					list: 0,
+					list: this.index,
 					val: 5
 				},
 				success: res => {
 					if (res.data.body === 'success') {
-						this.consumptionList = res.data.data;
+						if (res.data.data.length === 0) {
+							this.isEnd = true;
+							uni.showToast({
+								title: '没有更多数据了',
+								icon: 'none'
+							});
+							return;
+						}
+						this.consumptionList = this.consumptionList.concat(res.data.data);
 					}
 				}
 			});

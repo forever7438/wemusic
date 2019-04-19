@@ -73,7 +73,8 @@
 		</view>
 		<view class="diffrent">
 			<text style="width: 212upx;">上传简历</text>
-			<view class="upload_file" @click="chooseVideo"><image src="../../static/img/creame@2x.png"></image></view>
+			<image class="j_photo" v-if="j_photo" :src="j_photo"></image>
+			<view v-else class="upload_file" @click="chooseImage"><image src="../../static/img/creame@2x.png"></image></view>
 		</view>
 		<button @click="addTeacherInfo">注册</button>
 	</view>
@@ -104,7 +105,7 @@ export default {
 			gz_s_time: '2019-04-24',
 			gz_d_time: '2019-12-23',
 			j_photo: '',
-			class: '1=>2'
+			class: '1=2'
 		};
 	},
 	methods: {
@@ -115,11 +116,26 @@ export default {
 			this.birthday = `${val[0]}-${val[1]}-${val[2]}`;
 		},
 		//选择文件
-		chooseVideo: e => {
-			uni.chooseVideo({
+		chooseImage: e => {
+			uni.chooseImage({
 				count: 1,
 				success: res => {
-					_this.j_photo = res.tempFilePath;
+					_this.j_photo = res.tempFilePaths[0];
+					uni.uploadFile({
+						url: ApiUrl + 'index/photo_add',
+						filePath: res.tempFilePaths[0],
+						name: 'file',
+						header: {
+							role: 'student',
+							Authorization: uni.getStorageSync('token')
+						},
+						success: res => {
+							const info = JSON.parse(res.data);
+							if (info.data === 'success') {
+								_this.j_photo = info.body.photo;
+							}
+						}
+					});
 				},
 				fail: err => {
 					console.log('chooseImage fail', err);
@@ -128,46 +144,39 @@ export default {
 		},
 		//教师入驻
 		addTeacherInfo() {
-			const uploadTask = uni.uploadFile({
-				url: ApiUrl + 'index/teacher_registered',
-				filePath: this.j_photo,
-				name: 'j_photo',
+			this.ajax({
+				url: 'index/teacher_registered',
 				header: {
-					// 'Content-Type': 'application/json',
-					role: 'student',
-					Authorization: uni.getStorageSync('token')
+					role: 'teacher'
 				},
-				formData: {
+				data: {
 					name: this.name,
 					sex: this.sex,
-					birthday: this.birthday,
+					birthday: new Date(this.birthday).getTime() / 1000,
 					address: this.address,
 					phone: this.phone,
 					email: this.email,
 					ABN: this.ABN,
 					culture: this.culture,
 					card: this.card,
-					gz_s_time: this.gz_s_time,
-					gz_d_time: this.gz_d_time,
+					gz_s_time: new Date(this.gz_s_time).getTime() / 1000,
+					gz_d_time: new Date(this.gz_d_time).getTime() / 1000,
+					j_photo: this.j_photo,
 					class: this.class
 				},
 				success: res => {
-					const info = JSON.parse(res.data);
-					if (info.body === 'success') {
+					if (res.data.data === 'success') {
 						uni.showToast({
-							title: '发布成功',
+							title: '您已成功入驻,快联系管理员登录吧!',
 							icon: 'none'
 						});
 					} else {
 						uni.showToast({
-							title: info.msg,
+							title: res.data.msg,
 							icon: 'none'
 						});
 					}
 				}
-			});
-			uploadTask.onProgressUpdate(res => {
-				console.log(res);
 			});
 		}
 	}
@@ -217,7 +226,11 @@ input {
 		align-items: baseline;
 		flex-direction: column;
 		margin: 30upx 150upx;
-
+		.j_photo {
+			margin: 20upx auto;
+			width: 100%;
+			height: 180upx;
+		}
 		text {
 			width: 100upx;
 			height: 44upx;
@@ -228,7 +241,7 @@ input {
 		}
 
 		.upload_file {
-			margin: 10px auto;
+			margin: 20upx auto;
 			padding: 60upx 170upx;
 			text-align: center;
 			background: rgba(246, 246, 246, 1);

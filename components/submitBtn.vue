@@ -37,6 +37,8 @@ export default {
 							title: '评论成功',
 							icon: 'none'
 						});
+						this.body = '';
+						this.$emit('refreshFriend');
 					} else {
 						uni.showToast({
 							title: res.data.msg,

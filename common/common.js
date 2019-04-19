@@ -23,7 +23,7 @@ const ajax = (opt) => {
 	if (uni.getStorageSync('token')) {
 		opt.header = opt.header || {
 			"Content-Type": "application/json",
-			"Role": "student",
+			"Role": uni.getStorageSync('type') == 1 ? 'student' : 'teacher',
 			"Authorization": uni.getStorageSync('token')
 		};
 	}
