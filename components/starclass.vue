@@ -2,7 +2,7 @@
 	<div class="start_class">
 		<p>{{ title }}</p>
 		<div class="start_class_in">
-			<uni-rate :size="size" :value="star" :isFill="false" :disabled="true"></uni-rate>
+			<uni-rate :size="size" :value="star" :isFill="isFill" :disabled="disabled"></uni-rate>
 			<span class="number" :style="{color:starColor}">{{ star }}</span>
 		</div>
 	</div>
@@ -30,6 +30,14 @@
 			starColor: {
 				type:String,
 				default:'#FFFFFF'
+			},
+			isFill: {
+				type:Boolean,
+				default:false
+			},
+			disabled: {
+				type:Boolean,
+				default:true
 			}
 		},
 		data() {

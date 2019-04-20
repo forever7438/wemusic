@@ -15,7 +15,10 @@
 			<span>开通会员</span>
 		</p>
 		<text class="teacher_class">选择时长</text>
-		<selectTime :time_checked="time_checked"></selectTime>
+		<selectTime :timeList="timeList" 
+					:dateList="dateList" 
+					:timeChecked="timeChecked"
+					@confirmOrder="confirmOrder"></selectTime>
 		<span class="sign_up">下一步</span>
 	</div>
 </template>
@@ -29,13 +32,14 @@ export default {
 		selectTime
 	},
 	props: {
-		musicId: String,
+		classId: String,
 		lessonType: {
 			type: String,
 			default: '4'
 		}, //lessonType类型判断  1为全部  2为待支付  3为待开课  4为已完成
 		listInfo: Array,
-		title: String
+		title: String,
+		teacherId:String
 	},
 	data() {
 		return {
@@ -43,17 +47,59 @@ export default {
 			info: {
 				people_num: 0,
 				time_checked: 0
-			}
+			},
+			timeChecked:0,
+			timeList:[],
+			dateList:[]
 		};
 	},
 	methods: {
-		getCourseList() {
-			console.log('ok');
+		/**确认订单*/
+		confirmOrder(obj){
+			obj.teacher_id = this.teacherId
+			obj.music_sun_id = this.classId
+			this.addClassTime(obj)
+		},
+		addClassTime(request){
+			this.ajax({
+				url: 'userorder/add_class',
+				data: request,
+				success: res => {
+					if (res.data.body === 'success') {
+						let timeItem = this.timeDate(res.data.data)
+						this.dateList.push(timeItem)
+					}
+				}
+			});
+		},
+		/**获取时长*/
+		getTimeList(classId) {
+			this.ajax({
+				url: 'userorder/time_list',
+				data: {
+					class_id: classId
+				},
+				success: res => {
+					if (res.data.body === 'success') {
+						this.timeList = res.data.data
+					}
+				}
+			});
+		},
+		timeDate(item){
+			let date_s = new Date(item.start_time * 1000)
+			let date_e = new Date(item.stop_time * 1000)
+			date_s = date_s.toJSON().substr(0, 19).replace('T', ' ')
+			date_e = date_e.toJSON().substr(0, 19).replace('T', ' ')
+			item.date = date_s.substr(0, 4)+'年'+date_s.substr(5, 2)+'月'+date_s.substr(8, 2)+'日'
+			item.star = date_s.substr(11, 5)
+			item.end  = date_e.substr(11, 5)
+			item.time = (item.stop_time - item.start_time)/60
+			return item
 		}
 	},
 	created() {
-		console.log(this.musicId);
-		this.getCourseList();
+		this.getTimeList(this.classId);
 	}
 };
 </script>

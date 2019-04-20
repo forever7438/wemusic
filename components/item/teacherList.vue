@@ -11,7 +11,7 @@
 						{{ item.name }}
 						<span class="go_pay" @click="selectTeacherFunc(item)">选择</span>
 					</p>
-					<startclass :star="Number(item.star)"  size="14"></startclass>
+					<startclass :star="Number(item.star)"  size="13" starColor="#666666"></startclass>
 					<!-- <p v-else class="lesson_winer">教师 Jennifer Young</p> -->
 					<div class="lesson_pay">
 						<span class="teacher_number">

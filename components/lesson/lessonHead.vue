@@ -7,8 +7,9 @@
 					Guitar
 				</text>
 			</view>
-			<startclass size=14 
+			<startclass size=13 
 						:star="star"
+						:isFill="false"
 						starColor="#FFFFFF"
 						v-if="headType==='lessonDetail'||headType==='teacherDetail'"></startclass>
 			<view style="margin-top: 34upx;">

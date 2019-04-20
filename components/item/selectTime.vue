@@ -1,15 +1,17 @@
 <template>
 	<ul class="time_list">
-		<li v-for="(item, index) in 3" @click="flag && selctitem(index)" :class="{ active: item.active }" :key="index">
+		<li v-for="(item, index) in dateList" 
+			@click="flag && selctitem(index)" 
+			:class="{ active: item.id == timeChecked }" :key="index">
 			<p>
-				<span class="date">2019年11月11日</span>
+				<span class="date">{{item.date}}</span>
 				<span class="price">
 					<span>$</span>
-					11.00
+					{{item.price}}
 				</span>
 			</p>
-			<p class="time">9:00 - 10:00</p>
-			<p class="duration">时长1小时</p>
+			<p class="time">{{item.star+' - '+item.end}} </p>
+			<p class="duration">时长{{item.time}} mim</p>
 		</li>
 		<li v-if="!flag" class="add_time" @tap="toggleTab"><img src="/static/img/tianjiashichang@2x.png" /></li>
 		<w-picker mode="dateTime" 
@@ -40,8 +42,6 @@ export default {
 	data() {
 		return {
 			date:[],
-			time_checked:{},
-			timeList:[]
 		};
 	},
 	created() {
@@ -56,43 +56,38 @@ export default {
 		this.date = container;
 	},
 	props: {
-		flag: Boolean //事件开关
+		flag: Boolean, //事件开关
+		timeList:Array,
+		dateList:Array,
+		timeChecked:String
 	},
 	methods: {
+		/**选中时间*/
+		selctitem(index){
+			this.$emit()
+		},
 		onCancel(){
 			console.log('cancel')
+		},
+		timeDate(time){
+			var date = new Date(time); // 增加8小时
+			return date.toJSON().substr(0, 19).replace('T', ' ');
 		},
 		toggleTab() {
 			this.$refs.picker.show();
 		},
 		DateConfirm(val) {
-				console.log(val)
 				let dateVal = val[0]+'-'+val[1]+'-'+val[2]+' '+val[3]+':'+val[4]+':00'
 				let timeVal = (new Date(dateVal).getTime())/1000
-				this.time_checked.start_time = timeVal;
+				this.timeChecked.start_time = timeVal;
 				/**选择时长*/
-				this.timeList = [{
-						label: '中国',
-						value: 1
-					},
-					{
-						label: '俄罗斯',
-						value: 2
-					},
-					{
-						label: '美国',
-						value: 3
-					},
-					{
-						label: '日本',
-						value: 4
-					}
-				]
-				console.log(this.timeList)
 				this.timePicker()
 		},
 		TimeConfirm(val){
-			this.time_checked.end_time = this.time_checked.start_time + (60 * 60);
+			let index = val.index[0]
+			let time  = this.timeList[index] 
+			this.timeChecked.end_time = this.timeChecked.start_time + (time * 60);
+			this.$emit('confirmOrder', this.timeChecked);
 		},
 		/**选择时长*/
 		timePicker() {

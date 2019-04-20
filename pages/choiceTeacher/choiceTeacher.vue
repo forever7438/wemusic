@@ -12,7 +12,7 @@
 			:content="courseInfo.content || '暂无课程介绍'"
 		></lessonHead>
 		<teacherList :listInfo="selectFlag ? selectItem : listInfo" :selectFlag="selectFlag" title="选择教师" @selectFunction="select" lessonType="lessonCopy"></teacherList>
-		<teachingWay v-if="selectFlag"></teachingWay>
+		<teachingWay v-if="selectFlag" :classId="classId" :teacherId="teacherId"></teachingWay>
 	</view>
 </template>
 
@@ -32,12 +32,15 @@ export default {
 			selectFlag: false,
 			selectItem: [],
 			listInfo: [],
-			choiseTeacherInfo: {}
+			choiseTeacherInfo: {},
+			classId:0,
+			teacherId:0
 		};
 	},
 	onLoad(obj) {
-		this.getChoiseTeacherInfo(obj.musicSunId);
-		this.getCourseInfo(obj.musicSunId);
+		this.classId = obj.musicSunId
+		this.getChoiseTeacherInfo(obj.musicSunId)
+		this.getCourseInfo(obj.musicSunId)
 	},
 	methods: {
 		backEvent() {
@@ -46,6 +49,7 @@ export default {
 		},
 		select(item) {
 			console.log(item);
+			this.teacherId = item.id
 			this.selectItem = [];
 			this.selectItem.push(item);
 			this.selectFlag = true;
