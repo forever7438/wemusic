@@ -7,11 +7,7 @@
 					Guitar
 				</text>
 			</view>
-			<startclass size=13 
-						:star="star"
-						:isFill="false"
-						starColor="#FFFFFF"
-						v-if="headType==='lessonDetail'||headType==='teacherDetail'"></startclass>
+			<startclass size=13 :star="star" :isFill="false" starColor="#FFFFFF" v-if="headType==='lessonDetail'||headType==='teacherDetail'"></startclass>
 			<view style="margin-top: 34upx;">
 				<text class="lesson_time" v-if="headType==='lessonDetail'">课程时长：{{mixTime}}min - {{maxTime}}min</text>
 			</view>
@@ -28,7 +24,7 @@
 			startclass
 		},
 		props: {
-			star:Number,
+			star: Number,
 			headType: String,
 			title: String,
 			content: String,

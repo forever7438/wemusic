@@ -39,7 +39,7 @@ const ajax = (opt) => {
 		success: function(res) {
 			uni.hideLoading();
 			opt.success(res);
-			if (res.data.msg === 'role error' || res.data.msg === 'Token expired') {
+			if (['Token invalid', 'Token expired'].includes(res.data.msg)) {
 				uni.showToast({
 					title: "token过期,请重新登录!",
 					icon: "none"
