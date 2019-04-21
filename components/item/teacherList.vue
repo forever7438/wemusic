@@ -1,8 +1,10 @@
 <template>
-	<div class="lesson_content">
+	<div class="lesson_content" :class="{ select: selectFlag }">
 		<text class="teacher_class" v-if="!selectFlag">{{ title }}</text>
 		<ul>
-			<li v-for="(item, index) in listInfo" :key="index" :class="{ select: selectFlag }">
+			<li v-for="(item, index) in listInfo" 
+			:key="index" 
+			:class="{ select: selectFlag }" >
 				<navigator :url="'/pages/teacherDetail/teacherDetail?teacherId=' + item.id">
 					<image :src="item.photo || image"></image>
 				</navigator>
@@ -61,6 +63,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.lesson_content.select{
+	padding-bottom: 0
+}
 .lesson_content {
 	padding: 60upx 30upx;
 	.teacher_class {
@@ -71,7 +76,7 @@ export default {
 	}
 	ul {
 		li.select {
-			padding-top: 0;
+			padding: 0;
 			.go_pay {
 				color: rgba(153, 153, 153, 1);
 				background: rgba(229, 229, 229, 1);
@@ -83,7 +88,7 @@ export default {
 			display: flex;
 			border-top: 2upx solid #ddd;
 			padding: 30upx 0;
-			height: 240upx;
+			// height: 240upx;
 			&:first-child {
 				border-top: 0;
 			}
@@ -109,7 +114,7 @@ export default {
 				font-weight: 500;
 				text-align: left;
 				margin-left: 20upx;
-
+				height: 180upx;
 				p {
 					margin-bottom: 10upx;
 				}

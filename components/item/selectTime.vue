@@ -1,8 +1,8 @@
 <template>
 	<ul class="time_list">
 		<li v-for="(item, index) in dateList" 
-			@click="flag && selctitem(index)" 
-			:class="{ active: item.id == timeChecked }" :key="index">
+			@click="!flag && selctitem(index)" 
+			:class="{ active: item.isActive }" :key="index">
 			<p>
 				<span class="date">{{item.date}}</span>
 				<span class="price">
@@ -11,7 +11,7 @@
 				</span>
 			</p>
 			<p class="time">{{item.star+' - '+item.end}} </p>
-			<p class="duration">时长{{item.time}} mim</p>
+			<p class="duration">时长 {{item.time}} min</p>
 		</li>
 		<li v-if="!flag" class="add_time" @tap="toggleTab"><img src="/static/img/tianjiashichang@2x.png" /></li>
 		<w-picker mode="dateTime" 
@@ -42,6 +42,7 @@ export default {
 	data() {
 		return {
 			date:[],
+			timeChecked:{}
 		};
 	},
 	created() {
@@ -59,19 +60,14 @@ export default {
 		flag: Boolean, //事件开关
 		timeList:Array,
 		dateList:Array,
-		timeChecked:String
 	},
 	methods: {
 		/**选中时间*/
 		selctitem(index){
-			this.$emit()
+			this.$emit('selctTime',index)
 		},
 		onCancel(){
 			console.log('cancel')
-		},
-		timeDate(time){
-			var date = new Date(time); // 增加8小时
-			return date.toJSON().substr(0, 19).replace('T', ' ');
 		},
 		toggleTab() {
 			this.$refs.picker.show();
@@ -87,7 +83,7 @@ export default {
 			let index = val.index[0]
 			let time  = this.timeList[index] 
 			this.timeChecked.end_time = this.timeChecked.start_time + (time * 60);
-			this.$emit('confirmOrder', this.timeChecked);
+			this.$emit('confirmTime', this.timeChecked);
 		},
 		/**选择时长*/
 		timePicker() {
@@ -99,6 +95,7 @@ export default {
 
 <style lang="less" scoped>
 ul {
+	padding-bottom: 60upx;
 	li.active {
 		border: 2upx solid #fad42a;
 	}
@@ -117,8 +114,8 @@ ul {
 		background: rgba(255, 255, 255, 1);
 		box-shadow: 0 8upx 20upx 4upx rgba(179, 188, 198, 0.2);
 		border-radius: 16upx;
-		margin: 30upx;
-		padding: 30upx;
+ 		margin-top: 30upx;
+ 		padding: 30upx;
 		.date {
 			font-size: 40upx;
 			font-weight: 500;

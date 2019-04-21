@@ -11,30 +11,48 @@
 			:maxTime="courseInfo.max_time_type"
 			:content="courseInfo.content || '暂无课程介绍'"
 		></lessonHead>
-		<teacherList :listInfo="selectFlag ? selectItem : listInfo" :selectFlag="selectFlag" title="选择教师" @selectFunction="select" lessonType="lessonCopy"></teacherList>
-		<teachingWay v-if="selectFlag" :classId="classId" :teacherId="teacherId"></teachingWay>
+		<teacherList 	:listInfo="selectFlag ? selectItem : listInfo" 
+						:selectFlag="selectFlag" 
+						title="选择教师" 
+						@selectFunction="select" l
+						essonType="lessonCopy"></teacherList>
+		<teachingWay v-if="selectFlag" 
+					:orderShow="orderShow"
+					:classId="classId" 
+					:request="request"
+					@changeRequest="changeRequest"
+					:teacherId="teacherId"></teachingWay>
+		<orderMessage v-if="orderShow" :request="request"></orderMessage>
 	</view>
 </template>
 
 <script>
 import lessonHead from '../../components/lesson/lessonHead.vue';
+import orderMessage from '../../components/lesson/orderMessage.vue';
 import teacherList from '../../components/item/teacherList.vue';
 import teachingWay from '../../components/lesson/teachingWay.vue'; //授课方式
 export default {
 	components: {
 		lessonHead,
 		teacherList,
-		teachingWay
+		teachingWay,
+		orderMessage
 	},
 	data() {
 		return {
+			orderShow:false,
 			courseInfo: {},
 			selectFlag: false,
 			selectItem: [],
 			listInfo: [],
 			choiseTeacherInfo: {},
 			classId:0,
-			teacherId:0
+			teacherId:0,
+			request: {
+				price:0,
+				people_num: 0,
+				class_list_id:[]
+			}
 		};
 	},
 	onLoad(obj) {
@@ -44,8 +62,14 @@ export default {
 	},
 	methods: {
 		backEvent() {
-			if (this.selectFlag) this.selectFlag = false;
-			else window.history.back(-1);
+			if (this.selectFlag){
+				if(this.orderShow){
+					this.orderShow = false;
+				}else{
+					this.selectFlag = false;
+				}
+			}else 
+				window.history.back(-1);
 		},
 		select(item) {
 			console.log(item);
@@ -68,6 +92,27 @@ export default {
 					}
 				}
 			});
+		},
+		changeRequest(data){
+			switch(data.key){
+				case 'people_num':
+					this.request.people_num = data.value
+					break;
+				case 'class_list_id':
+					let index = this.request.class_list_id.indexOf(data.value) 
+					if(index > -1){
+						this.request.class_list_id.splice(index,1)
+						this.request.price -= data.price
+					}else{
+						this.request.class_list_id.push(data.value)
+						this.request.price += data.price
+					}
+					break;
+				case 'orderShow':
+					this.orderShow = data.value
+					break;
+			}
+			console.log(this.request)
 		},
 		/**获取选择老师列表*/
 		getChoiseTeacherInfo(musicSunId) {
