@@ -6,11 +6,13 @@
 				<image v-else :src="item.photo || image"></image>
 				<div class="lesson_messgae">
 					<p class="lesson_title">{{ item.name }}</p>
-					<startclass :star="Number(item.star)" v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'"></startclass>
+					<startclass :star="Number(item.star)" 
+							starColor="#666666"
+							v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'"></startclass>
 					<p v-else class="lesson_winer">教师 Jennifer Young</p>
 					<div class="lesson_pay">
 						<span v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'" class="teacher_number">
-							{{ item.teacher_count > 0 ? '共' + item.teacher_count + '名教师' : '暂无教师' }}
+							{{ success ? '教师名称  &nbsp;&nbsp;&nbsp;一对一' : (item.teacher_count > 0 ? '共' + item.teacher_count + '名教师' : '暂无教师') }}
 						</span>
 						<span v-else class="start_time">2019年3月15日开课</span>
 						<navigator url="/pages/evaluate/evaluate" v-if="lessonType === '-1'"><span class="go_pay">去评价</span></navigator>
@@ -21,7 +23,7 @@
 							:url="'/pages/choiceTeacher/choiceTeacher?musicId=' + musicId + '&musicSunId=' + item.id"
 							v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'"
 						>
-							<span class="go_pay">报名</span>
+							<span v-if="!success" class="go_pay">报名</span>
 						</navigator>
 					</div>
 				</div>
@@ -45,7 +47,11 @@ export default {
 			type: String,
 			default: '-1'
 		}, //lessonType类型判断  -1为全部  0为待支付  1为待开课  2为已完成
-		listInfo: Array
+		listInfo: Array,
+		success:{
+			type:Boolean,
+			default:false
+		}
 	},
 	data() {
 		return {

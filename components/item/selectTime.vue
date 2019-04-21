@@ -10,7 +10,7 @@
 				</span>
 			</p>
 			<p class="time">{{item.star+' - '+item.end}} </p>
-			<p class="duration">时长{{item.time}} mim</p>
+			<p class="duration">时长 {{item.time}} min</p>
 		</li>
 		<li v-if="!flag" class="add_time" @tap="toggleTab"><img src="/static/img/tianjiashichang@2x.png" /></li>
 		<w-picker mode="dateTime" :defaultVal="date" themeColor="#007AFF" @confirm="DateConfirm" ref="picker"></w-picker>

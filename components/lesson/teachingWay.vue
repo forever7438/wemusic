@@ -1,25 +1,31 @@
 <template>
 	<div class="lesson_content">
-		<text class="teacher_class">选择授课方式</text>
-		<ul>
-			<li :class="{ active: info.people_num === 0 }" @click="info.people_num = 0">一对一</li>
-			<li :class="{ active: info.people_num === 1 }" @click="info.people_num = 1">一对二</li>
-			<li :class="{ active: info.people_num === 2 }" @click="info.people_num = 2">一对三</li>
-		</ul>
-		<p class="message">
-			<span></span>
-			<span class="info">一对二、一对三的课程，您可以邀请朋友一同上课，更加优惠。</span>
-		</p>
-		<p class="vipMessage">
-			<span>您还不是WeMusic会员，可享受一节预约课，如果想要上更多课程，请前往开通会员。</span>
-			<span>开通会员</span>
-		</p>
-		<text class="teacher_class">选择时长</text>
+		<view v-if="!orderShow">
+			<text class="teacher_class">选择授课方式</text>
+			<ul>
+				<li :class="{ active: request.people_num === 0 }" 
+					@click="changeWay(0)">一对一</li>
+				<li :class="{ active: request.people_num === 1 }" 
+					@click="changeWay(1)">一对二</li>
+				<li :class="{ active: request.people_num === 2 }" 
+					@click="changeWay(2)">一对三</li>
+			</ul>
+			<p class="message">
+				<span></span>
+				<span class="info">一对二、一对三的课程，您可以邀请朋友一同上课，更加优惠。</span>
+			</p>
+			<p class="vipMessage">
+				<span>您还不是WeMusic会员，可享受一节预约课，如果想要上更多课程，请前往开通会员。</span>
+				<span>开通会员</span>
+			</p>
+			<text class="teacher_class">选择时长</text>
+		</view>
 		<selectTime :timeList="timeList" 
+					:flag="orderShow"
 					:dateList="dateList" 
-					:timeChecked="timeChecked"
-					@confirmOrder="confirmOrder"></selectTime>
-		<span class="sign_up">下一步</span>
+					@selctTime="selctTime"
+					@confirmTime="confirmTime"></selectTime>
+		<span v-if="!orderShow" class="sign_up" @click="createOrder">下一步</span>
 	</div>
 </template>
 
@@ -39,27 +45,25 @@ export default {
 		}, //lessonType类型判断  1为全部  2为待支付  3为待开课  4为已完成
 		listInfo: Array,
 		title: String,
-		teacherId:String
+		teacherId:String,
+		request:Object,
+		orderShow:Boolean
 	},
 	data() {
 		return {
 			image: '../../static/img/demo.jpg',
-			info: {
-				people_num: 0,
-				time_checked: 0
-			},
-			timeChecked:0,
 			timeList:[],
 			dateList:[]
 		};
 	},
 	methods: {
-		/**确认订单*/
-		confirmOrder(obj){
+		/**确认上课时间*/
+		confirmTime(obj){
 			obj.teacher_id = this.teacherId
 			obj.music_sun_id = this.classId
 			this.addClassTime(obj)
 		},
+		/**添加上课时间*/
 		addClassTime(request){
 			this.ajax({
 				url: 'userorder/add_class',
@@ -68,9 +72,38 @@ export default {
 					if (res.data.body === 'success') {
 						let timeItem = this.timeDate(res.data.data)
 						this.dateList.push(timeItem)
+						let change = {
+							key:'class_list_id',
+							value:timeItem.id,
+							price:timeItem.price
+						}
+						this.$emit('changeRequest',change)
+					}else{
+						uni.showToast({
+							title: 'The teacher is busy during this time',
+							icon: 'none'
+						});
 					}
 				}
 			});
+		},
+		createOrder(){
+			/**是否选择时间*/
+			if(this.request.class_list_id == '' || this.request.class_list_id  == 'underfid'){
+				uni.showToast({
+					title: '请选择授课时间',
+					icon: 'none'
+				});
+			}else{
+				this.$emit('changeRequest',{key:'orderShow',value:true})
+			}
+		},
+		selctTime(index){
+			this.dateList[index].isActive = !this.dateList[index].isActive
+			this.$emit('changeRequest',{key:'class_list_id',value:this.dateList[index].id})
+		},
+		changeWay(val){
+			this.$emit('changeRequest',{key:'people_num',value:val})
 		},
 		/**获取时长*/
 		getTimeList(classId) {
@@ -95,6 +128,7 @@ export default {
 			item.star = date_s.substr(11, 5)
 			item.end  = date_e.substr(11, 5)
 			item.time = (item.stop_time - item.start_time)/60
+			item.isActive=true
 			return item
 		}
 	},
