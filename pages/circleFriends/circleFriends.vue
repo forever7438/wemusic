@@ -12,7 +12,7 @@
 
 <script>
 import friendsList from '../../components/item/friendsList.vue';
-import uniIcon     from '../../components/uni-icon/uni-icon.vue';
+import uniIcon from '../../components/uni-icon/uni-icon.vue';
 export default {
 	components: {
 		friendsList,

@@ -1,10 +1,10 @@
 <template>
-	<view class="list">
-		<view class="" v-for="(item, index) in friendsList" :key="index">
+	<view class="friend_list">
+		<view class="fridend_content" v-for="(item, index) in friendsList" :key="index">
 			<friendHead :itemHead="item"></friendHead>
 			<friendContent :type="true" :content="item.body" :listId="item.id"></friendContent>
 			<image :src="item.video || userImage"></image>
-			<friendOperation></friendOperation>
+			<!-- <friendOperation></friendOperation> -->
 		</view>
 	</view>
 </template>
@@ -31,8 +31,8 @@ export default {
 </script>
 
 <style lang="less">
-.list {
-	view {
+.friend_list {
+	.fridend_content {
 		margin-bottom: 20upx;
 		image {
 			width: 100%;

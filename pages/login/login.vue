@@ -10,7 +10,7 @@
 			<input type="password" v-model="pass" />
 		</view>
 		<button @tap="login">登录</button>
-		<view class="login_option"> 
+		<view class="login_option">
 			<navigator url="/pages/register/register"><text>注册</text></navigator>
 			<navigator url="/pages/forgetPass/forgetPass"><text>忘记密码</text></navigator>
 		</view>

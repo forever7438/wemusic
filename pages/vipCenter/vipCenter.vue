@@ -10,7 +10,7 @@
 					</span>
 					<span>
 						<p>我的积分</p>
-						<s>{{userInfo.phone}}</s>
+						<s>{{ userInfo.phone }}</s>
 					</span>
 				</div>
 			</div>
@@ -18,7 +18,7 @@
 		<div class="vip_recharge">
 			<h3>充 值</h3>
 			<ul>
-				<li v-for="(item, index) in moneyList" :key="index" @tap="checkId = item.id">
+				<li v-for="(item, index) in moneyList" :key="index" @tap="checked(item.id)">
 					<p>充</p>
 					<p>{{ item.full_money }}</p>
 					<p>送 ${{ item.give_money }}</p>
@@ -87,6 +87,9 @@ export default {
 					}
 				}
 			});
+		},
+		checked(val) {
+			this.checkId = val;
 		},
 		//充值操作
 		moneyAadd() {

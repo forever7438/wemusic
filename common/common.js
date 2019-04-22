@@ -81,6 +81,17 @@ function getDate(type) {
 
 	return `${year}-${month}-${day}`;
 }
+//时间格式化处理
+function getDates(type) {
+	const date = new Date(type);
+	let year = date.getFullYear();
+	let month = date.getMonth() + 1;
+	let day = date.getDate();
+	month = month > 9 ? month : '0' + month;
+	day = day > 9 ? day : '0' + day;
+
+	return `${year}.${month}`;
+}
 
 function getImgToBase64(url, callback) { //将图片转换为Base64
 	var canvas = document.createElement('canvas'),
@@ -102,5 +113,6 @@ export {
 	ajax,
 	errorImg01,
 	getDate,
+	getDates,
 	getImgToBase64
 }

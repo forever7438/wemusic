@@ -52,7 +52,7 @@ export default {
 				},
 				success: res => {
 					if (res.data.body === 'success') {
-						if (res.data.data.length === 0) {
+						if (res.data.data.list.length === 0) {
 							this.isEnd = true;
 							uni.showToast({
 								title: '没有更多数据了',
@@ -60,7 +60,7 @@ export default {
 							});
 							return;
 						}
-						this.financeList = this.financeList.concat(res.data.data);
+						this.financeList = this.financeList.concat(res.data.data.list);
 					}
 				}
 			});

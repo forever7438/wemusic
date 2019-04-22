@@ -1,8 +1,6 @@
 <template>
 	<view>
-		<view class="top">
-			<span @click="backEvent"><img src="/static/img/nav_back_light.png" /></span>
-		</view>
+		<view class="top" @click="backEvent"><image src="/static/img/nav_back_light.png"></image></view>
 		<lessonHead
 			headType="lessonDetail"
 			:star="Number(courseInfo.star)"
@@ -11,17 +9,8 @@
 			:maxTime="courseInfo.max_time_type"
 			:content="courseInfo.content || '暂无课程介绍'"
 		></lessonHead>
-		<teacherList 	:listInfo="selectFlag ? selectItem : listInfo" 
-						:selectFlag="selectFlag" 
-						title="选择教师" 
-						@selectFunction="select" l
-						essonType="lessonCopy"></teacherList>
-		<teachingWay v-if="selectFlag" 
-					:orderShow="orderShow"
-					:classId="classId" 
-					:request="request"
-					@changeRequest="changeRequest"
-					:teacherId="teacherId"></teachingWay>
+		<teacherList :listInfo="selectFlag ? selectItem : listInfo" :selectFlag="selectFlag" title="选择教师" @selectFunction="select" l essonType="lessonCopy"></teacherList>
+		<teachingWay v-if="selectFlag" :orderShow="orderShow" :classId="classId" :request="request" @changeRequest="changeRequest" :teacherId="teacherId"></teachingWay>
 		<orderMessage v-if="orderShow" :request="request"></orderMessage>
 	</view>
 </template>
@@ -40,40 +29,39 @@ export default {
 	},
 	data() {
 		return {
-			orderShow:false,
+			orderShow: false,
 			courseInfo: {},
 			selectFlag: false,
 			selectItem: [],
 			listInfo: [],
 			choiseTeacherInfo: {},
-			classId:0,
-			teacherId:0,
+			classId: 0,
+			teacherId: 0,
 			request: {
-				price:0,
+				price: 0,
 				people_num: 0,
-				class_list_id:[]
+				class_list_id: []
 			}
 		};
 	},
 	onLoad(obj) {
-		this.classId = obj.musicSunId
-		this.getChoiseTeacherInfo(obj.musicSunId)
-		this.getCourseInfo(obj.musicSunId)
+		this.classId = obj.musicSunId;
+		this.getChoiseTeacherInfo(obj.musicSunId);
+		this.getCourseInfo(obj.musicSunId);
 	},
 	methods: {
 		backEvent() {
-			if (this.selectFlag){
-				if(this.orderShow){
+			if (this.selectFlag) {
+				if (this.orderShow) {
 					this.orderShow = false;
-				}else{
+				} else {
 					this.selectFlag = false;
 				}
-			}else 
-				window.history.back(-1);
+			} else window.history.back(-1);
 		},
 		select(item) {
 			console.log(item);
-			this.teacherId = item.id
+			this.teacherId = item.id;
 			this.selectItem = [];
 			this.selectItem.push(item);
 			this.selectFlag = true;
@@ -92,23 +80,23 @@ export default {
 				}
 			});
 		},
-		changeRequest(data){
-			switch(data.key){
+		changeRequest(data) {
+			switch (data.key) {
 				case 'people_num':
-					this.request.people_num = data.value
+					this.request.people_num = data.value;
 					break;
 				case 'class_list_id':
-					let index = this.request.class_list_id.indexOf(data.value) 
-					if(index > -1){
-						this.request.class_list_id.splice(index,1)
-						this.request.price -= data.price
-					}else{
-						this.request.class_list_id.push(data.value)
-						this.request.price += data.price
+					let index = this.request.class_list_id.indexOf(data.value);
+					if (index > -1) {
+						this.request.class_list_id.splice(index, 1);
+						this.request.price -= data.price;
+					} else {
+						this.request.class_list_id.push(data.value);
+						this.request.price += data.price;
 					}
 					break;
 				case 'orderShow':
-					this.orderShow = data.value
+					this.orderShow = data.value;
 					break;
 			}
 		},
@@ -135,16 +123,19 @@ export default {
 <style lang="less">
 view {
 	.top {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		position: absolute;
-		span {
-			display: inline-block;
-			width: 64upx;
-			height: 64upx;
-			background: #999;
-			text-align: center;
-			border-radius: 64upx;
-			margin: 20upx;
-			padding: 10upx 14upx;
+		top: 10upx;
+		left: 10upx;
+		width: 64upx;
+		height: 64upx;
+		border-radius: 50%;
+		background-color: rgba(0, 0, 0, 0.5);
+		image {
+			width: 50upx;
+			height: 50upx;
 		}
 	}
 	.sign_up {

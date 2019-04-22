@@ -1,15 +1,15 @@
 <template>
 	<view class="operation">
 		<view @tap="share">
-			<image src="../../static/img/zhuanfa@2x.png"></image>
+			<image src="/static/img/zhuanfa@2x.png"></image>
 			<text>{{ forward }}</text>
 		</view>
 		<view>
-			<image src="../../static/img/comment@2x.png"></image>
+			<image src="/static/img/comment@2x.png"></image>
 			<text>{{ message }}</text>
 		</view>
 		<view @tap="liked">
-			<image src="../../static/img/dianzan@2x.png"></image>
+			<image src="/static/img/dianzan@2x.png"></image>
 			<text>{{ praise }}</text>
 		</view>
 	</view>

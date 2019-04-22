@@ -140,11 +140,9 @@ export default {
 			userInfo: {}
 		};
 	},
-	onReady() {
-		uni.getStorageSync('type') == 1 ? (this.isTeacher = false) : (this.isTeacher = true);
-	},
 	onLoad() {
 		this.getUserInfo();
+		uni.getStorageSync('type') == 1 ? (this.isTeacher = false) : (this.isTeacher = true);
 	},
 	methods: {
 		//获取个人资料

@@ -1,9 +1,9 @@
 <template>
 	<view class="finance_list">
 		<view v-if="financeList.length" class="finance_list_item" v-for="(item, index) in financeList" :key="index">
-			<text class="finance_year">{{ item.start_time }}年</text>
+			<text class="finance_year">{{ new Date(item.time * 1000).getFullYear() }}年</text>
 			<view class="finance_content">
-				<text class="finance_time">2019.01-2019.02</text>
+				<text class="finance_time">{{ (item.start_time * 1000) | formateTime }}-{{ (item.stop_time * 1000) | formateTime }}</text>
 				<view class="finance_money">
 					<text>$2000.00</text>
 					<text>金额</text>
@@ -19,7 +19,7 @@
 					<text>5</text>
 					<text>学生数</text>
 				</view>
-				<button @tap="addFinance(1)">申请</button>
+				<button @tap="addFinance(item.id)">申请</button>
 			</view>
 		</view>
 		<noContent v-else title="暂无信息"></noContent>
@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import { getDates } from '../../common/common.js';
 import noContent from '../noContent.vue';
 export default {
 	props: {
@@ -34,6 +35,11 @@ export default {
 	},
 	components: {
 		noContent
+	},
+	filters: {
+		formateTime: time => {
+			return getDates(time);
+		}
 	},
 	methods: {
 		//提交申请

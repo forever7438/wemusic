@@ -1,8 +1,6 @@
 <template>
 	<view class="class_list">
-		<navigator style="height: 268upx;margin-bottom: 30upx;" 
-				   v-for="(item, index) in musicList" :key="index" 
-				   :url="'/pages/lessonCopy/lessonCopy?musicId=' + item.id">
+		<navigator style="height: 268upx;margin-bottom: 30upx;" v-for="(item, index) in musicList" :key="index" :url="'/pages/lessonCopy/lessonCopy?musicId=' + item.id">
 			<image src="../../../static/img/wemusic.jpg"></image>
 		</navigator>
 		<navigator url="/pages/myCode/myCode">我的邀请码</navigator>
