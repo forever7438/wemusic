@@ -7,14 +7,18 @@
 		</view>
 		<view class="register_pass">
 			<text>密码</text>
-			<input type="password" placeholder="不超过16个字符" v-model="pass" maxlength="16" />
+			<input type="password" placeholder="请输入密码" v-model="pass" maxlength="16" />
+		</view>
+		<view class="register_pass">
+			<text>密码</text>
+			<input type="password" placeholder="请重复输入密码" v-model="newPass" maxlength="16" />
 		</view>
 		<view class="register_code">
 			<text>验证码</text>
 			<input type="number" v-model="code" maxlength="6" />
 			<text class="get_code" @tap="getCode">获取验证码</text>
 		</view>
-		<button @click="register">注册</button>
+		<button @click="register">找回密码</button>
 	</view>
 </template>
 
@@ -24,6 +28,7 @@ export default {
 		return {
 			email: '',
 			pass: '',
+			newPass: '',
 			code: '',
 			reg: new RegExp('^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$')
 		};

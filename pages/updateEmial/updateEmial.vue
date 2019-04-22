@@ -8,7 +8,7 @@
 			<li>
 				<span>验证码</span>
 				<input type="number" placeholder="请输入验证码" v-model="code" />
-				<span class="btn_code">获取验证码</span>
+				<span class="btn_code" @tap="getCode">获取验证码</span>
 			</li>
 		</ul>
 		<s>修改邮箱后,您可以使用新的邮箱登录,修改后,原邮箱不可使用</s>
@@ -26,6 +26,42 @@ export default {
 		};
 	},
 	methods: {
+		//获取验证码
+		getCode() {
+			if (!this.new_email) {
+				uni.showToast({
+					title: '请填写邮箱',
+					icon: 'none'
+				});
+				return;
+			}
+			if (!this.reg.test(this.new_email)) {
+				uni.showToast({
+					title: '邮箱格式不正确',
+					icon: 'none'
+				});
+				return;
+			}
+			this.ajax({
+				url: 'index/email_code',
+				data: {
+					email: this.new_email
+				},
+				success: res => {
+					if (res.data.body === 'success') {
+						uni.showToast({
+							title: '验证码已发送至邮箱,请注意查收!',
+							icon: 'none'
+						});
+					} else {
+						uni.showToast({
+							title: res.data.msg,
+							icon: 'none'
+						});
+					}
+				}
+			});
+		},
 		//修改邮箱
 		updateEmial() {
 			if (!this.new_email) {
@@ -75,6 +111,9 @@ export default {
 </script>
 
 <style lang="less">
+input {
+	font-size: 24upx;
+}
 .change_emial {
 	padding: 0 30upx;
 

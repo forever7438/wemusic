@@ -1,93 +1,133 @@
 <template>
-	<view class="content">
-		<view class="messgae">
-			<view class="user_info">
-				<image :src="userInfo.photo"></image>
-				<view>
-					<navigator url="/pages/updateUserinfo/updateUserinfo">
-						<text class="user_name">{{ userInfo.name || 'null' }}</text>
-					</navigator>
-					<text class="user_type">WeMusic会员</text>
-				</view>
-			</view>
-			<view class="user_money">
-				<view class="money_info">
-					<text>账户余额</text>
-					<view class="money_word">
-						<text>￥</text>
-						<text>{{ userInfo.money }}</text>
+	<view>
+		<view v-if="!isTeacher" class="content_student">
+			<view class="messgae">
+				<view class="user_info">
+					<image :src="userInfo.photo"></image>
+					<view>
+						<navigator url="/pages/updateUserinfo/updateUserinfo">
+							<text class="user_name">{{ userInfo.name || 'null' }}</text>
+						</navigator>
+						<text class="user_type">WeMusic会员</text>
 					</view>
 				</view>
-				<navigator url="/pages/vipCenter/vipCenter"><text class="pay_btn">充值</text></navigator>
+				<view class="user_money">
+					<view class="money_info">
+						<text>账户余额</text>
+						<view class="money_word">
+							<text>￥</text>
+							<text>{{ userInfo.money }}</text>
+						</view>
+					</view>
+					<navigator url="/pages/vipCenter/vipCenter"><text class="pay_btn">充值</text></navigator>
+				</view>
+			</view>
+			<view class="class_list">
+				<navigator url="/pages/lesson/lesson?type=-1">
+					<view>
+						<image src="../../../static/img/group(3).png"></image>
+						<text>全部课程</text>
+					</view>
+				</navigator>
+				<navigator url="/pages/lesson/lesson?type=0">
+					<view>
+						<image src="../../../static/img/fenzu7@2x.png"></image>
+						<text>待支付</text>
+					</view>
+				</navigator>
+				<navigator url="/pages/lesson/lesson?type=1">
+					<view>
+						<image src="../../../static/img/group(1).png"></image>
+						<text>待开课</text>
+					</view>
+				</navigator>
+				<navigator url="/pages/lesson/lesson?type=2">
+					<view>
+						<image src="../../../static/img/group(2).png"></image>
+						<text>已完成</text>
+					</view>
+				</navigator>
+			</view>
+			<view class="user_meun">
+				<navigator url="/pages/circleFriends/circleFriends">
+					<view>
+						<text>朋友圈</text>
+						<image src="../../../static/img/moment@2x.png"></image>
+					</view>
+				</navigator>
+				<view>
+					<text>语言/Language</text>
+					<text>中文</text>
+				</view>
+				<navigator url="/pages/myCoupon/myCoupon?type=0">
+					<view>
+						<text>我的优惠券</text>
+						<image src="../../../static/img/coupon@2x.png"></image>
+					</view>
+				</navigator>
+				<navigator url="/pages/myEvaluate/myEvaluate?type=0">
+					<view>
+						<text>我的评价</text>
+						<image src="../../../static/img/evaluate@2x.png"></image>
+					</view>
+				</navigator>
+				<navigator url="/pages/feedback/feedback">
+					<view>
+						<text>意见反馈</text>
+						<image src="../../../static/img/opinion@2x.png"></image>
+					</view>
+				</navigator>
+				<navigator url="/pages/aboutUs/aboutUs">
+					<view>
+						<text>关于我们</text>
+						<image src="../../../static/img/team@2x.png"></image>
+					</view>
+				</navigator>
+				<navigator url="/pages/courseInvitation/courseInvitation">
+					<view>
+						<text>课程邀请</text>
+						<image src="../../../static/img/invite@2x.png"></image>
+					</view>
+				</navigator>
 			</view>
 		</view>
-		<view class="class_list">
-			<navigator url="/pages/lesson/lesson?type=-1">
-				<view>
-					<image src="../../../static/img/group(3).png"></image>
-					<text>全部课程</text>
-				</view>
-			</navigator>
-			<navigator url="/pages/lesson/lesson?type=0">
-				<view>
-					<image src="../../../static/img/fenzu7@2x.png"></image>
-					<text>待支付</text>
-				</view>
-			</navigator>
-			<navigator url="/pages/lesson/lesson?type=1">
-				<view>
-					<image src="../../../static/img/group(1).png"></image>
-					<text>待开课</text>
-				</view>
-			</navigator>
-			<navigator url="/pages/lesson/lesson?type=2">
-				<view>
-					<image src="../../../static/img/group(2).png"></image>
-					<text>已完成</text>
-				</view>
-			</navigator>
-		</view>
-		<view class="user_meun">
-			<navigator url="/pages/circleFriends/circleFriends">
-				<view>
-					<text>朋友圈</text>
-					<image src="../../../static/img/moment@2x.png"></image>
-				</view>
-			</navigator>
-			<view>
-				<text>语言/Language</text>
-				<text>中文</text>
+		<view v-else class="content_teacher">
+			<view class="teacher-message">
+				<image src="../../../static/img/lesson4.jpg"></image>
+				<text>Sharon Johnson</text>
 			</view>
-			<navigator url="/pages/myCoupon/myCoupon?type=0">
-				<view>
-					<text>我的优惠券</text>
-					<image src="../../../static/img/coupon@2x.png"></image>
-				</view>
-			</navigator>
-			<navigator url="/pages/myEvaluate/myEvaluate?type=0">
-				<view>
-					<text>我的评价</text>
-					<image src="../../../static/img/evaluate@2x.png"></image>
-				</view>
-			</navigator>
-			<navigator url="/pages/feedback/feedback">
-				<view>
-					<text>意见反馈</text>
-					<image src="../../../static/img/opinion@2x.png"></image>
-				</view>
-			</navigator>
-			<navigator url="/pages/aboutUs/aboutUs">
-				<view>
-					<text>关于我们</text>
-					<image src="../../../static/img/team@2x.png"></image>
-				</view>
-			</navigator>
-			<navigator url="/pages/courseInvitation/courseInvitation">
-				<view>
-					<text>课程邀请</text>
-					<image src="../../../static/img/invite@2x.png"></image>
-				</view>
-			</navigator>
+			<view class="user_meun">
+				<navigator url="/pages/lesson/lesson?type=-1">
+					<view>
+						<text>我的课程</text>
+						<image src="../../../static/img/class@2x.png"></image>
+					</view>
+				</navigator>
+				<navigator url="/pages/circleFriends/circleFriends">
+					<view>
+						<text>朋友圈</text>
+						<image src="../../../static/img/moment@2x.png"></image>
+					</view>
+				</navigator>
+				<navigator url="/pages/finance/finance">
+					<view>
+						<text>财务管理</text>
+						<image src="../../../static/img/money@2x.png"></image>
+					</view>
+				</navigator>
+				<navigator url="/pages/uploadFile/uploadFile">
+					<view>
+						<text>资料上传</text>
+						<image src="../../../static/img/coupons@2x.png"></image>
+					</view>
+				</navigator>
+				<navigator url="/pages/authentication/authentication">
+					<view>
+						<text>我的认证</text>
+						<image src="../../../static/img/certification@2x.png"></image>
+					</view>
+				</navigator>
+			</view>
 		</view>
 	</view>
 </template>
@@ -96,8 +136,12 @@
 export default {
 	data() {
 		return {
+			isTeacher: false,
 			userInfo: {}
 		};
+	},
+	onReady() {
+		uni.getStorageSync('type') == 1 ? (this.isTeacher = false) : (this.isTeacher = true);
 	},
 	onLoad() {
 		this.getUserInfo();
@@ -134,7 +178,58 @@ export default {
 </script>
 
 <style lang="less">
-.content {
+//老师
+.content_teacher {
+	.teacher-message {
+		height: 400upx;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		background: rgba(250, 212, 42, 1);
+		image {
+			margin: 100upx 0 50upx;
+			width: 152upx;
+			height: 152upx;
+			border-radius: 50%;
+			border: 4upx solid rgba(255, 255, 255, 1);
+		}
+		text {
+			font-size: 40upx;
+			font-family: PingFangSC-Medium;
+			font-weight: 500;
+			color: rgba(51, 51, 51, 1);
+		}
+	}
+	.user_meun {
+		padding: 40upx 15upx 0 15upx;
+
+		view {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			line-height: 104upx;
+			border-bottom: 2upx solid #ddd;
+
+			:last-child {
+				border-bottom: 0;
+			}
+
+			text {
+				font-size: 32upx;
+				font-family: PingFangSC-Regular;
+				font-weight: 400;
+				color: rgba(51, 51, 51, 1);
+			}
+
+			image {
+				width: 44upx;
+				height: 44upx;
+			}
+		}
+	}
+}
+//学生
+.content_student {
 	text-align: center;
 	// height: 445upx;
 	padding: 30upx 30upx 0 30upx;

@@ -1,14 +1,78 @@
 <template>
 	<view class="upload_file">
-		<view class="upload_shade"><image src="../../static/img/creame@2x.png"></image></view>
-		<button>上传</button>
+		<view class="upload_shade" @tap="chooseImage"><image :src="data_photo == '' ? '../../static/img/creame@2x.png' : '../../static/img/chenggong.png'"></image></view>
+		<button @tap="uploadFile">上传</button>
 	</view>
 </template>
 
 <script>
+import { ApiUrl } from '../../common/common.js';
+let _this = '';
 export default {
 	data() {
-		return {};
+		return {
+			data_photo: ''
+		};
+	},
+	onLoad() {
+		_this = this;
+	},
+	methods: {
+		chooseImage: e => {
+			uni.chooseImage({
+				count: 1,
+				success: res => {
+					_this.data_photo = res.tempFilePaths[0];
+					uni.uploadFile({
+						url: ApiUrl + 'index/photo_add',
+						filePath: res.tempFilePaths[0],
+						name: 'file',
+						header: {
+							role: 'student',
+							Authorization: uni.getStorageSync('token')
+						},
+						success: res => {
+							const info = JSON.parse(res.data);
+							if (info.data === 'success') {
+								_this.data_photo = info.body.photo;
+							}
+						}
+					});
+				},
+				fail: err => {
+					console.log('chooseImage fail', err);
+				}
+			});
+		},
+		//资料上传
+		uploadFile() {
+			if (!this.data_photo) {
+				uni.showToast({
+					title: '请选择文件',
+					icon: 'none'
+				});
+				return;
+			}
+			this.ajax({
+				url: 'teacherclass/teacher_data',
+				data: {
+					data_photo: this.data_photo
+				},
+				success: res => {
+					if (res.data.body === 'success') {
+						uni.showToast({
+							title: '资料上传成功',
+							icon: 'none'
+						});
+					} else {
+						uni.showToast({
+							title: res.data.msg,
+							icon: 'none'
+						});
+					}
+				}
+			});
+		}
 	}
 };
 </script>

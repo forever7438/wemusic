@@ -6,13 +6,11 @@
 				<image v-else :src="item.photo || image"></image>
 				<div class="lesson_messgae">
 					<p class="lesson_title">{{ item.name }}</p>
-					<startclass :star="Number(item.star)" 
-							starColor="#666666"
-							v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'"></startclass>
+					<startclass :star="Number(item.star)" starColor="#666666" v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'"></startclass>
 					<p v-else class="lesson_winer">教师 Jennifer Young</p>
 					<div class="lesson_pay">
 						<span v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'" class="teacher_number">
-							{{ success ? '教师名称  &nbsp;&nbsp;&nbsp;一对一' : (item.teacher_count > 0 ? '共' + item.teacher_count + '名教师' : '暂无教师') }}
+							{{ success ? '教师名称  &nbsp;&nbsp;&nbsp;一对一' : item.teacher_count > 0 ? '共' + item.teacher_count + '名教师' : '暂无教师' }}
 						</span>
 						<span v-else class="start_time">2019年3月15日开课</span>
 						<navigator url="/pages/evaluate/evaluate" v-if="lessonType === '-1'"><span class="go_pay">去评价</span></navigator>
@@ -48,9 +46,9 @@ export default {
 			default: '-1'
 		}, //lessonType类型判断  -1为全部  0为待支付  1为待开课  2为已完成
 		listInfo: Array,
-		success:{
-			type:Boolean,
-			default:false
+		success: {
+			type: Boolean,
+			default: false
 		}
 	},
 	data() {
@@ -62,8 +60,8 @@ export default {
 		this.getCourseList();
 	},
 	methods: {
-		error(){
-			consoel.log('ok')
+		error() {
+			consoel.log('ok');
 		},
 		getCourseList() {
 			console.log('ok');
@@ -135,9 +133,9 @@ export default {
 					.teacher_number {
 						font-size: 24upx;
 						max-width: 240upx;
-						overflow:hidden;
-						text-overflow:ellipsis;
-						white-space:nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
 						margin-top: 36upx;
 						font-family: PingFangSC-Regular;
 						color: rgba(153, 153, 153, 1);

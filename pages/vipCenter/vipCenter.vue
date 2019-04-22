@@ -6,11 +6,11 @@
 				<div>
 					<span>
 						<p>账户余额</p>
-						<s>2369</s>
+						<s>{{ userInfo.money }}</s>
 					</span>
 					<span>
 						<p>我的积分</p>
-						<s>3695</s>
+						<s>{{userInfo.phone}}</s>
 					</span>
 				</div>
 			</div>
@@ -48,14 +48,31 @@ export default {
 	components: {},
 	data() {
 		return {
+			userInfo: {},
 			moneyList: [],
 			checkId: ''
 		};
 	},
 	onLoad() {
+		this.getUserInfo();
 		this.getMoneyList();
 	},
 	methods: {
+		//获取个人资料
+		getUserInfo() {
+			this.ajax({
+				url: 'user/info',
+				success: res => {
+					if (res.data.body === 'success') {
+						this.userInfo = res.data.data;
+					} else {
+						uni.showToast({
+							title: res.data.msg
+						});
+					}
+				}
+			});
+		},
 		//获取充值金钱种类
 		getMoneyList() {
 			this.ajax({

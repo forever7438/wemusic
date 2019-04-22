@@ -50,6 +50,17 @@ const ajax = (opt) => {
 					})
 				}, 1500)
 			}
+			if (['role error'].includes(res.data.msg)) {
+				uni.showToast({
+					title: "您的权限不足!",
+					icon: "none"
+				})
+				setTimeout(() => {
+					uni.navigateBack({
+						delta: 2
+					});
+				}, 1500)
+			}
 		},
 		fail: function() {
 			uni.showToast({

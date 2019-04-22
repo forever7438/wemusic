@@ -7,9 +7,6 @@
 		</navigator>
 		<navigator url="/pages/myCode/myCode">我的邀请码</navigator>
 		<navigator url="/pages/wagesDetail/wagesDetail">工资详情</navigator>
-		<navigator url="/pages/authentication/authentication">认证中心</navigator>
-		<navigator url="/pages/uploadFile/uploadFile">资料上传</navigator> 
-		<navigator url="/pages/finance/finance">财务管理</navigator>
 		<navigator url="/pages/adjustmentDetail/adjustmentDetail">调整详情</navigator>
 	</view>
 </template>

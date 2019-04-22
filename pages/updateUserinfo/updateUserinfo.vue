@@ -83,6 +83,13 @@ export default {
 		this.getUserInfo();
 	},
 	onNavigationBarButtonTap(obj) {
+		if (!this.userImage || !this.userName || !this.sex || !this.birthday || !this.interest || !this.address) {
+			uni.showToast({
+				title: '请填写必填选项!',
+				icon: 'none'
+			});
+			return;
+		}
 		this.ajax({
 			url: 'user/update_info',
 			data: {

@@ -86,7 +86,6 @@ export default {
 					music_id: classId
 				},
 				success: res => {
-					console.log(res);
 					if (res.data.body === 'success') {
 						this.courseInfo = res.data.data.info;
 					}
@@ -112,7 +111,6 @@ export default {
 					this.orderShow = data.value
 					break;
 			}
-			console.log(this.request)
 		},
 		/**获取选择老师列表*/
 		getChoiseTeacherInfo(musicSunId) {

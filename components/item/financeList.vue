@@ -1,7 +1,7 @@
 <template>
 	<view class="finance_list">
-		<view class="finance_list_item" v-for="(item, index) in 5" :key="index">
-			<text class="finance_year">2019年</text>
+		<view v-if="financeList.length" class="finance_list_item" v-for="(item, index) in financeList" :key="index">
+			<text class="finance_year">{{ item.start_time }}年</text>
 			<view class="finance_content">
 				<text class="finance_time">2019.01-2019.02</text>
 				<view class="finance_money">
@@ -19,13 +19,48 @@
 					<text>5</text>
 					<text>学生数</text>
 				</view>
-				<button>申请</button>
+				<button @tap="addFinance(1)">申请</button>
 			</view>
 		</view>
+		<noContent v-else title="暂无信息"></noContent>
 	</view>
 </template>
 
-<script></script>
+<script>
+import noContent from '../noContent.vue';
+export default {
+	props: {
+		financeList: Array
+	},
+	components: {
+		noContent
+	},
+	methods: {
+		//提交申请
+		addFinance(financeId) {
+			this.ajax({
+				url: 'teacherclass/finance_update',
+				data: {
+					finance_id: financeId
+				},
+				success: res => {
+					if (res.data.body === 'success') {
+						uni.showToast({
+							title: '您的申请已提交,请耐心等待',
+							icon: 'none'
+						});
+					} else {
+						uni.showToast({
+							title: res.data.msg,
+							icon: 'none'
+						});
+					}
+				}
+			});
+		}
+	}
+};
+</script>
 
 <style lang="less">
 @import '../../common/global.less';

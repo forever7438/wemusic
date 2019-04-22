@@ -32,7 +32,17 @@ export default {
 					friend_id: this.listId
 				},
 				success: res => {
-					console.log(res);
+					if (res.data.body === 'success') {
+						uni.showToast({
+							title: '点赞成功',
+							icon: 'none'
+						});
+					} else {
+						uni.showToast({
+							title: res.data.msg,
+							icon: 'none'
+						});
+					}
 				}
 			});
 		},
@@ -44,7 +54,17 @@ export default {
 					friend_id: this.listId
 				},
 				success: res => {
-					console.log(res);
+					if (res.data.body === 'success') {
+						uni.showToast({
+							title: '转发成功',
+							icon: 'none'
+						});
+					} else {
+						uni.showToast({
+							title: res.data.msg,
+							icon: 'none'
+						});
+					}
 				}
 			});
 		}

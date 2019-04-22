@@ -10,9 +10,9 @@
 			<input type="password" v-model="pass" />
 		</view>
 		<button @tap="login">登录</button>
-		<view class="login_option">
+		<view class="login_option"> 
 			<navigator url="/pages/register/register"><text>注册</text></navigator>
-			<text>忘记密码</text>
+			<navigator url="/pages/forgetPass/forgetPass"><text>忘记密码</text></navigator>
 		</view>
 		<navigator url="/pages/teacherLogin/teacherLogin"><button style="background-color: #fff;border: 2upx solid rgba(102,102,102,1);;">教师端</button></navigator>
 		<view class="login_third"><text>第三方快捷登录</text></view>

@@ -37,7 +37,7 @@ class UpFiles extends RQ {
 		files = [],
 		isUp = true,
 		title = false,
-		showProgress=false,
+		showProgress = false,
 		extra = {}
 	} = {}, res) {
 		return new Promise(async (resolve, reject) => {
@@ -139,7 +139,7 @@ class UpFiles extends RQ {
 			const res = await this.FunChunk[this.platform](merge);
 			try {
 				const uploadRes = await this.startUpFiles(upload, res);
-				resolve(uploadRes);
+				resolve(res);
 			} catch (e) {
 				reject(e);
 			}

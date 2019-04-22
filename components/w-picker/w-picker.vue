@@ -4,7 +4,7 @@
 		<view class="w-picker-cnt" :class="{ show: showPicker }">
 			<view class="w-picker-hd" catchtouchmove="true">
 				<view class="w-picker-btn" @tap="pickerCancel">取消</view>
-				<view class="title_info">选择日期、时间</view>
+				<view class="title_info">{{ title }}</view>
 				<view class="w-picker-btn" :style="{ color: themeColor }" @tap="pickerConfirm">确定</view>
 			</view>
 			<view class="w-picker-view" v-if="mode == 'dates'">
@@ -77,6 +77,12 @@ export default {
 	},
 	computed: {},
 	props: {
+		title: {
+			type: String,
+			default() {
+				return '选择日期、时间';
+			}
+		},
 		mode: {
 			type: String,
 			default() {
@@ -302,12 +308,12 @@ export default {
 		text-align: center;
 		font-size: 17px;
 		justify-content: space-between;
-		.title_info{
+		.title_info {
 			line-height: 20px;
-			font-size:20px;
-			font-family:PingFangSC-Regular;
-			font-weight:400;
-			color:rgba(51,51,51,1);
+			font-size: 20px;
+			font-family: PingFangSC-Regular;
+			font-weight: 400;
+			color: rgba(51, 51, 51, 1);
 		}
 	}
 	.w-picker-hd:after {

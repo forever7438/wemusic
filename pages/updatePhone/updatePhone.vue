@@ -75,6 +75,9 @@ export default {
 </script>
 
 <style lang="less">
+	input {
+		font-size: 24upx;
+	}
 .change_phone {
 	padding: 0 30upx;
 	ul {
