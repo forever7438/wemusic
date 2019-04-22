@@ -1,6 +1,6 @@
 <template>
 	<view class="content_head">
-		<image class="content_image" :src="itemHead.photo || imageUrl"></image>
+		<image class="content_images" :src="itemHead.photo || imageUrl"></image>
 		<view class="user_info">
 			<text>{{ itemHead.people_name }}</text>
 			<text>{{ (itemHead.add_time * 1000) | formatDate }}</text>
@@ -32,7 +32,7 @@ export default {
 .content_head {
 	display: flex;
 	align-items: center;
-	.content_image {
+	.content_images {
 		width: 100upx;
 		height: 100upx;
 		border: 2upx solid #ddd;
