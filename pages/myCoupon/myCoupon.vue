@@ -38,6 +38,9 @@
 				this.getCouponList(this.type);
 			}, 300);
 		},
+		onPullDownRefresh() {
+			this.getCouponList(this.type);
+		},
 		methods: {
 			//获取优惠卷列表
 			getCouponList(type) {
@@ -51,6 +54,7 @@
 					},
 					success: res => {
 						if (res.data.body === 'success') {
+							uni.stopPullDownRefresh();
 							if (res.data.data.length === 0) {
 								this.isEnd = true;
 								uni.showToast({

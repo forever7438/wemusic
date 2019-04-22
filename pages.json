@@ -66,7 +66,7 @@
 			"path": "pages/circleFriends/circleFriends",
 			"style": {
 				"navigationBarTitleText": "朋友圈",
-				"enablePullDownRefresh": false,
+				"enablePullDownRefresh": true,
 				"app-plus": {
 					"titleNView": {
 						"buttons": [{
@@ -82,13 +82,15 @@
 		{
 			"path": "pages/myCoupon/myCoupon",
 			"style": {
-				"navigationBarTitleText": "优惠卷"
+				"navigationBarTitleText": "优惠卷",
+				"enablePullDownRefresh": true
 			}
 		},
 		{
 			"path": "pages/myEvaluate/myEvaluate",
 			"style": {
-				"navigationBarTitleText": "我的评价"
+				"navigationBarTitleText": "我的评价",
+				"enablePullDownRefresh": true
 			}
 		},
 		{
@@ -113,7 +115,7 @@
 			"path": "pages/myFriend/myFriend",
 			"style": {
 				"navigationBarTitleText": "我的朋友圈",
-				"enablePullDownRefresh": false,
+				"enablePullDownRefresh": true,
 				"app-plus": {
 					"titleNView": {
 						"buttons": [{
@@ -178,13 +180,15 @@
 		{
 			"path": "pages/message/message",
 			"style": {
-				"navigationBarTitleText": "消息"
+				"navigationBarTitleText": "消息",
+				"enablePullDownRefresh": true
 			}
 		},
 		{
 			"path": "pages/lesson/lesson",
 			"style": {
-				"navigationBarTitleText": "我的课程"
+				"navigationBarTitleText": "我的课程",
+				"enablePullDownRefresh": true
 			}
 		},
 		{
@@ -196,13 +200,15 @@
 		{
 			"path": "pages/rechargeRecord/rechargeRecord",
 			"style": {
-				"navigationBarTitleText": "充值记录"
+				"navigationBarTitleText": "充值记录",
+				"enablePullDownRefresh": true
 			}
 		},
 		{
 			"path": "pages/consumptionRecord/consumptionRecord",
 			"style": {
-				"navigationBarTitleText": "消费记录"
+				"navigationBarTitleText": "消费记录",
+				"enablePullDownRefresh": true
 			}
 		},
 		{
@@ -277,7 +283,8 @@
 		{
 			"path": "pages/classNotice/classNotice",
 			"style": {
-				"navigationBarTitleText": "调整通知"
+				"navigationBarTitleText": "调整通知",
+				"enablePullDownRefresh": true
 			}
 		},
 		{
@@ -338,6 +345,7 @@
 			"path": "pages/finance/finance",
 			"style": {
 				"navigationBarTitleText": "财务管理",
+				"enablePullDownRefresh": true,
 				"app-plus": {
 					"titleNView": {
 						"buttons": [{

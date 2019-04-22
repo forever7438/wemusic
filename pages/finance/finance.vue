@@ -6,71 +6,75 @@
 </template>
 
 <script>
-import financeList from '../../components/item/financeList.vue';
-import wPicker from '@/components/w-picker/w-picker.vue';
-export default {
-	components: {
-		financeList,
-		wPicker
-	},
-	data() {
-		return {
-			index: 0,
-			isEnd: false,
-			financeList: []
-		};
-	},
-	onNavigationBarButtonTap(obj) {
-		this.toggleTab();
-	},
-	onLoad() {
-		this.getFinanceList();
-	},
-	onReachBottom() {
-		if (this.isEnd) {
-			return;
-		}
-		this.index++;
-		setTimeout(() => {
+	import financeList from '../../components/item/financeList.vue';
+	import wPicker from '@/components/w-picker/w-picker.vue';
+	export default {
+		components: {
+			financeList,
+			wPicker
+		},
+		data() {
+			return {
+				index: 0,
+				isEnd: false,
+				financeList: []
+			};
+		},
+		onNavigationBarButtonTap(obj) {
+			this.toggleTab();
+		},
+		onLoad() {
 			this.getFinanceList();
-		}, 300);
-	},
-	methods: {
-		toggleTab() {
-			this.$refs.picker.show();
 		},
-		onConfirm(val) {
-			console.log(val);
+		onReachBottom() {
+			if (this.isEnd) {
+				return;
+			}
+			this.index++;
+			setTimeout(() => {
+				this.getFinanceList();
+			}, 300);
 		},
-		//获取财务列表
-		getFinanceList() {
-			this.ajax({
-				url: 'teacherclass/finance',
-				data: {
-					list: this.index,
-					val: 5
-				},
-				success: res => {
-					if (res.data.body === 'success') {
-						if (res.data.data.list.length === 0) {
-							this.isEnd = true;
-							uni.showToast({
-								title: '没有更多数据了',
-								icon: 'none'
-							});
-							return;
+		onPullDownRefresh() {
+			this.getFinanceList();
+		},
+		methods: {
+			toggleTab() {
+				this.$refs.picker.show();
+			},
+			onConfirm(val) {
+				console.log(val);
+			},
+			//获取财务列表
+			getFinanceList() {
+				this.ajax({
+					url: 'teacherclass/finance',
+					data: {
+						list: this.index,
+						val: 5
+					},
+					success: res => {
+						if (res.data.body === 'success') {
+							uni.stopPullDownRefresh();
+							if (res.data.data.list.length === 0) {
+								this.isEnd = true;
+								uni.showToast({
+									title: '没有更多数据了',
+									icon: 'none'
+								});
+								return;
+							}
+							this.financeList = this.financeList.concat(res.data.data.list);
 						}
-						this.financeList = this.financeList.concat(res.data.data.list);
 					}
-				}
-			});
+				});
+			}
 		}
-	}
-};
+	};
 </script>
 
 <style lang="less">
-.finance {
-	// padding: 0 30upx;
-}
+	.finance {
+		// padding: 0 30upx;
+	}
 </style>

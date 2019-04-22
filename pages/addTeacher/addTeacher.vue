@@ -1,6 +1,7 @@
 <template>
 	<view class="add_teacher">
-		<w-picker mode="date" @confirm="onConfirmDate" ref="pickerDate"></w-picker>
+		<w-picker mode="date" title='选择日期' startYear="1980" @confirm="onConfirmDate" ref="pickerDate"></w-picker>
+		<w-picker mode="date" :title='title' startYear="2014" @confirm="onConfirmDates" ref="pickerDates"></w-picker>
 		<view>
 			<text>名字</text>
 			<input type="text" maxlength="10" v-model="name" />
@@ -51,14 +52,14 @@
 			<input type="text" />
 		</view>
 		<view>
-			<text style="width:300upx">可工作日期</text>
-			<input type="text" />
+			<text style="width:300upx">开始日期</text>
+			<input @tap="toggleTabDates('startTime')" type="text" v-model="gz_s_time" />
 		</view>
 		<view>
-			<text style="width:300upx">可工作时间</text>
-			<input type="text" />
+			<text style="width:300upx">结束日期</text>
+			<input @tap="toggleTabDates('endTime')" type="text" v-model="gz_d_time" />
 		</view>
-		<view>
+		<!-- <view>
 			<text style="width: 140upx;">多人授课</text>
 			<radio-group class="uni-flex" name="type">
 				<label>
@@ -70,7 +71,7 @@
 					拒绝
 				</label>
 			</radio-group>
-		</view>
+		</view> -->
 		<view class="diffrent">
 			<text style="width: 212upx;">上传简历</text>
 			<image class="j_photo" v-if="j_photo" :src="j_photo"></image>
@@ -97,6 +98,7 @@
 		},
 		data() {
 			return {
+				title: '可工作开始时间',
 				name: '',
 				sex: '0',
 				birthday: '',
@@ -106,8 +108,8 @@
 				ABN: '',
 				culture: '',
 				card: '',
-				gz_s_time: '2019-04-24',
-				gz_d_time: '2019-12-23',
+				gz_s_time: '',
+				gz_d_time: '',
 				j_photo: '',
 				class: '1=2'
 			};
@@ -118,6 +120,27 @@
 			},
 			onConfirmDate(val) {
 				this.birthday = `${val[0]}-${val[1]}-${val[2]}`;
+			},
+			toggleTabDates(type) {
+				switch (type) {
+					case 'startTime':
+						this.title = '开始日期';
+						this.$refs.pickerDates.show();
+						break;
+					default:
+						this.title = '结束日期';
+						this.$refs.pickerDates.show();
+				}
+			},
+			onConfirmDates(val) {
+
+				switch (this.title) {
+					case '开始日期':
+						this.gz_s_time = `${val[0]}-${val[1]}-${val[2]}`;
+						break;
+					default:
+						this.gz_d_time = `${val[0]}-${val[1]}-${val[2]}`;
+				}
 			},
 			//选择文件
 			chooseImage: e => {

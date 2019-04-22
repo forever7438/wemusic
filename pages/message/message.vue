@@ -29,6 +29,9 @@
 				this.getMessageList();
 			}, 300);
 		},
+		onPullDownRefresh() {
+			this.getMessageList();
+		},
 		methods: {
 			//获取消息列表
 			getMessageList() {
@@ -40,6 +43,7 @@
 					},
 					success: res => {
 						if (res.data.body === 'success') {
+							uni.stopPullDownRefresh();
 							if (res.data.data.length === 0) {
 								this.isEnd = true;
 								uni.showToast({
