@@ -1,0 +1,34 @@
+.container.data-v-28ce1797 {
+  text-align: center;
+  padding: 0 86rpx;
+}
+.container .success.data-v-28ce1797 {
+  width: 120rpx;
+  height: 120rpx;
+  margin-top: 70rpx;
+}
+.container .title.data-v-28ce1797 {
+  font-size: 40rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #000000;
+  line-height: 56rpx;
+  margin-top: 40rpx;
+}
+.container .btn.data-v-28ce1797 {
+  display: inline-block;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-top: 150rpx;
+  background: #fad42a;
+  border-radius: 12rpx;
+  font-size: 32rpx;
+}
+.container .home.data-v-28ce1797 {
+  font-size: 28rpx;
+  border: 1px solid #333333;
+  background: #FFFFFF;
+  margin-top: 40rpx;
+}
+

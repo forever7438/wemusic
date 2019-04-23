@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "我的朋友圈",
+  "enablePullDownRefresh": true,
+  "titleNView": {
+    "buttons": [
+      {
+        "text": "",
+        "fontSrc": "/static/iconfont/iconfont.ttf",
+        "fontSize": "22px",
+        "fontWeight": "bold"
+      }
+    ]
+  }
+}

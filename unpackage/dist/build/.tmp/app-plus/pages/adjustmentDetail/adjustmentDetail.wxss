@@ -1,0 +1,119 @@
+.adjustment_detail {
+  padding: 20rpx 30rpx 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.adjustment_detail image {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.adjustment_detail .adjustment_content .adjustment_title {
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+}
+.adjustment_detail .adjustment_content .adjustment_event {
+  margin-bottom: 20rpx;
+}
+.adjustment_detail .adjustment_content .adjustment_event .class_res {
+  margin-top: 20rpx;
+  padding: 24rpx;
+  display: inline-block;
+  width: 386rpx;
+  height: 130rpx;
+  background: #edeff2;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+}
+.adjustment_detail .adjustment_content .adjustment_event,
+.adjustment_detail .adjustment_content .adjustment_reason {
+  padding: 36rpx 30rpx;
+  background: #ffffff;
+  -webkit-box-shadow: 0rpx 8rpx 18rpx 0rpx rgba(163, 165, 168, 0.17);
+          box-shadow: 0rpx 8rpx 18rpx 0rpx rgba(163, 165, 168, 0.17);
+  border-radius: 16rpx;
+}
+.adjustment_detail .adjustment_content .adjustment_event .class_title,
+.adjustment_detail .adjustment_content .adjustment_reason .class_title {
+  display: inline-block;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 20rpx;
+}
+.adjustment_detail .adjustment_content .adjustment_event .event_adjust,
+.adjustment_detail .adjustment_content .adjustment_reason .event_adjust,
+.adjustment_detail .adjustment_content .adjustment_event .event_res,
+.adjustment_detail .adjustment_content .adjustment_reason .event_res {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20rpx;
+}
+.adjustment_detail .adjustment_content .adjustment_event .event_adjust text:nth-of-type(1),
+.adjustment_detail .adjustment_content .adjustment_reason .event_adjust text:nth-of-type(1),
+.adjustment_detail .adjustment_content .adjustment_event .event_res text:nth-of-type(1),
+.adjustment_detail .adjustment_content .adjustment_reason .event_res text:nth-of-type(1) {
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #999999;
+  margin-right: 20rpx;
+}
+.adjustment_detail .adjustment_content .adjustment_event .event_adjust text:nth-of-type(2),
+.adjustment_detail .adjustment_content .adjustment_reason .event_adjust text:nth-of-type(2),
+.adjustment_detail .adjustment_content .adjustment_event .event_res text:nth-of-type(2),
+.adjustment_detail .adjustment_content .adjustment_reason .event_res text:nth-of-type(2) {
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+}
+.adjustment_detail .adjustment_content .adjustment_event .event_btn,
+.adjustment_detail .adjustment_content .adjustment_reason .event_btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #ffffff;
+}
+.adjustment_detail .adjustment_content .adjustment_event .event_btn text,
+.adjustment_detail .adjustment_content .adjustment_reason .event_btn text {
+  text-align: center;
+  width: 126rpx;
+  line-height: 44rpx;
+  border-radius: 8rpx;
+}
+.adjustment_detail .adjustment_content .adjustment_event .event_btn text:nth-of-type(1),
+.adjustment_detail .adjustment_content .adjustment_reason .event_btn text:nth-of-type(1) {
+  background: #cd4c38;
+}
+.adjustment_detail .adjustment_content .adjustment_event .event_btn text:nth-of-type(2),
+.adjustment_detail .adjustment_content .adjustment_reason .event_btn text:nth-of-type(2) {
+  background: #4fcd38;
+}
+

@@ -1,0 +1,1 @@
+<template name="59319ef8"><view class="_view 59319ef8 submit"><input type="text" placeholder="输入评论内容…" value="{{body}}" bindinput="handleProxy" data-eventid="{{'59319ef8-0'}}" data-comkey="{{$k}}" class="_input 59319ef8" /><text bindtap="handleProxy" data-eventid="{{'59319ef8-1'}}" data-comkey="{{$k}}" class="_text 59319ef8">发送</text></view></template>

@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "发布朋友圈",
+  "titleNView": {
+    "buttons": [
+      {
+        "text": "发布",
+        "fontSize": "16px",
+        "fontWeight": "bold"
+      }
+    ]
+  }
+}

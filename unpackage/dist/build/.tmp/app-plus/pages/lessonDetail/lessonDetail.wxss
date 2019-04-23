@@ -1,0 +1,91 @@
+.lesson_teacher {
+  padding: 30rpx 30rpx 0 30rpx;
+}
+.lesson_teacher .teacher_class {
+  margin: 40rpx 0;
+  font-size: 48rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+}
+.lesson_teacher .swiper {
+  margin-top: 30rpx;
+  height: 360rpx;
+}
+.lesson_teacher .swiper swiper-item .teacher-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 92.78%;
+  width: 92%;
+  padding: 42rpx 0 34rpx 0;
+  background: #ffffff;
+  -webkit-box-shadow: 0rpx 12rpx 16rpx 0rpx rgba(143, 152, 188, 0.2);
+          box-shadow: 0rpx 12rpx 16rpx 0rpx rgba(143, 152, 188, 0.2);
+  border-radius: 8rpx;
+  margin-right: 30rpx;
+  margin-left: 10rpx;
+}
+.lesson_teacher .swiper swiper-item .teacher-item image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 2rpx solid #d9b379;
+}
+.lesson_teacher .swiper swiper-item .teacher-item .teacher_name {
+  text-align: center;
+  margin-top: 60rpx;
+  width: 100%;
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lesson_desc {
+  padding: 20rpx 15rpx 0;
+}
+.lesson_desc .teacher_class {
+  margin: 40rpx 20rpx;
+  font-size: 48rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+}
+.lesson_desc .teacher_content {
+  margin-top: 30rpx;
+  padding: 0 24rpx;
+  font-size: 26rpx;
+  line-height: 44rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+}
+
+view .sign_up {
+  text-align: center;
+  margin-top: 166rpx;
+  display: inline-block;
+  width: 100%;
+  line-height: 100rpx;
+  background: #fad42a;
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+}
+

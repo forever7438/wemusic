@@ -30,6 +30,7 @@
 		data() {
 			return {
 				date: [],
+				timeChecked: {}
 			};
 		},
 		created() {
@@ -47,7 +48,6 @@
 			flag: Boolean, //事件开关
 			timeList: Array,
 			dateList: Array,
-			timeChecked: String
 		},
 		methods: {
 			/**选中时间*/
@@ -75,7 +75,7 @@
 				let index = val.index[0]
 				let time = this.timeList[index]
 				this.timeChecked.end_time = this.timeChecked.start_time + (time * 60);
-				this.$emit('confirmOrder', this.timeChecked);
+				this.$emit('confirmTime', this.timeChecked);
 			},
 			/**选择时长*/
 			timePicker() {
@@ -108,7 +108,7 @@
 			background: rgba(255, 255, 255, 1);
 			box-shadow: 0 8upx 20upx 4upx rgba(179, 188, 198, 0.2);
 			border-radius: 16upx;
-			margin: 30upx;
+			margin-bottom:30upx; 
 			padding: 30upx;
 
 			.date {

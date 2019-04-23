@@ -1,0 +1,1 @@
+<import src="/components/item/friendsList.vue.wxml" /><template name="c12279aa"><view class="_view c12279aa fridend_content"><template data="{{...$root['0'], ...$root[$kk+'c12279aa-0'],$root}}" is="707ca177"></template></view></template>

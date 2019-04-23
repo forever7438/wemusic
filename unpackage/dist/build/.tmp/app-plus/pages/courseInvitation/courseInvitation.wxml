@@ -1,0 +1,2 @@
+<import src="./courseInvitation.vue.wxml" />
+    <template is="6dee5f6b" data="{{ ...$root['0'], $root }}"/>

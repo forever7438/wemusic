@@ -1,0 +1,256 @@
+.content_teacher .teacher-message {
+  height: 400rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #fad42a;
+}
+.content_teacher .teacher-message image {
+  margin: 100rpx 0 50rpx;
+  width: 152rpx;
+  height: 152rpx;
+  border-radius: 50%;
+  border: 4rpx solid #ffffff;
+}
+.content_teacher .teacher-message text {
+  font-size: 40rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+}
+.content_teacher .user_meun {
+  padding: 40rpx 15rpx 0 15rpx;
+}
+.content_teacher .user_meun view {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 104rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+.content_teacher .user_meun view :last-child {
+  border-bottom: 0;
+}
+.content_teacher .user_meun view text {
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+}
+.content_teacher .user_meun view image {
+  width: 44rpx;
+  height: 44rpx;
+}
+.content_student {
+  text-align: center;
+  padding: 30rpx 30rpx 0 30rpx;
+}
+.content_student .messgae {
+  height: 285rpx;
+  padding: 30rpx;
+  background: -o-linear-gradient(315deg, #d9b379 0%, #a27f4a 100%);
+  background: linear-gradient(135deg, #d9b379 0%, #a27f4a 100%);
+  border-radius: 16rpx;
+}
+.content_student .messgae .user_info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.content_student .messgae .user_info image {
+  width: 92rpx;
+  height: 92rpx;
+  border: 4rpx solid #fff;
+  border-radius: 50%;
+}
+.content_student .messgae .user_info view {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  margin-left: 18rpx;
+}
+.content_student .messgae .user_info view .user_name {
+  font-size: 36rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #ffe6be;
+  display: inline-block;
+  padding-bottom: 22rpx;
+}
+.content_student .messgae .user_info view .user_name ::after {
+  display: inline-block;
+  width: 12rpx;
+  height: 22rpx;
+  content: '';
+  background: url('/static/img/arrow.png') no-repeat;
+  background-size: 100% 100%;
+  margin-left: 20rpx;
+}
+.content_student .messgae .user_info view .user_type {
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #ffe6be;
+}
+.content_student .messgae .user_money {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.content_student .messgae .user_money .money_info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  margin-top: 40rpx;
+}
+.content_student .messgae .user_money .money_info text:nth-of-type(1) {
+  width: 120rpx;
+  line-height: 28rpx;
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #ffe6be;
+}
+.content_student .messgae .user_money .money_info text:nth-of-type(2) {
+  width: 200rpx;
+  font-size: 46rpx;
+  font-family: DINAlternate-Bold;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 54rpx;
+  padding-left: 8rpx;
+}
+.content_student .messgae .user_money .pay_btn {
+  display: inline-block;
+  width: 116rpx;
+  line-height: 46rpx;
+  background: #ffffff;
+  border-radius: 24rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #ad8953;
+  cursor: pointer;
+}
+.content_student .class_list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  margin-top: 60rpx;
+}
+.content_student .class_list view {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.content_student .class_list view image {
+  width: 68rpx;
+  height: 68rpx;
+  border-radius: 4rpx;
+}
+.content_student .class_list view text {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 28rpx;
+}
+.content_student .user_meun {
+  padding: 60rpx 15rpx 0 15rpx;
+}
+.content_student .user_meun view {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 104rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+.content_student .user_meun view :last-child {
+  border-bottom: 0;
+}
+.content_student .user_meun view text {
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+}
+.content_student .user_meun view image {
+  width: 44rpx;
+  height: 44rpx;
+}
+

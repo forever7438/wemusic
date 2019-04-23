@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "修改个人资料",
+  "titleNView": {
+    "buttons": [
+      {
+        "text": "确定",
+        "fontSize": "16px",
+        "fontWeight": "bold"
+      }
+    ]
+  }
+}

@@ -11,7 +11,7 @@
             <picker-view indicator-style="height: 40px;" class="mpvue-picker-view" :value="pickerValue" @change="pickerChange" v-if="mode==='selector' && pickerValueSingleArray.length > 0">
                 <block>
                     <picker-view-column>
-                        <view class="picker-item" v-for="(item,index) in pickerValueSingleArray" :key="index">{{item}} min</view>
+                        <view class="picker-item" v-for="(item,index) in pickerValueSingleArray" :key="index">{{coupomfalg ? item.name : item+' min'}}</view>
                     </picker-view-column>
                 </block>
             </picker-view>
@@ -85,6 +85,10 @@
             };
         },
         props: {
+			coupomfalg:{
+				type: Boolean,
+				default: false
+			},
 			titleInfo:{
 				type: String,
 				default: ''

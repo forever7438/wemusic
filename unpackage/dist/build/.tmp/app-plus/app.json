@@ -1,0 +1,91 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/tabbar/tabbar-1/tabbar-1",
+    "pages/tabbar/tabbar-2/tabbar-2",
+    "pages/tabbar/tabbar-5/tabbar-5",
+    "pages/circleFriends/circleFriends",
+    "pages/myCoupon/myCoupon",
+    "pages/myEvaluate/myEvaluate",
+    "pages/feedback/feedback",
+    "pages/aboutUs/aboutUs",
+    "pages/courseInvitation/courseInvitation",
+    "pages/myFriend/myFriend",
+    "pages/friendsDetail/friendsDetail",
+    "pages/releaseFriends/releaseFriends",
+    "pages/setting/setting",
+    "pages/updatePass/updatePass",
+    "pages/updateEmial/updateEmial",
+    "pages/updatePhone/updatePhone",
+    "pages/message/message",
+    "pages/lesson/lesson",
+    "pages/vipCenter/vipCenter",
+    "pages/rechargeRecord/rechargeRecord",
+    "pages/consumptionRecord/consumptionRecord",
+    "pages/pay/pay",
+    "pages/paySuccess/paySuccess",
+    "pages/evaluate/evaluate",
+    "pages/classAdjustment/classAdjustment",
+    "pages/lessonDetail/lessonDetail",
+    "pages/lessonCopy/lessonCopy",
+    "pages/teacherDetail/teacherDetail",
+    "pages/myCode/myCode",
+    "pages/register/register",
+    "pages/classNotice/classNotice",
+    "pages/codeSuccess/codeSuccess",
+    "pages/teacherLogin/teacherLogin",
+    "pages/addTeacher/addTeacher",
+    "pages/updateUserinfo/updateUserinfo",
+    "pages/wagesDetail/wagesDetail",
+    "pages/authentication/authentication",
+    "pages/uploadFile/uploadFile",
+    "pages/finance/finance",
+    "pages/adjustmentDetail/adjustmentDetail",
+    "pages/choiceTeacher/choiceTeacher",
+    "pages/confirmComplete/confirmComplete",
+    "pages/addTask/addTask",
+    "pages/forgetPass/forgetPass"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "usingComponents": {},
+  "tabBar": {
+    "borderStyle": "black",
+    "backgroundColor": "",
+    "color": "#8F8F94",
+    "selectedColor": "#f33e54",
+    "list": [
+      {
+        "pagePath": "pages/tabbar/tabbar-1/tabbar-1",
+        "iconPath": "static/img/tabbar/home.png",
+        "selectedIconPath": "static/img/tabbar/homeactive.png",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/tabbar/tabbar-2/tabbar-2",
+        "iconPath": "static/img/tabbar/class.png",
+        "selectedIconPath": "static/img/tabbar/classactive.png",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/tabbar/tabbar-5/tabbar-5",
+        "iconPath": "static/img/tabbar/me.png",
+        "selectedIconPath": "static/img/tabbar/meactive.png",
+        "text": ""
+      }
+    ]
+  },
+  "networkTimeout": {
+    "uploadFile": 86400000
+  },
+  "splashscreen": {
+    "alwaysShowBeforeRender": true,
+    "autoclose": false
+  },
+  "appname": "weMusic"
+}

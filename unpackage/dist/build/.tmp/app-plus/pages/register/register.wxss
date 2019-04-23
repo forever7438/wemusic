@@ -1,0 +1,121 @@
+._input {
+  font-size: 24rpx;
+  width: 100%;
+  text-align: center;
+}
+.register {
+  padding: 0 144rpx;
+}
+.register .register_image {
+  margin: 164rpx 190rpx;
+  text-align: center;
+}
+.register .register_image image {
+  width: 102rpx;
+  height: 102rpx;
+}
+.register .register_acount {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30rpx;
+}
+.register .register_acount text {
+  width: 100rpx;
+  height: 44rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+}
+.register .register_acount ._input {
+  padding-left: 10rpx;
+  border-bottom: 2rpx solid #b9b9b9;
+}
+.register .register_pass {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30rpx;
+}
+.register .register_pass text {
+  width: 100rpx;
+  height: 44rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+}
+.register .register_pass ._input {
+  padding-left: 10rpx;
+  border-bottom: 2rpx solid #b9b9b9;
+}
+.register .register_code {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 100rpx;
+}
+.register .register_code text {
+  width: 190rpx;
+  height: 44rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+}
+.register .register_code ._input {
+  width: 170rpx;
+  padding-left: 10rpx;
+  border-bottom: 2rpx solid #b9b9b9;
+}
+.register .register_code .get_code {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 260rpx;
+  border: 2rpx solid #b9b9b9;
+  border-radius: 16rpx;
+  text-align: center;
+  height: 60rpx;
+  padding: 8rpx 16rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+}
+.register ._button {
+  width: auto;
+  line-height: 88rpx;
+  background: #fad42a;
+  border-radius: 12rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+}
+

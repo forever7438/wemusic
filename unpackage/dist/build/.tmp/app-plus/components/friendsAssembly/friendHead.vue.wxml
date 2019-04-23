@@ -1,0 +1,1 @@
+<template name="5999e432"><view class="_view 5999e432 content_head"><image class="_image 5999e432 content_images" src="{{itemHead.photo || imageUrl}}"></image><view class="_view 5999e432 user_info"><text class="_text 5999e432">{{ itemHead.people_name }}</text><text class="_text 5999e432">{{ (itemHead.add_time * 1000) | formatDate }}</text></view></view></template>

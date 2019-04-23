@@ -7,9 +7,9 @@
 			    <span>课程</span>
 			    <span>{{request['class_list_id'].length}}节</span>
 			  </li>
-			  <li>
+			  <li @click="coupomPicker">
 			    <span>优惠券</span>
-			    <span>满100减10</span>
+			    <span>{{coupomTitle}}</span>
 			  </li>
 			  <li>
 			    <span>授课方式</span>
@@ -25,15 +25,30 @@
 		    合计
 		    <span class="total">${{request.price}}</span>
 		  </span>
-		  <span type="button" class="pay-btn">支付</span>
+		  <span type="button" class="pay-btn" @click="pay">支付</span>
 		</p>
+		<mpvue-picker   themeColor="#007AFF" 
+						ref="mpvuePicker" 
+						mode="selector" 
+						titleInfo="选择优惠券" 
+						:deepLength="1"
+						:pickerValueDefault="[0]" 
+						@onConfirm="onConfirm" 
+						@onCancel="onCancel" 
+						:coupomfalg="true"
+						:pickerValueArray="coupomList"></mpvue-picker>
 	</div>
 </template>
 
 <script>
+	import mpvuePicker from '../mpvue-picker/mpvuePicker.vue';
 	export default{
+		components:{
+			mpvuePicker
+		},
 		props:{
-			request:Object
+			request:Object,
+			coupomList:Array
 		},
 		data(){
 			return{
@@ -41,12 +56,57 @@
 					'一对一',
 					'一对二',
 					'一对三'
-				]
+				],
+				coupomTitle:this.coupomList.length > 0 ? '选择优惠券' : '暂无优惠券'
 			}
 		},
 		methods:{
-			pay(){
+			onConfirm(val){
+				let index = val.index[0]
+				this.coupomTitle =  this.coupomList[index].name
+				let coupon_id = this.coupomList[index].id
+				this.getPrice(coupon_id)
+			},
+			getPrice(coupon_id){
+				this.ajax({
+					url: 'studentclass/coupom_list',
+					data: {
+						class_list_id: this.request.class_list_id,
+						coupon_id:coupon_id
+					},
+					success: res => {
+						if (res.data.body === 'success') {
+							let change = {
+								key:'coupon_id',
+								value:coupon_id,
+								price:res.data.data.real_price
+							}
+							this.$emit('changeRequest',change)
+						}
+					}
+				});
+			},
+			onCancel(){
 				
+			},
+			/**选择时长*/
+			coupomPicker() {
+				console.log(this.coupomList)
+				this.$refs.mpvuePicker.show()
+			},
+			pay(){
+				this.ajax({
+					url: 'userorder/add_order',
+					data: this.request,
+					success: res => {
+						if (res.data.body === 'success') {
+							uni.showToast({
+								title: '支付完成',
+								icon: 'none'
+							});
+						}
+					}
+				});
 			}
 		}
 	}

@@ -1,0 +1,36 @@
+<import src="/components/neil-modal/neil-modal.vue.wxml" />
+<import src="/components/w-picker/w-picker.vue.wxml" />
+<import src="/components/uni-icon/uni-icon.vue.wxml" />
+<import src="/components/item/friendsList.vue.wxml" />
+<import src="/components/item/couponList.vue.wxml" />
+<import src="/components/noContent.vue.wxml" />
+<import src="/components/item/lessonList.vue.wxml" />
+<import src="/components/progress.vue.wxml" />
+<import src="/components/item/messageList.vue.wxml" />
+<import src="/components/item/rechargeList.vue.wxml" />
+<import src="/components/uni-rate/uni-rate.vue.wxml" />
+<import src="/components/comment/commentStarClass.vue.wxml" />
+<import src="/components/starclass.vue.wxml" />
+<import src="/components/lesson/lessonHead.vue.wxml" />
+<import src="/components/lesson/lessonTeacher.vue.wxml" />
+<import src="/components/lesson/lessonDesc.vue.wxml" />
+<import src="/components/lesson/lessonComment.vue.wxml" />
+<import src="/components/lesson/lessonScience.vue.wxml" />
+<import src="/components/item/teacherList.vue.wxml" />
+<import src="/components/lesson/teachingWay.vue.wxml" />
+<import src="/components/lesson/orderMessage.vue.wxml" />
+<import src="/components/item/financeList.vue.wxml" />
+<import src="/components/lesson/teacherHead.vue.wxml" />
+<import src="/components/friendsAssembly/friendHead.vue.wxml" />
+<import src="/components/friendsAssembly/friendContent.vue.wxml" />
+<import src="/components/friendsAssembly/friendOperation.vue.wxml" />
+<import src="/components/comment/comment.vue.wxml" />
+<import src="/components/submitBtn.vue.wxml" />
+<import src="/components/mx-datepicker/mx-datepicker.vue.wxml" />
+<import src="/components/item/classList.vue.wxml" />
+<import src="/components/item/selectTime.vue.wxml" />
+<import src="/common/slots.wxml" />
+<import src="/components/mpvue-picker/mpvuePicker.vue.wxml" />
+
+<template name="07f5926b-default-07f5926b-0"><input type="text" class="_input 07f5926b new_name" placeholder="请输入用户名" value="{{userName}}" bindinput="handleProxy" data-eventid="{{'07f5926b-0'}}" data-comkey="{{$k}}" /></template>
+

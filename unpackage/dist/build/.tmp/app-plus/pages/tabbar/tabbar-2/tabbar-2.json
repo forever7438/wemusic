@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "课程表",
+  "titleNView": {
+    "backgroundColor": "#ffff",
+    "titleSize": "17px",
+    "buttons": [
+      {
+        "text": "",
+        "fontSrc": "/static/iconfont/iconfont.ttf",
+        "fontSize": "22px",
+        "fontWeight": "bold"
+      }
+    ]
+  }
+}

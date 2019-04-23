@@ -11,7 +11,7 @@
 		></lessonHead>
 		<teacherList :listInfo="selectFlag ? selectItem : listInfo" :selectFlag="selectFlag" title="选择教师" @selectFunction="select" l essonType="lessonCopy"></teacherList>
 		<teachingWay v-if="selectFlag" :orderShow="orderShow" :classId="classId" :request="request" @changeRequest="changeRequest" :teacherId="teacherId"></teachingWay>
-		<orderMessage v-if="orderShow" :request="request"></orderMessage>
+		<orderMessage v-if="orderShow" :request="request" :coupomList="coupomList" @changeRequest="changeRequest"></orderMessage>
 	</view>
 </template>
 
@@ -37,10 +37,12 @@ export default {
 			choiseTeacherInfo: {},
 			classId: 0,
 			teacherId: 0,
+			coupomList:[],
 			request: {
 				price: 0,
 				people_num: 0,
-				class_list_id: []
+				class_list_id: [],
+				coupon_id:''
 			}
 		};
 	},
@@ -81,6 +83,7 @@ export default {
 			});
 		},
 		changeRequest(data) {
+			console.log(data)
 			switch (data.key) {
 				case 'people_num':
 					this.request.people_num = data.value;
@@ -97,8 +100,32 @@ export default {
 					break;
 				case 'orderShow':
 					this.orderShow = data.value;
+					this.request.music_sun_id = this.classId;
+					this.request.teacher_id = this.teacherId;
+					this.request.class_list_id = this.request.class_list_id.join(',')
+					this.getCoupomList();
+					break;
+				case 'coupon_id':
+					this.request.coupon_id = data.value;
+					this.request.price = data.price
 					break;
 			}
+		},
+		/**获取优惠券*/
+		getCoupomList(){
+			this.ajax({
+				url: 'studentclass/coupom_list',
+				data: {
+					class_list_id: this.request.class_list_id
+				},
+				success: res => {
+					if (res.data.body === 'success') {
+						if(res.data.data.length > 0){
+							this.coupomList = res.data.data;
+						}
+					}
+				}
+			});
 		},
 		/**获取选择老师列表*/
 		getChoiseTeacherInfo(musicSunId) {

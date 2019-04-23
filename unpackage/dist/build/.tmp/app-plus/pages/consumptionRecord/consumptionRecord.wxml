@@ -1,0 +1,2 @@
+<import src="./consumptionRecord.vue.wxml" />
+    <template is="1fe4f405" data="{{ ...$root['0'], $root }}"/>
