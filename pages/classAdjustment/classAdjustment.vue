@@ -12,7 +12,7 @@
 			<div class="lesson_date">
 				<h3>调整日期</h3>
 				<span @tap="toggleTab('date')">{{ date }}</span>
-				<w-picker mode="date" :defaultVal="[0, 0, 0]" startYear="2014" @confirm="onConfirmDate" ref="pickerDate"></w-picker>
+				<w-picker mode="date" title="选择日期" :defaultVal="[0, 0, 0]" startYear="2014" @confirm="onConfirmDate" ref="pickerDate"></w-picker>
 				<p>原始日期 2019年1月6日</p>
 			</div>
 			<div class="lesson_time">
