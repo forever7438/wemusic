@@ -97,7 +97,7 @@
 				<text>{{ userInfo.name }}</text>
 			</view>
 			<view class="user_meun">
-				<navigator hover-class="none" url="/pages/lesson/lesson?type=-1">
+				<navigator hover-class="none" url="/pages/lesson/lesson?type=1">
 					<view>
 						<text>我的课程</text>
 						<image src="../../../static/img/class@2x.png"></image>

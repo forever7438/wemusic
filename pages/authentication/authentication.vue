@@ -14,7 +14,7 @@
 				<image src="../../static/img/creame@2x.png"></image>
 			</view>
 		</view>
-		<button @tap="addApprove">提交认证</button>
+		<button hover-class="btn-hover" @tap="addApprove">提交认证</button>
 	</view>
 </template>
 

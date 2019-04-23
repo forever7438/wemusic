@@ -77,7 +77,7 @@
 			<image class="j_photo" v-if="j_photo" :src="j_photo"></image>
 			<view v-else class="upload_file" @click="chooseImage"><image src="../../static/img/creame@2x.png"></image></view>
 		</view>
-		<button @click="addTeacherInfo">注册</button>
+		<button hover-class="btn-hover" @click="addTeacherInfo">注册</button>
 	</view>
 </template>
 

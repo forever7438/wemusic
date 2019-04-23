@@ -9,7 +9,7 @@
 			<text>密码</text>
 			<input type="password" v-model="pass" />
 		</view>
-		<button @click="teacher_login">登录</button>
+		<button hover-class="btn-hover" @click="teacher_login">登录</button>
 		<view class="teacher_login_option">
 			<navigator hover-class="none" url="/pages/addTeacher/addTeacher"><text>教师入驻</text></navigator>
 			<navigator hover-class="none" url="/pages/forgetPass/forgetPass"><text>忘记密码</text></navigator>

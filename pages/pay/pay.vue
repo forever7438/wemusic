@@ -44,7 +44,7 @@
 			</ul>
 		</div>
 
-		<navigator url="/pages/paySuccess/paySuccess">充值成功</navigator>
+		<navigator hover-class="none" url="/pages/paySuccess/paySuccess">充值成功</navigator>
 		<span class="sign_up">立即支付</span>
 	</div>
 </template>

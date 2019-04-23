@@ -16,7 +16,7 @@
 			<input type="number" v-model="code" maxlength="6" />
 			<text class="get_code" @tap="getCode">获取验证码</text>
 		</view>
-		<button @click="register">注册</button>
+		<button hover-class="btn-hover" @click="register">注册</button>
 	</view>
 </template>
 

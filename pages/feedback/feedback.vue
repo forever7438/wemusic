@@ -2,7 +2,7 @@
 	<view>
 		<textarea placeholder="请留下您宝贵的意见" v-model="contact" />
 		<input class="uni-input" placeholder="请输入联系方式(手机或邮箱)" v-model="body" />
-		<button @tap="submitFeedback">提交</button>
+		<button hover-class="btn-hover" @tap="submitFeedback">提交</button>
 	</view>
 </template>
 

@@ -89,7 +89,7 @@ export default {
 				return;
 			}
 			this.ajax({
-				url: 'user/set_phone',
+				url: uni.getStorageSync('type') == 1 ? 'user/set_phone' : 'teacherclass/set_phone',
 				data: {
 					phone: this.new_email,
 					code: this.code
@@ -100,6 +100,10 @@ export default {
 							title: '手机号修改成功',
 							icon: 'none'
 						});
+						uni.navigateTo({
+							url: uni.getStorageSync('type') == 1 ? '/pages/login/login' : '/pages/teacherLogin/teacherLogin'
+						});
+						uni.clearStorage();
 					} else {
 						uni.showToast({
 							title: res.data.msg,

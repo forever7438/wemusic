@@ -5,7 +5,7 @@
 			<input type="text" />
 		</view>
 		<text class="tips">当您的好友发起邀请时，您可以在此输入邀请码，与好友共同上课，邀请码有效期为一个小时，请尽快填写。</text>
-		<button>确定</button>
+		<button hover-class="btn-hover">确定</button>
 	</view>
 </template>
 

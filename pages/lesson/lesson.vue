@@ -1,8 +1,8 @@
 <template>
 	<view class="my_lesson_content">
 		<view class="class_meun">
-			<text :class="lessonType == -1 ? 'active' : ''" @click="getLessonList('-1')">全部课程</text>
-			<text :class="lessonType == 0 ? 'active' : ''" @click="getLessonList('0')">待支付</text>
+			<text v-if="isShow" :class="lessonType == -1 ? 'active' : ''" @click="getLessonList('-1')">全部课程</text>
+			<text v-if="isShow" :class="lessonType == 0 ? 'active' : ''" @click="getLessonList('0')">待支付</text>
 			<text :class="lessonType == 1 ? 'active' : ''" @click="getLessonList('1')">待开课</text>
 			<text :class="lessonType == 2 ? 'active' : ''" @click="getLessonList('2')">已完成</text>
 		</view>
@@ -18,6 +18,7 @@ export default {
 	},
 	data() {
 		return {
+			isShow: false,
 			isEnd: false,
 			index: 0,
 			lessonType: -1,
@@ -25,6 +26,7 @@ export default {
 		};
 	},
 	onLoad(obj) {
+		uni.getStorageSync('type') == 1 ? (this.isShow = true) : (this.isShow = false);
 		this.lessonType = obj.type;
 		this.getLessonList(this.lessonType);
 	},
@@ -46,27 +48,52 @@ export default {
 		getLessonList(val) {
 			this.lessonType = val;
 			this.ajax({
-				url: 'studentclass/class_type',
-				data: {
-					type: val,
-					list: this.index,
-					val: 5
-				},
+				url: uni.getStorageSync('type') == 1 ? 'studentclass/class_type' : 'teacherclass/class_list',
+				data:
+					uni.getStorageSync('type') == 1
+						? {
+								type: val,
+								list: this.index,
+								val: 5
+						  }
+						: {
+								status: val - 1,
+								list: this.index,
+								val: 5
+						  },
 				success: res => {
 					uni.stopPullDownRefresh();
 					if (res.data.body === 'success') {
-						if (res.data.data.length === 0) {
-							this.isEnd = true;
-							uni.showToast({
-								title: '没有更多数据了',
-								icon: 'none'
-							});
-							return;
-						}
-						if (this.index !== 0) {
-							this.listInfo = this.listInfo.concat(res.data.data);
-						} else {
-							this.listInfo = res.data.data;
+						switch (uni.getStorageSync('type')) {
+							case 1:
+								if (res.data.data.length === 0) {
+									this.isEnd = true;
+									uni.showToast({
+										title: '没有更多数据了',
+										icon: 'none'
+									});
+									return;
+								}
+								if (this.index !== 0) {
+									this.listInfo = this.listInfo.concat(res.data.data);
+								} else {
+									this.listInfo = res.data.data;
+								}
+								break;
+							default:
+								if (res.data.data.list.length === 0) {
+									this.isEnd = true;
+									uni.showToast({
+										title: '没有更多数据了',
+										icon: 'none'
+									});
+									return;
+								}
+								if (this.index !== 0) {
+									this.listInfo = this.listInfo.concat(res.data.data.list);
+								} else {
+									this.listInfo = res.data.data.list;
+								}
 						}
 					}
 				}
