@@ -2,7 +2,9 @@
 	<div class="lesson_content">
 		<ul v-if="listInfo.length">
 			<li v-for="(item, index) in listInfo" :key="index">
-				<navigator v-if="lessonType === 'lessonCopy'" :url="'/pages/lessonDetail/lessonDetail?lessonId=' + item.id"><image :src="item.photo || image"></image></navigator>
+				<navigator hover-class="none" v-if="lessonType === 'lessonCopy'" :url="'/pages/lessonDetail/lessonDetail?lessonId=' + item.id">
+					<image :src="item.photo || image"></image>
+				</navigator>
 				<image v-else :src="item.photo || image"></image>
 				<div class="lesson_messgae">
 					<p class="lesson_title">{{ item.name }}</p>
@@ -13,11 +15,12 @@
 							{{ success ? '教师名称  &nbsp;&nbsp;&nbsp;一对一' : item.teacher_count > 0 ? '共' + item.teacher_count + '名教师' : '暂无教师' }}
 						</span>
 						<span v-else class="start_time">2019年3月15日开课</span>
-						<navigator url="/pages/evaluate/evaluate" v-if="lessonType === '-1'"><span class="go_pay">去评价</span></navigator>
-						<navigator url="/pages/evaluate/evaluate" v-if="lessonType === '0'"><span class="go_pay">去支付</span></navigator>
-						<navigator url="/pages/evaluate/evaluate" v-if="lessonType === '1'"><span class="go_pay">查看</span></navigator>
-						<navigator url="/pages/evaluate/evaluate" v-if="lessonType === '2'"><span class="go_pay">去评价</span></navigator>
+						<navigator hover-class="none" url="/pages/evaluate/evaluate" v-if="lessonType === '-1'"><span class="go_pay">去评价</span></navigator>
+						<navigator hover-class="none" url="/pages/evaluate/evaluate" v-if="lessonType === '0'"><span class="go_pay">去支付</span></navigator>
+						<navigator hover-class="none" url="/pages/evaluate/evaluate" v-if="lessonType === '1'"><span class="go_pay">查看</span></navigator>
+						<navigator hover-class="none" url="/pages/evaluate/evaluate" v-if="lessonType === '2'"><span class="go_pay">去评价</span></navigator>
 						<navigator
+							hover-class="none"
 							:url="'/pages/choiceTeacher/choiceTeacher?musicId=' + musicId + '&musicSunId=' + item.id"
 							v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'"
 						>

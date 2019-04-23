@@ -1,6 +1,12 @@
 <template>
 	<view class="class_list">
-		<navigator style="height: 268upx;margin-bottom: 30upx;" v-for="(item, index) in musicList" :key="index" :url="'/pages/lessonCopy/lessonCopy?musicId=' + item.id">
+		<navigator
+			hover-class="none"
+			style="height: 268upx;margin-bottom: 30upx;"
+			v-for="(item, index) in musicList"
+			:key="index"
+			:url="'/pages/lessonCopy/lessonCopy?musicId=' + item.id"
+		>
 			<image src="../../../static/img/wemusic.jpg"></image>
 		</navigator>
 		<!-- <navigator url="/pages/myCode/myCode">我的邀请码</navigator>
@@ -19,6 +25,9 @@ export default {
 	onLoad() {
 		this.getMusicList();
 	},
+	onPullDownRefresh() {
+		this.getMusicList();
+	},
 	methods: {
 		//获取艺术列表
 		getMusicList() {
@@ -26,6 +35,7 @@ export default {
 				url: 'music/index',
 				method: 'post',
 				success: res => {
+					uni.stopPullDownRefresh();
 					if (res.data.body === 'success') {
 						this.musicList = res.data.data;
 					}

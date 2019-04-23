@@ -13,6 +13,7 @@
 			"path": "pages/tabbar/tabbar-1/tabbar-1",
 			"style": {
 				"navigationBarTitleText": "选课",
+				"enablePullDownRefresh": true,
 				"app-plus": {
 					"titleNView": {
 						"backgroundColor": "#ffff",
@@ -25,6 +26,7 @@
 			"path": "pages/tabbar/tabbar-2/tabbar-2",
 			"style": {
 				"navigationBarTitleText": "课程表",
+				"enablePullDownRefresh": true,
 				"app-plus": {
 					"titleNView": {
 						"backgroundColor": "#ffff",
@@ -42,6 +44,7 @@
 		{
 			"path": "pages/tabbar/tabbar-5/tabbar-5",
 			"style": {
+				"enablePullDownRefresh": true,
 				"app-plus": {
 					"titleNView": {
 						"buttons": [{

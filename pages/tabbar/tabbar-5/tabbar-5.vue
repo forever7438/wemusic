@@ -5,7 +5,7 @@
 				<view class="user_info">
 					<image :src="userInfo.photo"></image>
 					<view>
-						<navigator url="/pages/updateUserinfo/updateUserinfo">
+						<navigator hover-class="none" url="/pages/updateUserinfo/updateUserinfo">
 							<text class="user_name">{{ userInfo.name || 'null' }}</text>
 						</navigator>
 						<text class="user_type">WeMusic会员</text>
@@ -19,29 +19,29 @@
 							<text>{{ userInfo.money }}</text>
 						</view>
 					</view>
-					<navigator url="/pages/vipCenter/vipCenter"><text class="pay_btn">充值</text></navigator>
+					<navigator hover-class="none" url="/pages/vipCenter/vipCenter"><text class="pay_btn">充值</text></navigator>
 				</view>
 			</view>
 			<view class="class_list">
-				<navigator url="/pages/lesson/lesson?type=-1">
+				<navigator hover-class="none" url="/pages/lesson/lesson?type=-1">
 					<view>
 						<image src="../../../static/img/group(3).png"></image>
 						<text>全部课程</text>
 					</view>
 				</navigator>
-				<navigator url="/pages/lesson/lesson?type=0">
+				<navigator hover-class="none" url="/pages/lesson/lesson?type=0">
 					<view>
 						<image src="../../../static/img/fenzu7@2x.png"></image>
 						<text>待支付</text>
 					</view>
 				</navigator>
-				<navigator url="/pages/lesson/lesson?type=1">
+				<navigator hover-class="none" url="/pages/lesson/lesson?type=1">
 					<view>
 						<image src="../../../static/img/group(1).png"></image>
 						<text>待开课</text>
 					</view>
 				</navigator>
-				<navigator url="/pages/lesson/lesson?type=2">
+				<navigator hover-class="none" url="/pages/lesson/lesson?type=2">
 					<view>
 						<image src="../../../static/img/group(2).png"></image>
 						<text>已完成</text>
@@ -49,7 +49,7 @@
 				</navigator>
 			</view>
 			<view class="user_meun">
-				<navigator url="/pages/circleFriends/circleFriends">
+				<navigator hover-class="none" url="/pages/circleFriends/circleFriends">
 					<view>
 						<text>朋友圈</text>
 						<image src="../../../static/img/moment@2x.png"></image>
@@ -59,31 +59,31 @@
 					<text>语言/Language</text>
 					<text>中文</text>
 				</view>
-				<navigator url="/pages/myCoupon/myCoupon?type=0">
+				<navigator hover-class="none" url="/pages/myCoupon/myCoupon?type=0">
 					<view>
 						<text>我的优惠券</text>
 						<image src="../../../static/img/coupon@2x.png"></image>
 					</view>
 				</navigator>
-				<navigator url="/pages/myEvaluate/myEvaluate?type=0">
+				<navigator hover-class="none" url="/pages/myEvaluate/myEvaluate?type=0">
 					<view>
 						<text>我的评价</text>
 						<image src="../../../static/img/evaluate@2x.png"></image>
 					</view>
 				</navigator>
-				<navigator url="/pages/feedback/feedback">
+				<navigator hover-class="none" url="/pages/feedback/feedback">
 					<view>
 						<text>意见反馈</text>
 						<image src="../../../static/img/opinion@2x.png"></image>
 					</view>
 				</navigator>
-				<navigator url="/pages/aboutUs/aboutUs">
+				<navigator hover-class="none" url="/pages/aboutUs/aboutUs">
 					<view>
 						<text>关于我们</text>
 						<image src="../../../static/img/team@2x.png"></image>
 					</view>
 				</navigator>
-				<navigator url="/pages/courseInvitation/courseInvitation">
+				<navigator hover-class="none" url="/pages/courseInvitation/courseInvitation">
 					<view>
 						<text>课程邀请</text>
 						<image src="../../../static/img/invite@2x.png"></image>
@@ -93,35 +93,35 @@
 		</view>
 		<view v-else class="content_teacher">
 			<view class="teacher-message">
-				<image src="../../../static/img/lesson4.jpg"></image>
-				<text>Sharon Johnson</text>
+				<image :src="userInfo.photo || userImage"></image>
+				<text>{{ userInfo.name }}</text>
 			</view>
 			<view class="user_meun">
-				<navigator url="/pages/lesson/lesson?type=-1">
+				<navigator hover-class="none" url="/pages/lesson/lesson?type=-1">
 					<view>
 						<text>我的课程</text>
 						<image src="../../../static/img/class@2x.png"></image>
 					</view>
 				</navigator>
-				<navigator url="/pages/circleFriends/circleFriends">
+				<navigator hover-class="none" url="/pages/circleFriends/circleFriends">
 					<view>
 						<text>朋友圈</text>
 						<image src="../../../static/img/moment@2x.png"></image>
 					</view>
 				</navigator>
-				<navigator url="/pages/finance/finance">
+				<navigator hover-class="none" url="/pages/finance/finance">
 					<view>
 						<text>财务管理</text>
 						<image src="../../../static/img/money@2x.png"></image>
 					</view>
 				</navigator>
-				<navigator url="/pages/uploadFile/uploadFile">
+				<navigator hover-class="none" url="/pages/uploadFile/uploadFile">
 					<view>
 						<text>资料上传</text>
 						<image src="../../../static/img/coupons@2x.png"></image>
 					</view>
 				</navigator>
-				<navigator url="/pages/authentication/authentication">
+				<navigator hover-class="none" url="/pages/authentication/authentication">
 					<view>
 						<text>我的认证</text>
 						<image src="../../../static/img/certification@2x.png"></image>
@@ -136,6 +136,7 @@
 export default {
 	data() {
 		return {
+			userImage: '../../../static/img/certification@2x.png',
 			isTeacher: false,
 			userInfo: {}
 		};
@@ -144,12 +145,17 @@ export default {
 		this.getUserInfo();
 		uni.getStorageSync('type') == 1 ? (this.isTeacher = false) : (this.isTeacher = true);
 	},
+	onPullDownRefresh() {
+		this.getUserInfo();
+		uni.getStorageSync('type') == 1 ? (this.isTeacher = false) : (this.isTeacher = true);
+	},
 	methods: {
 		//获取个人资料
 		getUserInfo() {
 			this.ajax({
-				url: 'user/info',
+				url: uni.getStorageSync('type') == 1 ? 'user/info' : 'teacherclass/info',
 				success: res => {
+					uni.stopPullDownRefresh();
 					if (res.data.body === 'success') {
 						this.userInfo = res.data.data;
 					} else {
@@ -167,9 +173,9 @@ export default {
 				url: '/pages/setting/setting'
 			});
 		} else {
-			uni.navigateTo({
-				url: '/pages/message/message'
-			});
+			// uni.navigateTo({
+			// 	url: '/pages/message/message'
+			// });
 		}
 	}
 };

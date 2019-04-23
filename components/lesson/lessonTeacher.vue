@@ -10,7 +10,7 @@
 			<swiper-item v-for="(item, index) in teacherList" 
 						 :key="index">
 				<view class="teacher-item">
-					<navigator :url="'/pages/teacherDetail/teacherDetail?teacherId='+item.id" style="height: 120upx;">
+					<navigator hover-class="none" :url="'/pages/teacherDetail/teacherDetail?teacherId='+item.id" style="height: 120upx;">
 						<image :src="item.photo || image"></image>
 					</navigator>
 					<text class="teacher_name">{{item.name}}</text>

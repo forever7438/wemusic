@@ -3,7 +3,7 @@
 		<text class="teacher_class" v-if="!selectFlag">{{ title }}</text>
 		<ul>
 			<li v-for="(item, index) in listInfo" :key="index" :class="{ select: selectFlag }">
-				<navigator :url="'/pages/teacherDetail/teacherDetail?teacherId=' + item.id"><image :src="item.photo || image"></image></navigator>
+				<navigator hover-class="none" :url="'/pages/teacherDetail/teacherDetail?teacherId=' + item.id"><image :src="item.photo || image"></image></navigator>
 				<div class="lesson_messgae">
 					<p class="lesson_title">
 						{{ item.name }}

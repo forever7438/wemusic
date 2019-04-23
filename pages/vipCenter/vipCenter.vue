@@ -27,13 +27,13 @@
 			<span class="vip_recharge_btn" @tap="moneyAadd">充 值</span>
 		</div>
 		<ul class="vip_record">
-			<navigator url="/pages/rechargeRecord/rechargeRecord">
+			<navigator hover-class="none" url="/pages/rechargeRecord/rechargeRecord">
 				<li>
 					<span>充值记录</span>
 					<s>></s>
 				</li>
 			</navigator>
-			<navigator url="/pages/consumptionRecord/consumptionRecord">
+			<navigator hover-class="none" url="/pages/consumptionRecord/consumptionRecord">
 				<li>
 					<span>消费记录</span>
 					<s>></s>
@@ -100,25 +100,35 @@ export default {
 				});
 				return;
 			}
-			this.ajax({
-				url: 'studentclass/money_add',
-				data: {
-					money_id: this.checkId
+			uni.requestPayment({
+				provider: 'alipay',
+				orderInfo: 'orderInfo', //微信、支付宝订单数据
+				success: function(res) {
+					console.log('success:' + JSON.stringify(res));
 				},
-				success: res => {
-					if (res.data.body === 'success') {
-						uni.showToast({
-							title: '充值成功',
-							icon: 'none'
-						});
-					} else {
-						uni.showToast({
-							title: res.data.msg,
-							icon: 'none'
-						});
-					}
+				fail: function(err) {
+					console.log('fail:' + JSON.stringify(err));
 				}
 			});
+			// this.ajax({
+			// 	url: 'studentclass/money_add',
+			// 	data: {
+			// 		money_id: this.checkId
+			// 	},
+			// 	success: res => {
+			// 		if (res.data.body === 'success') {
+			// 			uni.showToast({
+			// 				title: '充值成功',
+			// 				icon: 'none'
+			// 			});
+			// 		} else {
+			// 			uni.showToast({
+			// 				title: res.data.msg,
+			// 				icon: 'none'
+			// 			});
+			// 		}
+			// 	}
+			// });
 			// 			uni.navigateTo({
 			// 				url: '/pages/pay/pay'
 			// 			});

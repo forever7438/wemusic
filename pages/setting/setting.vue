@@ -27,13 +27,8 @@ export default {
 		//跳转
 		goPath(val) {
 			if (val === '/pages/login/login') {
-				//退出登录,移除token
-				uni.removeStorage({
-					key: 'token'
-				}),
-					uni.removeStorage({
-						key: 'type'
-					});
+				//退出登录,移除token  type
+				uni.clearStorage();
 			}
 			uni.navigateTo({
 				url: val

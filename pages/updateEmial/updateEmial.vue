@@ -7,7 +7,7 @@
 			</li>
 			<li>
 				<span>验证码</span>
-				<input type="number" placeholder="请输入验证码" v-model="code" />
+				<input type="number" placeholder="请输入验证码" v-model="code" maxlength="6"/>
 				<span class="btn_code" @tap="getCode">获取验证码</span>
 			</li>
 		</ul>
@@ -86,7 +86,7 @@ export default {
 				return;
 			}
 			this.ajax({
-				url: 'user/update_email',
+				url: uni.getStorageSync('type') == 1 ? 'user/update_email' : 'teacherclass/update_email',
 				data: {
 					new_email: this.new_email,
 					code: this.code

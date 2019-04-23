@@ -3,12 +3,12 @@
 		<ul>
 			<li>
 				<span>手机号</span>
-				<input type="text" placeholder="请输入手机号" v-model="new_email" />
+				<input type="text" placeholder="请输入手机号" v-model="new_email" maxlength="11" />
 			</li>
 			<li>
 				<span>验证码</span>
-				<input type="number" placeholder="请输入验证码" v-model="code" />
-				<span class="btn_code">获取验证码</span>
+				<input type="number" placeholder="请输入验证码" v-model="code" maxlength="6" />
+				<span class="btn_code" @tap="getCode">获取验证码</span>
 			</li>
 		</ul>
 		<s>绑定手机号后，您可以使用手机号或邮箱登录</s>
@@ -22,10 +22,49 @@ export default {
 		return {
 			code: '',
 			new_email: '',
-			reg: new RegExp('^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$')
+			reg: /^[1][3,4,5,7,8][0-9]{9}$/
 		};
 	},
+	// onLoad() {
+	// 	console.log(getCurrentPages());
+	// },
 	methods: {
+		//获取手机验证码
+		getCode() {
+			if (!this.new_email) {
+				uni.showToast({
+					title: '请输入手机号',
+					icon: 'none'
+				});
+				return;
+			}
+			if (!this.reg.test(this.new_email)) {
+				uni.showToast({
+					title: '手机号格式不正确',
+					icon: 'none'
+				});
+				return;
+			}
+			this.ajax({
+				url: 'index/email_code',
+				data: {
+					phone: this.new_email
+				},
+				success: res => {
+					if (res.data.body === 'success') {
+						uni.showToast({
+							title: '验证码已发送至您的手机,请注意查收!',
+							icon: 'none'
+						});
+					} else {
+						uni.showToast({
+							title: res.data.msg,
+							icon: 'none'
+						});
+					}
+				}
+			});
+		},
 		//修改手机号
 		updatePhone() {
 			if (!this.new_email) {
@@ -50,15 +89,15 @@ export default {
 				return;
 			}
 			this.ajax({
-				url: 'user/update_email',
+				url: 'user/set_phone',
 				data: {
-					new_email: this.new_email,
+					phone: this.new_email,
 					code: this.code
 				},
 				success: res => {
 					if (res.data.body === 'success') {
 						uni.showToast({
-							title: '邮箱修改成功',
+							title: '手机号修改成功',
 							icon: 'none'
 						});
 					} else {
@@ -75,9 +114,9 @@ export default {
 </script>
 
 <style lang="less">
-	input {
-		font-size: 24upx;
-	}
+input {
+	font-size: 24upx;
+}
 .change_phone {
 	padding: 0 30upx;
 	ul {

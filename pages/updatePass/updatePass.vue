@@ -52,7 +52,7 @@ export default {
 				return;
 			}
 			this.ajax({
-				url: 'user/update_pass',
+				url: uni.getStorageSync('type') == 1 ? 'user/update_pass' : 'teacherclass/update_pass',
 				data: {
 					pass: this.pass,
 					new_pass: this.new_pass
@@ -63,6 +63,12 @@ export default {
 							title: '修改成功,快使用新密码登录吧',
 							icon: 'none'
 						});
+						setTimeout(() => {
+							uni.navigateTo({
+								url: uni.getStorageSync('type') == 1 ? '/pages/login/login' : '/pages/teacherLogin/teacherLogin'
+							});
+							uni.clearStorage();
+						}, 1500);
 					} else {
 						uni.showToast({
 							title: res.data.msg,
@@ -77,9 +83,9 @@ export default {
 </script>
 
 <style lang="less">
-	input {
-		font-size: 24upx;
-	}
+input {
+	font-size: 24upx;
+}
 .change_password {
 	padding: 0 30upx;
 

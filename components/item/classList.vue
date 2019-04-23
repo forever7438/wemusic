@@ -10,9 +10,9 @@
 				</div>
 				<div class="class_operation">
 					<span @click="sendCard">打卡</span>
-					<span><navigator url="/pages/addTask/addTask?classId=1">作业</navigator></span>
+					<span><navigator hover-class="none" url="/pages/addTask/addTask?classId=1">作业</navigator></span>
 				</div>
-				<navigator url="/pages/classAdjustment/classAdjustment?classId=1"><div class="class_adjustment">调课</div></navigator>
+				<navigator hover-class="none" url="/pages/classAdjustment/classAdjustment?classId=1"><div class="class_adjustment">调课</div></navigator>
 			</li>
 		</ul>
 		<!-- <noContent v-else title="暂无课程"></noContent> -->

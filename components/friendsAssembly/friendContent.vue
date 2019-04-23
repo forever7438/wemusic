@@ -1,6 +1,6 @@
 <template>
 	<view class="contents">
-		<navigator v-if="type" :url="'/pages/friendsDetail/friendsDetail?listId=' + listId">
+		<navigator hover-class="none" v-if="type" :url="'/pages/friendsDetail/friendsDetail?listId=' + listId">
 			<text>{{ content }}</text>
 		</navigator>
 		<text v-else>{{ content }}</text>
