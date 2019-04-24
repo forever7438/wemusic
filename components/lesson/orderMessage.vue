@@ -5,15 +5,17 @@
 			<ul class="order_mess">
 			  <li>
 			    <span>课程</span>
-			    <span>{{request['class_list_id'].length}}节</span>
+			    <span>
+					{{request.courseLen}}节
+				</span>
 			  </li>
 			  <li @click="coupomPicker">
 			    <span>优惠券</span>
-			    <span>{{coupomTitle}}</span>
+			    <span>{{request.coupomTitle}}</span>
 			  </li>
 			  <li>
 			    <span>授课方式</span>
-			    <span>{{way[request['people_num']]}}</span>
+			    <span>{{way[request.people_num]}}</span>
 			  </li>
 			</ul>
 			
@@ -48,7 +50,8 @@
 		},
 		props:{
 			request:Object,
-			coupomList:Array
+			coupomList:Array,
+			coupomTitle:String
 		},
 		data(){
 			return{
@@ -56,14 +59,17 @@
 					'一对一',
 					'一对二',
 					'一对三'
-				],
-				coupomTitle:this.coupomList.length > 0 ? '选择优惠券' : '暂无优惠券'
+				]
 			}
 		},
 		methods:{
 			onConfirm(val){
 				let index = val.index[0]
-				this.coupomTitle =  this.coupomList[index].name
+				let change = {
+					key:'coupomTitle',
+					value:this.coupomList[index].name
+				}
+				this.$emit('changeRequest',change)
 				let coupon_id = this.coupomList[index].id
 				this.getPrice(coupon_id)
 			},
@@ -103,6 +109,9 @@
 							uni.showToast({
 								title: '支付完成',
 								icon: 'none'
+							});
+							uni.redirectTo({
+								url: '/pages/lesson/lesson?type=1'
 							});
 						}
 					}

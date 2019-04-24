@@ -14,7 +14,7 @@
 						<span v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'" class="teacher_number">
 							{{ success ? '教师名称  &nbsp;&nbsp;&nbsp;一对一' : item.teacher_count > 0 ? '共' + item.teacher_count + '名教师' : '暂无教师' }}
 						</span>
-						<span v-else class="start_time">2019年3月15日开课</span>
+						<span v-else class="start_time">{{timeDate(item.start_time)}} 开课</span>
 						<navigator hover-class="none" url="/pages/evaluate/evaluate" v-if="lessonType === '-1'"><span class="go_pay">去评价</span></navigator>
 						<navigator hover-class="none" url="/pages/evaluate/evaluate" v-if="lessonType === '0'"><span class="go_pay">去支付</span></navigator>
 						<navigator hover-class="none" url="/pages/evaluate/evaluate" v-if="lessonType === '1'"><span class="go_pay">查看</span></navigator>
@@ -63,6 +63,11 @@ export default {
 		this.getCourseList();
 	},
 	methods: {
+		timeDate(time){
+			time = time * 1000;
+			let myDate = new Date(time);
+			return myDate.toJSON().substr(0, 16).replace('T', ' ');
+		},
 		error() {
 			consoel.log('ok');
 		},
