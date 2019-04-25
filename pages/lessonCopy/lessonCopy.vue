@@ -33,6 +33,9 @@ export default {
 		this.musicId = obj.musicId;
 		this.getMusicInfo(obj.musicId);
 	},
+	onPullDownRefresh() {
+		this.getMusicInfo(this.musicId);
+	},
 	methods: {
 		//获取艺术详情
 		getMusicInfo(musicId) {
@@ -43,6 +46,7 @@ export default {
 				},
 				method: 'post',
 				success: res => {
+					uni.stopPullDownRefresh();
 					if (res.data.body === 'success') {
 						this.flag = true;
 						this.musicInfo = res.data.data;

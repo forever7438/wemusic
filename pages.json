@@ -244,6 +244,7 @@
 			"path": "pages/lessonDetail/lessonDetail",
 			"style": {
 				"navigationBarTitleText": "课程详情",
+				"enablePullDownRefresh": true,
 				"app-plus": {
 					"titleNView": {
 						"type": "transparent"
@@ -254,6 +255,7 @@
 		{
 			"path": "pages/lessonCopy/lessonCopy",
 			"style": {
+				"enablePullDownRefresh": true,
 				"navigationBarTitleText": "课程类型",
 				"app-plus": {
 					"titleNView": {
@@ -371,6 +373,7 @@
 		{
 			"path": "pages/choiceTeacher/choiceTeacher",
 			"style": {
+				"enablePullDownRefresh": true,
 				"app-plus": {
 					"titleNView": false
 				}

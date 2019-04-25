@@ -29,6 +29,7 @@ export default {
 	},
 	data() {
 		return {
+			page:0,
 			musicId: '',
 			orderShow: false,
 			courseInfo: {},
@@ -53,6 +54,15 @@ export default {
 		this.classId = obj.musicSunId;
 		this.getChoiseTeacherInfo(obj.musicSunId);
 		this.getCourseInfo(obj.musicSunId);
+	},
+	onPullDownRefresh() {
+		this.page = 0;
+		this.getCourseInfo(this.classId)
+		this.getChoiseTeacherInfo(this.classId)
+	},
+	onReachBottom() {
+		this.page++
+		this.getChoiseTeacherInfo(this.classId,true)
 	},
 	methods: {
 		backEvent() {
@@ -80,6 +90,8 @@ export default {
 				success: res => {
 					if (res.data.body === 'success') {
 						this.courseInfo = res.data.data.info;
+					}else{
+						this.tipShow()
 					}
 				}
 			});
@@ -137,19 +149,35 @@ export default {
 			});
 		},
 		/**获取选择老师列表*/
-		getChoiseTeacherInfo(musicSunId) {
+		getChoiseTeacherInfo(musicSunId,pageTrue=false) {
 			this.ajax({
 				url: 'music/teacher_list',
 				data: {
 					music_id: musicSunId,
-					list: 0,
-					val: 5
+					list: this.page,
+					val: 12
 				},
 				success: res => {
+					uni.stopPullDownRefresh();
 					if (res.data.body === 'success') {
-						this.listInfo = res.data.data.list;
+						let list = res.data.data.list
+						if(list.length > 0){
+							this.listInfo = pageTrue ? this.listInfo.concat(list) : list;
+						}else{
+							this.page--
+							this.tipShow('No more information')
+						}
+						
+					}else{
+						this.tipShow()
 					}
 				}
+			});
+		},
+		tipShow(msg="Network Error"){ 
+			uni.showToast({
+				title: msg,
+				icon: 'none'
 			});
 		}
 	}

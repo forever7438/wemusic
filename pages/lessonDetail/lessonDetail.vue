@@ -35,7 +35,8 @@ export default {
 			musicIndexInfo: {},
 			scienceImg: [],
 			teacherList: [],
-			comment: []
+			comment: [],
+			lessonId:''
 		};
 	},
 	onLoad(obj) {
@@ -43,9 +44,15 @@ export default {
 			frontColor: '#ffffff',
 			backgroundColor: '#ffffff'
 		});
+		this.lessonId = obj.lessonId
 		this.getMusicIndexInfo(obj.lessonId);
 		this.getTeacher(obj.lessonId);
 		this.getComment(obj.lessonId);
+	},
+	onPullDownRefresh() {
+		this.getMusicIndexInfo(this.lessonId);
+		this.getTeacher(this.lessonId);
+		this.getComment(this.lessonId);
 	},
 	methods: {
 		//获取课程详情
@@ -95,6 +102,7 @@ export default {
 				},
 				method: 'post',
 				success: res => {
+					uni.stopPullDownRefresh();
 					if (res.data.body === 'success') {
 						this.comment = res.data.data;
 					}
