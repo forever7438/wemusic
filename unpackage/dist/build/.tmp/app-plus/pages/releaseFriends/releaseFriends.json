@@ -8,5 +8,8 @@
         "fontWeight": "bold"
       }
     ]
+  },
+  "usingComponents": {
+    "progress-bar": "/components/progress"
   }
 }

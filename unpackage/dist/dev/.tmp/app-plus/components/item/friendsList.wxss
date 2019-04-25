@@ -1,0 +1,9 @@
+.friend_list .fridend_content {
+  margin-bottom: 20rpx;
+}
+.friend_list .fridend_content image {
+  width: 100%;
+  height: 410rpx;
+  border-radius: 12rpx;
+}
+

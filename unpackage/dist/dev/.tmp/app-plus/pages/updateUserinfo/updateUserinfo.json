@@ -8,5 +8,9 @@
         "fontWeight": "bold"
       }
     ]
+  },
+  "usingComponents": {
+    "w-picker": "/components/w-picker/w-picker",
+    "neil-modal": "/components/neil-modal/neil-modal"
   }
 }

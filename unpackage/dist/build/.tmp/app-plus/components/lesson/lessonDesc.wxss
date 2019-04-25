@@ -1,0 +1,20 @@
+.lesson_desc {
+  padding: 20rpx 15rpx 0;
+}
+.lesson_desc .teacher_class {
+  margin: 40rpx 20rpx;
+  font-size: 48rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+}
+.lesson_desc .teacher_content {
+  margin-top: 30rpx;
+  padding: 0 24rpx;
+  font-size: 26rpx;
+  line-height: 44rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+}
+

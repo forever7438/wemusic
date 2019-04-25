@@ -47,6 +47,7 @@ export default {
 		//获取课程
 		getLessonList(val) {
 			this.lessonType = val;
+			this.listInfo = [];
 			this.ajax({
 				url: uni.getStorageSync('type') == 1 ? 'studentclass/class_type' : 'teacherclass/class_list',
 				data:
@@ -122,6 +123,7 @@ export default {
 			font-family: PingFangSC-Medium;
 			font-weight: 500;
 			color: rgba(51, 51, 51, 1);
+			padding-bottom: 20upx;
 		}
 
 		.active {

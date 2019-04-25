@@ -1,0 +1,27 @@
+.start_class.data-v-31c0de63 {
+  margin-top: 10rpx;
+}
+.start_class ._p.data-v-31c0de63 {
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+}
+.start_class .start_class_in.data-v-31c0de63 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.start_class .start_class_in .number.data-v-31c0de63 {
+  margin-left: 10rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+}
+

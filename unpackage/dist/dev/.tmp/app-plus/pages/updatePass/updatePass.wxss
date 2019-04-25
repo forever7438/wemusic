@@ -1,5 +1,8 @@
+input {
+  font-size: 24rpx;
+}
 .change_password {
-  padding: 0 15rpx;
+  padding: 0 30rpx;
 }
 .change_password ._ul {
   padding-left: 0;
@@ -26,7 +29,7 @@
   font-size: 32rpx;
   font-weight: 600;
 }
-.change_password ._ul ._li ._input {
+.change_password ._ul ._li input {
   width: 100%;
   border: none;
   margin-bottom: 0;

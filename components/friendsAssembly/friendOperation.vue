@@ -77,6 +77,7 @@ export default {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	margin: 10upx 0;
 	view {
 		display: flex;
 		align-items: center;

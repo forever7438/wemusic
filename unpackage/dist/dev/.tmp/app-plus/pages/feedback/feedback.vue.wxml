@@ -1,1 +1,0 @@
-<template name="31a0b18b"><view class="_view 31a0b18b"><textarea placeholder="请留下您宝贵的意见" class="_textarea 31a0b18b" /><input class="_input 31a0b18b uni-input" placeholder="请输入联系方式(手机或邮箱)" value="{{inputClearValue}}" bindinput="handleProxy" data-eventid="{{'31a0b18b-0'}}" data-comkey="{{$k}}" /><button class="_button 31a0b18b">提交</button></view></template>

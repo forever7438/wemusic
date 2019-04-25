@@ -1,7 +1,9 @@
 {
   "navigationBarTitleText": "选课",
+  "enablePullDownRefresh": true,
   "titleNView": {
     "backgroundColor": "#ffff",
     "titleSize": "17px"
-  }
+  },
+  "usingComponents": {}
 }

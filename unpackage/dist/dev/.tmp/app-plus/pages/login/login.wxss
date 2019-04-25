@@ -1,3 +1,10 @@
+input {
+  text-align: center;
+  font-size: 24rpx;
+  width: 100%;
+  padding-left: 10rpx;
+  border-bottom: 2rpx solid #b9b9b9;
+}
 .login {
   padding: 0 144rpx;
 }
@@ -28,10 +35,6 @@
   font-weight: 400;
   color: #333333;
 }
-.login .login_acount ._input {
-  padding-left: 10rpx;
-  border-bottom: 2rpx solid #000;
-}
 .login .login_pass {
   display: -webkit-box;
   display: -webkit-flex;
@@ -51,11 +54,7 @@
   font-weight: 400;
   color: #333333;
 }
-.login .login_pass ._input {
-  padding-left: 10rpx;
-  border-bottom: 2rpx solid #000;
-}
-.login ._button {
+.login button {
   width: auto;
   line-height: 88rpx;
   background: #fad42a;

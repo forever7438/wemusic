@@ -50,10 +50,9 @@
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "",
-    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationBarBackgroundColor": "#fff",
     "backgroundColor": "#F8F8F8"
   },
-  "usingComponents": {},
   "tabBar": {
     "borderStyle": "black",
     "backgroundColor": "",
@@ -87,5 +86,7 @@
     "alwaysShowBeforeRender": true,
     "autoclose": false
   },
-  "appname": "weMusic"
+  "appname": "weMusic",
+  "compilerVersion": "1.9.3",
+  "usingComponents": {}
 }

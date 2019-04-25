@@ -1,0 +1,59 @@
+.message_list_content ._ul.data-v-c054efec {
+  width: 100%;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.message_list_content ._ul ._li.data-v-c054efec {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30rpx 25rpx;
+  border-bottom: 2rpx solid #e7e8ea;
+  font-weight: 500;
+}
+.message_list_content ._ul ._li ._p.data-v-c054efec {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+.message_list_content ._ul ._li ._p ._span.data-v-c054efec {
+  font-weight: 600;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+  color: #333333;
+  margin-bottom: 10rpx;
+}
+.message_list_content ._ul ._li ._p ._s.data-v-c054efec {
+  text-decoration: none;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  color: #666666;
+}
+.message_list_content ._ul ._li .message_content.data-v-c054efec {
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  color: #999999;
+}
+

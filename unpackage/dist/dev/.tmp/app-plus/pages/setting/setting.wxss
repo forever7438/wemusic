@@ -1,5 +1,5 @@
 .setting_content {
-  padding: 0 15rpx;
+  padding: 0 30rpx;
 }
 .setting_content ._ul {
   display: -webkit-box;

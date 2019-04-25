@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "startclass": "/components/starclass"
+  },
+  "component": true
+}

@@ -48,6 +48,7 @@ export default {
 		font-family: PingFangSC-Medium;
 		font-weight: 500;
 		color: rgba(34, 34, 34, 1);
+		margin: 10upx 0;
 		span {
 			font-size: 32upx;
 			font-family: PingFangSC-Regular;

@@ -1,3 +1,8 @@
+input {
+  font-size: 24rpx;
+  width: 100%;
+  text-align: center;
+}
 .teacher_login {
   padding: 0 144rpx;
 }
@@ -28,7 +33,7 @@
   font-weight: 400;
   color: #333333;
 }
-.teacher_login .teacher_login_acount ._input {
+.teacher_login .teacher_login_acount input {
   padding-left: 10rpx;
   border-bottom: 2rpx solid #000;
 }
@@ -51,11 +56,11 @@
   font-weight: 400;
   color: #333333;
 }
-.teacher_login .teacher_login_pass ._input {
+.teacher_login .teacher_login_pass input {
   padding-left: 10rpx;
   border-bottom: 2rpx solid #000;
 }
-.teacher_login ._button {
+.teacher_login button {
   width: auto;
   line-height: 88rpx;
   background: #fad42a;

@@ -1,4 +1,4 @@
-._input {
+input {
   font-size: 24rpx;
 }
 .change_phone {
@@ -36,7 +36,7 @@
   font-size: 32rpx;
   font-weight: 600;
 }
-.change_phone ._ul ._li ._input {
+.change_phone ._ul ._li input {
   border: none;
   margin-bottom: 0;
 }

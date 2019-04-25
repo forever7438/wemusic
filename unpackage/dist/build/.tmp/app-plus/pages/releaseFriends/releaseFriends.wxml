@@ -1,2 +1,1 @@
-<import src="./releaseFriends.vue.wxml" />
-    <template is="15e724eb" data="{{ ...$root['0'], $root }}"/>
+<view bind:__l="__l"><block wx:if="{{show}}"><progress-bar progress="{{progress}}"></progress-bar></block><textarea placeholder="分享学习心得…" data-event-opts="{{[['input',[['__set_model',['$0','body','$event',[]],['']]]]]}}" value="{{body}}" bindinput="__e"></textarea><block wx:if="{{video}}"><view class="choose_images"><image src="{{video}}"></image></view></block><block wx:else><view data-event-opts="{{[['tap',[['chooseImage',['$event']]]]]}}" class="choose_image" bindtap="__e">照片/拍摄</view></block></view>

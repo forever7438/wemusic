@@ -1,2 +1,1 @@
-<import src="./myEvaluate.vue.wxml" />
-    <template is="6d9785ea" data="{{ ...$root['0'], $root }}"/>
+<view class="my_evaluate_content _div data-v-501717e0" bind:__l="__l"><view class="meun_list data-v-501717e0"><text data-event-opts="{{[['tap',[['getEvalutateList',['0']]]]]}}" class="{{['data-v-501717e0',lessonType==0?'active':'']}}" bindtap="__e">待评价</text><text data-event-opts="{{[['tap',[['getEvalutateList',['1']]]]]}}" class="{{['data-v-501717e0',lessonType==1?'active':'']}}" bindtap="__e">已评价</text></view><lesson-list lessonType="{{lessonType}}" listInfo="{{listInfo}}" class="data-v-501717e0"></lesson-list></view>

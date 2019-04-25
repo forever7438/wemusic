@@ -1,2 +1,1 @@
-<import src="./rechargeRecord.vue.wxml" />
-    <template is="097c07ab" data="{{ ...$root['0'], $root }}"/>
+<view bind:__l="__l"><recharge-list moneyList="{{rechargeList}}" type="recharge"></recharge-list></view>

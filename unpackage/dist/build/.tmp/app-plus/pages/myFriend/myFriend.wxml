@@ -1,2 +1,1 @@
-<import src="./myFriend.vue.wxml" />
-    <template is="c12279aa" data="{{ ...$root['0'], $root }}"/>
+<view class="fridend_content" bind:__l="__l"><friends-list friendsList="{{friendsList}}"></friends-list></view>

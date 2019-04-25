@@ -11,6 +11,10 @@
 uni-image>._img {
 	opacity: 1;
 }
+uni-tabbar__icon__diff{
+	width: 48rpx !important;
+	height: 48rpx;
+}
 
 /*每个页面公共css */
 .iconfont {

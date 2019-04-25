@@ -1,2 +1,1 @@
-<import src="./evaluate.vue.wxml" />
-    <template is="7566a80b" data="{{ ...$root['0'], $root }}"/>
+<view class="evaluate _div data-v-2ba66960" bind:__l="__l"><comment-star-class msg="课程" title="吉他快速入门" content="教师 Jennifer Young" class="data-v-2ba66960"></comment-star-class><startclass title="星级" class="data-v-2ba66960"></startclass><comment-star-class msg="教师" title="Laura Johnson" content="从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。" class="data-v-2ba66960"></comment-star-class><startclass title="星级" class="data-v-2ba66960"></startclass><startclass title="教师授课" class="data-v-2ba66960"></startclass><startclass title="教师授课方式" class="data-v-2ba66960"></startclass><startclass title="教师授课态度" class="data-v-2ba66960"></startclass></view>

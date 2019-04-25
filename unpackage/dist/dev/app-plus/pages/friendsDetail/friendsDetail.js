@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"content { padding: 0 ",[0,15],"; }\n.",[1],"content wx-image { width: 100%; height: ",[0,410],"; border-radius: ",[0,12],"; }\n",],undefined,{path:"./pages/friendsDetail/friendsDetail.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/friendsDetail/friendsDetail.wxml') } }));

@@ -5,7 +5,7 @@
 				<image src="../../static/img/demo.jpg"></image>
 				<p>
 					<span>吉他快速入门</span>
-					<uni-rate value="3.5" :isFill="false" disabled="true"></uni-rate>
+					<uni-rate value="3.5" :size="13" :isFill="false" disabled="true" starColor="#FFFFFF"></uni-rate>
 					<s>教师名称 一对二</s>
 				</p>
 			</div>

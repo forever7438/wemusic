@@ -2,5 +2,9 @@
   "navigationBarTitleText": "课程类型",
   "titleNView": {
     "type": "transparent"
+  },
+  "usingComponents": {
+    "lesson-head": "/components/lesson/lessonHead",
+    "lesson-list": "/components/item/lessonList"
   }
 }

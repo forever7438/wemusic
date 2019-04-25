@@ -1,7 +1,8 @@
-.my_evaluate_content.data-v-48837f22 {
+.my_evaluate_content.data-v-0ce4a7f5 {
   padding: 0 30rpx;
 }
-.my_evaluate_content ._ul.data-v-48837f22 {
+.my_evaluate_content .meun_list.data-v-0ce4a7f5 {
+  height: 90rpx;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13,23 +14,15 @@
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
+}
+.my_evaluate_content .meun_list text.data-v-0ce4a7f5 {
   font-size: 28rpx;
-  font-family: PingFangSC-Regular;
+  font-family: PingFangSC-Medium;
   font-weight: 500;
   color: #333333;
-  height: 90rpx;
+  padding-bottom: 20rpx;
 }
-.my_evaluate_content ._ul ._li.data-v-48837f22 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.my_evaluate_content ._ul .isActive.data-v-48837f22 {
-  border-bottom: 6rpx solid #333333ff;
+.my_evaluate_content .meun_list .active.data-v-0ce4a7f5 {
+  border-bottom: 6rpx solid #000;
 }
 

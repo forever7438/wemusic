@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText": "我的评价",
-  "enablePullDownRefresh": true
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "lesson-list": "/components/item/lessonList"
+  }
 }

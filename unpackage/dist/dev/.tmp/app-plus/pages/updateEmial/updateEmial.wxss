@@ -1,5 +1,8 @@
+input {
+  font-size: 24rpx;
+}
 .change_emial {
-  padding: 0 15rpx;
+  padding: 0 30rpx;
 }
 .change_emial ._ul {
   margin-bottom: 40rpx;
@@ -33,7 +36,7 @@
   font-size: 32rpx;
   font-weight: 600;
 }
-.change_emial ._ul ._li ._input {
+.change_emial ._ul ._li input {
   border: none;
   margin-bottom: 0;
 }

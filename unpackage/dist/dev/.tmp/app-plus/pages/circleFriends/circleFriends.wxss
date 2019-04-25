@@ -1,5 +1,5 @@
 .fridend_content {
-  padding: 0 15rpx;
+  padding: 0 30rpx;
 }
 .fridend_content .toMyFriend {
   height: 104rpx;

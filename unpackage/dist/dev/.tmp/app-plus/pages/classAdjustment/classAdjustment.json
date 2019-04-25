@@ -1,3 +1,7 @@
 {
-  "navigationBarTitleText": "调课"
+  "navigationBarTitleText": "调课",
+  "usingComponents": {
+    "uni-rate": "/components/uni-rate/uni-rate",
+    "w-picker": "/components/w-picker/w-picker"
+  }
 }

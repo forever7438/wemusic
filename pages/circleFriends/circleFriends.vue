@@ -1,12 +1,15 @@
 <template>
 	<view class="fridend_content">
-		<navigator hover-class="none" url="/pages/myFriend/myFriend">
-			<view class="toMyFriend">
-				<text>我的朋友圈</text>
-				<uni-icon type="forward" size="20"></uni-icon>
-			</view>
-		</navigator>
-		<friendsList :friendsList="friendsList"></friendsList>
+		<view class="parents">
+			<navigator hover-class="none" url="/pages/myFriend/myFriend">
+				<view class="toMyFriend">
+					<text>我的朋友圈</text>
+					<uni-icon type="forward" size="20"></uni-icon>
+				</view>
+			</navigator>
+		</view>
+		<view class="line"></view>
+		<view class="parents"><friendsList :friendsList="friendsList"></friendsList></view>
 	</view>
 </template>
 
@@ -81,15 +84,18 @@ export default {
 
 <style lang="less">
 .fridend_content {
-	padding: 0 30upx;
-
+	.parents {
+		padding: 0 30upx;
+	}
+	.line {
+		height: 2upx;
+		background-color: #ddd;
+	}
 	.toMyFriend {
 		height: 104upx;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		border-bottom: 2upx solid #ddd;
-		margin-bottom: 20upx;
 
 		text {
 			font-size: 32upx;

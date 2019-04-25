@@ -1,5 +1,5 @@
 <template>
-	<view><recharge-list :moneyList="rechargeList"></recharge-list></view>
+	<view><recharge-list :moneyList="rechargeList" type="recharge"></recharge-list></view>
 </template>
 
 <script>

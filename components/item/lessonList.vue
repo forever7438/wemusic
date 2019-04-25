@@ -7,17 +7,19 @@
 				</navigator>
 				<image v-else :src="item.photo || image"></image>
 				<div class="lesson_messgae">
-					<p class="lesson_title">{{ item.name }}</p>
+					<p class="lesson_title">{{ item.class_name }}</p>
 					<startclass :star="Number(item.star)" starColor="#666666" v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'"></startclass>
-					<p v-else class="lesson_winer">教师 Jennifer Young</p>
+					<p v-else class="lesson_winer">教师 {{ item.name }}</p>
 					<div class="lesson_pay">
 						<span v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'" class="teacher_number">
 							{{ success ? '教师名称  &nbsp;&nbsp;&nbsp;一对一' : item.teacher_count > 0 ? '共' + item.teacher_count + '名教师' : '暂无教师' }}
 						</span>
-						<span v-else class="start_time">{{timeDate(item.start_time)}} 开课</span>
+						<span v-else class="start_time">{{ item.start_time | timeDate }} 开课</span>
 						<navigator hover-class="none" url="/pages/evaluate/evaluate" v-if="lessonType === '-1'"><span class="go_pay">去评价</span></navigator>
 						<navigator hover-class="none" url="/pages/evaluate/evaluate" v-if="lessonType === '0'"><span class="go_pay">去支付</span></navigator>
-						<navigator hover-class="none" url="/pages/evaluate/evaluate" v-if="lessonType === '1'"><span class="go_pay">查看</span></navigator>
+						<navigator hover-class="none" :url="'/pages/lessonCopy/lessonCopy?musicId=' + item.id" v-if="lessonType === '1'">
+							<span class="go_pay">查看</span>
+						</navigator>
 						<navigator hover-class="none" url="/pages/evaluate/evaluate" v-if="lessonType === '2'"><span class="go_pay">去评价</span></navigator>
 						<navigator
 							hover-class="none"
@@ -35,6 +37,7 @@
 </template>
 
 <script>
+import { dateUtils } from '../../common/util.js';
 import startclass from '../starclass.vue';
 import noContent from '../noContent.vue';
 export default {
@@ -62,12 +65,12 @@ export default {
 	onLoad() {
 		this.getCourseList();
 	},
+	filters: {
+		timeDate: time => {
+			return dateUtils.format(time);
+		}
+	},
 	methods: {
-		timeDate(time){
-			time = time * 1000;
-			let myDate = new Date(time);
-			return myDate.toJSON().substr(0, 16).replace('T', ' ');
-		},
 		error() {
 			consoel.log('ok');
 		},

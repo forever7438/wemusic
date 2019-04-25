@@ -1,3 +1,7 @@
 {
-  "navigationBarTitleText": "评价"
+  "navigationBarTitleText": "评价",
+  "usingComponents": {
+    "comment-star-class": "/components/comment/commentStarClass",
+    "startclass": "/components/starclass"
+  }
 }

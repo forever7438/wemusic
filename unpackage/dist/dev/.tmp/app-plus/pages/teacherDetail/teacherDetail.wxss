@@ -1,5 +1,5 @@
 view .all_lesson {
-  padding: 0 15rpx;
+  padding: 0 30rpx;
   margin-top: 40rpx;
 }
 view .all_lesson .lesson_tips {

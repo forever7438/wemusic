@@ -1,13 +1,13 @@
-.container.data-v-28ce1797 {
+.container.data-v-87442658 {
   text-align: center;
   padding: 0 86rpx;
 }
-.container .success.data-v-28ce1797 {
+.container .success.data-v-87442658 {
   width: 120rpx;
   height: 120rpx;
   margin-top: 70rpx;
 }
-.container .title.data-v-28ce1797 {
+.container .title.data-v-87442658 {
   font-size: 40rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;
@@ -15,7 +15,7 @@
   line-height: 56rpx;
   margin-top: 40rpx;
 }
-.container .btn.data-v-28ce1797 {
+.container .btn.data-v-87442658 {
   display: inline-block;
   width: 100%;
   height: 100rpx;
@@ -25,10 +25,10 @@
   border-radius: 12rpx;
   font-size: 32rpx;
 }
-.container .home.data-v-28ce1797 {
+.container .home.data-v-87442658 {
   font-size: 28rpx;
   border: 1px solid #333333;
-  background: #FFFFFF;
+  background: #ffffff;
   margin-top: 40rpx;
 }
 

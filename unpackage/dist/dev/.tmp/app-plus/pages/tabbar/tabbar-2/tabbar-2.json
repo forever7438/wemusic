@@ -1,6 +1,9 @@
 {
   "navigationBarTitleText": "课程表",
+  "enablePullDownRefresh": true,
   "titleNView": {
+    "backgroundColor": "#ffff",
+    "titleSize": "17px",
     "buttons": [
       {
         "text": "",
@@ -9,5 +12,9 @@
         "fontWeight": "bold"
       }
     ]
+  },
+  "usingComponents": {
+    "class-list": "/components/item/classList",
+    "mx-date-picker": "/components/mx-datepicker/mx-datepicker"
   }
 }

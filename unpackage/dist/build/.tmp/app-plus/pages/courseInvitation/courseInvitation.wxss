@@ -19,7 +19,7 @@
   font-weight: 400;
   color: #333333;
 }
-.course_invitation .invitation_content ._input {
+.course_invitation .invitation_content input {
   width: 376rpx;
   height: 88rpx;
   margin-left: 30rpx;
@@ -33,7 +33,7 @@
   color: #666666;
   line-height: 36rpx;
 }
-.course_invitation ._button {
+.course_invitation button {
   margin-top: 120rpx;
   background: #fad42a;
   color: #333333;

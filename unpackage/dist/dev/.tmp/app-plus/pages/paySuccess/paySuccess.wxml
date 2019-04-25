@@ -1,2 +1,1 @@
-<import src="./paySuccess.vue.wxml" />
-    <template is="272e1b4b" data="{{ ...$root['0'], $root }}"/>
+<view class="_div data-v-4577d620" bind:__l="__l"><view class="pay_success_contents _div data-v-4577d620"><image class="pay_success_img _img data-v-4577d620" src="{{$root.m0}}"></image><view class="pay_success_title _p data-v-4577d620">充值成功</view><view class="pay_success_content _p data-v-4577d620">成功充值 ￥ 100</view><view class="pay_success_time _p data-v-4577d620">2019年1月10日 9:30</view></view><view class="_ul data-v-4577d620"><view class="_li data-v-4577d620"><label class="_span data-v-4577d620">查看会员</label></view><view class="_li data-v-4577d620"><label class="_span data-v-4577d620">返回首页</label></view></view></view>

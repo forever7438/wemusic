@@ -1,2 +1,1 @@
-<import src="./tabbar-2.vue.wxml" />
-    <template is="96d3e23c" data="{{ ...$root['0'], $root }}"/>
+<view class="calendar-content" bind:__l="__l"><view><mx-date-picker show="{{showPicker}}" type="{{type}}" format="yyyy/mm/dd hh:ii:ss" value="{{value}}" color="#FAD42A" show-tips="{{true}}" begin-text="开始" end-text="结束" show-seconds="{{true}}" data-event-opts="{{[['^confirm',[['onSelected']]],['^cancel',[['onSelected']]]]}}" bind:confirm="__e" bind:cancel="__e"></mx-date-picker></view><view class="class_arrange"><view class="_h3">全部课程</view><class-list classList="{{classList}}"></class-list></view></view>

@@ -1,16 +1,48 @@
 .about_us {
-  padding: 0 15rpx;
+  padding: 30rpx 30rpx 0rpx 30rpx;
 }
 .about_us image {
+  display: block;
   width: 100%;
   height: 210rpx;
   border-radius: 12rpx;
+  margin-bottom: 30rpx;
 }
 .about_us text {
-  font-size: 28rpx;
+  font-size: 30rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;
   color: #333333;
   line-height: 50rpx;
+}
+.about_us .no_content {
+  height: 600rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.about_us .no_content image {
+  width: 216rpx;
+  height: 244rpx;
+}
+.about_us .no_content text {
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
 }
 

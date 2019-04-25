@@ -42,6 +42,7 @@ export default {
 	methods: {
 		//获取评价
 		getEvalutateList(type) {
+			this.listInfo = [];
 			this.lessonType = type;
 			this.ajax({
 				url: 'studentclass/my_assess',
@@ -82,12 +83,12 @@ export default {
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
-
 		text {
 			font-size: 28upx;
 			font-family: PingFangSC-Medium;
 			font-weight: 500;
 			color: rgba(51, 51, 51, 1);
+			padding-bottom: 20upx;
 		}
 
 		.active {

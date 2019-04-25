@@ -45,6 +45,7 @@ export default {
 	methods: {
 		//获取优惠卷列表
 		getCouponList(type) {
+			this.couponList = [];
 			this.type = type;
 			this.ajax({
 				url: 'studentclass/coupom_list',
@@ -90,6 +91,7 @@ view {
 			font-family: PingFangSC-Medium;
 			font-weight: 500;
 			color: rgba(51, 51, 51, 1);
+			padding-bottom: 20upx;
 		}
 
 		.active {

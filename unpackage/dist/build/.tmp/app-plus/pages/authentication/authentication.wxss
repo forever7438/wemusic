@@ -29,7 +29,7 @@
   width: 80rpx;
   height: 80rpx;
 }
-.authentication ._button {
+.authentication button {
   margin: 0 80rpx;
   width: auto;
   line-height: 100rpx;

@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "我的朋友圈",
-  "enablePullDownRefresh": false,
+  "enablePullDownRefresh": true,
   "titleNView": {
     "buttons": [
       {
@@ -10,5 +10,8 @@
         "fontWeight": "bold"
       }
     ]
+  },
+  "usingComponents": {
+    "friends-list": "/components/item/friendsList"
   }
 }

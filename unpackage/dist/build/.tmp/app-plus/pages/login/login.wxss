@@ -1,4 +1,4 @@
-._input {
+input {
   text-align: center;
   font-size: 24rpx;
   width: 100%;
@@ -54,7 +54,7 @@
   font-weight: 400;
   color: #333333;
 }
-.login ._button {
+.login button {
   width: auto;
   line-height: 88rpx;
   background: #fad42a;

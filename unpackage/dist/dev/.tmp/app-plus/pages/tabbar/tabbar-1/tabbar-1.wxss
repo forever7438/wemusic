@@ -3,6 +3,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 15rpx;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
@@ -15,9 +16,9 @@
           justify-content: space-around;
 }
 .class_list image {
-  width: 350rpx;
-  height: 284rpx;
-  margin: 12rpx;
-  border-radius: 8rpx;
+  width: 330rpx;
+  height: 268rpx;
+  margin: 15rpx;
+  border-radius: 16rpx;
 }
 

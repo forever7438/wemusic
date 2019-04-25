@@ -1,5 +1,5 @@
 .course_invitation {
-  padding: 0 15rpx;
+  padding: 0 30rpx;
 }
 .course_invitation .invitation_content {
   display: -webkit-box;
@@ -11,6 +11,7 @@
       -ms-flex-align: end;
           align-items: flex-end;
   margin-top: 78rpx;
+  margin-bottom: 60rpx;
 }
 .course_invitation .invitation_content text {
   font-size: 32rpx;
@@ -18,7 +19,7 @@
   font-weight: 400;
   color: #333333;
 }
-.course_invitation .invitation_content ._input {
+.course_invitation .invitation_content input {
   width: 376rpx;
   height: 88rpx;
   margin-left: 30rpx;
@@ -32,8 +33,8 @@
   color: #666666;
   line-height: 36rpx;
 }
-.course_invitation ._button {
-  margin-top: 80rpx;
+.course_invitation button {
+  margin-top: 120rpx;
   background: #fad42a;
   color: #333333;
   font-size: 32rpx;

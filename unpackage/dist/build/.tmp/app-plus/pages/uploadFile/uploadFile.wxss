@@ -23,7 +23,7 @@
   width: 80rpx;
   height: 80rpx;
 }
-.upload_file ._button {
+.upload_file button {
   margin: 50rpx 30rpx 0;
   width: auto;
   line-height: 100rpx;

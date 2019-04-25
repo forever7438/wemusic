@@ -1,2 +1,1 @@
-<import src="./confirmComplete.vue.wxml" />
-    <template is="b7bad842" data="{{ ...$root['0'], $root }}"/>
+<view class="container data-v-87442658" bind:__l="__l"><image class="success data-v-87442658" src="/static/img/chenggong.png"></image><view class="title _p data-v-87442658">报名成功</view><lesson-list listInfo="{{courseInfo}}" success="{{true}}" lessonType="lessonCopy" class="data-v-87442658"></lesson-list><navigator hover-class="none" url="/pages/myCode/myCode" class="data-v-87442658"><label class="btn _span data-v-87442658">查看邀请码</label></navigator><label data-event-opts="{{[['tap',[['homeBack',['$event']]]]]}}" class="btn home _span data-v-87442658" bindtap="__e">返回首页</label></view>

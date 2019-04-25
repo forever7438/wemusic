@@ -1,2 +1,1 @@
-<import src="./circleFriends.vue.wxml" />
-    <template is="0a852477" data="{{ ...$root['0'], $root }}"/>
+<view class="fridend_content" bind:__l="__l"><view class="parents"><navigator hover-class="none" url="/pages/myFriend/myFriend"><view class="toMyFriend"><text>我的朋友圈</text><uni-icon type="forward" size="20"></uni-icon></view></navigator></view><view class="line"></view><view class="parents"><friends-list friendsList="{{friendsList}}"></friends-list></view></view>

@@ -1,0 +1,1 @@
+<view class="no_content data-v-0ccd56b4" bind:__l="__l"><image src="/static/img/nothing.png" class="data-v-0ccd56b4"></image><text class="data-v-0ccd56b4">{{title}}</text></view>

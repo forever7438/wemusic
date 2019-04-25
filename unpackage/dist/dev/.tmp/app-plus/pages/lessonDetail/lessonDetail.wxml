@@ -1,2 +1,1 @@
-<import src="./lessonDetail.vue.wxml" />
-    <template is="bde149ea" data="{{ ...$root['0'], $root }}"/>
+<view bind:__l="__l"><lesson-head headType="lessonDetail" star="{{$root.m0}}" title="{{musicIndexInfo.name}}" maxTime="{{musicIndexInfo.max_time_type}}" mixTime="{{musicIndexInfo.mix_time_type}}" content="{{musicIndexInfo.content||'暂无课程介绍'}}"></lesson-head><lesson-teacher teacherList="{{teacherList}}"></lesson-teacher><lesson-desc title="课程介绍" content="{{musicIndexInfo.content||'暂无课程介绍'}}"></lesson-desc><lesson-comment title="课程评价" comment="{{comment}}"></lesson-comment><lesson-science title="教学环境" science="{{scienceImg}}"></lesson-science><label class="sign_up _span">报名</label></view>

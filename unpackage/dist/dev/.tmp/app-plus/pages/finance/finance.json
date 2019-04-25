@@ -1,6 +1,6 @@
 {
-  "usingComponents": {},
   "navigationBarTitleText": "财务管理",
+  "enablePullDownRefresh": true,
   "titleNView": {
     "buttons": [
       {
@@ -9,5 +9,9 @@
         "fontWeight": "bold"
       }
     ]
+  },
+  "usingComponents": {
+    "finance-list": "/components/item/financeList",
+    "w-picker": "/components/w-picker/w-picker"
   }
 }

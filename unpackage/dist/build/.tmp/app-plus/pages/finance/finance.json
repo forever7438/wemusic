@@ -9,5 +9,9 @@
         "fontWeight": "bold"
       }
     ]
+  },
+  "usingComponents": {
+    "finance-list": "/components/item/financeList",
+    "w-picker": "/components/w-picker/w-picker"
   }
 }

@@ -1,1 +1,0 @@
-<import src="/components/item/couponList.vue.wxml" /><template name="eced07aa"><view class="_view eced07aa"><view class="_view eced07aa meun_list"><text class="_text eced07aa active">满减券</text><text class="_text eced07aa">折扣券</text></view><template data="{{...$root['0'], ...$root[$kk+'eced07aa-0'],$root}}" is="1899a080"></template></view></template>

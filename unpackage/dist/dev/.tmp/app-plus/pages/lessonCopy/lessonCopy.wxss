@@ -1,5 +1,5 @@
 .lesson_copy .all_lesson {
-  padding: 0 15rpx;
+  padding: 0 30rpx;
   margin-top: 40rpx;
 }
 .lesson_copy .all_lesson .lesson_tips {

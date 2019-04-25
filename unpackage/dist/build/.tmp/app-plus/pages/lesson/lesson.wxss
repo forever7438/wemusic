@@ -1,7 +1,7 @@
-.my_lesson_content.data-v-d25e04e4 {
+.my_lesson_content.data-v-01593a7c {
   padding: 0 15rpx;
 }
-.my_lesson_content view.data-v-d25e04e4 {
+.my_lesson_content .class_meun.data-v-01593a7c {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19,17 +19,14 @@
   color: #333333;
   height: 90rpx;
 }
-.my_lesson_content view text.data-v-d25e04e4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+.my_lesson_content .class_meun text.data-v-01593a7c {
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+  padding-bottom: 20rpx;
 }
-.my_lesson_content view .isActive.data-v-d25e04e4 {
-  border-bottom: 6rpx solid #333333ff !important;
+.my_lesson_content .class_meun .active.data-v-01593a7c {
+  border-bottom: 6rpx solid #000;
 }
 

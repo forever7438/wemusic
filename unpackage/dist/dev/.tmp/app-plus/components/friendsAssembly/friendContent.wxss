@@ -1,0 +1,7 @@
+.contents text {
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+}
+

@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText": "调整通知",
-  "enablePullDownRefresh": true
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "message-list": "/components/item/messageList"
+  }
 }

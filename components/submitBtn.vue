@@ -56,7 +56,8 @@ export default {
 .submit {
 	width: 100%;
 	position: fixed;
-	bottom: 0;
+	bottom: 10upx;
+	left: 0;
 	padding: 10upx 40upx;
 	background-color: #fff;
 	input {

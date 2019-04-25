@@ -1,1 +1,0 @@
-<template name="6dea1680"><view class="_view 6dea1680 lesson_desc"><text class="_text 6dea1680 teacher_class">{{ title }}</text><view class="_view 6dea1680 teacher_content">{{ content }}</view></view></template>

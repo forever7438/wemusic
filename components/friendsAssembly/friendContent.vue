@@ -19,6 +19,7 @@ export default {
 
 <style lang="less">
 .contents {
+	margin: 10upx 0;
 	text {
 		font-size: 32upx;
 		font-family: PingFangSC-Regular;

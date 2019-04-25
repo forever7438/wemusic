@@ -42,9 +42,6 @@
 .setting_content ._ul ._li:last-of-type {
   border-bottom: none;
 }
-.setting_content ._ul ._li ._s {
-  text-decoration: none;
-}
 .setting_content .login_out {
   text-align: center;
   margin-top: 40rpx;

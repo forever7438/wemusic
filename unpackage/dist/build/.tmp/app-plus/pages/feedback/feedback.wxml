@@ -1,2 +1,1 @@
-<import src="./feedback.vue.wxml" />
-    <template is="31a0b18b" data="{{ ...$root['0'], $root }}"/>
+<view bind:__l="__l"><textarea placeholder="请留下您宝贵的意见" data-event-opts="{{[['input',[['__set_model',['$0','contact','$event',[]],['']]]]]}}" value="{{contact}}" bindinput="__e"></textarea><input class="uni-input" placeholder="请输入联系方式(手机或邮箱)" data-event-opts="{{[['input',[['__set_model',['$0','body','$event',[]],['']]]]]}}" value="{{body}}" bindinput="__e"/><button hover-class="btn-hover" data-event-opts="{{[['tap',[['submitFeedback',['$event']]]]]}}" bindtap="__e">提交</button></view>

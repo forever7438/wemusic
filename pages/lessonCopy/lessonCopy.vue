@@ -4,10 +4,7 @@
 		<view class="all_lesson">
 			<view v-if="flag">
 				<text class="lesson_tips">全部课程</text>
-				<lessonList :listInfo="musicInfo.list" 
-							lessonType="lessonCopy" 
-							:musicId="musicId"></lessonList>
-				
+				<lessonList :listInfo="musicInfo.list" lessonType="lessonCopy" :musicId="musicId"></lessonList>
 			</view>
 		</view>
 	</view>
@@ -23,12 +20,16 @@ export default {
 	},
 	data() {
 		return {
-			musicId:"",
+			musicId: '',
 			musicInfo: {},
 			flag: false
 		};
 	},
 	onLoad(obj) {
+		uni.setNavigationBarColor({
+			frontColor: '#ffffff',
+			backgroundColor: '#FFFDEF'
+		});
 		this.musicId = obj.musicId;
 		this.getMusicInfo(obj.musicId);
 	},

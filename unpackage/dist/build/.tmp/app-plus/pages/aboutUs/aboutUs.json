@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "关于我们"
+  "navigationBarTitleText": "关于我们",
+  "usingComponents": {
+    "no-content": "/components/noContent"
+  }
 }

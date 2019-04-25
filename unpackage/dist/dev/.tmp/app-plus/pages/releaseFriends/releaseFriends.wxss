@@ -1,19 +1,7 @@
-.shode {
-  z-index: 999999;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  padding: 600rpx 100rpx;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 view {
   padding: 0 15rpx;
 }
-view ._textarea {
+view textarea {
   width: auto;
   height: 800rpx;
   padding: 38rpx;
@@ -35,7 +23,7 @@ view .choose_images {
   font-family: PingFangSC-Medium;
   font-weight: 500;
 }
-view .choose_images ._video {
+view .choose_images image {
   width: 200rpx;
   height: 200rpx;
 }

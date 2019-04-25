@@ -1,7 +1,7 @@
-.my_lesson_content.data-v-246d6a64 {
+.my_lesson_content.data-v-60fc1280 {
   padding: 0 15rpx;
 }
-.my_lesson_content ._ul.data-v-246d6a64 {
+.my_lesson_content .class_meun.data-v-60fc1280 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13,23 +13,19 @@
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-  font-size: 36rpx;
+  font-size: 28rpx;
   font-family: PingFangSC-Regular;
-  font-weight: 600;
+  font-weight: 500;
   color: #333333;
   height: 90rpx;
 }
-.my_lesson_content ._ul ._li.data-v-246d6a64 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+.my_lesson_content .class_meun text.data-v-60fc1280 {
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
 }
-.my_lesson_content ._ul .isActive.data-v-246d6a64 {
-  border-bottom: 6rpx solid #333333ff;
+.my_lesson_content .class_meun .active.data-v-60fc1280 {
+  border-bottom: 6rpx solid #000;
 }
 

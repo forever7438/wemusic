@@ -1,4 +1,4 @@
-._input {
+input {
   font-size: 24rpx;
   width: 100%;
   text-align: center;
@@ -33,7 +33,7 @@
   font-weight: 400;
   color: #333333;
 }
-.register .register_acount ._input {
+.register .register_acount input {
   padding-left: 10rpx;
   border-bottom: 2rpx solid #b9b9b9;
 }
@@ -56,7 +56,7 @@
   font-weight: 400;
   color: #333333;
 }
-.register .register_pass ._input {
+.register .register_pass input {
   padding-left: 10rpx;
   border-bottom: 2rpx solid #b9b9b9;
 }
@@ -79,7 +79,7 @@
   font-weight: 400;
   color: #333333;
 }
-.register .register_code ._input {
+.register .register_code input {
   width: 170rpx;
   padding-left: 10rpx;
   border-bottom: 2rpx solid #b9b9b9;
@@ -108,7 +108,7 @@
   font-weight: 400;
   color: #333333;
 }
-.register ._button {
+.register button {
   width: auto;
   line-height: 88rpx;
   background: #fad42a;

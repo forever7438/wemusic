@@ -1,13 +1,19 @@
-.add_teacher {
+input.data-v-1cc00340 {
+  padding-left: 10rpx;
+  font-size: 24rpx;
+  width: 100%;
+  border-bottom: 2rpx solid #b9b9b9;
+}
+.add_teacher.data-v-1cc00340 {
   padding: 0 24rpx;
 }
-.add_teacher ._label {
+.add_teacher label.data-v-1cc00340 {
   font-size: 32rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   color: #666666;
 }
-.add_teacher view {
+.add_teacher .teacher_meun.data-v-1cc00340 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,7 +28,7 @@
           justify-content: space-between;
   margin: 30rpx 150rpx;
 }
-.add_teacher view text {
+.add_teacher .teacher_meun text.data-v-1cc00340 {
   width: 100rpx;
   height: 44rpx;
   font-size: 32rpx;
@@ -30,11 +36,7 @@
   font-weight: 400;
   color: #333333;
 }
-.add_teacher view ._input {
-  padding-left: 10rpx;
-  border-bottom: 2rpx solid #000;
-}
-.add_teacher .diffrent {
+.add_teacher .diffrent.data-v-1cc00340 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -50,7 +52,12 @@
           flex-direction: column;
   margin: 30rpx 150rpx;
 }
-.add_teacher .diffrent text {
+.add_teacher .diffrent .j_photo.data-v-1cc00340 {
+  margin: 20rpx auto;
+  width: 100%;
+  height: 180rpx;
+}
+.add_teacher .diffrent text.data-v-1cc00340 {
   width: 100rpx;
   height: 44rpx;
   font-size: 32rpx;
@@ -58,18 +65,18 @@
   font-weight: 400;
   color: #333333;
 }
-.add_teacher .diffrent .upload_file {
-  margin: 10px auto;
+.add_teacher .diffrent .upload_file.data-v-1cc00340 {
+  margin: 20rpx auto;
   padding: 60rpx 170rpx;
   text-align: center;
   background: #f6f6f6;
   border-radius: 16rpx;
 }
-.add_teacher .diffrent .upload_file image {
+.add_teacher .diffrent .upload_file image.data-v-1cc00340 {
   width: 60rpx;
   height: 60rpx;
 }
-.add_teacher ._button {
+.add_teacher button.data-v-1cc00340 {
   width: auto;
   line-height: 88rpx;
   margin: 0 110rpx 20rpx;

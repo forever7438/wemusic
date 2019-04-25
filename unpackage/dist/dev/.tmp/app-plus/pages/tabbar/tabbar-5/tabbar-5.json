@@ -1,4 +1,5 @@
 {
+  "enablePullDownRefresh": true,
   "titleNView": {
     "buttons": [
       {
@@ -15,5 +16,6 @@
         "float": "left"
       }
     ]
-  }
+  },
+  "usingComponents": {}
 }

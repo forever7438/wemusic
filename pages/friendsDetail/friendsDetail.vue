@@ -1,10 +1,13 @@
 <template>
 	<view class="content">
-		<image :src="friendDetail.video"></image>
-		<friendHead :itemHead="friendDetail"></friendHead>
-		<friendContent :type="false" :content="friendDetail.body"></friendContent>
-		<friendOperation :message="friendDetail.message" :praise="friendDetail.praise" :forward="friendDetail.forward" :listId="friendDetail.id"></friendOperation>
-		<comment :list="commentList" :message="friendDetail.message"></comment>
+		<view class="parents">
+			<image :src="friendDetail.video"></image>
+			<friendHead :itemHead="friendDetail"></friendHead>
+			<friendContent :type="false" :content="friendDetail.body"></friendContent>
+			<friendOperation :message="friendDetail.message" :praise="friendDetail.praise" :forward="friendDetail.forward" :listId="friendDetail.id"></friendOperation>
+		</view>
+		<view class="line"></view>
+		<view class="parents"><comment :list="commentList" :message="friendDetail.message"></comment></view>
 		<submitBtn :friend_id="friendDetail.id" @refreshFriend="snedComment"></submitBtn>
 	</view>
 </template>
@@ -33,6 +36,10 @@ export default {
 		};
 	},
 	onLoad(obj) {
+		uni.setNavigationBarColor({
+			frontColor: '#ffffff',
+			backgroundColor: '#ffffff'
+		});
 		this.listId = obj.listId;
 		this.getFriendDetail(this.listId, this.index);
 	},
@@ -82,11 +89,19 @@ export default {
 
 <style lang="less">
 .content {
-	padding: 0 15upx;
 	image {
 		width: 100%;
 		height: 410upx;
 		border-radius: 12upx;
+	}
+	.parents {
+		padding: 0 30upx;
+	}
+	.line {
+		width: 100%;
+		height: 2upx;
+		background-color: #ddd;
+		margin: 20upx 0;
 	}
 }
 </style>

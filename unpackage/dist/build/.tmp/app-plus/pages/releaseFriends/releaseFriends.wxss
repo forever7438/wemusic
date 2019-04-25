@@ -1,7 +1,7 @@
 view {
   padding: 0 15rpx;
 }
-view ._textarea {
+view textarea {
   width: auto;
   height: 800rpx;
   padding: 38rpx;

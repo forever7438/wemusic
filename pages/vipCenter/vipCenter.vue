@@ -30,13 +30,13 @@
 			<navigator hover-class="none" url="/pages/rechargeRecord/rechargeRecord">
 				<li>
 					<span>充值记录</span>
-					<s>></s>
+					<uni-icon type="forward" size="20"></uni-icon>
 				</li>
 			</navigator>
 			<navigator hover-class="none" url="/pages/consumptionRecord/consumptionRecord">
 				<li>
 					<span>消费记录</span>
-					<s>></s>
+					<uni-icon type="forward" size="20"></uni-icon>
 				</li>
 			</navigator>
 		</ul>
@@ -44,8 +44,9 @@
 </template>
 
 <script>
+	import uniIcon from '../../components/uni-icon/uni-icon.vue';
 	export default {
-		components: {},
+		components: {uniIcon},
 		data() {
 			return {
 				userInfo: {},

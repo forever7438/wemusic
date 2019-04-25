@@ -1,0 +1,1 @@
+<view class="content_head" bind:__l="__l"><image class="content_images" src="{{itemHead.photo||imageUrl}}"></image><view class="user_info"><text>{{itemHead.people_name}}</text><text>{{$root.f0}}</text></view></view>

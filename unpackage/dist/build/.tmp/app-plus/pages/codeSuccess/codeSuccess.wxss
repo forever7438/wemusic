@@ -118,7 +118,7 @@
   color: #333333;
   margin-bottom: 20rpx;
 }
-.code_success .code_content .code_comment ._textarea {
+.code_success .code_content .code_comment textarea {
   text-align: left;
   width: auto;
   height: 262rpx;

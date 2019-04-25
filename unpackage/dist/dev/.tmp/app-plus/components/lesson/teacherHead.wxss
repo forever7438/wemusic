@@ -1,0 +1,61 @@
+.lesson_contentss {
+  position: relative;
+  width: 100%;
+  height: 728rpx;
+  background-size: 100% 100%;
+}
+.lesson_contentss .back_photo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.lesson_contentss .lesson_shade {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 104rpx 30rpx 30rpx 30rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.3);
+}
+.lesson_contentss .lesson_shade .lesson_name {
+  font-size: 60rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #ffffff;
+}
+.lesson_contentss .lesson_shade .lesson_names {
+  font-size: 34rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #ffffff;
+}
+.lesson_contentss .lesson_shade .lesson_time {
+  margin: 100rpx 0;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 2rpx;
+}
+.lesson_contentss .lesson_shade .lesson_type {
+  margin: 100rpx 0;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #ffffff;
+}
+.lesson_contentss .lesson_shade .lesson_desc {
+  position: absolute;
+  bottom: 68rpx;
+  font-size: 26rpx;
+  font-family: PingFangSC-Light;
+  font-weight: 300;
+  color: #ffffff;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+

@@ -10,5 +10,8 @@
         "fontWeight": "bold"
       }
     ]
+  },
+  "usingComponents": {
+    "friends-list": "/components/item/friendsList"
   }
 }

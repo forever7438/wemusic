@@ -1,5 +1,8 @@
+input {
+  font-size: 24rpx;
+}
 .change_phone {
-  padding: 0 15rpx;
+  padding: 0 30rpx;
 }
 .change_phone ._ul {
   margin-bottom: 40rpx;
@@ -33,7 +36,7 @@
   font-size: 32rpx;
   font-weight: 600;
 }
-.change_phone ._ul ._li ._input {
+.change_phone ._ul ._li input {
   border: none;
   margin-bottom: 0;
 }

@@ -1,0 +1,1 @@
+<view class="friend_list" bind:__l="__l"><block wx:for="{{friendsList}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view class="fridend_content"><friend-head itemHead="{{item}}"></friend-head><friend-content type="{{true}}" content="{{item.body}}" listId="{{item.id}}"></friend-content><image src="{{item.video||userImage}}"></image></view></block></view>

@@ -1,2 +1,1 @@
-<import src="./courseInvitation.vue.wxml" />
-    <template is="6dee5f6b" data="{{ ...$root['0'], $root }}"/>
+<view class="course_invitation" bind:__l="__l"><view class="invitation_content"><text>输入邀请码</text><input type="text"/></view><text class="tips">当您的好友发起邀请时，您可以在此输入邀请码，与好友共同上课，邀请码有效期为一个小时，请尽快填写。</text><button hover-class="btn-hover">确定</button></view>

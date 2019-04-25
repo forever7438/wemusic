@@ -36,7 +36,7 @@
 	.content_head {
 		display: flex;
 		align-items: center;
-
+		margin: 10upx 0;
 		.content_images {
 			width: 100upx !important;
 			height: 100upx !important;

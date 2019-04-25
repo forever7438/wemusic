@@ -118,11 +118,23 @@ var dateUtils = {
 		return result;
 	},
 	format: function(date) {
-		return new Date(parseInt(date) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ');
-
+		let year = new Date(date * 1000).getFullYear(),
+			month = (new Date(date * 1000).getMonth() + 1) > 9 ? (new Date(date * 1000).getMonth() + 1) : '0' + (new Date(date *
+				1000).getMonth() + 1), //月份是从0开始的
+			day = new Date(date * 1000).getDate() > 9 ? new Date(date * 1000).getDate() : '0' + new Date(date * 1000).getDate(),
+			hour = new Date(date * 1000).getHours() > 9 ? new Date(date * 1000).getHours() : '0' + new Date(date * 1000).getHours(),
+			min = new Date(date * 1000).getMinutes() > 9 ? new Date(date * 1000).getMinutes() : '0' + new Date(date * 1000).getMinutes(),
+			sec = new Date(date * 1000).getSeconds() > 9 ? new Date(date * 1000).getSeconds() : '0' + new Date(date * 1000).getSeconds();
+		let newTime = year + '-' +
+			month + '-' +
+			day + ' ' +
+			hour + ':' +
+			min + ':' +
+			sec;
+		return newTime;
 	},
 	parse: function(str) { //将"yyyy-mm-dd HH:MM:ss"格式的字符串，转化为一个Date对象
-		var a = str.split(/[^0-9]/);
+		let a = str.split(/[^0-9]/);
 		return new Date(a[0], a[1] - 1, a[2], a[3], a[4], a[5]);
 	}
 };
