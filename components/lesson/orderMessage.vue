@@ -1,37 +1,37 @@
 <template>
 	<div>
 		<div class="container">
-			<h4 class="text_l">订单信息</h4>
+			<h4 class="text_l">{{$t('index').Order_information}}</h4>
 			<ul class="order_mess">
 				<li>
-					<span>课程</span>
-					<span>{{ request.courseLen }}节</span>
+					<span>{{$t('index').course}}</span>
+					<span>{{ request.courseLen }}{{$t('index').section}}</span>
 				</li>
 				<li @click="coupomPicker">
-					<span>优惠券</span>
+					<span>{{$t('index').Coupon}}</span>
 					<span>{{ request.coupomTitle }}</span>
 				</li>
 				<li>
-					<span>授课方式</span>
+					<span>{{$t('index').Teaching_methods}}</span>
 					<span>{{ way[request.people_num] }}</span>
 				</li>
 			</ul>
 
-			<h4 class="text_l">备注</h4>
-			<textarea class="mui-input-clear remark" maxlength="500" placeholder="请输入备注信息…"></textarea>
+			<h4 class="text_l">{{$t('index').remarks}}</h4>
+			<textarea class="mui-input-clear remark" maxlength="500" :placeholder="$t('index').Please_enter_notes"></textarea>
 		</div>
 		<p class="pay_content">
 			<span>
-				合计
+				{{$t('index').total}}
 				<span class="total">${{ request.price }}</span>
 			</span>
-			<span type="button" class="pay-btn" @click="pay(classId)">支付</span>
+			<span type="button" class="pay-btn" @click="pay(classId)">Pay</span>
 		</p>
 		<mpvue-picker
 			themeColor="#007AFF"
 			ref="mpvuePicker"
 			mode="selector"
-			titleInfo="选择优惠券"
+			titleInfo="Choose coupons"
 			:deepLength="1"
 			:pickerValueDefault="[0]"
 			@onConfirm="onConfirm"
@@ -56,7 +56,7 @@ export default {
 	},
 	data() {
 		return {
-			way: ['一对一', '一对二', '一对三']
+			way: [$t('index').One_on_one, $t('index').A_pair_of_two, $t('index').A_pair_of_three]
 		};
 	},
 	methods: {
@@ -106,7 +106,7 @@ export default {
 				success: res => {
 					if (res.data.body === 'success') {
 						uni.showToast({
-							title: '支付完成',
+							title: 'Success',
 							icon: 'none'
 						});
 						uni.redirectTo({

@@ -3,9 +3,9 @@
         <view :class="{'pickerMask':showPicker}" @click="maskClick" catchtouchmove="true"></view>
         <view class="mpvue-picker-content " :class="{'mpvue-picker-view-show':showPicker}">
             <view class="mpvue-picker__hd" catchtouchmove="true">
-                <view class="mpvue-picker__action" @click="pickerCancel">取消</view>
+                <view class="mpvue-picker__action" @click="pickerCancel">{{$t('index').cancel}}</view>
 				<view class="title_info">{{titleInfo}}</view>
-                <view class="mpvue-picker__action" :style="{color:themeColor}" @click="pickerConfirm">确定</view>
+                <view class="mpvue-picker__action" :style="{color:themeColor}" @click="pickerConfirm">{{$t('index').confirm}}</view>
             </view>
             <!-- 单列 -->
             <picker-view indicator-style="height: 40px;" class="mpvue-picker-view" :value="pickerValue" @change="pickerChange" v-if="mode==='selector' && pickerValueSingleArray.length > 0">

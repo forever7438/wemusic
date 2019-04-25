@@ -3,7 +3,7 @@
 		<ul v-if="moneyList.length">
 			<li v-for="(item, index) in moneyList" :key="index">
 				<div class="recharge_message">
-					<p class="recharge_title">{{ type == 'consumption' ? '购买课程' : '充值' }}</p>
+					<p class="recharge_title">{{ type == 'consumption' ? 'Pay' : 'Recharge' }}</p>
 					<p class="recharge_time">{{ item.time | timeDate }}</p>
 				</div>
 				<div class="recharge_money">
@@ -11,7 +11,7 @@
 				</div>
 			</li>
 		</ul>
-		<noContent v-else title="暂无记录"></noContent>
+		<noContent v-else :title="$t('index').No_data"></noContent>
 	</div>
 </template>
 

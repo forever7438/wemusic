@@ -2,11 +2,11 @@
 	<view>
 		<teacherHead headType="teacherDetail" :star="Number(info.star)" :musicName="info.music_name" :title="info.name" :content="info.experience"></teacherHead>
 		<view class="all_lesson">
-			<text class="lesson_tips">全部课程</text>
+			<text class="lesson_tips">{{$t('index').allCourses}}</text>
 			<lessonList lessonType="lessonCopy" :listInfo="courseList"></lessonList>
 		</view>
-		<lessonComment title="学生评价" v-if="comment.length" :comment="comment"></lessonComment>
-		<lessonScience title="教师风采" v-if="science.length" :science="science"></lessonScience>
+		<lessonComment :title="$t('index').Student_evaluation" v-if="comment.length" :comment="comment"></lessonComment>
+		<lessonScience :title="$t('index').teachers" v-if="science.length" :science="science"></lessonScience>
 	</view>
 </template>
 

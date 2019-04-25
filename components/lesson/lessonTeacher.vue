@@ -1,6 +1,6 @@
 <template>
 	<view class="lesson_teacher">
-		<text class="teacher_class">授课教师</text>
+		<text class="teacher_class">{{$t('index').teacher}}</text>
 		<swiper class="swiper" 
 				:indicator-dots="indicatorDots" 
 				display-multiple-items="2"

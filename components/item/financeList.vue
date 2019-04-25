@@ -1,25 +1,25 @@
 <template>
 	<view class="finance_list">
 		<view v-if="financeList.length" class="finance_list_item" v-for="(item, index) in financeList" :key="index">
-			<text class="finance_year">{{ (item.time * 1000) | getDateYear }}年</text>
+			<text class="finance_year">{{ (item.time * 1000) | getDateYear }} Year</text>
 			<view class="finance_content">
 				<text class="finance_time">{{ (item.start_time * 1000) | formateTime }}-{{ (item.stop_time * 1000) | formateTime }}</text>
 				<view class="finance_money">
 					<text>$2000.00</text>
-					<text>金额</text>
+					<text>{{$t('index').money}}</text>
 				</view>
 				<text class="fun-tag"></text>
 			</view>
 			<view class="finance_option">
 				<view class="total_class">
 					<text>30</text>
-					<text style="margin-right: 60upx;">总课时</text>
+					<text style="margin-right: 60upx;">Total Hours</text>
 				</view>
 				<view class="total_student">
 					<text>5</text>
-					<text>学生数</text>
+					<text>{{$t('index').Students}}</text>
 				</view>
-				<button hover-class="btn-hover" @tap="addFinance(item.id)">申请</button>
+				<button hover-class="btn-hover" @tap="addFinance(item.id)">{{$t('index').Apply}}</button>
 			</view>
 		</view>
 		<noContent v-else title="暂无信息"></noContent>

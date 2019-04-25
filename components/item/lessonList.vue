@@ -9,30 +9,30 @@
 				<div class="lesson_messgae">
 					<p class="lesson_title">{{ item.class_name }}</p>
 					<startclass :star="Number(item.star)" starColor="#666666" v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'"></startclass>
-					<p v-else class="lesson_winer">教师 {{ item.teacher_name }}</p>
+					<p v-else class="lesson_winer">{{ item.teacher_name }}</p>
 					<div class="lesson_pay">
 						<span v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'" class="teacher_number">
-							{{ success ? '教师名称  &nbsp;&nbsp;&nbsp;一对一' : item.teacher_count > 0 ? '共' + item.teacher_count + '名教师' : '暂无教师' }}
+							{{ success ? $t('index').teacher+'  &nbsp;&nbsp;&nbsp;'+$t('index').One_on_one : item.teacher_count > 0 ? $t('index').total + ' '+item.teacher_count+ ' '+ $t('index').teacherNum : $t('index').NoTeacher }}
 						</span>
-						<span v-else class="start_time">{{ item.start_time | timeDate }} 开课</span>
-						<navigator hover-class="none" url="/pages/evaluate/evaluate" v-if="lessonType === '-1'"><span class="go_pay">去评价</span></navigator>
-						<navigator hover-class="none" url="/pages/evaluate/evaluate" v-if="lessonType === '0'"><span class="go_pay">去支付</span></navigator>
+						<span v-else class="start_time">{{ item.start_time | timeDate }} {{$t('index').Class_begins}}</span>
+						<navigator hover-class="none" url="/pages/evaluate/evaluate" v-if="lessonType === '-1'"><span class="go_pay">{{$t('index').To_evaluate}}</span></navigator>
+						<navigator hover-class="none" url="/pages/evaluate/evaluate" v-if="lessonType === '0'"><span class="go_pay">{{$t('index').To_pay}}</span></navigator>
 						<navigator hover-class="none" :url="'/pages/lessonCopy/lessonCopy?musicId=' + item.id" v-if="lessonType === '1'">
-							<span class="go_pay">查看</span>
+							<span class="go_pay">{{$t('index').See}}</span>
 						</navigator>
-						<navigator hover-class="none" url="/pages/evaluate/evaluate" v-if="lessonType === '2'"><span class="go_pay">去评价</span></navigator>
+						<navigator hover-class="none" url="/pages/evaluate/evaluate" v-if="lessonType === '2'"><span class="go_pay">{{$t('index').To_evaluate}}</span></navigator>
 						<navigator
 							hover-class="none"
 							:url="'/pages/choiceTeacher/choiceTeacher?musicId=' + musicId + '&musicSunId=' + item.id"
 							v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'"
 						>
-							<span v-if="!success" class="go_pay">报名</span>
+							<span v-if="!success" class="go_pay">{{$t('index').sign_up}}</span>
 						</navigator>
 					</div>
 				</div>
 			</li>
 		</ul>
-		<noContent v-else title="暂无课程"></noContent>
+		<noContent v-else :title="$t('index').No_data"></noContent>
 	</div>
 </template>
 

@@ -3,22 +3,22 @@
 		<view v-if="!orderShow">
 			<text class="teacher_class">选择授课方式</text>
 			<ul class="way_meun">
-				<li :class="{ active: request.people_num === 0 }" @click="changeWay(0)">一对一</li>
-				<li :class="{ active: request.people_num === 1 }" @click="changeWay(1)">一对二</li>
-				<li :class="{ active: request.people_num === 2 }" @click="changeWay(2)">一对三</li>
+				<li :class="{ active: request.people_num === 0 }" @click="changeWay(0)">{{$t('index').One_on_one}}</li>
+				<li :class="{ active: request.people_num === 1 }" @click="changeWay(1)">{{$t('index').A_pair_of_two}}</li>
+				<li :class="{ active: request.people_num === 2 }" @click="changeWay(2)">{{$t('index').A_pair_of_three}}</li>
 			</ul>
 			<p class="message">
 				<span></span>
-				<span class="info">一对二、一对三的课程，您可以邀请朋友一同上课，更加优惠。</span>
+				<span class="info">{{$t('index').way_tip}}</span>
 			</p>
 			<p class="vipMessage">
-				<span>您还不是WeMusic会员，可享受一节预约课，如果想要上更多课程，请前往开通会员。</span>
-				<span>开通会员</span>
+				<span>{{$t('index').vip_tip}}</span>
+				<span>{{$t('index').open_vip}}</span>
 			</p>
-			<text class="teacher_class">选择时长</text>
+			<text class="teacher_class">{{$t('index').Duration_course}}</text>
 		</view>
 		<selectTime :timeList="timeList" :flag="orderShow" :dateList="dateList" @selctTime="selctTime" @confirmTime="confirmTime"></selectTime>
-		<span v-if="!orderShow" class="sign_up" @click="createOrder">下一步</span>
+		<span v-if="!orderShow" class="sign_up" @click="createOrder">{{$t('index').next}}</span>
 	</div>
 </template>
 

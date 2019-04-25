@@ -6,13 +6,13 @@
 			:title="musicIndexInfo.name"
 			:maxTime="musicIndexInfo.max_time_type"
 			:mixTime="musicIndexInfo.mix_time_type"
-			:content="musicIndexInfo.content || '暂无课程介绍'"
+			:content="musicIndexInfo.content || $t('index').NoIntroduction"
 		></lessonHead>
 		<lessonTeacher :teacherList="teacherList"></lessonTeacher>
-		<lessonDesc title="课程介绍" :content="musicIndexInfo.content || '暂无课程介绍'"></lessonDesc>
-		<lessonComment title="课程评价" :comment="comment"></lessonComment>
-		<lessonScience title="教学环境" :science="scienceImg"></lessonScience>
-		<span class="sign_up">报名</span>
+		<lessonDesc :title="$t('index').courseIntroduction" :content="musicIndexInfo.content || $t('index').NoIntroduction"></lessonDesc>
+		<lessonComment :title="$t('index').Curr_evaluation" :comment="comment"></lessonComment>
+		<lessonScience :title="$t('index').Teaching_environment" :science="scienceImg"></lessonScience>
+		<span class="sign_up">{{$t('index').sign_up}}</span>
 	</view>
 </template>
 

@@ -5,9 +5,9 @@
 			<view style="margin-top: 10upx;"><text class="lesson_names" v-if="headType === 'lessonCopy'">Guitar</text></view>
 			<startclass :size="13" :star="star" :isFill="false" starColor="#FFFFFF" v-if="headType === 'lessonDetail' || headType === 'teacherDetail'"></startclass>
 			<view style="margin-top: 34upx;">
-				<text class="lesson_time" v-if="headType === 'lessonDetail'">课程时长：{{ mixTime }}min - {{ maxTime }}min</text>
+				<text class="lesson_time" v-if="headType === 'lessonDetail'">{{$t('index').Duration_course}}：{{ mixTime }}min - {{ maxTime }}min</text>
 			</view>
-			<text class="lesson_type" v-if="headType === 'teacherDetail'">主授课程 吉他</text>
+			<text class="lesson_type" v-if="headType === 'teacherDetail'">{{$t('index').Main_course}} 吉他</text>
 			<view style="margin-top:60upx;">
 				<text class="lesson_desc">{{ content }}</text>
 			</view>

@@ -11,9 +11,9 @@
 			<view v-if="headType==='lessonDetail'||headType==='teacherDetail'" style="margin-bottom: 34upx;">
 				<startclass :star="star"></startclass>
 			</view>
-			<text class="lesson_time" v-if="headType==='lessonDetail'">课程时长：30min - 180min</text>
-			<text class="lesson_type" v-if="headType==='teacherDetail'">主授课程 {{musicName}}</text>
-			<view style="margin-top:274upx;"><text class="lesson_desc">{{content || '暂无介绍'}}</text></view>
+			<text class="lesson_time" v-if="headType==='lessonDetail'">{{$t('index').Duration_course}}：30min - 180min</text>
+			<text class="lesson_type" v-if="headType==='teacherDetail'">{{$t('index').Main_course}} {{musicName}}</text>
+			<view style="margin-top:274upx;"><text class="lesson_desc">{{content || $t('index').NoIntroduction}}</text></view>
 		</view>
 	</view>
 </template>

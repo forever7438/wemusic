@@ -1,6 +1,6 @@
 <template>
 	<div class="comments_content">
-		<h3>对{{ msg }}评价</h3>
+		<h3>Evaluation of {{ msg }}</h3>
 		<div class="comments_message">
 			<image src="../../static/img/lf.jpg"></image>
 			<span>
@@ -9,8 +9,8 @@
 			</span>
 		</div>
 		<div class="comments">
-			<p>评语</p>
-			<textarea placeholder="输入对课程的评价"></textarea>
+			<p>{{$t('index').comment}}</p>
+			<textarea placeholder="Input Evaluation of Courses"></textarea>
 		</div>
 	</div>
 </template>

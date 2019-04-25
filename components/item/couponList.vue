@@ -4,9 +4,9 @@
 			<div class="coupon_parise">￥ 45</div>
 			<div class="coupon_message">
 				<p class="coupon_title">满￥500减￥45</p>
-				<p class="coupon_date">2018.11.11至2018.11.30有效</p>
+				<p class="coupon_date">2018.11.11 - 2018.11.30</p>
 			</div>
-			<div class="coupon_use"><span>立即使用</span></div>
+			<div class="coupon_use"><span>{{$t('index').Immediate_use}}</span></div>
 		</view>
 	</view>
 </template>

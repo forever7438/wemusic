@@ -35,7 +35,7 @@
 				<view class="picker-modal-footer-info">
 					<block v-if="isMultiSelect">
 						<view class="picker-display">
-							<text>{{ beginText }}日期</text>
+							<text>{{ beginText }} Date</text>
 							<text class="picker-display-text">{{ BeginTitle }}</text>
 							<view
 								v-if="isContainTime"
@@ -49,7 +49,7 @@
 							</view>
 						</view>
 						<view class="picker-display">
-							<text>{{ endText }}日期</text>
+							<text>{{ endText }} Date</text>
 							<text class="picker-display-text">{{ EndTitle }}</text>
 							<view
 								v-if="isContainTime"
@@ -65,7 +65,7 @@
 					</block>
 					<block v-else>
 						<view class="picker-display">
-							<text>当前选择</text>
+							<text>Selected</text>
 							<text class="picker-display-text">{{ BeginTitle }}</text>
 							<view
 								v-if="isContainTime"
@@ -81,15 +81,15 @@
 					</block>
 				</view>
 				<view class="picker-modal-footer-btn">
-					<view class="picker-btn" :hover-stay-time="100" hover-class="picker-btn-active" @click="onCancel">取消</view>
-					<view class="picker-btn" :style="{ color }" :hover-stay-time="100" hover-class="picker-btn-active" @click="onConfirm">确定</view>
+					<view class="picker-btn" :hover-stay-time="100" hover-class="picker-btn-active" @click="onCancel">{{$t('index').cancel}}</view>
+					<view class="picker-btn" :style="{ color }" :hover-stay-time="100" hover-class="picker-btn-active" @click="onConfirm">{{$t('index').confirm}}</view>
 				</view>
 			</view>
 		</view>
 		<!-- 时间选择器 -->
 		<view v-if="showTimePicker" class="picker">
 			<view class="picker-modal picker-time">
-				<view class="picker-modal-header"><text class="picker-modal-header-title">选择日期</text></view>
+				<view class="picker-modal-header"><text class="picker-modal-header-title">{{$t('index').Selection_date}}</text></view>
 				<picker-view class="picker-modal-time" indicator-class="picker-modal-time-item" :value="timeValue" @change="onTimeChange">
 					<picker-view-column>
 						<view style="line-height: 35px;" v-for="(v, i) in 24" :key="i">{{ i < 10 ? '0' + i : i }}时</view>

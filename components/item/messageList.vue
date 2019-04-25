@@ -4,14 +4,14 @@
 			<navigator hover-class="none" v-for="(item, index) in 5" :key="index" :url="'/pages/adjustmentDetail/adjustmentDetail?messageId=' + index">
 				<li>
 					<p>
-						<span>系统通知</span>
-						<s>2019年1月12日</s>
+						<span>{{$t('index').System_notification}}</span>
+						<s>2019-1-12日</s>
 					</p>
 					<span class="message_content">课程《吉他入门12期》报名成功</span>
 				</li>
 			</navigator>
 		</ul>
-		<noContent v-else title="暂无通知"></noContent>
+		<noContent v-else :title="$t('index').No_data"></noContent>
 	</div>
 </template>
 

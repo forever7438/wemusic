@@ -1,9 +1,9 @@
 <template>
 	<view class="lesson_copy">
-		<lessonHead v-if="flag" :title="musicInfo.info.name" headType="lessonCopy" :content="musicInfo.info.content || '暂无介绍'"></lessonHead>
+		<lessonHead v-if="flag" :title="musicInfo.info.name" headType="lessonCopy" :content="musicInfo.info.content || $t('index').NoIntroduction"></lessonHead>
 		<view class="all_lesson">
 			<view v-if="flag">
-				<text class="lesson_tips">全部课程</text>
+				<text class="lesson_tips">{{$t('index').allCourses}}</text>
 				<lessonList :listInfo="musicInfo.list" lessonType="lessonCopy" :musicId="musicId"></lessonList>
 			</view>
 		</view>

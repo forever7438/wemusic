@@ -34,7 +34,7 @@ export default {
 				success: res => {
 					if (res.data.body === 'success') {
 						uni.showToast({
-							title: '点赞成功',
+							title: 'Succes',
 							icon: 'none'
 						});
 					} else {

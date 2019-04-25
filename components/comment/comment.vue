@@ -1,7 +1,7 @@
 <template>
 	<div class="comment_list">
 		<h3>
-			评论
+			{{$t('index').comment}}
 			<span>({{ message }})</span>
 		</h3>
 		<ul v-if="message != 0">
@@ -18,7 +18,7 @@
 		</ul>
 		<view class="no_content" v-else>
 			<image src="../../static/img/nothing.png"></image>
-			<text>暂无评论</text>
+			<text>{{$t('index').No_data}}</text>
 		</view>
 	</div>
 </template>
