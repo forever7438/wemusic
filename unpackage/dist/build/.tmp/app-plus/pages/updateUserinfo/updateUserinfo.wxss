@@ -45,7 +45,7 @@
   border-bottom: 2rpx solid #e7e8ea;
   padding-right: 30rpx;
 }
-.update_userinfo ._ul ._li view {
+.update_userinfo ._ul ._li .choose_date {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

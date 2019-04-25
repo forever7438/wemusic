@@ -44,7 +44,9 @@
     "pages/choiceTeacher/choiceTeacher",
     "pages/confirmComplete/confirmComplete",
     "pages/addTask/addTask",
-    "pages/forgetPass/forgetPass"
+    "pages/forgetPass/forgetPass",
+    "pages/code/code",
+    "pages/registrationSuccess/registrationSuccess"
   ],
   "subPackages": [],
   "window": {

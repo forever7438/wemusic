@@ -10,6 +10,7 @@
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
+  margin: 10rpx 0;
 }
 .operation view {
   display: -webkit-box;

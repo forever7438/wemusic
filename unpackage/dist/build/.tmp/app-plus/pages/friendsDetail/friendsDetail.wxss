@@ -7,7 +7,7 @@
   padding: 0 30rpx;
 }
 .content .line {
-  width: 100%;
+  width: auto;
   height: 2rpx;
   background-color: #ddd;
   margin: 20rpx 0;

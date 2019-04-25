@@ -1,4 +1,4 @@
-.no_content.data-v-b566bf5a {
+.no_content.data-v-6c5e52ad {
   height: 600rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -18,11 +18,11 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
-.no_content image.data-v-b566bf5a {
+.no_content image.data-v-6c5e52ad {
   width: 216rpx;
   height: 244rpx;
 }
-.no_content text.data-v-b566bf5a {
+.no_content text.data-v-6c5e52ad {
   font-size: 32rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;

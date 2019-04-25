@@ -1,13 +1,15 @@
 .submit {
-  width: 100%;
+  width: auto;
   position: fixed;
-  bottom: 0;
+  bottom: 10rpx;
+  left: 0;
   padding: 10rpx 40rpx;
   background-color: #fff;
 }
 .submit input {
   float: left;
   width: 540rpx;
+  margin-right: 10rpx;
   line-height: 52rpx;
   font-size: 28rpx;
   background: #f0f2f7;

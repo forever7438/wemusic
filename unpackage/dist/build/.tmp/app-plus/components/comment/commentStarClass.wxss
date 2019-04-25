@@ -1,8 +1,8 @@
-.comments_content ._h3.data-v-1f53c2e2 {
+.comments_content ._h3.data-v-7b395670 {
   text-align: left;
   margin-top: 20rpx;
 }
-.comments_content .comments_message.data-v-1f53c2e2 {
+.comments_content .comments_message.data-v-7b395670 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13,27 +13,27 @@
           align-items: center;
   margin: 20rpx 0;
 }
-.comments_content .comments_message image.data-v-1f53c2e2 {
+.comments_content .comments_message image.data-v-7b395670 {
   width: 254rpx;
   height: 160rpx;
 }
-.comments_content .comments_message ._span.data-v-1f53c2e2 {
+.comments_content .comments_message ._span.data-v-7b395670 {
   text-align: left;
 }
-.comments_content .comments_message ._span ._p.data-v-1f53c2e2:nth-of-type(1) {
+.comments_content .comments_message ._span ._p.data-v-7b395670:nth-of-type(1) {
   font-size: 32rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   color: #1a1a1a;
   margin-bottom: 20rpx;
 }
-.comments_content .comments_message ._span ._p.data-v-1f53c2e2:nth-of-type(2) {
+.comments_content .comments_message ._span ._p.data-v-7b395670:nth-of-type(2) {
   font-size: 28rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;
   color: #666666;
 }
-.comments_content .comments ._p.data-v-1f53c2e2 {
+.comments_content .comments ._p.data-v-7b395670 {
   text-align: left;
   font-size: 32rpx;
   font-family: PingFangSC-Medium;
@@ -41,7 +41,7 @@
   color: #333333;
   margin-bottom: 20rpx;
 }
-.comments_content .comments textarea.data-v-1f53c2e2 {
+.comments_content .comments textarea.data-v-7b395670 {
   width: auto;
   height: 262rpx;
   background: #f9f9f9;

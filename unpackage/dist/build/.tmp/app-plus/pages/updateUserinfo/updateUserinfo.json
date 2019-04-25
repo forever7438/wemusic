@@ -11,6 +11,7 @@
   },
   "usingComponents": {
     "w-picker": "/components/w-picker/w-picker",
-    "neil-modal": "/components/neil-modal/neil-modal"
+    "neil-modal": "/components/neil-modal/neil-modal",
+    "uni-icon": "/components/uni-icon/uni-icon"
   }
 }

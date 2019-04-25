@@ -1,3 +1,6 @@
+.contents {
+  margin: 10rpx 0;
+}
 .contents text {
   font-size: 32rpx;
   font-family: PingFangSC-Regular;

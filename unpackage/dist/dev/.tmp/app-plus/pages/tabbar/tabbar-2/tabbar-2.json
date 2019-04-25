@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "课程表",
-  "enablePullDownRefresh": true,
+  "enablePullDownRefresh": false,
   "titleNView": {
     "backgroundColor": "#ffff",
     "titleSize": "17px",

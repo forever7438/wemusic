@@ -1,7 +1,7 @@
-.my_evaluate_content.data-v-0ce4a7f5 {
+.my_evaluate_content.data-v-ba540710 {
   padding: 0 30rpx;
 }
-.my_evaluate_content .meun_list.data-v-0ce4a7f5 {
+.my_evaluate_content .meun_list.data-v-ba540710 {
   height: 90rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -15,14 +15,14 @@
       -ms-flex-pack: distribute;
           justify-content: space-around;
 }
-.my_evaluate_content .meun_list text.data-v-0ce4a7f5 {
+.my_evaluate_content .meun_list text.data-v-ba540710 {
   font-size: 28rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   color: #333333;
   padding-bottom: 20rpx;
 }
-.my_evaluate_content .meun_list .active.data-v-0ce4a7f5 {
+.my_evaluate_content .meun_list .active.data-v-ba540710 {
   border-bottom: 6rpx solid #000;
 }
 

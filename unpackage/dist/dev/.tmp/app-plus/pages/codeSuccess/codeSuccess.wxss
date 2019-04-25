@@ -1,6 +1,7 @@
 .code_success {
   padding: 64rpx 30rpx 40rpx 30rpx;
   background-color: #333;
+  height: 100vh;
 }
 .code_success .code_content {
   width: 100%;

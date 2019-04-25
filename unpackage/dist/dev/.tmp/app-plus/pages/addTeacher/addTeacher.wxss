@@ -1,19 +1,19 @@
-input.data-v-1cc00340 {
+input.data-v-5bcbd2c6 {
   padding-left: 10rpx;
   font-size: 24rpx;
   width: 100%;
   border-bottom: 2rpx solid #b9b9b9;
 }
-.add_teacher.data-v-1cc00340 {
+.add_teacher.data-v-5bcbd2c6 {
   padding: 0 24rpx;
 }
-.add_teacher label.data-v-1cc00340 {
+.add_teacher label.data-v-5bcbd2c6 {
   font-size: 32rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   color: #666666;
 }
-.add_teacher .teacher_meun.data-v-1cc00340 {
+.add_teacher .teacher_meun.data-v-5bcbd2c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -28,7 +28,7 @@ input.data-v-1cc00340 {
           justify-content: space-between;
   margin: 30rpx 150rpx;
 }
-.add_teacher .teacher_meun text.data-v-1cc00340 {
+.add_teacher .teacher_meun text.data-v-5bcbd2c6 {
   width: 100rpx;
   height: 44rpx;
   font-size: 32rpx;
@@ -36,7 +36,7 @@ input.data-v-1cc00340 {
   font-weight: 400;
   color: #333333;
 }
-.add_teacher .diffrent.data-v-1cc00340 {
+.add_teacher .diffrent.data-v-5bcbd2c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -52,12 +52,12 @@ input.data-v-1cc00340 {
           flex-direction: column;
   margin: 30rpx 150rpx;
 }
-.add_teacher .diffrent .j_photo.data-v-1cc00340 {
+.add_teacher .diffrent .j_photo.data-v-5bcbd2c6 {
   margin: 20rpx auto;
   width: 100%;
   height: 180rpx;
 }
-.add_teacher .diffrent text.data-v-1cc00340 {
+.add_teacher .diffrent text.data-v-5bcbd2c6 {
   width: 100rpx;
   height: 44rpx;
   font-size: 32rpx;
@@ -65,18 +65,18 @@ input.data-v-1cc00340 {
   font-weight: 400;
   color: #333333;
 }
-.add_teacher .diffrent .upload_file.data-v-1cc00340 {
+.add_teacher .diffrent .upload_file.data-v-5bcbd2c6 {
   margin: 20rpx auto;
   padding: 60rpx 170rpx;
   text-align: center;
   background: #f6f6f6;
   border-radius: 16rpx;
 }
-.add_teacher .diffrent .upload_file image.data-v-1cc00340 {
+.add_teacher .diffrent .upload_file image.data-v-5bcbd2c6 {
   width: 60rpx;
   height: 60rpx;
 }
-.add_teacher button.data-v-1cc00340 {
+.add_teacher button.data-v-5bcbd2c6 {
   width: auto;
   line-height: 88rpx;
   margin: 0 110rpx 20rpx;

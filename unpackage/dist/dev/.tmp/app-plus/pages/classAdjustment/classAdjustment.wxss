@@ -1,4 +1,4 @@
-._h3.data-v-54f01a4c {
+._h3.data-v-06fbb19c {
   text-align: left;
   margin: 30rpx 0;
   font-size: 48rpx;
@@ -6,10 +6,10 @@
   font-weight: 500;
   color: #333333;
 }
-.classAdjustment ._div.data-v-54f01a4c {
+.classAdjustment ._div.data-v-06fbb19c {
   padding: 0 15rpx;
 }
-.classAdjustment ._div .lesson_message.data-v-54f01a4c {
+.classAdjustment ._div .lesson_message.data-v-06fbb19c {
   margin-top: 20rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -20,30 +20,30 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.classAdjustment ._div .lesson_message image.data-v-54f01a4c {
+.classAdjustment ._div .lesson_message image.data-v-06fbb19c {
   width: 254rpx;
   height: 160rpx;
 }
-.classAdjustment ._div .lesson_message ._p.data-v-54f01a4c {
+.classAdjustment ._div .lesson_message ._p.data-v-06fbb19c {
   text-align: left;
   margin-left: 40rpx;
 }
-.classAdjustment ._div .lesson_message ._p ._span.data-v-54f01a4c {
+.classAdjustment ._div .lesson_message ._p ._span.data-v-06fbb19c {
   font-size: 32rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   color: #1a1a1a;
 }
-.classAdjustment ._div .lesson_message ._p ._s.data-v-54f01a4c {
+.classAdjustment ._div .lesson_message ._p ._s.data-v-06fbb19c {
   font-size: 24rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;
   color: #999999;
 }
-.classAdjustment ._div .lesson_date.data-v-54f01a4c {
+.classAdjustment ._div .lesson_date.data-v-06fbb19c {
   text-align: left;
 }
-.classAdjustment ._div .lesson_date ._span.data-v-54f01a4c {
+.classAdjustment ._div .lesson_date ._span.data-v-06fbb19c {
   display: inline-block;
   padding: 20rpx;
   background: #333333;
@@ -54,17 +54,17 @@
   font-size: 14px;
   font-weight: 400;
 }
-.classAdjustment ._div .lesson_date ._p.data-v-54f01a4c {
+.classAdjustment ._div .lesson_date ._p.data-v-06fbb19c {
   margin-top: 30rpx;
   font-size: 32rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;
   color: #666666;
 }
-.classAdjustment ._div .lesson_time.data-v-54f01a4c {
+.classAdjustment ._div .lesson_time.data-v-06fbb19c {
   text-align: left;
 }
-.classAdjustment ._div .lesson_time ._span.data-v-54f01a4c {
+.classAdjustment ._div .lesson_time ._span.data-v-06fbb19c {
   display: inline-block;
   padding: 20rpx;
   background: #333333;
@@ -73,24 +73,26 @@
   font-family: PingFangSC-Regular;
   color: #ffffff;
 }
-.classAdjustment ._div .lesson_time ._p.data-v-54f01a4c {
+.classAdjustment ._div .lesson_time ._p.data-v-06fbb19c {
   margin-top: 30rpx;
   font-size: 28rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;
   color: #666666;
 }
-.classAdjustment ._div .adjustment_reason.data-v-54f01a4c {
+.classAdjustment ._div .adjustment_reason.data-v-06fbb19c {
   text-align: left;
 }
-.classAdjustment ._div .adjustment_reason textarea.data-v-54f01a4c {
+.classAdjustment ._div .adjustment_reason textarea.data-v-06fbb19c {
   width: auto;
   height: 266rpx;
   padding: 20rpx;
   background: #f9f9f9;
   border-radius: 12rpx;
 }
-.classAdjustment .sign_up.data-v-54f01a4c {
+.classAdjustment .sign_up.data-v-06fbb19c {
+  position: absolute;
+  bottom: 0;
   text-align: center;
   margin-top: 40rpx;
   display: inline-block;

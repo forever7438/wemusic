@@ -1,1 +1,1 @@
-<view class="messgae_content _div data-v-070154bc" bind:__l="__l"><message-list messageList="{{messageList}}" class="data-v-070154bc"></message-list></view>
+<view class="messgae_content _div data-v-e9f0aef0" bind:__l="__l"><message-list messageList="{{messageList}}" class="data-v-e9f0aef0"></message-list></view>

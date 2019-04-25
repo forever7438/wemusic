@@ -7,7 +7,7 @@
 				<image src="../../static/img/creame@2x.png"></image>
 			</view>
 		</view>
-		<view class="">  submitCertification
+		<view class="">
 			<text>{{$t('index').dataUpload }}</text>
 			<image v-if="approve_photo2" :src="approve_photo2" class="shade_image"></image>
 			<view v-else class="shade_image" @tap="chooseImage('approve_photo2')">

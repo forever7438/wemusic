@@ -1,17 +1,5 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],{
 
-/***/ "./node_modules/@babel/runtime/regenerator/index.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime-module.js");
-
-
-/***/ }),
-
 /***/ "./node_modules/@dcloudio/uni-app-plus/dist/index.js":
 /*!***********************************************************!*\
   !*** ./node_modules/@dcloudio/uni-app-plus/dist/index.js ***!
@@ -390,7 +378,7 @@ function getData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"VUE_APP_PLATFORM":"app-plus","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"app-plus","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -6469,7 +6457,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"VUE_APP_PLATFORM":"app-plus","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"app-plus","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$mp[vm.mpType];
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -6490,14 +6478,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"VUE_APP_PLATFORM":"app-plus","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"app-plus","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$mp[vm.mpType];
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"VUE_APP_PLATFORM":"app-plus","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"app-plus","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$mp[vm.mpType];
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -6566,7 +6554,7 @@ var patch = function(oldVnode, vnode) {
         });
         var diffData = diff(data, mpData);
         if (Object.keys(diffData).length) {
-            if (Object({"VUE_APP_PLATFORM":"app-plus","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+            if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"app-plus","BASE_URL":"/"}).VUE_APP_DEBUG) {
                 console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
                     ']差量更新',
                     JSON.stringify(diffData));
@@ -6908,786 +6896,6 @@ internalMixin(Vue);
 
 /***/ }),
 
-/***/ "./node_modules/regenerator-runtime/runtime-module.js":
-/*!************************************************************!*\
-  !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-// This method of obtaining a reference to the global object needs to be
-// kept identical to the way it is obtained in runtime.js
-var g = (function() {
-  return this || (typeof self === "object" && self);
-})() || Function("return this")();
-
-// Use `getOwnPropertyNames` because not all browsers support calling
-// `hasOwnProperty` on the global `self` object in a worker. See #183.
-var hadRuntime = g.regeneratorRuntime &&
-  Object.getOwnPropertyNames(g).indexOf("regeneratorRuntime") >= 0;
-
-// Save the old regeneratorRuntime in case it needs to be restored later.
-var oldRuntime = hadRuntime && g.regeneratorRuntime;
-
-// Force reevalutation of runtime.js.
-g.regeneratorRuntime = undefined;
-
-module.exports = __webpack_require__(/*! ./runtime */ "./node_modules/regenerator-runtime/runtime.js");
-
-if (hadRuntime) {
-  // Restore the original runtime.
-  g.regeneratorRuntime = oldRuntime;
-} else {
-  // Remove the global property added by runtime.js.
-  try {
-    delete g.regeneratorRuntime;
-  } catch(e) {
-    g.regeneratorRuntime = undefined;
-  }
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/regenerator-runtime/runtime.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/regenerator-runtime/runtime.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-!(function(global) {
-  "use strict";
-
-  var Op = Object.prototype;
-  var hasOwn = Op.hasOwnProperty;
-  var undefined; // More compressible than void 0.
-  var $Symbol = typeof Symbol === "function" ? Symbol : {};
-  var iteratorSymbol = $Symbol.iterator || "@@iterator";
-  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
-  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
-
-  var inModule = typeof module === "object";
-  var runtime = global.regeneratorRuntime;
-  if (runtime) {
-    if (inModule) {
-      // If regeneratorRuntime is defined globally and we're in a module,
-      // make the exports object identical to regeneratorRuntime.
-      module.exports = runtime;
-    }
-    // Don't bother evaluating the rest of this file if the runtime was
-    // already defined globally.
-    return;
-  }
-
-  // Define the runtime globally (as expected by generated code) as either
-  // module.exports (if we're in a module) or a new, empty object.
-  runtime = global.regeneratorRuntime = inModule ? module.exports : {};
-
-  function wrap(innerFn, outerFn, self, tryLocsList) {
-    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
-    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
-    var generator = Object.create(protoGenerator.prototype);
-    var context = new Context(tryLocsList || []);
-
-    // The ._invoke method unifies the implementations of the .next,
-    // .throw, and .return methods.
-    generator._invoke = makeInvokeMethod(innerFn, self, context);
-
-    return generator;
-  }
-  runtime.wrap = wrap;
-
-  // Try/catch helper to minimize deoptimizations. Returns a completion
-  // record like context.tryEntries[i].completion. This interface could
-  // have been (and was previously) designed to take a closure to be
-  // invoked without arguments, but in all the cases we care about we
-  // already have an existing method we want to call, so there's no need
-  // to create a new function object. We can even get away with assuming
-  // the method takes exactly one argument, since that happens to be true
-  // in every case, so we don't have to touch the arguments object. The
-  // only additional allocation required is the completion record, which
-  // has a stable shape and so hopefully should be cheap to allocate.
-  function tryCatch(fn, obj, arg) {
-    try {
-      return { type: "normal", arg: fn.call(obj, arg) };
-    } catch (err) {
-      return { type: "throw", arg: err };
-    }
-  }
-
-  var GenStateSuspendedStart = "suspendedStart";
-  var GenStateSuspendedYield = "suspendedYield";
-  var GenStateExecuting = "executing";
-  var GenStateCompleted = "completed";
-
-  // Returning this object from the innerFn has the same effect as
-  // breaking out of the dispatch switch statement.
-  var ContinueSentinel = {};
-
-  // Dummy constructor functions that we use as the .constructor and
-  // .constructor.prototype properties for functions that return Generator
-  // objects. For full spec compliance, you may wish to configure your
-  // minifier not to mangle the names of these two functions.
-  function Generator() {}
-  function GeneratorFunction() {}
-  function GeneratorFunctionPrototype() {}
-
-  // This is a polyfill for %IteratorPrototype% for environments that
-  // don't natively support it.
-  var IteratorPrototype = {};
-  IteratorPrototype[iteratorSymbol] = function () {
-    return this;
-  };
-
-  var getProto = Object.getPrototypeOf;
-  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
-  if (NativeIteratorPrototype &&
-      NativeIteratorPrototype !== Op &&
-      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
-    // This environment has a native %IteratorPrototype%; use it instead
-    // of the polyfill.
-    IteratorPrototype = NativeIteratorPrototype;
-  }
-
-  var Gp = GeneratorFunctionPrototype.prototype =
-    Generator.prototype = Object.create(IteratorPrototype);
-  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
-  GeneratorFunctionPrototype.constructor = GeneratorFunction;
-  GeneratorFunctionPrototype[toStringTagSymbol] =
-    GeneratorFunction.displayName = "GeneratorFunction";
-
-  // Helper for defining the .next, .throw, and .return methods of the
-  // Iterator interface in terms of a single ._invoke method.
-  function defineIteratorMethods(prototype) {
-    ["next", "throw", "return"].forEach(function(method) {
-      prototype[method] = function(arg) {
-        return this._invoke(method, arg);
-      };
-    });
-  }
-
-  runtime.isGeneratorFunction = function(genFun) {
-    var ctor = typeof genFun === "function" && genFun.constructor;
-    return ctor
-      ? ctor === GeneratorFunction ||
-        // For the native GeneratorFunction constructor, the best we can
-        // do is to check its .name property.
-        (ctor.displayName || ctor.name) === "GeneratorFunction"
-      : false;
-  };
-
-  runtime.mark = function(genFun) {
-    if (Object.setPrototypeOf) {
-      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
-    } else {
-      genFun.__proto__ = GeneratorFunctionPrototype;
-      if (!(toStringTagSymbol in genFun)) {
-        genFun[toStringTagSymbol] = "GeneratorFunction";
-      }
-    }
-    genFun.prototype = Object.create(Gp);
-    return genFun;
-  };
-
-  // Within the body of any async function, `await x` is transformed to
-  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
-  // `hasOwn.call(value, "__await")` to determine if the yielded value is
-  // meant to be awaited.
-  runtime.awrap = function(arg) {
-    return { __await: arg };
-  };
-
-  function AsyncIterator(generator) {
-    function invoke(method, arg, resolve, reject) {
-      var record = tryCatch(generator[method], generator, arg);
-      if (record.type === "throw") {
-        reject(record.arg);
-      } else {
-        var result = record.arg;
-        var value = result.value;
-        if (value &&
-            typeof value === "object" &&
-            hasOwn.call(value, "__await")) {
-          return Promise.resolve(value.__await).then(function(value) {
-            invoke("next", value, resolve, reject);
-          }, function(err) {
-            invoke("throw", err, resolve, reject);
-          });
-        }
-
-        return Promise.resolve(value).then(function(unwrapped) {
-          // When a yielded Promise is resolved, its final value becomes
-          // the .value of the Promise<{value,done}> result for the
-          // current iteration.
-          result.value = unwrapped;
-          resolve(result);
-        }, function(error) {
-          // If a rejected Promise was yielded, throw the rejection back
-          // into the async generator function so it can be handled there.
-          return invoke("throw", error, resolve, reject);
-        });
-      }
-    }
-
-    var previousPromise;
-
-    function enqueue(method, arg) {
-      function callInvokeWithMethodAndArg() {
-        return new Promise(function(resolve, reject) {
-          invoke(method, arg, resolve, reject);
-        });
-      }
-
-      return previousPromise =
-        // If enqueue has been called before, then we want to wait until
-        // all previous Promises have been resolved before calling invoke,
-        // so that results are always delivered in the correct order. If
-        // enqueue has not been called before, then it is important to
-        // call invoke immediately, without waiting on a callback to fire,
-        // so that the async generator function has the opportunity to do
-        // any necessary setup in a predictable way. This predictability
-        // is why the Promise constructor synchronously invokes its
-        // executor callback, and why async functions synchronously
-        // execute code before the first await. Since we implement simple
-        // async functions in terms of async generators, it is especially
-        // important to get this right, even though it requires care.
-        previousPromise ? previousPromise.then(
-          callInvokeWithMethodAndArg,
-          // Avoid propagating failures to Promises returned by later
-          // invocations of the iterator.
-          callInvokeWithMethodAndArg
-        ) : callInvokeWithMethodAndArg();
-    }
-
-    // Define the unified helper method that is used to implement .next,
-    // .throw, and .return (see defineIteratorMethods).
-    this._invoke = enqueue;
-  }
-
-  defineIteratorMethods(AsyncIterator.prototype);
-  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
-    return this;
-  };
-  runtime.AsyncIterator = AsyncIterator;
-
-  // Note that simple async functions are implemented on top of
-  // AsyncIterator objects; they just return a Promise for the value of
-  // the final result produced by the iterator.
-  runtime.async = function(innerFn, outerFn, self, tryLocsList) {
-    var iter = new AsyncIterator(
-      wrap(innerFn, outerFn, self, tryLocsList)
-    );
-
-    return runtime.isGeneratorFunction(outerFn)
-      ? iter // If outerFn is a generator, return the full iterator.
-      : iter.next().then(function(result) {
-          return result.done ? result.value : iter.next();
-        });
-  };
-
-  function makeInvokeMethod(innerFn, self, context) {
-    var state = GenStateSuspendedStart;
-
-    return function invoke(method, arg) {
-      if (state === GenStateExecuting) {
-        throw new Error("Generator is already running");
-      }
-
-      if (state === GenStateCompleted) {
-        if (method === "throw") {
-          throw arg;
-        }
-
-        // Be forgiving, per 25.3.3.3.3 of the spec:
-        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
-        return doneResult();
-      }
-
-      context.method = method;
-      context.arg = arg;
-
-      while (true) {
-        var delegate = context.delegate;
-        if (delegate) {
-          var delegateResult = maybeInvokeDelegate(delegate, context);
-          if (delegateResult) {
-            if (delegateResult === ContinueSentinel) continue;
-            return delegateResult;
-          }
-        }
-
-        if (context.method === "next") {
-          // Setting context._sent for legacy support of Babel's
-          // function.sent implementation.
-          context.sent = context._sent = context.arg;
-
-        } else if (context.method === "throw") {
-          if (state === GenStateSuspendedStart) {
-            state = GenStateCompleted;
-            throw context.arg;
-          }
-
-          context.dispatchException(context.arg);
-
-        } else if (context.method === "return") {
-          context.abrupt("return", context.arg);
-        }
-
-        state = GenStateExecuting;
-
-        var record = tryCatch(innerFn, self, context);
-        if (record.type === "normal") {
-          // If an exception is thrown from innerFn, we leave state ===
-          // GenStateExecuting and loop back for another invocation.
-          state = context.done
-            ? GenStateCompleted
-            : GenStateSuspendedYield;
-
-          if (record.arg === ContinueSentinel) {
-            continue;
-          }
-
-          return {
-            value: record.arg,
-            done: context.done
-          };
-
-        } else if (record.type === "throw") {
-          state = GenStateCompleted;
-          // Dispatch the exception by looping back around to the
-          // context.dispatchException(context.arg) call above.
-          context.method = "throw";
-          context.arg = record.arg;
-        }
-      }
-    };
-  }
-
-  // Call delegate.iterator[context.method](context.arg) and handle the
-  // result, either by returning a { value, done } result from the
-  // delegate iterator, or by modifying context.method and context.arg,
-  // setting context.delegate to null, and returning the ContinueSentinel.
-  function maybeInvokeDelegate(delegate, context) {
-    var method = delegate.iterator[context.method];
-    if (method === undefined) {
-      // A .throw or .return when the delegate iterator has no .throw
-      // method always terminates the yield* loop.
-      context.delegate = null;
-
-      if (context.method === "throw") {
-        if (delegate.iterator.return) {
-          // If the delegate iterator has a return method, give it a
-          // chance to clean up.
-          context.method = "return";
-          context.arg = undefined;
-          maybeInvokeDelegate(delegate, context);
-
-          if (context.method === "throw") {
-            // If maybeInvokeDelegate(context) changed context.method from
-            // "return" to "throw", let that override the TypeError below.
-            return ContinueSentinel;
-          }
-        }
-
-        context.method = "throw";
-        context.arg = new TypeError(
-          "The iterator does not provide a 'throw' method");
-      }
-
-      return ContinueSentinel;
-    }
-
-    var record = tryCatch(method, delegate.iterator, context.arg);
-
-    if (record.type === "throw") {
-      context.method = "throw";
-      context.arg = record.arg;
-      context.delegate = null;
-      return ContinueSentinel;
-    }
-
-    var info = record.arg;
-
-    if (! info) {
-      context.method = "throw";
-      context.arg = new TypeError("iterator result is not an object");
-      context.delegate = null;
-      return ContinueSentinel;
-    }
-
-    if (info.done) {
-      // Assign the result of the finished delegate to the temporary
-      // variable specified by delegate.resultName (see delegateYield).
-      context[delegate.resultName] = info.value;
-
-      // Resume execution at the desired location (see delegateYield).
-      context.next = delegate.nextLoc;
-
-      // If context.method was "throw" but the delegate handled the
-      // exception, let the outer generator proceed normally. If
-      // context.method was "next", forget context.arg since it has been
-      // "consumed" by the delegate iterator. If context.method was
-      // "return", allow the original .return call to continue in the
-      // outer generator.
-      if (context.method !== "return") {
-        context.method = "next";
-        context.arg = undefined;
-      }
-
-    } else {
-      // Re-yield the result returned by the delegate method.
-      return info;
-    }
-
-    // The delegate iterator is finished, so forget it and continue with
-    // the outer generator.
-    context.delegate = null;
-    return ContinueSentinel;
-  }
-
-  // Define Generator.prototype.{next,throw,return} in terms of the
-  // unified ._invoke helper method.
-  defineIteratorMethods(Gp);
-
-  Gp[toStringTagSymbol] = "Generator";
-
-  // A Generator should always return itself as the iterator object when the
-  // @@iterator function is called on it. Some browsers' implementations of the
-  // iterator prototype chain incorrectly implement this, causing the Generator
-  // object to not be returned from this call. This ensures that doesn't happen.
-  // See https://github.com/facebook/regenerator/issues/274 for more details.
-  Gp[iteratorSymbol] = function() {
-    return this;
-  };
-
-  Gp.toString = function() {
-    return "[object Generator]";
-  };
-
-  function pushTryEntry(locs) {
-    var entry = { tryLoc: locs[0] };
-
-    if (1 in locs) {
-      entry.catchLoc = locs[1];
-    }
-
-    if (2 in locs) {
-      entry.finallyLoc = locs[2];
-      entry.afterLoc = locs[3];
-    }
-
-    this.tryEntries.push(entry);
-  }
-
-  function resetTryEntry(entry) {
-    var record = entry.completion || {};
-    record.type = "normal";
-    delete record.arg;
-    entry.completion = record;
-  }
-
-  function Context(tryLocsList) {
-    // The root entry object (effectively a try statement without a catch
-    // or a finally block) gives us a place to store values thrown from
-    // locations where there is no enclosing try statement.
-    this.tryEntries = [{ tryLoc: "root" }];
-    tryLocsList.forEach(pushTryEntry, this);
-    this.reset(true);
-  }
-
-  runtime.keys = function(object) {
-    var keys = [];
-    for (var key in object) {
-      keys.push(key);
-    }
-    keys.reverse();
-
-    // Rather than returning an object with a next method, we keep
-    // things simple and return the next function itself.
-    return function next() {
-      while (keys.length) {
-        var key = keys.pop();
-        if (key in object) {
-          next.value = key;
-          next.done = false;
-          return next;
-        }
-      }
-
-      // To avoid creating an additional object, we just hang the .value
-      // and .done properties off the next function object itself. This
-      // also ensures that the minifier will not anonymize the function.
-      next.done = true;
-      return next;
-    };
-  };
-
-  function values(iterable) {
-    if (iterable) {
-      var iteratorMethod = iterable[iteratorSymbol];
-      if (iteratorMethod) {
-        return iteratorMethod.call(iterable);
-      }
-
-      if (typeof iterable.next === "function") {
-        return iterable;
-      }
-
-      if (!isNaN(iterable.length)) {
-        var i = -1, next = function next() {
-          while (++i < iterable.length) {
-            if (hasOwn.call(iterable, i)) {
-              next.value = iterable[i];
-              next.done = false;
-              return next;
-            }
-          }
-
-          next.value = undefined;
-          next.done = true;
-
-          return next;
-        };
-
-        return next.next = next;
-      }
-    }
-
-    // Return an iterator with no values.
-    return { next: doneResult };
-  }
-  runtime.values = values;
-
-  function doneResult() {
-    return { value: undefined, done: true };
-  }
-
-  Context.prototype = {
-    constructor: Context,
-
-    reset: function(skipTempReset) {
-      this.prev = 0;
-      this.next = 0;
-      // Resetting context._sent for legacy support of Babel's
-      // function.sent implementation.
-      this.sent = this._sent = undefined;
-      this.done = false;
-      this.delegate = null;
-
-      this.method = "next";
-      this.arg = undefined;
-
-      this.tryEntries.forEach(resetTryEntry);
-
-      if (!skipTempReset) {
-        for (var name in this) {
-          // Not sure about the optimal order of these conditions:
-          if (name.charAt(0) === "t" &&
-              hasOwn.call(this, name) &&
-              !isNaN(+name.slice(1))) {
-            this[name] = undefined;
-          }
-        }
-      }
-    },
-
-    stop: function() {
-      this.done = true;
-
-      var rootEntry = this.tryEntries[0];
-      var rootRecord = rootEntry.completion;
-      if (rootRecord.type === "throw") {
-        throw rootRecord.arg;
-      }
-
-      return this.rval;
-    },
-
-    dispatchException: function(exception) {
-      if (this.done) {
-        throw exception;
-      }
-
-      var context = this;
-      function handle(loc, caught) {
-        record.type = "throw";
-        record.arg = exception;
-        context.next = loc;
-
-        if (caught) {
-          // If the dispatched exception was caught by a catch block,
-          // then let that catch block handle the exception normally.
-          context.method = "next";
-          context.arg = undefined;
-        }
-
-        return !! caught;
-      }
-
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        var record = entry.completion;
-
-        if (entry.tryLoc === "root") {
-          // Exception thrown outside of any try block that could handle
-          // it, so set the completion value of the entire function to
-          // throw the exception.
-          return handle("end");
-        }
-
-        if (entry.tryLoc <= this.prev) {
-          var hasCatch = hasOwn.call(entry, "catchLoc");
-          var hasFinally = hasOwn.call(entry, "finallyLoc");
-
-          if (hasCatch && hasFinally) {
-            if (this.prev < entry.catchLoc) {
-              return handle(entry.catchLoc, true);
-            } else if (this.prev < entry.finallyLoc) {
-              return handle(entry.finallyLoc);
-            }
-
-          } else if (hasCatch) {
-            if (this.prev < entry.catchLoc) {
-              return handle(entry.catchLoc, true);
-            }
-
-          } else if (hasFinally) {
-            if (this.prev < entry.finallyLoc) {
-              return handle(entry.finallyLoc);
-            }
-
-          } else {
-            throw new Error("try statement without catch or finally");
-          }
-        }
-      }
-    },
-
-    abrupt: function(type, arg) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc <= this.prev &&
-            hasOwn.call(entry, "finallyLoc") &&
-            this.prev < entry.finallyLoc) {
-          var finallyEntry = entry;
-          break;
-        }
-      }
-
-      if (finallyEntry &&
-          (type === "break" ||
-           type === "continue") &&
-          finallyEntry.tryLoc <= arg &&
-          arg <= finallyEntry.finallyLoc) {
-        // Ignore the finally entry if control is not jumping to a
-        // location outside the try/catch block.
-        finallyEntry = null;
-      }
-
-      var record = finallyEntry ? finallyEntry.completion : {};
-      record.type = type;
-      record.arg = arg;
-
-      if (finallyEntry) {
-        this.method = "next";
-        this.next = finallyEntry.finallyLoc;
-        return ContinueSentinel;
-      }
-
-      return this.complete(record);
-    },
-
-    complete: function(record, afterLoc) {
-      if (record.type === "throw") {
-        throw record.arg;
-      }
-
-      if (record.type === "break" ||
-          record.type === "continue") {
-        this.next = record.arg;
-      } else if (record.type === "return") {
-        this.rval = this.arg = record.arg;
-        this.method = "return";
-        this.next = "end";
-      } else if (record.type === "normal" && afterLoc) {
-        this.next = afterLoc;
-      }
-
-      return ContinueSentinel;
-    },
-
-    finish: function(finallyLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.finallyLoc === finallyLoc) {
-          this.complete(entry.completion, entry.afterLoc);
-          resetTryEntry(entry);
-          return ContinueSentinel;
-        }
-      }
-    },
-
-    "catch": function(tryLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc === tryLoc) {
-          var record = entry.completion;
-          if (record.type === "throw") {
-            var thrown = record.arg;
-            resetTryEntry(entry);
-          }
-          return thrown;
-        }
-      }
-
-      // The context.catch method must only be called with a location
-      // argument that corresponds to a known catch block.
-      throw new Error("illegal catch attempt");
-    },
-
-    delegateYield: function(iterable, resultName, nextLoc) {
-      this.delegate = {
-        iterator: values(iterable),
-        resultName: resultName,
-        nextLoc: nextLoc
-      };
-
-      if (this.method === "next") {
-        // Deliberately forget the last sent value so that we don't
-        // accidentally pass it on to the delegate.
-        this.arg = undefined;
-      }
-
-      return ContinueSentinel;
-    }
-  };
-})(
-  // In sloppy mode, unbound `this` refers to the global object, fallback to
-  // Function constructor if we're in global strict mode. That is sadly a form
-  // of indirect eval which violates Content Security Policy.
-  (function() {
-    return this || (typeof self === "object" && self);
-  })() || Function("return this")()
-);
-
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js":
 /*!********************************************************************!*\
   !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
@@ -7826,10 +7034,10 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "E:\\wemusic\\common\\common.js":
-/*!***********************************!*\
-  !*** E:/wemusic/common/common.js ***!
-  \***********************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\common\\common.js":
+/*!***************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/common/common.js ***!
+  \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7948,511 +7156,186 @@ function getImgToBase64(url, callback) {//将图片转换为Base64
 
 /***/ }),
 
-/***/ "E:\\wemusic\\common\\request\\request-downFiles.js":
-/*!******************************************************!*\
-  !*** E:/wemusic/common/request/request-downFiles.js ***!
-  \******************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\common\\i18n.js":
+/*!*************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/common/i18n.js ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.df = exports.DF = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js"));
-
-
-var _request = __webpack_require__(/*! ./request.js */ "E:\\wemusic\\common\\request\\request.js");function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}function _objectWithoutProperties(source, excluded) {if (source == null) return {};var target = _objectWithoutPropertiesLoose(source, excluded);var key, i;if (Object.getOwnPropertySymbols) {var sourceSymbolKeys = Object.getOwnPropertySymbols(source);for (i = 0; i < sourceSymbolKeys.length; i++) {key = sourceSymbolKeys[i];if (excluded.indexOf(key) >= 0) continue;if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;target[key] = source[key];}}return target;}function _objectWithoutPropertiesLoose(source, excluded) {if (source == null) return {};var target = {};var sourceKeys = Object.keys(source);var key, i;for (i = 0; i < sourceKeys.length; i++) {key = sourceKeys[i];if (excluded.indexOf(key) >= 0) continue;target[key] = source[key];}return target;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);}var
-
-
-DonwFiles = /*#__PURE__*/function (_RQ) {_inherits(DonwFiles, _RQ);
-  function DonwFiles() {_classCallCheck(this, DonwFiles);for (var _len = arguments.length, arg = new Array(_len), _key = 0; _key < _len; _key++) {arg[_key] = arguments[_key];}return _possibleConstructorReturn(this, _getPrototypeOf(DonwFiles).call(this,
-    arg));
-  }
-  /**
-     * 下载文件
-     */_createClass(DonwFiles, [{ key: "startDownFiles", value: function startDownFiles()
-
-
-
-
-
-    {var _this = this;var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},_ref$path = _ref.path,path = _ref$path === void 0 ? '' : _ref$path,_ref$title = _ref.title,title = _ref$title === void 0 ? false : _ref$title,_ref$abort = _ref.abort,abort = _ref$abort === void 0 ? function (bt, finsh) {} : _ref$abort,extra = _objectWithoutProperties(_ref, ["path", "title", "abort"]);
-      return new Promise( /*#__PURE__*/function () {var _ref2 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee(resolve, reject) {var obj, i, url, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
-                  obj = {
-                    tempFileInfo: [],
-                    FilePath: [] };_context.prev = 1;
-
-
-                  if (title) {
-                    uni.showLoading({
-                      title: title,
-                      mask: true });
-
-                  }
-                  path = path.toString().split(',');
-                  i = 0;case 5:if (!(i < path.length)) {_context.next = 15;break;}
-                  url = path[i];_context.next = 9;return (
-                    _this.downFiles(_objectSpread({
-                      url: url,
-                      abort: abort },
-                    extra)));case 9:res = _context.sent;
-
-                  obj.FilePath.push(res.tempFilePath);
-                  obj.tempFileInfo.push({
-                    url: url,
-                    filePath: res.tempFilePath });case 12:i++;_context.next = 5;break;case 15:
-
-
-                  resolve(obj);
-                  if (title) {
-                    uni.hideLoading();
-                  }_context.next = 22;break;case 19:_context.prev = 19;_context.t0 = _context["catch"](1);throw _context.t0;case 22:case "end":return _context.stop();}}}, _callee, this, [[1, 19]]);}));return function (_x, _x2) {return _ref2.apply(this, arguments);};}());
-
-
-
-
-
-    } }]);return DonwFiles;}(_request.RQ);
-
-var DF = DonwFiles;exports.DF = DF;
-var df = new DonwFiles();exports.df = df;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
+ /*!
+               * vue-i18n v8.10.0 
+               * (c) 2019 kazuya kawaguchi
+               * Released under the MIT License.
+               */
+!function (t, e) { true ? module.exports = e() : undefined;}(void 0, function () {"use strict";function t(t, e) {"undefined" != typeof console && (console.warn("[vue-i18n] " + t, " at common\\i18n.js:6"), e && console.warn(e.stack, " at common\\i18n.js:6"));}function e(t) {return null !== t && "object" == typeof t;}function n(t) {return O.call(t) === C;}function r(t) {return null === t || void 0 === t;}function i() {for (var t = [], n = arguments.length; n--;) {t[n] = arguments[n];}var r = null,i = null;return 1 === t.length ? e(t[0]) || Array.isArray(t[0]) ? i = t[0] : "string" == typeof t[0] && (r = t[0]) : 2 === t.length && ("string" == typeof t[0] && (r = t[0]), (e(t[1]) || Array.isArray(t[1])) && (i = t[1])), { locale: r, params: i };}function a(t) {return JSON.parse(JSON.stringify(t));}function o(t, e) {if (t.length) {var n = t.indexOf(e);if (n > -1) return t.splice(n, 1);}}function s(t, e) {return W.call(t, e);}function l(t) {for (var n = arguments, r = Object(t), i = 1; i < arguments.length; i++) {var a = n[i];if (void 0 !== a && null !== a) {var o = void 0;for (o in a) {s(a, o) && (e(a[o]) ? r[o] = l(r[o], a[o]) : r[o] = a[o]);}}}return r;}function c(t, n) {if (t === n) return !0;var r = e(t),i = e(n);if (!r || !i) return !r && !i && String(t) === String(n);try {var a = Array.isArray(t),o = Array.isArray(n);if (a && o) return t.length === n.length && t.every(function (t, e) {return c(t, n[e]);});if (a || o) return !1;var s = Object.keys(t),l = Object.keys(n);return s.length === l.length && s.every(function (e) {return c(t[e], n[e]);});} catch (t) {return !1;}}function u(t) {t.prototype.hasOwnProperty("$i18n") || Object.defineProperty(t.prototype, "$i18n", { get: function get() {return this._i18n;} }), t.prototype.$t = function (t) {for (var e = [], n = arguments.length - 1; n-- > 0;) {e[n] = arguments[n + 1];}var r = this.$i18n;return r._t.apply(r, [t, r.locale, r._getMessages(), this].concat(e));}, t.prototype.$tc = function (t, e) {for (var n = [], r = arguments.length - 2; r-- > 0;) {n[r] = arguments[r + 2];}var i = this.$i18n;return i._tc.apply(i, [t, i.locale, i._getMessages(), this, e].concat(n));}, t.prototype.$te = function (t, e) {var n = this.$i18n;return n._te(t, n.locale, n._getMessages(), e);}, t.prototype.$d = function (t) {for (var e, n = [], r = arguments.length - 1; r-- > 0;) {n[r] = arguments[r + 1];}return (e = this.$i18n).d.apply(e, [t].concat(n));}, t.prototype.$n = function (t) {for (var e, n = [], r = arguments.length - 1; r-- > 0;) {n[r] = arguments[r + 1];}return (e = this.$i18n).n.apply(e, [t].concat(n));};}function f(t, e, n) {m(t, n) && v(t, e, n);}function h(t, e, n, r) {if (m(t, n)) {var i = n.context.$i18n;_(t, n) && c(e.value, e.oldValue) && c(t._localeMessage, i.getLocaleMessage(i.locale)) || v(t, e, n);}}function p(e, n, r, i) {if (!r.context) return void t("Vue instance does not exists in VNode context");var a = r.context.$i18n || {};n.modifiers.preserve || a.preserveDirectiveContent || (e.textContent = ""), e._vt = void 0, delete e._vt, e._locale = void 0, delete e._locale, e._localeMessage = void 0, delete e._localeMessage;}function m(e, n) {var r = n.context;return r ? !!r.$i18n || (t("VueI18n instance does not exists in Vue instance"), !1) : (t("Vue instance does not exists in VNode context"), !1);}function _(t, e) {var n = e.context;return t._locale === n.$i18n.locale;}function v(e, n, r) {var i,a,o = n.value,s = g(o),l = s.path,c = s.locale,u = s.args,f = s.choice;if (!l && !c && !u) return void t("value type not supported");if (!l) return void t("`path` is required in v-t directive");var h = r.context;e._vt = e.textContent = f ? (i = h.$i18n).tc.apply(i, [l, f].concat(y(c, u))) : (a = h.$i18n).t.apply(a, [l].concat(y(c, u))), e._locale = h.$i18n.locale, e._localeMessage = h.$i18n.getLocaleMessage(h.$i18n.locale);}function g(t) {var e, r, i, a;return "string" == typeof t ? e = t : n(t) && (e = t.path, r = t.locale, i = t.args, a = t.choice), { path: e, locale: r, args: i, choice: a };}function y(t, e) {var r = [];return t && r.push(t), e && (Array.isArray(e) || n(e)) && r.push(e), r;}function d(t) {d.installed = !0, T = t;T.version && Number(T.version.split(".")[0]);u(T), T.mixin(M), T.directive("t", { bind: f, update: h, unbind: p }), T.component(j.name, j), T.component(N.name, N), T.config.optionMergeStrategies.i18n = function (t, e) {return void 0 === e ? t : e;};}function b(t) {for (var e = [], n = 0, r = ""; n < t.length;) {var i = t[n++];if ("{" === i) {r && e.push({ type: "text", value: r }), r = "";var a = "";for (i = t[n++]; void 0 !== i && "}" !== i;) {a += i, i = t[n++];}var o = "}" === i,s = S.test(a) ? "list" : o && I.test(a) ? "named" : "unknown";e.push({ value: a, type: s });} else "%" === i ? "{" !== t[n] && (r += i) : r += i;}return r && e.push({ type: "text", value: r }), e;}function $(t, n) {var r = [],i = 0,a = Array.isArray(n) ? "list" : e(n) ? "named" : "unknown";if ("unknown" === a) return r;for (; i < t.length;) {var o = t[i];switch (o.type) {case "text":r.push(o.value);break;case "list":r.push(n[parseInt(o.value, 10)]);break;case "named":"named" === a && r.push(n[o.value]);}i++;}return r;}function F(t) {return K.test(t);}function k(t) {var e = t.charCodeAt(0);return e !== t.charCodeAt(t.length - 1) || 34 !== e && 39 !== e ? t : t.slice(1, -1);}function w(t) {if (void 0 === t || null === t) return "eof";switch (t.charCodeAt(0)) {case 91:case 93:case 46:case 34:case 39:return t;case 95:case 36:case 45:return "ident";case 9:case 10:case 13:case 160:case 65279:case 8232:case 8233:return "ws";}return "ident";}function D(t) {var e = t.trim();return ("0" !== t.charAt(0) || !isNaN(t)) && (F(e) ? k(e) : "*" + e);}function x(t) {var e,n,r,i,a,o,s,l = [],c = -1,u = z,f = 0,h = [];for (h[V] = function () {void 0 !== n && (l.push(n), n = void 0);}, h[R] = function () {void 0 === n ? n = r : n += r;}, h[P] = function () {h[R](), f++;}, h[E] = function () {if (f > 0) f--, u = U, h[R]();else {if (f = 0, !1 === (n = D(n))) return !1;h[V]();}}; null !== u;) {if (c++, "\\" !== (e = t[c]) || !function () {var e = t[c + 1];if (u === J && "'" === e || u === q && '"' === e) return c++, r = "\\" + e, h[R](), !0;}()) {if (i = w(e), s = H[u], (a = s[i] || s.else || B) === B) return;if (u = a[0], (o = h[a[1]]) && (r = a[2], r = void 0 === r ? e : r, !1 === o())) return;if (u === G) return l;}}}var T,L = ["style", "currency", "currencyDisplay", "useGrouping", "minimumIntegerDigits", "minimumFractionDigits", "maximumFractionDigits", "minimumSignificantDigits", "maximumSignificantDigits", "localeMatcher", "formatMatcher"],O = Object.prototype.toString,C = "[object Object]",W = Object.prototype.hasOwnProperty,M = { beforeCreate: function beforeCreate() {var t = this.$options;if (t.i18n = t.i18n || (t.__i18n ? {} : null), t.i18n) {if (t.i18n instanceof nt) {if (t.__i18n) try {var e = {};t.__i18n.forEach(function (t) {e = l(e, JSON.parse(t));}), Object.keys(e).forEach(function (n) {t.i18n.mergeLocaleMessage(n, e[n]);});} catch (t) {}this._i18n = t.i18n, this._i18nWatcher = this._i18n.watchI18nData(), this._i18n.subscribeDataChanging(this), this._subscribing = !0;} else if (n(t.i18n)) {if (this.$root && this.$root.$i18n && this.$root.$i18n instanceof nt && (t.i18n.root = this.$root, t.i18n.formatter = this.$root.$i18n.formatter, t.i18n.fallbackLocale = this.$root.$i18n.fallbackLocale, t.i18n.silentTranslationWarn = this.$root.$i18n.silentTranslationWarn, t.i18n.silentFallbackWarn = this.$root.$i18n.silentFallbackWarn, t.i18n.pluralizationRules = this.$root.$i18n.pluralizationRules, t.i18n.preserveDirectiveContent = this.$root.$i18n.preserveDirectiveContent), t.__i18n) try {var r = {};t.__i18n.forEach(function (t) {r = l(r, JSON.parse(t));}), t.i18n.messages = r;} catch (t) {}this._i18n = new nt(t.i18n), this._i18nWatcher = this._i18n.watchI18nData(), this._i18n.subscribeDataChanging(this), this._subscribing = !0, (void 0 === t.i18n.sync || t.i18n.sync) && (this._localeWatcher = this.$i18n.watchLocale());}} else this.$root && this.$root.$i18n && this.$root.$i18n instanceof nt ? (this._i18n = this.$root.$i18n, this._i18n.subscribeDataChanging(this), this._subscribing = !0) : t.parent && t.parent.$i18n && t.parent.$i18n instanceof nt && (this._i18n = t.parent.$i18n, this._i18n.subscribeDataChanging(this), this._subscribing = !0);}, beforeDestroy: function beforeDestroy() {if (this._i18n) {var t = this;this.$nextTick(function () {t._subscribing && (t._i18n.unsubscribeDataChanging(t), delete t._subscribing), t._i18nWatcher && (t._i18nWatcher(), t._i18n.destroyVM(), delete t._i18nWatcher), t._localeWatcher && (t._localeWatcher(), delete t._localeWatcher), t._i18n = null;});}} },j = { name: "i18n", functional: !0, props: { tag: { type: String, default: "span" }, path: { type: String, required: !0 }, locale: { type: String }, places: { type: [Array, Object] } }, render: function render(t, e) {var n = e.props,r = e.data,i = e.children,a = e.parent,o = a.$i18n;if (i = (i || []).filter(function (t) {return t.tag || (t.text = t.text.trim());}), !o) return i;var s = n.path,l = n.locale,c = {},u = n.places || {},f = (Array.isArray(u) ? u.length : Object.keys(u).length, i.every(function (t) {if (t.data && t.data.attrs) {var e = t.data.attrs.place;return void 0 !== e && "" !== e;}}));return Array.isArray(u) ? u.forEach(function (t, e) {c[e] = t;}) : Object.keys(u).forEach(function (t) {c[t] = u[t];}), i.forEach(function (t, e) {var n = f ? "" + t.data.attrs.place : "" + e;c[n] = t;}), t(n.tag, r, o.i(s, l, c));} },N = { name: "i18n-n", functional: !0, props: { tag: { type: String, default: "span" }, value: { type: Number, required: !0 }, format: { type: [String, Object] }, locale: { type: String } }, render: function render(t, n) {var r = n.props,i = n.parent,a = n.data,o = i.$i18n;if (!o) return null;var s = null,l = null;"string" == typeof r.format ? s = r.format : e(r.format) && (r.format.key && (s = r.format.key), l = Object.keys(r.format).reduce(function (t, e) {var n;return L.includes(e) ? Object.assign({}, t, (n = {}, n[e] = r.format[e], n)) : t;}, null));var c = r.locale || o.locale,u = o._ntp(r.value, c, s, l),f = u.map(function (t, e) {var n,r = a.scopedSlots && a.scopedSlots[t.type];return r ? r((n = {}, n[t.type] = t.value, n.index = e, n.parts = u, n)) : t.value;});return t(r.tag, { attrs: a.attrs, class: a.class, staticClass: a.staticClass }, f);} },A = function A() {this._caches = Object.create(null);};A.prototype.interpolate = function (t, e) {if (!e) return [t];var n = this._caches[t];return n || (n = b(t), this._caches[t] = n), $(n, e);};var S = /^(?:\d)+/,I = /^(?:\w)+/,R = 0,V = 1,P = 2,E = 3,z = 0,U = 4,J = 5,q = 6,G = 7,B = 8,H = [];H[z] = { ws: [z], ident: [3, R], "[": [U], eof: [G] }, H[1] = { ws: [1], ".": [2], "[": [U], eof: [G] }, H[2] = { ws: [2], ident: [3, R], 0: [3, R], number: [3, R] }, H[3] = { ident: [3, R], 0: [3, R], number: [3, R], ws: [1, V], ".": [2, V], "[": [U, V], eof: [G, V] }, H[U] = { "'": [J, R], '"': [q, R], "[": [U, P], "]": [1, E], eof: B, else: [U, R] }, H[J] = { "'": [U, R], eof: B, else: [J, R] }, H[q] = { '"': [U, R], eof: B, else: [q, R] };var K = /^\s?(?:true|false|-?[\d.]+|'[^']*'|"[^"]*")\s?$/,Q = function Q() {this._cache = Object.create(null);};Q.prototype.parsePath = function (t) {var e = this._cache[t];return e || (e = x(t)) && (this._cache[t] = e), e || [];}, Q.prototype.getPathValue = function (t, n) {if (!e(t)) return null;var r = this.parsePath(n);if (0 === r.length) return null;for (var i = r.length, a = t, o = 0; o < i;) {var s = a[r[o]];if (void 0 === s) return null;a = s, o++;}return a;};var X = /(?:@(?:\.[a-z]+)?:(?:[\w\-_|.]+|\([\w\-_|.]+\)))/g,Y = /^@(?:\.([a-z]+))?:/,Z = /[()]/g,tt = { upper: function upper(t) {return t.toLocaleUpperCase();}, lower: function lower(t) {return t.toLocaleLowerCase();} },et = new A(),nt = function nt(t) {var e = this;void 0 === t && (t = {}), !T && "undefined" != typeof window && window.Vue && d(window.Vue);var n = t.locale || "en-US",i = t.fallbackLocale || "en-US",a = t.messages || {},o = t.dateTimeFormats || {},s = t.numberFormats || {};this._vm = null, this._formatter = t.formatter || et, this._missing = t.missing || null, this._root = t.root || null, this._sync = void 0 === t.sync || !!t.sync, this._fallbackRoot = void 0 === t.fallbackRoot || !!t.fallbackRoot, this._silentTranslationWarn = void 0 !== t.silentTranslationWarn && !!t.silentTranslationWarn, this._silentFallbackWarn = void 0 !== t.silentFallbackWarn && !!t.silentFallbackWarn, this._dateTimeFormatters = {}, this._numberFormatters = {}, this._path = new Q(), this._dataListeners = [], this._preserveDirectiveContent = void 0 !== t.preserveDirectiveContent && !!t.preserveDirectiveContent, this.pluralizationRules = t.pluralizationRules || {}, this._exist = function (t, n) {return !(!t || !n) && (!r(e._path.getPathValue(t, n)) || !!t[n]);}, this._initVM({ locale: n, fallbackLocale: i, messages: a, dateTimeFormats: o, numberFormats: s });},rt = { vm: { configurable: !0 }, messages: { configurable: !0 }, dateTimeFormats: { configurable: !0 }, numberFormats: { configurable: !0 }, availableLocales: { configurable: !0 }, locale: { configurable: !0 }, fallbackLocale: { configurable: !0 }, missing: { configurable: !0 }, formatter: { configurable: !0 }, silentTranslationWarn: { configurable: !0 }, silentFallbackWarn: { configurable: !0 }, preserveDirectiveContent: { configurable: !0 } };nt.prototype._initVM = function (t) {var e = T.config.silent;T.config.silent = !0, this._vm = new T({ data: t }), T.config.silent = e;}, nt.prototype.destroyVM = function () {this._vm.$destroy();}, nt.prototype.subscribeDataChanging = function (t) {this._dataListeners.push(t);}, nt.prototype.unsubscribeDataChanging = function (t) {o(this._dataListeners, t);}, nt.prototype.watchI18nData = function () {var t = this;return this._vm.$watch("$data", function () {for (var e = t._dataListeners.length; e--;) {T.nextTick(function () {t._dataListeners[e] && t._dataListeners[e].$forceUpdate();});}}, { deep: !0 });}, nt.prototype.watchLocale = function () {if (!this._sync || !this._root) return null;var t = this._vm;return this._root.$i18n.vm.$watch("locale", function (e) {t.$set(t, "locale", e), t.$forceUpdate();}, { immediate: !0 });}, rt.vm.get = function () {return this._vm;}, rt.messages.get = function () {return a(this._getMessages());}, rt.dateTimeFormats.get = function () {return a(this._getDateTimeFormats());}, rt.numberFormats.get = function () {return a(this._getNumberFormats());}, rt.availableLocales.get = function () {return Object.keys(this.messages).sort();}, rt.locale.get = function () {return this._vm.locale;}, rt.locale.set = function (t) {this._vm.$set(this._vm, "locale", t);}, rt.fallbackLocale.get = function () {return this._vm.fallbackLocale;}, rt.fallbackLocale.set = function (t) {this._vm.$set(this._vm, "fallbackLocale", t);}, rt.missing.get = function () {return this._missing;}, rt.missing.set = function (t) {this._missing = t;}, rt.formatter.get = function () {return this._formatter;}, rt.formatter.set = function (t) {this._formatter = t;}, rt.silentTranslationWarn.get = function () {return this._silentTranslationWarn;}, rt.silentTranslationWarn.set = function (t) {this._silentTranslationWarn = t;}, rt.silentFallbackWarn.get = function () {return this._silentFallbackWarn;}, rt.silentFallbackWarn.set = function (t) {this._silentFallbackWarn = t;}, rt.preserveDirectiveContent.get = function () {return this._preserveDirectiveContent;}, rt.preserveDirectiveContent.set = function (t) {this._preserveDirectiveContent = t;}, nt.prototype._getMessages = function () {return this._vm.messages;}, nt.prototype._getDateTimeFormats = function () {return this._vm.dateTimeFormats;}, nt.prototype._getNumberFormats = function () {return this._vm.numberFormats;}, nt.prototype._warnDefault = function (t, e, n, i, a) {if (!r(n)) return n;if (this._missing) {var o = this._missing.apply(null, [t, e, i, a]);if ("string" == typeof o) return o;}return e;}, nt.prototype._isFallbackRoot = function (t) {return !t && !r(this._root) && this._fallbackRoot;}, nt.prototype._isSilentFallback = function (t) {return this._silentFallbackWarn && (this._isFallbackRoot() || t !== this.fallbackLocale);}, nt.prototype._interpolate = function (t, e, i, a, o, s, l) {if (!e) return null;var c = this._path.getPathValue(e, i);if (Array.isArray(c) || n(c)) return c;var u;if (r(c)) {if (!n(e)) return null;if ("string" != typeof (u = e[i])) return null;} else {if ("string" != typeof c) return null;u = c;}return (u.indexOf("@:") >= 0 || u.indexOf("@.") >= 0) && (u = this._link(t, e, u, a, "raw", s, l)), this._render(u, o, s, i);}, nt.prototype._link = function (t, e, n, r, i, a, o) {var s = n,l = s.match(X);for (var c in l) {if (l.hasOwnProperty(c)) {var u = l[c],f = u.match(Y),h = f[0],p = f[1],m = u.replace(h, "").replace(Z, "");if (o.includes(m)) return s;o.push(m);var _ = this._interpolate(t, e, m, r, "raw" === i ? "string" : i, "raw" === i ? void 0 : a, o);if (this._isFallbackRoot(_)) {if (!this._root) throw Error("unexpected error");var v = this._root.$i18n;_ = v._translate(v._getMessages(), v.locale, v.fallbackLocale, m, r, i, a);}_ = this._warnDefault(t, m, _, r, Array.isArray(a) ? a : [a]), tt.hasOwnProperty(p) && (_ = tt[p](_)), o.pop(), s = _ ? s.replace(u, _) : s;}}return s;}, nt.prototype._render = function (t, e, n, r) {var i = this._formatter.interpolate(t, n, r);return i || (i = et.interpolate(t, n, r)), "string" === e ? i.join("") : i;}, nt.prototype._translate = function (t, e, n, i, a, o, s) {var l = this._interpolate(e, t[e], i, a, o, s, [i]);return r(l) ? (l = this._interpolate(n, t[n], i, a, o, s, [i]), r(l) ? null : l) : l;}, nt.prototype._t = function (t, e, n, r) {for (var a, o = [], s = arguments.length - 4; s-- > 0;) {o[s] = arguments[s + 4];}if (!t) return "";var l = i.apply(void 0, o),c = l.locale || e,u = this._translate(n, c, this.fallbackLocale, t, r, "string", l.params);if (this._isFallbackRoot(u)) {if (!this._root) throw Error("unexpected error");return (a = this._root).$t.apply(a, [t].concat(o));}return this._warnDefault(c, t, u, r, o);}, nt.prototype.t = function (t) {for (var e, n = [], r = arguments.length - 1; r-- > 0;) {n[r] = arguments[r + 1];}return (e = this)._t.apply(e, [t, this.locale, this._getMessages(), null].concat(n));}, nt.prototype._i = function (t, e, n, r, i) {var a = this._translate(n, e, this.fallbackLocale, t, r, "raw", i);if (this._isFallbackRoot(a)) {if (!this._root) throw Error("unexpected error");return this._root.$i18n.i(t, e, i);}return this._warnDefault(e, t, a, r, [i]);}, nt.prototype.i = function (t, e, n) {return t ? ("string" != typeof e && (e = this.locale), this._i(t, e, this._getMessages(), null, n)) : "";}, nt.prototype._tc = function (t, e, n, r, a) {for (var o, s = [], l = arguments.length - 5; l-- > 0;) {s[l] = arguments[l + 5];}if (!t) return "";void 0 === a && (a = 1);var c = { count: a, n: a },u = i.apply(void 0, s);return u.params = Object.assign(c, u.params), s = null === u.locale ? [u.params] : [u.locale, u.params], this.fetchChoice((o = this)._t.apply(o, [t, e, n, r].concat(s)), a);}, nt.prototype.fetchChoice = function (t, e) {if (!t && "string" != typeof t) return null;var n = t.split("|");return e = this.getChoiceIndex(e, n.length), n[e] ? n[e].trim() : t;}, nt.prototype.getChoiceIndex = function (t, e) {return this.locale in this.pluralizationRules ? this.pluralizationRules[this.locale].apply(this, [t, e]) : function (t, e) {return t = Math.abs(t), 2 === e ? t ? t > 1 ? 1 : 0 : 1 : t ? Math.min(t, 2) : 0;}(t, e);}, nt.prototype.tc = function (t, e) {for (var n, r = [], i = arguments.length - 2; i-- > 0;) {r[i] = arguments[i + 2];}return (n = this)._tc.apply(n, [t, this.locale, this._getMessages(), null, e].concat(r));}, nt.prototype._te = function (t, e, n) {for (var r = [], a = arguments.length - 3; a-- > 0;) {r[a] = arguments[a + 3];}var o = i.apply(void 0, r).locale || e;return this._exist(n[o], t);}, nt.prototype.te = function (t, e) {return this._te(t, this.locale, this._getMessages(), e);}, nt.prototype.getLocaleMessage = function (t) {return a(this._vm.messages[t] || {});}, nt.prototype.setLocaleMessage = function (t, e) {this._vm.$set(this._vm.messages, t, e);}, nt.prototype.mergeLocaleMessage = function (t, e) {this._vm.$set(this._vm.messages, t, l(this._vm.messages[t] || {}, e));}, nt.prototype.getDateTimeFormat = function (t) {return a(this._vm.dateTimeFormats[t] || {});}, nt.prototype.setDateTimeFormat = function (t, e) {this._vm.$set(this._vm.dateTimeFormats, t, e);}, nt.prototype.mergeDateTimeFormat = function (t, e) {this._vm.$set(this._vm.dateTimeFormats, t, l(this._vm.dateTimeFormats[t] || {}, e));}, nt.prototype._localizeDateTime = function (t, e, n, i, a) {var o = e,s = i[o];if ((r(s) || r(s[a])) && (o = n, s = i[o]), r(s) || r(s[a])) return null;var l = s[a],c = o + "__" + a,u = this._dateTimeFormatters[c];return u || (u = this._dateTimeFormatters[c] = new Intl.DateTimeFormat(o, l)), u.format(t);}, nt.prototype._d = function (t, e, n) {if (!n) return new Intl.DateTimeFormat(e).format(t);var r = this._localizeDateTime(t, e, this.fallbackLocale, this._getDateTimeFormats(), n);if (this._isFallbackRoot(r)) {if (!this._root) throw Error("unexpected error");return this._root.$i18n.d(t, n, e);}return r || "";}, nt.prototype.d = function (t) {for (var n = [], r = arguments.length - 1; r-- > 0;) {n[r] = arguments[r + 1];}var i = this.locale,a = null;return 1 === n.length ? "string" == typeof n[0] ? a = n[0] : e(n[0]) && (n[0].locale && (i = n[0].locale), n[0].key && (a = n[0].key)) : 2 === n.length && ("string" == typeof n[0] && (a = n[0]), "string" == typeof n[1] && (i = n[1])), this._d(t, i, a);}, nt.prototype.getNumberFormat = function (t) {return a(this._vm.numberFormats[t] || {});}, nt.prototype.setNumberFormat = function (t, e) {this._vm.$set(this._vm.numberFormats, t, e);}, nt.prototype.mergeNumberFormat = function (t, e) {this._vm.$set(this._vm.numberFormats, t, l(this._vm.numberFormats[t] || {}, e));}, nt.prototype._getNumberFormatter = function (t, e, n, i, a, o) {var s = e,l = i[s];if ((r(l) || r(l[a])) && (s = n, l = i[s]), r(l) || r(l[a])) return null;var c,u = l[a];if (o) c = new Intl.NumberFormat(s, Object.assign({}, u, o));else {var f = s + "__" + a;c = this._numberFormatters[f], c || (c = this._numberFormatters[f] = new Intl.NumberFormat(s, u));}return c;}, nt.prototype._n = function (t, e, n, r) {if (!nt.availabilities.numberFormat) return "";if (!n) {return (r ? new Intl.NumberFormat(e, r) : new Intl.NumberFormat(e)).format(t);}var i = this._getNumberFormatter(t, e, this.fallbackLocale, this._getNumberFormats(), n, r),a = i && i.format(t);if (this._isFallbackRoot(a)) {if (!this._root) throw Error("unexpected error");return this._root.$i18n.n(t, Object.assign({}, { key: n, locale: e }, r));}return a || "";}, nt.prototype.n = function (t) {for (var n = [], r = arguments.length - 1; r-- > 0;) {n[r] = arguments[r + 1];}var i = this.locale,a = null,o = null;return 1 === n.length ? "string" == typeof n[0] ? a = n[0] : e(n[0]) && (n[0].locale && (i = n[0].locale), n[0].key && (a = n[0].key), o = Object.keys(n[0]).reduce(function (t, e) {var r;return L.includes(e) ? Object.assign({}, t, (r = {}, r[e] = n[0][e], r)) : t;}, null)) : 2 === n.length && ("string" == typeof n[0] && (a = n[0]), "string" == typeof n[1] && (i = n[1])), this._n(t, i, a, o);}, nt.prototype._ntp = function (t, e, n, r) {if (!nt.availabilities.numberFormat) return [];if (!n) {return (r ? new Intl.NumberFormat(e, r) : new Intl.NumberFormat(e)).formatToParts(t);}var i = this._getNumberFormatter(t, e, this.fallbackLocale, this._getNumberFormats(), n, r),a = i && i.formatToParts(t);if (this._isFallbackRoot(a)) {if (!this._root) throw Error("unexpected error");return this._root.$i18n._ntp(t, e, n, r);}return a || [];}, Object.defineProperties(nt.prototype, rt);var it;return Object.defineProperty(nt, "availabilities", { get: function get() {if (!it) {var t = "undefined" != typeof Intl;it = { dateTimeFormat: t && void 0 !== Intl.DateTimeFormat, numberFormat: t && void 0 !== Intl.NumberFormat };}return it;} }), nt.install = d, nt.version = "8.10.0", nt;});
 
 /***/ }),
 
-/***/ "E:\\wemusic\\common\\request\\request-upFiles.js":
-/*!****************************************************!*\
-  !*** E:/wemusic/common/request/request-upFiles.js ***!
-  \****************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\common\\lang\\en-US.js":
+/*!*******************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/common/lang/en-US.js ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js"));
-
-
-
-
-
-
-
-
-
-
-
-
-var _request = __webpack_require__(/*! ./request.js */ "E:\\wemusic\\common\\request\\request.js");function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _objectWithoutProperties(source, excluded) {if (source == null) return {};var target = _objectWithoutPropertiesLoose(source, excluded);var key, i;if (Object.getOwnPropertySymbols) {var sourceSymbolKeys = Object.getOwnPropertySymbols(source);for (i = 0; i < sourceSymbolKeys.length; i++) {key = sourceSymbolKeys[i];if (excluded.indexOf(key) >= 0) continue;if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;target[key] = source[key];}}return target;}function _objectWithoutPropertiesLoose(source, excluded) {if (source == null) return {};var target = {};var sourceKeys = Object.keys(source);var key, i;for (i = 0; i < sourceKeys.length; i++) {key = sourceKeys[i];if (excluded.indexOf(key) >= 0) continue;target[key] = source[key];}return target;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _possibleConstructorReturn(self, call) {if (call && (typeof call === "object" || typeof call === "function")) {return call;}return _assertThisInitialized(self);}function _assertThisInitialized(self) {if (self === void 0) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _getPrototypeOf(o) {_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {return o.__proto__ || Object.getPrototypeOf(o);};return _getPrototypeOf(o);}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function");}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } });if (superClass) _setPrototypeOf(subClass, superClass);}function _setPrototypeOf(o, p) {_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {o.__proto__ = p;return o;};return _setPrototypeOf(o, p);} /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * 2019年4月7日14:17:12
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          */var _defaultFile = { filesFilter: { 0: 'image', 1: 'video', 2: 'none' }, upOpenDown: false };var _down = null; //下载文件对象
-var UpFiles = /*#__PURE__*/function (_RQ) {_inherits(UpFiles, _RQ);
-  function UpFiles() {var _this;_classCallCheck(this, UpFiles);for (var _len = arguments.length, arg = new Array(_len), _key = 0; _key < _len; _key++) {arg[_key] = arguments[_key];}
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(UpFiles).call(this, arg));
-    _this.defaultFile = _defaultFile;
-    _this.FunChunk = {
-      0: _this.AppSelectFiles,
-      1: _this.otherSelectFiles };
-
-    _this.proxy(_this.defaultFile, function (key, value) {
-      if (key === 'upOpenDown' && value === true) {
-        _down = __webpack_require__(/*! ./request-downFiles.js */ "E:\\wemusic\\common\\request\\request-downFiles.js").df;
-      }
-    });return _this;
-  }
-  /**
-     * 开始上传文件
-     * 2019年4月7日14:55:15
-     */_createClass(UpFiles, [{ key: "startUpFiles", value: function startUpFiles()
-
-
-
-
-
-
-
-    {var _this2 = this;var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},_ref$path = _ref.path,path = _ref$path === void 0 ? '' : _ref$path,_ref$files = _ref.files,files = _ref$files === void 0 ? [] : _ref$files,_ref$isUp = _ref.isUp,isUp = _ref$isUp === void 0 ? true : _ref$isUp,_ref$title = _ref.title,title = _ref$title === void 0 ? false : _ref$title,_ref$showProgress = _ref.showProgress,showProgress = _ref$showProgress === void 0 ? false : _ref$showProgress,_ref$extra = _ref.extra,extra = _ref$extra === void 0 ? {} : _ref$extra;var res = arguments.length > 1 ? arguments[1] : undefined;
-      return new Promise( /*#__PURE__*/function () {var _ref2 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee(resolve, reject) {var i, fileName, upres;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.prev = 0;if (!
-
-                  isUp) {_context.next = 15;break;} //需要上传到服务器，然后再返回
-                  if (title) {
-                    uni.showLoading({
-                      title: title,
-                      mask: true });
-
-                  }
-                  i = 0;case 4:if (!(i < res.length)) {_context.next = 13;break;}
-                  if (showProgress) {
-                    title = "".concat(i + 1, "/").concat(res.length);
-                  }
-                  fileName = files[i] != undefined ? files[i] : files[files.length - 1];_context.next = 9;return (
-                    _this2.ajaxFile({
-                      path: path,
-                      title: false,
-                      filePath: res[i],
-                      fileName: fileName,
-                      extra: extra }));case 9:upres = _context.sent;case 10:i++;_context.next = 4;break;case 13:
-
-
-                  if (title) {
-                    uni.hideLoading();
-                  }
-                  resolve({
-                    upload: true });case 15:return _context.abrupt("return",
-
-
-                  resolve(res));case 18:_context.prev = 18;_context.t0 = _context["catch"](0);
-
-                  uni.hideLoading();
-                  reject(_context.t0);case 22:case "end":return _context.stop();}}}, _callee, this, [[0, 18]]);}));return function (_x, _x2) {return _ref2.apply(this, arguments);};}());
-
-
-    }
-    /**
-       * 2019年4月7日15:07:54 
-       * 上传网络资源
-       */ }, { key: "upnNetRes", value: function upnNetRes()
-
-
-
-
-
-
-
-    {var _this3 = this;var _ref3 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},_ref3$netPath = _ref3.netPath,netPath = _ref3$netPath === void 0 ? '' : _ref3$netPath,_ref3$upPath = _ref3.upPath,upPath = _ref3$upPath === void 0 ? '' : _ref3$upPath,_ref3$files = _ref3.files,files = _ref3$files === void 0 ? [] : _ref3$files,_ref3$abort = _ref3.abort,abort = _ref3$abort === void 0 ? function (bt, finsh) {} : _ref3$abort,_ref3$title = _ref3.title,title = _ref3$title === void 0 ? false : _ref3$title,extra = _objectWithoutProperties(_ref3, ["netPath", "upPath", "files", "abort", "title"]);
-      return new Promise( /*#__PURE__*/function () {var _ref4 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2(resolve, reject) {var res, uploadRes;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
-                    _down.startDownFiles(_objectSpread({
-                      path: netPath,
-                      abort: abort },
-                    extra)));case 2:res = _context2.sent;_context2.prev = 3;_context2.next = 6;return (
-
-
-                    _this3.startUpFiles({
-                      path: upPath,
-                      files: files,
-                      isUp: true,
-                      title: title,
-                      extra: extra },
-                    res.FilePath));case 6:uploadRes = _context2.sent;
-                  resolve(uploadRes);_context2.next = 13;break;case 10:_context2.prev = 10;_context2.t0 = _context2["catch"](3);
-
-                  reject(_context2.t0);case 13:case "end":return _context2.stop();}}}, _callee2, this, [[3, 10]]);}));return function (_x3, _x4) {return _ref4.apply(this, arguments);};}());
-
-
-    }
-    /**
-       * 2019年4月6日16:19:20
-       * 选择文件
-       */ }, { key: "selectFiles", value: function selectFiles()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    {var _this4 = this;var _ref5 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},_ref5$type = _ref5.type,type = _ref5$type === void 0 ? 2 : _ref5$type,_ref5$maximum = _ref5.maximum,maximum = _ref5$maximum === void 0 ? 1 : _ref5$maximum,_ref5$multiple = _ref5.multiple,multiple = _ref5$multiple === void 0 ? true : _ref5$multiple,_ref5$sizeType = _ref5.sizeType,sizeType = _ref5$sizeType === void 0 ? ['original', 'compressed'] : _ref5$sizeType,_ref5$sourceType = _ref5.sourceType,sourceType = _ref5$sourceType === void 0 ? ['album'] : _ref5$sourceType,_ref5$upload = _ref5.upload,upload = _ref5$upload === void 0 ? { path: '', files: [], isUp: false, title: false, extra: {} } : _ref5$upload,extra = _objectWithoutProperties(_ref5, ["type", "maximum", "multiple", "sizeType", "sourceType", "upload"]);
-      return new Promise( /*#__PURE__*/function () {var _ref6 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3(resolve, reject) {var merge, res, uploadRes;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:
-                  merge = _objectSpread({
-                    type: type,
-                    maximum: maximum,
-                    sizeType: sizeType,
-                    sourceType: sourceType,
-                    multiple: multiple },
-                  extra);_context3.next = 3;return (
-
-                    _this4.FunChunk[_this4.platform](merge));case 3:res = _context3.sent;_context3.prev = 4;_context3.next = 7;return (
-
-                    _this4.startUpFiles(upload, res));case 7:uploadRes = _context3.sent;
-                  resolve(res);_context3.next = 14;break;case 11:_context3.prev = 11;_context3.t0 = _context3["catch"](4);
-
-                  reject(_context3.t0);case 14:case "end":return _context3.stop();}}}, _callee3, this, [[4, 11]]);}));return function (_x5, _x6) {return _ref6.apply(this, arguments);};}());
-
-
-    }
-    /**
-       * App选择文件
-       */ }, { key: "AppSelectFiles", value: function AppSelectFiles(
-    queryInfo) {
-      return new Promise( /*#__PURE__*/function () {var _ref7 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee4(resolve, reject) {return _regenerator.default.wrap(function _callee4$(_context4) {while (1) {switch (_context4.prev = _context4.next) {case 0:
-                  plus.gallery.pick(function (path) {
-                    resolve(path.files);
-                  }, function (err) {
-                    reject(err);
-                  }, _objectSpread({
-                    filter: _defaultFile.filesFilter[queryInfo.type],
-                    system: false },
-                  queryInfo));case 1:case "end":return _context4.stop();}}}, _callee4, this);}));return function (_x7, _x8) {return _ref7.apply(this, arguments);};}());
-
-
-    }
-    /**
-       * 其他小程序，h5
-       */ }, { key: "otherSelectFiles", value: function otherSelectFiles(
-    queryInfo) {
-      return new Promise( /*#__PURE__*/function () {var _ref8 = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee5(resolve, reject) {return _regenerator.default.wrap(function _callee5$(_context5) {while (1) {switch (_context5.prev = _context5.next) {case 0:
-                  uni.chooseImage(_objectSpread({
-                    count: queryInfo.maximum,
-                    success: function success(res) {
-                      resolve(res.tempFilePaths);
-                    },
-                    fail: function fail(err) {
-                      reject(err);
-                    } },
-                  queryInfo));case 1:case "end":return _context5.stop();}}}, _callee5, this);}));return function (_x9, _x10) {return _ref8.apply(this, arguments);};}());
-
-
-    } }]);return UpFiles;}(_request.RQ);var _default =
-
-new UpFiles();exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
+Object.defineProperty(exports, "__esModule", { value: true });exports.enUS = void 0;var enUS = {
+  accountBbalance: 'accountBbalance',
+  recharge: 'recharge',
+  allCourses: 'allCourses',
+  ToBePaid: 'ToBePaid',
+  waitingForClass: 'waitingForClass',
+  completed: 'completed',
+  CircleOfFriends: 'CircleOfFriends',
+  MyCoupon: 'MyCoupon',
+  MyEvaluation: 'MyEvaluation',
+  feedback: 'feedback',
+  aboutUs: 'aboutUs',
+  courseInvitation: 'courseInvitation',
+  myCourse: 'myCourse',
+  financialManagement: 'financialManagement',
+  dataUpload: 'dataUpload',
+  myCertification: 'myCertification',
+  name: 'name',
+  sex: 'sex',
+  birthday: 'birthday',
+  address: 'address',
+  phone: 'phone',
+  emial: 'emial',
+  culture: 'culture',
+  card: 'card',
+  startTime: 'startTime',
+  endTime: 'endTime',
+  j_photo: 'j_photo',
+  register: 'register',
+  adjustment: 'adjustment',
+  reason: 'reason',
+  yes: 'yes',
+  no: 'no',
+  submitCertification: 'submitCertification',
+  myFridens: 'myFridens',
+  adjustDate: 'adjustDate',
+  adjustClassTime: 'adjustClassTime',
+  reasonsForAdjustment: 'reasonsForAdjustment',
+  adjustmentClass: 'adjustmentClass',
+  code: 'Two-Dimensional Code Carding',
+  showCode: 'Please show them to the students and punch in.',
+  successfulTyping: 'successfulTyping',
+  classTime: 'classTime',
+  remarks: 'remarks',
+  comment: 'comment',
+  submit: 'submit',
+  skip: 'skip',
+  teacher: 'teacher',
+  successfulRegistration: 'successfulRegistration',
+  viewInvitationCode: 'viewInvitationCode',
+  backHome: 'backHome',
+  InputInvitationCode: 'InputInvitationCode',
+  codeContent: 'When your friend initiates an invitation, you can enter the invitation code here and have class with your friend. The invitation code is valid for one hour. Please fill it in as soon as possible.',
+  determine: 'determine' };exports.enUS = enUS;
 
 /***/ }),
 
-/***/ "E:\\wemusic\\common\\request\\request.js":
-/*!********************************************!*\
-  !*** E:/wemusic/common/request/request.js ***!
-  \********************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\common\\lang\\zh-CN.js":
+/*!*******************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/common/lang/zh-CN.js ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.RQ = exports.req = void 0;function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _objectWithoutProperties(source, excluded) {if (source == null) return {};var target = _objectWithoutPropertiesLoose(source, excluded);var key, i;if (Object.getOwnPropertySymbols) {var sourceSymbolKeys = Object.getOwnPropertySymbols(source);for (i = 0; i < sourceSymbolKeys.length; i++) {key = sourceSymbolKeys[i];if (excluded.indexOf(key) >= 0) continue;if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;target[key] = source[key];}}return target;}function _objectWithoutPropertiesLoose(source, excluded) {if (source == null) return {};var target = {};var sourceKeys = Object.keys(source);var key, i;for (i = 0; i < sourceKeys.length; i++) {key = sourceKeys[i];if (excluded.indexOf(key) >= 0) continue;target[key] = source[key];}return target;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;} /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * 2019年4月5日12:44:58
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * 简单封装uni-app请求，下载，上传。
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
-var _baseuUrl = '';
-var _isUpOpenDown = false; //是否在上传js中引入下载的js
-var _defaultReq = {
-  isreq: true, //是否已经打开ajax，默认为true
-  url: '', //独立的url ajax
-  baseData: {}, //ajax基本参数
-  header: {
-    'content-type': 'application/x-www-form-urlencoded' },
+Object.defineProperty(exports, "__esModule", { value: true });exports.zhCN = void 0;var zhCN = {
+  accountBbalance: '账户余额',
+  recharge: '充值',
+  allCourses: '全部课程',
+  ToBePaid: '待支付',
+  waitingForClass: '待开课',
+  completed: '已完成',
+  CircleOfFriends: '朋友圈',
+  MyCoupon: '我的优惠券',
+  MyEvaluation: '我的评价',
+  feedback: '意见反馈',
+  aboutUs: '关于我们',
+  courseInvitation: '课程邀请',
+  myCourse: '我的课程',
+  financialManagement: '财务管理',
+  dataUpload: '资料上传',
+  myCertification: '我的认证',
+  name: '名字',
+  sex: '性别',
+  birthday: '生日',
+  address: '地址',
+  phone: '电话',
+  emial: '邮箱',
+  culture: '文化程度',
+  card: '身份证',
+  startTime: '开始日期',
+  endTime: '结束日期',
+  j_photo: '上传简历',
+  register: '注册',
+  adjustment: '调整',
+  reason: '理由',
+  yes: '同意',
+  no: '拒绝',
+  submitCertification: '提交认证',
+  myFridens: '我的朋友圈',
+  adjustDate: '调整日期',
+  adjustClassTime: '调整上课时间段',
+  reasonsForAdjustment: '调整理由',
+  adjustmentClass: '申请调课',
+  code: '二维码打卡',
+  showCode: '请将二位向学生出示进行打卡',
+  successfulTyping: '打卡成功',
+  classTime: '上课时间',
+  remarks: '备注',
+  comment: '评语',
+  submit: '提交',
+  skip: '跳过',
+  teacher: '老师',
+  successfulRegistration: '报名成功',
+  viewInvitationCode: '查看邀请码',
+  backHome: '返回首页',
+  InputInvitationCode: '输入邀请码',
+  codeContent: '当您的好友发起邀请时，您可以在此输入邀请码，与好友共同上课，邀请码有效期为一个小时，请尽快填写。',
+  determine: '确定' };exports.zhCN = zhCN;
 
-  type: 'GET',
-  dataType: 'json',
-  responseType: 'text',
-  testFun: function testFun(_data, _status) {
-    return true;
-  } };
+/***/ }),
 
-var _defaultUp = {
-  url: '', //独立的url 
-  baseData: {},
-  header: {
-    'content-type': 'multipart/form-data;' }
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\common\\language.js":
+/*!*****************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/common/language.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-
-
-  /**
-                                              * 代理控制 2019年4月6日16:06:05
-                                              */ };
-var ProxyControll = function ProxyControll(obj) {var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function (key, val) {};var _loop = function _loop(
-  key) {
-    var itemval = obj[key];
-    Object.defineProperty(obj, key, {
-      enumerable: true,
-      get: function get() {
-        return this["HHYANG_".concat(key)];
-      },
-      set: function set(newvalue) {
-        this["HHYANG_".concat(key)] = newvalue;
-        callback(key, newvalue);
-      } });
-
-
-    obj[key] = itemval;};for (var key in obj) {_loop(key);
-  }
-};
-ProxyControll(_defaultReq);
-ProxyControll(_defaultUp);var
-
-Request = /*#__PURE__*/function () {
-  function Request(arg) {_classCallCheck(this, Request);
-    this.platform = this.platformChunk();
-    this.defaultReq = _defaultReq;
-    this.defaultUp = _defaultUp;
-  }_createClass(Request, [{ key: "ajax",
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /**
-                                          * 基本ajax请求
-                                          */value: function ajax()
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.i18n = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _i18n = _interopRequireDefault(__webpack_require__(/*! ./i18n.js */ "C:\\Users\\Administrator\\Desktop\\wemusic\\common\\i18n.js"));
+var _enUS = __webpack_require__(/*! ./lang/en-US.js */ "C:\\Users\\Administrator\\Desktop\\wemusic\\common\\lang\\en-US.js");
 
 
+var _zhCN = __webpack_require__(/*! ./lang/zh-CN.js */ "C:\\Users\\Administrator\\Desktop\\wemusic\\common\\lang\\zh-CN.js");function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 
+_vue.default.use(_i18n.default);
+var i18n = new _i18n.default({
+  locale: uni.getStorageSync('langType') == 'zh-CN' ? 'zh-CN' : 'en-US',
+  messages: {
+    'en-US': {
+      index: _enUS.enUS },
 
-
-
-
-
-
-    {var _this = this;var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},_ref$path = _ref.path,path = _ref$path === void 0 ? '' : _ref$path,_ref$title = _ref.title,title = _ref$title === void 0 ? false : _ref$title,_ref$header = _ref.header,header = _ref$header === void 0 ? this.defaultReq.header : _ref$header,_ref$data = _ref.data,data = _ref$data === void 0 ? {} : _ref$data,_ref$type = _ref.type,type = _ref$type === void 0 ? this.defaultReq.type : _ref$type,_ref$dataType = _ref.dataType,dataType = _ref$dataType === void 0 ? this.defaultReq.dataType : _ref$dataType,_ref$responseType = _ref.responseType,responseType = _ref$responseType === void 0 ? this.defaultReq.responseType : _ref$responseType,_ref$finshFun = _ref.finshFun,finshFun = _ref$finshFun === void 0 ? function (_f) {} : _ref$finshFun,_ref$abortFun = _ref.abortFun,abortFun = _ref$abortFun === void 0 ? function (_bt) {} : _ref$abortFun;for (var _len = arguments.length, extra = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {extra[_key - 1] = arguments[_key];}
-      return new Promise(function (resolve, reject) {
-        if (!_this.defaultReq.isreq) {
-          return reject('要想使用ajax，请开放isreq 设置为true');
-        }
-        if (title) {//显示请求提示
-          uni.showLoading({
-            title: title,
-            mask: true });
-
-        }
-        Object.assign(data, _this.defaultReq.baseData); //合并参数
-        if (typeof header === 'string') {//如果用户只想设置content-type
-          header = {
-            'content-type': header };
-
-        }
-        var requestTask = uni.request({
-          url: _this.defaultReq.url + path,
-          method: type,
-          dataType: dataType,
-          responseType: responseType,
-          data: data,
-          header: header,
-          success: function success()
-
-
-          {var _ref2 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},_ref2$statusCode = _ref2.statusCode,statusCode = _ref2$statusCode === void 0 ? 0 : _ref2$statusCode,_res = _objectWithoutProperties(_ref2, ["statusCode"]);
-            var callData = Object.assign({
-              extra: extra },
-            _res);
-            if (statusCode == 200) {
-              var testRes = _this.defaultReq.testFun(_res, statusCode);
-              if (testRes == undefined || testRes) {
-                return resolve(callData);
-              }
-            }
-            return reject(callData);
-          },
-          fail: function fail(err) {
-            reject(Object.assign({
-              extra: extra },
-            err));
-          },
-          complete: function complete(finsh) {
-            if (title) {
-              uni.hideLoading();
-            }
-            finshFun(finsh);
-          } });
-
-        abortFun(requestTask);
-      });
-    }
-    /**
-       * 2019年4月6日12:05:55 
-       * 封装上传文件功能
-       */ }, { key: "ajaxFile", value: function ajaxFile()
-
-
-
-
-
-
-
-
-
-
-    {var _this2 = this;var _ref3 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},_ref3$path = _ref3.path,path = _ref3$path === void 0 ? '' : _ref3$path,_ref3$title = _ref3.title,title = _ref3$title === void 0 ? false : _ref3$title,_ref3$header = _ref3.header,header = _ref3$header === void 0 ? this.defaultUp.header : _ref3$header,_ref3$filePath = _ref3.filePath,filePath = _ref3$filePath === void 0 ? '' : _ref3$filePath,_ref3$fileName = _ref3.fileName,fileName = _ref3$fileName === void 0 ? '' : _ref3$fileName,_ref3$extra = _ref3.extra,extra = _ref3$extra === void 0 ? {} : _ref3$extra,_ref3$reload = _ref3.reload,reload = _ref3$reload === void 0 ? function (bt) {} : _ref3$reload,_ref3$_isFirst = _ref3._isFirst,_isFirst = _ref3$_isFirst === void 0 ? true : _ref3$_isFirst,_ref3$_autoClose = _ref3._autoClose,_autoClose = _ref3$_autoClose === void 0 ? true : _ref3$_autoClose;
-      return new Promise(function (resolve, reject) {
-        if (title && _isFirst) {//显示请求提示
-          uni.showLoading({
-            title: title,
-            mask: true });
-
-        }
-        var uploadTask = uni.uploadFile({
-          url: _this2.defaultUp.url + path,
-          filePath: filePath,
-          name: fileName,
-          header: header,
-          formData: extra,
-          complete: function complete()
-
-
-          {var _ref4 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},_ref4$statusCode = _ref4.statusCode,statusCode = _ref4$statusCode === void 0 ? 0 : _ref4$statusCode,finsh = _objectWithoutProperties(_ref4, ["statusCode"]);
-            if (title && _autoClose) {
-              uni.hideLoading();
-            }
-            if (statusCode == 200) {
-              return resolve(finsh);
-            }
-            return reject(finsh);
-          } });
-
-        reload(uploadTask);
-      });
-    }
-    /**
-       * 内部下载文件，仅内部调用
-       */ }, { key: "downFiles", value: function downFiles(
-    extra) {
-      return new Promise(function (resolve, reject) {
-        var downloadTask = uni.downloadFile(_objectSpread({},
-        extra, {
-          complete: function complete()
-
-
-          {var _ref5 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},_ref5$statusCode = _ref5.statusCode,statusCode = _ref5$statusCode === void 0 ? 0 : _ref5$statusCode,finsh = _objectWithoutProperties(_ref5, ["statusCode"]);
-            extra.abort(downloadTask, Object.assign({}, _objectSpread({
-              statusCode: statusCode },
-            finsh)));
-
-            if (statusCode === 200) {
-              return resolve(finsh);
-            }
-            return reject(finsh);
-          } }));
-
-        extra.abort(downloadTask);
-      });
-    }
-    /**
-       * 设置代理
-       */ }, { key: "proxy", value: function proxy(
-    obj, callback) {
-      ProxyControll(obj, callback);
-    }
-    /**
-       * 运行环境判断
-       */ }, { key: "platformChunk", value: function platformChunk()
-    {
-      if (typeof plus == 'undefined') {
-        return 1;
-      }
-      return 0;
-    } }, { key: "baseuUrl", set: function set(value) {_baseuUrl = value;_defaultReq.url = value;_defaultUp.url = value;}, get: function get() {return _baseuUrl;} }, { key: "isUpOpenDown", set: function set(value) {_isUpOpenDown = value;}, get: function get() {return _isUpOpenDown;} }]);return Request;}();
-
-
-var req = new Request();exports.req = req;
-var RQ = Request;exports.RQ = RQ;
+    'zh-CN': {
+      index: _zhCN.zhCN } } });exports.i18n = i18n;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\common\\util.js":
-/*!*********************************!*\
-  !*** E:/wemusic/common/util.js ***!
-  \*********************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\common\\util.js":
+/*!*************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/common/util.js ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8577,8 +7460,20 @@ var dateUtils = {
     return result;
   },
   format: function format(date) {
-    return new Date(parseInt(date) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ');
-
+    var year = new Date(date * 1000).getFullYear(),
+    month = new Date(date * 1000).getMonth() + 1 > 9 ? new Date(date * 1000).getMonth() + 1 : '0' + (new Date(date *
+    1000).getMonth() + 1), //月份是从0开始的
+    day = new Date(date * 1000).getDate() > 9 ? new Date(date * 1000).getDate() : '0' + new Date(date * 1000).getDate(),
+    hour = new Date(date * 1000).getHours() > 9 ? new Date(date * 1000).getHours() : '0' + new Date(date * 1000).getHours(),
+    min = new Date(date * 1000).getMinutes() > 9 ? new Date(date * 1000).getMinutes() : '0' + new Date(date * 1000).getMinutes(),
+    sec = new Date(date * 1000).getSeconds() > 9 ? new Date(date * 1000).getSeconds() : '0' + new Date(date * 1000).getSeconds();
+    var newTime = year + '-' +
+    month + '-' +
+    day + ' ' +
+    hour + ':' +
+    min + ':' +
+    sec;
+    return newTime;
   },
   parse: function parse(str) {//将"yyyy-mm-dd HH:MM:ss"格式的字符串，转化为一个Date对象
     var a = str.split(/[^0-9]/);
@@ -8587,10 +7482,22 @@ var dateUtils = {
 
 /***/ }),
 
-/***/ "E:\\wemusic\\components\\w-picker\\city-data\\area.js":
-/*!********************************************************!*\
-  !*** E:/wemusic/components/w-picker/city-data/area.js ***!
-  \********************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\qrcode\\qrcode.js":
+/*!**************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/components/qrcode/qrcode.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+function qrPolynomial(r, t) {if ("undefined" == typeof r.length) throw new Error(r.length + "/" + t);var e = function () {for (var e = 0; e < r.length && 0 == r[e];) {e += 1;}for (var n = new Array(r.length - e + t), o = 0; o < r.length - e; o += 1) {n[o] = r[o + e];}return n;}(),n = {};return n.getAt = function (r) {return e[r];}, n.getLength = function () {return e.length;}, n.multiply = function (r) {for (var t = new Array(n.getLength() + r.getLength() - 1), e = 0; e < n.getLength(); e += 1) {for (var o = 0; o < r.getLength(); o += 1) {t[e + o] ^= QRMath.gexp(QRMath.glog(n.getAt(e)) + QRMath.glog(r.getAt(o)));}}return qrPolynomial(t, 0);}, n.mod = function (r) {if (n.getLength() - r.getLength() < 0) return n;for (var t = QRMath.glog(n.getAt(0)) - QRMath.glog(r.getAt(0)), e = new Array(n.getLength()), o = 0; o < n.getLength(); o += 1) {e[o] = n.getAt(o);}for (var o = 0; o < r.getLength(); o += 1) {e[o] ^= QRMath.gexp(QRMath.glog(r.getAt(o)) + t);}return qrPolynomial(e, 0).mod(r);}, n;}var qrcode = function qrcode(r, t) {var e = 236,n = 17,o = r,a = QRErrorCorrectLevel[t],i = null,u = 0,f = null,c = new Array(),g = {},l = function l(r, t) {u = 4 * o + 17, i = function (r) {for (var t = new Array(r), e = 0; e < r; e += 1) {t[e] = new Array(r);for (var n = 0; n < r; n += 1) {t[e][n] = null;}}return t;}(u), h(0, 0), h(u - 7, 0), h(0, u - 7), d(), s(), y(r, t), o >= 7 && w(r), null == f && (f = p(o, a, c)), M(f, t);},h = function h(r, t) {for (var e = -1; e <= 7; e += 1) {if (!(r + e <= -1 || u <= r + e)) for (var n = -1; n <= 7; n += 1) {t + n <= -1 || u <= t + n || (0 <= e && e <= 6 && (0 == n || 6 == n) || 0 <= n && n <= 6 && (0 == e || 6 == e) || 2 <= e && e <= 4 && 2 <= n && n <= 4 ? i[r + e][t + n] = !0 : i[r + e][t + n] = !1);}}},v = function v() {for (var r = 0, t = 0, e = 0; e < 8; e += 1) {l(!0, e);var n = QRUtil.getLostPoint(g);(0 == e || r > n) && (r = n, t = e);}return t;},s = function s() {for (var r = 8; r < u - 8; r += 1) {null == i[r][6] && (i[r][6] = r % 2 == 0);}for (var t = 8; t < u - 8; t += 1) {null == i[6][t] && (i[6][t] = t % 2 == 0);}},d = function d() {for (var r = QRUtil.getPatternPosition(o), t = 0; t < r.length; t += 1) {for (var e = 0; e < r.length; e += 1) {var n = r[t],a = r[e];if (null == i[n][a]) for (var u = -2; u <= 2; u += 1) {for (var f = -2; f <= 2; f += 1) {u == -2 || 2 == u || f == -2 || 2 == f || 0 == u && 0 == f ? i[n + u][a + f] = !0 : i[n + u][a + f] = !1;}}}}},w = function w(r) {for (var t = QRUtil.getBCHTypeNumber(o), e = 0; e < 18; e += 1) {var n = !r && 1 == (t >> e & 1);i[Math.floor(e / 3)][e % 3 + u - 8 - 3] = n;}for (var e = 0; e < 18; e += 1) {var n = !r && 1 == (t >> e & 1);i[e % 3 + u - 8 - 3][Math.floor(e / 3)] = n;}},y = function y(r, t) {for (var e = a << 3 | t, n = QRUtil.getBCHTypeInfo(e), o = 0; o < 15; o += 1) {var f = !r && 1 == (n >> o & 1);o < 6 ? i[o][8] = f : o < 8 ? i[o + 1][8] = f : i[u - 15 + o][8] = f;}for (var o = 0; o < 15; o += 1) {var f = !r && 1 == (n >> o & 1);o < 8 ? i[8][u - o - 1] = f : o < 9 ? i[8][15 - o - 1 + 1] = f : i[8][15 - o - 1] = f;}i[u - 8][8] = !r;},M = function M(r, t) {for (var e = -1, n = u - 1, o = 7, a = 0, f = QRUtil.getMaskFunction(t), c = u - 1; c > 0; c -= 2) {for (6 == c && (c -= 1);;) {for (var g = 0; g < 2; g += 1) {if (null == i[n][c - g]) {var l = !1;a < r.length && (l = 1 == (r[a] >>> o & 1));var h = f(n, c - g);h && (l = !l), i[n][c - g] = l, o -= 1, o == -1 && (a += 1, o = 7);}}if (n += e, n < 0 || u <= n) {n -= e, e = -e;break;}}}},B = function B(r, t) {for (var e = 0, n = 0, o = 0, a = new Array(t.length), i = new Array(t.length), u = 0; u < t.length; u += 1) {var f = t[u].dataCount,c = t[u].totalCount - f;n = Math.max(n, f), o = Math.max(o, c), a[u] = new Array(f);for (var g = 0; g < a[u].length; g += 1) {a[u][g] = 255 & r.getBuffer()[g + e];}e += f;var l = QRUtil.getErrorCorrectPolynomial(c),h = qrPolynomial(a[u], l.getLength() - 1),v = h.mod(l);i[u] = new Array(l.getLength() - 1);for (var g = 0; g < i[u].length; g += 1) {var s = g + v.getLength() - i[u].length;i[u][g] = s >= 0 ? v.getAt(s) : 0;}}for (var d = 0, g = 0; g < t.length; g += 1) {d += t[g].totalCount;}for (var w = new Array(d), y = 0, g = 0; g < n; g += 1) {for (var u = 0; u < t.length; u += 1) {g < a[u].length && (w[y] = a[u][g], y += 1);}}for (var g = 0; g < o; g += 1) {for (var u = 0; u < t.length; u += 1) {g < i[u].length && (w[y] = i[u][g], y += 1);}}return w;},p = function p(r, t, o) {for (var a = QRRSBlock.getRSBlocks(r, t), i = qrBitBuffer(), u = 0; u < o.length; u += 1) {var f = o[u];i.put(f.getMode(), 4), i.put(f.getLength(), QRUtil.getLengthInBits(f.getMode(), r)), f.write(i);}for (var c = 0, u = 0; u < a.length; u += 1) {c += a[u].dataCount;}if (i.getLengthInBits() > 8 * c) throw new Error("code length overflow. (" + i.getLengthInBits() + ">" + 8 * c + ")");for (i.getLengthInBits() + 4 <= 8 * c && i.put(0, 4); i.getLengthInBits() % 8 != 0;) {i.putBit(!1);}for (;;) {if (i.getLengthInBits() >= 8 * c) break;if (i.put(e, 8), i.getLengthInBits() >= 8 * c) break;i.put(n, 8);}return B(i, a);};return g.addData = function (r) {var t = qr8BitByte(r);c.push(t), f = null;}, g.isDark = function (r, t) {if (r < 0 || u <= r || t < 0 || u <= t) throw new Error(r + "," + t);return i[r][t];}, g.getModuleCount = function () {return u;}, g.make = function () {l(!1, v());}, g.createTableTag = function (r, t) {r = r || 2, t = "undefined" == typeof t ? 4 * r : t;var e = "";e += '<table style="', e += " border-width: 0upx; border-style: none;", e += " border-collapse: collapse;", e += " padding: 0upx; margin: " + t + "upx;", e += '">', e += "<tbody>";for (var n = 0; n < g.getModuleCount(); n += 1) {e += "<tr>";for (var o = 0; o < g.getModuleCount(); o += 1) {e += '<td style="', e += " border-width: 0upx; border-style: none;", e += " border-collapse: collapse;", e += " padding: 0upx; margin: 0upx;", e += " width: " + r + "upx;", e += " height: " + r + "upx;", e += " background-color: ", e += g.isDark(n, o) ? "#000000" : "#ffffff", e += ";", e += '"/>';}e += "</tr>";}return e += "</tbody>", e += "</table>";}, g.createImgTag = function (r, t, e) {r = r || 2, t = "undefined" == typeof t ? 4 * r : t;var n = t,o = g.getModuleCount() * r + t;return createImgTag(e, e, function (t, e) {if (n <= t && t < o && n <= e && e < o) {var a = Math.floor((t - n) / r),i = Math.floor((e - n) / r);return g.isDark(i, a) ? 0 : 1;}return 1;});}, g;};qrcode.stringToBytes = function (r) {for (var t = new Array(), e = 0; e < r.length; e += 1) {var n = r.charCodeAt(e);t.push(255 & n);}return t;}, qrcode.createStringToBytes = function (r, t) {var e = function () {for (var e = base64DecodeInputStream(r), n = function n() {var r = e.read();if (r == -1) throw new Error();return r;}, o = 0, a = {};;) {var i = e.read();if (i == -1) break;var u = n(),f = n(),c = n(),g = String.fromCharCode(i << 8 | u),l = f << 8 | c;a[g] = l, o += 1;}if (o != t) throw new Error(o + " != " + t);return a;}(),n = "?".charCodeAt(0);return function (r) {for (var t = new Array(), o = 0; o < r.length; o += 1) {var a = r.charCodeAt(o);if (a < 128) t.push(a);else {var i = e[r.charAt(o)];"number" == typeof i ? (255 & i) == i ? t.push(i) : (t.push(i >>> 8), t.push(255 & i)) : t.push(n);}}return t;};};var QRMode = { MODE_NUMBER: 1, MODE_ALPHA_NUM: 2, MODE_8BIT_BYTE: 4, MODE_KANJI: 8 },QRErrorCorrectLevel = { L: 1, M: 0, Q: 3, H: 2 },QRMaskPattern = { PATTERN000: 0, PATTERN001: 1, PATTERN010: 2, PATTERN011: 3, PATTERN100: 4, PATTERN101: 5, PATTERN110: 6, PATTERN111: 7 },QRUtil = function () {var r = [[], [6, 18], [6, 22], [6, 26], [6, 30], [6, 34], [6, 22, 38], [6, 24, 42], [6, 26, 46], [6, 28, 50], [6, 30, 54], [6, 32, 58], [6, 34, 62], [6, 26, 46, 66], [6, 26, 48, 70], [6, 26, 50, 74], [6, 30, 54, 78], [6, 30, 56, 82], [6, 30, 58, 86], [6, 34, 62, 90], [6, 28, 50, 72, 94], [6, 26, 50, 74, 98], [6, 30, 54, 78, 102], [6, 28, 54, 80, 106], [6, 32, 58, 84, 110], [6, 30, 58, 86, 114], [6, 34, 62, 90, 118], [6, 26, 50, 74, 98, 122], [6, 30, 54, 78, 102, 126], [6, 26, 52, 78, 104, 130], [6, 30, 56, 82, 108, 134], [6, 34, 60, 86, 112, 138], [6, 30, 58, 86, 114, 142], [6, 34, 62, 90, 118, 146], [6, 30, 54, 78, 102, 126, 150], [6, 24, 50, 76, 102, 128, 154], [6, 28, 54, 80, 106, 132, 158], [6, 32, 58, 84, 110, 136, 162], [6, 26, 54, 82, 110, 138, 166], [6, 30, 58, 86, 114, 142, 170]],t = 1335,e = 7973,n = 21522,o = {},a = function a(r) {for (var t = 0; 0 != r;) {t += 1, r >>>= 1;}return t;};return o.getBCHTypeInfo = function (r) {for (var e = r << 10; a(e) - a(t) >= 0;) {e ^= t << a(e) - a(t);}return (r << 10 | e) ^ n;}, o.getBCHTypeNumber = function (r) {for (var t = r << 12; a(t) - a(e) >= 0;) {t ^= e << a(t) - a(e);}return r << 12 | t;}, o.getPatternPosition = function (t) {return r[t - 1];}, o.getMaskFunction = function (r) {switch (r) {case QRMaskPattern.PATTERN000:return function (r, t) {return (r + t) % 2 == 0;};case QRMaskPattern.PATTERN001:return function (r, t) {return r % 2 == 0;};case QRMaskPattern.PATTERN010:return function (r, t) {return t % 3 == 0;};case QRMaskPattern.PATTERN011:return function (r, t) {return (r + t) % 3 == 0;};case QRMaskPattern.PATTERN100:return function (r, t) {return (Math.floor(r / 2) + Math.floor(t / 3)) % 2 == 0;};case QRMaskPattern.PATTERN101:return function (r, t) {return r * t % 2 + r * t % 3 == 0;};case QRMaskPattern.PATTERN110:return function (r, t) {return (r * t % 2 + r * t % 3) % 2 == 0;};case QRMaskPattern.PATTERN111:return function (r, t) {return (r * t % 3 + (r + t) % 2) % 2 == 0;};default:throw new Error("bad maskPattern:" + r);}}, o.getErrorCorrectPolynomial = function (r) {for (var t = qrPolynomial([1], 0), e = 0; e < r; e += 1) {t = t.multiply(qrPolynomial([1, QRMath.gexp(e)], 0));}return t;}, o.getLengthInBits = function (r, t) {if (1 <= t && t < 10) switch (r) {case QRMode.MODE_NUMBER:return 10;case QRMode.MODE_ALPHA_NUM:return 9;case QRMode.MODE_8BIT_BYTE:return 8;case QRMode.MODE_KANJI:return 8;default:throw new Error("mode:" + r);} else if (t < 27) switch (r) {case QRMode.MODE_NUMBER:return 12;case QRMode.MODE_ALPHA_NUM:return 11;case QRMode.MODE_8BIT_BYTE:return 16;case QRMode.MODE_KANJI:return 10;default:throw new Error("mode:" + r);} else {if (!(t < 41)) throw new Error("type:" + t);switch (r) {case QRMode.MODE_NUMBER:return 14;case QRMode.MODE_ALPHA_NUM:return 13;case QRMode.MODE_8BIT_BYTE:return 16;case QRMode.MODE_KANJI:return 12;default:throw new Error("mode:" + r);}}}, o.getLostPoint = function (r) {for (var t = r.getModuleCount(), e = 0, n = 0; n < t; n += 1) {for (var o = 0; o < t; o += 1) {for (var a = 0, i = r.isDark(n, o), u = -1; u <= 1; u += 1) {if (!(n + u < 0 || t <= n + u)) for (var f = -1; f <= 1; f += 1) {o + f < 0 || t <= o + f || 0 == u && 0 == f || i == r.isDark(n + u, o + f) && (a += 1);}}a > 5 && (e += 3 + a - 5);}}for (var n = 0; n < t - 1; n += 1) {for (var o = 0; o < t - 1; o += 1) {var c = 0;r.isDark(n, o) && (c += 1), r.isDark(n + 1, o) && (c += 1), r.isDark(n, o + 1) && (c += 1), r.isDark(n + 1, o + 1) && (c += 1), 0 != c && 4 != c || (e += 3);}}for (var n = 0; n < t; n += 1) {for (var o = 0; o < t - 6; o += 1) {r.isDark(n, o) && !r.isDark(n, o + 1) && r.isDark(n, o + 2) && r.isDark(n, o + 3) && r.isDark(n, o + 4) && !r.isDark(n, o + 5) && r.isDark(n, o + 6) && (e += 40);}}for (var o = 0; o < t; o += 1) {for (var n = 0; n < t - 6; n += 1) {r.isDark(n, o) && !r.isDark(n + 1, o) && r.isDark(n + 2, o) && r.isDark(n + 3, o) && r.isDark(n + 4, o) && !r.isDark(n + 5, o) && r.isDark(n + 6, o) && (e += 40);}}for (var g = 0, o = 0; o < t; o += 1) {for (var n = 0; n < t; n += 1) {r.isDark(n, o) && (g += 1);}}var l = Math.abs(100 * g / t / t - 50) / 5;return e += 10 * l;}, o;}(),QRMath = function () {for (var r = new Array(256), t = new Array(256), e = 0; e < 8; e += 1) {r[e] = 1 << e;}for (var e = 8; e < 256; e += 1) {r[e] = r[e - 4] ^ r[e - 5] ^ r[e - 6] ^ r[e - 8];}for (var e = 0; e < 255; e += 1) {t[r[e]] = e;}var n = {};return n.glog = function (r) {if (r < 1) throw new Error("glog(" + r + ")");return t[r];}, n.gexp = function (t) {for (; t < 0;) {t += 255;}for (; t >= 256;) {t -= 255;}return r[t];}, n;}(),QRRSBlock = function () {var r = [[1, 26, 19], [1, 26, 16], [1, 26, 13], [1, 26, 9], [1, 44, 34], [1, 44, 28], [1, 44, 22], [1, 44, 16], [1, 70, 55], [1, 70, 44], [2, 35, 17], [2, 35, 13], [1, 100, 80], [2, 50, 32], [2, 50, 24], [4, 25, 9], [1, 134, 108], [2, 67, 43], [2, 33, 15, 2, 34, 16], [2, 33, 11, 2, 34, 12], [2, 86, 68], [4, 43, 27], [4, 43, 19], [4, 43, 15], [2, 98, 78], [4, 49, 31], [2, 32, 14, 4, 33, 15], [4, 39, 13, 1, 40, 14], [2, 121, 97], [2, 60, 38, 2, 61, 39], [4, 40, 18, 2, 41, 19], [4, 40, 14, 2, 41, 15], [2, 146, 116], [3, 58, 36, 2, 59, 37], [4, 36, 16, 4, 37, 17], [4, 36, 12, 4, 37, 13], [2, 86, 68, 2, 87, 69], [4, 69, 43, 1, 70, 44], [6, 43, 19, 2, 44, 20], [6, 43, 15, 2, 44, 16], [4, 101, 81], [1, 80, 50, 4, 81, 51], [4, 50, 22, 4, 51, 23], [3, 36, 12, 8, 37, 13], [2, 116, 92, 2, 117, 93], [6, 58, 36, 2, 59, 37], [4, 46, 20, 6, 47, 21], [7, 42, 14, 4, 43, 15], [4, 133, 107], [8, 59, 37, 1, 60, 38], [8, 44, 20, 4, 45, 21], [12, 33, 11, 4, 34, 12], [3, 145, 115, 1, 146, 116], [4, 64, 40, 5, 65, 41], [11, 36, 16, 5, 37, 17], [11, 36, 12, 5, 37, 13], [5, 109, 87, 1, 110, 88], [5, 65, 41, 5, 66, 42], [5, 54, 24, 7, 55, 25], [11, 36, 12], [5, 122, 98, 1, 123, 99], [7, 73, 45, 3, 74, 46], [15, 43, 19, 2, 44, 20], [3, 45, 15, 13, 46, 16], [1, 135, 107, 5, 136, 108], [10, 74, 46, 1, 75, 47], [1, 50, 22, 15, 51, 23], [2, 42, 14, 17, 43, 15], [5, 150, 120, 1, 151, 121], [9, 69, 43, 4, 70, 44], [17, 50, 22, 1, 51, 23], [2, 42, 14, 19, 43, 15], [3, 141, 113, 4, 142, 114], [3, 70, 44, 11, 71, 45], [17, 47, 21, 4, 48, 22], [9, 39, 13, 16, 40, 14], [3, 135, 107, 5, 136, 108], [3, 67, 41, 13, 68, 42], [15, 54, 24, 5, 55, 25], [15, 43, 15, 10, 44, 16], [4, 144, 116, 4, 145, 117], [17, 68, 42], [17, 50, 22, 6, 51, 23], [19, 46, 16, 6, 47, 17], [2, 139, 111, 7, 140, 112], [17, 74, 46], [7, 54, 24, 16, 55, 25], [34, 37, 13], [4, 151, 121, 5, 152, 122], [4, 75, 47, 14, 76, 48], [11, 54, 24, 14, 55, 25], [16, 45, 15, 14, 46, 16], [6, 147, 117, 4, 148, 118], [6, 73, 45, 14, 74, 46], [11, 54, 24, 16, 55, 25], [30, 46, 16, 2, 47, 17], [8, 132, 106, 4, 133, 107], [8, 75, 47, 13, 76, 48], [7, 54, 24, 22, 55, 25], [22, 45, 15, 13, 46, 16], [10, 142, 114, 2, 143, 115], [19, 74, 46, 4, 75, 47], [28, 50, 22, 6, 51, 23], [33, 46, 16, 4, 47, 17], [8, 152, 122, 4, 153, 123], [22, 73, 45, 3, 74, 46], [8, 53, 23, 26, 54, 24], [12, 45, 15, 28, 46, 16], [3, 147, 117, 10, 148, 118], [3, 73, 45, 23, 74, 46], [4, 54, 24, 31, 55, 25], [11, 45, 15, 31, 46, 16], [7, 146, 116, 7, 147, 117], [21, 73, 45, 7, 74, 46], [1, 53, 23, 37, 54, 24], [19, 45, 15, 26, 46, 16], [5, 145, 115, 10, 146, 116], [19, 75, 47, 10, 76, 48], [15, 54, 24, 25, 55, 25], [23, 45, 15, 25, 46, 16], [13, 145, 115, 3, 146, 116], [2, 74, 46, 29, 75, 47], [42, 54, 24, 1, 55, 25], [23, 45, 15, 28, 46, 16], [17, 145, 115], [10, 74, 46, 23, 75, 47], [10, 54, 24, 35, 55, 25], [19, 45, 15, 35, 46, 16], [17, 145, 115, 1, 146, 116], [14, 74, 46, 21, 75, 47], [29, 54, 24, 19, 55, 25], [11, 45, 15, 46, 46, 16], [13, 145, 115, 6, 146, 116], [14, 74, 46, 23, 75, 47], [44, 54, 24, 7, 55, 25], [59, 46, 16, 1, 47, 17], [12, 151, 121, 7, 152, 122], [12, 75, 47, 26, 76, 48], [39, 54, 24, 14, 55, 25], [22, 45, 15, 41, 46, 16], [6, 151, 121, 14, 152, 122], [6, 75, 47, 34, 76, 48], [46, 54, 24, 10, 55, 25], [2, 45, 15, 64, 46, 16], [17, 152, 122, 4, 153, 123], [29, 74, 46, 14, 75, 47], [49, 54, 24, 10, 55, 25], [24, 45, 15, 46, 46, 16], [4, 152, 122, 18, 153, 123], [13, 74, 46, 32, 75, 47], [48, 54, 24, 14, 55, 25], [42, 45, 15, 32, 46, 16], [20, 147, 117, 4, 148, 118], [40, 75, 47, 7, 76, 48], [43, 54, 24, 22, 55, 25], [10, 45, 15, 67, 46, 16], [19, 148, 118, 6, 149, 119], [18, 75, 47, 31, 76, 48], [34, 54, 24, 34, 55, 25], [20, 45, 15, 61, 46, 16]],t = function t(r, _t) {var e = {};return e.totalCount = r, e.dataCount = _t, e;},e = {},n = function n(t, e) {switch (e) {case QRErrorCorrectLevel.L:return r[4 * (t - 1) + 0];case QRErrorCorrectLevel.M:return r[4 * (t - 1) + 1];case QRErrorCorrectLevel.Q:return r[4 * (t - 1) + 2];case QRErrorCorrectLevel.H:return r[4 * (t - 1) + 3];default:return;}};return e.getRSBlocks = function (r, e) {var o = n(r, e);if ("undefined" == typeof o) throw new Error("bad rs block [url=home.php?mod=space&uid=5302]@[/url] typeNumber:" + r + "/errorCorrectLevel:" + e);for (var a = o.length / 3, i = new Array(), u = 0; u < a; u += 1) {for (var f = o[3 * u + 0], c = o[3 * u + 1], g = o[3 * u + 2], l = 0; l < f; l += 1) {i.push(t(c, g));}}return i;}, e;}(),qrBitBuffer = function qrBitBuffer() {var r = new Array(),t = 0,e = {};return e.getBuffer = function () {return r;}, e.getAt = function (t) {var e = Math.floor(t / 8);return 1 == (r[e] >>> 7 - t % 8 & 1);}, e.put = function (r, t) {for (var n = 0; n < t; n += 1) {e.putBit(1 == (r >>> t - n - 1 & 1));}}, e.getLengthInBits = function () {return t;}, e.putBit = function (e) {var n = Math.floor(t / 8);r.length <= n && r.push(0), e && (r[n] |= 128 >>> t % 8), t += 1;}, e;},qr8BitByte = function qr8BitByte(r) {for (var t = QRMode.MODE_8BIT_BYTE, e = r, n = [], o = {}, a = 0, i = e.length; a < i; a++) {var u = [],f = e.charCodeAt(a);f > 65536 ? (u[0] = 240 | (1835008 & f) >>> 18, u[1] = 128 | (258048 & f) >>> 12, u[2] = 128 | (4032 & f) >>> 6, u[3] = 128 | 63 & f) : f > 2048 ? (u[0] = 224 | (61440 & f) >>> 12, u[1] = 128 | (4032 & f) >>> 6, u[2] = 128 | 63 & f) : f > 128 ? (u[0] = 192 | (1984 & f) >>> 6, u[1] = 128 | 63 & f) : u[0] = f, n.push(u);}n = Array.prototype.concat.apply([], n), n.length != e.length && (n.unshift(191), n.unshift(187), n.unshift(239));var c = n;return o.getMode = function () {return t;}, o.getLength = function (r) {return c.length;}, o.write = function (r) {for (var t = 0; t < c.length; t += 1) {r.put(c[t], 8);}}, o;},byteArrayOutputStream = function byteArrayOutputStream() {var r = new Array(),t = {};return t.writeByte = function (t) {r.push(255 & t);}, t.writeShort = function (r) {t.writeByte(r), t.writeByte(r >>> 8);}, t.writeBytes = function (r, e, n) {e = e || 0, n = n || r.length;for (var o = 0; o < n; o += 1) {t.writeByte(r[o + e]);}}, t.writeString = function (r) {for (var e = 0; e < r.length; e += 1) {t.writeByte(r.charCodeAt(e));}}, t.toByteArray = function () {return r;}, t.toString = function () {var t = "";t += "[";for (var e = 0; e < r.length; e += 1) {e > 0 && (t += ","), t += r[e];}return t += "]";}, t;},base64EncodeOutputStream = function base64EncodeOutputStream() {var r = 0,t = 0,e = 0,n = "",o = {},a = function a(r) {n += String.fromCharCode(i(63 & r));},i = function i(r) {if (r < 0) ;else {if (r < 26) return 65 + r;if (r < 52) return 97 + (r - 26);if (r < 62) return 48 + (r - 52);if (62 == r) return 43;if (63 == r) return 47;}throw new Error("n:" + r);};return o.writeByte = function (n) {for (r = r << 8 | 255 & n, t += 8, e += 1; t >= 6;) {a(r >>> t - 6), t -= 6;}}, o.flush = function () {if (t > 0 && (a(r << 6 - t), r = 0, t = 0), e % 3 != 0) for (var o = 3 - e % 3, i = 0; i < o; i += 1) {n += "=";}}, o.toString = function () {return n;}, o;},base64DecodeInputStream = function base64DecodeInputStream(r) {var t = r,e = 0,n = 0,o = 0,a = {};a.read = function () {for (; o < 8;) {if (e >= t.length) {if (0 == o) return -1;throw new Error("unexpected end of file./" + o);}var r = t.charAt(e);if (e += 1, "=" == r) return o = 0, -1;r.match(/^\s$/) || (n = n << 6 | i(r.charCodeAt(0)), o += 6);}var a = n >>> o - 8 & 255;return o -= 8, a;};var i = function i(r) {if (65 <= r && r <= 90) return r - 65;if (97 <= r && r <= 122) return r - 97 + 26;if (48 <= r && r <= 57) return r - 48 + 52;if (43 == r) return 62;if (47 == r) return 63;throw new Error("c:" + r);};return a;},gifImage = function gifImage(r, t) {var e = r,n = t,o = new Array(r * t),a = {};a.setPixel = function (r, t, n) {o[t * e + r] = n;}, a.write = function (r) {r.writeString("GIF87a"), r.writeShort(e), r.writeShort(n), r.writeByte(128), r.writeByte(0), r.writeByte(0), r.writeByte(0), r.writeByte(0), r.writeByte(0), r.writeByte(255), r.writeByte(255), r.writeByte(255), r.writeString(","), r.writeShort(0), r.writeShort(0), r.writeShort(e), r.writeShort(n), r.writeByte(0);var t = 2,o = u(t);r.writeByte(t);for (var a = 0; o.length - a > 255;) {r.writeByte(255), r.writeBytes(o, a, 255), a += 255;}r.writeByte(o.length - a), r.writeBytes(o, a, o.length - a), r.writeByte(0), r.writeString(";");};var i = function i(r) {var t = r,e = 0,n = 0,o = {};return o.write = function (r, o) {if (r >>> o != 0) throw new Error("length over");for (; e + o >= 8;) {t.writeByte(255 & (r << e | n)), o -= 8 - e, r >>>= 8 - e, n = 0, e = 0;}n |= r << e, e += o;}, o.flush = function () {e > 0 && t.writeByte(n);}, o;},u = function u(r) {for (var t = 1 << r, e = (1 << r) + 1, n = r + 1, a = f(), u = 0; u < t; u += 1) {a.add(String.fromCharCode(u));}a.add(String.fromCharCode(t)), a.add(String.fromCharCode(e));var c = byteArrayOutputStream(),g = i(c);g.write(t, n);var l = 0,h = String.fromCharCode(o[l]);for (l += 1; l < o.length;) {var v = String.fromCharCode(o[l]);l += 1, a.contains(h + v) ? h += v : (g.write(a.indexOf(h), n), a.size() < 4095 && (a.size() == 1 << n && (n += 1), a.add(h + v)), h = v);}return g.write(a.indexOf(h), n), g.write(e, n), g.flush(), c.toByteArray();},f = function f() {var r = {},t = 0,e = {};return e.add = function (n) {if (e.contains(n)) throw new Error("dup key:" + n);r[n] = t, t += 1;}, e.size = function () {return t;}, e.indexOf = function (t) {return r[t];}, e.contains = function (t) {return "undefined" != typeof r[t];}, e;};return a;},createImgTag = function createImgTag(r, t, e, n) {for (var o = gifImage(r, t), a = 0; a < t; a += 1) {for (var i = 0; i < r; i += 1) {o.setPixel(i, a, e(i, a));}}var u = byteArrayOutputStream();o.write(u);for (var f = base64EncodeOutputStream(), c = u.toByteArray(), g = 0; g < c.length; g += 1) {f.writeByte(c[g]);}f.flush();var l = "";return l += "data:image/gif;base64,", l += f;},createQrCodeImg = function createQrCodeImg(r, t) {t = t || {};var e,n = t.typeNumber || 4,o = t.errorCorrectLevel || "M",a = t.size || 500;try {e = qrcode(n, o || "M"), e.addData(r), e.make();} catch (t) {if (n >= 40) throw new Error("Text too long to encode");return gen(r, { size: a, errorCorrectLevel: o, typeNumber: n + 1 });}var i = parseInt(a / e.getModuleCount()),u = parseInt((a - e.getModuleCount() * i) / 2);return e.createImgTag(i, u, a);};module.exports = { createQrCodeImg: createQrCodeImg };
+
+/***/ }),
+
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\w-picker\\city-data\\area.js":
+/*!************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/components/w-picker/city-data/area.js ***!
+  \************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21140,10 +20047,10 @@ areaData;exports.default = _default;
 
 /***/ }),
 
-/***/ "E:\\wemusic\\components\\w-picker\\city-data\\city.js":
-/*!********************************************************!*\
-  !*** E:/wemusic/components/w-picker/city-data/city.js ***!
-  \********************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\w-picker\\city-data\\city.js":
+/*!************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/components/w-picker/city-data/city.js ***!
+  \************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22654,10 +21561,10 @@ cityData;exports.default = _default;
 
 /***/ }),
 
-/***/ "E:\\wemusic\\components\\w-picker\\city-data\\province.js":
-/*!************************************************************!*\
-  !*** E:/wemusic/components/w-picker/city-data/province.js ***!
-  \************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\w-picker\\city-data\\province.js":
+/*!****************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/components/w-picker/city-data/province.js ***!
+  \****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22804,27 +21711,28 @@ provinceData;exports.default = _default;
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js":
-/*!**************************!*\
-  !*** E:/wemusic/main.js ***!
-  \**************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js":
+/*!******************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createApp) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createApp) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ "E:\\wemusic\\App.vue"));
-var _common = __webpack_require__(/*! ./common/common.js */ "E:\\wemusic\\common\\common.js");
+var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ "C:\\Users\\Administrator\\Desktop\\wemusic\\App.vue"));
+var _common = __webpack_require__(/*! ./common/common.js */ "C:\\Users\\Administrator\\Desktop\\wemusic\\common\\common.js");
 
 
-var _requestUpFiles = _interopRequireDefault(__webpack_require__(/*! ./common/request/request-upFiles.js */ "E:\\wemusic\\common\\request\\request-upFiles.js"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
+var _language = __webpack_require__(/*! ./common/language.js */ "C:\\Users\\Administrator\\Desktop\\wemusic\\common\\language.js");function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
+
+
 _vue.default.config.productionTip = false;
 //封装请求方法
 _vue.default.prototype.ajax = _common.ajax;
-_vue.default.prototype.ToolsUp = _requestUpFiles.default;
+_vue.default.prototype._i18n = _language.i18n;
 _App.default.mpType = 'app';
-
 var app = new _vue.default(_objectSpread({},
 _App.default));
 
@@ -22833,775 +21741,809 @@ createApp(app).$mount();
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FaboutUs%2FaboutUs\"}":
-/*!***************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FaboutUs%2FaboutUs"} ***!
-  \***************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FaboutUs%2FaboutUs\"}":
+/*!*******************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FaboutUs%2FaboutUs"} ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _aboutUs = _interopRequireDefault(__webpack_require__(/*! ./pages/aboutUs/aboutUs.vue */ "E:\\wemusic\\pages\\aboutUs\\aboutUs.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _aboutUs = _interopRequireDefault(__webpack_require__(/*! ./pages/aboutUs/aboutUs.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\aboutUs\\aboutUs.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_aboutUs.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FaddTask%2FaddTask\"}":
-/*!***************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FaddTask%2FaddTask"} ***!
-  \***************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FaddTask%2FaddTask\"}":
+/*!*******************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FaddTask%2FaddTask"} ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _addTask = _interopRequireDefault(__webpack_require__(/*! ./pages/addTask/addTask.vue */ "E:\\wemusic\\pages\\addTask\\addTask.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _addTask = _interopRequireDefault(__webpack_require__(/*! ./pages/addTask/addTask.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\addTask\\addTask.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_addTask.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FaddTeacher%2FaddTeacher\"}":
-/*!*********************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FaddTeacher%2FaddTeacher"} ***!
-  \*********************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FaddTeacher%2FaddTeacher\"}":
+/*!*************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FaddTeacher%2FaddTeacher"} ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _addTeacher = _interopRequireDefault(__webpack_require__(/*! ./pages/addTeacher/addTeacher.vue */ "E:\\wemusic\\pages\\addTeacher\\addTeacher.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _addTeacher = _interopRequireDefault(__webpack_require__(/*! ./pages/addTeacher/addTeacher.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\addTeacher\\addTeacher.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_addTeacher.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FadjustmentDetail%2FadjustmentDetail\"}":
-/*!*********************************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FadjustmentDetail%2FadjustmentDetail"} ***!
-  \*********************************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FadjustmentDetail%2FadjustmentDetail\"}":
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FadjustmentDetail%2FadjustmentDetail"} ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _adjustmentDetail = _interopRequireDefault(__webpack_require__(/*! ./pages/adjustmentDetail/adjustmentDetail.vue */ "E:\\wemusic\\pages\\adjustmentDetail\\adjustmentDetail.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _adjustmentDetail = _interopRequireDefault(__webpack_require__(/*! ./pages/adjustmentDetail/adjustmentDetail.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\adjustmentDetail\\adjustmentDetail.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_adjustmentDetail.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2Fauthentication%2Fauthentication\"}":
-/*!*****************************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2Fauthentication%2Fauthentication"} ***!
-  \*****************************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2Fauthentication%2Fauthentication\"}":
+/*!*********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2Fauthentication%2Fauthentication"} ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _authentication = _interopRequireDefault(__webpack_require__(/*! ./pages/authentication/authentication.vue */ "E:\\wemusic\\pages\\authentication\\authentication.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _authentication = _interopRequireDefault(__webpack_require__(/*! ./pages/authentication/authentication.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\authentication\\authentication.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_authentication.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FchoiceTeacher%2FchoiceTeacher\"}":
-/*!***************************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FchoiceTeacher%2FchoiceTeacher"} ***!
-  \***************************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FchoiceTeacher%2FchoiceTeacher\"}":
+/*!*******************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FchoiceTeacher%2FchoiceTeacher"} ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _choiceTeacher = _interopRequireDefault(__webpack_require__(/*! ./pages/choiceTeacher/choiceTeacher.vue */ "E:\\wemusic\\pages\\choiceTeacher\\choiceTeacher.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _choiceTeacher = _interopRequireDefault(__webpack_require__(/*! ./pages/choiceTeacher/choiceTeacher.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\choiceTeacher\\choiceTeacher.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_choiceTeacher.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FcircleFriends%2FcircleFriends\"}":
-/*!***************************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FcircleFriends%2FcircleFriends"} ***!
-  \***************************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FcircleFriends%2FcircleFriends\"}":
+/*!*******************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FcircleFriends%2FcircleFriends"} ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _circleFriends = _interopRequireDefault(__webpack_require__(/*! ./pages/circleFriends/circleFriends.vue */ "E:\\wemusic\\pages\\circleFriends\\circleFriends.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _circleFriends = _interopRequireDefault(__webpack_require__(/*! ./pages/circleFriends/circleFriends.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\circleFriends\\circleFriends.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_circleFriends.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FclassAdjustment%2FclassAdjustment\"}":
-/*!*******************************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FclassAdjustment%2FclassAdjustment"} ***!
-  \*******************************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FclassAdjustment%2FclassAdjustment\"}":
+/*!***********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FclassAdjustment%2FclassAdjustment"} ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _classAdjustment = _interopRequireDefault(__webpack_require__(/*! ./pages/classAdjustment/classAdjustment.vue */ "E:\\wemusic\\pages\\classAdjustment\\classAdjustment.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _classAdjustment = _interopRequireDefault(__webpack_require__(/*! ./pages/classAdjustment/classAdjustment.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\classAdjustment\\classAdjustment.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_classAdjustment.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FclassNotice%2FclassNotice\"}":
-/*!***********************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FclassNotice%2FclassNotice"} ***!
-  \***********************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FclassNotice%2FclassNotice\"}":
+/*!***************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FclassNotice%2FclassNotice"} ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _classNotice = _interopRequireDefault(__webpack_require__(/*! ./pages/classNotice/classNotice.vue */ "E:\\wemusic\\pages\\classNotice\\classNotice.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _classNotice = _interopRequireDefault(__webpack_require__(/*! ./pages/classNotice/classNotice.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\classNotice\\classNotice.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_classNotice.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FcodeSuccess%2FcodeSuccess\"}":
-/*!***********************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FcodeSuccess%2FcodeSuccess"} ***!
-  \***********************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2Fcode%2Fcode\"}":
+/*!*************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2Fcode%2Fcode"} ***!
+  \*************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _codeSuccess = _interopRequireDefault(__webpack_require__(/*! ./pages/codeSuccess/codeSuccess.vue */ "E:\\wemusic\\pages\\codeSuccess\\codeSuccess.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _code = _interopRequireDefault(__webpack_require__(/*! ./pages/code/code.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\code\\code.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_code.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FcodeSuccess%2FcodeSuccess\"}":
+/*!***************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FcodeSuccess%2FcodeSuccess"} ***!
+  \***************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _codeSuccess = _interopRequireDefault(__webpack_require__(/*! ./pages/codeSuccess/codeSuccess.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\codeSuccess\\codeSuccess.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_codeSuccess.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FconfirmComplete%2FconfirmComplete\"}":
-/*!*******************************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FconfirmComplete%2FconfirmComplete"} ***!
-  \*******************************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FconfirmComplete%2FconfirmComplete\"}":
+/*!***********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FconfirmComplete%2FconfirmComplete"} ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _confirmComplete = _interopRequireDefault(__webpack_require__(/*! ./pages/confirmComplete/confirmComplete.vue */ "E:\\wemusic\\pages\\confirmComplete\\confirmComplete.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _confirmComplete = _interopRequireDefault(__webpack_require__(/*! ./pages/confirmComplete/confirmComplete.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\confirmComplete\\confirmComplete.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_confirmComplete.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FconsumptionRecord%2FconsumptionRecord\"}":
-/*!***********************************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FconsumptionRecord%2FconsumptionRecord"} ***!
-  \***********************************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FconsumptionRecord%2FconsumptionRecord\"}":
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FconsumptionRecord%2FconsumptionRecord"} ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _consumptionRecord = _interopRequireDefault(__webpack_require__(/*! ./pages/consumptionRecord/consumptionRecord.vue */ "E:\\wemusic\\pages\\consumptionRecord\\consumptionRecord.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _consumptionRecord = _interopRequireDefault(__webpack_require__(/*! ./pages/consumptionRecord/consumptionRecord.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\consumptionRecord\\consumptionRecord.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_consumptionRecord.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FcourseInvitation%2FcourseInvitation\"}":
-/*!*********************************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FcourseInvitation%2FcourseInvitation"} ***!
-  \*********************************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FcourseInvitation%2FcourseInvitation\"}":
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FcourseInvitation%2FcourseInvitation"} ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _courseInvitation = _interopRequireDefault(__webpack_require__(/*! ./pages/courseInvitation/courseInvitation.vue */ "E:\\wemusic\\pages\\courseInvitation\\courseInvitation.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _courseInvitation = _interopRequireDefault(__webpack_require__(/*! ./pages/courseInvitation/courseInvitation.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\courseInvitation\\courseInvitation.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_courseInvitation.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2Fevaluate%2Fevaluate\"}":
-/*!*****************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2Fevaluate%2Fevaluate"} ***!
-  \*****************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2Fevaluate%2Fevaluate\"}":
+/*!*********************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2Fevaluate%2Fevaluate"} ***!
+  \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _evaluate = _interopRequireDefault(__webpack_require__(/*! ./pages/evaluate/evaluate.vue */ "E:\\wemusic\\pages\\evaluate\\evaluate.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _evaluate = _interopRequireDefault(__webpack_require__(/*! ./pages/evaluate/evaluate.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\evaluate\\evaluate.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_evaluate.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2Ffeedback%2Ffeedback\"}":
-/*!*****************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2Ffeedback%2Ffeedback"} ***!
-  \*****************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2Ffeedback%2Ffeedback\"}":
+/*!*********************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2Ffeedback%2Ffeedback"} ***!
+  \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _feedback = _interopRequireDefault(__webpack_require__(/*! ./pages/feedback/feedback.vue */ "E:\\wemusic\\pages\\feedback\\feedback.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _feedback = _interopRequireDefault(__webpack_require__(/*! ./pages/feedback/feedback.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\feedback\\feedback.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_feedback.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2Ffinance%2Ffinance\"}":
-/*!***************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2Ffinance%2Ffinance"} ***!
-  \***************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2Ffinance%2Ffinance\"}":
+/*!*******************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2Ffinance%2Ffinance"} ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _finance = _interopRequireDefault(__webpack_require__(/*! ./pages/finance/finance.vue */ "E:\\wemusic\\pages\\finance\\finance.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _finance = _interopRequireDefault(__webpack_require__(/*! ./pages/finance/finance.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\finance\\finance.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_finance.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FforgetPass%2FforgetPass\"}":
-/*!*********************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FforgetPass%2FforgetPass"} ***!
-  \*********************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FforgetPass%2FforgetPass\"}":
+/*!*************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FforgetPass%2FforgetPass"} ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _forgetPass = _interopRequireDefault(__webpack_require__(/*! ./pages/forgetPass/forgetPass.vue */ "E:\\wemusic\\pages\\forgetPass\\forgetPass.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _forgetPass = _interopRequireDefault(__webpack_require__(/*! ./pages/forgetPass/forgetPass.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\forgetPass\\forgetPass.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_forgetPass.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FfriendsDetail%2FfriendsDetail\"}":
-/*!***************************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FfriendsDetail%2FfriendsDetail"} ***!
-  \***************************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FfriendsDetail%2FfriendsDetail\"}":
+/*!*******************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FfriendsDetail%2FfriendsDetail"} ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _friendsDetail = _interopRequireDefault(__webpack_require__(/*! ./pages/friendsDetail/friendsDetail.vue */ "E:\\wemusic\\pages\\friendsDetail\\friendsDetail.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _friendsDetail = _interopRequireDefault(__webpack_require__(/*! ./pages/friendsDetail/friendsDetail.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\friendsDetail\\friendsDetail.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_friendsDetail.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2Flesson%2Flesson\"}":
-/*!*************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2Flesson%2Flesson"} ***!
-  \*************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2Flesson%2Flesson\"}":
+/*!*****************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2Flesson%2Flesson"} ***!
+  \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _lesson = _interopRequireDefault(__webpack_require__(/*! ./pages/lesson/lesson.vue */ "E:\\wemusic\\pages\\lesson\\lesson.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _lesson = _interopRequireDefault(__webpack_require__(/*! ./pages/lesson/lesson.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\lesson\\lesson.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_lesson.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FlessonCopy%2FlessonCopy\"}":
-/*!*********************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FlessonCopy%2FlessonCopy"} ***!
-  \*********************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FlessonCopy%2FlessonCopy\"}":
+/*!*************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FlessonCopy%2FlessonCopy"} ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _lessonCopy = _interopRequireDefault(__webpack_require__(/*! ./pages/lessonCopy/lessonCopy.vue */ "E:\\wemusic\\pages\\lessonCopy\\lessonCopy.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _lessonCopy = _interopRequireDefault(__webpack_require__(/*! ./pages/lessonCopy/lessonCopy.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\lessonCopy\\lessonCopy.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_lessonCopy.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FlessonDetail%2FlessonDetail\"}":
-/*!*************************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FlessonDetail%2FlessonDetail"} ***!
-  \*************************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FlessonDetail%2FlessonDetail\"}":
+/*!*****************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FlessonDetail%2FlessonDetail"} ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _lessonDetail = _interopRequireDefault(__webpack_require__(/*! ./pages/lessonDetail/lessonDetail.vue */ "E:\\wemusic\\pages\\lessonDetail\\lessonDetail.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _lessonDetail = _interopRequireDefault(__webpack_require__(/*! ./pages/lessonDetail/lessonDetail.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\lessonDetail\\lessonDetail.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_lessonDetail.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2Flogin%2Flogin\"}":
-/*!***********************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2Flogin%2Flogin"} ***!
-  \***********************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2Flogin%2Flogin\"}":
+/*!***************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2Flogin%2Flogin"} ***!
+  \***************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _login = _interopRequireDefault(__webpack_require__(/*! ./pages/login/login.vue */ "E:\\wemusic\\pages\\login\\login.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _login = _interopRequireDefault(__webpack_require__(/*! ./pages/login/login.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\login\\login.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_login.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2Fmessage%2Fmessage\"}":
-/*!***************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2Fmessage%2Fmessage"} ***!
-  \***************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2Fmessage%2Fmessage\"}":
+/*!*******************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2Fmessage%2Fmessage"} ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _message = _interopRequireDefault(__webpack_require__(/*! ./pages/message/message.vue */ "E:\\wemusic\\pages\\message\\message.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _message = _interopRequireDefault(__webpack_require__(/*! ./pages/message/message.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\message\\message.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_message.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FmyCode%2FmyCode\"}":
-/*!*************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FmyCode%2FmyCode"} ***!
-  \*************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FmyCode%2FmyCode\"}":
+/*!*****************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FmyCode%2FmyCode"} ***!
+  \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _myCode = _interopRequireDefault(__webpack_require__(/*! ./pages/myCode/myCode.vue */ "E:\\wemusic\\pages\\myCode\\myCode.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _myCode = _interopRequireDefault(__webpack_require__(/*! ./pages/myCode/myCode.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\myCode\\myCode.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_myCode.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FmyCoupon%2FmyCoupon\"}":
-/*!*****************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FmyCoupon%2FmyCoupon"} ***!
-  \*****************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FmyCoupon%2FmyCoupon\"}":
+/*!*********************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FmyCoupon%2FmyCoupon"} ***!
+  \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _myCoupon = _interopRequireDefault(__webpack_require__(/*! ./pages/myCoupon/myCoupon.vue */ "E:\\wemusic\\pages\\myCoupon\\myCoupon.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _myCoupon = _interopRequireDefault(__webpack_require__(/*! ./pages/myCoupon/myCoupon.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\myCoupon\\myCoupon.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_myCoupon.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FmyEvaluate%2FmyEvaluate\"}":
-/*!*********************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FmyEvaluate%2FmyEvaluate"} ***!
-  \*********************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FmyEvaluate%2FmyEvaluate\"}":
+/*!*************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FmyEvaluate%2FmyEvaluate"} ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _myEvaluate = _interopRequireDefault(__webpack_require__(/*! ./pages/myEvaluate/myEvaluate.vue */ "E:\\wemusic\\pages\\myEvaluate\\myEvaluate.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _myEvaluate = _interopRequireDefault(__webpack_require__(/*! ./pages/myEvaluate/myEvaluate.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\myEvaluate\\myEvaluate.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_myEvaluate.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FmyFriend%2FmyFriend\"}":
-/*!*****************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FmyFriend%2FmyFriend"} ***!
-  \*****************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FmyFriend%2FmyFriend\"}":
+/*!*********************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FmyFriend%2FmyFriend"} ***!
+  \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _myFriend = _interopRequireDefault(__webpack_require__(/*! ./pages/myFriend/myFriend.vue */ "E:\\wemusic\\pages\\myFriend\\myFriend.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _myFriend = _interopRequireDefault(__webpack_require__(/*! ./pages/myFriend/myFriend.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\myFriend\\myFriend.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_myFriend.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2Fpay%2Fpay\"}":
-/*!*******************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2Fpay%2Fpay"} ***!
-  \*******************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2Fpay%2Fpay\"}":
+/*!***********************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2Fpay%2Fpay"} ***!
+  \***********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _pay = _interopRequireDefault(__webpack_require__(/*! ./pages/pay/pay.vue */ "E:\\wemusic\\pages\\pay\\pay.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _pay = _interopRequireDefault(__webpack_require__(/*! ./pages/pay/pay.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\pay\\pay.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_pay.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FpaySuccess%2FpaySuccess\"}":
-/*!*********************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FpaySuccess%2FpaySuccess"} ***!
-  \*********************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FpaySuccess%2FpaySuccess\"}":
+/*!*************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FpaySuccess%2FpaySuccess"} ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _paySuccess = _interopRequireDefault(__webpack_require__(/*! ./pages/paySuccess/paySuccess.vue */ "E:\\wemusic\\pages\\paySuccess\\paySuccess.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _paySuccess = _interopRequireDefault(__webpack_require__(/*! ./pages/paySuccess/paySuccess.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\paySuccess\\paySuccess.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_paySuccess.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FrechargeRecord%2FrechargeRecord\"}":
-/*!*****************************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FrechargeRecord%2FrechargeRecord"} ***!
-  \*****************************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FrechargeRecord%2FrechargeRecord\"}":
+/*!*********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FrechargeRecord%2FrechargeRecord"} ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _rechargeRecord = _interopRequireDefault(__webpack_require__(/*! ./pages/rechargeRecord/rechargeRecord.vue */ "E:\\wemusic\\pages\\rechargeRecord\\rechargeRecord.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _rechargeRecord = _interopRequireDefault(__webpack_require__(/*! ./pages/rechargeRecord/rechargeRecord.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\rechargeRecord\\rechargeRecord.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_rechargeRecord.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2Fregister%2Fregister\"}":
-/*!*****************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2Fregister%2Fregister"} ***!
-  \*****************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2Fregister%2Fregister\"}":
+/*!*********************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2Fregister%2Fregister"} ***!
+  \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _register = _interopRequireDefault(__webpack_require__(/*! ./pages/register/register.vue */ "E:\\wemusic\\pages\\register\\register.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _register = _interopRequireDefault(__webpack_require__(/*! ./pages/register/register.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\register\\register.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_register.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FreleaseFriends%2FreleaseFriends\"}":
-/*!*****************************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FreleaseFriends%2FreleaseFriends"} ***!
-  \*****************************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FregistrationSuccess%2FregistrationSuccess\"}":
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FregistrationSuccess%2FregistrationSuccess"} ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _releaseFriends = _interopRequireDefault(__webpack_require__(/*! ./pages/releaseFriends/releaseFriends.vue */ "E:\\wemusic\\pages\\releaseFriends\\releaseFriends.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _registrationSuccess = _interopRequireDefault(__webpack_require__(/*! ./pages/registrationSuccess/registrationSuccess.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\registrationSuccess\\registrationSuccess.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_registrationSuccess.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FreleaseFriends%2FreleaseFriends\"}":
+/*!*********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FreleaseFriends%2FreleaseFriends"} ***!
+  \*********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _releaseFriends = _interopRequireDefault(__webpack_require__(/*! ./pages/releaseFriends/releaseFriends.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\releaseFriends\\releaseFriends.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_releaseFriends.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2Fsetting%2Fsetting\"}":
-/*!***************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2Fsetting%2Fsetting"} ***!
-  \***************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2Fsetting%2Fsetting\"}":
+/*!*******************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2Fsetting%2Fsetting"} ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _setting = _interopRequireDefault(__webpack_require__(/*! ./pages/setting/setting.vue */ "E:\\wemusic\\pages\\setting\\setting.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _setting = _interopRequireDefault(__webpack_require__(/*! ./pages/setting/setting.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\setting\\setting.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_setting.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2Ftabbar%2Ftabbar-1%2Ftabbar-1\"}":
-/*!**************************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2Ftabbar%2Ftabbar-1%2Ftabbar-1"} ***!
-  \**************************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2Ftabbar%2Ftabbar-1%2Ftabbar-1\"}":
+/*!******************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2Ftabbar%2Ftabbar-1%2Ftabbar-1"} ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _tabbar = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar/tabbar-1/tabbar-1.vue */ "E:\\wemusic\\pages\\tabbar\\tabbar-1\\tabbar-1.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _tabbar = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar/tabbar-1/tabbar-1.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\tabbar\\tabbar-1\\tabbar-1.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_tabbar.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2Ftabbar%2Ftabbar-2%2Ftabbar-2\"}":
-/*!**************************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2Ftabbar%2Ftabbar-2%2Ftabbar-2"} ***!
-  \**************************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2Ftabbar%2Ftabbar-2%2Ftabbar-2\"}":
+/*!******************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2Ftabbar%2Ftabbar-2%2Ftabbar-2"} ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _tabbar = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar/tabbar-2/tabbar-2.vue */ "E:\\wemusic\\pages\\tabbar\\tabbar-2\\tabbar-2.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _tabbar = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar/tabbar-2/tabbar-2.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\tabbar\\tabbar-2\\tabbar-2.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_tabbar.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2Ftabbar%2Ftabbar-5%2Ftabbar-5\"}":
-/*!**************************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2Ftabbar%2Ftabbar-5%2Ftabbar-5"} ***!
-  \**************************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2Ftabbar%2Ftabbar-5%2Ftabbar-5\"}":
+/*!******************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2Ftabbar%2Ftabbar-5%2Ftabbar-5"} ***!
+  \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _tabbar = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar/tabbar-5/tabbar-5.vue */ "E:\\wemusic\\pages\\tabbar\\tabbar-5\\tabbar-5.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _tabbar = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar/tabbar-5/tabbar-5.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\tabbar\\tabbar-5\\tabbar-5.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_tabbar.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FteacherDetail%2FteacherDetail\"}":
-/*!***************************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FteacherDetail%2FteacherDetail"} ***!
-  \***************************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FteacherDetail%2FteacherDetail\"}":
+/*!*******************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FteacherDetail%2FteacherDetail"} ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _teacherDetail = _interopRequireDefault(__webpack_require__(/*! ./pages/teacherDetail/teacherDetail.vue */ "E:\\wemusic\\pages\\teacherDetail\\teacherDetail.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _teacherDetail = _interopRequireDefault(__webpack_require__(/*! ./pages/teacherDetail/teacherDetail.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\teacherDetail\\teacherDetail.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_teacherDetail.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FteacherLogin%2FteacherLogin\"}":
-/*!*************************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FteacherLogin%2FteacherLogin"} ***!
-  \*************************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FteacherLogin%2FteacherLogin\"}":
+/*!*****************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FteacherLogin%2FteacherLogin"} ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _teacherLogin = _interopRequireDefault(__webpack_require__(/*! ./pages/teacherLogin/teacherLogin.vue */ "E:\\wemusic\\pages\\teacherLogin\\teacherLogin.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _teacherLogin = _interopRequireDefault(__webpack_require__(/*! ./pages/teacherLogin/teacherLogin.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\teacherLogin\\teacherLogin.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_teacherLogin.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FupdateEmial%2FupdateEmial\"}":
-/*!***********************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FupdateEmial%2FupdateEmial"} ***!
-  \***********************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FupdateEmial%2FupdateEmial\"}":
+/*!***************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FupdateEmial%2FupdateEmial"} ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _updateEmial = _interopRequireDefault(__webpack_require__(/*! ./pages/updateEmial/updateEmial.vue */ "E:\\wemusic\\pages\\updateEmial\\updateEmial.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _updateEmial = _interopRequireDefault(__webpack_require__(/*! ./pages/updateEmial/updateEmial.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\updateEmial\\updateEmial.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_updateEmial.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FupdatePass%2FupdatePass\"}":
-/*!*********************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FupdatePass%2FupdatePass"} ***!
-  \*********************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FupdatePass%2FupdatePass\"}":
+/*!*************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FupdatePass%2FupdatePass"} ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _updatePass = _interopRequireDefault(__webpack_require__(/*! ./pages/updatePass/updatePass.vue */ "E:\\wemusic\\pages\\updatePass\\updatePass.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _updatePass = _interopRequireDefault(__webpack_require__(/*! ./pages/updatePass/updatePass.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\updatePass\\updatePass.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_updatePass.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FupdatePhone%2FupdatePhone\"}":
-/*!***********************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FupdatePhone%2FupdatePhone"} ***!
-  \***********************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FupdatePhone%2FupdatePhone\"}":
+/*!***************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FupdatePhone%2FupdatePhone"} ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _updatePhone = _interopRequireDefault(__webpack_require__(/*! ./pages/updatePhone/updatePhone.vue */ "E:\\wemusic\\pages\\updatePhone\\updatePhone.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _updatePhone = _interopRequireDefault(__webpack_require__(/*! ./pages/updatePhone/updatePhone.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\updatePhone\\updatePhone.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_updatePhone.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FupdateUserinfo%2FupdateUserinfo\"}":
-/*!*****************************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FupdateUserinfo%2FupdateUserinfo"} ***!
-  \*****************************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FupdateUserinfo%2FupdateUserinfo\"}":
+/*!*********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FupdateUserinfo%2FupdateUserinfo"} ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _updateUserinfo = _interopRequireDefault(__webpack_require__(/*! ./pages/updateUserinfo/updateUserinfo.vue */ "E:\\wemusic\\pages\\updateUserinfo\\updateUserinfo.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _updateUserinfo = _interopRequireDefault(__webpack_require__(/*! ./pages/updateUserinfo/updateUserinfo.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\updateUserinfo\\updateUserinfo.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_updateUserinfo.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FuploadFile%2FuploadFile\"}":
-/*!*********************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FuploadFile%2FuploadFile"} ***!
-  \*********************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FuploadFile%2FuploadFile\"}":
+/*!*************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FuploadFile%2FuploadFile"} ***!
+  \*************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _uploadFile = _interopRequireDefault(__webpack_require__(/*! ./pages/uploadFile/uploadFile.vue */ "E:\\wemusic\\pages\\uploadFile\\uploadFile.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _uploadFile = _interopRequireDefault(__webpack_require__(/*! ./pages/uploadFile/uploadFile.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\uploadFile\\uploadFile.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_uploadFile.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FvipCenter%2FvipCenter\"}":
-/*!*******************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FvipCenter%2FvipCenter"} ***!
-  \*******************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FvipCenter%2FvipCenter\"}":
+/*!***********************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FvipCenter%2FvipCenter"} ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _vipCenter = _interopRequireDefault(__webpack_require__(/*! ./pages/vipCenter/vipCenter.vue */ "E:\\wemusic\\pages\\vipCenter\\vipCenter.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _vipCenter = _interopRequireDefault(__webpack_require__(/*! ./pages/vipCenter/vipCenter.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\vipCenter\\vipCenter.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_vipCenter.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\main.js?{\"page\":\"pages%2FwagesDetail%2FwagesDetail\"}":
-/*!***********************************************************************!*\
-  !*** E:/wemusic/main.js?{"page":"pages%2FwagesDetail%2FwagesDetail"} ***!
-  \***********************************************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\main.js?{\"page\":\"pages%2FwagesDetail%2FwagesDetail\"}":
+/*!***************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/main.js?{"page":"pages%2FwagesDetail%2FwagesDetail"} ***!
+  \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "E:\\wemusic\\pages.json");
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json");
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
-var _wagesDetail = _interopRequireDefault(__webpack_require__(/*! ./pages/wagesDetail/wagesDetail.vue */ "E:\\wemusic\\pages\\wagesDetail\\wagesDetail.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _wagesDetail = _interopRequireDefault(__webpack_require__(/*! ./pages/wagesDetail/wagesDetail.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages\\wagesDetail\\wagesDetail.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_wagesDetail.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
 
-/***/ "E:\\wemusic\\pages.json":
-/*!*****************************!*\
-  !*** E:/wemusic/pages.json ***!
-  \*****************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\pages.json":
+/*!*********************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/pages.json ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23610,10 +22552,10 @@ createPage(_wagesDetail.default);
 
 /***/ }),
 
-/***/ "E:\\wemusic\\static\\img\\weixinpay@2x.png":
-/*!**********************************************!*\
-  !*** E:/wemusic/static/img/weixinpay@2x.png ***!
-  \**********************************************/
+/***/ "C:\\Users\\Administrator\\Desktop\\wemusic\\static\\img\\weixinpay@2x.png":
+/*!**************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/wemusic/static/img/weixinpay@2x.png ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

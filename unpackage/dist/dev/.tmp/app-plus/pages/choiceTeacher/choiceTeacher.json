@@ -1,4 +1,5 @@
 {
+  "enablePullDownRefresh": true,
   "titleNView": false,
   "usingComponents": {
     "lesson-head": "/components/lesson/lessonHead",

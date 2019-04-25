@@ -1,5 +1,5 @@
 .submit {
-  width: 100%;
+  width: auto;
   position: fixed;
   bottom: 10rpx;
   left: 0;
@@ -9,6 +9,7 @@
 .submit input {
   float: left;
   width: 540rpx;
+  margin-right: 10rpx;
   line-height: 52rpx;
   font-size: 28rpx;
   background: #f0f2f7;

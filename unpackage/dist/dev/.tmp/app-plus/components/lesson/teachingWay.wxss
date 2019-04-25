@@ -1,4 +1,4 @@
-.lesson_content .sign_up.data-v-4aa3c440 {
+.lesson_content .sign_up.data-v-4da7d1b4 {
   text-align: center;
   margin-top: 40rpx;
   display: inline-block;
@@ -10,14 +10,14 @@
   font-weight: 500;
   color: #333333;
 }
-.lesson_content .teacher_class.data-v-4aa3c440 {
+.lesson_content .teacher_class.data-v-4da7d1b4 {
   font-size: 48rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   color: #333333;
   margin: 0 30rpx;
 }
-.lesson_content .vipMessage.data-v-4aa3c440 {
+.lesson_content .vipMessage.data-v-4da7d1b4 {
   background: -o-linear-gradient(315deg, #ffeabc 0%, #eac064 100%);
   background: linear-gradient(135deg, #ffeabc 0%, #eac064 100%);
   border-radius: 16rpx;
@@ -25,7 +25,7 @@
   overflow: hidden;
   margin: 0 30rpx 60rpx 30rpx;
 }
-.lesson_content .vipMessage ._span.data-v-4aa3c440:first-child {
+.lesson_content .vipMessage ._span.data-v-4da7d1b4:first-child {
   width: 480rpx;
   display: inline-block;
   font-size: 24rpx;
@@ -35,7 +35,7 @@
   line-height: 40rpx;
   padding: 0;
 }
-.lesson_content .vipMessage ._span.data-v-4aa3c440:nth-child(2) {
+.lesson_content .vipMessage ._span.data-v-4da7d1b4:nth-child(2) {
   background: #ffffff;
   border-radius: 20rpx;
   padding: 4rpx 12rpx;
@@ -46,7 +46,7 @@
   float: right;
   margin: 20rpx 0;
 }
-.lesson_content .message.data-v-4aa3c440 {
+.lesson_content .message.data-v-4da7d1b4 {
   overflow: hidden;
   position: relative;
   margin: 34rpx 30rpx 60rpx 30rpx;
@@ -55,7 +55,7 @@
   font-weight: 500;
   color: #999999;
 }
-.lesson_content .message ._span.data-v-4aa3c440:first-child {
+.lesson_content .message ._span.data-v-4da7d1b4:first-child {
   background: url('/static/img/提示.png');
   background-size: 100% 100%;
   display: inline-block;
@@ -66,19 +66,19 @@
   top: 0;
   left: 0;
 }
-.lesson_content .message ._span.data-v-4aa3c440:nth-child(2) {
+.lesson_content .message ._span.data-v-4da7d1b4:nth-child(2) {
   display: inline-block;
   margin-left: 64rpx;
 }
-.lesson_content ._ul.data-v-4aa3c440 {
+.lesson_content .way_meun.data-v-4da7d1b4 {
   margin: 0 30rpx;
   padding-top: 40rpx;
 }
-.lesson_content ._ul .active.data-v-4aa3c440 {
+.lesson_content .way_meun .active.data-v-4da7d1b4 {
   background: #fad42a;
   color: #333333;
 }
-.lesson_content ._ul ._li.data-v-4aa3c440 {
+.lesson_content .way_meun ._li.data-v-4da7d1b4 {
   display: inline;
   background: #e5e4e4;
   border-radius: 40rpx;
@@ -89,7 +89,7 @@
   font-family: PingFangSC-Medium;
   font-weight: 500;
 }
-.lesson_content ._ul ._li.data-v-4aa3c440:first-child {
+.lesson_content .way_meun ._li.data-v-4da7d1b4:first-child {
   margin: 0;
 }
 

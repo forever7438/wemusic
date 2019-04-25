@@ -7,6 +7,7 @@
   font-family: PingFangSC-Medium;
   font-weight: 500;
   color: #222222;
+  margin: 10rpx 0;
 }
 .comment_list ._h3 ._span {
   font-size: 32rpx;

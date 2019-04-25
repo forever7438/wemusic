@@ -44,13 +44,15 @@
     "pages/choiceTeacher/choiceTeacher",
     "pages/confirmComplete/confirmComplete",
     "pages/addTask/addTask",
-    "pages/forgetPass/forgetPass"
+    "pages/forgetPass/forgetPass",
+    "pages/code/code",
+    "pages/registrationSuccess/registrationSuccess"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "",
-    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationBarBackgroundColor": "#fff",
     "backgroundColor": "#F8F8F8"
   },
   "tabBar": {

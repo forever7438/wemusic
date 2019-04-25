@@ -17,6 +17,7 @@ view .meun_list text {
   font-family: PingFangSC-Medium;
   font-weight: 500;
   color: #333333;
+  padding-bottom: 20rpx;
 }
 view .meun_list .active {
   border-bottom: 6rpx solid #000;
