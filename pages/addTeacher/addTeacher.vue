@@ -3,11 +3,11 @@
 		<w-picker mode="date" title="选择日期" startYear="1980" @confirm="onConfirmDate" ref="pickerDate"></w-picker>
 		<w-picker mode="date" :title="title" startYear="2014" @confirm="onConfirmDates" ref="pickerDates"></w-picker>
 		<view class="teacher_meun">
-			<text>名字</text>
+			<text>{{$t('index').name }}</text>
 			<input type="text" maxlength="10" v-model="name" />
 		</view>
 		<view class="teacher_meun">
-			<text>性别</text>
+			<text>{{$t('index').sex }}</text>
 			<radio-group class="uni-flex" name="sex">
 				<label style="margin-right: 80upx;">
 					<radio value="0" checked="true" color="#fad42a" />
@@ -20,19 +20,19 @@
 			</radio-group>
 		</view>
 		<view class="teacher_meun">
-			<text>生日</text>
+			<text>{{$t('index').birthday }}</text>
 			<input @tap="toggleTabDate" type="text" v-model="birthday" />
 		</view>
 		<view class="teacher_meun">
-			<text>住址</text>
+			<text>{{$t('index').address }}</text>
 			<input type="text" v-model="address" />
 		</view>
 		<view class="teacher_meun">
-			<text>电话</text>
+			<text>{{$t('index').phone }}</text>
 			<input type="text" v-model="phone" />
 		</view>
 		<view class="teacher_meun">
-			<text>邮箱</text>
+			<text>{{$t('index').emial }}</text>
 			<input type="text" v-model="emial" />
 		</view>
 		<view class="teacher_meun">
@@ -40,11 +40,11 @@
 			<input type="text" v-model="ABN" />
 		</view>
 		<view class="teacher_meun">
-			<text style="width: 220upx;">文化程度</text>
+			<text style="width: 220upx;">{{$t('index').culture }}</text>
 			<input type="text" v-model="culture" />
 		</view>
 		<view class="teacher_meun">
-			<text style="width: 142upx;">身份证</text>
+			<text style="width: 142upx;">{{$t('index').card }}</text>
 			<input type="text" v-model="card" />
 		</view>
 		<view class="teacher_meun">
@@ -52,11 +52,11 @@
 			<input type="text" />
 		</view>
 		<view class="teacher_meun">
-			<text style="width:300upx">开始日期</text>
+			<text style="width:300upx">{{$t('index').startTime }}</text>
 			<input @tap="toggleTabDates('startTime')" type="text" v-model="gz_s_time" />
 		</view>
 		<view class="teacher_meun">
-			<text style="width:300upx">结束日期</text>
+			<text style="width:300upx">{{$t('index').endTime }}</text>
 			<input @tap="toggleTabDates('endTime')" type="text" v-model="gz_d_time" />
 		</view>
 		<!-- <view>
@@ -73,11 +73,11 @@
 			</radio-group>
 		</view> -->
 		<view class="diffrent">
-			<text style="width: 212upx;">上传简历</text>
+			<text style="width: 212upx;">{{$t('index').j_photo }}</text>
 			<image class="j_photo" v-if="j_photo" :src="j_photo"></image>
 			<view v-else class="upload_file" @click="chooseImage"><image src="../../static/img/creame@2x.png"></image></view>
 		</view>
-		<button hover-class="btn-hover" @click="addTeacherInfo">注册</button>
+		<button hover-class="btn-hover" @click="addTeacherInfo">{{$t('index').register }}</button>
 	</view>
 </template>
 

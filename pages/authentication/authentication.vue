@@ -1,20 +1,20 @@
 <template>
 	<view class="authentication">
 		<view class="">
-			<text>某某证上传</text>
+			<text>{{$t('index').dataUpload }}</text>
 			<image v-if="approve_photo1" :src="approve_photo1" class="shade_image"></image>
 			<view v-else class="shade_image" @tap="chooseImage('approve_photo1')">
 				<image src="../../static/img/creame@2x.png"></image>
 			</view>
 		</view>
-		<view class="">
-			<text>某某证上传</text>
+		<view class="">  submitCertification
+			<text>{{$t('index').dataUpload }}</text>
 			<image v-if="approve_photo2" :src="approve_photo2" class="shade_image"></image>
 			<view v-else class="shade_image" @tap="chooseImage('approve_photo2')">
 				<image src="../../static/img/creame@2x.png"></image>
 			</view>
 		</view>
-		<button hover-class="btn-hover" @tap="addApprove">提交认证</button>
+		<button hover-class="btn-hover" @tap="addApprove">{{$t('index').submitCertification }}</button>
 	</view>
 </template>
 

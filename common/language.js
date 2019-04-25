@@ -1,20 +1,20 @@
 import Vue from 'vue'
 import VueI18n from './i18n.js'
+import {
+	enUS
+} from './lang/en-US.js'
+import {
+	zhCN
+} from './lang/zh-CN.js'
 Vue.use(VueI18n)
 const i18n = new VueI18n({
-	locale: 'en-US',
+	locale: 'zh-CN',
 	messages: {
 		'en-US': {
-			index: {
-				invite: 'Invite',
-				game: 'Game'
-			}
+			index: enUS
 		},
 		'zh-CN': {
-			index: {
-				invite: '邀请',
-				game: '游戏'
-			}
+			index: zhCN
 		}
 	}
 })
