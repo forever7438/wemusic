@@ -8,7 +8,7 @@ import {
 } from './lang/zh-CN.js'
 Vue.use(VueI18n)
 const i18n = new VueI18n({
-	locale: 'zh-CN',
+	locale: uni.getStorageSync('langType') == 'zh-CN' ? 'zh-CN' : 'en-US',
 	messages: {
 		'en-US': {
 			index: enUS

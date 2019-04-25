@@ -58,7 +58,7 @@
 				</navigator>
 				<view @click="show = true">
 					<text>语言/Language</text>
-					<text>中文</text>
+					<text>{{language}}</text>
 				</view>
 				<navigator hover-class="none" url="/pages/myCoupon/myCoupon?type=0">
 					<view>
@@ -147,12 +147,13 @@
 				isTeacher: false,
 				userInfo: {},
 				show: false,
-				langType: 111
+				language: '中文'
 			};
 		},
 		onLoad() {
 			this.getUserInfo();
 			uni.getStorageSync('type') == 1 ? (this.isTeacher = false) : (this.isTeacher = true);
+			uni.getStorageSync('langType') == 'zh-CN' ? (this.language = '中文') : (this.language = 'English');
 		},
 		onPullDownRefresh() {
 			this.getUserInfo();
@@ -178,7 +179,21 @@
 
 			//切换语言
 			bindBtn() {
-				this._i18n.locale = 'en-US'
+				if (uni.getStorageSync('langType') == 'zh-CN') {
+					this._i18n.locale = 'en-US';
+					this.language = 'English';
+					uni.setStorage({
+						key: 'langType',
+						data: 'en-US'
+					})
+				} else {
+					this._i18n.locale = 'zh-CN';
+					this.language = '中文';
+					uni.setStorage({
+						key: 'langType',
+						data: 'zh-CN'
+					})
+				}
 			}
 		},
 		onNavigationBarButtonTap(obj) {
