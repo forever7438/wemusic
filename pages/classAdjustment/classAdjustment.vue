@@ -5,7 +5,7 @@
 				<image src="../../static/img/demo.jpg"></image>
 				<p>
 					<span>吉他快速入门</span>
-					<uni-rate value="3.5" :size="13" :isFill="false" disabled="true" starColor="#FFFFFF"></uni-rate>
+					<startclass :star="Number(3.5)" :size="13" starColor="#666666"></startclass>
 					<s>教师名称 一对二</s>
 				</p>
 			</div>
@@ -33,11 +33,11 @@
 </template>
 
 <script>
-import uniRate from '@/components/uni-rate/uni-rate.vue';
+import startclass from '../../components/starclass.vue';
 import wPicker from '@/components/w-picker/w-picker.vue';
 export default {
 	components: {
-		uniRate,
+		startclass,
 		wPicker
 	},
 	data() {
@@ -235,6 +235,8 @@ h3 {
 	}
 
 	.sign_up {
+		position: absolute;
+		bottom: 0;
 		text-align: center;
 		margin-top: 40upx;
 		display: inline-block;

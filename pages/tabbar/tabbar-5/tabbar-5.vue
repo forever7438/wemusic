@@ -3,7 +3,7 @@
 		<view v-if="!isTeacher" class="content_student">
 			<view class="messgae">
 				<view class="user_info">
-					<image :src="userInfo.photo"></image>
+					<image :src="userInfo.photo || userImage"></image>
 					<view>
 						<navigator hover-class="none" url="/pages/updateUserinfo/updateUserinfo">
 							<text class="user_name">{{ userInfo.name || 'null' }}</text>
@@ -93,8 +93,10 @@
 		</view>
 		<view v-else class="content_teacher">
 			<view class="teacher-message">
-				<image :src="userInfo.photo || userImage"></image>
-				<text>{{ userInfo.name }}</text>
+				<image :src="userInfo.j_photo || userImage"></image>
+				<navigator hover-class="none" url="/pages/updateUserinfo/updateUserinfo">
+					<text class="user_name">{{ userInfo.name || 'null' }}</text>
+				</navigator>
 			</view>
 			<view class="user_meun">
 				<navigator hover-class="none" url="/pages/lesson/lesson?type=1">
@@ -136,7 +138,7 @@
 export default {
 	data() {
 		return {
-			userImage: '../../../static/img/certification@2x.png',
+			userImage: '../../../static/img/icon_touxiang02.png',
 			isTeacher: false,
 			userInfo: {}
 		};

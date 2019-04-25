@@ -1,7 +1,6 @@
 <template>
 	<div class="message_list_content">
-		<!-- v-if='messageList.length' -->
-		<ul>
+		<ul v-if="messageList.length">
 			<navigator hover-class="none" v-for="(item, index) in 5" :key="index" :url="'/pages/adjustmentDetail/adjustmentDetail?messageId=' + index">
 				<li>
 					<p>
@@ -12,7 +11,7 @@
 				</li>
 			</navigator>
 		</ul>
-		<!-- <noContent v-else title="暂无通知"></noContent> -->
+		<noContent v-else title="暂无通知"></noContent>
 	</div>
 </template>
 

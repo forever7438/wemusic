@@ -38,7 +38,7 @@ export default {
 	},
 	data() {
 		return {
-			image: '../../static/img/demo.jpg'
+			image: '../../static/img/icon_touxiang02.png'
 		};
 	},
 	methods: {

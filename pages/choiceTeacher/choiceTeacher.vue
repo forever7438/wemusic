@@ -9,12 +9,9 @@
 			:maxTime="courseInfo.max_time_type"
 			:content="courseInfo.content || '暂无课程介绍'"
 		></lessonHead>
-		<teacherList :listInfo="selectFlag ? selectItem : listInfo" :selectFlag="selectFlag" title="选择教师" @selectFunction="select" l essonType="lessonCopy"></teacherList>
+		<teacherList :listInfo="selectFlag ? selectItem : listInfo" :selectFlag="selectFlag" title="选择教师" @selectFunction="select" lessonType="lessonCopy"></teacherList>
 		<teachingWay v-if="selectFlag" :orderShow="orderShow" :classId="classId" :request="request" @changeRequest="changeRequest" :teacherId="teacherId"></teachingWay>
-		<orderMessage 	v-if="orderShow" 
-						:request="request" 
-						:coupomList="coupomList" 
-						@changeRequest="changeRequest"></orderMessage>
+		<orderMessage v-if="orderShow" :request="request" :classId="classId" :coupomList="coupomList" @changeRequest="changeRequest"></orderMessage>
 	</view>
 </template>
 
@@ -32,6 +29,7 @@ export default {
 	},
 	data() {
 		return {
+			musicId: '',
 			orderShow: false,
 			courseInfo: {},
 			selectFlag: false,
@@ -40,14 +38,14 @@ export default {
 			choiseTeacherInfo: {},
 			classId: 0,
 			teacherId: 0,
-			coupomList:[],
+			coupomList: [],
 			request: {
 				price: 0,
 				people_num: 0,
 				class_list_id: [],
-				coupon_id:'',
-				courseLen:0,
-				coupomTitle:''
+				coupon_id: '',
+				courseLen: 0,
+				coupomTitle: ''
 			}
 		};
 	},
@@ -67,7 +65,6 @@ export default {
 			} else window.history.back(-1);
 		},
 		select(item) {
-			console.log(item);
 			this.teacherId = item.id;
 			this.selectItem = [];
 			this.selectItem.push(item);
@@ -88,7 +85,6 @@ export default {
 			});
 		},
 		changeRequest(data) {
-			console.log(data)
 			switch (data.key) {
 				case 'people_num':
 					this.request.people_num = data.value;
@@ -98,18 +94,18 @@ export default {
 					if (index > -1) {
 						this.request.class_list_id.splice(index, 1);
 						this.request.price -= data.price;
-						this.request.courseLen --;
+						this.request.courseLen--;
 					} else {
 						this.request.class_list_id.push(data.value);
 						this.request.price += data.price;
-						this.request.courseLen ++;
+						this.request.courseLen++;
 					}
 					break;
 				case 'orderShow':
 					this.orderShow = data.value;
 					this.request.music_sun_id = this.classId;
 					this.request.teacher_id = this.teacherId;
-					this.request.class_list_id = this.request.class_list_id.join(',')
+					this.request.class_list_id = this.request.class_list_id.join(',');
 					this.getCoupomList();
 					break;
 				case 'coupomTitle':
@@ -117,12 +113,12 @@ export default {
 					break;
 				case 'coupon_id':
 					this.request.coupon_id = data.value;
-					this.request.price = data.price
+					this.request.price = data.price;
 					break;
 			}
 		},
 		/**获取优惠券*/
-		getCoupomList(){
+		getCoupomList() {
 			this.ajax({
 				url: 'studentclass/coupom_list',
 				data: {
@@ -130,11 +126,11 @@ export default {
 				},
 				success: res => {
 					if (res.data.body === 'success') {
-						if(res.data.data.length > 0){
+						if (res.data.data.length > 0) {
 							this.coupomList = res.data.data;
 							this.request.coupomTitle = '选择优惠券';
-						}else{
-							this.request.coupomTitle = '暂无优惠券'
+						} else {
+							this.request.coupomTitle = '暂无优惠券';
 						}
 					}
 				}

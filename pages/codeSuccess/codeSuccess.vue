@@ -23,7 +23,7 @@
 			<view class="code_start"><startclass title="星级" :size="16" :disabled="false" @sendVal="getVal"></startclass></view>
 			<view class="code_btn">
 				<text @tap="addStar">提交</text>
-				<text>跳过</text>
+				<text @tap="jumpStar">跳过</text>
 			</view>
 		</view>
 	</view>
@@ -47,6 +47,11 @@ export default {
 	methods: {
 		getVal(s) {
 			this.star = s;
+		},
+		jumpStar(){
+			uni.switchTab({
+				url:'/pages/tabbar/tabbar-2/tabbar-2'
+			})
 		},
 		addStar() {
 			if (!this.star) {
@@ -93,7 +98,7 @@ export default {
 .code_success {
 	padding: 64upx 30upx 40upx 30upx;
 	background-color: #333;
-
+	height: 100vh;
 	.code_content {
 		width: 100%;
 		background-color: #fff;

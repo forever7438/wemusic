@@ -12,6 +12,7 @@
 		<!-- <navigator url="/pages/myCode/myCode">我的邀请码</navigator>
 		<navigator url="/pages/wagesDetail/wagesDetail">工资详情</navigator>
 		<navigator url="/pages/adjustmentDetail/adjustmentDetail">调整详情</navigator> -->
+		{{ $t('index').invite }} {{ $t('index').game }}
 	</view>
 </template>
 

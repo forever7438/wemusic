@@ -3,7 +3,7 @@
 		<image src="../../static/img/lesson1.jpg"></image>
 		<view class="adjustment_content">
 			<text class="adjustment_title">Timothy Thompson</text>
-			<view class="adjustment_event">
+			<view v-if="isTeacher" class="adjustment_event">
 				<text class="class_title">钢琴兴趣班12期第10课时</text>
 				<view class="event_adjust">
 					<text>调整</text>
@@ -17,9 +17,9 @@
 					<text>拒绝</text>
 					<text>同意</text>
 				</view>
-				<text class="class_res">理由 课以排满</text>
+				<textarea class="class_res" placeholder="请填写理由"></textarea>
 			</view>
-			<view class="adjustment_reason">
+			<view v-else class="adjustment_reason">
 				<text class="class_title">钢琴兴趣班12期第10课时</text>
 				<view class="event_adjust">
 					<text>调整</text>
@@ -41,7 +41,12 @@
 <script>
 export default {
 	data() {
-		return {};
+		return {
+			isTeacher: false
+		};
+	},
+	onLoad() {
+		uni.getStorageSync('type') == 1 ? (this.isTeacher = false) : (this.isTeacher = true);
 	}
 };
 </script>

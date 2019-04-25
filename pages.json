@@ -197,7 +197,9 @@
 		{
 			"path": "pages/vipCenter/vipCenter",
 			"style": {
-				"navigationBarTitleText": "会员中心"
+				"navigationBarTitleText": "会员中心",
+				"navigationBarBackgroundColor": "#434445ff",
+				"navigationBarTextStyle": "white"
 			}
 		},
 		{
@@ -395,6 +397,18 @@
 			"path": "pages/forgetPass/forgetPass",
 			"style": {
 				"navigationBarTitleText": "找回密码"
+			}
+		}, {
+			"path": "pages/code/code",
+			"style": {
+				"navigationBarTitleText": "打卡",
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#333333"
+			}
+		}, {
+			"path": "pages/registrationSuccess/registrationSuccess",
+			"style": {
+				"navigationBarTitleText": "报名成功"
 			}
 		}
 	],
