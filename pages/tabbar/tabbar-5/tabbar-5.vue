@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<neil-modal :show="show" @close="show = false" @confirm="bindBtn()" title="是否切换语言"></neil-modal>
 		<view v-if="!isTeacher" class="content_student">
 			<view class="messgae">
 				<view class="user_info">
@@ -55,7 +56,7 @@
 						<image src="../../../static/img/moment@2x.png"></image>
 					</view>
 				</navigator>
-				<view>
+				<view @click="show = true">
 					<text>语言/Language</text>
 					<text>中文</text>
 				</view>
@@ -135,12 +136,18 @@
 </template>
 
 <script>
+	import neilModal from '@/components/neil-modal/neil-modal.vue';
 	export default {
+		components: {
+			neilModal
+		},
 		data() {
 			return {
 				userImage: '../../../static/img/icon_touxiang02.png',
 				isTeacher: false,
-				userInfo: {}
+				userInfo: {},
+				show: false,
+				langType: 111
 			};
 		},
 		onLoad() {
@@ -167,6 +174,11 @@
 						}
 					}
 				});
+			},
+
+			//切换语言
+			bindBtn() {
+				this._i18n.locale = 'en-US'
 			}
 		},
 		onNavigationBarButtonTap(obj) {

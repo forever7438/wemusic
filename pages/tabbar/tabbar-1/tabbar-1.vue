@@ -19,9 +19,6 @@
 		},
 		onLoad() {
 			this.getMusicList();
-			// 			setTimeout(() => {
-			// 				this._i18n.locale = 'en-US'
-			// 			}, 2000)
 		},
 		onPullDownRefresh() {
 			this.getMusicList();
