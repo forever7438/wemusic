@@ -12,7 +12,7 @@
 		<lessonDesc :title="$t('index').courseIntroduction" :content="musicIndexInfo.content || $t('index').NoIntroduction"></lessonDesc>
 		<lessonComment :title="$t('index').Curr_evaluation" :comment="comment"></lessonComment>
 		<lessonScience :title="$t('index').Teaching_environment" :science="scienceImg"></lessonScience>
-		<span class="sign_up">{{$t('index').sign_up}}</span>
+		<span class="sign_up">{{ $t('index').sign_up }}</span>
 	</view>
 </template>
 
@@ -36,15 +36,26 @@ export default {
 			scienceImg: [],
 			teacherList: [],
 			comment: [],
-			lessonId:''
+			lessonId: ''
 		};
+	},
+	onShow() {
+		if (uni.getStorageSync('langType') == 'en-US') {
+			uni.setNavigationBarTitle({
+				title: 'Lesson Detail'
+			});
+		} else {
+			uni.setNavigationBarTitle({
+				title: '课程详情'
+			});
+		}
 	},
 	onLoad(obj) {
 		uni.setNavigationBarColor({
 			frontColor: '#ffffff',
 			backgroundColor: '#ffffff'
 		});
-		this.lessonId = obj.lessonId
+		this.lessonId = obj.lessonId;
 		this.getMusicIndexInfo(obj.lessonId);
 		this.getTeacher(obj.lessonId);
 		this.getComment(obj.lessonId);

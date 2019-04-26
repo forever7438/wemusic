@@ -17,6 +17,17 @@ export default {
 	onLoad() {
 		_this = this;
 	},
+	onShow() {
+		if (uni.getStorageSync('langType') == 'en-US') {
+			uni.setNavigationBarTitle({
+				title: 'upload file'
+			});
+		} else {
+			uni.setNavigationBarTitle({
+				title: '资料上传'
+			});
+		}
+	},
 	methods: {
 		chooseImage: e => {
 			uni.chooseImage({

@@ -43,6 +43,17 @@
 export default {
 	data() {
 		return {};
+	},
+	onShow() {
+		if (uni.getStorageSync('langType') == 'en-US') {
+			uni.setNavigationBarTitle({
+				title: 'Wages Detail'
+			});
+		} else {
+			uni.setNavigationBarTitle({
+				title: '工资详情'
+			});
+		}
 	}
 };
 </script>

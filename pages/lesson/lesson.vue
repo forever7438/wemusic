@@ -30,6 +30,17 @@ export default {
 		this.lessonType = obj.type;
 		this.getLessonList(this.lessonType);
 	},
+	onShow() {
+		if (uni.getStorageSync('langType') == 'en-US') {
+			uni.setNavigationBarTitle({
+				title: 'My Lesson'
+			});
+		} else {
+			uni.setNavigationBarTitle({
+				title: '我的课程'
+			});
+		}
+	},
 	onReachBottom() {
 		if (this.isEnd) {
 			return;

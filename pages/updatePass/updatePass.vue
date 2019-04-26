@@ -27,6 +27,17 @@ export default {
 			rest_pass: ''
 		};
 	},
+	onShow() {
+		if (uni.getStorageSync('langType') == 'en-US') {
+			uni.setNavigationBarTitle({
+				title: 'Change Password'
+			});
+		} else {
+			uni.setNavigationBarTitle({
+				title: '修改密码'
+			});
+		}
+	},
 	methods: {
 		//修改密码
 		updatePassword() {

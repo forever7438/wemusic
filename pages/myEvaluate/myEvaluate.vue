@@ -26,6 +26,17 @@ export default {
 		this.lessonType = obj.type;
 		this.getEvalutateList(this.lessonType);
 	},
+	onShow() {
+		if (uni.getStorageSync('langType') == 'en-US') {
+			uni.setNavigationBarTitle({
+				title: 'My Evaluate'
+			});
+		} else {
+			uni.setNavigationBarTitle({
+				title: '我的评价'
+			});
+		}
+	},
 	onReachBottom() {
 		if (this.isEnd) {
 			return;

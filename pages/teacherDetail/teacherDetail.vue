@@ -2,7 +2,7 @@
 	<view>
 		<teacherHead headType="teacherDetail" :star="Number(info.star)" :musicName="info.music_name" :title="info.name" :content="info.experience"></teacherHead>
 		<view class="all_lesson">
-			<text class="lesson_tips">{{$t('index').allCourses}}</text>
+			<text class="lesson_tips">{{ $t('index').allCourses }}</text>
 			<lessonList lessonType="lessonCopy" :listInfo="courseList"></lessonList>
 		</view>
 		<lessonComment :title="$t('index').Student_evaluation" v-if="comment.length" :comment="comment"></lessonComment>
@@ -29,6 +29,17 @@ export default {
 			comment: [],
 			science: []
 		};
+	},
+	onShow() {
+		if (uni.getStorageSync('langType') == 'en-US') {
+			uni.setNavigationBarTitle({
+				title: 'Teacher details'
+			});
+		} else {
+			uni.setNavigationBarTitle({
+				title: '教师详情'
+			});
+		}
 	},
 	onLoad(obj) {
 		uni.setNavigationBarColor({

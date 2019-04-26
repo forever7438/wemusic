@@ -18,7 +18,18 @@ export default {
 	components: {
 		commentStarClass,
 		startclass
-	}
+	},
+	onShow() {
+		if (uni.getStorageSync('langType') == 'en-US') {
+			uni.setNavigationBarTitle({
+				title: 'evaluate'
+			});
+		} else {
+			uni.setNavigationBarTitle({
+				title: '评价'
+			});
+		}
+	},
 };
 </script>
 

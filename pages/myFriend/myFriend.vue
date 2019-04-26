@@ -20,6 +20,17 @@ export default {
 			url: '/pages/releaseFriends/releaseFriends'
 		});
 	},
+	onShow() {
+		if (uni.getStorageSync('langType') == 'en-US') {
+			uni.setNavigationBarTitle({
+				title: 'My Friend'
+			});
+		} else {
+			uni.setNavigationBarTitle({
+				title: '我的朋友圈'
+			});
+		}
+	},
 	onLoad() {
 		this.getFriendList(this.index);
 	},

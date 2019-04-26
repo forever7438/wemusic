@@ -46,6 +46,17 @@ export default {
 		this.onShowDatePicker('rangetime');
 		uni.getStorageSync('type') == 1 ? (this.isTeacher = false) : (this.isTeacher = true);
 	},
+	onShow() {
+		if (uni.getStorageSync('langType') == 'en-US') {
+			uni.setNavigationBarTitle({
+				title: 'Class Schedule Card'
+			});
+		} else {
+			uni.setNavigationBarTitle({
+				title: '课程表'
+			});
+		}
+	},
 	onNavigationBarButtonTap(obj) {
 		uni.navigateTo({
 			url: '/pages/classNotice/classNotice'

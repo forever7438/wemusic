@@ -15,6 +15,17 @@ export default {
 			messageList: []
 		};
 	},
+	onShow() {
+		if (uni.getStorageSync('langType') == 'en-US') {
+			uni.setNavigationBarTitle({
+				title: 'Message'
+			});
+		} else {
+			uni.setNavigationBarTitle({
+				title: '消息'
+			});
+		}
+	},
 	onLoad() {
 		this.getMessageList();
 	},

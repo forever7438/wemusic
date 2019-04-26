@@ -29,6 +29,17 @@ export default {
 		this.type = obj.type;
 		this.getCouponList(this.type);
 	},
+	onShow() {
+		if (uni.getStorageSync('langType') == 'en-US') {
+			uni.setNavigationBarTitle({
+				title: 'My Coupon'
+			});
+		} else {
+			uni.setNavigationBarTitle({
+				title: '我的优惠券'
+			});
+		}
+	},
 	onReachBottom() {
 		if (this.isEnd) {
 			return;

@@ -15,7 +15,17 @@
 
 <script>
 export default {
-	name: 'paySuccess',
+	onShow() {
+		if (uni.getStorageSync('langType') == 'en-US') {
+			uni.setNavigationBarTitle({
+				title: 'Recharge Success'
+			});
+		} else {
+			uni.setNavigationBarTitle({
+				title: '充值成功'
+			});
+		}
+	},
 	components: {}
 };
 </script>

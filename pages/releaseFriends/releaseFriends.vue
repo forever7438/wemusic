@@ -23,6 +23,17 @@ export default {
 			progress: 0
 		};
 	},
+	onShow() {
+		if (uni.getStorageSync('langType') == 'en-US') {
+			uni.setNavigationBarTitle({
+				title: 'Circle Friends'
+			});
+		} else {
+			uni.setNavigationBarTitle({
+				title: '发布朋友圈'
+			});
+		}
+	},
 	onLoad() {
 		_this = this;
 	},

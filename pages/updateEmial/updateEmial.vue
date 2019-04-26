@@ -7,7 +7,7 @@
 			</li>
 			<li>
 				<span>验证码</span>
-				<input type="number" placeholder="请输入验证码" v-model="code" maxlength="6"/>
+				<input type="number" placeholder="请输入验证码" v-model="code" maxlength="6" />
 				<span class="btn_code" @tap="getCode">获取验证码</span>
 			</li>
 		</ul>
@@ -24,6 +24,17 @@ export default {
 			new_email: '',
 			reg: new RegExp('^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$')
 		};
+	},
+	onShow() {
+		if (uni.getStorageSync('langType') == 'en-US') {
+			uni.setNavigationBarTitle({
+				title: 'Change Emial'
+			});
+		} else {
+			uni.setNavigationBarTitle({
+				title: '修改邮箱'
+			});
+		}
 	},
 	methods: {
 		//获取验证码

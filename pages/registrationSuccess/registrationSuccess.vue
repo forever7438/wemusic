@@ -33,6 +33,17 @@ export default {
 			courseInfo: {}
 		};
 	},
+	onShow() {
+		if (uni.getStorageSync('langType') == 'en-US') {
+			uni.setNavigationBarTitle({
+				title: 'Registration Success'
+			});
+		} else {
+			uni.setNavigationBarTitle({
+				title: '报名成功'
+			});
+		}
+	},
 	onLoad(obj) {
 		this.getCourseInfo(obj.classId);
 		this.way = obj.way;

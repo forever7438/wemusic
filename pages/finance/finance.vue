@@ -26,6 +26,17 @@ export default {
 	onLoad() {
 		this.getFinanceList();
 	},
+	onShow() {
+		if (uni.getStorageSync('langType') == 'en-US') {
+			uni.setNavigationBarTitle({
+				title: 'Financial Management'
+			});
+		} else {
+			uni.setNavigationBarTitle({
+				title: '财务管理'
+			});
+		}
+	},
 	onReachBottom() {
 		if (this.isEnd) {
 			return;
