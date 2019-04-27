@@ -21,7 +21,7 @@ export default {
 
 <style lang="less">
 .coupon_lists {
-	padding: 0 20upx;
+	padding: 60upx 20upx 0;
 
 	.item_list {
 		width: 100%;

@@ -30,6 +30,17 @@
 				index: 0
 			};
 		},
+		onShow() {
+			if (uni.getStorageSync('langType') == 'en-US') {
+				uni.setNavigationBarTitle({
+					title: 'circleFriends'
+				});
+			} else {
+				uni.setNavigationBarTitle({
+					title: '朋友圈'
+				});
+			}
+		},
 		onLoad() {
 			this.getFriendList(this.index);
 		},

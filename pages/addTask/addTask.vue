@@ -26,6 +26,17 @@ export default {
 	onLoad() {
 		_this = this;
 	},
+	onShow() {
+		if (uni.getStorageSync('langType') == 'en-US') {
+			uni.setNavigationBarTitle({
+				title: 'add task'
+			});
+		} else {
+			uni.setNavigationBarTitle({
+				title: '提交作业'
+			});
+		}
+	},
 	methods: {
 		chooseImage: e => {
 			uni.chooseImage({

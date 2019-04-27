@@ -18,6 +18,17 @@ export default {
 	onLoad() {
 		this.getConumptionList();
 	},
+	onShow() {
+		if (uni.getStorageSync('langType') == 'en-US') {
+			uni.setNavigationBarTitle({
+				title: 'consumption Record'
+			});
+		} else {
+			uni.setNavigationBarTitle({
+				title: '消费记录'
+			});
+		}
+	},
 	onReachBottom() {
 		if (this.isEnd) {
 			return;

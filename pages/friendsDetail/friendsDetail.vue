@@ -1,8 +1,8 @@
 <template>
 	<view class="content">
+		<image :src="friendDetail.video"></image>
 		<view class="parents">
-			<image :src="friendDetail.video"></image>
-			<friendHead :itemHead="friendDetail"></friendHead>
+			<!-- <friendHead :itemHead="friendDetail"></friendHead> -->
 			<friendContent :type="false" :content="friendDetail.body"></friendContent>
 			<friendOperation :message="friendDetail.message" :praise="friendDetail.praise" :forward="friendDetail.forward"
 			 :listId="friendDetail.id"></friendOperation>
@@ -95,7 +95,7 @@
 		image {
 			width: 100%;
 			height: 410upx;
-			border-radius: 12upx;
+			// border-radius: 12upx;
 		}
 
 		.parents {

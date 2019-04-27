@@ -29,6 +29,17 @@
 		onReady() {
 			this.$refs.qrcode.creatQrcode();
 		},
+		onShow() {
+			if (uni.getStorageSync('langType') == 'en-US') {
+				uni.setNavigationBarTitle({
+					title: 'code'
+				});
+			} else {
+				uni.setNavigationBarTitle({
+					title: '打卡'
+				});
+			}
+		},
 		methods: {}
 	};
 </script>

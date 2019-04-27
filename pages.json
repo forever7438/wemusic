@@ -229,7 +229,18 @@
 		{
 			"path": "pages/evaluate/evaluate",
 			"style": {
-				"navigationBarTitleText": "评价"
+				"navigationBarTitleText": "评价",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "提交",
+							"fontSize": "16px",
+							"fontWeight": "bold",
+							"color": "#FAD42A"
+						}]
+					}
+				}
+
 			}
 		},
 		{
