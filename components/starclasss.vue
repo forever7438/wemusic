@@ -1,7 +1,7 @@
 <template>
 	<div class="start_class">
 		<p>{{ title }}</p>
-		<div class="start_class_in">
+		<div class="start_class_in" style="margin-left:0;">
 			<uni-rate :size="size" :value="star" :isFill="isFill" :disabled="disabled" @change="getVal"></uni-rate>
 			<span class="number" :style="{ color: starColor }">{{ star }}</span>
 		</div>

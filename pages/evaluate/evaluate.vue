@@ -148,9 +148,9 @@ export default {
 
 <style lang="less" scoped>
 .evaluate {
-  padding: 0 30upx 200upx 30upx;
+  padding-bottom:200upx;
   .item {
-    margin-top: 32upx;
+    margin: 30upx;
   }
 }
 </style>
