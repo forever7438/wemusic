@@ -33,6 +33,17 @@
 		onLoad() {
 			_this = this;
 		},
+		onShow() {
+			if (uni.getStorageSync('langType') == 'en-US') {
+				uni.setNavigationBarTitle({
+					title: 'authentication'
+				});
+			} else {
+				uni.setNavigationBarTitle({
+					title: '认证中心'
+				});
+			}
+		},
 		methods: {
 			chooseImage(str) {
 				uni.chooseImage({

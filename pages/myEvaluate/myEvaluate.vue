@@ -90,6 +90,8 @@ export default {
 .my_evaluate_content {
 	padding: 0 30upx;
 	.meun_list {
+		position: fixed;
+		width: 100%;
 		height: 90upx;
 		display: flex;
 		align-items: center;

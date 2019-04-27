@@ -22,6 +22,17 @@
 		onLoad(obj) {
 			this.getCourseInfo(1);
 		},
+		onShow() {
+			if (uni.getStorageSync('langType') == 'en-US') {
+				uni.setNavigationBarTitle({
+					title: 'confirm Complete'
+				});
+			} else {
+				uni.setNavigationBarTitle({
+					title: '提交作业'
+				});
+			}
+		},
 		methods: {
 			homeBack() {
 				uni.switchTab({

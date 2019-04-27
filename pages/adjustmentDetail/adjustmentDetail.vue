@@ -45,6 +45,17 @@
 				isTeacher: false
 			};
 		},
+		onShow() {
+			if (uni.getStorageSync('langType') == 'en-US') {
+				uni.setNavigationBarTitle({
+					title: 'adjustment Detail'
+				});
+			} else {
+				uni.setNavigationBarTitle({
+					title: '调整详情'
+				});
+			}
+		},
 		onLoad() {
 			uni.getStorageSync('type') == 1 ? (this.isTeacher = false) : (this.isTeacher = true);
 		}

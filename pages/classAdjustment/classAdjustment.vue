@@ -54,6 +54,17 @@
 		onLoad(obj) {
 			this.classId = obj.classId;
 		},
+		onShow() {
+			if (uni.getStorageSync('langType') == 'en-US') {
+				uni.setNavigationBarTitle({
+					title: 'class Adjustment'
+				});
+			} else {
+				uni.setNavigationBarTitle({
+					title: '调课'
+				});
+			}
+		},
 		methods: {
 			toggleTab(type) {
 				switch (type) {

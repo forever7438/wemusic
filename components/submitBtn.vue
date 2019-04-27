@@ -56,7 +56,7 @@
 	.submit {
 		width: auto;
 		position: fixed;
-		bottom: 10upx;
+		bottom: 4upx;
 		left: 0;
 		padding: 10upx 40upx;
 		background-color: #fff;

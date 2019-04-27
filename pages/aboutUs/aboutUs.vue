@@ -21,6 +21,17 @@
 		onLoad() {
 			this.getAboutContent();
 		},
+		onShow() {
+			if (uni.getStorageSync('langType') == 'en-US') {
+				uni.setNavigationBarTitle({
+					title: 'about us'
+				});
+			} else {
+				uni.setNavigationBarTitle({
+					title: '关于我们'
+				});
+			}
+		},
 		methods: {
 			//获取关于我们
 			getAboutContent() {

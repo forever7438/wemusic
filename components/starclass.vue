@@ -67,8 +67,8 @@
 		.start_class_in {
 			display: flex;
 			align-items: center;
+			justify-content: center;
 
-			// justify-content: center;
 			.number {
 				margin-left: 10upx;
 				font-size: 24upx;
