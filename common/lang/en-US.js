@@ -91,7 +91,15 @@ let enUS = {
 	next:'Next Step',
 	cancel:'Cancel',
 	confirm:'Confirm',
-	Selection_date:'Selection date'
+	Selection_date:'Selection date',
+	Choose_teacher:'Choose teacher',
+	Choose:'Choose',
+	year:'Year',
+	month:'Month',
+	day:'Day',
+	hour:'Hour',
+	minute:'Minute',
+	second:'Second'
 }
 
 export {

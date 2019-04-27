@@ -91,7 +91,15 @@ let zhCN = {
 	next: '下一步',
 	cancel: '取消',
 	confirm: '确认',
-	Selection_date: '选择日期'
+	Selection_date: '选择日期',
+	Choose_teacher:'选择老师',
+	Choose:'选择',
+	year:'年',
+	month:'月',
+	day:'日',
+	hour:'时',
+	minute:'分',
+	second:'秒'
 }
 
 export {

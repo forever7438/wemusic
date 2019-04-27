@@ -7,7 +7,7 @@
 				</navigator>
 				<image v-else :src="item.class_photo || image"></image>
 				<div class="lesson_messgae">
-					<p class="lesson_title">{{ item.class_name }}</p>
+					<p class="lesson_title">{{ item.class_name || item.name}}</p>
 					<startclass :star="Number(item.star)" starColor="#666666" v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'"></startclass>
 					<p v-else class="lesson_winer">{{ item.teacher_name }}</p>
 					<div class="lesson_pay">

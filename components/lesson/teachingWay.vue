@@ -31,7 +31,7 @@ export default {
 		selectTime
 	},
 	props: {
-		classId: String,
+		classId: Number,
 		lessonType: {
 			type: String,
 			default: '4'

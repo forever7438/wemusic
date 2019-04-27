@@ -7,11 +7,24 @@
 			:title="courseInfo.name"
 			:mixTime="courseInfo.mix_time_type"
 			:maxTime="courseInfo.max_time_type"
-			:content="courseInfo.content || '暂无课程介绍'"
+			:content="courseInfo.content || $t('index').NoIntroduction"
 		></lessonHead>
-		<teacherList :listInfo="selectFlag ? selectItem : listInfo" :selectFlag="selectFlag" title="选择教师" @selectFunction="select" lessonType="lessonCopy"></teacherList>
-		<teachingWay v-if="selectFlag" :orderShow="orderShow" :classId="classId" :request="request" @changeRequest="changeRequest" :teacherId="teacherId"></teachingWay>
-		<orderMessage v-if="orderShow" :request="request" :classId="classId" :coupomList="coupomList" @changeRequest="changeRequest"></orderMessage>
+		<teacherList 	:listInfo="selectFlag ? selectItem : listInfo" 
+						:selectFlag="selectFlag" 
+						:title="$t('index').Choose_teacher" 
+						@selectFunction="select" 
+						lessonType="lessonCopy"></teacherList>
+		<teachingWay 	v-if="selectFlag" 
+						:orderShow="orderShow" 
+						:classId="Number(classId)" 
+						:request="request" 
+						@changeRequest="changeRequest" 
+						:teacherId="teacherId"></teachingWay>
+		<orderMessage 	v-if="orderShow" 
+						:request="request" 
+						:classId="Number(classId)" 
+						:coupomList="coupomList" 
+						@changeRequest="changeRequest"></orderMessage>
 	</view>
 </template>
 
@@ -51,16 +64,21 @@ export default {
 		};
 	},
 	onLoad(obj) {
+		console.log(obj)
+		this.musicId = obj.musicId;
 		this.classId = obj.musicSunId;
 		this.getChoiseTeacherInfo(obj.musicSunId);
 		this.getCourseInfo(obj.musicSunId);
 	},
 	onPullDownRefresh() {
+		if(this.selectFlag) return
 		this.page = 0;
 		this.getCourseInfo(this.classId)
 		this.getChoiseTeacherInfo(this.classId)
 	},
 	onReachBottom() {
+		console.log(this.selectFlag)
+		if(this.selectFlag) return
 		this.page++
 		this.getChoiseTeacherInfo(this.classId,true)
 	},
@@ -72,7 +90,12 @@ export default {
 				} else {
 					this.selectFlag = false;
 				}
-			} else window.history.back(-1);
+			} else {
+				uni.redirectTo({
+					url: '/pages/lessonCopy/lessonCopy?musicId='+this.musicId
+				});
+				//window.history.back(-1);
+			}
 		},
 		select(item) {
 			this.teacherId = item.id;
@@ -117,7 +140,6 @@ export default {
 					this.orderShow = data.value;
 					this.request.music_sun_id = this.classId;
 					this.request.teacher_id = this.teacherId;
-					this.request.class_list_id = this.request.class_list_id.join(',');
 					this.getCoupomList();
 					break;
 				case 'coupomTitle':
@@ -128,13 +150,16 @@ export default {
 					this.request.price = data.price;
 					break;
 			}
+			
+			console.log(this.request)
 		},
 		/**获取优惠券*/
 		getCoupomList() {
+			let class_id = this.request.class_list_id.join(',');
 			this.ajax({
 				url: 'studentclass/coupom_list',
 				data: {
-					class_list_id: this.request.class_list_id
+					class_list_id: class_id
 				},
 				success: res => {
 					if (res.data.body === 'success') {
