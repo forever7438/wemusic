@@ -99,7 +99,24 @@ let enUS = {
 	day:'Day',
 	hour:'Hour',
 	minute:'Minute',
-	second:'Second'
+	second:'Second',
+	clock_in:'Clock In',
+	QR_code:'QR Code',
+	task:'Task',
+	changing_course:'Changing Course',
+	vip:'VIP',
+	My_points:'My Points',
+	Give:'Give',
+	Recharge_record:'Recharge Record',
+	Records_consumption:'Records Of Consumption',
+	upload:'Upload',
+	Please_enter_evaluation_content:'Please enter the evaluation content.',
+	star:'Star',
+	teacher:'Teacher',
+	Teacher_teaching:'Teacher Teaching',
+	Teaching_methods:'Teaching Methods',
+	Teaching_attitude:'Teaching Attitude',
+	Course_evaluation:"Course Evaluation"
 }
 
 export {

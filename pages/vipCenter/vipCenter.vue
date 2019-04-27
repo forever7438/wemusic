@@ -2,41 +2,41 @@
 	<div class="vip_center_content">
 		<div class="vip_center_message">
 			<div class="vip_center_info">
-				<p class="vip_name">WeMusic会员</p>
+				<p class="vip_name">WeMusic {{$t('index').VIP}}</p>
 				<div>
 					<span>
-						<p>账户余额</p>
+						<p>{{$t('index').accountBbalance}}</p>
 						<s>{{ userInfo.money }}</s>
 					</span>
 					<span>
-						<p>我的积分</p>
+						<p>{{$t('index').My_points}}</p>
 						<s>{{ 0 }}</s>
 					</span>
 				</div>
 			</div>
 		</div>
 		<div class="vip_recharge">
-			<h3>充 值</h3>
+			<h3>{{$t('index').recharge}}</h3>
 			<ul>
 				<li v-for="(item, index) in moneyList" :key="index" @tap="checked(item.id)">
 					<view class="semicircle"></view>
-					<p class="item1">充</p>
+					<p class="item1">{{$t('index').recharge}}</p>
 					<p class="item2">{{ item.full_money }}</p>
-					<p class="item3">送 ${{ item.give_money }}</p>
+					<p class="item3">{{$t('index').Give}} ${{ item.give_money }}</p>
 				</li>
 			</ul>
-			<span class="vip_recharge_btn" @tap="moneyAadd">充 值</span>
+			<span class="vip_recharge_btn" @tap="moneyAadd">{{$t('index').recharge}}</span>
 		</div>
 		<ul class="vip_record">
 			<navigator hover-class="none" url="/pages/rechargeRecord/rechargeRecord">
 				<li>
-					<span>充值记录</span>
+					<span>{{$t('index').Recharge_record}}</span>
 					<uni-icon type="forward" size="20"></uni-icon>
 				</li>
 			</navigator>
 			<navigator hover-class="none" url="/pages/consumptionRecord/consumptionRecord">
 				<li>
-					<span>消费记录</span>
+					<span>{{$t('index').Records_consumption}}</span>
 					<uni-icon type="forward" size="20"></uni-icon>
 				</li>
 			</navigator>
