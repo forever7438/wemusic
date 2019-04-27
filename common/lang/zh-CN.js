@@ -116,7 +116,8 @@ let zhCN = {
 	Teacher_teaching:'教师授课',
 	Teaching_methods:'授课方式',
 	Teaching_attitude:'授课态度',
-	Course_evaluation:'对课程评价'
+	Course_evaluation:'对课程评价',
+	Evaluation_Teachers:'对教师评价'
 }
 
 export {

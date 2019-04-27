@@ -116,7 +116,8 @@ let enUS = {
 	Teacher_teaching:'Teacher Teaching',
 	Teaching_methods:'Teaching Methods',
 	Teaching_attitude:'Teaching Attitude',
-	Course_evaluation:"Course Evaluation"
+	Course_evaluation:"Evaluation Course",
+	Evaluation_Teachers:'Evaluation Of Teachers'
 }
 
 export {
