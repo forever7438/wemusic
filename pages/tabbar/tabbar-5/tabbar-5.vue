@@ -138,6 +138,17 @@
 				</navigator>
 			</view>
 		</view>
+		<view class="meun_list">
+			<view v-if="!isTeacher" @tap="goPath('/pages/tabbar/tabbar-1/tabbar-1','home')">
+				<image :src="pathType=='home'?'/static/img/tabbar/homeactive.png':'/static/img/tabbar/home.png'"></image>
+			</view>
+			<view @tap="goPath('/pages/tabbar/tabbar-2/tabbar-2','class')">
+				<image :src="pathType=='class'?'/static/img/tabbar/classactive.png':'/static/img/tabbar/class.png'"></image>
+			</view>
+			<view @tap="goPath('/pages/tabbar/tabbar-5/tabbar-5','me')">
+				<image :src="pathType=='me'?'/static/img/tabbar/meactive.png':'/static/img/tabbar/me.png'"></image>
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -151,6 +162,7 @@
 		},
 		data() {
 			return {
+				pathType: 'me',
 				userImage: '../../../static/img/icon_touxiang02.png',
 				isTeacher: false,
 				userInfo: {},
@@ -158,7 +170,8 @@
 				language: '中文'
 			};
 		},
-		onLoad() {
+		onLoad(obj) {
+			this.pathType = obj.type;
 			this.getUserInfo();
 			uni.getStorageSync('type') == 1 ? (this.isTeacher = false) : (this.isTeacher = true);
 			uni.getStorageSync('langType') == 'en-US' ? (this.language = 'English') : (this.language = '中文');
@@ -174,6 +187,11 @@
 			uni.getStorageSync('type') == 1 ? (this.isTeacher = false) : (this.isTeacher = true);
 		},
 		methods: {
+			goPath(path, type) {
+				uni.redirectTo({
+					url: `${path}?type=${type}`
+				})
+			},
 			//获取个人资料
 			getUserInfo() {
 				this.ajax({
@@ -433,6 +451,28 @@
 					width: 44upx;
 					height: 44upx;
 				}
+			}
+		}
+	}
+
+	.meun_list {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		display: flex;
+		height: 98upx;
+		background-color: #fff;
+		align-items: center;
+		justify-content: space-around;
+		border-top: 2upx solid #ddd;
+
+		view {
+			flex: 1;
+			text-align: center;
+
+			image {
+				width: 48upx;
+				height: 48upx;
 			}
 		}
 	}

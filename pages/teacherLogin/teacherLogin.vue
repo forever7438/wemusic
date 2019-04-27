@@ -67,7 +67,7 @@
 									data: res.data.type
 								}),
 								uni.reLaunch({
-									url: '/pages/tabbar/tabbar-1/tabbar-1'
+									url: '/pages/tabbar/tabbar-2/tabbar-2?type=class'
 								});
 						} else {
 							uni.showToast({

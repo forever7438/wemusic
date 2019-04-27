@@ -3,7 +3,7 @@
 		<p :class="{m_b_16:size == 28}">{{ title }}</p>
 		<div class="start_class_in" :style="{marginLeft: size == 28 ? '144upx' : ''}">
 			<uni-rate :size="size" :margin="size == 28 ? '8' : '2'" :value="star" :isFill="isFill" :disabled="disabled" @change="getVal"></uni-rate>
-			<span class="number"  :style="{ color: starColor,fontSize: font_size+'upx'}">{{ star }}</span>
+			<span class="number" :style="{ color: starColor,fontSize: font_size+'upx'}">{{ star }}</span>
 		</div>
 	</div>
 	<!-- <div class="start_class" v-else>
@@ -55,6 +55,7 @@
 		},
 		methods: {
 			getVal(val) {
+				this.star = val.value * 2;
 				this.$emit('sendVal', val.value);
 			}
 		}
@@ -64,9 +65,11 @@
 <style lang="less" scoped>
 	.start_class {
 		margin-top: 10upx;
-	    .m_b_16{
+
+		.m_b_16 {
 			margin-bottom: 32upx;
 		}
+
 		p {
 			font-size: 32upx;
 			font-family: PingFangSC-Medium;
@@ -77,7 +80,7 @@
 		.start_class_in {
 			display: flex;
 			align-items: center;
-			justify-content: center;
+			// justify-content: center;
 
 			.number {
 				margin-left: 10upx;

@@ -429,30 +429,30 @@
 		"navigationBarTitleText": "",
 		"navigationBarBackgroundColor": "#fff",
 		"backgroundColor": "#F8F8F8"
-	},
-	"tabBar": {
-		"borderStyle": "black",
-		"backgroundColor": "",
-		"color": "#8F8F94",
-		"selectedColor": "#f33e54",
-		"list": [{
-				"pagePath": "pages/tabbar/tabbar-1/tabbar-1",
-				"iconPath": "static/img/tabbar/home.png",
-				"selectedIconPath": "static/img/tabbar/homeactive.png",
-				"text": ""
-			},
-			{
-				"pagePath": "pages/tabbar/tabbar-2/tabbar-2",
-				"iconPath": "static/img/tabbar/class.png",
-				"selectedIconPath": "static/img/tabbar/classactive.png",
-				"text": ""
-			},
-			{
-				"pagePath": "pages/tabbar/tabbar-5/tabbar-5",
-				"iconPath": "static/img/tabbar/me.png",
-				"selectedIconPath": "static/img/tabbar/meactive.png",
-				"text": ""
-			}
-		]
 	}
+	// "tabBar": {
+	// 	"borderStyle": "black",
+	// 	"backgroundColor": "",
+	// 	"color": "#8F8F94",
+	// 	"selectedColor": "#f33e54",
+	// 	"list": [{
+	// 			"pagePath": "pages/tabbar/tabbar-1/tabbar-1",
+	// 			"iconPath": "static/img/tabbar/home.png",
+	// 			"selectedIconPath": "static/img/tabbar/homeactive.png",
+	// 			"text": ""
+	// 		},
+	// 		{
+	// 			"pagePath": "pages/tabbar/tabbar-2/tabbar-2",
+	// 			"iconPath": "static/img/tabbar/class.png",
+	// 			"selectedIconPath": "static/img/tabbar/classactive.png",
+	// 			"text": ""
+	// 		},
+	// 		{
+	// 			"pagePath": "pages/tabbar/tabbar-5/tabbar-5",
+	// 			"iconPath": "static/img/tabbar/me.png",
+	// 			"selectedIconPath": "static/img/tabbar/meactive.png",
+	// 			"text": ""
+	// 		}
+	// 	]
+	// }
 }

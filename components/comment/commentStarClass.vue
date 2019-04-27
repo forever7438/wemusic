@@ -10,7 +10,7 @@
 		</div>
 		<div class="comments">
 			<p>{{$t('index').comment}}</p>
-			<textarea :placeholder="$t('index').Please_enter_evaluation_content" @change="changeData"></textarea>
+			<textarea :placeholder="$t('index').Please_enter_evaluation_content" v-model="body" @change="changeData"></textarea>
 		</div>
 	</div>
 </template>
