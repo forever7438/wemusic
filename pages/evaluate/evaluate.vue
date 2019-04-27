@@ -1,10 +1,10 @@
 <template>
 	<div class="evaluate">
-		<commentStarClasss :msg="$t('index').course" title="吉他快速入门" content="教师 Jennifer Young"></commentStarClasss>
+		<commentStarClass :msg="$t('index').course" title="吉他快速入门" content="教师 Jennifer Young"></commentStarClass>
 		<view class="item">
 			<startclass :title="$t('index').star" size=28></startclass>
 		</view>
-		<commentStarClasss :msg="$t('index').Teacher" title="Laura Johnson" content="从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。"></commentStarClasss>
+		<commentStarClass :msg="$t('index').Teacher" title="Laura Johnson" content="从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。"></commentStarClass>
 		<view class="item">
 			<startclass :title="$t('index').star" size=28></startclass>
 		</view>
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-	import commentStarClasss from '../../components/comment/commentStarClasss.vue';
+	import commentStarClass from '../../components/comment/commentStarClass.vue';
 	import startclass from '../../components/starclass.vue';
 	export default {
 		name: 'evaluate',
@@ -110,19 +110,11 @@
 </script>
 
 <style lang="less" scoped>
-<<<<<<< .mine
 	.evaluate {
-		padding: 0 15upx;
+		padding: 0 30upx 200upx 30upx;
+
+		.item {
+			margin-top: 32upx;
+		}
 	}
-
-
-
-=======
-.evaluate {
-	padding: 0 30upx 200upx 30upx;
-	.item{
-		margin-top: 32upx;
-	}
-}
->>>>>>> .theirs
 </style>
