@@ -1,6 +1,6 @@
 <template>
 	<div class="comments_content">
-		<h3 style="margin-bottom: 32upx;">{{$t('index').Course_evaluation}}</h3>
+		<h3 style="margin-bottom: 32upx;">{{msg}}</h3>
 		<div class="comments_message">
 			<image src="../../static/img/lf.jpg"></image>
 			<span>
@@ -51,6 +51,7 @@ export default {
 		image {
 			width: 254upx;
 			height: 160upx;
+			margin-right: 30upx;
 		}
 		span {
 			text-align: left;
