@@ -4,8 +4,13 @@
 		<view class="parents">
 			<!-- <friendHead :itemHead="friendDetail"></friendHead> -->
 			<friendContent :type="false" :content="friendDetail.body"></friendContent>
-			<friendOperation :message="friendDetail.message" :praise="friendDetail.praise" :forward="friendDetail.forward"
-			 :listId="friendDetail.id"></friendOperation>
+			<friendOperation 
+			:message="friendDetail.message" 
+			:praise="friendDetail.praise" 
+			:forward="friendDetail.forward"
+			:is_forward="friendDetail.is_forward"
+			:is_praise="friendDetail.is_praise"
+			:listId="friendDetail.id"></friendOperation>
 		</view>
 		<view class="line"></view>
 		<view class="parents">
