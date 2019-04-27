@@ -1,84 +1,86 @@
 <template>
-	<view class="add_teacher">
-		<w-picker mode="date" title="选择日期" startYear="1950" @confirm="onConfirmDate" ref="pickerDate"></w-picker>
-		<w-picker mode="date" :title="title" startYear="2014" @confirm="onConfirmDates" ref="pickerDates"></w-picker>
-		<view class="teacher_meun">
-			<text>{{$t('index').name }}</text>
-			<input type="text" maxlength="10" v-model="name" />
-		</view>
-		<view class="teacher_meun">
-			<text>{{$t('index').sex }}</text>
-			<radio-group class="uni-flex" name="sex">
-				<label style="margin-right: 80upx;">
-					<radio value="0" checked="true" color="#fad42a" />
-					男
-				</label>
-				<label>
-					<radio value="1" color="#fad42a" />
-					女
-				</label>
-			</radio-group>
-		</view>
-		<view class="teacher_meun">
-			<text>{{$t('index').birthday }}</text>
-			<input @tap="toggleTabDate" type="text" v-model="birthday" />
-		</view>
-		<view class="teacher_meun">
-			<text>{{$t('index').address }}</text>
-			<input type="text" v-model="address" />
-		</view>
-		<view class="teacher_meun">
-			<text>{{$t('index').phone }}</text>
-			<input type="text" v-model="phone" />
-		</view>
-		<view class="teacher_meun">
-			<text>{{$t('index').emial }}</text>
-			<input type="text" v-model="emial" />
-		</view>
-		<view class="teacher_meun">
-			<text>ABN</text>
-			<input type="text" v-model="ABN" />
-		</view>
-		<view class="teacher_meun">
-			<text style="width: 220upx;">{{$t('index').culture }}</text>
-			<input type="text" v-model="culture" />
-		</view>
-		<view class="teacher_meun">
-			<text style="width: 142upx;">{{$t('index').card }}</text>
-			<input type="text" v-model="card" />
-		</view>
-		<view class="teacher_meun">
-			<text>乐器</text>
-			<input type="text" />
-		</view>
-		<view class="teacher_meun">
-			<text style="width:300upx">{{$t('index').startTime }}</text>
-			<input @tap="toggleTabDates('startTime')" type="text" v-model="gz_s_time" />
-		</view>
-		<view class="teacher_meun">
-			<text style="width:300upx">{{$t('index').endTime }}</text>
-			<input @tap="toggleTabDates('endTime')" type="text" v-model="gz_d_time" />
-		</view>
-		<!-- <view>
-			<text style="width: 140upx;">多人授课</text>
-			<radio-group class="uni-flex" name="type">
-				<label>
-					<radio value="接受" checked="true" color="#fad42a" />
-					接受
-				</label>
-				<label>
-					<radio value="拒绝" color="#fad42a" />
-					拒绝
-				</label>
-			</radio-group>
-		</view> -->
-		<view class="diffrent">
-			<text style="width: 212upx;">{{$t('index').j_photo }}</text>
-			<image class="j_photo" v-if="j_photo" :src="j_photo"></image>
-			<view v-else class="upload_file" @click="chooseImage">
-				<image src="../../static/img/creame@2x.png"></image>
+	<view>
+		<div class="add_teacher">
+			<w-picker mode="date" title="选择日期" startYear="1950" @confirm="onConfirmDate" ref="pickerDate"></w-picker>
+			<w-picker mode="date" :title="title" startYear="2014" @confirm="onConfirmDates" ref="pickerDates"></w-picker>
+			<view class="teacher_meun">
+				<text>{{$t('index').name }}</text>
+				<input type="text" maxlength="10" v-model="name" />
 			</view>
-		</view>
+			<view class="teacher_meun">
+				<text>{{$t('index').sex }}</text>
+				<radio-group class="uni-flex" name="sex">
+					<label style="margin-right: 80upx;">
+						<radio value="0" checked="true" color="#fad42a" />
+						男
+					</label>
+					<label>
+						<radio value="1" color="#fad42a" />
+						女
+					</label>
+				</radio-group>
+			</view>
+			<view class="teacher_meun">
+				<text>{{$t('index').birthday }}</text>
+				<input @tap="toggleTabDate" type="text" v-model="birthday" />
+			</view>
+			<view class="teacher_meun">
+				<text>{{$t('index').address }}</text>
+				<input type="text" v-model="address" />
+			</view>
+			<view class="teacher_meun">
+				<text>{{$t('index').phone }}</text>
+				<input type="text" v-model="phone" />
+			</view>
+			<view class="teacher_meun">
+				<text>{{$t('index').emial }}</text>
+				<input type="text" v-model="emial" />
+			</view>
+			<view class="teacher_meun">
+				<text>ABN</text>
+				<input type="text" v-model="ABN" />
+			</view>
+			<view class="teacher_meun">
+				<text>{{$t('index').culture }}</text>
+				<input type="text" v-model="culture" />
+			</view>
+			<view class="teacher_meun">
+				<text>{{$t('index').card }}</text>
+				<input type="text" v-model="card" />
+			</view>
+			<view class="teacher_meun">
+				<text>乐器</text>
+				<input type="text" />
+			</view>
+			<view class="teacher_meun">
+				<text>{{$t('index').startTime }}</text>
+				<input @tap="toggleTabDates('startTime')" type="text" v-model="gz_s_time" />
+			</view>
+			<view class="teacher_meun">
+				<text>{{$t('index').endTime }}</text>
+				<input @tap="toggleTabDates('endTime')" type="text" v-model="gz_d_time" />
+			</view>
+			<!-- <view>
+				<text style="width: 140upx;">多人授课</text>
+				<radio-group class="uni-flex" name="type">
+					<label>
+						<radio value="接受" checked="true" color="#fad42a" />
+						接受
+					</label>
+					<label>
+						<radio value="拒绝" color="#fad42a" />
+						拒绝
+					</label>
+				</radio-group>
+			</view> -->
+			<view class="diffrent">
+				<text>{{$t('index').j_photo }}</text>
+				<image class="j_photo" v-if="j_photo" :src="j_photo"></image>
+				<view v-else class="upload_file" @click="chooseImage">
+					<image src="../../static/img/creame@2x.png"></image>
+				</view>
+			</view>
+		</div>
 		<button hover-class="btn-hover" @click="addTeacherInfo">{{$t('index').register }}</button>
 	</view>
 </template>
@@ -230,6 +232,8 @@
 
 	.add_teacher {
 		padding: 0 24upx;
+		margin-right: 150upx;
+		overflow: hidden;
 
 		label {
 			font-size: 32upx;
@@ -240,30 +244,31 @@
 
 		.teacher_meun {
 			display: flex;
-			align-items: center;
+			align-items: right;
 			justify-content: space-between;
-			margin: 30upx 150upx;
+			margin: 30upx 0;
 
 			text {
-				width: 100upx;
+				width: 160upx !important;
 				height: 44upx;
 				font-size: 32upx;
 				font-family: PingFangSC-Regular;
 				font-weight: 400;
+				text-align: right;
 				color: rgba(51, 51, 51, 1);
 			}
 
-			// 		input {
-			// 			padding-left: 10upx;
-			// 			border-bottom: 2upx solid #000;
-			// 		}
+			input {
+				width: 394upx;
+			}
 		}
 
 		.diffrent {
 			display: flex;
 			align-items: baseline;
 			flex-direction: column;
-			margin: 30upx 150upx;
+			//margin: 30upx 150upx;
+			margin-left:32upx;
 
 			.j_photo {
 				margin: 20upx auto;
@@ -272,7 +277,7 @@
 			}
 
 			text {
-				width: 100upx;
+				//width: 100upx;
 				height: 44upx;
 				font-size: 32upx;
 				font-family: PingFangSC-Regular;
@@ -281,29 +286,27 @@
 			}
 
 			.upload_file {
-				margin: 20upx auto;
+				margin: 20upx 120upx;
 				padding: 60upx 170upx;
 				text-align: center;
 				background: rgba(246, 246, 246, 1);
 				border-radius: 16upx;
-
 				image {
 					width: 60upx;
 					height: 60upx;
 				}
 			}
 		}
-
-		button {
-			width: auto;
-			line-height: 88upx;
-			margin: 0 110upx 20upx;
-			background: rgba(250, 212, 42, 1);
-			border-radius: 12upx;
-			font-size: 32upx;
-			font-family: PingFangSC-Medium;
-			font-weight: 500;
-			color: rgba(51, 51, 51, 1);
-		}
+	}
+	button {
+		width: auto;
+		line-height: 88upx;
+		margin: 92upx 86upx 44upx 86upx;
+		background: rgba(250, 212, 42, 1);
+		border-radius: 12upx;
+		font-size: 32upx;
+		font-family: PingFangSC-Medium;
+		font-weight: 500;
+		color: rgba(51, 51, 51, 1);
 	}
 </style>
