@@ -1,6 +1,6 @@
 let zhCN = {
 	accountBbalance: '账户余额',
-	recharge: '充值',
+	recharge: '充 值',
 	allCourses: '全部课程',
 	ToBePaid: '待支付',
 	waitingForClass: '待开课',
@@ -91,7 +91,32 @@ let zhCN = {
 	next: '下一步',
 	cancel: '取消',
 	confirm: '确认',
-	Selection_date: '选择日期'
+	Selection_date: '选择日期',
+	Choose_teacher:'选择老师',
+	Choose:'选择',
+	year:'年',
+	month:'月',
+	day:'日',
+	hour:'时',
+	minute:'分',
+	second:'秒',
+	clock_in:'打卡',
+	QR_code:'二维码',
+	task:'作业',
+	changing_course:'调课',
+	vip:'会员',
+	My_points:'我的积分',
+	Give:'赠送',
+	Recharge_record:'充值记录',
+	Records_consumption:'消费记录',
+	upload:'上传',
+	Please_enter_evaluation_content:'请输入评价内容',
+	star:"星级",
+	teacher:'教师',
+	Teacher_teaching:'教师授课',
+	Teaching_methods:'授课方式',
+	Teaching_attitude:'授课态度',
+	Course_evaluation:'对课程评价'
 }
 
 export {

@@ -13,7 +13,7 @@
 			<p class="duration">{{$t('index').Duration_course}} {{item.time}} min</p>
 		</li>
 		<li v-if="!flag" class="add_time" @tap="toggleTab"><img src="/static/img/tianjiashichang@2x.png" /></li>
-		<w-picker mode="dateTime" :defaultVal="date" themeColor="#007AFF" @confirm="DateConfirm" ref="picker"></w-picker>
+		<w-picker mode="dateTime" :defaultVal="date" :startYear="date_" themeColor="#007AFF" @confirm="DateConfirm" ref="picker"></w-picker>
 		<mpvue-picker themeColor="#007AFF" ref="mpvuePicker" mode="selector" :titleInfo="$t('index').Duration_course" :deepLength="1"
 		 :pickerValueDefault="[0]" @onConfirm="TimeConfirm" @onCancel="onCancel" :pickerValueArray="timeList"></mpvue-picker>
 	</ul>
@@ -43,6 +43,8 @@
 				myDate.getMinutes()
 			]
 			this.date = container;
+			this.date_ = container[0]+'-'+container[1]+'-'+container[2]+' '+container[3]+':'+container[4];
+			console.log(this.date_)
 		},
 		props: {
 			flag: Boolean, //事件开关
@@ -108,7 +110,7 @@
 			background: rgba(255, 255, 255, 1);
 			box-shadow: 0 8upx 20upx 4upx rgba(179, 188, 198, 0.2);
 			border-radius: 16upx;
-			margin-bottom:30upx; 
+			margin:30upx; 
 			padding: 30upx;
 
 			.date {

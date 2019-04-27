@@ -8,14 +8,14 @@
 					<s>学生 姓名</s>
 				</div>
 				<div class="class_operation">
-					<span v-if="isTeacher" @click="showCard(1)">二维码</span>
-					<span v-else @click="sendCard">打卡</span>
-					<span><navigator hover-class="none" url="/pages/addTask/addTask?classId=1">作业</navigator></span>
+					<span v-if="isTeacher" @click="showCard(1)">{{$t('index').QR_code}}</span>
+					<span v-else @click="sendCard">{{$t('index').clock_in}}</span>
+					<span><navigator hover-class="none" url="/pages/addTask/addTask?classId=1">{{$t('index').task}}</navigator></span>
 				</div>
-				<navigator hover-class="none" url="/pages/classAdjustment/classAdjustment?classId=1"><div class="class_adjustment">调课</div></navigator>
+				<navigator hover-class="none" url="/pages/classAdjustment/classAdjustment?classId=1"><div class="class_adjustment">{{$t('index').changing_courseAA}}</div></navigator>
 			</li>
 		</ul>
-		<noContent v-else title="暂无课程"></noContent>
+		<noContent v-else :title="$t('index').No_data"></noContent>
 	</div>
 </template>
 

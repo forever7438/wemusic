@@ -7,7 +7,7 @@
 				<div class="lesson_messgae">
 					<p class="lesson_title">
 						{{ item.name }}
-						<span class="go_pay" @click="selectTeacherFunc(item)">Select</span>
+						<span class="go_pay" @click="selectTeacherFunc(item)">{{$t('index').Choose}}</span>
 					</p>
 					<startclass :star="Number(item.star)" :size="13" starColor="#666666"></startclass>
 					<!-- <p v-else class="lesson_winer">教师 Jennifer Young</p> -->

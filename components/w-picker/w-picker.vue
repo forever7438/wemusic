@@ -3,33 +3,33 @@
 		<div class="mask" :class="{ show: showPicker }" @tap="maskTap" catchtouchmove="true"></div>
 		<view class="w-picker-cnt" :class="{ show: showPicker }">
 			<view class="w-picker-hd" catchtouchmove="true">
-				<view class="w-picker-btn" @tap="pickerCancel">取消</view>
+				<view class="w-picker-btn" @tap="pickerCancel">{{$t('index').cancel}}</view>
 				<view class="title_info">{{ title }}</view>
-				<view class="w-picker-btn" :style="{ color: themeColor }" @tap="pickerConfirm">确定</view>
+				<view class="w-picker-btn" :style="{ color: themeColor }" @tap="pickerConfirm">{{$t('index').confirm}}</view>
 			</view>
 			<view class="w-picker-view" v-if="mode == 'dates'">
 				<picker-view indicator-style="height: 40px;" :value="pickVal" @change="bindChange">
 					<picker-view-column>
-						<view class="item" v-for="(item, index) in data.years" :key="index">{{ item }}年</view>
+						<view class="item" v-for="(item, index) in data.years" :key="index">{{ item }}{{$t('index').year}}</view>
 					</picker-view-column>
 				</picker-view>
 			</view>
 			<view class="w-picker-view" v-if="mode == 'date' || mode == 'dateTime'">
 				<picker-view indicator-style="height: 40px;" :value="pickVal" @change="bindChange">
 					<picker-view-column>
-						<view class="item" v-for="(item, index) in data.years" :key="index">{{ item }}年</view>
+						<view class="item" v-for="(item, index) in data.years" :key="index">{{ item }}{{$t('index').year}}</view>
 					</picker-view-column>
 					<picker-view-column>
-						<view class="item" v-for="(item, index) in data.months" :key="index">{{ item }}月</view>
+						<view class="item" v-for="(item, index) in data.months" :key="index">{{ item }}{{$t('index').month}}</view>
 					</picker-view-column>
 					<picker-view-column>
-						<view class="item" v-for="(item, index) in data.days" :key="index">{{ item }}日</view>
+						<view class="item" v-for="(item, index) in data.days" :key="index">{{ item }}{{$t('index').day}}</view>
 					</picker-view-column>
 					<picker-view-column v-if="mode == 'dateTime'">
-						<view class="item" v-for="(item, index) in data.hours" :key="index">{{ item }}时</view>
+						<view class="item" v-for="(item, index) in data.hours" :key="index">{{ item }}{{$t('index').hour}}</view>
 					</picker-view-column>
 					<picker-view-column v-if="mode == 'dateTime'">
-						<view class="item" v-for="(item, index) in data.minutes" :key="index">{{ item }}分</view>
+						<view class="item" v-for="(item, index) in data.minutes" :key="index">{{ item }}{{$t('index').minute}}</view>
 					</picker-view-column>
 				</picker-view>
 			</view>

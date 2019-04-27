@@ -13,7 +13,7 @@
 				</li>
 				<li>
 					<span>{{$t('index').Teaching_methods}}</span>
-					<span>{{ way[request.people_num] }}</span>
+					<span>{{ resultway }}</span>
 				</li>
 			</ul>
 
@@ -56,8 +56,23 @@ export default {
 	},
 	data() {
 		return {
-			way: [$t('index').One_on_one, $t('index').A_pair_of_two, $t('index').A_pair_of_three]
+			way: []
 		};
+	},
+	computed:{
+		resultway(){
+			switch(this.request.people_num){
+				case 0:
+					return this.$t('index').One_on_one
+					break;
+				case 1:
+					return this.$t('index').A_pair_of_two
+					break;
+				case 2:
+					return this.$t('index').A_pair_of_three
+					break;
+			}
+		}
 	},
 	methods: {
 		onConfirm(val) {
@@ -97,7 +112,7 @@ export default {
 		},
 		pay(classId) {
 			uni.redirectTo({
-				url: '/pages/registrationSuccess/registrationSuccess?way=' + this.way[this.request.people_num] + '&classId=' + classId + '&teacherNmae=' + '教师名称'
+				url: '/pages/registrationSuccess/registrationSuccess?way=' + this.resultway + '&classId=' + classId + '&teacherNmae=' + '教师名称'
 			});
 			return;
 			this.ajax({

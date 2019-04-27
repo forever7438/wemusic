@@ -1,7 +1,7 @@
 <template>
 	<view class="upload_file">
 		<view class="upload_shade" @tap="chooseImage"><image :src="data_photo == '' ? '../../static/img/creame@2x.png' : '../../static/img/chenggong.png'"></image></view>
-		<button hover-class="btn-hover" @tap="uploadFile">上传</button>
+		<button hover-class="btn-hover" @tap="uploadFile">{{$t('index').upload}}</button>
 	</view>
 </template>
 

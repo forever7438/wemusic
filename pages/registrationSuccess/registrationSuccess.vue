@@ -7,14 +7,14 @@
 				<img class="pay_message_img" :src="courseInfo.photo || defaultImg" />
 				<div class="pay_class_ino">
 					<text>{{ courseInfo.name }}</text>
-					<startclass :size="13" :star="courseInfo.star" starColor="#666666"></startclass>
+					<startclass :size="13" :star="Number(courseInfo.star)" starColor="#666666"></startclass>
 					<text>{{ teacherNmae }} {{ way }}</text>
 				</div>
 			</div>
 		</div>
 		<ul>
-			<li><navigator hover-class="btn-hover" url="/pages/myCode/myCode">查看邀请码</navigator></li>
-			<li @tap="goIndex">返回首页</li>
+			<li><navigator hover-class="btn-hover" url="/pages/myCode/myCode">{{$t('index').viewInvitationCode}}</navigator></li>
+			<li @tap="goIndex">{{$t('index').backHome}}</li>
 		</ul>
 	</div>
 </template>
@@ -83,6 +83,7 @@ export default {
 	.pay_success_img {
 		width: 120upx;
 		height: 120upx;
+		
 	}
 	.pay_success_title {
 		margin: 60upx 0;
@@ -92,16 +93,18 @@ export default {
 		color: rgba(0, 0, 0, 1);
 	}
 	.pay_message {
-		width: 63%;
+		width: 580upx;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		.pay_message_img {
 			width: 254upx;
 			height: 160upx;
+			border-radius: 6upx;
 		}
 		.pay_class_ino {
 			height: 160upx;
+			width: 280upx;
 			display: flex;
 			flex-direction: column;
 			align-items: left;
@@ -125,14 +128,14 @@ export default {
 }
 ul {
 	margin-top: 100upx;
-	padding: 0 110upx;
+	padding: 0 86upx;
 	li {
 		height: 100upx;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		border-radius: 8upx;
-		margin-bottom: 10upx;
+		margin-bottom: 40upx;
 		font-size: 32upx;
 		font-weight: 500;
 		color: rgba(51, 51, 51, 1);
@@ -140,7 +143,6 @@ ul {
 			background: rgba(250, 212, 42, 1);
 		}
 		&:nth-of-type(2) {
-			margin-top: 20upx;
 			border: 2upx solid rgba(51, 51, 51, 1);
 		}
 	}

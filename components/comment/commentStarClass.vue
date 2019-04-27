@@ -1,6 +1,6 @@
 <template>
 	<div class="comments_content">
-		<h3>Evaluation of {{ msg }}</h3>
+		<h3 style="margin-bottom: 32upx;">{{$t('index').Course_evaluation}}</h3>
 		<div class="comments_message">
 			<image src="../../static/img/lf.jpg"></image>
 			<span>
@@ -10,7 +10,7 @@
 		</div>
 		<div class="comments">
 			<p>{{$t('index').comment}}</p>
-			<textarea placeholder="Input Evaluation of Courses" v-model="body" @change='changeData'></textarea>
+			<textarea :placeholder="$t('index').Please_enter_evaluation_content" @change="changeData"></textarea>
 		</div>
 	</div>
 </template>
