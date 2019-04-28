@@ -1,9 +1,9 @@
 <template>
 	<div class="start_class">
-		<p :class="{m_b_16:size == 28}">{{ title }}</p>
-		<div class="start_class_in" :style="{marginLeft: size == 28 ? '144upx' : ''}">
+		<p :class="{ m_b_16: size == 28 }">{{ title }}</p>
+		<div class="start_class_in" :style="{ marginLeft: size == 28 ? '144upx' : '' }">
 			<uni-rate :size="size" :margin="size == 28 ? '8' : '2'" :value="star" :isFill="isFill" :disabled="disabled" @change="getVal"></uni-rate>
-			<span class="number" :style="{ color: starColor,fontSize: font_size+'upx'}">{{ star }}</span>
+			<span class="number" :style="{ color: starColor, fontSize: font_size + 'upx' }">{{ star || value }}</span>
 		</div>
 	</div>
 	<!-- <div class="start_class" v-else>
@@ -12,83 +12,83 @@
 </template>
 
 <script>
-	import uniRate from '@/components/uni-rate/uni-rate.vue';
-	export default {
-		components: {
-			uniRate
+import uniRate from '@/components/uni-rate/uni-rate.vue';
+export default {
+	components: {
+		uniRate
+	},
+	props: {
+		title: String,
+		size: {
+			type: Number,
+			default: 13
 		},
-		props: {
-			title: String,
-			size: {
-				type: Number,
-				default: 13
-			},
-			star: {
-				type: Number,
-				default: 0
-			},
-			starColor: {
-				type: String,
-				default: '#FFFFFF'
-			},
-			isFill: {
-				type: Boolean,
-				default: false
-			},
-			disabled: {
-				type: Boolean,
-				default: true
-			},
-			font_size: {
-				type: Number,
-				default: 24
-			},
-			star_padding: {
-				type: Number,
-				default: 4
-			},
+		star: {
+			type: Number,
+			default: 0
 		},
-		data() {
-			return {
-				value: 0,
-			};
+		starColor: {
+			type: String,
+			default: '#FFFFFF'
 		},
-		methods: {
-			getVal(val) {
-				this.star = val.value * 2;
-				this.$emit('sendVal', val.value);
-			}
+		isFill: {
+			type: Boolean,
+			default: false
+		},
+		disabled: {
+			type: Boolean,
+			default: true
+		},
+		font_size: {
+			type: Number,
+			default: 24
+		},
+		star_padding: {
+			type: Number,
+			default: 4
 		}
-	};
+	},
+	data() {
+		return {
+			value: 0
+		};
+	},
+	methods: {
+		getVal(val) {
+			this.value = val.value * 2;
+			this.$emit('sendVal', val.value);
+		}
+	}
+};
 </script>
 
 <style lang="less" scoped>
-	.start_class {
-		margin-top: 10upx;
+.start_class {
+	margin-top: 10upx;
 
-		.m_b_16 {
-			margin-bottom: 32upx;
-		}
+	.m_b_16 {
+		margin-bottom: 32upx;
+	}
 
-		p {
-			font-size: 32upx;
-			font-family: PingFangSC-Medium;
-			font-weight: 500;
+	p {
+		font-size: 32upx;
+		font-family: PingFangSC-Medium;
+		font-weight: 500;
+		color: rgba(51, 51, 51, 1);
+	}
+
+	.start_class_in {
+		display: flex;
+		align-items: center;
+		// justify-content: center;
+
+		.number {
+			margin-left: 10upx;
+			font-size: 24upx;
+			font-family: PingFangSC-Regular;
+			font-weight: 400;
 			color: rgba(51, 51, 51, 1);
 		}
-
-		.start_class_in {
-			display: flex;
-			align-items: center;
-			// justify-content: center;
-
-			.number {
-				margin-left: 10upx;
-				font-size: 24upx;
-				font-family: PingFangSC-Regular;
-				font-weight: 400;
-				color: rgba(51, 51, 51, 1);
-			}
-		}
 	}
+}
 </style>

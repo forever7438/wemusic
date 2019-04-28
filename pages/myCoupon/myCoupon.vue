@@ -10,126 +10,126 @@
 </template>
 
 <script>
-	import couponList from '../../components/item/couponList.vue';
-	import noContent from '../../components/noContent.vue';
-	export default {
-		components: {
-			couponList,
-			noContent
-		},
-		data() {
-			return {
-				isEnd: false,
-				couponList: [],
-				type: 0,
-				index: 0
-			};
-		},
-		onLoad(obj) {
-			this.type = obj.type;
+import couponList from '../../components/item/couponList.vue';
+import noContent from '../../components/noContent.vue';
+export default {
+	components: {
+		couponList,
+		noContent
+	},
+	data() {
+		return {
+			isEnd: false,
+			couponList: [],
+			type: 0,
+			index: 0
+		};
+	},
+	onLoad(obj) {
+		this.type = obj.type;
+		this.getCouponList(this.type);
+	},
+	onShow() {
+		if (uni.getStorageSync('langType') == 'en-US') {
+			uni.setNavigationBarTitle({
+				title: 'My Coupon'
+			});
+		} else {
+			uni.setNavigationBarTitle({
+				title: '我的优惠券'
+			});
+		}
+	},
+	onReachBottom() {
+		if (this.isEnd) {
+			return;
+		}
+		this.index++;
+		setTimeout(() => {
 			this.getCouponList(this.type);
-		},
-		onShow() {
-			if (uni.getStorageSync('langType') == 'en-US') {
-				uni.setNavigationBarTitle({
-					title: 'My Coupon'
-				});
-			} else {
-				uni.setNavigationBarTitle({
-					title: '我的优惠券'
-				});
-			}
-		},
-		onReachBottom() {
-			if (this.isEnd) {
-				return;
-			}
-			this.index++;
-			setTimeout(() => {
-				this.getCouponList(this.type);
-			}, 300);
-		},
-		onPullDownRefresh() {
-			this.index = 0;
-			this.getCouponList(this.type);
-		},
-		methods: {
-			//获取优惠卷列表
-			getCouponList(type) {
-				this.couponList = [];
-				this.type = type;
-				this.ajax({
-					url: 'studentclass/coupom_list',
-					data: {
-						type: type,
-						list: this.index,
-						val: 5
-					},
-					success: res => {
-						uni.stopPullDownRefresh();
-						if (res.data.body === 'success') {
-							if (res.data.data.length === 0) {
-								this.isEnd = true;
-								uni.showToast({
-									title: '没有更多数据了',
-									icon: 'none'
-								});
-								return;
-							}
-							if (this.index !== 0) {
-								this.couponList = this.couponList.concat(res.data.data);
-							} else {
-								this.couponList = res.data.data;
-							}
+		}, 300);
+	},
+	onPullDownRefresh() {
+		this.index = 0;
+		this.getCouponList(this.type);
+	},
+	methods: {
+		//获取优惠卷列表
+		getCouponList(type) {
+			this.couponList = [];
+			this.type = type;
+			this.ajax({
+				url: 'studentclass/coupom_list',
+				data: {
+					type: type,
+					list: this.index,
+					val: 5
+				},
+				success: res => {
+					uni.stopPullDownRefresh();
+					if (res.data.body === 'success') {
+						if (res.data.data.length === 0) {
+							this.isEnd = true;
+							uni.showToast({
+								title: '没有更多数据了',
+								icon: 'none'
+							});
+							return;
+						}
+						if (this.index !== 0) {
+							this.couponList = this.couponList.concat(res.data.data);
+						} else {
+							this.couponList = res.data.data;
 						}
 					}
-				});
-			}
+				}
+			});
 		}
-	};
+	}
+};
 </script>
 
 <style lang="less">
-	view {
-		.meun_list {
-			width: 100%;
-			position: fixed;
-			height: 90upx;
-			display: flex;
-			align-items: center;
-			justify-content: space-around;
-
-			text {
-				font-size: 28upx;
-				font-family: PingFangSC-Medium;
-				font-weight: 500;
-				color: rgba(51, 51, 51, 1);
-				padding-bottom: 20upx;
-			}
-
-			.active {
-				border-bottom: 6upx solid #000;
-			}
+view {
+	.meun_list {
+		width: 100%;
+		position: fixed;
+		height: 90upx;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		background-color: #fff;
+		text {
+			font-size: 28upx;
+			font-family: PingFangSC-Medium;
+			font-weight: 500;
+			color: rgba(51, 51, 51, 1);
+			padding-bottom: 20upx;
 		}
 
-		.no_content {
-			height: 600upx;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-
-			image {
-				width: 216upx;
-				height: 244upx;
-			}
-
-			text {
-				font-size: 32upx;
-				font-family: PingFangSC-Medium;
-				font-weight: 500;
-				color: rgba(0, 0, 0, 0.5);
-			}
+		.active {
+			border-bottom: 6upx solid #000;
 		}
 	}
+
+	.no_content {
+		height: 600upx;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		image {
+			width: 216upx;
+			height: 244upx;
+		}
+
+		text {
+			font-size: 32upx;
+			font-family: PingFangSC-Medium;
+			font-weight: 500;
+			color: rgba(0, 0, 0, 0.5);
+		}
+	}
+}
 </style>

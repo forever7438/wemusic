@@ -33,7 +33,7 @@
 			</swiper>
 			<view class="picker-modal-footer">
 				<view class="picker-modal-footer-info">
-					<block v-if="isMultiSelect">
+					<!-- <block v-if="isMultiSelect">
 						<view class="picker-display">
 							<text>{{ beginText }} Date</text>
 							<text class="picker-display-text">{{ BeginTitle }}</text>
@@ -62,10 +62,10 @@
 								{{ EndTimeTitle }}
 							</view>
 						</view>
-					</block>
-					<block v-else>
+					</block> -->
+					<!-- <block v-else>
 						<view class="picker-display">
-							<text>Selected</text>
+							<text>日期</text>
 							<text class="picker-display-text">{{ BeginTitle }}</text>
 							<view
 								v-if="isContainTime"
@@ -78,18 +78,21 @@
 								{{ BeginTimeTitle }}
 							</view>
 						</view>
-					</block>
+					</block> -->
 				</view>
-				<view class="picker-modal-footer-btn">
-					<view class="picker-btn" :hover-stay-time="100" hover-class="picker-btn-active" @click="onCancel">{{$t('index').cancel}}</view>
-					<view class="picker-btn" :style="{ color }" :hover-stay-time="100" hover-class="picker-btn-active" @click="onConfirm">{{$t('index').confirm}}</view>
-				</view>
+				<!-- <view class="picker-modal-footer-btn">
+					<view class="picker-btn" :hover-stay-time="100" hover-class="picker-btn-active" @click="onCancel">{{ $t('index').cancel }}</view>
+					<view class="picker-btn" :style="{ color }" :hover-stay-time="100" hover-class="picker-btn-active" @click="onConfirm">{{ $t('index').confirm }}</view>
+				</view> -->
 			</view>
 		</view>
+		
 		<!-- 时间选择器 -->
 		<view v-if="showTimePicker" class="picker">
 			<view class="picker-modal picker-time">
-				<view class="picker-modal-header"><text class="picker-modal-header-title">{{$t('index').Selection_date}}</text></view>
+				<view class="picker-modal-header">
+					<text class="picker-modal-header-title">{{ $t('index').Selection_date }}</text>
+				</view>
 				<picker-view class="picker-modal-time" indicator-class="picker-modal-time-item" :value="timeValue" @change="onTimeChange">
 					<picker-view-column>
 						<view style="line-height: 35px;" v-for="(v, i) in 24" :key="i">{{ i < 10 ? '0' + i : i }}时</view>
@@ -482,6 +485,7 @@ export default {
 		},
 		//选中日期
 		onSelectDate(date) {
+			this.$emit('selectTime', date.dateObj);
 			if (~this.type.indexOf('range') && this.checkeds.length == 2) this.checkeds = [];
 			else if (!~this.type.indexOf('range') && this.checkeds.length) this.checkeds = [];
 			this.checkeds.push(new Date(date.dateObj));

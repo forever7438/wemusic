@@ -6,7 +6,7 @@
 				<text class="finance_time">{{ (item.start_time * 1000) | formateTime }}-{{ (item.stop_time * 1000) | formateTime }}</text>
 				<view class="finance_money">
 					<text>$2000.00</text>
-					<text>{{$t('index').money}}</text>
+					<text>{{ $t('index').money }}</text>
 				</view>
 				<text class="fun-tag"></text>
 			</view>
@@ -17,9 +17,9 @@
 				</view>
 				<view class="total_student">
 					<text>5</text>
-					<text>{{$t('index').Students}}</text>
+					<text>{{ $t('index').Students }}</text>
 				</view>
-				<button hover-class="btn-hover" @tap="addFinance(item.id)">{{$t('index').Apply}}</button>
+				<button hover-class="btn-hover" @tap="addFinance(item.id)">{{ $t('index').Apply }}</button>
 			</view>
 		</view>
 		<noContent v-else title="暂无信息"></noContent>

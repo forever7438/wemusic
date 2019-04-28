@@ -96,6 +96,7 @@ export default {
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
+		background-color: #fff;
 		text {
 			font-size: 28upx;
 			font-family: PingFangSC-Medium;

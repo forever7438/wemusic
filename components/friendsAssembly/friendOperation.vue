@@ -1,112 +1,119 @@
 <template>
-	<view class="operation">
-		<view @tap="share(is_forward)">
-			<image src="/static/img/zhuanfa@2x.png"></image>
+	<view class="friend_operation">
+		<view class="operation_items" @tap="share(is_forward)">
+			<image class="items_image" src="../../static/img/zhuanfa@2x.png"></image>
 			<text>{{ forward }}</text>
 		</view>
-		<view>
-			<image src="/static/img/comment@2x.png"></image>
+		<view class="operation_items">
+			<image class="items_image" src="../../static/img/comment@2x.png"></image>
 			<text>{{ message }}</text>
 		</view>
-		<view @tap="liked(is_praise)">
-			<image src="/static/img/dianzan@2x.png"></image>
+		<view class="operation_items" @tap="liked(is_praise)">
+			<image class="items_image" src="../../static/img/dianzan@2x.png"></image>
 			<text>{{ praise }}</text>
 		</view>
 	</view>
 </template>
 
 <script>
-	export default {
-		props: {
-			message: Number,
-			praise: Number,
-			forward: Number,
-			listId: String,
-			is_forward: Number,
-			is_praise: Number
-		},
-		methods: {
-			//点赞
-			liked(is_praise) {
-				this.ajax({
-					url: 'friend/praise',
-					data: {
-						friend_id: this.listId
-					},
-					success: res => {
-						if (res.data.body === 'success') {
-							if (is_praise) {
-								this.praise -= 1;
-							} else {
-								this.praise += 1;
-							}
-							uni.showToast({
-								title: 'Succes',
-								icon: 'none'
-							});
-						} else {
-							uni.showToast({
-								title: res.data.msg,
-								icon: 'none'
-							});
-						}
-					}
-				});
-			},
-			//转发
-			share(is_forward) {
-				this.ajax({
-					url: 'friend/forward',
-					data: {
-						friend_id: this.listId
-					},
-					success: res => {
-						if (res.data.body === 'success') {
-							if (is_forward) {
-								this.forward -= 1;
-							} else {
-								this.forward += 1
-							}
-							uni.showToast({
-								title: '转发成功',
-								icon: 'none'
-							});
-						} else {
-							uni.showToast({
-								title: res.data.msg,
-								icon: 'none'
-							});
-						}
-					}
-				});
+export default {
+	props: {
+		message: Number,
+		praise: Number,
+		forward: Number,
+		listId: String,
+		is_forward: Number,
+		is_praise: Number
+	},
+	methods: {
+		//点赞
+		liked(is_praise) {
+			if (!this.listId) {
+				return;
 			}
+			this.ajax({
+				url: 'friend/praise',
+				data: {
+					friend_id: this.listId
+				},
+				success: res => {
+					if (res.data.body === 'success') {
+						this.$emit('refreshData');
+						if (is_praise) {
+							this.praise -= 1;
+						} else {
+							this.praise += 1;
+						}
+						uni.showToast({
+							title: '点赞成功',
+							icon: 'none'
+						});
+					} else {
+						uni.showToast({
+							title: res.data.msg,
+							icon: 'none'
+						});
+					}
+				}
+			});
+		},
+		//转发
+		share(is_forward) {
+			if (!this.listId) {
+				return;
+			}
+			if (is_forward) {
+				return;
+			}
+			this.ajax({
+				url: 'friend/forward',
+				data: {
+					friend_id: this.listId
+				},
+				success: res => {
+					if (res.data.body === 'success') {
+						this.$emit('refreshData');
+						this.forward += 1;
+						uni.showToast({
+							title: '转发成功',
+							icon: 'none'
+						});
+					} else {
+						uni.showToast({
+							title: res.data.msg,
+							icon: 'none'
+						});
+					}
+				}
+			});
 		}
-	};
+	}
+};
 </script>
 
 <style lang="less">
-	.operation {
+.friend_operation {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin: 20upx 0;
+
+	.operation_items {
 		display: flex;
 		align-items: center;
-		justify-content: space-around;
-		margin: 20upx 0;
 
-		view {
-			display: flex;
-			align-items: center;
+		.items_image {
+			width: 50upx;
+			height: 50upx;
+		}
 
-			image {
-				width: 50upx;
-				height: 50upx;
-			}
-
-			text {
-				margin-left: 10upx;
-				font-size: 36upx;
-				font-family: PingFangSC-Regular;
-				font-weight: 400;
-				color: rgba(102, 102, 102, 1);
-			}
+		text {
+			margin-left: 10upx;
+			font-size: 36upx;
+			font-family: PingFangSC-Regular;
+			font-weight: 400;
+			color: rgba(102, 102, 102, 1);
 		}
 	}
+}
 </style>

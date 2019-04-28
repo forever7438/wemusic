@@ -15,6 +15,7 @@ export default {
 	},
 	data() {
 		return {
+			time: '',
 			index: 0,
 			isEnd: false,
 			financeList: []
@@ -24,6 +25,7 @@ export default {
 		this.toggleTab();
 	},
 	onLoad() {
+		this.time = new Date().getFullYear();
 		this.getFinanceList();
 	},
 	onShow() {
@@ -55,13 +57,15 @@ export default {
 			this.$refs.picker.show();
 		},
 		onConfirm(val) {
-			console.log(val);
+			this.time = val[0];
+			this.getFinanceList();
 		},
 		//获取财务列表
 		getFinanceList() {
 			this.ajax({
 				url: 'teacherclass/finance',
 				data: {
+					time: this.time,
 					list: this.index,
 					val: 5
 				},
@@ -74,7 +78,7 @@ export default {
 								title: '没有更多数据了',
 								icon: 'none'
 							});
-							return;
+							// return;
 						}
 						if (this.index !== 0) {
 							this.financeList = this.financeList.concat(res.data.data.list);
