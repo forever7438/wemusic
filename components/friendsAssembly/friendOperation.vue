@@ -16,104 +16,104 @@
 </template>
 
 <script>
-export default {
-	props: {
-		message: Number,
-		praise: Number,
-		forward: Number,
-		listId: String,
-		is_forward: Number,
-		is_praise: Number
-	},
-	methods: {
-		//点赞
-		liked(is_praise) {
-			if (!this.listId) {
-				return;
-			}
-			this.ajax({
-				url: 'friend/praise',
-				data: {
-					friend_id: this.listId
-				},
-				success: res => {
-					if (res.data.body === 'success') {
-						this.$emit('refreshData');
-						if (is_praise) {
-							this.praise -= 1;
-						} else {
-							this.praise += 1;
-						}
-						uni.showToast({
-							title: '点赞成功',
-							icon: 'none'
-						});
-					} else {
-						uni.showToast({
-							title: res.data.msg,
-							icon: 'none'
-						});
-					}
-				}
-			});
+	export default {
+		props: {
+			message: Number,
+			praise: Number,
+			forward: Number,
+			listId: String,
+			is_forward: Number,
+			is_praise: Number
 		},
-		//转发
-		share(is_forward) {
-			if (!this.listId) {
-				return;
-			}
-			if (is_forward) {
-				return;
-			}
-			this.ajax({
-				url: 'friend/forward',
-				data: {
-					friend_id: this.listId
-				},
-				success: res => {
-					if (res.data.body === 'success') {
-						this.$emit('refreshData');
-						this.forward += 1;
-						uni.showToast({
-							title: '转发成功',
-							icon: 'none'
-						});
-					} else {
-						uni.showToast({
-							title: res.data.msg,
-							icon: 'none'
-						});
+		methods: {
+			//点赞
+			liked(is_praise) {
+				this.ajax({
+					url: 'friend/praise',
+					data: {
+						friend_id: this.listId
+					},
+					success: res => {
+						if (res.data.body === 'success') {
+							this.$emit('refreshData');
+							if (is_praise) {
+								this.praise -= 1;
+							} else {
+								this.praise += 1;
+							}
+							if (!this.is_praise) {
+								this.is_praise = 1;
+							} else {
+								this.is_praise = 0;
+							}
+							uni.showToast({
+								title: '点赞成功',
+								icon: 'none'
+							});
+						} else {
+							uni.showToast({
+								title: res.data.msg,
+								icon: 'none'
+							});
+						}
 					}
+				});
+			},
+			//转发
+			share(is_forward) {
+				if (is_forward) {
+					return;
 				}
-			});
+				this.ajax({
+					url: 'friend/forward',
+					data: {
+						friend_id: this.listId
+					},
+					success: res => {
+						if (res.data.body === 'success') {
+							this.is_forward = 1;
+							this.$emit('refreshData');
+							this.forward += 1;
+							uni.showToast({
+								title: '转发成功',
+								icon: 'none'
+							});
+						} else {
+							uni.showToast({
+								title: res.data.msg,
+								icon: 'none'
+							});
+						}
+					}
+				});
+			}
 		}
-	}
-};
+	};
 </script>
 
 <style lang="less">
-.friend_operation {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	margin: 20upx 0;
-
-	.operation_items {
+	.friend_operation {
 		display: flex;
 		align-items: center;
+		justify-content: space-around;
+		margin: 20upx 0;
 
-		.items_image {
-			width: 50upx;
-			height: 50upx;
-		}
+		.operation_items {
+			display: flex;
+			align-items: center;
 
-		text {
-			margin-left: 10upx;
-			font-size: 36upx;
-			font-family: PingFangSC-Regular;
-			font-weight: 400;
-			color: rgba(102, 102, 102, 1);
+			.items_image {
+				width: 50upx;
+				height: 50upx;
+			}
+
+			text {
+				margin-left: 10upx;
+				font-size: 36upx;
+				font-family: PingFangSC-Regular;
+				font-weight: 400;
+				color: rgba(102, 102, 102, 1);
+			}
 		}
 	}
-}
 </style>

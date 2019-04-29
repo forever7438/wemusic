@@ -106,7 +106,7 @@ let zhCN = {
 	changing_course:'调课',
 	vip:'会员',
 	My_points:'我的积分',
-	Give:'赠送',
+	Give:'送',
 	Recharge_record:'充值记录',
 	Records_consumption:'消费记录',
 	upload:'上传',
