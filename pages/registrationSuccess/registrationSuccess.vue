@@ -13,8 +13,10 @@
 			</div>
 		</div>
 		<ul>
-			<li><navigator hover-class="btn-hover" url="/pages/myCode/myCode">{{$t('index').viewInvitationCode}}</navigator></li>
-			<li @tap="goIndex">{{$t('index').backHome}}</li>
+			<li>
+				<navigator hover-class="btn-hover" url="/pages/myCode/myCode">{{ $t('index').viewInvitationCode }}</navigator>
+			</li>
+			<li @tap="goIndex">{{ $t('index').backHome }}</li>
 		</ul>
 	</div>
 </template>
@@ -51,7 +53,7 @@ export default {
 	},
 	methods: {
 		goIndex() {
-			uni.switchTab({
+			uni.reLaunch({
 				url: '/pages/tabbar/tabbar-1/tabbar-1'
 			});
 		},
@@ -83,7 +85,6 @@ export default {
 	.pay_success_img {
 		width: 120upx;
 		height: 120upx;
-		
 	}
 	.pay_success_title {
 		margin: 60upx 0;
