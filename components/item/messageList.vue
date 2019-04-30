@@ -1,13 +1,13 @@
 <template>
 	<div class="message_list_content">
 		<ul v-if="messageList.length">
-			<navigator hover-class="none" v-for="(item, index) in 5" :key="index" :url="'/pages/adjustmentDetail/adjustmentDetail?messageId=' + index">
+			<navigator hover-class="none" v-for="(item, index) in messageList" :key="index" :url="'/pages/adjustmentDetail/adjustmentDetail?messageId=' + item.id">
 				<li>
 					<p>
-						<span>{{$t('index').System_notification}}</span>
-						<s>2019-1-12日</s>
+						<span>{{ $t('index').System_notification }}</span>
+						<s>{{ item.time | getTime }}</s>
 					</p>
-					<span class="message_content">课程《吉他入门12期》报名成功</span>
+					<span class="message_content">{{ item.body }}</span>
 				</li>
 			</navigator>
 		</ul>
@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import { getDate } from '../../common/common.js';
 import noContent from '../noContent.vue';
 export default {
 	components: {
@@ -23,6 +24,11 @@ export default {
 	},
 	props: {
 		messageList: Array
+	},
+	filters: {
+		getTime: time => {
+			return getDate(time * 1000);
+		}
 	}
 };
 </script>
