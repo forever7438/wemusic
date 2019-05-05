@@ -8,10 +8,10 @@
 						<p>{{$t('index').accountBbalance}}</p>
 						<s>{{ userInfo.money }}</s>
 					</span>
-					<span>
+					<!-- <span>
 						<p>{{$t('index').My_points}}</p>
 						<s>{{ 0 }}</s>
-					</span>
+					</span> -->
 				</div>
 			</div>
 		</div>
@@ -41,6 +41,27 @@
 				</li>
 			</navigator>
 		</ul>
+		<!-- <form method="post" @submit="formSubmit" name="form" action="https://www.paypal.com/cgi-bin/webscr">
+			<input type="hidden" name="rm" v-model="form.rm" />
+			<input type="hidden" name="cmd" v-model="form.cmd" />
+			<input type="hidden" name="business" v-model="form.business" />
+			<input type="hidden" name="return" v-model="form.return" />
+			<input type="hidden" name="cancel_return" v-model="form.cancel_return" />
+			<input type="hidden" name="notify_url" v-model="form.notify_url" />
+			<input type="hidden" name="item_name" v-model="form.item_name" />
+			<input type="hidden" name="item_number" v-model="form.item_number" />
+			<input type="hidden" name="amount" v-model="form.amount" />
+			<input type="hidden" name="currency_code" v-model="form.currency_code" />
+			<input type='hidden' name='invoice' v-model="form.invoice">
+			<input type='hidden' name='charset' v-model="form.charset">
+			<input type='hidden' name='no_shipping' v-model="form.no_shipping">
+			<input type='hidden' name='no_note' v-model="form.no_note">
+			<view class="uni-btn-v">
+				<button formType="submit">Submit</button>
+			</view>
+		</form> -->
+		<web-view v-if="flag" :src="'/hybrid/html/pay.html?cmd='+form.cmd+'&business='+form.business+'&item_name='+form.item_name+'&item_number='+form.item_number+'&amount='+form.amount+'$currency_code='+form.currency_code+'&return='+form.return+'&notify_url='+form.notify_url+'&cancel_return='+form.cancel_return+'&invoice='+form.invoice+'&charset='+form.charset+'&no_shipping='+form.no_shipping+'&no_note='+form.no_note+'&rm='+form.rm"
+		 @message="getMessage"></web-view>
 	</div>
 </template>
 
@@ -52,9 +73,11 @@
 		},
 		data() {
 			return {
+				flag: false,
 				userInfo: {},
 				moneyList: [],
-				checkId: ''
+				checkId: '',
+				form: {}
 			};
 		},
 		onShow() {
@@ -73,6 +96,9 @@
 			this.getMoneyList();
 		},
 		methods: {
+			formSubmit(e) {
+				console.log(e)
+			},
 			//获取个人资料
 			getUserInfo() {
 				this.ajax({
@@ -122,10 +148,8 @@
 					},
 					success: res => {
 						if (res.data.body === 'success') {
-							uni.showToast({
-								title: '充值成功',
-								icon: 'none'
-							});
+							this.form = res.data.data;
+							this.flag = true;
 						} else {
 							uni.showToast({
 								title: res.data.msg,
