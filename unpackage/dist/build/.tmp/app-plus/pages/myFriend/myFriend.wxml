@@ -1,1 +1,1 @@
-<view class="fridend_content" bind:__l="__l"><friends-list friendsList="{{friendsList}}"></friends-list></view>
+<view class="fridend_content" bind:__l="__l"><friends-list friendsList="{{friendsList}}" data-event-opts="{{[['^forward_praise',[['forward_praise']]]]}}" bind:forward_praise="__e"></friends-list></view>

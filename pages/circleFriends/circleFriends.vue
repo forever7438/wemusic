@@ -74,7 +74,7 @@ export default {
 				}
 			}else{
 				if(this.friendsList[data.index].is_praise == 1){
-					this.friendsList[data.index].is_forward = 0;
+					this.friendsList[data.index].is_praise = 0;
 					this.friendsList[data.index].praise_num --
 				}else{
 					this.friendsList[data.index].is_praise = 1;
