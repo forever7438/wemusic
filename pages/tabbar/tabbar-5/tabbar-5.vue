@@ -270,7 +270,7 @@
 
 		.user_meun {
 			padding: 40upx 15upx 0 15upx;
-
+			margin-bottom: 96upx;
 			view {
 				display: flex;
 				align-items: center;
@@ -302,7 +302,7 @@
 		text-align: center;
 		// height: 445upx;
 		padding: 30upx 30upx 0 30upx;
-
+		margin-bottom: 96upx;
 		.messgae {
 			height: 285upx;
 			padding: 30upx;
