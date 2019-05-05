@@ -60,6 +60,7 @@ export default {
 				success: res => {
 					if (res.data.body === 'success') {
 						let data = res.data.data;
+						console.log(data)
 						this.info = data.info;
 						this.courseList = data.list;
 						this.science = data.style;

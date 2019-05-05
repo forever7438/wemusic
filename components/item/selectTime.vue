@@ -43,7 +43,7 @@
 				myDate.getMinutes()
 			]
 			this.date = container;
-			this.date_ = container[0]+'-'+container[1]+'-'+container[2]+' '+container[3]+':'+container[4];
+			this.date_ = container[0].toString();
 			console.log(this.date_)
 		},
 		props: {
