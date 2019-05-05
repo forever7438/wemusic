@@ -7,7 +7,7 @@
 					<span>{{ $t('index').course }}</span>
 					<span>{{ request.courseLen }}{{ $t('index').section }}</span>
 				</li>
-				<li @click="coupomPicker">
+				<li @click="coupomPicker && coupomList.length">
 					<span>{{ $t('index').Coupon }}</span>
 					<span>{{ request.coupomTitle }}</span>
 				</li>
