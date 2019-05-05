@@ -1,7 +1,7 @@
 <template>
 	<div class="lesson_content">
 		<view v-if="!orderShow">
-			<text class="teacher_class">选择授课方式</text>
+			<text class="teacher_class">{{$t('index').Choosing_Teaching_Mode}}</text>
 			<ul class="way_meun">
 				<li :class="{ active: request.people_num === 0 }" @click="changeWay(0)">{{$t('index').One_on_one}}</li>
 				<li :class="{ active: request.people_num === 1 }" @click="changeWay(1)">{{$t('index').A_pair_of_two}}</li>

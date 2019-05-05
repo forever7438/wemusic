@@ -148,18 +148,20 @@
 
 		.vip_center_message {
 			width: auto;
-			height: 300upx;
+			height: 176upx;
+			margin-bottom: 148upx;
 			background-color: #434445ff;
-
 			// background-image: linear-gradient(180deg, #434445ff 50%, #fff 50%);
 			.vip_center_info {
 				display: flex;
 				flex-direction: column;
 				text-align: left;
 				font-weight: 500;
-				padding: 30upx 40upx;
+				padding: 30upx 60upx;
 				background: url('../../static/img/vipbg@2x.png') no-repeat center/100%;
-				border-radius: 8upx;
+				background-size: 100% 100%;
+				height: 292upx;
+				border-radius: 18upx;
 
 				.vip_name {
 					font-size: 48upx;
@@ -175,7 +177,7 @@
 
 					span {
 						&:nth-of-type(1) {
-							margin-right: 30upx;
+							margin-right: 114upx;
 						}
 
 						p {
@@ -217,15 +219,15 @@
 				li {
 					position: relative;
 					text-align: center;
-					width: 220upx;
+					width: 210upx;
 					height: 234upx;
 					border-radius: 16upx;
-					margin-bottom: 8upx;
+					margin-bottom: 30upx;
 					background: rgba(255, 243, 225, 1);
 
 					.semicircle {
 						position: absolute;
-						width: 220upx;
+						width: 210upx;
 						height: 46upx;
 						background-color: #ffe6c1;
 						border-radius: 0 0 50% 50%;

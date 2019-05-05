@@ -114,10 +114,10 @@ let zhCN = {
 	star:"星级",
 	teacher:'教师',
 	Teacher_teaching:'教师授课',
-	Teaching_methods:'授课方式',
 	Teaching_attitude:'授课态度',
 	Course_evaluation:'对课程评价',
-	Evaluation_Teachers:'对教师评价'
+	Evaluation_Teachers:'对教师评价',
+	Choosing_Teaching_Mode:'选择授课方式'
 }
 
 export {

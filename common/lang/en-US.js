@@ -82,7 +82,6 @@ let enUS = {
 	course:'Course',
 	section:'Section',
 	Coupon:'Coupon',
-	Teaching_methods:'Teaching methods',
 	Please_enter_notes:'Please Enter Notes',
 	total:'Total',
 	way_tip:'One-to-two, one-to-three courses, you can invite friends to attend classes together, more preferential.',
@@ -114,10 +113,11 @@ let enUS = {
 	star:'Star',
 	teacher:'Teacher',
 	Teacher_teaching:'Teacher Teaching',
-	Teaching_methods:'Teaching Methods',
+	Teaching_methods:'Teaching Mode',
 	Teaching_attitude:'Teaching Attitude',
 	Course_evaluation:"Evaluation Course",
-	Evaluation_Teachers:'Evaluation Of Teachers'
+	Evaluation_Teachers:'Evaluation Of Teachers',
+	Choosing_Teaching_Mode:'Choosing Teaching Mode'
 }
 
 export {
