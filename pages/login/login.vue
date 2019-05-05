@@ -109,7 +109,7 @@
 
 	.login {
 		padding: 0 144upx;
-
+		margin: 0 !important;
 		.login_image {
 			margin: 164upx 190upx;
 			text-align: center;
