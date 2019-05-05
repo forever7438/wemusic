@@ -1,37 +1,37 @@
 <template>
 	<div>
 		<div class="container">
-			<h4 class="text_l">{{$t('index').Order_information}}</h4>
+			<h4 class="text_l">{{ $t('index').Order_information }}</h4>
 			<ul class="order_mess">
 				<li>
-					<span>{{$t('index').course}}</span>
-					<span>{{ request.courseLen }}{{$t('index').section}}</span>
+					<span>{{ $t('index').course }}</span>
+					<span>{{ request.courseLen }}{{ $t('index').section }}</span>
 				</li>
 				<li @click="coupomPicker">
-					<span>{{$t('index').Coupon}}</span>
+					<span>{{ $t('index').Coupon }}</span>
 					<span>{{ request.coupomTitle }}</span>
 				</li>
 				<li>
-					<span>{{$t('index').Teaching_methods}}</span>
+					<span>{{ $t('index').Teaching_methods }}</span>
 					<span>{{ resultway }}</span>
 				</li>
 			</ul>
 
-			<h4 class="text_l">{{$t('index').remarks}}</h4>
+			<h4 class="text_l">{{ $t('index').remarks }}</h4>
 			<textarea class="mui-input-clear remark" maxlength="500" :placeholder="$t('index').Please_enter_notes"></textarea>
 		</div>
 		<p class="pay_content">
 			<span>
-				{{$t('index').total}}
+				{{ $t('index').total }}
 				<span class="total">${{ request.price }}</span>
 			</span>
-			<span type="button" class="pay-btn" @click="pay(classId)">Pay</span>
+			<span type="button" class="pay-btn" @click="pay(classId)">支付</span>
 		</p>
 		<mpvue-picker
 			themeColor="#007AFF"
 			ref="mpvuePicker"
 			mode="selector"
-			titleInfo="Choose coupons"
+			titleInfo="选择优惠券"
 			:deepLength="1"
 			:pickerValueDefault="[0]"
 			@onConfirm="onConfirm"
@@ -59,31 +59,33 @@ export default {
 			way: []
 		};
 	},
-	computed:{
-		resultway(){
-			switch(this.request.people_num){
+	computed: {
+		resultway() {
+			switch (this.request.people_num) {
 				case 0:
-					return this.$t('index').One_on_one
+					return this.$t('index').One_on_one;
 					break;
 				case 1:
-					return this.$t('index').A_pair_of_two
+					return this.$t('index').A_pair_of_two;
 					break;
 				case 2:
-					return this.$t('index').A_pair_of_three
+					return this.$t('index').A_pair_of_three;
 					break;
 			}
 		}
 	},
 	methods: {
 		onConfirm(val) {
-			let index = val.index[0];
-			let change = {
-				key: 'coupomTitle',
-				value: this.coupomList[index].name
-			};
-			this.$emit('changeRequest', change);
-			let coupon_id = this.coupomList[index].id;
-			this.getPrice(coupon_id);
+			if (val) {
+				let index = val.index[0];
+				let change = {
+					key: 'coupomTitle',
+					value: this.coupomList[index].name
+				};
+				this.$emit('changeRequest', change);
+				let coupon_id = this.coupomList[index].id;
+				this.getPrice(coupon_id);
+			}
 		},
 		getPrice(coupon_id) {
 			this.ajax({

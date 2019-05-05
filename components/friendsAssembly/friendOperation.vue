@@ -36,16 +36,6 @@
 					success: res => {
 						if (res.data.body === 'success') {
 							this.$emit('refreshData');
-							if (is_praise) {
-								this.praise -= 1;
-							} else {
-								this.praise += 1;
-							}
-							if (!this.is_praise) {
-								this.is_praise = 1;
-							} else {
-								this.is_praise = 0;
-							}
 							uni.showToast({
 								title: '点赞成功',
 								icon: 'none'
@@ -73,7 +63,6 @@
 						if (res.data.body === 'success') {
 							this.is_forward = 1;
 							this.$emit('refreshData');
-							this.forward += 1;
 							uni.showToast({
 								title: '转发成功',
 								icon: 'none'
