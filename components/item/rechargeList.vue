@@ -7,7 +7,7 @@
 					<p class="recharge_time">{{ item.time || item.ok_time | timeDate }}</p>
 				</div>
 				<div class="recharge_money">
-					<p>{{ type == 'consumption' ? '-' : '+' }}￥ {{ item.money }}</p>
+					<p>{{ type == 'consumption' ? '-' : '+' }}￥{{ item.money }}</p>
 				</div>
 			</li>
 		</ul>

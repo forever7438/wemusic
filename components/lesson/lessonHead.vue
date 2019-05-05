@@ -3,7 +3,7 @@
 		<view class="lesson_shade">
 			<text class="lesson_name">{{ title }}</text>
 			<view style="margin-top: 10upx;"><text class="lesson_names" v-if="headType === 'lessonCopy'">Guitar</text></view>
-			<startclasss :size="13" :star="star" :isFill="false" starColor="#FFFFFF" v-if="headType === 'lessonDetail' || headType === 'teacherDetail'"></startclasss>
+			<startclass :size="13" :star="star" :isFill="false" starColor="#FFFFFF" v-if="headType === 'lessonDetail' || headType === 'teacherDetail'"></startclass>
 			<view style="margin-top: 34upx;">
 				<text class="lesson_time" v-if="headType === 'lessonDetail'">{{$t('index').Duration_course}}：{{ mixTime }}min - {{ maxTime }}min</text>
 			</view>
@@ -16,10 +16,10 @@
 </template>
 
 <script>
-	import startclasss from '../starclasss.vue';
+	import startclass from '../starclass.vue';
 	export default {
 		components: {
-			startclasss
+			startclass
 		},
 		props: {
 			star: Number,
