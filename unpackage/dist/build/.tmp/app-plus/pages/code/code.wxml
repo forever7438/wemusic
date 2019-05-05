@@ -1,0 +1,1 @@
+<view class="code_success" bind:__l="__l"><view class="code_content"><text class="code_title">{{$root.m0.code}}</text><text class="code_tips">{{$root.m1.showCode}}</text><view class="qrcode"><qrcode class="vue-ref" val="{{classId}}" size="{{qrsize}}" data-ref="qrcode"></qrcode></view></view></view>

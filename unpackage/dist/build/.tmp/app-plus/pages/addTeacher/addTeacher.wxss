@@ -1,42 +1,50 @@
-input.data-v-56a9c362 {
+input.data-v-7f061bca {
+  text-align: center;
   padding-left: 10rpx;
   font-size: 24rpx;
   width: 100%;
   border-bottom: 2rpx solid #b9b9b9;
 }
-.add_teacher.data-v-56a9c362 {
+.add_teacher.data-v-7f061bca {
   padding: 0 24rpx;
+  margin: 0 70rpx;
+  overflow: hidden;
 }
-.add_teacher label.data-v-56a9c362 {
+.add_teacher label.data-v-7f061bca {
   font-size: 32rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   color: #666666;
 }
-.add_teacher .teacher_meun.data-v-56a9c362 {
+.add_teacher .teacher_meun.data-v-7f061bca {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: right;
+  -webkit-align-items: right;
+      -ms-flex-align: right;
+          align-items: right;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 30rpx 150rpx;
+  margin: 30rpx 0;
 }
-.add_teacher .teacher_meun text.data-v-56a9c362 {
-  width: 100rpx;
+.add_teacher .teacher_meun text.data-v-7f061bca {
+  width: 160rpx !important;
   height: 44rpx;
   font-size: 32rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;
+  text-align: right;
   color: #333333;
 }
-.add_teacher .diffrent.data-v-56a9c362 {
+.add_teacher .teacher_meun input.data-v-7f061bca {
+  width: 394rpx;
+  text-align: center;
+}
+.add_teacher .diffrent.data-v-7f061bca {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -50,36 +58,36 @@ input.data-v-56a9c362 {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 30rpx 150rpx;
+  margin-left: 32rpx;
 }
-.add_teacher .diffrent .j_photo.data-v-56a9c362 {
+.add_teacher .diffrent .j_photo.data-v-7f061bca {
   margin: 20rpx auto;
   width: 100%;
+  margin-left: 100rpx;
   height: 180rpx;
 }
-.add_teacher .diffrent text.data-v-56a9c362 {
-  width: 100rpx;
+.add_teacher .diffrent text.data-v-7f061bca {
   height: 44rpx;
   font-size: 32rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;
   color: #333333;
 }
-.add_teacher .diffrent .upload_file.data-v-56a9c362 {
-  margin: 20rpx auto;
+.add_teacher .diffrent .upload_file.data-v-7f061bca {
+  margin: 20rpx 120rpx;
   padding: 60rpx 170rpx;
   text-align: center;
   background: #f6f6f6;
   border-radius: 16rpx;
 }
-.add_teacher .diffrent .upload_file image.data-v-56a9c362 {
+.add_teacher .diffrent .upload_file image.data-v-7f061bca {
   width: 60rpx;
   height: 60rpx;
 }
-.add_teacher button.data-v-56a9c362 {
+button.data-v-7f061bca {
   width: auto;
   line-height: 88rpx;
-  margin: 0 110rpx 20rpx;
+  margin: 92rpx 86rpx 44rpx 86rpx;
   background: #fad42a;
   border-radius: 12rpx;
   font-size: 32rpx;

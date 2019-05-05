@@ -1,0 +1,1 @@
+<view class="qrcode" bind:__l="__l"><block wx:if="{{img}}"><image class="image" style="{{'width:'+(sizeSync+'px')+';'+('height:'+(sizeSync+'px')+';')}}" src="{{img}}"></image></block></view>

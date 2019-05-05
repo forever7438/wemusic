@@ -1,23 +1,23 @@
-.lesson_content.select.data-v-9e789564 {
+.lesson_content.select.data-v-37d2418c {
   padding-bottom: 0;
 }
-.lesson_content.data-v-9e789564 {
+.lesson_content.data-v-37d2418c {
   padding: 60rpx 30rpx;
 }
-.lesson_content .teacher_class.data-v-9e789564 {
+.lesson_content .teacher_class.data-v-37d2418c {
   font-size: 48rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   color: #333333;
 }
-.lesson_content ._ul ._li.select.data-v-9e789564 {
+.lesson_content ._ul ._li.select.data-v-37d2418c {
   padding: 0;
 }
-.lesson_content ._ul ._li.select .go_pay.data-v-9e789564 {
+.lesson_content ._ul ._li.select .go_pay.data-v-37d2418c {
   color: #999999;
   background: #e5e5e5;
 }
-.lesson_content ._ul ._li.data-v-9e789564 {
+.lesson_content ._ul ._li.data-v-37d2418c {
   position: relative;
   overflow: hidden;
   display: -webkit-box;
@@ -27,10 +27,10 @@
   border-top: 2rpx solid #ddd;
   padding: 30rpx 0;
 }
-.lesson_content ._ul ._li.data-v-9e789564:first-child {
+.lesson_content ._ul ._li.data-v-37d2418c:first-child {
   border-top: 0;
 }
-.lesson_content ._ul ._li .go_pay.data-v-9e789564 {
+.lesson_content ._ul ._li .go_pay.data-v-37d2418c {
   padding: 2rpx 36rpx;
   background: #fad42a;
   border-radius: 8rpx;
@@ -41,33 +41,33 @@
   color: #333333;
   font-weight: 400;
 }
-.lesson_content ._ul ._li image.data-v-9e789564 {
+.lesson_content ._ul ._li image.data-v-37d2418c {
   width: 180rpx;
   height: 180rpx;
   border-radius: 6rpx;
 }
-.lesson_content ._ul ._li .lesson_messgae.data-v-9e789564 {
+.lesson_content ._ul ._li .lesson_messgae.data-v-37d2418c {
   width: 100%;
   font-weight: 500;
   text-align: left;
   margin-left: 20rpx;
   height: 180rpx;
 }
-.lesson_content ._ul ._li .lesson_messgae ._p.data-v-9e789564 {
+.lesson_content ._ul ._li .lesson_messgae ._p.data-v-37d2418c {
   margin-bottom: 10rpx;
 }
-.lesson_content ._ul ._li .lesson_messgae .lesson_title.data-v-9e789564 {
+.lesson_content ._ul ._li .lesson_messgae .lesson_title.data-v-37d2418c {
   font-size: 32rpx;
   font-family: PingFangSC-Medium;
   color: #1a1a1a;
   font-weight: 600;
 }
-.lesson_content ._ul ._li .lesson_messgae .lesson_winer.data-v-9e789564 {
+.lesson_content ._ul ._li .lesson_messgae .lesson_winer.data-v-37d2418c {
   font-size: 28rpx;
   font-family: PingFangSC-Regular;
   color: #666666;
 }
-.lesson_content ._ul ._li .lesson_messgae .lesson_pay.data-v-9e789564 {
+.lesson_content ._ul ._li .lesson_messgae .lesson_pay.data-v-37d2418c {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -81,12 +81,12 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.lesson_content ._ul ._li .lesson_messgae .lesson_pay .start_time.data-v-9e789564 {
+.lesson_content ._ul ._li .lesson_messgae .lesson_pay .start_time.data-v-37d2418c {
   font-size: 24rpx;
   font-family: PingFangSC-Regular;
   color: #8ad519;
 }
-.lesson_content ._ul ._li .lesson_messgae .lesson_pay .teacher_number.data-v-9e789564 {
+.lesson_content ._ul ._li .lesson_messgae .lesson_pay .teacher_number.data-v-37d2418c {
   font-size: 24rpx;
   margin-top: 20rpx;
   display: -webkit-box;

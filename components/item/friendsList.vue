@@ -11,7 +11,9 @@
 				:praise="item.praise_num"
 				:forward="item.forward_num"
 				:listId="item.id"
+				:index="index"
 				@refreshData="getFriendList"
+				@changeStatus="changeStatus"
 			></friendOperation>
 		</view>
 	</view>
@@ -43,6 +45,9 @@ export default {
 					res.getFriendList(0);
 				}
 			});
+		},
+		changeStatus(data){
+			this.$emit('forward_praise',data);
 		}
 	}
 };

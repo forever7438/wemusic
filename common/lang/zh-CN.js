@@ -117,7 +117,12 @@ let zhCN = {
 	Teaching_attitude:'授课态度',
 	Course_evaluation:'对课程评价',
 	Evaluation_Teachers:'对教师评价',
-	Choosing_Teaching_Mode:'选择授课方式'
+	Choosing_Teaching_Mode:'选择授课方式',
+	Forwarding_Success:'转发成功',
+	You_have_forwarded:'您已转发过该内容',
+	Praise_for_success:'点赞成功',
+	Cancel_points:'取消点赞',
+	No_more_data:'没有更多数据了'
 }
 
 export {

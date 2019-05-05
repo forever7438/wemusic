@@ -1,7 +1,6 @@
 .content image {
   width: 100%;
   height: 410rpx;
-  border-radius: 12rpx;
 }
 .content .parents {
   padding: 0 30rpx;

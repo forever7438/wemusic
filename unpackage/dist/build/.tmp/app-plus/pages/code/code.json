@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "打卡",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#333333",
+  "usingComponents": {
+    "qrcode": "/components/qrcode/qrcode"
+  }
+}

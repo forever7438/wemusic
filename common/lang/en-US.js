@@ -117,7 +117,12 @@ let enUS = {
 	Teaching_attitude:'Teaching Attitude',
 	Course_evaluation:"Evaluation Course",
 	Evaluation_Teachers:'Evaluation Of Teachers',
-	Choosing_Teaching_Mode:'Choosing Teaching Mode'
+	Choosing_Teaching_Mode:'Choosing Teaching Mode',
+	Forwarding_Success:'Forwarding Success',
+	You_have_forwarded:'You Have Forwarded This Content',
+	Praise_for_success:'Praise For Success',
+	Cancel_points:'Cancel Points',
+	No_more_data:'No More Data'
 }
 
 export {

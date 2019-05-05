@@ -1,5 +1,5 @@
 .coupon_lists {
-  padding: 0 20rpx;
+  padding: 60rpx 20rpx 0;
 }
 .coupon_lists .item_list {
   width: 100%;

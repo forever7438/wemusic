@@ -1,4 +1,7 @@
-.evaluate.data-v-7af3809b {
-  padding: 0 15rpx;
+.evaluate.data-v-69e7e504 {
+  padding: 0 30rpx 200rpx 30rpx;
+}
+.evaluate .item.data-v-69e7e504 {
+  margin-top: 32rpx;
 }
 

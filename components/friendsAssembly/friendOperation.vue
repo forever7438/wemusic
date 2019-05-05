@@ -4,10 +4,10 @@
 			<image class="items_image" src="../../static/img/zhuanfa@2x.png"></image>
 			<text>{{ forward }}</text>
 		</view>
-		<view class="operation_items">
+		<navigator class="operation_items" :url="'/pages/friendsDetail/friendsDetail?listId=' + listId">
 			<image class="items_image" src="../../static/img/comment@2x.png"></image>
 			<text>{{ message }}</text>
-		</view>
+		</navigator>
 		<view class="operation_items" @tap="liked(is_praise)">
 			<image class="items_image" src="../../static/img/dianzan@2x.png"></image>
 			<text>{{ praise }}</text>
@@ -23,7 +23,8 @@
 			forward: Number,
 			listId: String,
 			is_forward: Number,
-			is_praise: Number
+			is_praise: Number,
+			index:Number
 		},
 		methods: {
 			//点赞
@@ -35,9 +36,15 @@
 					},
 					success: res => {
 						if (res.data.body === 'success') {
-							this.$emit('refreshData');
+							let data = {
+								key:'is_praise',
+								index:this.index
+							}
+							this.$emit('changeStatus',data);
+							//this.$emit('refreshData');
+							let tip = is_praise == 0 ? this.$t('index').Praise_for_success : this.$t('index').Cancel_points
 							uni.showToast({
-								title: '点赞成功',
+								title: tip,
 								icon: 'none'
 							});
 						} else {
@@ -52,6 +59,10 @@
 			//转发
 			share(is_forward) {
 				if (is_forward) {
+					uni.showToast({
+						title: this.$t('index').You_have_forwarded,
+						icon: 'none'
+					});
 					return;
 				}
 				this.ajax({
@@ -61,10 +72,15 @@
 					},
 					success: res => {
 						if (res.data.body === 'success') {
-							this.is_forward = 1;
-							this.$emit('refreshData');
+							let data = {
+								key:'is_forward',
+								index:this.index
+							}
+							this.$emit('changeStatus',data);
+							//this.is_forward = 1;
+							//this.$emit('refreshData');
 							uni.showToast({
-								title: '转发成功',
+								title: this.$t('index').Forwarding_Success,
 								icon: 'none'
 							});
 						} else {

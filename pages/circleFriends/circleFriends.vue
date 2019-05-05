@@ -9,7 +9,7 @@
 			</navigator>
 		</view>
 		<view class="line"></view>
-		<view class="parents"><friendsList :friendsList="friendsList"></friendsList></view>
+		<view class="parents"><friendsList :friendsList="friendsList" @forward_praise="forward_praise"></friendsList></view>
 	</view>
 </template>
 
@@ -51,6 +51,7 @@ export default {
 		if (this.isEnd) {
 			return;
 		}
+		console.log('okokok')
 		this.index++;
 		setTimeout(() => {
 			this.getFriendList(this.index);
@@ -61,6 +62,26 @@ export default {
 		this.getFriendList(this.index);
 	},
 	methods: {
+		forward_praise(data){
+			console.log(this.friendsList[data.index])
+			if(data.key == 'is_forward'){
+				if(this.friendsList[data.index].is_forward == 1){
+					this.friendsList[data.index].is_forward = 0;
+					this.friendsList[data.index].forward_num --
+				}else{
+					this.friendsList[data.index].is_forward = 1;
+					this.friendsList[data.index].forward_num ++
+				}
+			}else{
+				if(this.friendsList[data.index].is_praise == 1){
+					this.friendsList[data.index].is_forward = 0;
+					this.friendsList[data.index].praise_num --
+				}else{
+					this.friendsList[data.index].is_praise = 1;
+					this.friendsList[data.index].praise_num ++
+				}
+			}
+		},
 		//获取朋友圈列表
 		getFriendList(val) {
 			this.ajax({
@@ -75,7 +96,7 @@ export default {
 						if (res.data.data.length === 0) {
 							this.isEnd = true;
 							uni.showToast({
-								title: '没有更多数据了',
+								title: this.$t('index').No_more_data,
 								icon: 'none'
 							});
 							return;

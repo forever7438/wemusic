@@ -1,10 +1,10 @@
-.recharge_content.data-v-0cde7c1a {
+.recharge_content.data-v-49df05fc {
   margin-top: 20rpx;
 }
-.recharge_content ._ul.data-v-0cde7c1a {
+.recharge_content ._ul.data-v-49df05fc {
   width: 100%;
 }
-.recharge_content ._ul ._li.data-v-0cde7c1a {
+.recharge_content ._ul ._li.data-v-49df05fc {
   height: 100rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -23,28 +23,28 @@
   border-bottom: 2rpx solid #ddd;
   margin-top: 40rpx;
 }
-.recharge_content ._ul ._li.data-v-0cde7c1a:first-of-type {
+.recharge_content ._ul ._li.data-v-49df05fc:first-of-type {
   margin-top: 0;
 }
-.recharge_content ._ul ._li .recharge_message .recharge_title.data-v-0cde7c1a {
+.recharge_content ._ul ._li .recharge_message .recharge_title.data-v-49df05fc {
   font-size: 32rpx;
   font-family: PingFangSC-Regular;
   color: #333333;
   font-weight: 400;
 }
-.recharge_content ._ul ._li .recharge_message .recharge_time.data-v-0cde7c1a {
+.recharge_content ._ul ._li .recharge_message .recharge_time.data-v-49df05fc {
   font-size: 24rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;
   color: #999999;
 }
-.recharge_content ._ul ._li .recharge_money ._p.data-v-0cde7c1a {
+.recharge_content ._ul ._li .recharge_money ._p.data-v-49df05fc {
   font-size: 32rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   color: #fad42a;
 }
-.recharge_content .no_content.data-v-0cde7c1a {
+.recharge_content .no_content.data-v-49df05fc {
   height: 600rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -64,11 +64,11 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
-.recharge_content .no_content image.data-v-0cde7c1a {
+.recharge_content .no_content image.data-v-49df05fc {
   width: 216rpx;
   height: 244rpx;
 }
-.recharge_content .no_content text.data-v-0cde7c1a {
+.recharge_content .no_content text.data-v-49df05fc {
   font-size: 32rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;

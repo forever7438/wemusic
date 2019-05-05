@@ -11,7 +11,7 @@
     "code": "100"
   },
   "description": "这是一款音乐app哟",
-  "launch_path": "__uniapptabbar.html",
+  "launch_path": "__uniappview.html",
   "developer": {
     "name": "",
     "email": "",
@@ -40,7 +40,8 @@
     },
     "popGesture": "close",
     "launchwebview": {
-      "render": "always"
+      "render": "always",
+      "id": "1"
     },
     "statusbar": {
       "immersed": "supportedDevice",
@@ -122,19 +123,9 @@
       }
     },
     "allowsInlineMediaPlayback": true,
-    "safearea": {
-      "background": "#FFFFFF",
-      "bottom": {
-        "offset": "auto"
-      }
-    },
     "uni-app": {
-      "compilerVersion": "1.9.3",
+      "compilerVersion": "1.9.2",
       "control": "v8"
-    },
-    "secondwebview": {
-      "id": "1",
-      "launch_path": "__uniappview.html"
     }
   }
 }

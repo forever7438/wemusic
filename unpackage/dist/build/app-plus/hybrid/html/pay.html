@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Paypal订单支付</title>
+	</head>
+	<body>
+		<form action="https://www.paypal.com/cgi-bin/webscr" method="POST" name="form_starPay">
+			<!-- // Live https://www.paypal.com/cgi-bin/webscr -->
+			<input type='hidden' name='cmd' value=""> <!-- //告诉paypal该表单是立即购买 -->
+			<input type='hidden' name='business' value=''> <!-- //卖家帐号 也就是收钱的帐号 -->
+			<input type='hidden' name='item_name' value=''> <!-- //商品名称 item_number -->
+			<input type='hidden' name='item_number' value=''> <!-- //物品号 item_number -->
+			<input type='hidden' name='amount' value=''> <!-- .// 订单金额 -->
+			<input type='hidden' name='currency_code' value='}'> <!-- .// 货币 -->
+			<input type='hidden' name='return' value=''> <!-- .// 支付成功后网页跳转地址 -->
+			<input type='hidden' name='notify_url' value=''> <!-- .//支付成功后paypal后台发送订单通知地址 -->
+			<input type='hidden' name='cancel_return' value='}'> <!-- .//用户取消交易返回地址 -->
+			<input type='hidden' name='invoice' value=''> <!-- .//自定义订单号 -->
+			<input type='hidden' name='charset' value=''> <!-- .// 字符集 -->
+			<input type='hidden' name='no_shipping' value=''> <!-- .// 不要求客户提供收货地址 -->
+			<input type='hidden' name='no_note' value=''> <!-- .// 付款说明 -->
+			<input type='hidden' name='rm' value=''> <!-- 不知道是什么 -->
+		</form>
+		正在跳转Paypal支付，请稍等。。。
+	</body>
+	<script>
+		//获取url里面的参数
+		function getUrlParam(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+			var r = window.location.search.substr(1).match(reg);
+			if (r != null) return unescape(r[2]);
+			return null;
+		}
+		document.querySelector("input[name='cmd']").value = getUrlParam('cmd');
+		document.querySelector("input[name='business']").value = getUrlParam('business');
+		document.querySelector("input[name='item_name']").value = getUrlParam('item_name');
+		document.querySelector("input[name='item_number']").value = getUrlParam('item_number');
+		document.querySelector("input[name='amount']").value = getUrlParam('amount');
+		document.querySelector("input[name='currency_code']").value = getUrlParam('currency_code');
+		document.querySelector("input[name='return']").value = getUrlParam('return');
+		document.querySelector("input[name='notify_url']").value = getUrlParam('notify_url');
+		document.querySelector("input[name='cancel_return']").value = getUrlParam('cancel_return');
+		document.querySelector("input[name='invoice']").value = getUrlParam('invoice');
+		document.querySelector("input[name='charset']").value = getUrlParam('charset');
+		document.querySelector("input[name='no_shipping']").value = getUrlParam('no_shipping');
+		document.querySelector("input[name='no_note']").value = getUrlParam('no_note');
+		document.querySelector("input[name='rm']").value = getUrlParam('rm')
+		function sub() {
+			document.form_starPay.submit();
+		}
+		setTimeout(() => {
+			sub()
+		}, 500)
+	</script>
+</html>

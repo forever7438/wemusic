@@ -2,6 +2,7 @@ input {
   font-size: 24rpx;
   width: 100%;
   text-align: center;
+  border-bottom: 2rpx solid #b9b9b9;
 }
 .register {
   padding: 0 144rpx;
