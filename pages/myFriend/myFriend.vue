@@ -32,6 +32,7 @@
 					title: '我的朋友圈'
 				});
 			}
+			this.getFriendList(this.index);
 		},
 		onLoad() {
 			this.getFriendList(this.index);
@@ -50,23 +51,23 @@
 			this.getFriendList(this.index);
 		},
 		methods: {
-			forward_praise(data){
+			forward_praise(data) {
 				console.log(this.friendsList[data.index])
-				if(data.key == 'is_forward'){
-					if(this.friendsList[data.index].is_forward == 1){
+				if (data.key == 'is_forward') {
+					if (this.friendsList[data.index].is_forward == 1) {
 						this.friendsList[data.index].is_forward = 0;
-						this.friendsList[data.index].forward_num --
-					}else{
+						this.friendsList[data.index].forward_num--
+					} else {
 						this.friendsList[data.index].is_forward = 1;
-						this.friendsList[data.index].forward_num ++
+						this.friendsList[data.index].forward_num++
 					}
-				}else{
-					if(this.friendsList[data.index].is_praise == 1){
+				} else {
+					if (this.friendsList[data.index].is_praise == 1) {
 						this.friendsList[data.index].is_praise = 0;
-						this.friendsList[data.index].praise_num --
-					}else{
+						this.friendsList[data.index].praise_num--
+					} else {
 						this.friendsList[data.index].is_praise = 1;
-						this.friendsList[data.index].praise_num ++
+						this.friendsList[data.index].praise_num++
 					}
 				}
 			},
