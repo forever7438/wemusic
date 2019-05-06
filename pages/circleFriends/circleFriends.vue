@@ -51,7 +51,6 @@ export default {
 		if (this.isEnd) {
 			return;
 		}
-		console.log('okokok')
 		this.index++;
 		setTimeout(() => {
 			this.getFriendList(this.index);
@@ -62,23 +61,22 @@ export default {
 		this.getFriendList(this.index);
 	},
 	methods: {
-		forward_praise(data){
-			console.log(this.friendsList[data.index])
-			if(data.key == 'is_forward'){
-				if(this.friendsList[data.index].is_forward == 1){
+		forward_praise(data) {
+			if (data.key == 'is_forward') {
+				if (this.friendsList[data.index].is_forward == 1) {
 					this.friendsList[data.index].is_forward = 0;
-					this.friendsList[data.index].forward_num --
-				}else{
+					this.friendsList[data.index].forward_num--;
+				} else {
 					this.friendsList[data.index].is_forward = 1;
-					this.friendsList[data.index].forward_num ++
+					this.friendsList[data.index].forward_num++;
 				}
-			}else{
-				if(this.friendsList[data.index].is_praise == 1){
+			} else {
+				if (this.friendsList[data.index].is_praise == 1) {
 					this.friendsList[data.index].is_praise = 0;
-					this.friendsList[data.index].praise_num --
-				}else{
+					this.friendsList[data.index].praise_num--;
+				} else {
 					this.friendsList[data.index].is_praise = 1;
-					this.friendsList[data.index].praise_num ++
+					this.friendsList[data.index].praise_num++;
 				}
 			}
 		},

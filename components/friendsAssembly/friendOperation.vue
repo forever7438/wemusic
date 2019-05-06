@@ -41,7 +41,7 @@ export default {
 							index: this.index
 						};
 						this.$emit('changeStatus', data);
-						this.$emit('refreshData');
+						// this.$emit('refreshData');
 						let tip = is_praise == 0 ? this.$t('index').Praise_for_success : this.$t('index').Cancel_points;
 						uni.showToast({
 							title: tip,
@@ -78,7 +78,7 @@ export default {
 						};
 						this.$emit('changeStatus', data);
 						//this.is_forward = 1;
-						this.$emit('refreshData');
+						// this.$emit('refreshData');
 						uni.showToast({
 							title: this.$t('index').Forwarding_Success,
 							icon: 'none'

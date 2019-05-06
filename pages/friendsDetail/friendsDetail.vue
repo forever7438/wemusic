@@ -11,7 +11,7 @@
 				:is_forward="friendDetail.is_forward"
 				:is_praise="friendDetail.is_praise"
 				:listId="friendDetail.id"
-				@refreshData="getFriendDetail(listId, 0)"
+				@changeStatus="forward_praise"
 			></friendOperation>
 		</view>
 		<view class="line"></view>
@@ -61,6 +61,25 @@ export default {
 		}, 300);
 	},
 	methods: {
+		forward_praise(data) {
+			if (data.key == 'is_forward') {
+				if (this.friendDetail.is_forward) {
+					this.friendDetail.is_forward = 0;
+					this.friendDetail.forward--;
+				} else {
+					this.friendDetail.is_forward = 1;
+					this.friendDetail.forward++;
+				}
+			} else {
+				if (this.friendDetail.is_praise) {
+					this.friendDetail.is_praise = 0;
+					this.friendDetail.praise--;
+				} else {
+					this.friendDetail.is_praise = 1;
+					this.friendDetail.praise++;
+				}
+			}
+		},
 		//获取朋友圈详情
 		getFriendDetail(listId, list) {
 			this.ajax({
