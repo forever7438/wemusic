@@ -92,9 +92,9 @@ export default {
 						title: '发布成功',
 						icon: 'none'
 					});
-					uni.reLaunch({
-						url: '/pages/tabbar/tabbar-5/tabbar-5'
-					});
+					uni.navigateBack({
+						delta:1
+					})
 				} else {
 					uni.showToast({
 						title: res.data.msg,
