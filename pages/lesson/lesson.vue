@@ -45,7 +45,7 @@ export default {
 	},
 	onReachBottom() {
 		if (this.isEnd) {
-			return;
+			// return;
 		}
 		this.index++;
 		setTimeout(() => {
