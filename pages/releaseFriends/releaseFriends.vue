@@ -92,8 +92,8 @@ export default {
 						title: '发布成功',
 						icon: 'none'
 					});
-					uni.navigateTo({
-						url: '../circleFriends/circleFriends'
+					uni.reLaunch({
+						url: '/pages/tabbar/tabbar-5/tabbar-5'
 					});
 				} else {
 					uni.showToast({
