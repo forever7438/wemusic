@@ -1,1 +1,0 @@
-<view class="course_invitation" bind:__l="__l"><view class="invitation_content"><text>{{$root.m0.InputInvitationCode}}</text><input type="text"/></view><text class="tips">{{$root.m1.codeContent}}</text><button hover-class="btn-hover">{{$root.m2.determine}}</button></view>

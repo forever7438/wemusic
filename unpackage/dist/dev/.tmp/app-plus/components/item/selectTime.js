@@ -53,6 +53,8 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     myDate.getMinutes()];
 
     this.date = container;
+    this.date_ = container[0].toString();
+    console.log(this.date_, " at components\\item\\selectTime.vue:47");
   },
   props: {
     flag: Boolean, //事件开关
@@ -65,7 +67,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
       this.$emit();
     },
     onCancel: function onCancel() {
-      console.log('cancel', " at components\\item\\selectTime.vue:58");
+      console.log('cancel', " at components\\item\\selectTime.vue:60");
     },
     timeDate: function timeDate(time) {
       var date = new Date(time); // 增加8小时
@@ -120,11 +122,24 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var m0 = _vm.$t("index")
+  var m1 = _vm.$t("index")
+
   if (!_vm._isMounted) {
     _vm.e0 = function($event) {
       _vm.flag && _vm.selctitem(_vm.index)
     }
   }
+
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        m0: m0,
+        m1: m1
+      }
+    }
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

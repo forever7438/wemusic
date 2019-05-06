@@ -123,7 +123,19 @@ var _common = __webpack_require__(/*! ../../common/common.js */ "C:\\Users\\Admi
 //
 //
 //
-var wPicker = function wPicker() {return Promise.all(/*! import() | components/w-picker/w-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/w-picker/w-picker")]).then(__webpack_require__.bind(null, /*! @/components/w-picker/w-picker.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\w-picker\\w-picker.vue"));};var neilModal = function neilModal() {return __webpack_require__.e(/*! import() | components/neil-modal/neil-modal */ "components/neil-modal/neil-modal").then(__webpack_require__.bind(null, /*! @/components/neil-modal/neil-modal.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\neil-modal\\neil-modal.vue"));};var uniIcon = function uniIcon() {return __webpack_require__.e(/*! import() | components/uni-icon/uni-icon */ "components/uni-icon/uni-icon").then(__webpack_require__.bind(null, /*! ../../components/uni-icon/uni-icon.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\uni-icon\\uni-icon.vue"));};var _default = { components: { wPicker: wPicker, neilModal: neilModal, uniIcon: uniIcon }, data: function data() {return { userInfo: {}, show: false, userImage: '', array: ['男', '女'], arrays: ['吃饭', '睡觉', '打豆豆'], index: '', indexs: 0, date: '', userName: '', sex: '', interest: '', address: '' };}, onLoad: function onLoad() {this.getUserInfo();}, onNavigationBarButtonTap: function onNavigationBarButtonTap(obj) {if (!this.userImage || !this.userName || !this.sex || !this.date || !this.interest || !this.address) {uni.showToast({ title: '请填写必填选项!', icon: 'none' });return;}this.ajax({ url: 'user/update_info', data: { photo: this.userImage, name: this.userName, sex: this.sex, birthday: new Date(this.date).getTime() / 1000, interest: this.interest, address: this.address }, success: function success(res) {if (res.data.body === 'success') {uni.showToast({ title: '个人信息修改成功', icon: 'none' });} else {
+var wPicker = function wPicker() {return Promise.all(/*! import() | components/w-picker/w-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/w-picker/w-picker")]).then(__webpack_require__.bind(null, /*! @/components/w-picker/w-picker.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\w-picker\\w-picker.vue"));};var neilModal = function neilModal() {return __webpack_require__.e(/*! import() | components/neil-modal/neil-modal */ "components/neil-modal/neil-modal").then(__webpack_require__.bind(null, /*! @/components/neil-modal/neil-modal.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\neil-modal\\neil-modal.vue"));};var uniIcon = function uniIcon() {return __webpack_require__.e(/*! import() | components/uni-icon/uni-icon */ "components/uni-icon/uni-icon").then(__webpack_require__.bind(null, /*! ../../components/uni-icon/uni-icon.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\uni-icon\\uni-icon.vue"));};var _default = { components: { wPicker: wPicker, neilModal: neilModal, uniIcon: uniIcon }, data: function data() {return { userInfo: {}, show: false, userImage: '', array: ['男', '女'], arrays: [], index: '', indexs: 0, date: '', userName: '', sex: '', interest: '', address: '' };}, onShow: function onShow() {if (uni.getStorageSync('langType') == 'en-US') {uni.setNavigationBarTitle({ title: 'Revision of personal data' });} else {uni.setNavigationBarTitle({ title: '修改个人资料' });}}, onLoad: function onLoad() {this.getInstertList();this.getUserInfo();}, onNavigationBarButtonTap: function onNavigationBarButtonTap(obj) {if (!this.userImage || !this.userName || !this.sex || !this.date || !this.interest || !this.address) {uni.showToast({ title: '请填写必填选项!', icon: 'none' });return;}this.ajax({ url: 'user/update_info', data: { photo: this.userImage, name: this.userName,
+        sex: this.sex,
+        birthday: new Date(this.date).getTime() / 1000,
+        interest: this.interest,
+        address: this.address },
+
+      success: function success(res) {
+        if (res.data.body === 'success') {
+          uni.showToast({
+            title: '个人信息修改成功',
+            icon: 'none' });
+
+        } else {
           uni.showToast({
             title: res.data.msg,
             icon: 'none' });
@@ -133,26 +145,38 @@ var wPicker = function wPicker() {return Promise.all(/*! import() | components/w
 
   },
   methods: {
+    //获取兴趣列表
+    getInstertList: function getInstertList() {var _this = this;
+      this.ajax({
+        url: '/index/savor',
+        method: 'get',
+        success: function success(res) {
+          res.data.data.map(function (item) {
+            _this.arrays.push(item.name);
+          });
+        } });
+
+    },
     //获取个人资料
-    getUserInfo: function getUserInfo() {var _this = this;
+    getUserInfo: function getUserInfo() {var _this2 = this;
       this.ajax({
         url: uni.getStorageSync('type') == 1 ? 'user/info' : 'teacherclass/info',
         success: function success(res) {
           if (res.data.body === 'success') {
-            _this.userInfo = res.data.data;
-            _this.index = _this.userInfo.sex;
-            switch (_this.userInfo.sex) {
+            _this2.userInfo = res.data.data;
+            _this2.index = _this2.userInfo.sex;
+            switch (_this2.userInfo.sex) {
               case '2':
-                _this.index = 1;
+                _this2.index = 1;
                 break;
               default:
-                _this.index = 0;}
+                _this2.index = 0;}
 
-            _this.indexs = _this.userInfo.interest || 0;
-            _this.userName = _this.userInfo.name;
-            _this.userImage = _this.userInfo.photo || _this.userInfo.j_photo;
-            _this.date = (0, _common.getDate)(_this.userInfo.birthday * 1000);
-            _this.address = _this.userInfo.address;
+            _this2.indexs = _this2.userInfo.interest || 0;
+            _this2.userName = _this2.userInfo.name;
+            _this2.userImage = _this2.userInfo.photo || _this2.userInfo.j_photo;
+            _this2.date = (0, _common.getDate)(_this2.userInfo.birthday * 1000);
+            _this2.address = _this2.userInfo.address;
           } else {
             uni.showToast({
               title: res.data.msg });
@@ -182,7 +206,7 @@ var wPicker = function wPicker() {return Promise.all(/*! import() | components/w
       this.interest = this.indexs;
     },
     //选择头像上传
-    updateUserImage: function updateUserImage() {var _this2 = this;
+    updateUserImage: function updateUserImage() {var _this3 = this;
       uni.chooseImage({
         count: 1,
         success: function success(res) {
@@ -198,7 +222,7 @@ var wPicker = function wPicker() {return Promise.all(/*! import() | components/w
             success: function success(res) {
               var info = JSON.parse(res.data);
               if (info.data === 'success') {
-                _this2.userImage = info.body.photo;
+                _this3.userImage = info.body.photo;
               }
             } });
 

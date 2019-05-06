@@ -1,4 +1,7 @@
 view .meun_list {
+  z-index: 99;
+  width: 100%;
+  position: fixed;
   height: 90rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -11,6 +14,7 @@ view .meun_list {
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
+  background-color: #fff;
 }
 view .meun_list text {
   font-size: 28rpx;

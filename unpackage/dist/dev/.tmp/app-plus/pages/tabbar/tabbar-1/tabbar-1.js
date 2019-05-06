@@ -20,20 +20,56 @@
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
     return {
+      isTeacher: false,
+      pathType: 'home',
       musicList: [] };
 
   },
-  onLoad: function onLoad() {
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Course selection' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '选课' });
+
+    }
+  },
+  onLoad: function onLoad(obj) {
+    this.pathType = obj.type;
+    uni.getStorageSync('type') == 1 ? this.isTeacher = false : this.isTeacher = true;
     this.getMusicList();
   },
   onPullDownRefresh: function onPullDownRefresh() {
     this.getMusicList();
   },
   methods: {
+    goPath: function goPath(path, type) {
+      uni.redirectTo({
+        url: "".concat(path, "?type=").concat(type) });
+
+    },
     //获取艺术列表
     getMusicList: function getMusicList() {var _this = this;
       this.ajax({

@@ -8,18 +8,19 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var couponList = function couponList() {return __webpack_require__.e(/*! import() | components/item/couponList */ "components/item/couponList").then(__webpack_require__.bind(null, /*! ../../components/item/couponList.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\item\\couponList.vue"));};var noContent = function noContent() {return __webpack_require__.e(/*! import() | components/noContent */ "components/noContent").then(__webpack_require__.bind(null, /*! ../../components/noContent.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\noContent.vue"));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-
-
-
-
-
-
-
-
-
-
+var _this = '';var couponList = function couponList() {return __webpack_require__.e(/*! import() | components/item/couponList */ "components/item/couponList").then(__webpack_require__.bind(null, /*! ../../components/item/couponList.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\item\\couponList.vue"));};var noContent = function noContent() {return __webpack_require__.e(/*! import() | components/noContent */ "components/noContent").then(__webpack_require__.bind(null, /*! ../../components/noContent.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\noContent.vue"));};var _default =
 
 
 {
@@ -36,25 +37,42 @@
 
   },
   onLoad: function onLoad(obj) {
+    _this = this;
     this.type = obj.type;
     this.getCouponList(this.type);
   },
-  onReachBottom: function onReachBottom() {var _this = this;
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'My Coupon' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '我的优惠券' });
+
+    }
+  },
+  onReachBottom: function onReachBottom() {var _this2 = this;
     if (this.isEnd) {
       return;
     }
     this.index++;
     setTimeout(function () {
-      _this.getCouponList(_this.type);
+      _this2.getCouponList(_this2.type);
     }, 300);
   },
   onPullDownRefresh: function onPullDownRefresh() {
     this.index = 0;
     this.getCouponList(this.type);
   },
+  watch: {
+    type: function type(now, old) {
+      _this.couponList = [];
+    } },
+
   methods: {
     //获取优惠卷列表
-    getCouponList: function getCouponList(type) {var _this2 = this;
+    getCouponList: function getCouponList(type) {var _this3 = this;
       this.couponList = [];
       this.type = type;
       this.ajax({
@@ -68,17 +86,16 @@
           uni.stopPullDownRefresh();
           if (res.data.body === 'success') {
             if (res.data.data.length === 0) {
-              _this2.isEnd = true;
+              _this3.isEnd = true;
               uni.showToast({
                 title: '没有更多数据了',
                 icon: 'none' });
 
-              return;
             }
-            if (_this2.index !== 0) {
-              _this2.couponList = _this2.couponList.concat(res.data.data);
+            if (_this3.index !== 0) {
+              _this3.couponList = _this3.couponList.concat(res.data.data);
             } else {
-              _this2.couponList = res.data.data;
+              _this3.couponList = res.data.data;
             }
           }
         } });

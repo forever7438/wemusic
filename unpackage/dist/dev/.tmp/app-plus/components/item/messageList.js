@@ -8,7 +8,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var noContent = function noContent() {return __webpack_require__.e(/*! import() | components/noContent */ "components/noContent").then(__webpack_require__.bind(null, /*! ../noContent.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\noContent.vue"));};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
 
@@ -26,13 +26,24 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-
-{
-  components: {
-    noContent: noContent },
-
-  props: {
-    messageList: Array } };exports.default = _default;
+var _common = __webpack_require__(/*! ../../common/common.js */ "C:\\Users\\Administrator\\Desktop\\wemusic\\common\\common.js"); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var noContent = function noContent() {return __webpack_require__.e(/*! import() | components/noContent */ "components/noContent").then(__webpack_require__.bind(null, /*! ../noContent.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\noContent.vue"));};var _default = { components: { noContent: noContent }, props: { messageList: Array }, filters: { getTime: function getTime(time) {return (0, _common.getDate)(time * 1000);} } };exports.default = _default;
 
 /***/ }),
 
@@ -62,6 +73,26 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var m0 = _vm.$t("index")
+  var l0 = _vm.messageList.map(function(item, index) {
+    var f0 = _vm._f("getTime")(item.time)
+
+    return {
+      $orig: _vm.__get_orig(item),
+      f0: f0
+    }
+  })
+  var m1 = _vm.$t("index")
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        m0: m0,
+        l0: l0,
+        m1: m1
+      }
+    }
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

@@ -1,5 +1,15 @@
 {
   "navigationBarTitleText": "评价",
+  "titleNView": {
+    "buttons": [
+      {
+        "text": "提交",
+        "fontSize": "16px",
+        "fontWeight": "bold",
+        "color": "#FAD42A"
+      }
+    ]
+  },
   "usingComponents": {
     "comment-star-class": "/components/comment/commentStarClass",
     "startclass": "/components/starclass"

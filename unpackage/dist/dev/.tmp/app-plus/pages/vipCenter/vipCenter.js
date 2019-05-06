@@ -56,22 +56,72 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   components: {
     uniIcon: uniIcon },
 
   data: function data() {
     return {
+      flag: false,
       userInfo: {},
       moneyList: [],
-      checkId: '' };
+      checkId: '',
+      form: {} };
 
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Member Center' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '会员中心' });
+
+    }
   },
   onLoad: function onLoad() {
     this.getUserInfo();
     this.getMoneyList();
   },
   methods: {
+    formSubmit: function formSubmit(e) {
+      console.log(e, " at pages\\vipCenter\\vipCenter.vue:113");
+    },
     //获取个人资料
     getUserInfo: function getUserInfo() {var _this = this;
       this.ajax({
@@ -106,7 +156,7 @@
       this.checkId = val;
     },
     //充值操作
-    moneyAadd: function moneyAadd() {
+    moneyAadd: function moneyAadd() {var _this3 = this;
       if (!this.checkId) {
         uni.showToast({
           title: '请选择充值金额',
@@ -121,10 +171,8 @@
 
         success: function success(res) {
           if (res.data.body === 'success') {
-            uni.showToast({
-              title: '充值成功',
-              icon: 'none' });
-
+            _this3.form = res.data.data;
+            _this3.flag = true;
           } else {
             uni.showToast({
               title: res.data.msg,
@@ -167,6 +215,31 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var m0 = _vm.$t("index")
+  var m1 = _vm.$t("index")
+  var m2 = _vm.$t("index")
+  var m3 = _vm.$t("index")
+  var m4 = _vm.$t("index")
+  var m5 = _vm.$t("index")
+  var m6 = _vm.$t("index")
+  var m7 = _vm.$t("index")
+  var m8 = _vm.$t("index")
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        m0: m0,
+        m1: m1,
+        m2: m2,
+        m3: m3,
+        m4: m4,
+        m5: m5,
+        m6: m6,
+        m7: m7,
+        m8: m8
+      }
+    }
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

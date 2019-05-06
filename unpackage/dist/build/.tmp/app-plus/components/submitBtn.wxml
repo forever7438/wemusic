@@ -1,1 +1,0 @@
-<view class="submit" bind:__l="__l"><input type="text" placeholder="输入评论内容…" data-event-opts="{{[['input',[['__set_model',['$0','body','$event',[]],['']]]]]}}" value="{{body}}" bindinput="__e"/><text data-event-opts="{{[['tap',[['submit',['$0'],['friend_id']]]]]}}" bindtap="__e">发送</text></view>

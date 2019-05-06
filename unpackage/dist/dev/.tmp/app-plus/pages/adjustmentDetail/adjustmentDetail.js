@@ -52,12 +52,40 @@ var _default =
 {
   data: function data() {
     return {
-      isTeacher: false };
+      isTeacher: false,
+      messageId: '',
+      messageDetail: {} };
 
   },
-  onLoad: function onLoad() {
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'adjustment Detail' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '调整详情' });
+
+    }
+  },
+  onLoad: function onLoad(obj) {
+    this.messageId = obj.messageId;
     uni.getStorageSync('type') == 1 ? this.isTeacher = false : this.isTeacher = true;
-  } };exports.default = _default;
+    this.getMesageDeatil();
+  },
+  methods: {
+    //获取调整详情
+    getMesageDeatil: function getMesageDeatil() {
+      this.ajax({
+        url: uni.getStorageSync('type') == 1 ? 'studentclass/message_info' : 'teacherclass/message_info',
+        data: {
+          message_id: this.messageId },
+
+        success: function success(res) {
+          console.log(res, " at pages\\adjustmentDetail\\adjustmentDetail.vue:75");
+        } });
+
+    } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),

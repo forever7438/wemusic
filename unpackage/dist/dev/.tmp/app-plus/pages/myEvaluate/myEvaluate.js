@@ -8,17 +8,18 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var lessonList = function lessonList() {return Promise.all(/*! import() | components/item/lessonList */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/item/lessonList")]).then(__webpack_require__.bind(null, /*! ../../components/item/lessonList.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\item\\lessonList.vue"));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-
-
-
-
-
-
-
-
-
+var _this = '';var lessonList = function lessonList() {return Promise.all(/*! import() | components/item/lessonList */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/item/lessonList")]).then(__webpack_require__.bind(null, /*! ../../components/item/lessonList.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\item\\lessonList.vue"));};var _default =
 
 {
   components: {
@@ -33,26 +34,42 @@
 
   },
   onLoad: function onLoad(obj) {
+    _this = this;
     this.lessonType = obj.type;
     this.getEvalutateList(this.lessonType);
   },
-  onReachBottom: function onReachBottom() {var _this = this;
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'My Evaluate' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '我的评价' });
+
+    }
+  },
+  onReachBottom: function onReachBottom() {var _this2 = this;
     if (this.isEnd) {
       return;
     }
     this.index++;
     setTimeout(function () {
-      _this.getEvalutateList(_this.lessonType);
+      _this2.getEvalutateList(_this2.lessonType);
     }, 300);
   },
   onPullDownRefresh: function onPullDownRefresh() {
     this.index = 0;
     this.getEvalutateList(this.lessonType);
   },
+  watch: {
+    lessonType: function lessonType(now, old) {
+      _this.listInfo = [];
+    } },
+
   methods: {
     //获取评价
-    getEvalutateList: function getEvalutateList(type) {var _this2 = this;
-      this.listInfo = [];
+    getEvalutateList: function getEvalutateList(type) {var _this3 = this;
       this.lessonType = type;
       this.ajax({
         url: 'studentclass/my_assess',
@@ -65,17 +82,16 @@
           uni.stopPullDownRefresh();
           if (res.data.body === 'success') {
             if (res.data.data.length === 0) {
-              _this2.isEnd = true;
+              _this3.isEnd = true;
               uni.showToast({
                 title: '没有更多数据了',
                 icon: 'none' });
 
-              return;
             }
-            if (_this2.index !== 0) {
-              _this2.listInfo = _this2.listInfo.concat(res.data.data);
+            if (_this3.index !== 0) {
+              _this3.listInfo = _this3.listInfo.concat(res.data.data);
             } else {
-              _this2.listInfo = res.data.data;
+              _this3.listInfo = res.data.data;
             }
           }
         } });

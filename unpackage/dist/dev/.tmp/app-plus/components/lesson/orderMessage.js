@@ -44,16 +44,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 {
   components: {
     mpvuePicker: mpvuePicker },
@@ -66,19 +56,36 @@
 
   data: function data() {
     return {
-      way: ['一对一', '一对二', '一对三'] };
+      way: [] };
 
   },
+  computed: {
+    resultway: function resultway() {
+      switch (this.request.people_num) {
+        case 0:
+          return this.$t('index').One_on_one;
+          break;
+        case 1:
+          return this.$t('index').A_pair_of_two;
+          break;
+        case 2:
+          return this.$t('index').A_pair_of_three;
+          break;}
+
+    } },
+
   methods: {
     onConfirm: function onConfirm(val) {
-      var index = val.index[0];
-      var change = {
-        key: 'coupomTitle',
-        value: this.coupomList[index].name };
+      if (val) {
+        var index = val.index[0];
+        var change = {
+          key: 'coupomTitle',
+          value: this.coupomList[index].name };
 
-      this.$emit('changeRequest', change);
-      var coupon_id = this.coupomList[index].id;
-      this.getPrice(coupon_id);
+        this.$emit('changeRequest', change);
+        var coupon_id = this.coupomList[index].id;
+        this.getPrice(coupon_id);
+      }
     },
     getPrice: function getPrice(coupon_id) {var _this = this;
       this.ajax({
@@ -102,25 +109,30 @@
     onCancel: function onCancel() {},
     /**选择时长*/
     coupomPicker: function coupomPicker() {
-      console.log(this.coupomList, " at components\\lesson\\orderMessage.vue:95");
+      console.log(this.coupomList, " at components\\lesson\\orderMessage.vue:102");
       this.$refs.mpvuePicker.show();
     },
-    pay: function pay(classId) {
-      uni.redirectTo({
-        url: '/pages/registrationSuccess/registrationSuccess?way=' + this.way[this.request.people_num] + '&classId=' + classId + '&teacherNmae=' + '教师名称' });
+    pay: function pay(classId) {var _this2 = this;
+      var data = {
+        class_list_id: this.request.class_list_id.join(','),
+        teacher_id: this.request.teacher_id,
+        music_sun_id: this.request.music_sun_id,
+        people_num: this.request.people_num,
+        coupon_id: this.request.coupon_id };
 
-      return;
       this.ajax({
         url: 'userorder/add_order',
-        data: this.request,
+        data: data,
         success: function success(res) {
+          console.log(res, " at components\\lesson\\orderMessage.vue:117");
           if (res.data.body === 'success') {
             uni.showToast({
-              title: '支付完成',
+              title: 'Success',
               icon: 'none' });
 
             uni.redirectTo({
-              url: '/pages/lesson/lesson?type=1' });
+              url: '/pages/registrationSuccess/registrationSuccess?way=' + _this2.resultway + '&classId=' + classId +
+              '&teacherNmae=' + '教师名称' });
 
           }
         } });
@@ -156,6 +168,36 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var m0 = _vm.$t("index")
+  var m1 = _vm.$t("index")
+  var m2 = _vm.$t("index")
+  var m3 = _vm.$t("index")
+  var m4 = _vm.$t("index")
+  var m5 = _vm.$t("index")
+  var m6 = _vm.$t("index")
+  var m7 = _vm.$t("index")
+
+  if (!_vm._isMounted) {
+    _vm.e0 = function($event) {
+      _vm.coupomPicker && _vm.coupomList.length
+    }
+  }
+
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        m0: m0,
+        m1: m1,
+        m2: m2,
+        m3: m3,
+        m4: m4,
+        m5: m5,
+        m6: m6,
+        m7: m7
+      }
+    }
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

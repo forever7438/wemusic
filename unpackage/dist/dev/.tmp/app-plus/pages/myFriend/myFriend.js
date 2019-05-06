@@ -14,6 +14,8 @@
 
 
 
+
+
 {
   components: {
     friendsList: friendsList },
@@ -29,6 +31,18 @@
     uni.navigateTo({
       url: '/pages/releaseFriends/releaseFriends' });
 
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'My Friend' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '我的朋友圈' });
+
+    }
+    this.getFriendList(this.index);
   },
   onLoad: function onLoad() {
     this.getFriendList(this.index);
@@ -47,6 +61,26 @@
     this.getFriendList(this.index);
   },
   methods: {
+    forward_praise: function forward_praise(data) {
+      console.log(this.friendsList[data.index], " at pages\\myFriend\\myFriend.vue:55");
+      if (data.key == 'is_forward') {
+        if (this.friendsList[data.index].is_forward == 1) {
+          this.friendsList[data.index].is_forward = 0;
+          this.friendsList[data.index].forward_num--;
+        } else {
+          this.friendsList[data.index].is_forward = 1;
+          this.friendsList[data.index].forward_num++;
+        }
+      } else {
+        if (this.friendsList[data.index].is_praise == 1) {
+          this.friendsList[data.index].is_praise = 0;
+          this.friendsList[data.index].praise_num--;
+        } else {
+          this.friendsList[data.index].is_praise = 1;
+          this.friendsList[data.index].praise_num++;
+        }
+      }
+    },
     //获取朋友圈列表
     getFriendList: function getFriendList(val) {var _this2 = this;
       this.ajax({

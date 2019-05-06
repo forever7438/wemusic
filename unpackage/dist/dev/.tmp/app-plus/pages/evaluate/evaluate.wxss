@@ -1,4 +1,7 @@
 .evaluate.data-v-100860c6 {
-  padding: 0 15rpx;
+  padding: 0 30rpx 200rpx 30rpx;
+}
+.evaluate .item.data-v-100860c6 {
+  margin-top: 32rpx;
 }
 

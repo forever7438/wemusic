@@ -8,7 +8,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var noContent = function noContent() {return __webpack_require__.e(/*! import() | components/noContent */ "components/noContent").then(__webpack_require__.bind(null, /*! ../../components/noContent.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\noContent.vue"));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var noContent = function noContent() {return __webpack_require__.e(/*! import() | components/noContent */ "components/noContent").then(__webpack_require__.bind(null, /*! ../../components/noContent.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\noContent.vue"));};var _default =
 
 
 
@@ -31,6 +31,17 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   onLoad: function onLoad() {
     this.getAboutContent();
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'about us' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '关于我们' });
+
+    }
+  },
   methods: {
     //获取关于我们
     getAboutContent: function getAboutContent() {var _this = this;
@@ -42,6 +53,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
         } });
 
     } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),
 

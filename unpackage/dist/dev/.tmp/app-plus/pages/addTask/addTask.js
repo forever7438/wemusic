@@ -36,6 +36,17 @@ var progressBar = function progressBar() {return __webpack_require__.e(/*! impor
   onLoad: function onLoad() {
     _this = this;
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'add task' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '提交作业' });
+
+    }
+  },
   methods: {
     chooseImage: function chooseImage(e) {
       uni.chooseImage({
@@ -59,7 +70,7 @@ var progressBar = function progressBar() {return __webpack_require__.e(/*! impor
 
         },
         fail: function fail(err) {
-          console.log('chooseImage fail', err, " at pages\\addTask\\addTask.vue:52");
+          console.log('chooseImage fail', err, " at pages\\addTask\\addTask.vue:63");
         } });
 
     } },

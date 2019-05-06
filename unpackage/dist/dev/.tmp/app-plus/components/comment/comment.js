@@ -59,7 +59,7 @@ var _util = __webpack_require__(/*! ../../common/util.js */ "C:\\Users\\Administ
 //
 //
 //
-var _default = { props: { message: Number, list: Array }, filters: { formatDate: function formatDate(time) {return _util.dateUtils.format(time);} } };exports.default = _default;
+var _default = { props: { message: Number, list: Array }, data: function data() {return { img: '../../static/img/icon_touxiang02.png' };}, filters: { formatDate: function formatDate(time) {return _util.dateUtils.format(time);} } };exports.default = _default;
 
 /***/ }),
 
@@ -89,6 +89,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var m0 = _vm.$t("index")
   var l0 = _vm.list.map(function(item, index) {
     var f0 = _vm._f("formatDate")(item.time)
 
@@ -97,11 +98,14 @@ var render = function() {
       f0: f0
     }
   })
+  var m1 = _vm.$t("index")
   _vm.$mp.data = Object.assign(
     {},
     {
       $root: {
-        l0: l0
+        m0: m0,
+        l0: l0,
+        m1: m1
       }
     }
   )

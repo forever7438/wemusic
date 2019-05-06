@@ -8,19 +8,20 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var lessonList = function lessonList() {return Promise.all(/*! import() | components/item/lessonList */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/item/lessonList")]).then(__webpack_require__.bind(null, /*! ../../components/item/lessonList.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\item\\lessonList.vue"));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-
-
-
-
-
-
-
-
-
-
-
+var _this = '';var lessonList = function lessonList() {return Promise.all(/*! import() | components/item/lessonList */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/item/lessonList")]).then(__webpack_require__.bind(null, /*! ../../components/item/lessonList.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\item\\lessonList.vue"));};var _default =
 
 {
   components: {
@@ -36,28 +37,44 @@
 
   },
   onLoad: function onLoad(obj) {
+    _this = this;
     uni.getStorageSync('type') == 1 ? this.isShow = true : this.isShow = false;
     this.lessonType = obj.type;
     this.getLessonList(this.lessonType);
   },
-  onReachBottom: function onReachBottom() {var _this = this;
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'My Lesson' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '我的课程' });
+
+    }
+  },
+  onReachBottom: function onReachBottom() {var _this2 = this;
     if (this.isEnd) {
-      return;
+      // return;
     }
     this.index++;
     setTimeout(function () {
-      _this.getLessonList(_this.lessonType);
+      _this2.getLessonList(_this2.lessonType);
     }, 300);
   },
   onPullDownRefresh: function onPullDownRefresh() {
     this.index = 0;
     this.getLessonList(this.lessonType);
   },
+  watch: {
+    lessonType: function lessonType(now, old) {
+      _this.listInfo = [];
+    } },
+
   methods: {
     //获取课程
-    getLessonList: function getLessonList(val) {var _this2 = this;
+    getLessonList: function getLessonList(val) {var _this3 = this;
       this.lessonType = val;
-      this.listInfo = [];
       this.ajax({
         url: uni.getStorageSync('type') == 1 ? 'studentclass/class_type' : 'teacherclass/class_list',
         data:
@@ -78,32 +95,30 @@
             switch (uni.getStorageSync('type')) {
               case 1:
                 if (res.data.data.length === 0) {
-                  _this2.isEnd = true;
+                  _this3.isEnd = true;
                   uni.showToast({
                     title: '没有更多数据了',
                     icon: 'none' });
 
-                  return;
                 }
-                if (_this2.index !== 0) {
-                  _this2.listInfo = _this2.listInfo.concat(res.data.data);
+                if (_this3.index !== 0) {
+                  _this3.listInfo = _this3.listInfo.concat(res.data.data);
                 } else {
-                  _this2.listInfo = res.data.data;
+                  _this3.listInfo = res.data.data;
                 }
                 break;
               default:
                 if (res.data.data.list.length === 0) {
-                  _this2.isEnd = true;
+                  _this3.isEnd = true;
                   uni.showToast({
                     title: '没有更多数据了',
                     icon: 'none' });
 
-                  return;
                 }
-                if (_this2.index !== 0) {
-                  _this2.listInfo = _this2.listInfo.concat(res.data.data.list);
+                if (_this3.index !== 0) {
+                  _this3.listInfo = _this3.listInfo.concat(res.data.data.list);
                 } else {
-                  _this2.listInfo = res.data.data.list;
+                  _this3.listInfo = res.data.data.list;
                 }}
 
           }

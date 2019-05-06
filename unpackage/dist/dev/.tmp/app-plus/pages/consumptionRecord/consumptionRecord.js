@@ -28,6 +28,17 @@
   onLoad: function onLoad() {
     this.getConumptionList();
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'consumption Record' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '消费记录' });
+
+    }
+  },
   onReachBottom: function onReachBottom() {var _this = this;
     if (this.isEnd) {
       return;

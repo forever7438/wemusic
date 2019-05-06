@@ -25,6 +25,17 @@
       rechargeList: [] };
 
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Recharge Record' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '充值记录' });
+
+    }
+  },
   onLoad: function onLoad() {
     this.getRechargeList();
   },

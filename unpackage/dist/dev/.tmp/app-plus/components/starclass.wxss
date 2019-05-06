@@ -1,6 +1,9 @@
 .start_class.data-v-21f5fe9b {
   margin-top: 10rpx;
 }
+.start_class .m_b_16.data-v-21f5fe9b {
+  margin-bottom: 32rpx;
+}
 .start_class ._p.data-v-21f5fe9b {
   font-size: 32rpx;
   font-family: PingFangSC-Medium;

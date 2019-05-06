@@ -107,6 +107,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var m0 = _vm.$t("index")
+  var m1 = _vm.$t("index")
+  var m2 = _vm.$t("index")
   var l0 = _vm.financeList.map(function(item, index) {
     var f0 = _vm._f("getDateYear")(item.time * 1000)
 
@@ -125,6 +128,9 @@ var render = function() {
     {},
     {
       $root: {
+        m0: m0,
+        m1: m1,
+        m2: m2,
         l0: l0
       }
     }

@@ -2,6 +2,9 @@
   padding: 0 15rpx;
 }
 .my_lesson_content .class_meun.data-v-3e1dace6 {
+  z-index: 99;
+  position: fixed;
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17,6 +20,7 @@
   font-family: PingFangSC-Regular;
   font-weight: 500;
   color: #333333;
+  background-color: #fff;
   height: 90rpx;
 }
 .my_lesson_content .class_meun text.data-v-3e1dace6 {

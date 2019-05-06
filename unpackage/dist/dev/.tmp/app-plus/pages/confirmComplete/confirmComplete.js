@@ -32,6 +32,17 @@
   onLoad: function onLoad(obj) {
     this.getCourseInfo(1);
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'confirm Complete' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '提交作业' });
+
+    }
+  },
   methods: {
     homeBack: function homeBack() {
       uni.switchTab({
@@ -46,7 +57,7 @@
           music_id: classId },
 
         success: function success(res) {
-          console.log(res, " at pages\\confirmComplete\\confirmComplete.vue:39");
+          console.log(res, " at pages\\confirmComplete\\confirmComplete.vue:50");
           if (res.data.body === 'success') {
             _this.courseInfo.push(res.data.data.info);
           }

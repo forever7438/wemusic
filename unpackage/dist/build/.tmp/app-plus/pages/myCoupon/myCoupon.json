@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "优惠卷",
-  "enablePullDownRefresh": true,
-  "usingComponents": {
-    "coupon-list": "/components/item/couponList",
-    "no-content": "/components/noContent"
-  }
-}

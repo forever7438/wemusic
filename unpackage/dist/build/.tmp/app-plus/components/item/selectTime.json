@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "w-picker": "/components/w-picker/w-picker",
-    "mpvue-picker": "/components/mpvue-picker/mpvuePicker"
-  },
-  "component": true
-}

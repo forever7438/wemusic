@@ -31,11 +31,14 @@ var _default =
     message: Number,
     praise: Number,
     forward: Number,
-    listId: String },
+    listId: String,
+    is_forward: Number,
+    is_praise: Number,
+    index: Number },
 
   methods: {
     //点赞
-    liked: function liked() {
+    liked: function liked(is_praise) {var _this = this;
       this.ajax({
         url: 'friend/praise',
         data: {
@@ -43,8 +46,15 @@ var _default =
 
         success: function success(res) {
           if (res.data.body === 'success') {
+            var data = {
+              key: 'is_praise',
+              index: _this.index };
+
+            _this.$emit('changeStatus', data);
+            // this.$emit('refreshData');
+            var tip = is_praise == 0 ? _this.$t('index').Praise_for_success : _this.$t('index').Cancel_points;
             uni.showToast({
-              title: '点赞成功',
+              title: tip,
               icon: 'none' });
 
           } else {
@@ -57,7 +67,14 @@ var _default =
 
     },
     //转发
-    share: function share() {
+    share: function share(is_forward) {var _this2 = this;
+      if (is_forward) {
+        uni.showToast({
+          title: this.$t('index').You_have_forwarded,
+          icon: 'none' });
+
+        return;
+      }
       this.ajax({
         url: 'friend/forward',
         data: {
@@ -65,8 +82,15 @@ var _default =
 
         success: function success(res) {
           if (res.data.body === 'success') {
+            var data = {
+              key: 'is_forward',
+              index: _this2.index };
+
+            _this2.$emit('changeStatus', data);
+            //this.is_forward = 1;
+            // this.$emit('refreshData');
             uni.showToast({
-              title: '转发成功',
+              title: _this2.$t('index').Forwarding_Success,
               icon: 'none' });
 
           } else {

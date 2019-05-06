@@ -107,7 +107,7 @@
 					title: '请填写必填选项!',
 					icon: 'none'
 				});
-				return;
+				// return;
 			}
 			this.ajax({
 				url: 'user/update_info',
@@ -189,7 +189,7 @@
 			},
 			bindPickerChangeSex: function(e) {
 				this.index = e.target.value;
-				e.target.value = 0 ? (this.sex = 1) : (this.sex = 2);
+				e.target.value == 0 ? (this.sex = 1) : (this.sex = 2);
 			},
 			bindPickerChangeInterest: function(e) {
 				this.indexs = e.target.value;

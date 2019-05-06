@@ -50,7 +50,18 @@ var _common = __webpack_require__(/*! ../../common/common.js */ "C:\\Users\\Admi
 //
 //
 //
-var _this = '';var _default = { data: function data() {return { approve_photo1: '', approve_photo2: '' };}, onLoad: function onLoad() {_this = this;}, methods: { chooseImage: function chooseImage(str) {uni.chooseImage({ count: 1, success: function success(res) {switch (str) {case 'approve_photo1':_this.approve_photo1 = res.tempFilePaths[0];
+var _this = '';var _default = { data: function data() {return { approve_photo1: '', approve_photo2: '' };}, onLoad: function onLoad() {_this = this;}, onShow: function onShow() {if (uni.getStorageSync('langType') == 'en-US') {uni.setNavigationBarTitle({ title: 'authentication' });} else {uni.setNavigationBarTitle({ title: '认证中心' });
+
+    }
+  },
+  methods: {
+    chooseImage: function chooseImage(str) {
+      uni.chooseImage({
+        count: 1,
+        success: function success(res) {
+          switch (str) {
+            case 'approve_photo1':
+              _this.approve_photo1 = res.tempFilePaths[0];
               break;
             default:
               _this.approve_photo2 = res.tempFilePaths[0];}

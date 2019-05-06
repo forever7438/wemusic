@@ -35,9 +35,17 @@ var _default =
       reg: /^[1][3,4,5,7,8][0-9]{9}$/ };
 
   },
-  // onLoad() {
-  // 	console.log(getCurrentPages());
-  // },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Modification of mobile phone number' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '修改手机号' });
+
+    }
+  },
   methods: {
     //获取手机验证码
     getCode: function getCode() {

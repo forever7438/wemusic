@@ -27,6 +27,17 @@ var _this = '';var _default = { data: function data() {return { data_photo: '' }
   onLoad: function onLoad() {
     _this = this;
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'upload file' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '资料上传' });
+
+    }
+  },
   methods: {
     chooseImage: function chooseImage(e) {
       uni.chooseImage({
@@ -50,7 +61,7 @@ var _this = '';var _default = { data: function data() {return { data_photo: '' }
 
         },
         fail: function fail(err) {
-          console.log('chooseImage fail', err, " at pages\\uploadFile\\uploadFile.vue:43");
+          console.log('chooseImage fail', err, " at pages\\uploadFile\\uploadFile.vue:54");
         } });
 
     },
@@ -113,6 +124,15 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var m0 = _vm.$t("index")
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        m0: m0
+      }
+    }
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

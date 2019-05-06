@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "调课",
-  "usingComponents": {
-    "startclass": "/components/starclass",
-    "w-picker": "/components/w-picker/w-picker"
-  }
-}

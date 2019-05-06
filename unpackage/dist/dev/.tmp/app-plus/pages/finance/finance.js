@@ -25,6 +25,7 @@
 
   data: function data() {
     return {
+      time: '',
       index: 0,
       isEnd: false,
       financeList: [] };
@@ -34,7 +35,19 @@
     this.toggleTab();
   },
   onLoad: function onLoad() {
+    this.time = new Date().getFullYear();
     this.getFinanceList();
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Financial Management' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '财务管理' });
+
+    }
   },
   onReachBottom: function onReachBottom() {var _this = this;
     if (this.isEnd) {
@@ -54,13 +67,15 @@
       this.$refs.picker.show();
     },
     onConfirm: function onConfirm(val) {
-      console.log(val, " at pages\\finance\\finance.vue:47");
+      this.time = val[0];
+      this.getFinanceList();
     },
     //获取财务列表
     getFinanceList: function getFinanceList() {var _this2 = this;
       this.ajax({
         url: 'teacherclass/finance',
         data: {
+          time: this.time,
           list: this.index,
           val: 5 },
 
@@ -73,7 +88,7 @@
                 title: '没有更多数据了',
                 icon: 'none' });
 
-              return;
+              // return;
             }
             if (_this2.index !== 0) {
               _this2.financeList = _this2.financeList.concat(res.data.data.list);

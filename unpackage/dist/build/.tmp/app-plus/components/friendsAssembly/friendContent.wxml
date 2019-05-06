@@ -1,1 +1,0 @@
-<view class="contents" bind:__l="__l"><block wx:if="{{type}}"><navigator hover-class="none" url="{{'/pages/friendsDetail/friendsDetail?listId='+listId}}"><text>{{content}}</text></navigator></block><block wx:else><text>{{content}}</text></block></view>

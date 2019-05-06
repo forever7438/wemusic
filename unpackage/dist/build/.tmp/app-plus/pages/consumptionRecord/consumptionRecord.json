@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "消费记录",
-  "enablePullDownRefresh": true,
-  "usingComponents": {
-    "recharge-list": "/components/item/rechargeList"
-  }
-}

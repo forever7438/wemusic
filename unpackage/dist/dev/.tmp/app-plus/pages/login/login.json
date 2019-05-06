@@ -1,4 +1,5 @@
 {
   "titleNView": false,
+  "scrollIndicator": "none",
   "usingComponents": {}
 }

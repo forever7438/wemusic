@@ -1,1 +1,0 @@
-<view class="shode" bind:__l="__l"><view class="uni-padding-wrap uni-common-mt"><view class="progress-box"><progress percent="{{progress}}" show-info="true" active stroke-width="10"></progress></view></view></view>

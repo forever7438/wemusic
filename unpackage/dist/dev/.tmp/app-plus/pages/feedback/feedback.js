@@ -24,6 +24,17 @@ var _default =
       contact: '' };
 
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'feedback' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '意见反馈' });
+
+    }
+  },
   methods: {
     //提交意见反馈
     submitFeedback: function submitFeedback() {var _this = this;

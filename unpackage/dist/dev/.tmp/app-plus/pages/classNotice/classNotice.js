@@ -8,9 +8,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var messageList = function messageList() {return __webpack_require__.e(/*! import() | components/item/messageList */ "components/item/messageList").then(__webpack_require__.bind(null, /*! ../../components/item/messageList.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\item\\messageList.vue"));};var _default =
-
-
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var messageList = function messageList() {return Promise.all(/*! import() | components/item/messageList */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/item/messageList")]).then(__webpack_require__.bind(null, /*! ../../components/item/messageList.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\item\\messageList.vue"));};var _default =
 
 
 
@@ -26,6 +24,17 @@
       index: 0,
       messageList: [] };
 
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Notice of adjustment' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '调整通知' });
+
+    }
   },
   onLoad: function onLoad() {
     this.getMessageList();

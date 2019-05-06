@@ -1,1 +1,0 @@
-<view class="finance" bind:__l="__l"><finance-list financeList="{{financeList}}"></finance-list><w-picker class="vue-ref" mode="dates" title="选择年份" defaultVal="{{[0,1,0]}}" startYear="2014" data-ref="picker" data-event-opts="{{[['^confirm',[['onConfirm']]]]}}" bind:confirm="__e"></w-picker></view>

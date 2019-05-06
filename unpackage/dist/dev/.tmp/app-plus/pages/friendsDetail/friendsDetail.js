@@ -31,6 +31,11 @@
 
 
 
+
+
+
+
+
 {
   components: {
     friendHead: friendHead,
@@ -66,6 +71,25 @@
     }, 300);
   },
   methods: {
+    forward_praise: function forward_praise(data) {
+      if (data.key == 'is_forward') {
+        if (this.friendDetail.is_forward) {
+          this.friendDetail.is_forward = 0;
+          this.friendDetail.forward--;
+        } else {
+          this.friendDetail.is_forward = 1;
+          this.friendDetail.forward++;
+        }
+      } else {
+        if (this.friendDetail.is_praise) {
+          this.friendDetail.is_praise = 0;
+          this.friendDetail.praise--;
+        } else {
+          this.friendDetail.is_praise = 1;
+          this.friendDetail.praise++;
+        }
+      }
+    },
     //获取朋友圈详情
     getFriendDetail: function getFriendDetail(listId, list) {var _this2 = this;
       this.ajax({

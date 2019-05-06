@@ -2,6 +2,9 @@
   padding: 0 30rpx;
 }
 .my_evaluate_content .meun_list.data-v-8b7a2774 {
+  z-index: 99;
+  position: fixed;
+  width: 100%;
   height: 90rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -14,6 +17,7 @@
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
+  background-color: #fff;
 }
 .my_evaluate_content .meun_list text.data-v-8b7a2774 {
   font-size: 28rpx;

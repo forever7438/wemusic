@@ -37,6 +37,17 @@
   data: function data() {
     return {};
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Setting' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '设置' });
+
+    }
+  },
   methods: {
     //跳转
     goPath: function goPath(val) {

@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "教师入驻",
-  "navigationBarBackgroundColor": "#FFF",
-  "usingComponents": {
-    "w-picker": "/components/w-picker/w-picker"
-  }
-}

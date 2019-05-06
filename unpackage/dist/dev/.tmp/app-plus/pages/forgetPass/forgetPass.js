@@ -48,6 +48,17 @@ var _default =
     var pages = getCurrentPages(); //当前页
     this.beforePage = pages[pages.length - 2]; //上个页面
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Forget Password' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '找回密码' });
+
+    }
+  },
   methods: {
     //获取验证码
     getCode: function getCode() {

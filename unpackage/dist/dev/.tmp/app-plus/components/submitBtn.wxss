@@ -1,7 +1,7 @@
 .submit {
   width: auto;
   position: fixed;
-  bottom: 10rpx;
+  bottom: 4rpx;
   left: 0;
   padding: 10rpx 40rpx;
   background-color: #fff;

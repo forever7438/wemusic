@@ -40,6 +40,18 @@
       index: 0 };
 
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'circleFriends' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '朋友圈' });
+
+    }
+    this.getFriendList(this.index);
+  },
   onLoad: function onLoad() {
     this.getFriendList(this.index);
   },
@@ -62,6 +74,25 @@
     this.getFriendList(this.index);
   },
   methods: {
+    forward_praise: function forward_praise(data) {
+      if (data.key == 'is_forward') {
+        if (this.friendsList[data.index].is_forward == 1) {
+          this.friendsList[data.index].is_forward = 0;
+          this.friendsList[data.index].forward_num--;
+        } else {
+          this.friendsList[data.index].is_forward = 1;
+          this.friendsList[data.index].forward_num++;
+        }
+      } else {
+        if (this.friendsList[data.index].is_praise == 1) {
+          this.friendsList[data.index].is_praise = 0;
+          this.friendsList[data.index].praise_num--;
+        } else {
+          this.friendsList[data.index].is_praise = 1;
+          this.friendsList[data.index].praise_num++;
+        }
+      }
+    },
     //获取朋友圈列表
     getFriendList: function getFriendList(val) {var _this2 = this;
       this.ajax({
@@ -76,7 +107,7 @@
             if (res.data.data.length === 0) {
               _this2.isEnd = true;
               uni.showToast({
-                title: '没有更多数据了',
+                title: _this2.$t('index').No_more_data,
                 icon: 'none' });
 
               return;

@@ -2,6 +2,7 @@ input {
   font-size: 24rpx;
   width: 100%;
   text-align: center;
+  border-bottom: 2rpx solid #b9b9b9;
 }
 .teacher_login {
   padding: 0 144rpx;
@@ -35,7 +36,7 @@ input {
 }
 .teacher_login .teacher_login_acount input {
   padding-left: 10rpx;
-  border-bottom: 2rpx solid #000;
+  border-bottom: 2rpx solid #b9b9b9;
 }
 .teacher_login .teacher_login_pass {
   display: -webkit-box;
@@ -58,7 +59,7 @@ input {
 }
 .teacher_login .teacher_login_pass input {
   padding-left: 10rpx;
-  border-bottom: 2rpx solid #000;
+  border-bottom: 2rpx solid #b9b9b9;
 }
 .teacher_login button {
   width: auto;

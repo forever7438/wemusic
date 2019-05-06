@@ -29,6 +29,19 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 //授课方式
 var _default = {
   components: {
@@ -61,16 +74,20 @@ var _default = {
 
   },
   onLoad: function onLoad(obj) {
+    this.musicId = obj.musicId;
     this.classId = obj.musicSunId;
     this.getChoiseTeacherInfo(obj.musicSunId);
     this.getCourseInfo(obj.musicSunId);
   },
   onPullDownRefresh: function onPullDownRefresh() {
+    if (this.selectFlag) return;
     this.page = 0;
     this.getCourseInfo(this.classId);
     this.getChoiseTeacherInfo(this.classId);
   },
   onReachBottom: function onReachBottom() {
+    console.log(this.selectFlag, " at pages\\choiceTeacher\\choiceTeacher.vue:79");
+    if (this.selectFlag) return;
     this.page++;
     this.getChoiseTeacherInfo(this.classId, true);
   },
@@ -82,7 +99,12 @@ var _default = {
         } else {
           this.selectFlag = false;
         }
-      } else window.history.back(-1);
+      } else {
+        uni.redirectTo({
+          url: '/pages/lessonCopy/lessonCopy?musicId=' + this.musicId });
+
+        //window.history.back(-1);
+      }
     },
     select: function select(item) {
       this.teacherId = item.id;
@@ -127,7 +149,6 @@ var _default = {
           this.orderShow = data.value;
           this.request.music_sun_id = this.classId;
           this.request.teacher_id = this.teacherId;
-          this.request.class_list_id = this.request.class_list_id.join(',');
           this.getCoupomList();
           break;
         case 'coupomTitle':
@@ -138,13 +159,16 @@ var _default = {
           this.request.price = data.price;
           break;}
 
+
+      console.log(this.request, " at pages\\choiceTeacher\\choiceTeacher.vue:153");
     },
     /**获取优惠券*/
     getCoupomList: function getCoupomList() {var _this2 = this;
+      var class_id = this.request.class_list_id.join(',');
       this.ajax({
         url: 'studentclass/coupom_list',
         data: {
-          class_list_id: this.request.class_list_id },
+          class_list_id: class_id },
 
         success: function success(res) {
           if (res.data.body === 'success') {
@@ -221,11 +245,19 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   var m0 = Number(_vm.courseInfo.star)
+  var m1 = _vm.$t("index")
+  var m2 = _vm.$t("index")
+  var m3 = Number(_vm.classId)
+  var m4 = Number(_vm.classId)
   _vm.$mp.data = Object.assign(
     {},
     {
       $root: {
-        m0: m0
+        m0: m0,
+        m1: m1,
+        m2: m2,
+        m3: m3,
+        m4: m4
       }
     }
   )

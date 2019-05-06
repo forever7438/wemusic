@@ -40,6 +40,17 @@
       science: [] };
 
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Teacher details' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '教师详情' });
+
+    }
+  },
   onLoad: function onLoad(obj) {
     uni.setNavigationBarColor({
       frontColor: '#ffffff',
@@ -59,6 +70,7 @@
         success: function success(res) {
           if (res.data.body === 'success') {
             var data = res.data.data;
+            console.log(data, " at pages\\teacherDetail\\teacherDetail.vue:63");
             _this.info = data.info;
             _this.courseList = data.list;
             _this.science = data.style;
@@ -114,11 +126,17 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   var m0 = Number(_vm.info.star)
+  var m1 = _vm.$t("index")
+  var m2 = _vm.$t("index")
+  var m3 = _vm.$t("index")
   _vm.$mp.data = Object.assign(
     {},
     {
       $root: {
-        m0: m0
+        m0: m0,
+        m1: m1,
+        m2: m2,
+        m3: m3
       }
     }
   )

@@ -43,6 +43,17 @@
     this.musicId = obj.musicId;
     this.getMusicInfo(obj.musicId);
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Lesson Copy' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '课程类型' });
+
+    }
+  },
   onPullDownRefresh: function onPullDownRefresh() {
     this.getMusicInfo(this.musicId);
   },
@@ -98,6 +109,17 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var m0 = _vm.$t("index")
+  var m1 = _vm.$t("index")
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        m0: m0,
+        m1: m1
+      }
+    }
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

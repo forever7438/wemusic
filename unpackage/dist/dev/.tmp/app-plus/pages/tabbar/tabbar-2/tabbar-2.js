@@ -35,6 +35,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 {
   components: {
     classList: classList,
@@ -43,8 +55,11 @@
 
   data: function data() {
     return {
+      title: '',
+      time: '',
+      pathType: 'class',
       showPicker: false,
-      type: 'rangetime',
+      type: 'date',
       value: '',
       start_time: '',
       end_time: '',
@@ -53,8 +68,25 @@
 
   },
   onReady: function onReady() {
-    this.onShowDatePicker('rangetime');
+    this.onShowDatePicker('date');
     uni.getStorageSync('type') == 1 ? this.isTeacher = false : this.isTeacher = true;
+  },
+  onLoad: function onLoad(obj) {
+    this.pathType = obj.type;
+    this.time = new Date().getTime();
+    this.title = "".concat(new Date().getMonth() + 1, "\u6708").concat(new Date().getDate(), "\u65E5");
+    this.getLessonList();
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Class Schedule Card' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '课程表' });
+
+    }
   },
   onNavigationBarButtonTap: function onNavigationBarButtonTap(obj) {
     uni.navigateTo({
@@ -62,6 +94,16 @@
 
   },
   methods: {
+    getTime: function getTime(data) {
+      this.title = "".concat(new Date(data).getMonth() + 1, "\u6708").concat(new Date(data).getDate(), "\u65E5");
+      this.time = new Date(data).getTime();
+      this.getLessonList();
+    },
+    goPath: function goPath(path, type) {
+      uni.redirectTo({
+        url: "".concat(path, "?type=").concat(type) });
+
+    },
     onShowDatePicker: function onShowDatePicker(type) {
       //显示
       this.type = type;
@@ -83,8 +125,7 @@
       this.ajax({
         url: uni.getStorageSync('type') == 1 ? 'studentclass/class_list' : 'teacherclass/class_list_time',
         data: {
-          start_time: this.start_time,
-          end_time: this.end_time },
+          time: this.time },
 
         success: function success(res) {
           if (res.data.body === 'success') {

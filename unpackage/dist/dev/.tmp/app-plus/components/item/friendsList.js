@@ -23,6 +23,16 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
+
+
+
+
+
+
+
+
+
 {
   components: {
     friendHead: friendHead,
@@ -36,7 +46,19 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     return {
       userImage: '../../static/img/lf.jpg' };
 
-  } };exports.default = _default;
+  },
+  methods: {
+    //获取朋友圈列表
+    getFriendList: function getFriendList() {
+      getCurrentPages().map(function (res) {
+        if (res.route == 'pages/circleFriends/circleFriends' || res.route == 'pages/myFriend/myFriend') {
+          res.getFriendList(0);
+        }
+      });
+    },
+    changeStatus: function changeStatus(data) {
+      this.$emit('forward_praise', data);
+    } } };exports.default = _default;
 
 /***/ }),
 

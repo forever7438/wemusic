@@ -92,17 +92,21 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var m0 = _vm.$t("index")
+  var m2 = _vm.$t("index")
   var l0 = _vm.listInfo.map(function(item, index) {
-    var m0 = Number(item.star)
+    var m1 = Number(item.star)
     return {
       $orig: _vm.__get_orig(item),
-      m0: m0
+      m1: m1
     }
   })
   _vm.$mp.data = Object.assign(
     {},
     {
       $root: {
+        m0: m0,
+        m2: m2,
         l0: l0
       }
     }

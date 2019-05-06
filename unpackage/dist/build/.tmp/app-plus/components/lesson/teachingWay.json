@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "startclass": "/components/starclass",
-    "select-time": "/components/item/selectTime"
-  },
-  "component": true
-}

@@ -56,6 +56,17 @@
       content: '' };
 
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'code Success' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '打卡成功' });
+
+    }
+  },
   methods: {
     getVal: function getVal(s) {
       this.star = s;

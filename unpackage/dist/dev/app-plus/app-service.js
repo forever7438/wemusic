@@ -1095,7 +1095,7 @@ Z([3,'__l'])
 Z([3,'class _div data-v-f4486556'])
 Z([[6],[[7],[3,'classList']],[3,'length']])
 Z([3,'data-v-f4486556'])
-Z([3,'暂无课程'])
+Z([[6],[[6],[[7],[3,'$root']],[3,'m4']],[3,'No_data']])
 })(__WXML_GLOBAL__.ops_cached.$gwx_6);return __WXML_GLOBAL__.ops_cached.$gwx_6
 }
 function gz$gwx_7(){
@@ -1133,6 +1133,16 @@ Z([[7],[3,'item']])
 Z([[6],[[7],[3,'item']],[3,'body']])
 Z([[6],[[7],[3,'item']],[3,'id']])
 Z([1,true])
+Z([3,'__e'])
+Z(z[11])
+Z([[4],[[5],[[5],[[4],[[5],[[5],[1,'^refreshData']],[[4],[[5],[[4],[[5],[1,'getFriendList']]]]]]]],[[4],[[5],[[5],[1,'^changeStatus']],[[4],[[5],[[4],[[5],[1,'changeStatus']]]]]]]]])
+Z([[6],[[7],[3,'item']],[3,'forward_num']])
+Z([[7],[3,'index']])
+Z([[6],[[7],[3,'item']],[3,'is_forward']])
+Z([[6],[[7],[3,'item']],[3,'is_praise']])
+Z(z[9])
+Z([[6],[[7],[3,'item']],[3,'message_num']])
+Z([[6],[[7],[3,'item']],[3,'praise_num']])
 })(__WXML_GLOBAL__.ops_cached.$gwx_9);return __WXML_GLOBAL__.ops_cached.$gwx_9
 }
 function gz$gwx_10(){
@@ -1159,7 +1169,7 @@ Z([[2,'==='],[[7],[3,'lessonType']],[1,'2']])
 Z(z[8])
 Z([[2,'!'],[[7],[3,'success']]])
 Z(z[9])
-Z([3,'暂无课程'])
+Z([[6],[[6],[[7],[3,'$root']],[3,'m12']],[3,'No_data']])
 })(__WXML_GLOBAL__.ops_cached.$gwx_10);return __WXML_GLOBAL__.ops_cached.$gwx_10
 }
 function gz$gwx_11(){
@@ -1170,7 +1180,7 @@ Z([3,'__l'])
 Z([3,'message_list_content _div data-v-208341b8'])
 Z([[6],[[7],[3,'messageList']],[3,'length']])
 Z([3,'data-v-208341b8'])
-Z([3,'暂无通知'])
+Z([[6],[[6],[[7],[3,'$root']],[3,'m1']],[3,'No_data']])
 })(__WXML_GLOBAL__.ops_cached.$gwx_11);return __WXML_GLOBAL__.ops_cached.$gwx_11
 }
 function gz$gwx_12(){
@@ -1181,7 +1191,7 @@ Z([3,'__l'])
 Z([3,'recharge_content _div data-v-0802db16'])
 Z([[6],[[7],[3,'moneyList']],[3,'length']])
 Z([3,'data-v-0802db16'])
-Z([3,'暂无记录'])
+Z([[6],[[6],[[7],[3,'$root']],[3,'m0']],[3,'No_data']])
 })(__WXML_GLOBAL__.ops_cached.$gwx_12);return __WXML_GLOBAL__.ops_cached.$gwx_12
 }
 function gz$gwx_13(){
@@ -1197,6 +1207,7 @@ Z([[4],[[5],[[4],[[5],[[5],[1,'^confirm']],[[4],[[5],[[4],[[5],[1,'DateConfirm']
 Z([3,'picker'])
 Z([[7],[3,'date']])
 Z([3,'dateTime'])
+Z([[7],[3,'date_']])
 Z([3,'#007AFF'])
 Z(z[3])
 Z(z[3])
@@ -1207,8 +1218,8 @@ Z([1,1])
 Z([3,'selector'])
 Z([[7],[3,'timeList']])
 Z([[4],[[5],[1,0]]])
-Z(z[9])
-Z([3,'选择时长'])
+Z(z[10])
+Z([[6],[[6],[[7],[3,'$root']],[3,'m1']],[3,'Duration_course']])
 })(__WXML_GLOBAL__.ops_cached.$gwx_13);return __WXML_GLOBAL__.ops_cached.$gwx_13
 }
 function gz$gwx_14(){
@@ -1224,7 +1235,7 @@ Z([[6],[[7],[3,'$root']],[3,'l0']])
 Z(z[3])
 Z([3,'data-v-54d5c002'])
 Z([1,13])
-Z([[6],[[7],[3,'item']],[3,'m0']])
+Z([[6],[[7],[3,'item']],[3,'m1']])
 Z([3,'#666666'])
 })(__WXML_GLOBAL__.ops_cached.$gwx_14);return __WXML_GLOBAL__.ops_cached.$gwx_14
 }
@@ -1283,7 +1294,7 @@ Z([3,'index'])
 Z([3,'item'])
 Z([[6],[[7],[3,'$root']],[3,'l0']])
 Z(z[2])
-Z([[6],[[7],[3,'item']],[3,'m0']])
+Z([[6],[[7],[3,'item']],[3,'m1']])
 Z([3,'#666666'])
 })(__WXML_GLOBAL__.ops_cached.$gwx_19);return __WXML_GLOBAL__.ops_cached.$gwx_19
 }
@@ -1359,12 +1370,6 @@ __WXML_GLOBAL__.ops_cached.$gwx_24=[];
 Z([3,'__l'])
 Z([3,'data-v-ef56a53c'])
 Z([[2,'!='],[[7],[3,'type']],[1,'time']])
-Z([3,'picker-modal-footer-info data-v-ef56a53c'])
-Z([[7],[3,'isMultiSelect']])
-Z(z[1])
-Z([[7],[3,'isContainTime']])
-Z(z[6])
-Z(z[6])
 Z([[7],[3,'showTimePicker']])
 Z([3,'__e'])
 Z([3,'picker-modal-time data-v-ef56a53c'])
@@ -1422,6 +1427,7 @@ Z([3,'data-v-21f5fe9b'])
 Z([[4],[[5],[[4],[[5],[[5],[1,'^change']],[[4],[[5],[[4],[[5],[1,'getVal']]]]]]]]])
 Z([[7],[3,'disabled']])
 Z([[7],[3,'isFill']])
+Z([[2,'?:'],[[2,'=='],[[7],[3,'size']],[1,28]],[1,'8'],[1,'2']])
 Z([[7],[3,'size']])
 Z([[7],[3,'star']])
 })(__WXML_GLOBAL__.ops_cached.$gwx_29);return __WXML_GLOBAL__.ops_cached.$gwx_29
@@ -1505,19 +1511,20 @@ if( __WXML_GLOBAL__.ops_cached.$gwx_36)return __WXML_GLOBAL__.ops_cached.$gwx_36
 __WXML_GLOBAL__.ops_cached.$gwx_36=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
 Z([3,'__l'])
-Z([3,'add_teacher data-v-5bcbd2c6'])
+Z([3,'data-v-5bcbd2c6'])
+Z([3,'add_teacher _div data-v-5bcbd2c6'])
 Z([3,'__e'])
 Z([3,'data-v-5bcbd2c6 vue-ref'])
 Z([[4],[[5],[[4],[[5],[[5],[1,'^confirm']],[[4],[[5],[[4],[[5],[1,'onConfirmDate']]]]]]]]])
 Z([3,'pickerDate'])
 Z([3,'date'])
-Z([3,'1980'])
+Z([3,'1950'])
 Z([3,'选择日期'])
-Z(z[2])
 Z(z[3])
+Z(z[4])
 Z([[4],[[5],[[4],[[5],[[5],[1,'^confirm']],[[4],[[5],[[4],[[5],[1,'onConfirmDates']]]]]]]]])
 Z([3,'pickerDates'])
-Z(z[6])
+Z(z[7])
 Z([3,'2014'])
 Z([[7],[3,'title']])
 })(__WXML_GLOBAL__.ops_cached.$gwx_36);return __WXML_GLOBAL__.ops_cached.$gwx_36
@@ -1539,7 +1546,7 @@ if( __WXML_GLOBAL__.ops_cached.$gwx_39)return __WXML_GLOBAL__.ops_cached.$gwx_39
 __WXML_GLOBAL__.ops_cached.$gwx_39=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
 Z([3,'__l'])
-Z([[2,'||'],[[6],[[7],[3,'courseInfo']],[3,'content']],[1,'暂无课程介绍']])
+Z([[2,'||'],[[6],[[7],[3,'courseInfo']],[3,'content']],[[6],[[6],[[7],[3,'$root']],[3,'m1']],[3,'NoIntroduction']]])
 Z([3,'lessonDetail'])
 Z([[6],[[7],[3,'courseInfo']],[3,'max_time_type']])
 Z([[6],[[7],[3,'courseInfo']],[3,'mix_time_type']])
@@ -1550,17 +1557,17 @@ Z([[4],[[5],[[4],[[5],[[5],[1,'^selectFunction']],[[4],[[5],[[4],[[5],[1,'select
 Z([3,'lessonCopy'])
 Z([[2,'?:'],[[7],[3,'selectFlag']],[[7],[3,'selectItem']],[[7],[3,'listInfo']]])
 Z([[7],[3,'selectFlag']])
-Z([3,'选择教师'])
+Z([[6],[[6],[[7],[3,'$root']],[3,'m2']],[3,'Choose_teacher']])
 Z(z[11])
 Z(z[7])
-Z([[7],[3,'classId']])
+Z([[6],[[7],[3,'$root']],[3,'m3']])
 Z([[4],[[5],[[4],[[5],[[5],[1,'^changeRequest']],[[4],[[5],[[4],[[5],[1,'changeRequest']]]]]]]]])
 Z([[7],[3,'orderShow']])
 Z([[7],[3,'request']])
 Z([[7],[3,'teacherId']])
 Z(z[17])
 Z(z[7])
-Z(z[15])
+Z([[6],[[7],[3,'$root']],[3,'m4']])
 Z([[7],[3,'coupomList']])
 Z(z[16])
 Z(z[18])
@@ -1574,6 +1581,8 @@ Z([3,'__l'])
 Z([3,'fridend_content'])
 Z([3,'20'])
 Z([3,'forward'])
+Z([3,'__e'])
+Z([[4],[[5],[[4],[[5],[[5],[1,'^forward_praise']],[[4],[[5],[[4],[[5],[1,'forward_praise']]]]]]]]])
 Z([[7],[3,'friendsList']])
 })(__WXML_GLOBAL__.ops_cached.$gwx_40);return __WXML_GLOBAL__.ops_cached.$gwx_40
 }
@@ -1674,24 +1683,58 @@ __WXML_GLOBAL__.ops_cached.$gwx_48=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
 Z([3,'__l'])
 Z([3,'evaluate _div data-v-100860c6'])
+Z([3,'__e'])
 Z([3,'data-v-100860c6'])
 Z([3,'教师 Jennifer Young'])
-Z([3,'课程'])
+Z([[4],[[5],[[4],[[5],[[5],[1,'^sendData']],[[4],[[5],[[4],[[5],[1,'getContent1']]]]]]]]])
+Z([[6],[[6],[[7],[3,'$root']],[3,'m0']],[3,'Course_evaluation']])
 Z([3,'吉他快速入门'])
 Z(z[2])
-Z([3,'星级'])
+Z(z[3])
+Z([[4],[[5],[[4],[[5],[[5],[1,'^sendVal']],[[4],[[5],[[4],[[5],[1,'getData1']]]]]]]]])
+Z([1,false])
+Z([[6],[[7],[3,'$root']],[3,'m2']])
+Z([[6],[[7],[3,'$root']],[3,'m3']])
+Z([3,'#666666'])
+Z([[6],[[6],[[7],[3,'$root']],[3,'m1']],[3,'star']])
 Z(z[2])
+Z(z[3])
 Z([3,'从事10年钢琴教学，拥有丰富教学经验，技艺精湛，曾多次获得演奏大奖。'])
-Z([3,'教师'])
+Z([[4],[[5],[[4],[[5],[[5],[1,'^sendData']],[[4],[[5],[[4],[[5],[1,'getContent2']]]]]]]]])
+Z([[6],[[6],[[7],[3,'$root']],[3,'m4']],[3,'Evaluation_Teachers']])
 Z([3,'Laura Johnson'])
 Z(z[2])
-Z(z[7])
+Z(z[3])
+Z([[4],[[5],[[4],[[5],[[5],[1,'^sendVal']],[[4],[[5],[[4],[[5],[1,'getData2']]]]]]]]])
+Z(z[11])
+Z([[6],[[7],[3,'$root']],[3,'m7']])
+Z([[6],[[7],[3,'$root']],[3,'m6']])
+Z(z[14])
+Z([[6],[[6],[[7],[3,'$root']],[3,'m5']],[3,'star']])
 Z(z[2])
-Z([3,'教师授课'])
+Z(z[3])
+Z([[4],[[5],[[4],[[5],[[5],[1,'^sendVal']],[[4],[[5],[[4],[[5],[1,'getData3']]]]]]]]])
+Z(z[11])
+Z([[6],[[7],[3,'$root']],[3,'m10']])
+Z([[6],[[7],[3,'$root']],[3,'m9']])
+Z(z[14])
+Z([[6],[[6],[[7],[3,'$root']],[3,'m8']],[3,'Teacher_teaching']])
 Z(z[2])
-Z([3,'教师授课方式'])
+Z(z[3])
+Z([[4],[[5],[[4],[[5],[[5],[1,'^sendVal']],[[4],[[5],[[4],[[5],[1,'getData4']]]]]]]]])
+Z(z[11])
+Z([[6],[[7],[3,'$root']],[3,'m13']])
+Z([[6],[[7],[3,'$root']],[3,'m12']])
+Z(z[14])
+Z([[6],[[6],[[7],[3,'$root']],[3,'m11']],[3,'Teaching_methods']])
 Z(z[2])
-Z([3,'教师授课态度'])
+Z(z[3])
+Z([[4],[[5],[[4],[[5],[[5],[1,'^sendVal']],[[4],[[5],[[4],[[5],[1,'getData5']]]]]]]]])
+Z(z[11])
+Z([[6],[[7],[3,'$root']],[3,'m16']])
+Z([[6],[[7],[3,'$root']],[3,'m15']])
+Z(z[14])
+Z([[6],[[6],[[7],[3,'$root']],[3,'m14']],[3,'Teaching_attitude']])
 })(__WXML_GLOBAL__.ops_cached.$gwx_48);return __WXML_GLOBAL__.ops_cached.$gwx_48
 }
 function gz$gwx_49(){
@@ -1730,18 +1773,21 @@ __WXML_GLOBAL__.ops_cached.$gwx_52=[];
 Z([3,'__l'])
 Z([3,'content'])
 Z([3,'parents'])
-Z([[7],[3,'friendDetail']])
 Z([[6],[[7],[3,'friendDetail']],[3,'body']])
 Z([1,false])
+Z([3,'__e'])
+Z([[4],[[5],[[4],[[5],[[5],[1,'^changeStatus']],[[4],[[5],[[4],[[5],[1,'forward_praise']]]]]]]]])
 Z([[6],[[7],[3,'friendDetail']],[3,'forward']])
+Z([[6],[[7],[3,'friendDetail']],[3,'is_forward']])
+Z([[6],[[7],[3,'friendDetail']],[3,'is_praise']])
 Z([[6],[[7],[3,'friendDetail']],[3,'id']])
 Z([[6],[[7],[3,'friendDetail']],[3,'message']])
 Z([[6],[[7],[3,'friendDetail']],[3,'praise']])
 Z([[7],[3,'commentList']])
-Z(z[8])
-Z([3,'__e'])
+Z(z[11])
+Z(z[5])
 Z([[4],[[5],[[4],[[5],[[5],[1,'^refreshFriend']],[[4],[[5],[[4],[[5],[1,'snedComment']]]]]]]]])
-Z(z[7])
+Z(z[10])
 })(__WXML_GLOBAL__.ops_cached.$gwx_52);return __WXML_GLOBAL__.ops_cached.$gwx_52
 }
 function gz$gwx_53(){
@@ -1765,7 +1811,7 @@ __WXML_GLOBAL__.ops_cached.$gwx_54=[];
 Z([3,'__l'])
 Z([3,'lesson_copy'])
 Z([[7],[3,'flag']])
-Z([[2,'||'],[[6],[[6],[[7],[3,'musicInfo']],[3,'info']],[3,'content']],[1,'暂无介绍']])
+Z([[2,'||'],[[6],[[6],[[7],[3,'musicInfo']],[3,'info']],[3,'content']],[[6],[[6],[[7],[3,'$root']],[3,'m0']],[3,'NoIntroduction']]])
 Z([3,'lessonCopy'])
 Z([[6],[[6],[[7],[3,'musicInfo']],[3,'info']],[3,'name']])
 Z(z[2])
@@ -1779,19 +1825,19 @@ if( __WXML_GLOBAL__.ops_cached.$gwx_55)return __WXML_GLOBAL__.ops_cached.$gwx_55
 __WXML_GLOBAL__.ops_cached.$gwx_55=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
 Z([3,'__l'])
-Z([[2,'||'],[[6],[[7],[3,'musicIndexInfo']],[3,'content']],[1,'暂无课程介绍']])
+Z([[2,'||'],[[6],[[7],[3,'musicIndexInfo']],[3,'content']],[[6],[[6],[[7],[3,'$root']],[3,'m1']],[3,'NoIntroduction']]])
 Z([3,'lessonDetail'])
 Z([[6],[[7],[3,'musicIndexInfo']],[3,'max_time_type']])
 Z([[6],[[7],[3,'musicIndexInfo']],[3,'mix_time_type']])
 Z([[6],[[7],[3,'$root']],[3,'m0']])
 Z([[6],[[7],[3,'musicIndexInfo']],[3,'name']])
 Z([[7],[3,'teacherList']])
-Z(z[1])
-Z([3,'课程介绍'])
+Z([[2,'||'],[[6],[[7],[3,'musicIndexInfo']],[3,'content']],[[6],[[6],[[7],[3,'$root']],[3,'m3']],[3,'NoIntroduction']]])
+Z([[6],[[6],[[7],[3,'$root']],[3,'m2']],[3,'courseIntroduction']])
 Z([[7],[3,'comment']])
-Z([3,'课程评价'])
+Z([[6],[[6],[[7],[3,'$root']],[3,'m4']],[3,'Curr_evaluation']])
 Z([[7],[3,'scienceImg']])
-Z([3,'教学环境'])
+Z([[6],[[6],[[7],[3,'$root']],[3,'m5']],[3,'Teaching_environment']])
 })(__WXML_GLOBAL__.ops_cached.$gwx_55);return __WXML_GLOBAL__.ops_cached.$gwx_55
 }
 function gz$gwx_56(){
@@ -1842,6 +1888,8 @@ __WXML_GLOBAL__.ops_cached.$gwx_61=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
 Z([3,'__l'])
 Z([3,'fridend_content'])
+Z([3,'__e'])
+Z([[4],[[5],[[4],[[5],[[5],[1,'^forward_praise']],[[4],[[5],[[4],[[5],[1,'forward_praise']]]]]]]]])
 Z([[7],[3,'friendsList']])
 })(__WXML_GLOBAL__.ops_cached.$gwx_61);return __WXML_GLOBAL__.ops_cached.$gwx_61
 }
@@ -1880,7 +1928,7 @@ Z([3,'__l'])
 Z([3,'_div data-v-5ccb63bc'])
 Z([3,'data-v-5ccb63bc'])
 Z([1,13])
-Z([[6],[[7],[3,'courseInfo']],[3,'star']])
+Z([[6],[[7],[3,'$root']],[3,'m1']])
 Z([3,'#666666'])
 })(__WXML_GLOBAL__.ops_cached.$gwx_66);return __WXML_GLOBAL__.ops_cached.$gwx_66
 }
@@ -1921,6 +1969,9 @@ function gz$gwx_69(){
 if( __WXML_GLOBAL__.ops_cached.$gwx_69)return __WXML_GLOBAL__.ops_cached.$gwx_69
 __WXML_GLOBAL__.ops_cached.$gwx_69=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
+Z([3,'__l'])
+Z([3,'class_list'])
+Z([[2,'!'],[[7],[3,'isTeacher']]])
 })(__WXML_GLOBAL__.ops_cached.$gwx_69);return __WXML_GLOBAL__.ops_cached.$gwx_69
 }
 function gz$gwx_70(){
@@ -1932,17 +1983,19 @@ Z([3,'calendar-content'])
 Z([3,'开始'])
 Z([3,'__e'])
 Z(z[3])
+Z(z[3])
 Z([3,'#FAD42A'])
-Z([[4],[[5],[[5],[[4],[[5],[[5],[1,'^confirm']],[[4],[[5],[[4],[[5],[1,'onSelected']]]]]]]],[[4],[[5],[[5],[1,'^cancel']],[[4],[[5],[[4],[[5],[1,'onSelected']]]]]]]]])
+Z([[4],[[5],[[5],[[5],[[4],[[5],[[5],[1,'^confirm']],[[4],[[5],[[4],[[5],[1,'onSelected']]]]]]]],[[4],[[5],[[5],[1,'^cancel']],[[4],[[5],[[4],[[5],[1,'onSelected']]]]]]]],[[4],[[5],[[5],[1,'^selectTime']],[[4],[[5],[[4],[[5],[1,'getTime']]]]]]]]])
 Z([3,'结束'])
 Z([3,'yyyy/mm/dd hh:ii:ss'])
 Z([[7],[3,'showPicker']])
 Z([1,true])
-Z(z[10])
+Z(z[11])
 Z([[7],[3,'type']])
 Z([[7],[3,'value']])
 Z([[7],[3,'classList']])
 Z([[7],[3,'isTeacher']])
+Z([[2,'!'],[[7],[3,'isTeacher']]])
 })(__WXML_GLOBAL__.ops_cached.$gwx_70);return __WXML_GLOBAL__.ops_cached.$gwx_70
 }
 function gz$gwx_71(){
@@ -1955,6 +2008,14 @@ Z(z[1])
 Z([[4],[[5],[[5],[[4],[[5],[[5],[1,'^close']],[[4],[[5],[[4],[[5],[1,'e0']]]]]]]],[[4],[[5],[[5],[1,'^confirm']],[[4],[[5],[[4],[[5],[1,'bindBtn']]]]]]]]])
 Z([[7],[3,'show']])
 Z([3,'是否切换语言'])
+Z([[2,'!'],[[7],[3,'isTeacher']]])
+Z([3,'18'])
+Z([3,'vertical-align:initial;color:#ffe6be;'])
+Z([3,'forward'])
+Z(z[7])
+Z([3,'vertical-align:initial;'])
+Z(z[9])
+Z(z[6])
 })(__WXML_GLOBAL__.ops_cached.$gwx_71);return __WXML_GLOBAL__.ops_cached.$gwx_71
 }
 function gz$gwx_72(){
@@ -1971,10 +2032,10 @@ Z([3,'lessonCopy'])
 Z([[7],[3,'courseList']])
 Z([[6],[[7],[3,'comment']],[3,'length']])
 Z([[7],[3,'comment']])
-Z([3,'学生评价'])
+Z([[6],[[6],[[7],[3,'$root']],[3,'m2']],[3,'Student_evaluation']])
 Z([[6],[[7],[3,'science']],[3,'length']])
 Z([[7],[3,'science']])
-Z([3,'教师风采'])
+Z([[6],[[6],[[7],[3,'$root']],[3,'m3']],[3,'teachers']])
 })(__WXML_GLOBAL__.ops_cached.$gwx_72);return __WXML_GLOBAL__.ops_cached.$gwx_72
 }
 function gz$gwx_73(){
@@ -2067,6 +2128,7 @@ Z([3,'forward'])
 Z(z[3])
 Z(z[4])
 Z(z[5])
+Z([[7],[3,'flag']])
 })(__WXML_GLOBAL__.ops_cached.$gwx_79);return __WXML_GLOBAL__.ops_cached.$gwx_79
 }
 function gz$gwx_80(){
@@ -2121,8 +2183,8 @@ cs.push("./components/item/classList.wxml:block:1:57")
 cs.pop()
 }
 else{oH.wxVkey=2
-cs.push("./components/item/classList.wxml:block:1:1188")
-cs.push("./components/item/classList.wxml:no-content:1:1203")
+cs.push("./components/item/classList.wxml:block:1:1249")
+cs.push("./components/item/classList.wxml:no-content:1:1264")
 var cI=_mz(z,'no-content',['class',3,'title',1],[],e,s,gg)
 cs.pop()
 _(oH,cI)
@@ -2158,8 +2220,8 @@ cs.push("./components/item/financeList.wxml:block:1:127")
 cs.pop()
 }
 else{fS.wxVkey=2
-cs.push("./components/item/financeList.wxml:block:1:817")
-cs.push("./components/item/financeList.wxml:no-content:1:832")
+cs.push("./components/item/financeList.wxml:block:1:857")
+cs.push("./components/item/financeList.wxml:no-content:1:872")
 var cT=_n('no-content')
 _rz(z,cT,'title',7,oP,bO,gg)
 cs.pop()
@@ -2200,6 +2262,10 @@ cs.push("./components/item/friendsList.wxml:friend-content:1:206")
 var x5=_mz(z,'friend-content',['content',8,'listId',1,'type',2],[],aZ,lY,gg)
 cs.pop()
 _(b3,x5)
+cs.push("./components/item/friendsList.wxml:friend-operation:1:347")
+var o6=_mz(z,'friend-operation',['bind:changeStatus',11,'bind:refreshData',1,'data-event-opts',2,'forward',3,'index',4,'is_forward',5,'is_praise',6,'listId',7,'message',8,'praise',9],[],aZ,lY,gg)
+cs.pop()
+_(b3,o6)
 cs.pop()
 _(t1,b3)
 return t1
@@ -2216,103 +2282,103 @@ d_[x[9]]={}
 var m9=function(e,s,r,gg){
 var z=gz$gwx_10()
 cs.push("./components/item/lessonList.wxml:view:1:1")
-var f7=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
-var c8=_v()
-_(f7,c8)
-if(_oz(z,2,e,s,gg)){c8.wxVkey=1
-cs.push("./components/item/lessonList.wxml:block:1:66")
+var c8=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
 var h9=_v()
 _(c8,h9)
+if(_oz(z,2,e,s,gg)){h9.wxVkey=1
+cs.push("./components/item/lessonList.wxml:block:1:66")
+var o0=_v()
+_(h9,o0)
 cs.push("./components/item/lessonList.wxml:block:1:135")
-var o0=function(oBB,cAB,lCB,gg){
+var cAB=function(lCB,oBB,aDB,gg){
 cs.push("./components/item/lessonList.wxml:view:1:622")
-var tEB=_n('view')
-_rz(z,tEB,'class',7,oBB,cAB,gg)
-var eFB=_v()
-_(tEB,eFB)
-if(_oz(z,8,oBB,cAB,gg)){eFB.wxVkey=1
-cs.push("./components/item/lessonList.wxml:block:1:750")
-cs.push("./components/item/lessonList.wxml:startclass:1:825")
-var bGB=_mz(z,'startclass',['class',9,'star',1,'starColor',2],[],oBB,cAB,gg)
-cs.pop()
+var eFB=_n('view')
+_rz(z,eFB,'class',7,lCB,oBB,gg)
+var bGB=_v()
 _(eFB,bGB)
+if(_oz(z,8,lCB,oBB,gg)){bGB.wxVkey=1
+cs.push("./components/item/lessonList.wxml:block:1:767")
+cs.push("./components/item/lessonList.wxml:startclass:1:842")
+var oHB=_mz(z,'startclass',['class',9,'star',1,'starColor',2],[],lCB,oBB,gg)
+cs.pop()
+_(bGB,oHB)
 cs.pop()
 }
-else{eFB.wxVkey=2
-cs.push("./components/item/lessonList.wxml:block:1:921")
+else{bGB.wxVkey=2
+cs.push("./components/item/lessonList.wxml:block:1:938")
 cs.pop()
 }
-cs.push("./components/item/lessonList.wxml:view:1:1034")
-var oHB=_n('view')
-_rz(z,oHB,'class',12,oBB,cAB,gg)
-var xIB=_v()
-_(oHB,xIB)
-if(_oz(z,13,oBB,cAB,gg)){xIB.wxVkey=1
-cs.push("./components/item/lessonList.wxml:block:1:1459")
-cs.pop()
-}
+cs.push("./components/item/lessonList.wxml:view:1:1041")
+var xIB=_n('view')
+_rz(z,xIB,'class',12,lCB,oBB,gg)
 var oJB=_v()
-_(oHB,oJB)
-if(_oz(z,14,oBB,cAB,gg)){oJB.wxVkey=1
-cs.push("./components/item/lessonList.wxml:block:1:1662")
+_(xIB,oJB)
+if(_oz(z,13,lCB,oBB,gg)){oJB.wxVkey=1
+cs.push("./components/item/lessonList.wxml:block:1:1527")
 cs.pop()
 }
 var fKB=_v()
-_(oHB,fKB)
-if(_oz(z,15,oBB,cAB,gg)){fKB.wxVkey=1
-cs.push("./components/item/lessonList.wxml:block:1:1864")
+_(xIB,fKB)
+if(_oz(z,14,lCB,oBB,gg)){fKB.wxVkey=1
+cs.push("./components/item/lessonList.wxml:block:1:1780")
 cs.pop()
 }
 var cLB=_v()
-_(oHB,cLB)
-if(_oz(z,16,oBB,cAB,gg)){cLB.wxVkey=1
-cs.push("./components/item/lessonList.wxml:block:1:2096")
+_(xIB,cLB)
+if(_oz(z,15,lCB,oBB,gg)){cLB.wxVkey=1
+cs.push("./components/item/lessonList.wxml:block:1:2027")
 cs.pop()
 }
 var hMB=_v()
-_(oHB,hMB)
-if(_oz(z,17,oBB,cAB,gg)){hMB.wxVkey=1
-cs.push("./components/item/lessonList.wxml:block:1:2298")
+_(xIB,hMB)
+if(_oz(z,16,lCB,oBB,gg)){hMB.wxVkey=1
+cs.push("./components/item/lessonList.wxml:block:1:2269")
+cs.pop()
+}
 var oNB=_v()
-_(hMB,oNB)
-if(_oz(z,18,oBB,cAB,gg)){oNB.wxVkey=1
-cs.push("./components/item/lessonList.wxml:block:1:2520")
+_(xIB,oNB)
+if(_oz(z,17,lCB,oBB,gg)){oNB.wxVkey=1
+cs.push("./components/item/lessonList.wxml:block:1:2487")
+var cOB=_v()
+_(oNB,cOB)
+if(_oz(z,18,lCB,oBB,gg)){cOB.wxVkey=1
+cs.push("./components/item/lessonList.wxml:block:1:2709")
 cs.pop()
 }
-oNB.wxXCkey=1
+cOB.wxXCkey=1
 cs.pop()
 }
-xIB.wxXCkey=1
 oJB.wxXCkey=1
 fKB.wxXCkey=1
 cLB.wxXCkey=1
 hMB.wxXCkey=1
+oNB.wxXCkey=1
 cs.pop()
-_(tEB,oHB)
-eFB.wxXCkey=1
-eFB.wxXCkey=3
+_(eFB,xIB)
+bGB.wxXCkey=1
+bGB.wxXCkey=3
 cs.pop()
-_(lCB,tEB)
-return lCB
+_(aDB,eFB)
+return aDB
 }
-h9.wxXCkey=4
-_2z(z,5,o0,e,s,gg,h9,'item','index','index')
+o0.wxXCkey=4
+_2z(z,5,cAB,e,s,gg,o0,'item','index','index')
 cs.pop()
-cs.pop()
-}
-else{c8.wxVkey=2
-cs.push("./components/item/lessonList.wxml:block:1:2678")
-cs.push("./components/item/lessonList.wxml:no-content:1:2693")
-var cOB=_mz(z,'no-content',['class',19,'title',1],[],e,s,gg)
-cs.pop()
-_(c8,cOB)
 cs.pop()
 }
-c8.wxXCkey=1
-c8.wxXCkey=3
-c8.wxXCkey=3
+else{h9.wxVkey=2
+cs.push("./components/item/lessonList.wxml:block:1:2882")
+cs.push("./components/item/lessonList.wxml:no-content:1:2897")
+var oPB=_mz(z,'no-content',['class',19,'title',1],[],e,s,gg)
 cs.pop()
-_(r,f7)
+_(h9,oPB)
+cs.pop()
+}
+h9.wxXCkey=1
+h9.wxXCkey=3
+h9.wxXCkey=3
+cs.pop()
+_(r,c8)
 return r
 }
 e_[x[9]]={f:m9,j:[],i:[],ti:[],ic:[]}
@@ -2320,25 +2386,25 @@ d_[x[10]]={}
 var m10=function(e,s,r,gg){
 var z=gz$gwx_11()
 cs.push("./components/item/messageList.wxml:view:1:1")
-var lQB=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
-var aRB=_v()
-_(lQB,aRB)
-if(_oz(z,2,e,s,gg)){aRB.wxVkey=1
+var aRB=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var tSB=_v()
+_(aRB,tSB)
+if(_oz(z,2,e,s,gg)){tSB.wxVkey=1
 cs.push("./components/item/messageList.wxml:block:1:72")
 cs.pop()
 }
-else{aRB.wxVkey=2
-cs.push("./components/item/messageList.wxml:block:1:676")
-cs.push("./components/item/messageList.wxml:no-content:1:691")
-var tSB=_mz(z,'no-content',['class',3,'title',1],[],e,s,gg)
+else{tSB.wxVkey=2
+cs.push("./components/item/messageList.wxml:block:1:684")
+cs.push("./components/item/messageList.wxml:no-content:1:699")
+var eTB=_mz(z,'no-content',['class',3,'title',1],[],e,s,gg)
 cs.pop()
-_(aRB,tSB)
+_(tSB,eTB)
 cs.pop()
 }
-aRB.wxXCkey=1
-aRB.wxXCkey=3
+tSB.wxXCkey=1
+tSB.wxXCkey=3
 cs.pop()
-_(r,lQB)
+_(r,aRB)
 return r
 }
 e_[x[10]]={f:m10,j:[],i:[],ti:[],ic:[]}
@@ -2346,25 +2412,25 @@ d_[x[11]]={}
 var m11=function(e,s,r,gg){
 var z=gz$gwx_12()
 cs.push("./components/item/rechargeList.wxml:view:1:1")
-var bUB=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
-var oVB=_v()
-_(bUB,oVB)
-if(_oz(z,2,e,s,gg)){oVB.wxVkey=1
+var oVB=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var xWB=_v()
+_(oVB,xWB)
+if(_oz(z,2,e,s,gg)){xWB.wxVkey=1
 cs.push("./components/item/rechargeList.wxml:block:1:68")
 cs.pop()
 }
-else{oVB.wxVkey=2
-cs.push("./components/item/rechargeList.wxml:block:1:666")
-cs.push("./components/item/rechargeList.wxml:no-content:1:681")
-var xWB=_mz(z,'no-content',['class',3,'title',1],[],e,s,gg)
+else{xWB.wxVkey=2
+cs.push("./components/item/rechargeList.wxml:block:1:659")
+cs.push("./components/item/rechargeList.wxml:no-content:1:674")
+var oXB=_mz(z,'no-content',['class',3,'title',1],[],e,s,gg)
 cs.pop()
-_(oVB,xWB)
+_(xWB,oXB)
 cs.pop()
 }
-oVB.wxXCkey=1
-oVB.wxXCkey=3
+xWB.wxXCkey=1
+xWB.wxXCkey=3
 cs.pop()
-_(r,bUB)
+_(r,oVB)
 return r
 }
 e_[x[11]]={f:m11,j:[],i:[],ti:[],ic:[]}
@@ -2372,24 +2438,24 @@ d_[x[12]]={}
 var m12=function(e,s,r,gg){
 var z=gz$gwx_13()
 cs.push("./components/item/selectTime.wxml:view:1:1")
-var fYB=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
-var cZB=_v()
-_(fYB,cZB)
-if(_oz(z,2,e,s,gg)){cZB.wxVkey=1
-cs.push("./components/item/selectTime.wxml:block:1:677")
+var cZB=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var h1B=_v()
+_(cZB,h1B)
+if(_oz(z,2,e,s,gg)){h1B.wxVkey=1
+cs.push("./components/item/selectTime.wxml:block:1:696")
 cs.pop()
 }
-cs.push("./components/item/selectTime.wxml:w-picker:1:918")
-var h1B=_mz(z,'w-picker',['bind:confirm',3,'class',1,'data-event-opts',2,'data-ref',3,'defaultVal',4,'mode',5,'themeColor',6],[],e,s,gg)
+cs.push("./components/item/selectTime.wxml:w-picker:1:937")
+var o2B=_mz(z,'w-picker',['bind:confirm',3,'class',1,'data-event-opts',2,'data-ref',3,'defaultVal',4,'mode',5,'startYear',6,'themeColor',7],[],e,s,gg)
 cs.pop()
-_(fYB,h1B)
-cs.push("./components/item/selectTime.wxml:mpvue-picker:1:1122")
-var o2B=_mz(z,'mpvue-picker',['bind:onCancel',10,'bind:onConfirm',1,'class',2,'data-event-opts',3,'data-ref',4,'deepLength',5,'mode',6,'pickerValueArray',7,'pickerValueDefault',8,'themeColor',9,'titleInfo',10],[],e,s,gg)
+_(cZB,o2B)
+cs.push("./components/item/selectTime.wxml:mpvue-picker:1:1163")
+var c3B=_mz(z,'mpvue-picker',['bind:onCancel',11,'bind:onConfirm',1,'class',2,'data-event-opts',3,'data-ref',4,'deepLength',5,'mode',6,'pickerValueArray',7,'pickerValueDefault',8,'themeColor',9,'titleInfo',10],[],e,s,gg)
 cs.pop()
-_(fYB,o2B)
-cZB.wxXCkey=1
+_(cZB,c3B)
+h1B.wxXCkey=1
 cs.pop()
-_(r,fYB)
+_(r,cZB)
 return r
 }
 e_[x[12]]={f:m12,j:[],i:[],ti:[],ic:[]}
@@ -2397,29 +2463,29 @@ d_[x[13]]={}
 var m13=function(e,s,r,gg){
 var z=gz$gwx_14()
 cs.push("./components/item/teacherList.wxml:view:1:1")
-var o4B=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
-var l5B=_v()
-_(o4B,l5B)
-if(_oz(z,2,e,s,gg)){l5B.wxVkey=1
+var l5B=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var a6B=_v()
+_(l5B,a6B)
+if(_oz(z,2,e,s,gg)){a6B.wxVkey=1
 cs.push("./components/item/teacherList.wxml:block:1:99")
 cs.pop()
 }
-var a6B=_v()
-_(o4B,a6B)
+var t7B=_v()
+_(l5B,t7B)
 cs.push("./components/item/teacherList.wxml:block:1:232")
-var t7B=function(b9B,e8B,o0B,gg){
-cs.push("./components/item/teacherList.wxml:startclass:1:883")
-var oBC=_mz(z,'startclass',['class',7,'size',1,'star',2,'starColor',3],[],b9B,e8B,gg)
+var e8B=function(o0B,b9B,xAC,gg){
+cs.push("./components/item/teacherList.wxml:startclass:1:896")
+var fCC=_mz(z,'startclass',['class',7,'size',1,'star',2,'starColor',3],[],o0B,b9B,gg)
 cs.pop()
-_(o0B,oBC)
-return o0B
+_(xAC,fCC)
+return xAC
 }
-a6B.wxXCkey=4
-_2z(z,5,t7B,e,s,gg,a6B,'item','index','index')
+t7B.wxXCkey=4
+_2z(z,5,e8B,e,s,gg,t7B,'item','index','index')
 cs.pop()
-l5B.wxXCkey=1
+a6B.wxXCkey=1
 cs.pop()
-_(r,o4B)
+_(r,l5B)
 return r
 }
 e_[x[13]]={f:m13,j:[],i:[],ti:[],ic:[]}
@@ -2427,40 +2493,40 @@ d_[x[14]]={}
 var m14=function(e,s,r,gg){
 var z=gz$gwx_15()
 cs.push("./components/lesson/lessonComment.wxml:view:1:1")
-var cDC=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
-var hEC=_v()
-_(cDC,hEC)
-if(_oz(z,2,e,s,gg)){hEC.wxVkey=1
-cs.push("./components/lesson/lessonComment.wxml:block:1:89")
+var hEC=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
 var oFC=_v()
 _(hEC,oFC)
+if(_oz(z,2,e,s,gg)){oFC.wxVkey=1
+cs.push("./components/lesson/lessonComment.wxml:block:1:89")
+var cGC=_v()
+_(oFC,cGC)
 cs.push("./components/lesson/lessonComment.wxml:block:1:129")
-var cGC=function(lIC,oHC,aJC,gg){
+var oHC=function(aJC,lIC,tKC,gg){
 cs.push("./components/lesson/lessonComment.wxml:startclass:1:512")
-var eLC=_mz(z,'startclass',['star',7,'starColor',1],[],lIC,oHC,gg)
+var bMC=_mz(z,'startclass',['star',7,'starColor',1],[],aJC,lIC,gg)
 cs.pop()
-_(aJC,eLC)
-return aJC
+_(tKC,bMC)
+return tKC
 }
-oFC.wxXCkey=4
-_2z(z,5,cGC,e,s,gg,oFC,'item','index','index')
+cGC.wxXCkey=4
+_2z(z,5,oHC,e,s,gg,cGC,'item','index','index')
 cs.pop()
 cs.pop()
 }
-else{hEC.wxVkey=2
+else{oFC.wxVkey=2
 cs.push("./components/lesson/lessonComment.wxml:block:1:686")
 cs.push("./components/lesson/lessonComment.wxml:no-content:1:701")
-var bMC=_n('no-content')
-_rz(z,bMC,'title',9,e,s,gg)
+var oNC=_n('no-content')
+_rz(z,oNC,'title',9,e,s,gg)
 cs.pop()
-_(hEC,bMC)
+_(oFC,oNC)
 cs.pop()
 }
-hEC.wxXCkey=1
-hEC.wxXCkey=3
-hEC.wxXCkey=3
+oFC.wxXCkey=1
+oFC.wxXCkey=3
+oFC.wxXCkey=3
 cs.pop()
-_(r,cDC)
+_(r,hEC)
 return r
 }
 e_[x[14]]={f:m14,j:[],i:[],ti:[],ic:[]}
@@ -2474,47 +2540,47 @@ d_[x[16]]={}
 var m16=function(e,s,r,gg){
 var z=gz$gwx_17()
 cs.push("./components/lesson/lessonHead.wxml:view:1:1")
-var oPC=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var fQC=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
 cs.push("./components/lesson/lessonHead.wxml:view:1:47")
-var fQC=_n('view')
-_rz(z,fQC,'class',2,e,s,gg)
-var cRC=_v()
-_(fQC,cRC)
-if(_oz(z,3,e,s,gg)){cRC.wxVkey=1
+var cRC=_n('view')
+_rz(z,cRC,'class',2,e,s,gg)
+var hSC=_v()
+_(cRC,hSC)
+if(_oz(z,3,e,s,gg)){hSC.wxVkey=1
 cs.push("./components/lesson/lessonHead.wxml:block:1:148")
 cs.pop()
 }
-var hSC=_v()
-_(fQC,hSC)
-if(_oz(z,4,e,s,gg)){hSC.wxVkey=1
+var oTC=_v()
+_(cRC,oTC)
+if(_oz(z,4,e,s,gg)){oTC.wxVkey=1
 cs.push("./components/lesson/lessonHead.wxml:block:1:246")
 cs.push("./components/lesson/lessonHead.wxml:startclass:1:319")
-var oVC=_mz(z,'startclass',['isFill',5,'size',1,'star',2,'starColor',3],[],e,s,gg)
+var lWC=_mz(z,'startclass',['isFill',5,'size',1,'star',2,'starColor',3],[],e,s,gg)
 cs.pop()
-_(hSC,oVC)
-cs.pop()
-}
-var oTC=_v()
-_(fQC,oTC)
-if(_oz(z,9,e,s,gg)){oTC.wxVkey=1
-cs.push("./components/lesson/lessonHead.wxml:block:1:453")
+_(oTC,lWC)
 cs.pop()
 }
 var cUC=_v()
-_(fQC,cUC)
-if(_oz(z,10,e,s,gg)){cUC.wxVkey=1
-cs.push("./components/lesson/lessonHead.wxml:block:1:598")
+_(cRC,cUC)
+if(_oz(z,9,e,s,gg)){cUC.wxVkey=1
+cs.push("./components/lesson/lessonHead.wxml:block:1:453")
 cs.pop()
 }
-cRC.wxXCkey=1
+var oVC=_v()
+_(cRC,oVC)
+if(_oz(z,10,e,s,gg)){oVC.wxVkey=1
+cs.push("./components/lesson/lessonHead.wxml:block:1:611")
+cs.pop()
+}
 hSC.wxXCkey=1
-hSC.wxXCkey=3
 oTC.wxXCkey=1
+oTC.wxXCkey=3
 cUC.wxXCkey=1
+oVC.wxXCkey=1
 cs.pop()
-_(oPC,fQC)
+_(fQC,cRC)
 cs.pop()
-_(r,oPC)
+_(r,fQC)
 return r
 }
 e_[x[16]]={f:m16,j:[],i:[],ti:[],ic:[]}
@@ -2528,22 +2594,22 @@ d_[x[18]]={}
 var m18=function(e,s,r,gg){
 var z=gz$gwx_19()
 cs.push("./components/lesson/lessonTeacher.wxml:view:1:1")
-var tYC=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
-var eZC=_v()
-_(tYC,eZC)
-cs.push("./components/lesson/lessonTeacher.wxml:block:1:244")
-var b1C=function(x3C,o2C,o4C,gg){
-cs.push("./components/lesson/lessonTeacher.wxml:startclass:1:607")
-var c6C=_mz(z,'startclass',['star',6,'starColor',1],[],x3C,o2C,gg)
+var eZC=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var b1C=_v()
+_(eZC,b1C)
+cs.push("./components/lesson/lessonTeacher.wxml:block:1:252")
+var o2C=function(o4C,x3C,f5C,gg){
+cs.push("./components/lesson/lessonTeacher.wxml:startclass:1:615")
+var h7C=_mz(z,'startclass',['star',6,'starColor',1],[],o4C,x3C,gg)
 cs.pop()
-_(o4C,c6C)
-return o4C
+_(f5C,h7C)
+return f5C
 }
-eZC.wxXCkey=4
-_2z(z,4,b1C,e,s,gg,eZC,'item','index','index')
+b1C.wxXCkey=4
+_2z(z,4,o2C,e,s,gg,b1C,'item','index','index')
 cs.pop()
 cs.pop()
-_(r,tYC)
+_(r,eZC)
 return r
 }
 e_[x[18]]={f:m18,j:[],i:[],ti:[],ic:[]}
@@ -2551,13 +2617,13 @@ d_[x[19]]={}
 var m19=function(e,s,r,gg){
 var z=gz$gwx_20()
 cs.push("./components/lesson/orderMessage.wxml:view:1:1")
-var o8C=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
-cs.push("./components/lesson/orderMessage.wxml:mpvue-picker:1:1288")
-var c9C=_mz(z,'mpvue-picker',['bind:onCancel',2,'bind:onConfirm',1,'class',2,'coupomfalg',3,'data-event-opts',4,'data-ref',5,'deepLength',6,'mode',7,'pickerValueArray',8,'pickerValueDefault',9,'themeColor',10,'titleInfo',11],[],e,s,gg)
+var c9C=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+cs.push("./components/lesson/orderMessage.wxml:mpvue-picker:1:1372")
+var o0C=_mz(z,'mpvue-picker',['bind:onCancel',2,'bind:onConfirm',1,'class',2,'coupomfalg',3,'data-event-opts',4,'data-ref',5,'deepLength',6,'mode',7,'pickerValueArray',8,'pickerValueDefault',9,'themeColor',10,'titleInfo',11],[],e,s,gg)
 cs.pop()
-_(o8C,c9C)
+_(c9C,o0C)
 cs.pop()
-_(r,o8C)
+_(r,c9C)
 return r
 }
 e_[x[19]]={f:m19,j:[],i:[],ti:[],ic:[]}
@@ -2565,48 +2631,48 @@ d_[x[20]]={}
 var m20=function(e,s,r,gg){
 var z=gz$gwx_21()
 cs.push("./components/lesson/teacherHead.wxml:view:1:1")
-var lAD=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var aBD=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
 cs.push("./components/lesson/teacherHead.wxml:view:1:108")
-var aBD=_n('view')
-_rz(z,aBD,'class',2,e,s,gg)
-var tCD=_v()
-_(aBD,tCD)
-if(_oz(z,3,e,s,gg)){tCD.wxVkey=1
+var tCD=_n('view')
+_rz(z,tCD,'class',2,e,s,gg)
+var eDD=_v()
+_(tCD,eDD)
+if(_oz(z,3,e,s,gg)){eDD.wxVkey=1
 cs.push("./components/lesson/teacherHead.wxml:block:1:209")
 cs.pop()
 }
-var eDD=_v()
-_(aBD,eDD)
-if(_oz(z,4,e,s,gg)){eDD.wxVkey=1
+var bED=_v()
+_(tCD,bED)
+if(_oz(z,4,e,s,gg)){bED.wxVkey=1
 cs.push("./components/lesson/teacherHead.wxml:block:1:307")
 cs.push("./components/lesson/teacherHead.wxml:startclass:1:415")
-var xGD=_n('startclass')
-_rz(z,xGD,'star',5,e,s,gg)
+var oHD=_n('startclass')
+_rz(z,oHD,'star',5,e,s,gg)
 cs.pop()
-_(eDD,xGD)
-cs.pop()
-}
-var bED=_v()
-_(aBD,bED)
-if(_oz(z,6,e,s,gg)){bED.wxVkey=1
-cs.push("./components/lesson/teacherHead.wxml:block:1:471")
+_(bED,oHD)
 cs.pop()
 }
 var oFD=_v()
-_(aBD,oFD)
-if(_oz(z,7,e,s,gg)){oFD.wxVkey=1
-cs.push("./components/lesson/teacherHead.wxml:block:1:586")
+_(tCD,oFD)
+if(_oz(z,6,e,s,gg)){oFD.wxVkey=1
+cs.push("./components/lesson/teacherHead.wxml:block:1:471")
 cs.pop()
 }
-tCD.wxXCkey=1
+var xGD=_v()
+_(tCD,xGD)
+if(_oz(z,7,e,s,gg)){xGD.wxVkey=1
+cs.push("./components/lesson/teacherHead.wxml:block:1:605")
+cs.pop()
+}
 eDD.wxXCkey=1
-eDD.wxXCkey=3
 bED.wxXCkey=1
+bED.wxXCkey=3
 oFD.wxXCkey=1
+xGD.wxXCkey=1
 cs.pop()
-_(lAD,aBD)
+_(aBD,tCD)
 cs.pop()
-_(r,lAD)
+_(r,aBD)
 return r
 }
 e_[x[20]]={f:m20,j:[],i:[],ti:[],ic:[]}
@@ -2614,27 +2680,27 @@ d_[x[21]]={}
 var m21=function(e,s,r,gg){
 var z=gz$gwx_22()
 cs.push("./components/lesson/teachingWay.wxml:view:1:1")
-var fID=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
-var cJD=_v()
-_(fID,cJD)
-if(_oz(z,2,e,s,gg)){cJD.wxVkey=1
+var cJD=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var hKD=_v()
+_(cJD,hKD)
+if(_oz(z,2,e,s,gg)){hKD.wxVkey=1
 cs.push("./components/lesson/teachingWay.wxml:block:1:66")
 cs.pop()
 }
-cs.push("./components/lesson/teachingWay.wxml:select-time:1:1295")
-var oLD=_mz(z,'select-time',['bind:confirmTime',3,'bind:selctTime',1,'class',2,'data-event-opts',3,'dateList',4,'flag',5,'timeList',6],[],e,s,gg)
+cs.push("./components/lesson/teachingWay.wxml:select-time:1:1234")
+var cMD=_mz(z,'select-time',['bind:confirmTime',3,'bind:selctTime',1,'class',2,'data-event-opts',3,'dateList',4,'flag',5,'timeList',6],[],e,s,gg)
 cs.pop()
-_(fID,oLD)
-var hKD=_v()
-_(fID,hKD)
-if(_oz(z,10,e,s,gg)){hKD.wxVkey=1
-cs.push("./components/lesson/teachingWay.wxml:block:1:1549")
+_(cJD,cMD)
+var oLD=_v()
+_(cJD,oLD)
+if(_oz(z,10,e,s,gg)){oLD.wxVkey=1
+cs.push("./components/lesson/teachingWay.wxml:block:1:1488")
 cs.pop()
 }
-cJD.wxXCkey=1
 hKD.wxXCkey=1
+oLD.wxXCkey=1
 cs.pop()
-_(r,fID)
+_(r,cJD)
 return r
 }
 e_[x[21]]={f:m21,j:[],i:[],ti:[],ic:[]}
@@ -2642,49 +2708,49 @@ d_[x[22]]={}
 var m22=function(e,s,r,gg){
 var z=gz$gwx_23()
 cs.push("./components/mpvue-picker/mpvuePicker.wxml:view:1:1")
-var oND=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var lOD=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
 cs.push("./components/mpvue-picker/mpvuePicker.wxml:view:1:194")
-var lOD=_n('view')
-_rz(z,lOD,'class',2,e,s,gg)
-var aPD=_v()
-_(lOD,aPD)
-if(_oz(z,3,e,s,gg)){aPD.wxVkey=1
-cs.push("./components/mpvue-picker/mpvuePicker.wxml:block:1:671")
-cs.pop()
-}
+var aPD=_n('view')
+_rz(z,aPD,'class',2,e,s,gg)
 var tQD=_v()
-_(lOD,tQD)
-if(_oz(z,4,e,s,gg)){tQD.wxVkey=1
-cs.push("./components/mpvue-picker/mpvuePicker.wxml:block:1:1171")
+_(aPD,tQD)
+if(_oz(z,3,e,s,gg)){tQD.wxVkey=1
+cs.push("./components/mpvue-picker/mpvuePicker.wxml:block:1:698")
 cs.pop()
 }
 var eRD=_v()
-_(lOD,eRD)
-if(_oz(z,5,e,s,gg)){eRD.wxVkey=1
-cs.push("./components/mpvue-picker/mpvuePicker.wxml:block:1:1802")
+_(aPD,eRD)
+if(_oz(z,4,e,s,gg)){eRD.wxVkey=1
+cs.push("./components/mpvue-picker/mpvuePicker.wxml:block:1:1198")
 cs.pop()
 }
 var bSD=_v()
-_(lOD,bSD)
-if(_oz(z,6,e,s,gg)){bSD.wxVkey=1
-cs.push("./components/mpvue-picker/mpvuePicker.wxml:block:1:2361")
+_(aPD,bSD)
+if(_oz(z,5,e,s,gg)){bSD.wxVkey=1
+cs.push("./components/mpvue-picker/mpvuePicker.wxml:block:1:1829")
 cs.pop()
 }
 var oTD=_v()
-_(lOD,oTD)
-if(_oz(z,7,e,s,gg)){oTD.wxVkey=1
-cs.push("./components/mpvue-picker/mpvuePicker.wxml:block:1:3027")
+_(aPD,oTD)
+if(_oz(z,6,e,s,gg)){oTD.wxVkey=1
+cs.push("./components/mpvue-picker/mpvuePicker.wxml:block:1:2388")
 cs.pop()
 }
-aPD.wxXCkey=1
+var xUD=_v()
+_(aPD,xUD)
+if(_oz(z,7,e,s,gg)){xUD.wxVkey=1
+cs.push("./components/mpvue-picker/mpvuePicker.wxml:block:1:3054")
+cs.pop()
+}
 tQD.wxXCkey=1
 eRD.wxXCkey=1
 bSD.wxXCkey=1
 oTD.wxXCkey=1
+xUD.wxXCkey=1
 cs.pop()
-_(oND,lOD)
+_(lOD,aPD)
 cs.pop()
-_(r,oND)
+_(r,lOD)
 return r
 }
 e_[x[22]]={f:m22,j:[],i:[],ti:[],ic:[]}
@@ -2692,73 +2758,34 @@ d_[x[23]]={}
 var m23=function(e,s,r,gg){
 var z=gz$gwx_24()
 cs.push("./components/mx-datepicker/mx-datepicker.wxml:view:1:1")
-var oVD=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
-var fWD=_v()
-_(oVD,fWD)
-if(_oz(z,2,e,s,gg)){fWD.wxVkey=1
+var fWD=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var cXD=_v()
+_(fWD,cXD)
+if(_oz(z,2,e,s,gg)){cXD.wxVkey=1
 cs.push("./components/mx-datepicker/mx-datepicker.wxml:block:1:46")
-cs.push("./components/mx-datepicker/mx-datepicker.wxml:view:1:2691")
-var hYD=_n('view')
-_rz(z,hYD,'class',3,e,s,gg)
-var oZD=_v()
-_(hYD,oZD)
-if(_oz(z,4,e,s,gg)){oZD.wxVkey=1
-cs.push("./components/mx-datepicker/mx-datepicker.wxml:block:1:2746")
-cs.push("./components/mx-datepicker/mx-datepicker.wxml:block:1:2779")
-var c1D=_v()
-_(oZD,c1D)
-if(_oz(z,6,e,s,gg)){c1D.wxVkey=1
-cs.push("./components/mx-datepicker/mx-datepicker.wxml:block:1:2985")
 cs.pop()
 }
-var o2D=_v()
-_(oZD,o2D)
-if(_oz(z,7,e,s,gg)){o2D.wxVkey=1
-cs.push("./components/mx-datepicker/mx-datepicker.wxml:block:1:3464")
+var hYD=_v()
+_(fWD,hYD)
+if(_oz(z,3,e,s,gg)){hYD.wxVkey=1
+cs.push("./components/mx-datepicker/mx-datepicker.wxml:block:1:2775")
+cs.push("./components/mx-datepicker/mx-datepicker.wxml:picker-view:1:3048")
+var oZD=_mz(z,'picker-view',['bindchange',4,'class',1,'data-event-opts',2,'indicatorClass',3,'value',4],[],e,s,gg)
+var c1D=_v()
+_(oZD,c1D)
+if(_oz(z,9,e,s,gg)){c1D.wxVkey=1
+cs.push("./components/mx-datepicker/mx-datepicker.wxml:block:1:3702")
 cs.pop()
 }
 c1D.wxXCkey=1
-o2D.wxXCkey=1
 cs.pop()
-cs.pop()
-}
-else{oZD.wxVkey=2
-cs.push("./components/mx-datepicker/mx-datepicker.wxml:block:1:3784")
-var l3D=_v()
-_(oZD,l3D)
-if(_oz(z,8,e,s,gg)){l3D.wxVkey=1
-cs.push("./components/mx-datepicker/mx-datepicker.wxml:block:1:3995")
+_(hYD,oZD)
 cs.pop()
 }
-l3D.wxXCkey=1
-cs.pop()
-}
-oZD.wxXCkey=1
-cs.pop()
-_(fWD,hYD)
-cs.pop()
-}
-var cXD=_v()
-_(oVD,cXD)
-if(_oz(z,9,e,s,gg)){cXD.wxVkey=1
-cs.push("./components/mx-datepicker/mx-datepicker.wxml:block:1:4811")
-cs.push("./components/mx-datepicker/mx-datepicker.wxml:picker-view:1:5069")
-var a4D=_mz(z,'picker-view',['bindchange',10,'class',1,'data-event-opts',2,'indicatorClass',3,'value',4],[],e,s,gg)
-var t5D=_v()
-_(a4D,t5D)
-if(_oz(z,15,e,s,gg)){t5D.wxVkey=1
-cs.push("./components/mx-datepicker/mx-datepicker.wxml:block:1:5723")
-cs.pop()
-}
-t5D.wxXCkey=1
-cs.pop()
-_(cXD,a4D)
-cs.pop()
-}
-fWD.wxXCkey=1
 cXD.wxXCkey=1
+hYD.wxXCkey=1
 cs.pop()
-_(r,oVD)
+_(r,fWD)
 return r
 }
 e_[x[23]]={f:m23,j:[],i:[],ti:[],ic:[]}
@@ -2766,47 +2793,47 @@ d_[x[24]]={}
 var m24=function(e,s,r,gg){
 var z=gz$gwx_25()
 cs.push("./components/neil-modal/neil-modal.wxml:view:1:1")
-var b7D=_mz(z,'view',['bind:__l',0,'catchtouchmove',1,'class',1,'data-event-opts',2],[],e,s,gg)
+var l3D=_mz(z,'view',['bind:__l',0,'catchtouchmove',1,'class',1,'data-event-opts',2],[],e,s,gg)
 cs.push("./components/neil-modal/neil-modal.wxml:view:1:281")
-var o8D=_n('view')
-_rz(z,o8D,'class',4,e,s,gg)
-var x9D=_v()
-_(o8D,x9D)
-if(_oz(z,5,e,s,gg)){x9D.wxVkey=1
+var a4D=_n('view')
+_rz(z,a4D,'class',4,e,s,gg)
+var t5D=_v()
+_(a4D,t5D)
+if(_oz(z,5,e,s,gg)){t5D.wxVkey=1
 cs.push("./components/neil-modal/neil-modal.wxml:block:1:317")
 cs.pop()
 }
 cs.push("./components/neil-modal/neil-modal.wxml:view:1:408")
-var fAE=_mz(z,'view',['class',6,'style',1],[],e,s,gg)
-var cBE=_v()
-_(fAE,cBE)
-if(_oz(z,8,e,s,gg)){cBE.wxVkey=1
+var b7D=_mz(z,'view',['class',6,'style',1],[],e,s,gg)
+var o8D=_v()
+_(b7D,o8D)
+if(_oz(z,8,e,s,gg)){o8D.wxVkey=1
 cs.push("./components/neil-modal/neil-modal.wxml:block:1:521")
 cs.pop()
 }
-else{cBE.wxVkey=2
+else{o8D.wxVkey=2
 cs.push("./components/neil-modal/neil-modal.wxml:block:1:602")
 cs.push("./components/neil-modal/neil-modal.wxml:slot:1:617")
-var hCE=_n('slot')
+var x9D=_n('slot')
 cs.pop()
-_(cBE,hCE)
+_(o8D,x9D)
 cs.pop()
 }
-cBE.wxXCkey=1
+o8D.wxXCkey=1
 cs.pop()
-_(o8D,fAE)
-var o0D=_v()
-_(o8D,o0D)
-if(_oz(z,9,e,s,gg)){o0D.wxVkey=1
+_(a4D,b7D)
+var e6D=_v()
+_(a4D,e6D)
+if(_oz(z,9,e,s,gg)){e6D.wxVkey=1
 cs.push("./components/neil-modal/neil-modal.wxml:block:1:678")
 cs.pop()
 }
-x9D.wxXCkey=1
-o0D.wxXCkey=1
+t5D.wxXCkey=1
+e6D.wxXCkey=1
 cs.pop()
-_(b7D,o8D)
+_(l3D,a4D)
 cs.pop()
-_(r,b7D)
+_(r,l3D)
 return r
 }
 e_[x[24]]={f:m24,j:[],i:[],ti:[],ic:[]}
@@ -2826,16 +2853,16 @@ d_[x[27]]={}
 var m27=function(e,s,r,gg){
 var z=gz$gwx_28()
 cs.push("./components/qrcode/qrcode.wxml:view:1:1")
-var lGE=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
-var aHE=_v()
-_(lGE,aHE)
-if(_oz(z,2,e,s,gg)){aHE.wxVkey=1
+var hCE=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var oDE=_v()
+_(hCE,oDE)
+if(_oz(z,2,e,s,gg)){oDE.wxVkey=1
 cs.push("./components/qrcode/qrcode.wxml:block:1:37")
 cs.pop()
 }
-aHE.wxXCkey=1
+oDE.wxXCkey=1
 cs.pop()
-_(r,lGE)
+_(r,hCE)
 return r
 }
 e_[x[27]]={f:m27,j:[],i:[],ti:[],ic:[]}
@@ -2843,13 +2870,13 @@ d_[x[28]]={}
 var m28=function(e,s,r,gg){
 var z=gz$gwx_29()
 cs.push("./components/starclass.wxml:view:1:1")
-var eJE=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
-cs.push("./components/starclass.wxml:uni-rate:1:162")
-var bKE=_mz(z,'uni-rate',['bind:change',2,'class',1,'data-event-opts',2,'disabled',3,'isFill',4,'size',5,'value',6],[],e,s,gg)
+var oFE=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+cs.push("./components/starclass.wxml:uni-rate:1:247")
+var lGE=_mz(z,'uni-rate',['bind:change',2,'class',1,'data-event-opts',2,'disabled',3,'isFill',4,'margin',5,'size',6,'value',7],[],e,s,gg)
 cs.pop()
-_(eJE,bKE)
+_(oFE,lGE)
 cs.pop()
-_(r,eJE)
+_(r,oFE)
 return r
 }
 e_[x[28]]={f:m28,j:[],i:[],ti:[],ic:[]}
@@ -2869,30 +2896,30 @@ d_[x[31]]={}
 var m31=function(e,s,r,gg){
 var z=gz$gwx_32()
 cs.push("./components/uni-rate/uni-rate.wxml:view:1:1")
-var fOE=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
-var cPE=_v()
-_(fOE,cPE)
+var bKE=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var oLE=_v()
+_(bKE,oLE)
 cs.push("./components/uni-rate/uni-rate.wxml:block:1:39")
-var hQE=function(cSE,oRE,oTE,gg){
+var xME=function(fOE,oNE,cPE,gg){
 cs.push("./components/uni-rate/uni-rate.wxml:view:1:120")
-var aVE=_mz(z,'view',['bindtap',6,'class',1,'data-event-opts',2,'style',3],[],cSE,oRE,gg)
+var oRE=_mz(z,'view',['bindtap',6,'class',1,'data-event-opts',2,'style',3],[],fOE,oNE,gg)
 cs.push("./components/uni-rate/uni-rate.wxml:uni-icon:1:262")
-var tWE=_mz(z,'uni-icon',['color',10,'size',1,'style',2,'type',3],[],cSE,oRE,gg)
+var cSE=_mz(z,'uni-icon',['color',10,'size',1,'style',2,'type',3],[],fOE,oNE,gg)
 cs.pop()
-_(aVE,tWE)
+_(oRE,cSE)
 cs.push("./components/uni-rate/uni-rate.wxml:uni-icon:1:481")
-var eXE=_mz(z,'uni-icon',['color',14,'size',1,'type',2],[],cSE,oRE,gg)
+var oTE=_mz(z,'uni-icon',['color',14,'size',1,'type',2],[],fOE,oNE,gg)
 cs.pop()
-_(aVE,eXE)
+_(oRE,oTE)
 cs.pop()
-_(oTE,aVE)
-return oTE
+_(cPE,oRE)
+return cPE
 }
-cPE.wxXCkey=4
-_2z(z,4,hQE,e,s,gg,cPE,'star','index','index')
+oLE.wxXCkey=4
+_2z(z,4,xME,e,s,gg,oLE,'star','index','index')
 cs.pop()
 cs.pop()
-_(r,fOE)
+_(r,bKE)
 return r
 }
 e_[x[31]]={f:m31,j:[],i:[],ti:[],ic:[]}
@@ -2900,60 +2927,60 @@ d_[x[32]]={}
 var m32=function(e,s,r,gg){
 var z=gz$gwx_33()
 cs.push("./components/w-picker/w-picker.wxml:view:1:1")
-var oZE=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var aVE=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
 cs.push("./components/w-picker/w-picker.wxml:view:1:194")
-var x1E=_n('view')
-_rz(z,x1E,'class',2,e,s,gg)
-var o2E=_v()
-_(x1E,o2E)
-if(_oz(z,3,e,s,gg)){o2E.wxVkey=1
-cs.push("./components/w-picker/w-picker.wxml:block:1:619")
+var tWE=_n('view')
+_rz(z,tWE,'class',2,e,s,gg)
+var eXE=_v()
+_(tWE,eXE)
+if(_oz(z,3,e,s,gg)){eXE.wxVkey=1
+cs.push("./components/w-picker/w-picker.wxml:block:1:646")
 cs.pop()
 }
+var bYE=_v()
+_(tWE,bYE)
+if(_oz(z,4,e,s,gg)){bYE.wxVkey=1
+cs.push("./components/w-picker/w-picker.wxml:block:1:1064")
+cs.push("./components/w-picker/w-picker.wxml:picker-view:1:1142")
+var o2E=_mz(z,'picker-view',['bindchange',5,'data-event-opts',1,'indicatorStyle',2,'value',3],[],e,s,gg)
 var f3E=_v()
-_(x1E,f3E)
-if(_oz(z,4,e,s,gg)){f3E.wxVkey=1
-cs.push("./components/w-picker/w-picker.wxml:block:1:1029")
-cs.push("./components/w-picker/w-picker.wxml:picker-view:1:1107")
-var o6E=_mz(z,'picker-view',['bindchange',5,'data-event-opts',1,'indicatorStyle',2,'value',3],[],e,s,gg)
-var c7E=_v()
-_(o6E,c7E)
-if(_oz(z,9,e,s,gg)){c7E.wxVkey=1
-cs.push("./components/w-picker/w-picker.wxml:block:1:1777")
-cs.pop()
-}
-var o8E=_v()
-_(o6E,o8E)
-if(_oz(z,10,e,s,gg)){o8E.wxVkey=1
-cs.push("./components/w-picker/w-picker.wxml:block:1:1996")
-cs.pop()
-}
-c7E.wxXCkey=1
-o8E.wxXCkey=1
-cs.pop()
-_(f3E,o6E)
+_(o2E,f3E)
+if(_oz(z,9,e,s,gg)){f3E.wxVkey=1
+cs.push("./components/w-picker/w-picker.wxml:block:1:1836")
 cs.pop()
 }
 var c4E=_v()
-_(x1E,c4E)
-if(_oz(z,11,e,s,gg)){c4E.wxVkey=1
-cs.push("./components/w-picker/w-picker.wxml:block:1:2246")
+_(o2E,c4E)
+if(_oz(z,10,e,s,gg)){c4E.wxVkey=1
+cs.push("./components/w-picker/w-picker.wxml:block:1:2063")
 cs.pop()
 }
-var h5E=_v()
-_(x1E,h5E)
-if(_oz(z,12,e,s,gg)){h5E.wxVkey=1
-cs.push("./components/w-picker/w-picker.wxml:block:1:2820")
-cs.pop()
-}
-o2E.wxXCkey=1
 f3E.wxXCkey=1
 c4E.wxXCkey=1
-h5E.wxXCkey=1
 cs.pop()
-_(oZE,x1E)
+_(bYE,o2E)
 cs.pop()
-_(r,oZE)
+}
+var oZE=_v()
+_(tWE,oZE)
+if(_oz(z,11,e,s,gg)){oZE.wxVkey=1
+cs.push("./components/w-picker/w-picker.wxml:block:1:2323")
+cs.pop()
+}
+var x1E=_v()
+_(tWE,x1E)
+if(_oz(z,12,e,s,gg)){x1E.wxVkey=1
+cs.push("./components/w-picker/w-picker.wxml:block:1:2897")
+cs.pop()
+}
+eXE.wxXCkey=1
+bYE.wxXCkey=1
+oZE.wxXCkey=1
+x1E.wxXCkey=1
+cs.pop()
+_(aVE,tWE)
+cs.pop()
+_(r,aVE)
 return r
 }
 e_[x[32]]={f:m32,j:[],i:[],ti:[],ic:[]}
@@ -2961,33 +2988,33 @@ d_[x[33]]={}
 var m33=function(e,s,r,gg){
 var z=gz$gwx_34()
 cs.push("./pages/aboutUs/aboutUs.wxml:view:1:1")
-var a0E=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
-var tAF=_v()
-_(a0E,tAF)
-if(_oz(z,2,e,s,gg)){tAF.wxVkey=1
+var o6E=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var c7E=_v()
+_(o6E,c7E)
+if(_oz(z,2,e,s,gg)){c7E.wxVkey=1
 cs.push("./pages/aboutUs/aboutUs.wxml:block:1:39")
 cs.pop()
 }
-var eBF=_v()
-_(a0E,eBF)
-if(_oz(z,3,e,s,gg)){eBF.wxVkey=1
+var o8E=_v()
+_(o6E,o8E)
+if(_oz(z,3,e,s,gg)){o8E.wxVkey=1
 cs.push("./pages/aboutUs/aboutUs.wxml:block:1:103")
 cs.pop()
 }
-else{eBF.wxVkey=2
+else{o8E.wxVkey=2
 cs.push("./pages/aboutUs/aboutUs.wxml:block:1:172")
 cs.push("./pages/aboutUs/aboutUs.wxml:no-content:1:187")
-var bCF=_n('no-content')
-_rz(z,bCF,'title',4,e,s,gg)
+var l9E=_n('no-content')
+_rz(z,l9E,'title',4,e,s,gg)
 cs.pop()
-_(eBF,bCF)
+_(o8E,l9E)
 cs.pop()
 }
-tAF.wxXCkey=1
-eBF.wxXCkey=1
-eBF.wxXCkey=3
+c7E.wxXCkey=1
+o8E.wxXCkey=1
+o8E.wxXCkey=3
 cs.pop()
-_(r,a0E)
+_(r,o6E)
 return r
 }
 e_[x[33]]={f:m33,j:[],i:[],ti:[],ic:[]}
@@ -2995,23 +3022,23 @@ d_[x[34]]={}
 var m34=function(e,s,r,gg){
 var z=gz$gwx_35()
 cs.push("./pages/addTask/addTask.wxml:view:1:1")
-var xEF=_n('view')
-_rz(z,xEF,'bind:__l',0,e,s,gg)
-var oFF=_v()
-_(xEF,oFF)
-if(_oz(z,1,e,s,gg)){oFF.wxVkey=1
+var tAF=_n('view')
+_rz(z,tAF,'bind:__l',0,e,s,gg)
+var eBF=_v()
+_(tAF,eBF)
+if(_oz(z,1,e,s,gg)){eBF.wxVkey=1
 cs.push("./pages/addTask/addTask.wxml:block:1:22")
 cs.push("./pages/addTask/addTask.wxml:progress-bar:1:46")
-var fGF=_n('progress-bar')
-_rz(z,fGF,'progress',2,e,s,gg)
+var bCF=_n('progress-bar')
+_rz(z,bCF,'progress',2,e,s,gg)
 cs.pop()
-_(oFF,fGF)
+_(eBF,bCF)
 cs.pop()
 }
-oFF.wxXCkey=1
-oFF.wxXCkey=3
+eBF.wxXCkey=1
+eBF.wxXCkey=3
 cs.pop()
-_(r,xEF)
+_(r,tAF)
 return r
 }
 e_[x[34]]={f:m34,j:[],i:[],ti:[],ic:[]}
@@ -3019,17 +3046,22 @@ d_[x[35]]={}
 var m35=function(e,s,r,gg){
 var z=gz$gwx_36()
 cs.push("./pages/addTeacher/addTeacher.wxml:view:1:1")
-var hIF=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
-cs.push("./pages/addTeacher/addTeacher.wxml:w-picker:1:58")
-var oJF=_mz(z,'w-picker',['bind:confirm',2,'class',1,'data-event-opts',2,'data-ref',3,'mode',4,'startYear',5,'title',6],[],e,s,gg)
+var xEF=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+cs.push("./pages/addTeacher/addTeacher.wxml:view:1:46")
+var oFF=_n('view')
+_rz(z,oFF,'class',2,e,s,gg)
+cs.push("./pages/addTeacher/addTeacher.wxml:w-picker:1:93")
+var fGF=_mz(z,'w-picker',['bind:confirm',3,'class',1,'data-event-opts',2,'data-ref',3,'mode',4,'startYear',5,'title',6],[],e,s,gg)
 cs.pop()
-_(hIF,oJF)
-cs.push("./pages/addTeacher/addTeacher.wxml:w-picker:1:259")
-var cKF=_mz(z,'w-picker',['bind:confirm',9,'class',1,'data-event-opts',2,'data-ref',3,'mode',4,'startYear',5,'title',6],[],e,s,gg)
+_(oFF,fGF)
+cs.push("./pages/addTeacher/addTeacher.wxml:w-picker:1:294")
+var cHF=_mz(z,'w-picker',['bind:confirm',10,'class',1,'data-event-opts',2,'data-ref',3,'mode',4,'startYear',5,'title',6],[],e,s,gg)
 cs.pop()
-_(hIF,cKF)
+_(oFF,cHF)
 cs.pop()
-_(r,hIF)
+_(xEF,oFF)
+cs.pop()
+_(r,xEF)
 return r
 }
 e_[x[35]]={f:m35,j:[],i:[],ti:[],ic:[]}
@@ -3049,42 +3081,42 @@ d_[x[38]]={}
 var m38=function(e,s,r,gg){
 var z=gz$gwx_39()
 cs.push("./pages/choiceTeacher/choiceTeacher.wxml:view:1:1")
-var tOF=_n('view')
-_rz(z,tOF,'bind:__l',0,e,s,gg)
+var oLF=_n('view')
+_rz(z,oLF,'bind:__l',0,e,s,gg)
 cs.push("./pages/choiceTeacher/choiceTeacher.wxml:lesson-head:1:172")
-var oRF=_mz(z,'lesson-head',['content',1,'headType',1,'maxTime',2,'mixTime',3,'star',4,'title',5],[],e,s,gg)
+var tOF=_mz(z,'lesson-head',['content',1,'headType',1,'maxTime',2,'mixTime',3,'star',4,'title',5],[],e,s,gg)
 cs.pop()
-_(tOF,oRF)
-cs.push("./pages/choiceTeacher/choiceTeacher.wxml:teacher-list:1:404")
-var xSF=_mz(z,'teacher-list',['bind:selectFunction',7,'data-event-opts',1,'lessonType',2,'listInfo',3,'selectFlag',4,'title',5],[],e,s,gg)
+_(oLF,tOF)
+cs.push("./pages/choiceTeacher/choiceTeacher.wxml:teacher-list:1:407")
+var ePF=_mz(z,'teacher-list',['bind:selectFunction',7,'data-event-opts',1,'lessonType',2,'listInfo',3,'selectFlag',4,'title',5],[],e,s,gg)
 cs.pop()
-_(tOF,xSF)
-var ePF=_v()
-_(tOF,ePF)
-if(_oz(z,13,e,s,gg)){ePF.wxVkey=1
-cs.push("./pages/choiceTeacher/choiceTeacher.wxml:block:1:635")
-cs.push("./pages/choiceTeacher/choiceTeacher.wxml:teaching-way:1:665")
-var oTF=_mz(z,'teaching-way',['bind:changeRequest',14,'classId',1,'data-event-opts',2,'orderShow',3,'request',4,'teacherId',5],[],e,s,gg)
+_(oLF,ePF)
+var lMF=_v()
+_(oLF,lMF)
+if(_oz(z,13,e,s,gg)){lMF.wxVkey=1
+cs.push("./pages/choiceTeacher/choiceTeacher.wxml:block:1:653")
+cs.push("./pages/choiceTeacher/choiceTeacher.wxml:teaching-way:1:683")
+var bQF=_mz(z,'teaching-way',['bind:changeRequest',14,'classId',1,'data-event-opts',2,'orderShow',3,'request',4,'teacherId',5],[],e,s,gg)
 cs.pop()
-_(ePF,oTF)
-cs.pop()
-}
-var bQF=_v()
-_(tOF,bQF)
-if(_oz(z,20,e,s,gg)){bQF.wxVkey=1
-cs.push("./pages/choiceTeacher/choiceTeacher.wxml:block:1:886")
-cs.push("./pages/choiceTeacher/choiceTeacher.wxml:order-message:1:915")
-var fUF=_mz(z,'order-message',['bind:changeRequest',21,'classId',1,'coupomList',2,'data-event-opts',3,'request',4],[],e,s,gg)
-cs.pop()
-_(bQF,fUF)
+_(lMF,bQF)
 cs.pop()
 }
-ePF.wxXCkey=1
-ePF.wxXCkey=3
-bQF.wxXCkey=1
-bQF.wxXCkey=3
+var aNF=_v()
+_(oLF,aNF)
+if(_oz(z,20,e,s,gg)){aNF.wxVkey=1
+cs.push("./pages/choiceTeacher/choiceTeacher.wxml:block:1:905")
+cs.push("./pages/choiceTeacher/choiceTeacher.wxml:order-message:1:934")
+var oRF=_mz(z,'order-message',['bind:changeRequest',21,'classId',1,'coupomList',2,'data-event-opts',3,'request',4],[],e,s,gg)
 cs.pop()
-_(r,tOF)
+_(aNF,oRF)
+cs.pop()
+}
+lMF.wxXCkey=1
+lMF.wxXCkey=3
+aNF.wxXCkey=1
+aNF.wxXCkey=3
+cs.pop()
+_(r,oLF)
 return r
 }
 e_[x[38]]={f:m38,j:[],i:[],ti:[],ic:[]}
@@ -3092,18 +3124,17 @@ d_[x[39]]={}
 var m39=function(e,s,r,gg){
 var z=gz$gwx_40()
 cs.push("./pages/circleFriends/circleFriends.wxml:view:1:1")
-var hWF=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var oTF=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
 cs.push("./pages/circleFriends/circleFriends.wxml:uni-icon:1:189")
-var oXF=_mz(z,'uni-icon',['size',2,'type',1],[],e,s,gg)
+var fUF=_mz(z,'uni-icon',['size',2,'type',1],[],e,s,gg)
 cs.pop()
-_(hWF,oXF)
+_(oTF,fUF)
 cs.push("./pages/circleFriends/circleFriends.wxml:friends-list:1:309")
-var cYF=_n('friends-list')
-_rz(z,cYF,'friendsList',4,e,s,gg)
+var cVF=_mz(z,'friends-list',['bind:forward_praise',4,'data-event-opts',1,'friendsList',2],[],e,s,gg)
 cs.pop()
-_(hWF,cYF)
+_(oTF,cVF)
 cs.pop()
-_(r,hWF)
+_(r,oTF)
 return r
 }
 e_[x[39]]={f:m39,j:[],i:[],ti:[],ic:[]}
@@ -3111,26 +3142,26 @@ d_[x[40]]={}
 var m40=function(e,s,r,gg){
 var z=gz$gwx_41()
 cs.push("./pages/classAdjustment/classAdjustment.wxml:view:1:1")
-var l1F=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var oXF=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
 cs.push("./pages/classAdjustment/classAdjustment.wxml:view:1:67")
-var a2F=_n('view')
-_rz(z,a2F,'class',2,e,s,gg)
+var cYF=_n('view')
+_rz(z,cYF,'class',2,e,s,gg)
 cs.push("./pages/classAdjustment/classAdjustment.wxml:startclass:1:319")
-var t3F=_mz(z,'startclass',['class',3,'size',1,'star',2,'starColor',3],[],e,s,gg)
+var oZF=_mz(z,'startclass',['class',3,'size',1,'star',2,'starColor',3],[],e,s,gg)
 cs.pop()
-_(a2F,t3F)
+_(cYF,oZF)
 cs.push("./pages/classAdjustment/classAdjustment.wxml:w-picker:1:733")
-var e4F=_mz(z,'w-picker',['bind:confirm',7,'class',1,'data-event-opts',2,'data-ref',3,'defaultVal',4,'mode',5,'startYear',6,'title',7],[],e,s,gg)
+var l1F=_mz(z,'w-picker',['bind:confirm',7,'class',1,'data-event-opts',2,'data-ref',3,'defaultVal',4,'mode',5,'startYear',6,'title',7],[],e,s,gg)
 cs.pop()
-_(a2F,e4F)
+_(cYF,l1F)
 cs.push("./pages/classAdjustment/classAdjustment.wxml:w-picker:1:1415")
-var b5F=_mz(z,'w-picker',['bind:confirm',15,'class',1,'data-event-opts',2,'data-ref',3,'defaultVal',4,'mode',5,'startYear',6,'title',7],[],e,s,gg)
+var a2F=_mz(z,'w-picker',['bind:confirm',15,'class',1,'data-event-opts',2,'data-ref',3,'defaultVal',4,'mode',5,'startYear',6,'title',7],[],e,s,gg)
 cs.pop()
-_(a2F,b5F)
+_(cYF,a2F)
 cs.pop()
-_(l1F,a2F)
+_(oXF,cYF)
 cs.pop()
-_(r,l1F)
+_(r,oXF)
 return r
 }
 e_[x[40]]={f:m40,j:[],i:[],ti:[],ic:[]}
@@ -3138,13 +3169,13 @@ d_[x[41]]={}
 var m41=function(e,s,r,gg){
 var z=gz$gwx_42()
 cs.push("./pages/classNotice/classNotice.wxml:view:1:1")
-var x7F=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var e4F=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
 cs.push("./pages/classNotice/classNotice.wxml:message-list:1:67")
-var o8F=_mz(z,'message-list',['class',2,'messageList',1],[],e,s,gg)
+var b5F=_mz(z,'message-list',['class',2,'messageList',1],[],e,s,gg)
 cs.pop()
-_(x7F,o8F)
+_(e4F,b5F)
 cs.pop()
-_(r,x7F)
+_(r,e4F)
 return r
 }
 e_[x[41]]={f:m41,j:[],i:[],ti:[],ic:[]}
@@ -3152,13 +3183,13 @@ d_[x[42]]={}
 var m42=function(e,s,r,gg){
 var z=gz$gwx_43()
 cs.push("./pages/code/code.wxml:view:1:1")
-var c0F=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var x7F=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
 cs.push("./pages/code/code.wxml:qrcode:1:192")
-var hAG=_mz(z,'qrcode',['class',2,'data-ref',1,'size',2,'val',3],[],e,s,gg)
+var o8F=_mz(z,'qrcode',['class',2,'data-ref',1,'size',2,'val',3],[],e,s,gg)
 cs.pop()
-_(c0F,hAG)
+_(x7F,o8F)
 cs.pop()
-_(r,c0F)
+_(r,x7F)
 return r
 }
 e_[x[42]]={f:m42,j:[],i:[],ti:[],ic:[]}
@@ -3166,13 +3197,13 @@ d_[x[43]]={}
 var m43=function(e,s,r,gg){
 var z=gz$gwx_44()
 cs.push("./pages/codeSuccess/codeSuccess.wxml:view:1:1")
-var cCG=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var c0F=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
 cs.push("./pages/codeSuccess/codeSuccess.wxml:startclass:1:813")
-var oDG=_mz(z,'startclass',['bind:sendVal',2,'data-event-opts',1,'disabled',2,'size',3,'title',4],[],e,s,gg)
+var hAG=_mz(z,'startclass',['bind:sendVal',2,'data-event-opts',1,'disabled',2,'size',3,'title',4],[],e,s,gg)
 cs.pop()
-_(cCG,oDG)
+_(c0F,hAG)
 cs.pop()
-_(r,cCG)
+_(r,c0F)
 return r
 }
 e_[x[43]]={f:m43,j:[],i:[],ti:[],ic:[]}
@@ -3180,13 +3211,13 @@ d_[x[44]]={}
 var m44=function(e,s,r,gg){
 var z=gz$gwx_45()
 cs.push("./pages/confirmComplete/confirmComplete.wxml:view:1:1")
-var aFG=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var cCG=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
 cs.push("./pages/confirmComplete/confirmComplete.wxml:lesson-list:1:216")
-var tGG=_mz(z,'lesson-list',['class',2,'lessonType',1,'listInfo',2,'success',3],[],e,s,gg)
+var oDG=_mz(z,'lesson-list',['class',2,'lessonType',1,'listInfo',2,'success',3],[],e,s,gg)
 cs.pop()
-_(aFG,tGG)
+_(cCG,oDG)
 cs.pop()
-_(r,aFG)
+_(r,cCG)
 return r
 }
 e_[x[44]]={f:m44,j:[],i:[],ti:[],ic:[]}
@@ -3194,14 +3225,14 @@ d_[x[45]]={}
 var m45=function(e,s,r,gg){
 var z=gz$gwx_46()
 cs.push("./pages/consumptionRecord/consumptionRecord.wxml:view:1:1")
-var bIG=_n('view')
-_rz(z,bIG,'bind:__l',0,e,s,gg)
+var aFG=_n('view')
+_rz(z,aFG,'bind:__l',0,e,s,gg)
 cs.push("./pages/consumptionRecord/consumptionRecord.wxml:recharge-list:1:22")
-var oJG=_mz(z,'recharge-list',['moneyList',1,'type',1],[],e,s,gg)
+var tGG=_mz(z,'recharge-list',['moneyList',1,'type',1],[],e,s,gg)
 cs.pop()
-_(bIG,oJG)
+_(aFG,tGG)
 cs.pop()
-_(r,bIG)
+_(r,aFG)
 return r
 }
 e_[x[45]]={f:m45,j:[],i:[],ti:[],ic:[]}
@@ -3215,37 +3246,37 @@ d_[x[47]]={}
 var m47=function(e,s,r,gg){
 var z=gz$gwx_48()
 cs.push("./pages/evaluate/evaluate.wxml:view:1:1")
-var fMG=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
-cs.push("./pages/evaluate/evaluate.wxml:comment-star-class:1:60")
-var cNG=_mz(z,'comment-star-class',['class',2,'content',1,'msg',2,'title',3],[],e,s,gg)
+var oJG=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+cs.push("./pages/evaluate/evaluate.wxml:comment-star-class:1:100")
+var xKG=_mz(z,'comment-star-class',['bind:sendData',2,'class',1,'content',2,'data-event-opts',3,'msg',4,'title',5],[],e,s,gg)
 cs.pop()
-_(fMG,cNG)
-cs.push("./pages/evaluate/evaluate.wxml:startclass:1:197")
-var hOG=_mz(z,'startclass',['class',6,'title',1],[],e,s,gg)
+_(oJG,xKG)
+cs.push("./pages/evaluate/evaluate.wxml:startclass:1:384")
+var oLG=_mz(z,'startclass',['bind:sendVal',8,'class',1,'data-event-opts',2,'disabled',3,'font_size',4,'size',5,'starColor',6,'title',7],[],e,s,gg)
 cs.pop()
-_(fMG,hOG)
-cs.push("./pages/evaluate/evaluate.wxml:comment-star-class:1:261")
-var oPG=_mz(z,'comment-star-class',['class',8,'content',1,'msg',2,'title',3],[],e,s,gg)
+_(oJG,oLG)
+cs.push("./pages/evaluate/evaluate.wxml:comment-star-class:1:786")
+var fMG=_mz(z,'comment-star-class',['bind:sendData',16,'class',1,'content',2,'data-event-opts',3,'msg',4,'title',5],[],e,s,gg)
 cs.pop()
-_(fMG,oPG)
-cs.push("./pages/evaluate/evaluate.wxml:startclass:1:470")
-var cQG=_mz(z,'startclass',['class',12,'title',1],[],e,s,gg)
+_(oJG,fMG)
+cs.push("./pages/evaluate/evaluate.wxml:startclass:1:1144")
+var cNG=_mz(z,'startclass',['bind:sendVal',22,'class',1,'data-event-opts',2,'disabled',3,'font_size',4,'size',5,'starColor',6,'title',7],[],e,s,gg)
 cs.pop()
-_(fMG,cQG)
-cs.push("./pages/evaluate/evaluate.wxml:startclass:1:534")
-var oRG=_mz(z,'startclass',['class',14,'title',1],[],e,s,gg)
+_(oJG,cNG)
+cs.push("./pages/evaluate/evaluate.wxml:startclass:1:1423")
+var hOG=_mz(z,'startclass',['bind:sendVal',30,'class',1,'data-event-opts',2,'disabled',3,'font_size',4,'size',5,'starColor',6,'title',7],[],e,s,gg)
 cs.pop()
-_(fMG,oRG)
-cs.push("./pages/evaluate/evaluate.wxml:startclass:1:604")
-var lSG=_mz(z,'startclass',['class',16,'title',1],[],e,s,gg)
+_(oJG,hOG)
+cs.push("./pages/evaluate/evaluate.wxml:startclass:1:1715")
+var oPG=_mz(z,'startclass',['bind:sendVal',38,'class',1,'data-event-opts',2,'disabled',3,'font_size',4,'size',5,'starColor',6,'title',7],[],e,s,gg)
 cs.pop()
-_(fMG,lSG)
-cs.push("./pages/evaluate/evaluate.wxml:startclass:1:680")
-var aTG=_mz(z,'startclass',['class',18,'title',1],[],e,s,gg)
+_(oJG,oPG)
+cs.push("./pages/evaluate/evaluate.wxml:startclass:1:2009")
+var cQG=_mz(z,'startclass',['bind:sendVal',46,'class',1,'data-event-opts',2,'disabled',3,'font_size',4,'size',5,'starColor',6,'title',7],[],e,s,gg)
 cs.pop()
-_(fMG,aTG)
+_(oJG,cQG)
 cs.pop()
-_(r,fMG)
+_(r,oJG)
 return r
 }
 e_[x[47]]={f:m47,j:[],i:[],ti:[],ic:[]}
@@ -3259,18 +3290,18 @@ d_[x[49]]={}
 var m49=function(e,s,r,gg){
 var z=gz$gwx_50()
 cs.push("./pages/finance/finance.wxml:view:1:1")
-var bWG=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var aTG=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
 cs.push("./pages/finance/finance.wxml:finance-list:1:38")
-var oXG=_n('finance-list')
-_rz(z,oXG,'financeList',2,e,s,gg)
+var tUG=_n('finance-list')
+_rz(z,tUG,'financeList',2,e,s,gg)
 cs.pop()
-_(bWG,oXG)
+_(aTG,tUG)
 cs.push("./pages/finance/finance.wxml:w-picker:1:97")
-var xYG=_mz(z,'w-picker',['bind:confirm',3,'class',1,'data-event-opts',2,'data-ref',3,'defaultVal',4,'mode',5,'startYear',6,'title',7],[],e,s,gg)
+var eVG=_mz(z,'w-picker',['bind:confirm',3,'class',1,'data-event-opts',2,'data-ref',3,'defaultVal',4,'mode',5,'startYear',6,'title',7],[],e,s,gg)
 cs.pop()
-_(bWG,xYG)
+_(aTG,eVG)
 cs.pop()
-_(r,bWG)
+_(r,aTG)
 return r
 }
 e_[x[49]]={f:m49,j:[],i:[],ti:[],ic:[]}
@@ -3284,35 +3315,30 @@ d_[x[51]]={}
 var m51=function(e,s,r,gg){
 var z=gz$gwx_52()
 cs.push("./pages/friendsDetail/friendsDetail.wxml:view:1:1")
-var c2G=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
-cs.push("./pages/friendsDetail/friendsDetail.wxml:view:1:38")
-var h3G=_n('view')
-_rz(z,h3G,'class',2,e,s,gg)
-cs.push("./pages/friendsDetail/friendsDetail.wxml:friend-head:1:104")
-var o4G=_n('friend-head')
-_rz(z,o4G,'itemHead',3,e,s,gg)
+var xYG=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+cs.push("./pages/friendsDetail/friendsDetail.wxml:view:1:82")
+var oZG=_n('view')
+_rz(z,oZG,'class',2,e,s,gg)
+cs.push("./pages/friendsDetail/friendsDetail.wxml:friend-content:1:104")
+var f1G=_mz(z,'friend-content',['content',3,'type',1],[],e,s,gg)
 cs.pop()
-_(h3G,o4G)
-cs.push("./pages/friendsDetail/friendsDetail.wxml:friend-content:1:159")
-var c5G=_mz(z,'friend-content',['content',4,'type',1],[],e,s,gg)
+_(oZG,f1G)
+cs.push("./pages/friendsDetail/friendsDetail.wxml:friend-operation:1:186")
+var c2G=_mz(z,'friend-operation',['bind:changeStatus',5,'data-event-opts',1,'forward',2,'is_forward',3,'is_praise',4,'listId',5,'message',6,'praise',7],[],e,s,gg)
 cs.pop()
-_(h3G,c5G)
-cs.push("./pages/friendsDetail/friendsDetail.wxml:friend-operation:1:241")
-var o6G=_mz(z,'friend-operation',['forward',6,'listId',1,'message',2,'praise',3],[],e,s,gg)
+_(oZG,c2G)
 cs.pop()
-_(h3G,o6G)
+_(xYG,oZG)
+cs.push("./pages/friendsDetail/friendsDetail.wxml:comment:1:577")
+var h3G=_mz(z,'comment',['list',13,'message',1],[],e,s,gg)
 cs.pop()
-_(c2G,h3G)
-cs.push("./pages/friendsDetail/friendsDetail.wxml:comment:1:465")
-var l7G=_mz(z,'comment',['list',10,'message',1],[],e,s,gg)
+_(xYG,h3G)
+cs.push("./pages/friendsDetail/friendsDetail.wxml:submit-btn:1:661")
+var o4G=_mz(z,'submit-btn',['bind:refreshFriend',15,'data-event-opts',1,'friend_id',2],[],e,s,gg)
 cs.pop()
-_(c2G,l7G)
-cs.push("./pages/friendsDetail/friendsDetail.wxml:submit-btn:1:549")
-var a8G=_mz(z,'submit-btn',['bind:refreshFriend',12,'data-event-opts',1,'friend_id',2],[],e,s,gg)
+_(xYG,o4G)
 cs.pop()
-_(c2G,a8G)
-cs.pop()
-_(r,c2G)
+_(r,xYG)
 return r
 }
 e_[x[51]]={f:m51,j:[],i:[],ti:[],ic:[]}
@@ -3320,32 +3346,32 @@ d_[x[52]]={}
 var m52=function(e,s,r,gg){
 var z=gz$gwx_53()
 cs.push("./pages/lesson/lesson.wxml:view:1:1")
-var e0G=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var o6G=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
 cs.push("./pages/lesson/lesson.wxml:view:1:64")
-var bAH=_n('view')
-_rz(z,bAH,'class',2,e,s,gg)
-var oBH=_v()
-_(bAH,oBH)
-if(_oz(z,3,e,s,gg)){oBH.wxVkey=1
+var l7G=_n('view')
+_rz(z,l7G,'class',2,e,s,gg)
+var a8G=_v()
+_(l7G,a8G)
+if(_oz(z,3,e,s,gg)){a8G.wxVkey=1
 cs.push("./pages/lesson/lesson.wxml:block:1:105")
 cs.pop()
 }
-var xCH=_v()
-_(bAH,xCH)
-if(_oz(z,4,e,s,gg)){xCH.wxVkey=1
+var t9G=_v()
+_(l7G,t9G)
+if(_oz(z,4,e,s,gg)){t9G.wxVkey=1
 cs.push("./pages/lesson/lesson.wxml:block:1:296")
 cs.pop()
 }
-oBH.wxXCkey=1
-xCH.wxXCkey=1
+a8G.wxXCkey=1
+t9G.wxXCkey=1
 cs.pop()
-_(e0G,bAH)
+_(o6G,l7G)
 cs.push("./pages/lesson/lesson.wxml:lesson-list:1:793")
-var oDH=_mz(z,'lesson-list',['class',5,'lessonType',1,'listInfo',2],[],e,s,gg)
+var e0G=_mz(z,'lesson-list',['class',5,'lessonType',1,'listInfo',2],[],e,s,gg)
 cs.pop()
-_(e0G,oDH)
+_(o6G,e0G)
 cs.pop()
-_(r,e0G)
+_(r,o6G)
 return r
 }
 e_[x[52]]={f:m52,j:[],i:[],ti:[],ic:[]}
@@ -3353,33 +3379,33 @@ d_[x[53]]={}
 var m53=function(e,s,r,gg){
 var z=gz$gwx_54()
 cs.push("./pages/lessonCopy/lessonCopy.wxml:view:1:1")
-var cFH=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
-var hGH=_v()
-_(cFH,hGH)
-if(_oz(z,2,e,s,gg)){hGH.wxVkey=1
+var oBH=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var xCH=_v()
+_(oBH,xCH)
+if(_oz(z,2,e,s,gg)){xCH.wxVkey=1
 cs.push("./pages/lessonCopy/lessonCopy.wxml:block:1:42")
 cs.push("./pages/lessonCopy/lessonCopy.wxml:lesson-head:1:66")
-var cIH=_mz(z,'lesson-head',['content',3,'headType',1,'title',2],[],e,s,gg)
+var fEH=_mz(z,'lesson-head',['content',3,'headType',1,'title',2],[],e,s,gg)
 cs.pop()
-_(hGH,cIH)
-cs.pop()
-}
-var oHH=_v()
-_(cFH,oHH)
-if(_oz(z,6,e,s,gg)){oHH.wxVkey=1
-cs.push("./pages/lessonCopy/lessonCopy.wxml:block:1:233")
-cs.push("./pages/lessonCopy/lessonCopy.wxml:lesson-list:1:308")
-var oJH=_mz(z,'lesson-list',['lessonType',7,'listInfo',1,'musicId',2],[],e,s,gg)
-cs.pop()
-_(oHH,oJH)
+_(xCH,fEH)
 cs.pop()
 }
-hGH.wxXCkey=1
-hGH.wxXCkey=3
-oHH.wxXCkey=1
-oHH.wxXCkey=3
+var oDH=_v()
+_(oBH,oDH)
+if(_oz(z,6,e,s,gg)){oDH.wxVkey=1
+cs.push("./pages/lessonCopy/lessonCopy.wxml:block:1:242")
+cs.push("./pages/lessonCopy/lessonCopy.wxml:lesson-list:1:328")
+var cFH=_mz(z,'lesson-list',['lessonType',7,'listInfo',1,'musicId',2],[],e,s,gg)
 cs.pop()
-_(r,cFH)
+_(oDH,cFH)
+cs.pop()
+}
+xCH.wxXCkey=1
+xCH.wxXCkey=3
+oDH.wxXCkey=1
+oDH.wxXCkey=3
+cs.pop()
+_(r,oBH)
 return r
 }
 e_[x[53]]={f:m53,j:[],i:[],ti:[],ic:[]}
@@ -3387,31 +3413,31 @@ d_[x[54]]={}
 var m54=function(e,s,r,gg){
 var z=gz$gwx_55()
 cs.push("./pages/lessonDetail/lessonDetail.wxml:view:1:1")
-var aLH=_n('view')
-_rz(z,aLH,'bind:__l',0,e,s,gg)
+var oHH=_n('view')
+_rz(z,oHH,'bind:__l',0,e,s,gg)
 cs.push("./pages/lessonDetail/lessonDetail.wxml:lesson-head:1:22")
-var tMH=_mz(z,'lesson-head',['content',1,'headType',1,'maxTime',2,'mixTime',3,'star',4,'title',5],[],e,s,gg)
+var cIH=_mz(z,'lesson-head',['content',1,'headType',1,'maxTime',2,'mixTime',3,'star',4,'title',5],[],e,s,gg)
 cs.pop()
-_(aLH,tMH)
-cs.push("./pages/lessonDetail/lessonDetail.wxml:lesson-teacher:1:270")
-var eNH=_n('lesson-teacher')
-_rz(z,eNH,'teacherList',7,e,s,gg)
+_(oHH,cIH)
+cs.push("./pages/lessonDetail/lessonDetail.wxml:lesson-teacher:1:273")
+var oJH=_n('lesson-teacher')
+_rz(z,oJH,'teacherList',7,e,s,gg)
 cs.pop()
-_(aLH,eNH)
-cs.push("./pages/lessonDetail/lessonDetail.wxml:lesson-desc:1:333")
-var bOH=_mz(z,'lesson-desc',['content',8,'title',1],[],e,s,gg)
+_(oHH,oJH)
+cs.push("./pages/lessonDetail/lessonDetail.wxml:lesson-desc:1:336")
+var lKH=_mz(z,'lesson-desc',['content',8,'title',1],[],e,s,gg)
 cs.pop()
-_(aLH,bOH)
-cs.push("./pages/lessonDetail/lessonDetail.wxml:lesson-comment:1:440")
-var oPH=_mz(z,'lesson-comment',['comment',10,'title',1],[],e,s,gg)
+_(oHH,lKH)
+cs.push("./pages/lessonDetail/lessonDetail.wxml:lesson-comment:1:465")
+var aLH=_mz(z,'lesson-comment',['comment',10,'title',1],[],e,s,gg)
 cs.pop()
-_(aLH,oPH)
-cs.push("./pages/lessonDetail/lessonDetail.wxml:lesson-science:1:516")
-var xQH=_mz(z,'lesson-science',['science',12,'title',1],[],e,s,gg)
+_(oHH,aLH)
+cs.push("./pages/lessonDetail/lessonDetail.wxml:lesson-science:1:557")
+var tMH=_mz(z,'lesson-science',['science',12,'title',1],[],e,s,gg)
 cs.pop()
-_(aLH,xQH)
+_(oHH,tMH)
 cs.pop()
-_(r,aLH)
+_(r,oHH)
 return r
 }
 e_[x[54]]={f:m54,j:[],i:[],ti:[],ic:[]}
@@ -3425,14 +3451,14 @@ d_[x[56]]={}
 var m56=function(e,s,r,gg){
 var z=gz$gwx_57()
 cs.push("./pages/message/message.wxml:view:1:1")
-var cTH=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var oPH=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
 cs.push("./pages/message/message.wxml:message-list:1:51")
-var hUH=_n('message-list')
-_rz(z,hUH,'messageList',2,e,s,gg)
+var xQH=_n('message-list')
+_rz(z,xQH,'messageList',2,e,s,gg)
 cs.pop()
-_(cTH,hUH)
+_(oPH,xQH)
 cs.pop()
-_(r,cTH)
+_(r,oPH)
 return r
 }
 e_[x[56]]={f:m56,j:[],i:[],ti:[],ic:[]}
@@ -3446,33 +3472,33 @@ d_[x[58]]={}
 var m58=function(e,s,r,gg){
 var z=gz$gwx_59()
 cs.push("./pages/myCoupon/myCoupon.wxml:view:1:1")
-var oXH=_n('view')
-_rz(z,oXH,'bind:__l',0,e,s,gg)
-var lYH=_v()
-_(oXH,lYH)
-if(_oz(z,1,e,s,gg)){lYH.wxVkey=1
+var cTH=_n('view')
+_rz(z,cTH,'bind:__l',0,e,s,gg)
+var hUH=_v()
+_(cTH,hUH)
+if(_oz(z,1,e,s,gg)){hUH.wxVkey=1
 cs.push("./pages/myCoupon/myCoupon.wxml:block:1:309")
 cs.push("./pages/myCoupon/myCoupon.wxml:coupon-list:1:346")
-var aZH=_n('coupon-list')
-_rz(z,aZH,'coupomList',2,e,s,gg)
+var oVH=_n('coupon-list')
+_rz(z,oVH,'coupomList',2,e,s,gg)
 cs.pop()
-_(lYH,aZH)
+_(hUH,oVH)
 cs.pop()
 }
-else{lYH.wxVkey=2
+else{hUH.wxVkey=2
 cs.push("./pages/myCoupon/myCoupon.wxml:block:1:409")
 cs.push("./pages/myCoupon/myCoupon.wxml:no-content:1:424")
-var t1H=_n('no-content')
-_rz(z,t1H,'title',3,e,s,gg)
+var cWH=_n('no-content')
+_rz(z,cWH,'title',3,e,s,gg)
 cs.pop()
-_(lYH,t1H)
+_(hUH,cWH)
 cs.pop()
 }
-lYH.wxXCkey=1
-lYH.wxXCkey=3
-lYH.wxXCkey=3
+hUH.wxXCkey=1
+hUH.wxXCkey=3
+hUH.wxXCkey=3
 cs.pop()
-_(r,oXH)
+_(r,cTH)
 return r
 }
 e_[x[58]]={f:m58,j:[],i:[],ti:[],ic:[]}
@@ -3480,13 +3506,13 @@ d_[x[59]]={}
 var m59=function(e,s,r,gg){
 var z=gz$gwx_60()
 cs.push("./pages/myEvaluate/myEvaluate.wxml:view:1:1")
-var b3H=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var lYH=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
 cs.push("./pages/myEvaluate/myEvaluate.wxml:lesson-list:1:428")
-var o4H=_mz(z,'lesson-list',['class',2,'lessonType',1,'listInfo',2],[],e,s,gg)
+var aZH=_mz(z,'lesson-list',['class',2,'lessonType',1,'listInfo',2],[],e,s,gg)
 cs.pop()
-_(b3H,o4H)
+_(lYH,aZH)
 cs.pop()
-_(r,b3H)
+_(r,lYH)
 return r
 }
 e_[x[59]]={f:m59,j:[],i:[],ti:[],ic:[]}
@@ -3494,14 +3520,13 @@ d_[x[60]]={}
 var m60=function(e,s,r,gg){
 var z=gz$gwx_61()
 cs.push("./pages/myFriend/myFriend.wxml:view:1:1")
-var o6H=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var e2H=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
 cs.push("./pages/myFriend/myFriend.wxml:friends-list:1:46")
-var f7H=_n('friends-list')
-_rz(z,f7H,'friendsList',2,e,s,gg)
+var b3H=_mz(z,'friends-list',['bind:forward_praise',2,'data-event-opts',1,'friendsList',2],[],e,s,gg)
 cs.pop()
-_(o6H,f7H)
+_(e2H,b3H)
 cs.pop()
-_(r,o6H)
+_(r,e2H)
 return r
 }
 e_[x[60]]={f:m60,j:[],i:[],ti:[],ic:[]}
@@ -3521,14 +3546,14 @@ d_[x[63]]={}
 var m63=function(e,s,r,gg){
 var z=gz$gwx_64()
 cs.push("./pages/rechargeRecord/rechargeRecord.wxml:view:1:1")
-var cAI=_n('view')
-_rz(z,cAI,'bind:__l',0,e,s,gg)
+var f7H=_n('view')
+_rz(z,f7H,'bind:__l',0,e,s,gg)
 cs.push("./pages/rechargeRecord/rechargeRecord.wxml:recharge-list:1:22")
-var oBI=_mz(z,'recharge-list',['moneyList',1,'type',1],[],e,s,gg)
+var c8H=_mz(z,'recharge-list',['moneyList',1,'type',1],[],e,s,gg)
 cs.pop()
-_(cAI,oBI)
+_(f7H,c8H)
 cs.pop()
-_(r,cAI)
+_(r,f7H)
 return r
 }
 e_[x[63]]={f:m63,j:[],i:[],ti:[],ic:[]}
@@ -3542,13 +3567,13 @@ d_[x[65]]={}
 var m65=function(e,s,r,gg){
 var z=gz$gwx_66()
 cs.push("./pages/registrationSuccess/registrationSuccess.wxml:view:1:1")
-var tEI=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var cAI=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
 cs.push("./pages/registrationSuccess/registrationSuccess.wxml:startclass:1:507")
-var eFI=_mz(z,'startclass',['class',2,'size',1,'star',2,'starColor',3],[],e,s,gg)
+var oBI=_mz(z,'startclass',['class',2,'size',1,'star',2,'starColor',3],[],e,s,gg)
 cs.pop()
-_(tEI,eFI)
+_(cAI,oBI)
 cs.pop()
-_(r,tEI)
+_(r,cAI)
 return r
 }
 e_[x[65]]={f:m65,j:[],i:[],ti:[],ic:[]}
@@ -3556,23 +3581,23 @@ d_[x[66]]={}
 var m66=function(e,s,r,gg){
 var z=gz$gwx_67()
 cs.push("./pages/releaseFriends/releaseFriends.wxml:view:1:1")
-var oHI=_n('view')
-_rz(z,oHI,'bind:__l',0,e,s,gg)
-var xII=_v()
-_(oHI,xII)
-if(_oz(z,1,e,s,gg)){xII.wxVkey=1
+var aDI=_n('view')
+_rz(z,aDI,'bind:__l',0,e,s,gg)
+var tEI=_v()
+_(aDI,tEI)
+if(_oz(z,1,e,s,gg)){tEI.wxVkey=1
 cs.push("./pages/releaseFriends/releaseFriends.wxml:block:1:22")
 cs.push("./pages/releaseFriends/releaseFriends.wxml:progress-bar:1:46")
-var oJI=_n('progress-bar')
-_rz(z,oJI,'progress',2,e,s,gg)
+var eFI=_n('progress-bar')
+_rz(z,eFI,'progress',2,e,s,gg)
 cs.pop()
-_(xII,oJI)
+_(tEI,eFI)
 cs.pop()
 }
-xII.wxXCkey=1
-xII.wxXCkey=3
+tEI.wxXCkey=1
+tEI.wxXCkey=3
 cs.pop()
-_(r,oHI)
+_(r,aDI)
 return r
 }
 e_[x[66]]={f:m66,j:[],i:[],ti:[],ic:[]}
@@ -3580,44 +3605,55 @@ d_[x[67]]={}
 var m67=function(e,s,r,gg){
 var z=gz$gwx_68()
 cs.push("./pages/setting/setting.wxml:view:1:1")
-var cLI=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var oHI=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
 cs.push("./pages/setting/setting.wxml:view:1:51")
-var hMI=_n('view')
-_rz(z,hMI,'class',2,e,s,gg)
+var xII=_n('view')
+_rz(z,xII,'class',2,e,s,gg)
 cs.push("./pages/setting/setting.wxml:view:1:69")
-var oNI=_mz(z,'view',['bindtap',3,'class',1,'data-event-opts',2],[],e,s,gg)
+var oJI=_mz(z,'view',['bindtap',3,'class',1,'data-event-opts',2],[],e,s,gg)
 cs.push("./pages/setting/setting.wxml:uni-icon:1:220")
-var cOI=_mz(z,'uni-icon',['size',6,'type',1],[],e,s,gg)
+var fKI=_mz(z,'uni-icon',['size',6,'type',1],[],e,s,gg)
 cs.pop()
-_(oNI,cOI)
+_(oJI,fKI)
 cs.pop()
-_(hMI,oNI)
+_(xII,oJI)
 cs.push("./pages/setting/setting.wxml:view:1:273")
-var oPI=_mz(z,'view',['bindtap',8,'class',1,'data-event-opts',2],[],e,s,gg)
+var cLI=_mz(z,'view',['bindtap',8,'class',1,'data-event-opts',2],[],e,s,gg)
 cs.push("./pages/setting/setting.wxml:uni-icon:1:426")
-var lQI=_mz(z,'uni-icon',['size',11,'type',1],[],e,s,gg)
-cs.pop()
-_(oPI,lQI)
-cs.pop()
-_(hMI,oPI)
-cs.push("./pages/setting/setting.wxml:view:1:479")
-var aRI=_mz(z,'view',['bindtap',13,'class',1,'data-event-opts',2],[],e,s,gg)
-cs.push("./pages/setting/setting.wxml:uni-icon:1:635")
-var tSI=_mz(z,'uni-icon',['size',16,'type',1],[],e,s,gg)
-cs.pop()
-_(aRI,tSI)
-cs.pop()
-_(hMI,aRI)
+var hMI=_mz(z,'uni-icon',['size',11,'type',1],[],e,s,gg)
 cs.pop()
 _(cLI,hMI)
 cs.pop()
-_(r,cLI)
+_(xII,cLI)
+cs.push("./pages/setting/setting.wxml:view:1:479")
+var oNI=_mz(z,'view',['bindtap',13,'class',1,'data-event-opts',2],[],e,s,gg)
+cs.push("./pages/setting/setting.wxml:uni-icon:1:635")
+var cOI=_mz(z,'uni-icon',['size',16,'type',1],[],e,s,gg)
+cs.pop()
+_(oNI,cOI)
+cs.pop()
+_(xII,oNI)
+cs.pop()
+_(oHI,xII)
+cs.pop()
+_(r,oHI)
 return r
 }
 e_[x[67]]={f:m67,j:[],i:[],ti:[],ic:[]}
 d_[x[68]]={}
 var m68=function(e,s,r,gg){
 var z=gz$gwx_69()
+cs.push("./pages/tabbar/tabbar-1/tabbar-1.wxml:view:1:1")
+var lQI=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var aRI=_v()
+_(lQI,aRI)
+if(_oz(z,2,e,s,gg)){aRI.wxVkey=1
+cs.push("./pages/tabbar/tabbar-1/tabbar-1.wxml:block:1:354")
+cs.pop()
+}
+aRI.wxXCkey=1
+cs.pop()
+_(r,lQI)
 return r
 }
 e_[x[68]]={f:m68,j:[],i:[],ti:[],ic:[]}
@@ -3625,17 +3661,24 @@ d_[x[69]]={}
 var m69=function(e,s,r,gg){
 var z=gz$gwx_70()
 cs.push("./pages/tabbar/tabbar-2/tabbar-2.wxml:view:1:1")
-var oVI=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var eTI=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
 cs.push("./pages/tabbar/tabbar-2/tabbar-2.wxml:mx-date-picker:1:53")
-var xWI=_mz(z,'mx-date-picker',['beginText',2,'bind:cancel',1,'bind:confirm',2,'color',3,'data-event-opts',4,'endText',5,'format',6,'show',7,'showSeconds',8,'showTips',9,'type',10,'value',11],[],e,s,gg)
+var oVI=_mz(z,'mx-date-picker',['beginText',2,'bind:cancel',1,'bind:confirm',2,'bind:selectTime',3,'color',4,'data-event-opts',5,'endText',6,'format',7,'show',8,'showSeconds',9,'showTips',10,'type',11,'value',12],[],e,s,gg)
 cs.pop()
-_(oVI,xWI)
-cs.push("./pages/tabbar/tabbar-2/tabbar-2.wxml:class-list:1:462")
-var oXI=_mz(z,'class-list',['classList',14,'isTeacher',1],[],e,s,gg)
+_(eTI,oVI)
+cs.push("./pages/tabbar/tabbar-2/tabbar-2.wxml:class-list:1:526")
+var xWI=_mz(z,'class-list',['classList',15,'isTeacher',1],[],e,s,gg)
 cs.pop()
-_(oVI,oXI)
+_(eTI,xWI)
+var bUI=_v()
+_(eTI,bUI)
+if(_oz(z,17,e,s,gg)){bUI.wxVkey=1
+cs.push("./pages/tabbar/tabbar-2/tabbar-2.wxml:block:1:634")
 cs.pop()
-_(r,oVI)
+}
+bUI.wxXCkey=1
+cs.pop()
+_(r,eTI)
 return r
 }
 e_[x[69]]={f:m69,j:[],i:[],ti:[],ic:[]}
@@ -3643,14 +3686,42 @@ d_[x[70]]={}
 var m70=function(e,s,r,gg){
 var z=gz$gwx_71()
 cs.push("./pages/tabbar/tabbar-5/tabbar-5.wxml:view:1:1")
-var cZI=_n('view')
-_rz(z,cZI,'bind:__l',0,e,s,gg)
+var fYI=_n('view')
+_rz(z,fYI,'bind:__l',0,e,s,gg)
 cs.push("./pages/tabbar/tabbar-5/tabbar-5.wxml:neil-modal:1:22")
-var h1I=_mz(z,'neil-modal',['bind:close',1,'bind:confirm',1,'data-event-opts',2,'show',3,'title',4],[],e,s,gg)
+var o2I=_mz(z,'neil-modal',['bind:close',1,'bind:confirm',1,'data-event-opts',2,'show',3,'title',4],[],e,s,gg)
 cs.pop()
-_(cZI,h1I)
+_(fYI,o2I)
+var cZI=_v()
+_(fYI,cZI)
+if(_oz(z,6,e,s,gg)){cZI.wxVkey=1
+cs.push("./pages/tabbar/tabbar-5/tabbar-5.wxml:block:1:197")
+cs.push("./pages/tabbar/tabbar-5/tabbar-5.wxml:uni-icon:1:525")
+var c3I=_mz(z,'uni-icon',['size',7,'style',1,'type',2],[],e,s,gg)
 cs.pop()
-_(r,cZI)
+_(cZI,c3I)
+cs.pop()
+}
+else{cZI.wxVkey=2
+cs.push("./pages/tabbar/tabbar-5/tabbar-5.wxml:block:1:3041")
+cs.push("./pages/tabbar/tabbar-5/tabbar-5.wxml:uni-icon:1:3298")
+var o4I=_mz(z,'uni-icon',['size',10,'style',1,'type',2],[],e,s,gg)
+cs.pop()
+_(cZI,o4I)
+cs.pop()
+}
+var h1I=_v()
+_(fYI,h1I)
+if(_oz(z,13,e,s,gg)){h1I.wxVkey=1
+cs.push("./pages/tabbar/tabbar-5/tabbar-5.wxml:block:1:4405")
+cs.pop()
+}
+cZI.wxXCkey=1
+cZI.wxXCkey=3
+cZI.wxXCkey=3
+h1I.wxXCkey=1
+cs.pop()
+_(r,fYI)
 return r
 }
 e_[x[70]]={f:m70,j:[],i:[],ti:[],ic:[]}
@@ -3658,42 +3729,42 @@ d_[x[71]]={}
 var m71=function(e,s,r,gg){
 var z=gz$gwx_72()
 cs.push("./pages/teacherDetail/teacherDetail.wxml:view:1:1")
-var c3I=_n('view')
-_rz(z,c3I,'bind:__l',0,e,s,gg)
+var a6I=_n('view')
+_rz(z,a6I,'bind:__l',0,e,s,gg)
 cs.push("./pages/teacherDetail/teacherDetail.wxml:teacher-head:1:22")
-var a6I=_mz(z,'teacher-head',['content',1,'headType',1,'musicName',2,'star',3,'title',4],[],e,s,gg)
+var b9I=_mz(z,'teacher-head',['content',1,'headType',1,'musicName',2,'star',3,'title',4],[],e,s,gg)
 cs.pop()
-_(c3I,a6I)
-cs.push("./pages/teacherDetail/teacherDetail.wxml:lesson-list:1:250")
-var t7I=_mz(z,'lesson-list',['lessonType',6,'listInfo',1],[],e,s,gg)
+_(a6I,b9I)
+cs.push("./pages/teacherDetail/teacherDetail.wxml:lesson-list:1:261")
+var o0I=_mz(z,'lesson-list',['lessonType',6,'listInfo',1],[],e,s,gg)
 cs.pop()
-_(c3I,t7I)
-var o4I=_v()
-_(c3I,o4I)
-if(_oz(z,8,e,s,gg)){o4I.wxVkey=1
-cs.push("./pages/teacherDetail/teacherDetail.wxml:block:1:334")
-cs.push("./pages/teacherDetail/teacherDetail.wxml:lesson-comment:1:368")
-var e8I=_mz(z,'lesson-comment',['comment',9,'title',1],[],e,s,gg)
+_(a6I,o0I)
+var t7I=_v()
+_(a6I,t7I)
+if(_oz(z,8,e,s,gg)){t7I.wxVkey=1
+cs.push("./pages/teacherDetail/teacherDetail.wxml:block:1:345")
+cs.push("./pages/teacherDetail/teacherDetail.wxml:lesson-comment:1:379")
+var xAJ=_mz(z,'lesson-comment',['comment',9,'title',1],[],e,s,gg)
 cs.pop()
-_(o4I,e8I)
-cs.pop()
-}
-var l5I=_v()
-_(c3I,l5I)
-if(_oz(z,11,e,s,gg)){l5I.wxVkey=1
-cs.push("./pages/teacherDetail/teacherDetail.wxml:block:1:452")
-cs.push("./pages/teacherDetail/teacherDetail.wxml:lesson-science:1:486")
-var b9I=_mz(z,'lesson-science',['science',12,'title',1],[],e,s,gg)
-cs.pop()
-_(l5I,b9I)
+_(t7I,xAJ)
 cs.pop()
 }
-o4I.wxXCkey=1
-o4I.wxXCkey=3
-l5I.wxXCkey=1
-l5I.wxXCkey=3
+var e8I=_v()
+_(a6I,e8I)
+if(_oz(z,11,e,s,gg)){e8I.wxVkey=1
+cs.push("./pages/teacherDetail/teacherDetail.wxml:block:1:482")
+cs.push("./pages/teacherDetail/teacherDetail.wxml:lesson-science:1:516")
+var oBJ=_mz(z,'lesson-science',['science',12,'title',1],[],e,s,gg)
 cs.pop()
-_(r,c3I)
+_(e8I,oBJ)
+cs.pop()
+}
+t7I.wxXCkey=1
+t7I.wxXCkey=3
+e8I.wxXCkey=1
+e8I.wxXCkey=3
+cs.pop()
+_(r,a6I)
 return r
 }
 e_[x[71]]={f:m71,j:[],i:[],ti:[],ic:[]}
@@ -3725,68 +3796,68 @@ d_[x[76]]={}
 var m76=function(e,s,r,gg){
 var z=gz$gwx_77()
 cs.push("./pages/updateUserinfo/updateUserinfo.wxml:view:1:1")
-var hEJ=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+var oHJ=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
 cs.push("./pages/updateUserinfo/updateUserinfo.wxml:neil-modal:1:51")
-var oFJ=_mz(z,'neil-modal',['bind:close',2,'data-event-opts',1,'show',2,'title',3,'vueSlots',4],[],e,s,gg)
-cs.pop()
-_(hEJ,oFJ)
-cs.push("./pages/updateUserinfo/updateUserinfo.wxml:view:1:402")
-var cGJ=_n('view')
-_rz(z,cGJ,'class',7,e,s,gg)
-cs.push("./pages/updateUserinfo/updateUserinfo.wxml:view:1:473")
-var oHJ=_mz(z,'view',['bindtap',8,'class',1,'data-event-opts',2],[],e,s,gg)
-cs.push("./pages/updateUserinfo/updateUserinfo.wxml:uni-icon:1:613")
-var lIJ=_mz(z,'uni-icon',['size',11,'type',1],[],e,s,gg)
+var lIJ=_mz(z,'neil-modal',['bind:close',2,'data-event-opts',1,'show',2,'title',3,'vueSlots',4],[],e,s,gg)
 cs.pop()
 _(oHJ,lIJ)
+cs.push("./pages/updateUserinfo/updateUserinfo.wxml:view:1:402")
+var aJJ=_n('view')
+_rz(z,aJJ,'class',7,e,s,gg)
+cs.push("./pages/updateUserinfo/updateUserinfo.wxml:view:1:473")
+var tKJ=_mz(z,'view',['bindtap',8,'class',1,'data-event-opts',2],[],e,s,gg)
+cs.push("./pages/updateUserinfo/updateUserinfo.wxml:uni-icon:1:613")
+var eLJ=_mz(z,'uni-icon',['size',11,'type',1],[],e,s,gg)
 cs.pop()
-_(cGJ,oHJ)
-cs.push("./pages/updateUserinfo/updateUserinfo.wxml:view:1:726")
-var aJJ=_mz(z,'view',['bindtap',13,'class',1,'data-event-opts',2],[],e,s,gg)
-cs.push("./pages/updateUserinfo/updateUserinfo.wxml:uni-icon:1:843")
-var tKJ=_mz(z,'uni-icon',['size',16,'type',1],[],e,s,gg)
+_(tKJ,eLJ)
 cs.pop()
 _(aJJ,tKJ)
-cs.pop()
-_(cGJ,aJJ)
-cs.push("./pages/updateUserinfo/updateUserinfo.wxml:uni-icon:1:1153")
-var eLJ=_mz(z,'uni-icon',['size',18,'type',1],[],e,s,gg)
-cs.pop()
-_(cGJ,eLJ)
-cs.push("./pages/updateUserinfo/updateUserinfo.wxml:view:1:1266")
-var bMJ=_n('view')
-_rz(z,bMJ,'class',20,e,s,gg)
-cs.push("./pages/updateUserinfo/updateUserinfo.wxml:w-picker:1:1390")
-var oNJ=_mz(z,'w-picker',['bind:confirm',21,'class',1,'data-event-opts',2,'data-ref',3,'defaultVal',4,'mode',5,'title',6],[],e,s,gg)
+cs.push("./pages/updateUserinfo/updateUserinfo.wxml:view:1:726")
+var bMJ=_mz(z,'view',['bindtap',13,'class',1,'data-event-opts',2],[],e,s,gg)
+cs.push("./pages/updateUserinfo/updateUserinfo.wxml:uni-icon:1:843")
+var oNJ=_mz(z,'uni-icon',['size',16,'type',1],[],e,s,gg)
 cs.pop()
 _(bMJ,oNJ)
+cs.pop()
+_(aJJ,bMJ)
+cs.push("./pages/updateUserinfo/updateUserinfo.wxml:uni-icon:1:1153")
+var xOJ=_mz(z,'uni-icon',['size',18,'type',1],[],e,s,gg)
+cs.pop()
+_(aJJ,xOJ)
+cs.push("./pages/updateUserinfo/updateUserinfo.wxml:view:1:1266")
+var oPJ=_n('view')
+_rz(z,oPJ,'class',20,e,s,gg)
+cs.push("./pages/updateUserinfo/updateUserinfo.wxml:w-picker:1:1390")
+var fQJ=_mz(z,'w-picker',['bind:confirm',21,'class',1,'data-event-opts',2,'data-ref',3,'defaultVal',4,'mode',5,'title',6],[],e,s,gg)
+cs.pop()
+_(oPJ,fQJ)
 cs.push("./pages/updateUserinfo/updateUserinfo.wxml:uni-icon:1:1583")
-var xOJ=_mz(z,'uni-icon',['size',28,'type',1],[],e,s,gg)
+var cRJ=_mz(z,'uni-icon',['size',28,'type',1],[],e,s,gg)
 cs.pop()
-_(bMJ,xOJ)
+_(oPJ,cRJ)
 cs.pop()
-_(cGJ,bMJ)
+_(aJJ,oPJ)
 cs.push("./pages/updateUserinfo/updateUserinfo.wxml:uni-icon:1:1902")
-var oPJ=_mz(z,'uni-icon',['size',30,'type',1],[],e,s,gg)
+var hSJ=_mz(z,'uni-icon',['size',30,'type',1],[],e,s,gg)
 cs.pop()
-_(cGJ,oPJ)
+_(aJJ,hSJ)
 cs.push("./pages/updateUserinfo/updateUserinfo.wxml:view:1:2015")
-var fQJ=_n('view')
-_rz(z,fQJ,'class',32,e,s,gg)
+var oTJ=_n('view')
+_rz(z,oTJ,'class',32,e,s,gg)
 cs.push("./pages/updateUserinfo/updateUserinfo.wxml:uni-icon:1:2144")
-var cRJ=_mz(z,'uni-icon',['size',33,'type',1],[],e,s,gg)
+var cUJ=_mz(z,'uni-icon',['size',33,'type',1],[],e,s,gg)
 cs.pop()
-_(fQJ,cRJ)
+_(oTJ,cUJ)
 cs.push("./pages/updateUserinfo/updateUserinfo.wxml:w-picker:1:2190")
-var hSJ=_mz(z,'w-picker',['bind:confirm',35,'class',1,'data-event-opts',2,'data-ref',3,'mode',4,'title',5],[],e,s,gg)
+var oVJ=_mz(z,'w-picker',['bind:confirm',35,'class',1,'data-event-opts',2,'data-ref',3,'mode',4,'title',5],[],e,s,gg)
 cs.pop()
-_(fQJ,hSJ)
+_(oTJ,oVJ)
 cs.pop()
-_(cGJ,fQJ)
+_(aJJ,oTJ)
 cs.pop()
-_(hEJ,cGJ)
+_(oHJ,aJJ)
 cs.pop()
-_(r,hEJ)
+_(r,oHJ)
 return r
 }
 e_[x[76]]={f:m76,j:[],i:[],ti:[],ic:[]}
@@ -3800,22 +3871,29 @@ d_[x[78]]={}
 var m78=function(e,s,r,gg){
 var z=gz$gwx_79()
 cs.push("./pages/vipCenter/vipCenter.wxml:view:1:1")
-var oVJ=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
-cs.push("./pages/vipCenter/vipCenter.wxml:view:1:1344")
-var lWJ=_n('view')
-_rz(z,lWJ,'class',2,e,s,gg)
-cs.push("./pages/vipCenter/vipCenter.wxml:uni-icon:1:1577")
-var aXJ=_mz(z,'uni-icon',['class',3,'size',1,'type',2],[],e,s,gg)
+var tYJ=_mz(z,'view',['bind:__l',0,'class',1],[],e,s,gg)
+cs.push("./pages/vipCenter/vipCenter.wxml:view:1:1441")
+var b1J=_n('view')
+_rz(z,b1J,'class',2,e,s,gg)
+cs.push("./pages/vipCenter/vipCenter.wxml:uni-icon:1:1690")
+var o2J=_mz(z,'uni-icon',['class',3,'size',1,'type',2],[],e,s,gg)
 cs.pop()
-_(lWJ,aXJ)
-cs.push("./pages/vipCenter/vipCenter.wxml:uni-icon:1:1860")
-var tYJ=_mz(z,'uni-icon',['class',6,'size',1,'type',2],[],e,s,gg)
+_(b1J,o2J)
+cs.push("./pages/vipCenter/vipCenter.wxml:uni-icon:1:1993")
+var x3J=_mz(z,'uni-icon',['class',6,'size',1,'type',2],[],e,s,gg)
 cs.pop()
-_(lWJ,tYJ)
+_(b1J,x3J)
 cs.pop()
-_(oVJ,lWJ)
+_(tYJ,b1J)
+var eZJ=_v()
+_(tYJ,eZJ)
+if(_oz(z,9,e,s,gg)){eZJ.wxVkey=1
+cs.push("./pages/vipCenter/vipCenter.wxml:block:1:2089")
 cs.pop()
-_(r,oVJ)
+}
+eZJ.wxXCkey=1
+cs.pop()
+_(r,tYJ)
 return r
 }
 e_[x[78]]={f:m78,j:[],i:[],ti:[],ic:[]}
@@ -3845,7 +3923,7 @@ return root;
 
 
 
-__wxAppCode__['app.json']={"pages":["pages/login/login","pages/tabbar/tabbar-1/tabbar-1","pages/tabbar/tabbar-2/tabbar-2","pages/tabbar/tabbar-5/tabbar-5","pages/circleFriends/circleFriends","pages/myCoupon/myCoupon","pages/myEvaluate/myEvaluate","pages/feedback/feedback","pages/aboutUs/aboutUs","pages/courseInvitation/courseInvitation","pages/myFriend/myFriend","pages/friendsDetail/friendsDetail","pages/releaseFriends/releaseFriends","pages/setting/setting","pages/updatePass/updatePass","pages/updateEmial/updateEmial","pages/updatePhone/updatePhone","pages/message/message","pages/lesson/lesson","pages/vipCenter/vipCenter","pages/rechargeRecord/rechargeRecord","pages/consumptionRecord/consumptionRecord","pages/pay/pay","pages/paySuccess/paySuccess","pages/evaluate/evaluate","pages/classAdjustment/classAdjustment","pages/lessonDetail/lessonDetail","pages/lessonCopy/lessonCopy","pages/teacherDetail/teacherDetail","pages/myCode/myCode","pages/register/register","pages/classNotice/classNotice","pages/codeSuccess/codeSuccess","pages/teacherLogin/teacherLogin","pages/addTeacher/addTeacher","pages/updateUserinfo/updateUserinfo","pages/wagesDetail/wagesDetail","pages/authentication/authentication","pages/uploadFile/uploadFile","pages/finance/finance","pages/adjustmentDetail/adjustmentDetail","pages/choiceTeacher/choiceTeacher","pages/confirmComplete/confirmComplete","pages/addTask/addTask","pages/forgetPass/forgetPass","pages/code/code","pages/registrationSuccess/registrationSuccess"],"subPackages":[],"window":{"navigationBarTextStyle":"black","navigationBarTitleText":"","navigationBarBackgroundColor":"#fff","backgroundColor":"#F8F8F8"},"tabBar":{"borderStyle":"black","backgroundColor":"","color":"#8F8F94","selectedColor":"#f33e54","list":[{"pagePath":"pages/tabbar/tabbar-1/tabbar-1","iconPath":"static/img/tabbar/home.png","selectedIconPath":"static/img/tabbar/homeactive.png","text":""},{"pagePath":"pages/tabbar/tabbar-2/tabbar-2","iconPath":"static/img/tabbar/class.png","selectedIconPath":"static/img/tabbar/classactive.png","text":""},{"pagePath":"pages/tabbar/tabbar-5/tabbar-5","iconPath":"static/img/tabbar/me.png","selectedIconPath":"static/img/tabbar/meactive.png","text":""}]},"networkTimeout":{"uploadFile":86400000},"splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false},"appname":"weMusic","compilerVersion":"1.9.3","usingComponents":{}};
+__wxAppCode__['app.json']={"pages":["pages/login/login","pages/tabbar/tabbar-1/tabbar-1","pages/tabbar/tabbar-2/tabbar-2","pages/tabbar/tabbar-5/tabbar-5","pages/circleFriends/circleFriends","pages/myCoupon/myCoupon","pages/myEvaluate/myEvaluate","pages/feedback/feedback","pages/aboutUs/aboutUs","pages/courseInvitation/courseInvitation","pages/myFriend/myFriend","pages/friendsDetail/friendsDetail","pages/releaseFriends/releaseFriends","pages/setting/setting","pages/updatePass/updatePass","pages/updateEmial/updateEmial","pages/updatePhone/updatePhone","pages/message/message","pages/lesson/lesson","pages/vipCenter/vipCenter","pages/rechargeRecord/rechargeRecord","pages/consumptionRecord/consumptionRecord","pages/pay/pay","pages/paySuccess/paySuccess","pages/evaluate/evaluate","pages/classAdjustment/classAdjustment","pages/lessonDetail/lessonDetail","pages/lessonCopy/lessonCopy","pages/teacherDetail/teacherDetail","pages/myCode/myCode","pages/register/register","pages/classNotice/classNotice","pages/codeSuccess/codeSuccess","pages/teacherLogin/teacherLogin","pages/addTeacher/addTeacher","pages/updateUserinfo/updateUserinfo","pages/wagesDetail/wagesDetail","pages/authentication/authentication","pages/uploadFile/uploadFile","pages/finance/finance","pages/adjustmentDetail/adjustmentDetail","pages/choiceTeacher/choiceTeacher","pages/confirmComplete/confirmComplete","pages/addTask/addTask","pages/forgetPass/forgetPass","pages/code/code","pages/registrationSuccess/registrationSuccess"],"subPackages":[],"window":{"navigationBarTextStyle":"black","navigationBarTitleText":"","navigationBarBackgroundColor":"#fff","backgroundColor":"#F8F8F8"},"networkTimeout":{"uploadFile":86400000},"splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false},"appname":"weMusic","compilerVersion":"1.9.4","usingComponents":{}};
 __wxAppCode__['app.wxml']=$gwx('./app.wxml');
 
 __wxAppCode__['components/comment/comment.json']={"usingComponents":{},"component":true};
@@ -3989,7 +4067,7 @@ __wxAppCode__['pages/consumptionRecord/consumptionRecord.wxml']=$gwx('./pages/co
 __wxAppCode__['pages/courseInvitation/courseInvitation.json']={"navigationBarTitleText":"课程邀请","usingComponents":{}};
 __wxAppCode__['pages/courseInvitation/courseInvitation.wxml']=$gwx('./pages/courseInvitation/courseInvitation.wxml');
 
-__wxAppCode__['pages/evaluate/evaluate.json']={"navigationBarTitleText":"评价","usingComponents":{"comment-star-class":"/components/comment/commentStarClass","startclass":"/components/starclass"}};
+__wxAppCode__['pages/evaluate/evaluate.json']={"navigationBarTitleText":"评价","titleNView":{"buttons":[{"text":"提交","fontSize":"16px","fontWeight":"bold","color":"#FAD42A"}]},"usingComponents":{"comment-star-class":"/components/comment/commentStarClass","startclass":"/components/starclass"}};
 __wxAppCode__['pages/evaluate/evaluate.wxml']=$gwx('./pages/evaluate/evaluate.wxml');
 
 __wxAppCode__['pages/feedback/feedback.json']={"navigationBarTitleText":"意见反馈","usingComponents":{}};
@@ -4013,7 +4091,7 @@ __wxAppCode__['pages/lessonCopy/lessonCopy.wxml']=$gwx('./pages/lessonCopy/lesso
 __wxAppCode__['pages/lessonDetail/lessonDetail.json']={"navigationBarTitleText":"课程详情","enablePullDownRefresh":true,"titleNView":{"type":"transparent"},"usingComponents":{"lesson-head":"/components/lesson/lessonHead","lesson-teacher":"/components/lesson/lessonTeacher","lesson-desc":"/components/lesson/lessonDesc","lesson-comment":"/components/lesson/lessonComment","lesson-science":"/components/lesson/lessonScience"}};
 __wxAppCode__['pages/lessonDetail/lessonDetail.wxml']=$gwx('./pages/lessonDetail/lessonDetail.wxml');
 
-__wxAppCode__['pages/login/login.json']={"titleNView":false,"usingComponents":{}};
+__wxAppCode__['pages/login/login.json']={"titleNView":false,"scrollIndicator":"none","usingComponents":{}};
 __wxAppCode__['pages/login/login.wxml']=$gwx('./pages/login/login.wxml');
 
 __wxAppCode__['pages/message/message.json']={"navigationBarTitleText":"消息","enablePullDownRefresh":true,"usingComponents":{"message-list":"/components/item/messageList"}};
@@ -4058,7 +4136,7 @@ __wxAppCode__['pages/tabbar/tabbar-1/tabbar-1.wxml']=$gwx('./pages/tabbar/tabbar
 __wxAppCode__['pages/tabbar/tabbar-2/tabbar-2.json']={"navigationBarTitleText":"课程表","enablePullDownRefresh":false,"titleNView":{"backgroundColor":"#ffff","titleSize":"17px","buttons":[{"text":"","fontSrc":"/static/iconfont/iconfont.ttf","fontSize":"22px","fontWeight":"bold"}]},"usingComponents":{"class-list":"/components/item/classList","mx-date-picker":"/components/mx-datepicker/mx-datepicker"}};
 __wxAppCode__['pages/tabbar/tabbar-2/tabbar-2.wxml']=$gwx('./pages/tabbar/tabbar-2/tabbar-2.wxml');
 
-__wxAppCode__['pages/tabbar/tabbar-5/tabbar-5.json']={"enablePullDownRefresh":true,"titleNView":{"buttons":[{"text":"","fontSrc":"/static/iconfont/iconfont.ttf","fontSize":"22px","fontWeight":"bold"},{"text":"","fontSrc":"/static/iconfont/iconfont.ttf","fontSize":"22px","fontWeight":"bold","float":"left"}]},"usingComponents":{"neil-modal":"/components/neil-modal/neil-modal"}};
+__wxAppCode__['pages/tabbar/tabbar-5/tabbar-5.json']={"enablePullDownRefresh":true,"titleNView":{"buttons":[{"text":"","fontSrc":"/static/iconfont/iconfont.ttf","fontSize":"22px","fontWeight":"bold"},{"text":"","fontSrc":"/static/iconfont/iconfont.ttf","fontSize":"22px","fontWeight":"bold","float":"left"}]},"usingComponents":{"uni-icon":"/components/uni-icon/uni-icon","neil-modal":"/components/neil-modal/neil-modal"}};
 __wxAppCode__['pages/tabbar/tabbar-5/tabbar-5.wxml']=$gwx('./pages/tabbar/tabbar-5/tabbar-5.wxml');
 
 __wxAppCode__['pages/teacherDetail/teacherDetail.json']={"navigationBarTitleText":"教师详情","titleNView":{"type":"transparent"},"usingComponents":{"teacher-head":"/components/lesson/teacherHead","lesson-list":"/components/item/lessonList","lesson-comment":"/components/lesson/lessonComment","lesson-science":"/components/lesson/lessonScience"}};
@@ -4082,7 +4160,7 @@ __wxAppCode__['pages/updateUserinfo/updateUserinfo.wxml']=$gwx('./pages/updateUs
 __wxAppCode__['pages/uploadFile/uploadFile.json']={"navigationBarTitleText":"资料上传","usingComponents":{}};
 __wxAppCode__['pages/uploadFile/uploadFile.wxml']=$gwx('./pages/uploadFile/uploadFile.wxml');
 
-__wxAppCode__['pages/vipCenter/vipCenter.json']={"navigationBarTitleText":"会员中心","usingComponents":{"uni-icon":"/components/uni-icon/uni-icon"}};
+__wxAppCode__['pages/vipCenter/vipCenter.json']={"navigationBarTitleText":"会员中心","navigationBarBackgroundColor":"#434445","navigationBarTextStyle":"white","usingComponents":{"uni-icon":"/components/uni-icon/uni-icon"}};
 __wxAppCode__['pages/vipCenter/vipCenter.wxml']=$gwx('./pages/vipCenter/vipCenter.wxml');
 
 __wxAppCode__['pages/wagesDetail/wagesDetail.json']={"navigationBarTitleText":"工资详情","usingComponents":{}};
@@ -4301,11 +4379,11 @@ define('common/runtime.js',function(require, module, exports, window, document, 
     /******/
     /******/
     /******/ // mini-css-extract-plugin CSS loading
-    /******/var cssChunks = { "components/item/classList": 1, "components/mx-datepicker/mx-datepicker": 1, "components/neil-modal/neil-modal": 1, "components/item/friendsList": 1, "components/uni-icon/uni-icon": 1, "components/item/couponList": 1, "components/noContent": 1, "components/item/lessonList": 1, "components/comment/comment": 1, "components/friendsAssembly/friendHead": 1, "components/friendsAssembly/friendContent": 1, "components/friendsAssembly/friendOperation": 1, "components/submitBtn": 1, "components/progress": 1, "components/item/messageList": 1, "components/item/rechargeList": 1, "components/comment/commentStarClass": 1, "components/starclass": 1, "components/w-picker/w-picker": 1, "components/lesson/lessonComment": 1, "components/lesson/lessonDesc": 1, "components/lesson/lessonHead": 1, "components/lesson/lessonScience": 1, "components/lesson/lessonTeacher": 1, "components/lesson/teacherHead": 1, "components/item/financeList": 1, "components/item/teacherList": 1, "components/lesson/orderMessage": 1, "components/lesson/teachingWay": 1, "components/qrcode/qrcode": 1, "components/uni-rate/uni-rate": 1, "components/mpvue-picker/mpvuePicker": 1, "components/item/selectTime": 1 };
+    /******/var cssChunks = { "components/item/classList": 1, "components/mx-datepicker/mx-datepicker": 1, "components/neil-modal/neil-modal": 1, "components/uni-icon/uni-icon": 1, "components/item/friendsList": 1, "components/item/couponList": 1, "components/noContent": 1, "components/item/lessonList": 1, "components/comment/comment": 1, "components/friendsAssembly/friendHead": 1, "components/friendsAssembly/friendContent": 1, "components/friendsAssembly/friendOperation": 1, "components/submitBtn": 1, "components/progress": 1, "components/item/messageList": 1, "components/item/rechargeList": 1, "components/comment/commentStarClass": 1, "components/starclass": 1, "components/w-picker/w-picker": 1, "components/lesson/lessonComment": 1, "components/lesson/lessonDesc": 1, "components/lesson/lessonHead": 1, "components/lesson/lessonScience": 1, "components/lesson/lessonTeacher": 1, "components/lesson/teacherHead": 1, "components/item/financeList": 1, "components/item/teacherList": 1, "components/lesson/orderMessage": 1, "components/lesson/teachingWay": 1, "components/qrcode/qrcode": 1, "components/uni-rate/uni-rate": 1, "components/mpvue-picker/mpvuePicker": 1, "components/item/selectTime": 1 };
     /******/if (installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
     /******/else if (installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
         /******/promises.push(installedCssChunks[chunkId] = new Promise(function (resolve, reject) {
-          /******/var href = "" + ({ "components/item/classList": "components/item/classList", "components/mx-datepicker/mx-datepicker": "components/mx-datepicker/mx-datepicker", "components/neil-modal/neil-modal": "components/neil-modal/neil-modal", "components/item/friendsList": "components/item/friendsList", "components/uni-icon/uni-icon": "components/uni-icon/uni-icon", "components/item/couponList": "components/item/couponList", "components/noContent": "components/noContent", "components/item/lessonList": "components/item/lessonList", "components/comment/comment": "components/comment/comment", "components/friendsAssembly/friendHead": "components/friendsAssembly/friendHead", "components/friendsAssembly/friendContent": "components/friendsAssembly/friendContent", "components/friendsAssembly/friendOperation": "components/friendsAssembly/friendOperation", "components/submitBtn": "components/submitBtn", "components/progress": "components/progress", "components/item/messageList": "components/item/messageList", "components/item/rechargeList": "components/item/rechargeList", "components/comment/commentStarClass": "components/comment/commentStarClass", "components/starclass": "components/starclass", "components/w-picker/w-picker": "components/w-picker/w-picker", "components/lesson/lessonComment": "components/lesson/lessonComment", "components/lesson/lessonDesc": "components/lesson/lessonDesc", "components/lesson/lessonHead": "components/lesson/lessonHead", "components/lesson/lessonScience": "components/lesson/lessonScience", "components/lesson/lessonTeacher": "components/lesson/lessonTeacher", "components/lesson/teacherHead": "components/lesson/teacherHead", "components/item/financeList": "components/item/financeList", "components/item/teacherList": "components/item/teacherList", "components/lesson/orderMessage": "components/lesson/orderMessage", "components/lesson/teachingWay": "components/lesson/teachingWay", "components/qrcode/qrcode": "components/qrcode/qrcode", "components/uni-rate/uni-rate": "components/uni-rate/uni-rate", "components/mpvue-picker/mpvuePicker": "components/mpvue-picker/mpvuePicker", "components/item/selectTime": "components/item/selectTime" }[chunkId] || chunkId) + ".wxss";
+          /******/var href = "" + ({ "components/item/classList": "components/item/classList", "components/mx-datepicker/mx-datepicker": "components/mx-datepicker/mx-datepicker", "components/neil-modal/neil-modal": "components/neil-modal/neil-modal", "components/uni-icon/uni-icon": "components/uni-icon/uni-icon", "components/item/friendsList": "components/item/friendsList", "components/item/couponList": "components/item/couponList", "components/noContent": "components/noContent", "components/item/lessonList": "components/item/lessonList", "components/comment/comment": "components/comment/comment", "components/friendsAssembly/friendHead": "components/friendsAssembly/friendHead", "components/friendsAssembly/friendContent": "components/friendsAssembly/friendContent", "components/friendsAssembly/friendOperation": "components/friendsAssembly/friendOperation", "components/submitBtn": "components/submitBtn", "components/progress": "components/progress", "components/item/messageList": "components/item/messageList", "components/item/rechargeList": "components/item/rechargeList", "components/comment/commentStarClass": "components/comment/commentStarClass", "components/starclass": "components/starclass", "components/w-picker/w-picker": "components/w-picker/w-picker", "components/lesson/lessonComment": "components/lesson/lessonComment", "components/lesson/lessonDesc": "components/lesson/lessonDesc", "components/lesson/lessonHead": "components/lesson/lessonHead", "components/lesson/lessonScience": "components/lesson/lessonScience", "components/lesson/lessonTeacher": "components/lesson/lessonTeacher", "components/lesson/teacherHead": "components/lesson/teacherHead", "components/item/financeList": "components/item/financeList", "components/item/teacherList": "components/item/teacherList", "components/lesson/orderMessage": "components/lesson/orderMessage", "components/lesson/teachingWay": "components/lesson/teachingWay", "components/qrcode/qrcode": "components/qrcode/qrcode", "components/uni-rate/uni-rate": "components/uni-rate/uni-rate", "components/mpvue-picker/mpvuePicker": "components/mpvue-picker/mpvuePicker", "components/item/selectTime": "components/item/selectTime" }[chunkId] || chunkId) + ".wxss";
           /******/var fullhref = __webpack_require__.p + href;
           /******/var existingLinkTags = document.getElementsByTagName("link");
           /******/for (var i = 0; i < existingLinkTags.length; i++) {
@@ -11286,6 +11364,7 @@ var LIFECYCLE_HOOKS$1 = [
     'onShow',
     'onHide',
     'onUniNViewMessage',
+    'onError',
     //Page
     'onLoad',
     // 'onShow',
@@ -11646,10 +11725,10 @@ function getImgToBase64(url, callback) {//将图片转换为Base64
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.enUS = void 0;var enUS = {
+Object.defineProperty(exports, "__esModule", { value: true });exports.enUS = void 0;var _enUS;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var enUS = (_enUS = {
   accountBbalance: 'accountBbalance',
   recharge: 'recharge',
-  allCourses: 'allCourses',
+  allCourses: 'Courses',
   ToBePaid: 'ToBePaid',
   waitingForClass: 'waitingForClass',
   completed: 'completed',
@@ -11699,7 +11778,78 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.enUS = voi
   backHome: 'backHome',
   InputInvitationCode: 'InputInvitationCode',
   codeContent: 'When your friend initiates an invitation, you can enter the invitation code here and have class with your friend. The invitation code is valid for one hour. Please fill it in as soon as possible.',
-  determine: 'determine' };exports.enUS = enUS;
+  determine: 'determine',
+  courseIntroduction: 'Introduction',
+  NoIntroduction: 'No Introduction',
+  NoTeacher: 'No teacher at all',
+  total: 'A total of',
+  teacherNum: 'teachers',
+  One_on_one: 'One-on-one',
+  A_pair_of_two: 'A Pair Of Two',
+  A_pair_of_three: 'A Pair Of Three',
+  sign_up: 'sign up',
+  To_evaluate: 'To evaluate',
+  To_pay: 'To pay',
+  Class_begins: 'Class begins',
+  See: 'See',
+  No_data: 'No Data',
+  Curr_evaluation: 'Evaluation',
+  Teaching_environment: 'Environment',
+  Duration_course: 'Duration',
+  Main_course: 'Main course',
+  Student_evaluation: 'Evaluation',
+  teachers: 'Teachers' }, _defineProperty(_enUS, "teacher",
+'Teacher'), _defineProperty(_enUS, "Immediate_use",
+'Use'), _defineProperty(_enUS, "money",
+'Money'), _defineProperty(_enUS, "Apply",
+'Apply'), _defineProperty(_enUS, "Students",
+'Students'), _defineProperty(_enUS, "System_notification",
+'System notification'), _defineProperty(_enUS, "Order_information",
+'Order information'), _defineProperty(_enUS, "course",
+'Course'), _defineProperty(_enUS, "section",
+'Section'), _defineProperty(_enUS, "Coupon",
+'Coupon'), _defineProperty(_enUS, "Please_enter_notes",
+'Please Enter Notes'), _defineProperty(_enUS, "total",
+'Total'), _defineProperty(_enUS, "way_tip",
+'One-to-two, one-to-three courses, you can invite friends to attend classes together, more preferential.'), _defineProperty(_enUS, "vip_tip",
+'You are not a WeMusic member yet. You can enjoy an appointment course. If you want to take more courses, please go to open the membership.'), _defineProperty(_enUS, "open_vip",
+'Open Membership'), _defineProperty(_enUS, "next",
+'Next Step'), _defineProperty(_enUS, "cancel",
+'Cancel'), _defineProperty(_enUS, "confirm",
+'Confirm'), _defineProperty(_enUS, "Selection_date",
+'Selection date'), _defineProperty(_enUS, "Choose_teacher",
+'Choose teacher'), _defineProperty(_enUS, "Choose",
+'Choose'), _defineProperty(_enUS, "year",
+'Year'), _defineProperty(_enUS, "month",
+'Month'), _defineProperty(_enUS, "day",
+'Day'), _defineProperty(_enUS, "hour",
+'Hour'), _defineProperty(_enUS, "minute",
+'Minute'), _defineProperty(_enUS, "second",
+'Second'), _defineProperty(_enUS, "clock_in",
+'Clock In'), _defineProperty(_enUS, "QR_code",
+'QR Code'), _defineProperty(_enUS, "task",
+'Task'), _defineProperty(_enUS, "changing_course",
+'Changing Course'), _defineProperty(_enUS, "vip",
+'VIP'), _defineProperty(_enUS, "My_points",
+'My Points'), _defineProperty(_enUS, "Give",
+'Give'), _defineProperty(_enUS, "Recharge_record",
+'Recharge Record'), _defineProperty(_enUS, "Records_consumption",
+'Records Of Consumption'), _defineProperty(_enUS, "upload",
+'Upload'), _defineProperty(_enUS, "Please_enter_evaluation_content",
+'Please enter the evaluation content.'), _defineProperty(_enUS, "star",
+'Star'), _defineProperty(_enUS, "teacher",
+'Teacher'), _defineProperty(_enUS, "Teacher_teaching",
+'Teacher Teaching'), _defineProperty(_enUS, "Teaching_methods",
+'Teaching Mode'), _defineProperty(_enUS, "Teaching_attitude",
+'Teaching Attitude'), _defineProperty(_enUS, "Course_evaluation",
+"Evaluation Course"), _defineProperty(_enUS, "Evaluation_Teachers",
+'Evaluation Of Teachers'), _defineProperty(_enUS, "Choosing_Teaching_Mode",
+'Choosing Teaching Mode'), _defineProperty(_enUS, "Forwarding_Success",
+'Forwarding Success'), _defineProperty(_enUS, "You_have_forwarded",
+'You Have Forwarded This Content'), _defineProperty(_enUS, "Praise_for_success",
+'Praise For Success'), _defineProperty(_enUS, "Cancel_points",
+'Cancel Points'), _defineProperty(_enUS, "No_more_data",
+'No More Data'), _enUS);exports.enUS = enUS;
 
 /***/ }),
 
@@ -11711,9 +11861,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.enUS = voi
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.zhCN = void 0;var zhCN = {
+Object.defineProperty(exports, "__esModule", { value: true });exports.zhCN = void 0;var _zhCN;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var zhCN = (_zhCN = {
   accountBbalance: '账户余额',
-  recharge: '充值',
+  recharge: '充 值',
   allCourses: '全部课程',
   ToBePaid: '待支付',
   waitingForClass: '待开课',
@@ -11764,7 +11914,78 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.zhCN = voi
   backHome: '返回首页',
   InputInvitationCode: '输入邀请码',
   codeContent: '当您的好友发起邀请时，您可以在此输入邀请码，与好友共同上课，邀请码有效期为一个小时，请尽快填写。',
-  determine: '确定' };exports.zhCN = zhCN;
+  determine: '确定',
+  courseIntroduction: '介绍',
+  NoIntroduction: '暂无介绍',
+  NoTeacher: '暂无老师',
+  total: '共',
+  teacherNum: '名教师',
+  One_on_one: '一对一',
+  A_pair_of_two: '一对二',
+  A_pair_of_three: '一对三',
+  sign_up: '报名',
+  To_evaluate: '去评价',
+  To_pay: '去支付',
+  Class_begins: '开课',
+  See: '查看',
+  No_data: '暂无数据',
+  Curr_evaluation: '课程评价',
+  Teaching_environment: '教学环境',
+  Duration_course: '课程时长',
+  Main_course: '主授课程',
+  Student_evaluation: '学生评价',
+  teachers: '教师风采' }, _defineProperty(_zhCN, "teacher",
+'授课教师'), _defineProperty(_zhCN, "Immediate_use",
+'立即使用'), _defineProperty(_zhCN, "money",
+'金额'), _defineProperty(_zhCN, "Apply",
+'申请'), _defineProperty(_zhCN, "Students",
+'学生数'), _defineProperty(_zhCN, "System_notification",
+'系统通知'), _defineProperty(_zhCN, "Order_information",
+'订单信息'), _defineProperty(_zhCN, "course",
+'课程'), _defineProperty(_zhCN, "section",
+'节'), _defineProperty(_zhCN, "Coupon",
+'优惠券'), _defineProperty(_zhCN, "Teaching_methods",
+'授课方式'), _defineProperty(_zhCN, "Please_enter_notes",
+'请输入备注'), _defineProperty(_zhCN, "total",
+'合计'), _defineProperty(_zhCN, "way_tip",
+'一对二、一对三的课程，您可以邀请朋友一同上课，更加优惠。'), _defineProperty(_zhCN, "vip_tip",
+'您还不是WeMusic会员，可享受一节预约课，如果想要上更多课程，请前往开通会员。'), _defineProperty(_zhCN, "open_vip",
+'开通会员'), _defineProperty(_zhCN, "next",
+'下一步'), _defineProperty(_zhCN, "cancel",
+'取消'), _defineProperty(_zhCN, "confirm",
+'确认'), _defineProperty(_zhCN, "Selection_date",
+'选择日期'), _defineProperty(_zhCN, "Choose_teacher",
+'选择老师'), _defineProperty(_zhCN, "Choose",
+'选择'), _defineProperty(_zhCN, "year",
+'年'), _defineProperty(_zhCN, "month",
+'月'), _defineProperty(_zhCN, "day",
+'日'), _defineProperty(_zhCN, "hour",
+'时'), _defineProperty(_zhCN, "minute",
+'分'), _defineProperty(_zhCN, "second",
+'秒'), _defineProperty(_zhCN, "clock_in",
+'打卡'), _defineProperty(_zhCN, "QR_code",
+'二维码'), _defineProperty(_zhCN, "task",
+'作业'), _defineProperty(_zhCN, "changing_course",
+'调课'), _defineProperty(_zhCN, "vip",
+'会员'), _defineProperty(_zhCN, "My_points",
+'我的积分'), _defineProperty(_zhCN, "Give",
+'送'), _defineProperty(_zhCN, "Recharge_record",
+'充值记录'), _defineProperty(_zhCN, "Records_consumption",
+'消费记录'), _defineProperty(_zhCN, "upload",
+'上传'), _defineProperty(_zhCN, "Please_enter_evaluation_content",
+'请输入评价内容'), _defineProperty(_zhCN, "star",
+"星级"), _defineProperty(_zhCN, "teacher",
+'教师'), _defineProperty(_zhCN, "Teacher_teaching",
+'教师授课'), _defineProperty(_zhCN, "Teaching_attitude",
+'授课态度'), _defineProperty(_zhCN, "Course_evaluation",
+'对课程评价'), _defineProperty(_zhCN, "Evaluation_Teachers",
+'对教师评价'), _defineProperty(_zhCN, "Choosing_Teaching_Mode",
+'选择授课方式'), _defineProperty(_zhCN, "Forwarding_Success",
+'转发成功'), _defineProperty(_zhCN, "You_have_forwarded",
+'您已转发过该内容'), _defineProperty(_zhCN, "Praise_for_success",
+'点赞成功'), _defineProperty(_zhCN, "Cancel_points",
+'取消点赞'), _defineProperty(_zhCN, "No_more_data",
+'没有更多数据了'), _zhCN);exports.zhCN = zhCN;
 
 /***/ }),
 
@@ -11786,7 +12007,7 @@ var _zhCN = __webpack_require__(/*! ./lang/zh-CN.js */ "C:\\Users\\Administrator
 
 _vue.default.use(_i18n.default);
 var i18n = new _i18n.default({
-  locale: uni.getStorageSync('langType') == 'zh-CN' ? 'zh-CN' : 'en-US',
+  locale: uni.getStorageSync('langType') == 'en-US' ? 'en-US' : 'zh-CN',
   messages: {
     'en-US': {
       index: _enUS.enUS },
@@ -27105,7 +27326,7 @@ define('components/comment/comment.js',function(require, module, exports, window
     //
     //
     //
-    var _default = { props: { message: Number, list: Array }, filters: { formatDate: function formatDate(time) {return _util.dateUtils.format(time);} } };exports.default = _default;
+    var _default = { props: { message: Number, list: Array }, data: function data() {return { img: '../../static/img/icon_touxiang02.png' };}, filters: { formatDate: function formatDate(time) {return _util.dateUtils.format(time);} } };exports.default = _default;
 
     /***/},
 
@@ -27135,6 +27356,7 @@ define('components/comment/comment.js',function(require, module, exports, window
       var _vm = this;
       var _h = _vm.$createElement;
       var _c = _vm._self._c || _h;
+      var m0 = _vm.$t("index");
       var l0 = _vm.list.map(function (item, index) {
         var f0 = _vm._f("formatDate")(item.time);
 
@@ -27143,11 +27365,14 @@ define('components/comment/comment.js',function(require, module, exports, window
           f0: f0 };
 
       });
+      var m1 = _vm.$t("index");
       _vm.$mp.data = Object.assign(
       {},
       {
         $root: {
-          l0: l0 } });
+          m0: m0,
+          l0: l0,
+          m1: m1 } });
 
 
 
@@ -27306,9 +27531,13 @@ define('components/comment/commentStarClass.js',function(require, module, export
 
       data: function data() {
         return {
-          value: 3 };
+          body: '' };
 
-      } };exports.default = _default;
+      },
+      methods: {
+        changeData: function changeData() {
+          this.$emit('sendData', this.body);
+        } } };exports.default = _default;
 
     /***/},
 
@@ -27338,6 +27567,17 @@ define('components/comment/commentStarClass.js',function(require, module, export
       var _vm = this;
       var _h = _vm.$createElement;
       var _c = _vm._self._c || _h;
+      var m0 = _vm.$t("index");
+      var m1 = _vm.$t("index");
+      _vm.$mp.data = Object.assign(
+      {},
+      {
+        $root: {
+          m0: m0,
+          m1: m1 } });
+
+
+
     };
     var staticRenderFns = [];
     render._withStripped = true;
@@ -27840,11 +28080,14 @@ define('components/friendsAssembly/friendOperation.js',function(require, module,
           message: Number,
           praise: Number,
           forward: Number,
-          listId: String },
+          listId: String,
+          is_forward: Number,
+          is_praise: Number,
+          index: Number },
 
         methods: {
           //点赞
-          liked: function liked() {
+          liked: function liked(is_praise) {var _this = this;
             this.ajax({
               url: 'friend/praise',
               data: {
@@ -27852,8 +28095,15 @@ define('components/friendsAssembly/friendOperation.js',function(require, module,
 
               success: function success(res) {
                 if (res.data.body === 'success') {
+                  var data = {
+                    key: 'is_praise',
+                    index: _this.index };
+
+                  _this.$emit('changeStatus', data);
+                  // this.$emit('refreshData');
+                  var tip = is_praise == 0 ? _this.$t('index').Praise_for_success : _this.$t('index').Cancel_points;
                   uni.showToast({
-                    title: '点赞成功',
+                    title: tip,
                     icon: 'none' });
 
                 } else {
@@ -27866,7 +28116,14 @@ define('components/friendsAssembly/friendOperation.js',function(require, module,
 
           },
           //转发
-          share: function share() {
+          share: function share(is_forward) {var _this2 = this;
+            if (is_forward) {
+              uni.showToast({
+                title: this.$t('index').You_have_forwarded,
+                icon: 'none' });
+
+              return;
+            }
             this.ajax({
               url: 'friend/forward',
               data: {
@@ -27874,8 +28131,15 @@ define('components/friendsAssembly/friendOperation.js',function(require, module,
 
               success: function success(res) {
                 if (res.data.body === 'success') {
+                  var data = {
+                    key: 'is_forward',
+                    index: _this2.index };
+
+                  _this2.$emit('changeStatus', data);
+                  //this.is_forward = 1;
+                  // this.$emit('refreshData');
                   uni.showToast({
-                    title: '转发成功',
+                    title: _this2.$t('index').Forwarding_Success,
                     icon: 'none' });
 
                 } else {
@@ -28136,6 +28400,23 @@ define('components/item/classList.js',function(require, module, exports, window,
       var _vm = this;
       var _h = _vm.$createElement;
       var _c = _vm._self._c || _h;
+      var m0 = _vm.$t("index");
+      var m1 = _vm.$t("index");
+      var m2 = _vm.$t("index");
+      var m3 = _vm.$t("index");
+      var m4 = _vm.$t("index");
+      _vm.$mp.data = Object.assign(
+      {},
+      {
+        $root: {
+          m0: m0,
+          m1: m1,
+          m2: m2,
+          m3: m3,
+          m4: m4 } });
+
+
+
     };
     var staticRenderFns = [];
     render._withStripped = true;
@@ -28304,6 +28585,15 @@ define('components/item/couponList.js',function(require, module, exports, window
       var _vm = this;
       var _h = _vm.$createElement;
       var _c = _vm._self._c || _h;
+      var m0 = _vm.$t("index");
+      _vm.$mp.data = Object.assign(
+      {},
+      {
+        $root: {
+          m0: m0 } });
+
+
+
     };
     var staticRenderFns = [];
     render._withStripped = true;
@@ -28525,6 +28815,9 @@ define('components/item/financeList.js',function(require, module, exports, windo
       var _vm = this;
       var _h = _vm.$createElement;
       var _c = _vm._self._c || _h;
+      var m0 = _vm.$t("index");
+      var m1 = _vm.$t("index");
+      var m2 = _vm.$t("index");
       var l0 = _vm.financeList.map(function (item, index) {
         var f0 = _vm._f("getDateYear")(item.time * 1000);
 
@@ -28543,6 +28836,9 @@ define('components/item/financeList.js',function(require, module, exports, windo
       {},
       {
         $root: {
+          m0: m0,
+          m1: m1,
+          m2: m2,
           l0: l0 } });
 
 
@@ -28684,6 +28980,16 @@ define('components/item/friendsList.js',function(require, module, exports, windo
 
 
 
+
+
+
+
+
+
+
+
+
+
     {
       components: {
         friendHead: friendHead,
@@ -28697,7 +29003,19 @@ define('components/item/friendsList.js',function(require, module, exports, windo
         return {
           userImage: '../../static/img/lf.jpg' };
 
-      } };exports.default = _default;
+      },
+      methods: {
+        //获取朋友圈列表
+        getFriendList: function getFriendList() {
+          getCurrentPages().map(function (res) {
+            if (res.route == 'pages/circleFriends/circleFriends' || res.route == 'pages/myFriend/myFriend') {
+              res.getFriendList(0);
+            }
+          });
+        },
+        changeStatus: function changeStatus(data) {
+          this.$emit('forward_praise', data);
+        } } };exports.default = _default;
 
     /***/},
 
@@ -28888,6 +29206,18 @@ define('components/item/lessonList.js',function(require, module, exports, window
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
     var _util = __webpack_require__( /*! ../../common/util.js */"C:\\Users\\Administrator\\Desktop\\wemusic\\common\\util.js"); //
     //
     //
@@ -28926,8 +29256,20 @@ define('components/item/lessonList.js',function(require, module, exports, window
     //
     //
     //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
     var startclass = function startclass() {return __webpack_require__.e( /*! import() | components/starclass */"components/starclass").then(__webpack_require__.bind(null, /*! ../starclass.vue */"C:\\Users\\Administrator\\Desktop\\wemusic\\components\\starclass.vue"));};var noContent = function noContent() {return __webpack_require__.e( /*! import() | components/noContent */"components/noContent").then(__webpack_require__.bind(null, /*! ../noContent.vue */"C:\\Users\\Administrator\\Desktop\\wemusic\\components\\noContent.vue"));};var _default = { components: { startclass: startclass, noContent: noContent }, props: { musicId: String, lessonType: { type: String, default: '-1' }, //lessonType类型判断  -1为全部  0为待支付  1为待开课  2为已完成
-        listInfo: Array, success: { type: Boolean, default: false } }, data: function data() {return { image: '../../static/img/demo.jpg' };}, onLoad: function onLoad() {this.getCourseList();}, filters: { timeDate: function timeDate(time) {return _util.dateUtils.format(time);} }, methods: { error: function error() {consoel.log('ok');}, getCourseList: function getCourseList() {console.log('ok', " at components\\item\\lessonList.vue:78");} } };exports.default = _default;
+        listInfo: Array, success: { type: Boolean, default: false } }, data: function data() {return { image: '../../static/img/demo.jpg' };}, onLoad: function onLoad() {this.getCourseList();}, filters: { timeDate: function timeDate(time) {return _util.dateUtils.format(time);} }, methods: { error: function error() {consoel.log('ok');}, getCourseList: function getCourseList() {console.log('ok', " at components\\item\\lessonList.vue:90");} } };exports.default = _default;
 
     /***/},
 
@@ -28957,6 +29299,17 @@ define('components/item/lessonList.js',function(require, module, exports, window
       var _vm = this;
       var _h = _vm.$createElement;
       var _c = _vm._self._c || _h;
+      var m1 = _vm.$t("index");
+      var m2 = _vm.$t("index");
+      var m3 = _vm.$t("index");
+      var m4 = _vm.$t("index");
+      var m5 = _vm.$t("index");
+      var m6 = _vm.$t("index");
+      var m7 = _vm.$t("index");
+      var m8 = _vm.$t("index");
+      var m9 = _vm.$t("index");
+      var m10 = _vm.$t("index");
+      var m11 = _vm.$t("index");
       var l0 = _vm.listInfo.map(function (item, index) {
         var m0 = Number(item.star);
 
@@ -28968,11 +29321,24 @@ define('components/item/lessonList.js',function(require, module, exports, window
           f0: f0 };
 
       });
+      var m12 = _vm.$t("index");
       _vm.$mp.data = Object.assign(
       {},
       {
         $root: {
-          l0: l0 } });
+          m1: m1,
+          m2: m2,
+          m3: m3,
+          m4: m4,
+          m5: m5,
+          m6: m6,
+          m7: m7,
+          m8: m8,
+          m9: m9,
+          m10: m10,
+          m11: m11,
+          l0: l0,
+          m12: m12 } });
 
 
 
@@ -29098,7 +29464,7 @@ define('components/item/messageList.js',function(require, module, exports, windo
   /***/function node_modulesBabelLoaderLibIndexJsNode_modulesDcloudioVueCliPluginUniPackagesWebpackPreprocessLoaderIndexJsNode_modulesDcloudioWebpackUniMpLoaderLibScriptJsNode_modulesVueLoaderLibIndexJsCUsersAdministratorDesktopWemusicComponentsItemMessageListVueVueTypeScriptLangJs(module, exports, __webpack_require__) {
 
     "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var noContent = function noContent() {return __webpack_require__.e( /*! import() | components/noContent */"components/noContent").then(__webpack_require__.bind(null, /*! ../noContent.vue */"C:\\Users\\Administrator\\Desktop\\wemusic\\components\\noContent.vue"));};var _default =
+    Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
 
@@ -29116,13 +29482,24 @@ define('components/item/messageList.js',function(require, module, exports, windo
 
 
 
-
-    {
-      components: {
-        noContent: noContent },
-
-      props: {
-        messageList: Array } };exports.default = _default;
+    var _common = __webpack_require__( /*! ../../common/common.js */"C:\\Users\\Administrator\\Desktop\\wemusic\\common\\common.js"); //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    var noContent = function noContent() {return __webpack_require__.e( /*! import() | components/noContent */"components/noContent").then(__webpack_require__.bind(null, /*! ../noContent.vue */"C:\\Users\\Administrator\\Desktop\\wemusic\\components\\noContent.vue"));};var _default = { components: { noContent: noContent }, props: { messageList: Array }, filters: { getTime: function getTime(time) {return (0, _common.getDate)(time * 1000);} } };exports.default = _default;
 
     /***/},
 
@@ -29152,6 +29529,26 @@ define('components/item/messageList.js',function(require, module, exports, windo
       var _vm = this;
       var _h = _vm.$createElement;
       var _c = _vm._self._c || _h;
+      var m0 = _vm.$t("index");
+      var l0 = _vm.messageList.map(function (item, index) {
+        var f0 = _vm._f("getTime")(item.time);
+
+        return {
+          $orig: _vm.__get_orig(item),
+          f0: f0 };
+
+      });
+      var m1 = _vm.$t("index");
+      _vm.$mp.data = Object.assign(
+      {},
+      {
+        $root: {
+          m0: m0,
+          l0: l0,
+          m1: m1 } });
+
+
+
     };
     var staticRenderFns = [];
     render._withStripped = true;
@@ -29340,18 +29737,20 @@ define('components/item/rechargeList.js',function(require, module, exports, wind
       var _h = _vm.$createElement;
       var _c = _vm._self._c || _h;
       var l0 = _vm.moneyList.map(function (item, index) {
-        var f0 = _vm._f("timeDate")(item.time);
+        var f0 = _vm._f("timeDate")(item.time || item.ok_time);
 
         return {
           $orig: _vm.__get_orig(item),
           f0: f0 };
 
       });
+      var m0 = _vm.$t("index");
       _vm.$mp.data = Object.assign(
       {},
       {
         $root: {
-          l0: l0 } });
+          l0: l0,
+          m0: m0 } });
 
 
 
@@ -29522,6 +29921,8 @@ define('components/item/selectTime.js',function(require, module, exports, window
         myDate.getMinutes()];
 
         this.date = container;
+        this.date_ = container[0].toString();
+        console.log(this.date_, " at components\\item\\selectTime.vue:47");
       },
       props: {
         flag: Boolean, //事件开关
@@ -29534,7 +29935,7 @@ define('components/item/selectTime.js',function(require, module, exports, window
           this.$emit();
         },
         onCancel: function onCancel() {
-          console.log('cancel', " at components\\item\\selectTime.vue:58");
+          console.log('cancel', " at components\\item\\selectTime.vue:60");
         },
         timeDate: function timeDate(time) {
           var date = new Date(time); // 增加8小时
@@ -29589,11 +29990,24 @@ define('components/item/selectTime.js',function(require, module, exports, window
       var _vm = this;
       var _h = _vm.$createElement;
       var _c = _vm._self._c || _h;
+      var m0 = _vm.$t("index");
+      var m1 = _vm.$t("index");
+
       if (!_vm._isMounted) {
         _vm.e0 = function ($event) {
           _vm.flag && _vm.selctitem(_vm.index);
         };
       }
+
+      _vm.$mp.data = Object.assign(
+      {},
+      {
+        $root: {
+          m0: m0,
+          m1: m1 } });
+
+
+
     };
     var staticRenderFns = [];
     render._withStripped = true;
@@ -29800,17 +30214,21 @@ define('components/item/teacherList.js',function(require, module, exports, windo
       var _vm = this;
       var _h = _vm.$createElement;
       var _c = _vm._self._c || _h;
+      var m0 = _vm.$t("index");
+      var m2 = _vm.$t("index");
       var l0 = _vm.listInfo.map(function (item, index) {
-        var m0 = Number(item.star);
+        var m1 = Number(item.star);
         return {
           $orig: _vm.__get_orig(item),
-          m0: m0 };
+          m1: m1 };
 
       });
       _vm.$mp.data = Object.assign(
       {},
       {
         $root: {
+          m0: m0,
+          m2: m2,
           l0: l0 } });
 
 
@@ -30368,6 +30786,17 @@ define('components/lesson/lessonHead.js',function(require, module, exports, wind
       var _vm = this;
       var _h = _vm.$createElement;
       var _c = _vm._self._c || _h;
+      var m0 = _vm.$t("index");
+      var m1 = _vm.$t("index");
+      _vm.$mp.data = Object.assign(
+      {},
+      {
+        $root: {
+          m0: m0,
+          m1: m1 } });
+
+
+
     };
     var staticRenderFns = [];
     render._withStripped = true;
@@ -30741,17 +31170,19 @@ define('components/lesson/lessonTeacher.js',function(require, module, exports, w
       var _vm = this;
       var _h = _vm.$createElement;
       var _c = _vm._self._c || _h;
+      var m0 = _vm.$t("index");
       var l0 = _vm.teacherList.map(function (item, index) {
-        var m0 = Number(item.star);
+        var m1 = Number(item.star);
         return {
           $orig: _vm.__get_orig(item),
-          m0: m0 };
+          m1: m1 };
 
       });
       _vm.$mp.data = Object.assign(
       {},
       {
         $root: {
+          m0: m0,
           l0: l0 } });
 
 
@@ -30914,16 +31345,6 @@ define('components/lesson/orderMessage.js',function(require, module, exports, wi
 
 
 
-
-
-
-
-
-
-
-
-
-
       {
         components: {
           mpvuePicker: mpvuePicker },
@@ -30936,19 +31357,36 @@ define('components/lesson/orderMessage.js',function(require, module, exports, wi
 
         data: function data() {
           return {
-            way: ['一对一', '一对二', '一对三'] };
+            way: [] };
 
         },
+        computed: {
+          resultway: function resultway() {
+            switch (this.request.people_num) {
+              case 0:
+                return this.$t('index').One_on_one;
+                break;
+              case 1:
+                return this.$t('index').A_pair_of_two;
+                break;
+              case 2:
+                return this.$t('index').A_pair_of_three;
+                break;}
+
+          } },
+
         methods: {
           onConfirm: function onConfirm(val) {
-            var index = val.index[0];
-            var change = {
-              key: 'coupomTitle',
-              value: this.coupomList[index].name };
+            if (val) {
+              var index = val.index[0];
+              var change = {
+                key: 'coupomTitle',
+                value: this.coupomList[index].name };
 
-            this.$emit('changeRequest', change);
-            var coupon_id = this.coupomList[index].id;
-            this.getPrice(coupon_id);
+              this.$emit('changeRequest', change);
+              var coupon_id = this.coupomList[index].id;
+              this.getPrice(coupon_id);
+            }
           },
           getPrice: function getPrice(coupon_id) {var _this = this;
             this.ajax({
@@ -30972,25 +31410,30 @@ define('components/lesson/orderMessage.js',function(require, module, exports, wi
           onCancel: function onCancel() {},
           /**选择时长*/
           coupomPicker: function coupomPicker() {
-            console.log(this.coupomList, " at components\\lesson\\orderMessage.vue:95");
+            console.log(this.coupomList, " at components\\lesson\\orderMessage.vue:102");
             this.$refs.mpvuePicker.show();
           },
-          pay: function pay(classId) {
-            uni.redirectTo({
-              url: '/pages/registrationSuccess/registrationSuccess?way=' + this.way[this.request.people_num] + '&classId=' + classId + '&teacherNmae=' + '教师名称' });
+          pay: function pay(classId) {var _this2 = this;
+            var data = {
+              class_list_id: this.request.class_list_id.join(','),
+              teacher_id: this.request.teacher_id,
+              music_sun_id: this.request.music_sun_id,
+              people_num: this.request.people_num,
+              coupon_id: this.request.coupon_id };
 
-            return;
             this.ajax({
               url: 'userorder/add_order',
-              data: this.request,
+              data: data,
               success: function success(res) {
+                console.log(res, " at components\\lesson\\orderMessage.vue:117");
                 if (res.data.body === 'success') {
                   uni.showToast({
-                    title: '支付完成',
+                    title: 'Success',
                     icon: 'none' });
 
                   uni.redirectTo({
-                    url: '/pages/lesson/lesson?type=1' });
+                    url: '/pages/registrationSuccess/registrationSuccess?way=' + _this2.resultway + '&classId=' + classId +
+                    '&teacherNmae=' + '教师名称' });
 
                 }
               } });
@@ -31026,6 +31469,36 @@ define('components/lesson/orderMessage.js',function(require, module, exports, wi
       var _vm = this;
       var _h = _vm.$createElement;
       var _c = _vm._self._c || _h;
+      var m0 = _vm.$t("index");
+      var m1 = _vm.$t("index");
+      var m2 = _vm.$t("index");
+      var m3 = _vm.$t("index");
+      var m4 = _vm.$t("index");
+      var m5 = _vm.$t("index");
+      var m6 = _vm.$t("index");
+      var m7 = _vm.$t("index");
+
+      if (!_vm._isMounted) {
+        _vm.e0 = function ($event) {
+          _vm.coupomPicker && _vm.coupomList.length;
+        };
+      }
+
+      _vm.$mp.data = Object.assign(
+      {},
+      {
+        $root: {
+          m0: m0,
+          m1: m1,
+          m2: m2,
+          m3: m3,
+          m4: m4,
+          m5: m5,
+          m6: m6,
+          m7: m7 } });
+
+
+
     };
     var staticRenderFns = [];
     render._withStripped = true;
@@ -31215,6 +31688,19 @@ define('components/lesson/teacherHead.js',function(require, module, exports, win
       var _vm = this;
       var _h = _vm.$createElement;
       var _c = _vm._self._c || _h;
+      var m0 = _vm.$t("index");
+      var m1 = _vm.$t("index");
+      var m2 = _vm.$t("index");
+      _vm.$mp.data = Object.assign(
+      {},
+      {
+        $root: {
+          m0: m0,
+          m1: m1,
+          m2: m2 } });
+
+
+
     };
     var staticRenderFns = [];
     render._withStripped = true;
@@ -31370,7 +31856,7 @@ define('components/lesson/teachingWay.js',function(require, module, exports, win
           selectTime: selectTime },
 
         props: {
-          classId: String,
+          classId: Number,
           lessonType: {
             type: String,
             default: '4' },
@@ -31503,6 +31989,31 @@ define('components/lesson/teachingWay.js',function(require, module, exports, win
       var _vm = this;
       var _h = _vm.$createElement;
       var _c = _vm._self._c || _h;
+      var m0 = _vm.$t("index");
+      var m1 = _vm.$t("index");
+      var m2 = _vm.$t("index");
+      var m3 = _vm.$t("index");
+      var m4 = _vm.$t("index");
+      var m5 = _vm.$t("index");
+      var m6 = _vm.$t("index");
+      var m7 = _vm.$t("index");
+      var m8 = _vm.$t("index");
+      _vm.$mp.data = Object.assign(
+      {},
+      {
+        $root: {
+          m0: m0,
+          m1: m1,
+          m2: m2,
+          m3: m3,
+          m4: m4,
+          m5: m5,
+          m6: m6,
+          m7: m7,
+          m8: m8 } });
+
+
+
     };
     var staticRenderFns = [];
     render._withStripped = true;
@@ -32045,6 +32556,17 @@ define('components/mpvue-picker/mpvuePicker.js',function(require, module, export
       var _vm = this;
       var _h = _vm.$createElement;
       var _c = _vm._self._c || _h;
+      var m0 = _vm.$t("index");
+      var m1 = _vm.$t("index");
+      _vm.$mp.data = Object.assign(
+      {},
+      {
+        $root: {
+          m0: m0,
+          m1: m1 } });
+
+
+
     };
     var staticRenderFns = [];
     render._withStripped = true;
@@ -32168,6 +32690,9 @@ define('components/mx-datepicker/mx-datepicker.js',function(require, module, exp
 
     "use strict";
     /* WEBPACK VAR INJECTION */(function (uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance");}function _iterableToArray(iter) {if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) {for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {arr2[i] = arr[i];}return arr2;}} //
+      //
+      //
+      //
       //
       //
       //
@@ -32651,6 +33176,7 @@ define('components/mx-datepicker/mx-datepicker.js',function(require, module, exp
           },
           //选中日期
           onSelectDate: function onSelectDate(date) {var _this3 = this;
+            this.$emit('selectTime', date.dateObj);
             if (~this.type.indexOf('range') && this.checkeds.length == 2) this.checkeds = [];else
             if (!~this.type.indexOf('range') && this.checkeds.length) this.checkeds = [];
             this.checkeds.push(new Date(date.dateObj));
@@ -32791,6 +33317,15 @@ define('components/mx-datepicker/mx-datepicker.js',function(require, module, exp
       var _vm = this;
       var _h = _vm.$createElement;
       var _c = _vm._self._c || _h;
+      var m0 = _vm.$t("index");
+      _vm.$mp.data = Object.assign(
+      {},
+      {
+        $root: {
+          m0: m0 } });
+
+
+
     };
     var staticRenderFns = [];
     render._withStripped = true;
@@ -33744,7 +34279,15 @@ define('components/starclass.js',function(require, module, exports, window, docu
 
         disabled: {
           type: Boolean,
-          default: true } },
+          default: true },
+
+        font_size: {
+          type: Number,
+          default: 24 },
+
+        star_padding: {
+          type: Number,
+          default: 4 } },
 
 
       data: function data() {
@@ -33754,6 +34297,7 @@ define('components/starclass.js',function(require, module, exports, window, docu
       },
       methods: {
         getVal: function getVal(val) {
+          this.value = val.value * 2;
           this.$emit('sendVal', val.value);
         } } };exports.default = _default;
 
@@ -34848,6 +35392,29 @@ define('components/w-picker/w-picker.js',function(require, module, exports, wind
       var _vm = this;
       var _h = _vm.$createElement;
       var _c = _vm._self._c || _h;
+      var m0 = _vm.$t("index");
+      var m1 = _vm.$t("index");
+      var m2 = _vm.$t("index");
+      var m3 = _vm.$t("index");
+      var m4 = _vm.$t("index");
+      var m5 = _vm.$t("index");
+      var m6 = _vm.$t("index");
+      var m7 = _vm.$t("index");
+      _vm.$mp.data = Object.assign(
+      {},
+      {
+        $root: {
+          m0: m0,
+          m1: m1,
+          m2: m2,
+          m3: m3,
+          m4: m4,
+          m5: m5,
+          m6: m6,
+          m7: m7 } });
+
+
+
     };
     var staticRenderFns = [];
     render._withStripped = true;
@@ -35004,6 +35571,8 @@ define('pages/login/login.js',function(require, module, exports, window, documen
 //
 //
 //
+//
+//
 var _default =
 {
   data: function data() {
@@ -35053,7 +35622,7 @@ var _default =
               data: res.data.type }),
 
             uni.reLaunch({
-              url: '/pages/tabbar/tabbar-1/tabbar-1' });
+              url: '/pages/tabbar/tabbar-1/tabbar-1?type=home' });
 
           } else {
             uni.showToast({
@@ -35221,20 +35790,56 @@ define('pages/tabbar/tabbar-1/tabbar-1.js',function(require, module, exports, wi
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
     return {
+      isTeacher: false,
+      pathType: 'home',
       musicList: [] };
 
   },
-  onLoad: function onLoad() {
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Course selection' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '选课' });
+
+    }
+  },
+  onLoad: function onLoad(obj) {
+    this.pathType = obj.type;
+    uni.getStorageSync('type') == 1 ? this.isTeacher = false : this.isTeacher = true;
     this.getMusicList();
   },
   onPullDownRefresh: function onPullDownRefresh() {
     this.getMusicList();
   },
   methods: {
+    goPath: function goPath(path, type) {
+      uni.redirectTo({
+        url: "".concat(path, "?type=").concat(type) });
+
+    },
     //获取艺术列表
     getMusicList: function getMusicList() {var _this = this;
       this.ajax({
@@ -35419,6 +36024,18 @@ define('pages/tabbar/tabbar-2/tabbar-2.js',function(require, module, exports, wi
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 {
   components: {
     classList: classList,
@@ -35427,8 +36044,11 @@ define('pages/tabbar/tabbar-2/tabbar-2.js',function(require, module, exports, wi
 
   data: function data() {
     return {
+      title: '',
+      time: '',
+      pathType: 'class',
       showPicker: false,
-      type: 'rangetime',
+      type: 'date',
       value: '',
       start_time: '',
       end_time: '',
@@ -35437,8 +36057,25 @@ define('pages/tabbar/tabbar-2/tabbar-2.js',function(require, module, exports, wi
 
   },
   onReady: function onReady() {
-    this.onShowDatePicker('rangetime');
+    this.onShowDatePicker('date');
     uni.getStorageSync('type') == 1 ? this.isTeacher = false : this.isTeacher = true;
+  },
+  onLoad: function onLoad(obj) {
+    this.pathType = obj.type;
+    this.time = new Date().getTime();
+    this.title = "".concat(new Date().getMonth() + 1, "\u6708").concat(new Date().getDate(), "\u65E5");
+    this.getLessonList();
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Class Schedule Card' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '课程表' });
+
+    }
   },
   onNavigationBarButtonTap: function onNavigationBarButtonTap(obj) {
     uni.navigateTo({
@@ -35446,6 +36083,16 @@ define('pages/tabbar/tabbar-2/tabbar-2.js',function(require, module, exports, wi
 
   },
   methods: {
+    getTime: function getTime(data) {
+      this.title = "".concat(new Date(data).getMonth() + 1, "\u6708").concat(new Date(data).getDate(), "\u65E5");
+      this.time = new Date(data).getTime();
+      this.getLessonList();
+    },
+    goPath: function goPath(path, type) {
+      uni.redirectTo({
+        url: "".concat(path, "?type=").concat(type) });
+
+    },
     onShowDatePicker: function onShowDatePicker(type) {
       //显示
       this.type = type;
@@ -35467,8 +36114,7 @@ define('pages/tabbar/tabbar-2/tabbar-2.js',function(require, module, exports, wi
       this.ajax({
         url: uni.getStorageSync('type') == 1 ? 'studentclass/class_list' : 'teacherclass/class_list_time',
         data: {
-          start_time: this.start_time,
-          end_time: this.end_time },
+          time: this.time },
 
         success: function success(res) {
           if (res.data.body === 'success') {
@@ -35621,7 +36267,25 @@ define('pages/tabbar/tabbar-5/tabbar-5.js',function(require, module, exports, wi
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var neilModal = function neilModal() {return __webpack_require__.e(/*! import() | components/neil-modal/neil-modal */ "components/neil-modal/neil-modal").then(__webpack_require__.bind(null, /*! @/components/neil-modal/neil-modal.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\neil-modal\\neil-modal.vue"));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uniIcon = function uniIcon() {return __webpack_require__.e(/*! import() | components/uni-icon/uni-icon */ "components/uni-icon/uni-icon").then(__webpack_require__.bind(null, /*! @/components/uni-icon/uni-icon.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\uni-icon\\uni-icon.vue"));};var neilModal = function neilModal() {return __webpack_require__.e(/*! import() | components/neil-modal/neil-modal */ "components/neil-modal/neil-modal").then(__webpack_require__.bind(null, /*! @/components/neil-modal/neil-modal.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\neil-modal\\neil-modal.vue"));};var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -35762,10 +36426,12 @@ define('pages/tabbar/tabbar-5/tabbar-5.js',function(require, module, exports, wi
 
 {
   components: {
+    uniIcon: uniIcon,
     neilModal: neilModal },
 
   data: function data() {
     return {
+      pathType: 'me',
       userImage: '../../../static/img/icon_touxiang02.png',
       isTeacher: false,
       userInfo: {},
@@ -35773,16 +36439,28 @@ define('pages/tabbar/tabbar-5/tabbar-5.js',function(require, module, exports, wi
       language: '中文' };
 
   },
-  onLoad: function onLoad() {
+  onLoad: function onLoad(obj) {
+    this.pathType = obj.type;
     this.getUserInfo();
     uni.getStorageSync('type') == 1 ? this.isTeacher = false : this.isTeacher = true;
-    uni.getStorageSync('langType') == 'zh-CN' ? this.language = '中文' : this.language = 'English';
+    uni.getStorageSync('langType') == 'en-US' ? this.language = 'English' : this.language = '中文';
+    if (uni.getStorageSync('type') == 2) {
+      uni.setNavigationBarColor({
+        frontColor: '#000000',
+        backgroundColor: '#fad42a' });
+
+    }
   },
   onPullDownRefresh: function onPullDownRefresh() {
     this.getUserInfo();
     uni.getStorageSync('type') == 1 ? this.isTeacher = false : this.isTeacher = true;
   },
   methods: {
+    goPath: function goPath(path, type) {
+      uni.redirectTo({
+        url: "".concat(path, "?type=").concat(type) });
+
+    },
     //获取个人资料
     getUserInfo: function getUserInfo() {var _this = this;
       this.ajax({
@@ -35802,19 +36480,19 @@ define('pages/tabbar/tabbar-5/tabbar-5.js',function(require, module, exports, wi
 
     //切换语言
     bindBtn: function bindBtn() {
-      if (uni.getStorageSync('langType') == 'zh-CN') {
-        this._i18n.locale = 'en-US';
-        this.language = 'English';
-        uni.setStorage({
-          key: 'langType',
-          data: 'en-US' });
-
-      } else {
+      if (uni.getStorageSync('langType') == 'en-US') {
         this._i18n.locale = 'zh-CN';
         this.language = '中文';
         uni.setStorage({
           key: 'langType',
           data: 'zh-CN' });
+
+      } else {
+        this._i18n.locale = 'en-US';
+        this.language = 'English';
+        uni.setStorage({
+          key: 'langType',
+          data: 'en-US' });
 
       }
     } },
@@ -36058,6 +36736,18 @@ define('pages/circleFriends/circleFriends.js',function(require, module, exports,
       index: 0 };
 
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'circleFriends' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '朋友圈' });
+
+    }
+    this.getFriendList(this.index);
+  },
   onLoad: function onLoad() {
     this.getFriendList(this.index);
   },
@@ -36080,6 +36770,25 @@ define('pages/circleFriends/circleFriends.js',function(require, module, exports,
     this.getFriendList(this.index);
   },
   methods: {
+    forward_praise: function forward_praise(data) {
+      if (data.key == 'is_forward') {
+        if (this.friendsList[data.index].is_forward == 1) {
+          this.friendsList[data.index].is_forward = 0;
+          this.friendsList[data.index].forward_num--;
+        } else {
+          this.friendsList[data.index].is_forward = 1;
+          this.friendsList[data.index].forward_num++;
+        }
+      } else {
+        if (this.friendsList[data.index].is_praise == 1) {
+          this.friendsList[data.index].is_praise = 0;
+          this.friendsList[data.index].praise_num--;
+        } else {
+          this.friendsList[data.index].is_praise = 1;
+          this.friendsList[data.index].praise_num++;
+        }
+      }
+    },
     //获取朋友圈列表
     getFriendList: function getFriendList(val) {var _this2 = this;
       this.ajax({
@@ -36094,7 +36803,7 @@ define('pages/circleFriends/circleFriends.js',function(require, module, exports,
             if (res.data.data.length === 0) {
               _this2.isEnd = true;
               uni.showToast({
-                title: '没有更多数据了',
+                title: _this2.$t('index').No_more_data,
                 icon: 'none' });
 
               return;
@@ -36261,18 +36970,19 @@ define('pages/myCoupon/myCoupon.js',function(require, module, exports, window, d
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var couponList = function couponList() {return __webpack_require__.e(/*! import() | components/item/couponList */ "components/item/couponList").then(__webpack_require__.bind(null, /*! ../../components/item/couponList.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\item\\couponList.vue"));};var noContent = function noContent() {return __webpack_require__.e(/*! import() | components/noContent */ "components/noContent").then(__webpack_require__.bind(null, /*! ../../components/noContent.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\noContent.vue"));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-
-
-
-
-
-
-
-
-
-
+var _this = '';var couponList = function couponList() {return __webpack_require__.e(/*! import() | components/item/couponList */ "components/item/couponList").then(__webpack_require__.bind(null, /*! ../../components/item/couponList.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\item\\couponList.vue"));};var noContent = function noContent() {return __webpack_require__.e(/*! import() | components/noContent */ "components/noContent").then(__webpack_require__.bind(null, /*! ../../components/noContent.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\noContent.vue"));};var _default =
 
 
 {
@@ -36289,25 +36999,42 @@ define('pages/myCoupon/myCoupon.js',function(require, module, exports, window, d
 
   },
   onLoad: function onLoad(obj) {
+    _this = this;
     this.type = obj.type;
     this.getCouponList(this.type);
   },
-  onReachBottom: function onReachBottom() {var _this = this;
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'My Coupon' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '我的优惠券' });
+
+    }
+  },
+  onReachBottom: function onReachBottom() {var _this2 = this;
     if (this.isEnd) {
       return;
     }
     this.index++;
     setTimeout(function () {
-      _this.getCouponList(_this.type);
+      _this2.getCouponList(_this2.type);
     }, 300);
   },
   onPullDownRefresh: function onPullDownRefresh() {
     this.index = 0;
     this.getCouponList(this.type);
   },
+  watch: {
+    type: function type(now, old) {
+      _this.couponList = [];
+    } },
+
   methods: {
     //获取优惠卷列表
-    getCouponList: function getCouponList(type) {var _this2 = this;
+    getCouponList: function getCouponList(type) {var _this3 = this;
       this.couponList = [];
       this.type = type;
       this.ajax({
@@ -36321,17 +37048,16 @@ define('pages/myCoupon/myCoupon.js',function(require, module, exports, window, d
           uni.stopPullDownRefresh();
           if (res.data.body === 'success') {
             if (res.data.data.length === 0) {
-              _this2.isEnd = true;
+              _this3.isEnd = true;
               uni.showToast({
                 title: '没有更多数据了',
                 icon: 'none' });
 
-              return;
             }
-            if (_this2.index !== 0) {
-              _this2.couponList = _this2.couponList.concat(res.data.data);
+            if (_this3.index !== 0) {
+              _this3.couponList = _this3.couponList.concat(res.data.data);
             } else {
-              _this2.couponList = res.data.data;
+              _this3.couponList = res.data.data;
             }
           }
         } });
@@ -36481,17 +37207,18 @@ define('pages/myEvaluate/myEvaluate.js',function(require, module, exports, windo
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var lessonList = function lessonList() {return Promise.all(/*! import() | components/item/lessonList */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/item/lessonList")]).then(__webpack_require__.bind(null, /*! ../../components/item/lessonList.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\item\\lessonList.vue"));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-
-
-
-
-
-
-
-
-
+var _this = '';var lessonList = function lessonList() {return Promise.all(/*! import() | components/item/lessonList */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/item/lessonList")]).then(__webpack_require__.bind(null, /*! ../../components/item/lessonList.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\item\\lessonList.vue"));};var _default =
 
 {
   components: {
@@ -36506,26 +37233,42 @@ define('pages/myEvaluate/myEvaluate.js',function(require, module, exports, windo
 
   },
   onLoad: function onLoad(obj) {
+    _this = this;
     this.lessonType = obj.type;
     this.getEvalutateList(this.lessonType);
   },
-  onReachBottom: function onReachBottom() {var _this = this;
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'My Evaluate' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '我的评价' });
+
+    }
+  },
+  onReachBottom: function onReachBottom() {var _this2 = this;
     if (this.isEnd) {
       return;
     }
     this.index++;
     setTimeout(function () {
-      _this.getEvalutateList(_this.lessonType);
+      _this2.getEvalutateList(_this2.lessonType);
     }, 300);
   },
   onPullDownRefresh: function onPullDownRefresh() {
     this.index = 0;
     this.getEvalutateList(this.lessonType);
   },
+  watch: {
+    lessonType: function lessonType(now, old) {
+      _this.listInfo = [];
+    } },
+
   methods: {
     //获取评价
-    getEvalutateList: function getEvalutateList(type) {var _this2 = this;
-      this.listInfo = [];
+    getEvalutateList: function getEvalutateList(type) {var _this3 = this;
       this.lessonType = type;
       this.ajax({
         url: 'studentclass/my_assess',
@@ -36538,17 +37281,16 @@ define('pages/myEvaluate/myEvaluate.js',function(require, module, exports, windo
           uni.stopPullDownRefresh();
           if (res.data.body === 'success') {
             if (res.data.data.length === 0) {
-              _this2.isEnd = true;
+              _this3.isEnd = true;
               uni.showToast({
                 title: '没有更多数据了',
                 icon: 'none' });
 
-              return;
             }
-            if (_this2.index !== 0) {
-              _this2.listInfo = _this2.listInfo.concat(res.data.data);
+            if (_this3.index !== 0) {
+              _this3.listInfo = _this3.listInfo.concat(res.data.data);
             } else {
-              _this2.listInfo = res.data.data;
+              _this3.listInfo = res.data.data;
             }
           }
         } });
@@ -36713,6 +37455,17 @@ var _default =
       body: '',
       contact: '' };
 
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'feedback' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '意见反馈' });
+
+    }
   },
   methods: {
     //提交意见反馈
@@ -36897,7 +37650,7 @@ define('pages/aboutUs/aboutUs.js',function(require, module, exports, window, doc
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var noContent = function noContent() {return __webpack_require__.e(/*! import() | components/noContent */ "components/noContent").then(__webpack_require__.bind(null, /*! ../../components/noContent.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\noContent.vue"));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var noContent = function noContent() {return __webpack_require__.e(/*! import() | components/noContent */ "components/noContent").then(__webpack_require__.bind(null, /*! ../../components/noContent.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\noContent.vue"));};var _default =
 
 
 
@@ -36920,6 +37673,17 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   onLoad: function onLoad() {
     this.getAboutContent();
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'about us' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '关于我们' });
+
+    }
+  },
   methods: {
     //获取关于我们
     getAboutContent: function getAboutContent() {var _this = this;
@@ -36931,6 +37695,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
         } });
 
     } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),
 
@@ -37074,7 +37839,7 @@ define('pages/courseInvitation/courseInvitation.js',function(require, module, ex
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -37089,7 +37854,19 @@ var _default =
 {
   data: function data() {
     return {};
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Course Invitation' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '课程邀请' });
+
+    }
   } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),
 
@@ -37252,6 +38029,8 @@ define('pages/myFriend/myFriend.js',function(require, module, exports, window, d
 
 
 
+
+
 {
   components: {
     friendsList: friendsList },
@@ -37267,6 +38046,18 @@ define('pages/myFriend/myFriend.js',function(require, module, exports, window, d
     uni.navigateTo({
       url: '/pages/releaseFriends/releaseFriends' });
 
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'My Friend' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '我的朋友圈' });
+
+    }
+    this.getFriendList(this.index);
   },
   onLoad: function onLoad() {
     this.getFriendList(this.index);
@@ -37285,6 +38076,26 @@ define('pages/myFriend/myFriend.js',function(require, module, exports, window, d
     this.getFriendList(this.index);
   },
   methods: {
+    forward_praise: function forward_praise(data) {
+      console.log(this.friendsList[data.index], " at pages\\myFriend\\myFriend.vue:55");
+      if (data.key == 'is_forward') {
+        if (this.friendsList[data.index].is_forward == 1) {
+          this.friendsList[data.index].is_forward = 0;
+          this.friendsList[data.index].forward_num--;
+        } else {
+          this.friendsList[data.index].is_forward = 1;
+          this.friendsList[data.index].forward_num++;
+        }
+      } else {
+        if (this.friendsList[data.index].is_praise == 1) {
+          this.friendsList[data.index].is_praise = 0;
+          this.friendsList[data.index].praise_num--;
+        } else {
+          this.friendsList[data.index].is_praise = 1;
+          this.friendsList[data.index].praise_num++;
+        }
+      }
+    },
     //获取朋友圈列表
     getFriendList: function getFriendList(val) {var _this2 = this;
       this.ajax({
@@ -37480,6 +38291,11 @@ define('pages/friendsDetail/friendsDetail.js',function(require, module, exports,
 
 
 
+
+
+
+
+
 {
   components: {
     friendHead: friendHead,
@@ -37515,6 +38331,25 @@ define('pages/friendsDetail/friendsDetail.js',function(require, module, exports,
     }, 300);
   },
   methods: {
+    forward_praise: function forward_praise(data) {
+      if (data.key == 'is_forward') {
+        if (this.friendDetail.is_forward) {
+          this.friendDetail.is_forward = 0;
+          this.friendDetail.forward--;
+        } else {
+          this.friendDetail.is_forward = 1;
+          this.friendDetail.forward++;
+        }
+      } else {
+        if (this.friendDetail.is_praise) {
+          this.friendDetail.is_praise = 0;
+          this.friendDetail.praise--;
+        } else {
+          this.friendDetail.is_praise = 1;
+          this.friendDetail.praise++;
+        }
+      }
+    },
     //获取朋友圈详情
     getFriendDetail: function getFriendDetail(listId, list) {var _this2 = this;
       this.ajax({
@@ -37714,6 +38549,17 @@ var progressBar = function progressBar() {return __webpack_require__.e(/*! impor
       progress: 0 };
 
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Circle Friends' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '发布朋友圈' });
+
+    }
+  },
   onLoad: function onLoad() {
     _this = this;
   },
@@ -37740,7 +38586,7 @@ var progressBar = function progressBar() {return __webpack_require__.e(/*! impor
 
         },
         fail: function fail(err) {
-          console.log('chooseImage fail', err, " at pages\\releaseFriends\\releaseFriends.vue:52");
+          console.log('chooseImage fail', err, " at pages\\releaseFriends\\releaseFriends.vue:63");
         } });
 
     } },
@@ -37771,6 +38617,9 @@ var progressBar = function progressBar() {return __webpack_require__.e(/*! impor
           uni.showToast({
             title: '发布成功',
             icon: 'none' });
+
+          uni.navigateBack({
+            delta: 1 });
 
         } else {
           uni.showToast({
@@ -37953,6 +38802,17 @@ define('pages/setting/setting.js',function(require, module, exports, window, doc
 
   data: function data() {
     return {};
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Setting' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '设置' });
+
+    }
   },
   methods: {
     //跳转
@@ -38137,6 +38997,17 @@ var _default =
       new_pass: '',
       rest_pass: '' };
 
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Change Password' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '修改密码' });
+
+    }
   },
   methods: {
     //修改密码
@@ -38359,6 +39230,17 @@ var _default =
       new_email: '',
       reg: new RegExp('^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$') };
 
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Change Emial' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '修改邮箱' });
+
+    }
   },
   methods: {
     //获取验证码
@@ -38612,9 +39494,17 @@ var _default =
       reg: /^[1][3,4,5,7,8][0-9]{9}$/ };
 
   },
-  // onLoad() {
-  // 	console.log(getCurrentPages());
-  // },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Modification of mobile phone number' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '修改手机号' });
+
+    }
+  },
   methods: {
     //获取手机验证码
     getCode: function getCode() {
@@ -38844,7 +39734,7 @@ define('pages/message/message.js',function(require, module, exports, window, doc
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var messageList = function messageList() {return __webpack_require__.e(/*! import() | components/item/messageList */ "components/item/messageList").then(__webpack_require__.bind(null, /*! ../../components/item/messageList.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\item\\messageList.vue"));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var messageList = function messageList() {return Promise.all(/*! import() | components/item/messageList */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/item/messageList")]).then(__webpack_require__.bind(null, /*! ../../components/item/messageList.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\item\\messageList.vue"));};var _default =
 
 
 
@@ -38860,6 +39750,17 @@ define('pages/message/message.js',function(require, module, exports, window, doc
       index: 0,
       messageList: [] };
 
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Message' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '消息' });
+
+    }
   },
   onLoad: function onLoad() {
     this.getMessageList();
@@ -39050,19 +39951,20 @@ define('pages/lesson/lesson.js',function(require, module, exports, window, docum
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var lessonList = function lessonList() {return Promise.all(/*! import() | components/item/lessonList */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/item/lessonList")]).then(__webpack_require__.bind(null, /*! ../../components/item/lessonList.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\item\\lessonList.vue"));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-
-
-
-
-
-
-
-
-
-
-
+var _this = '';var lessonList = function lessonList() {return Promise.all(/*! import() | components/item/lessonList */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/item/lessonList")]).then(__webpack_require__.bind(null, /*! ../../components/item/lessonList.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\item\\lessonList.vue"));};var _default =
 
 {
   components: {
@@ -39078,28 +39980,44 @@ define('pages/lesson/lesson.js',function(require, module, exports, window, docum
 
   },
   onLoad: function onLoad(obj) {
+    _this = this;
     uni.getStorageSync('type') == 1 ? this.isShow = true : this.isShow = false;
     this.lessonType = obj.type;
     this.getLessonList(this.lessonType);
   },
-  onReachBottom: function onReachBottom() {var _this = this;
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'My Lesson' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '我的课程' });
+
+    }
+  },
+  onReachBottom: function onReachBottom() {var _this2 = this;
     if (this.isEnd) {
-      return;
+      // return;
     }
     this.index++;
     setTimeout(function () {
-      _this.getLessonList(_this.lessonType);
+      _this2.getLessonList(_this2.lessonType);
     }, 300);
   },
   onPullDownRefresh: function onPullDownRefresh() {
     this.index = 0;
     this.getLessonList(this.lessonType);
   },
+  watch: {
+    lessonType: function lessonType(now, old) {
+      _this.listInfo = [];
+    } },
+
   methods: {
     //获取课程
-    getLessonList: function getLessonList(val) {var _this2 = this;
+    getLessonList: function getLessonList(val) {var _this3 = this;
       this.lessonType = val;
-      this.listInfo = [];
       this.ajax({
         url: uni.getStorageSync('type') == 1 ? 'studentclass/class_type' : 'teacherclass/class_list',
         data:
@@ -39120,32 +40038,30 @@ define('pages/lesson/lesson.js',function(require, module, exports, window, docum
             switch (uni.getStorageSync('type')) {
               case 1:
                 if (res.data.data.length === 0) {
-                  _this2.isEnd = true;
+                  _this3.isEnd = true;
                   uni.showToast({
                     title: '没有更多数据了',
                     icon: 'none' });
 
-                  return;
                 }
-                if (_this2.index !== 0) {
-                  _this2.listInfo = _this2.listInfo.concat(res.data.data);
+                if (_this3.index !== 0) {
+                  _this3.listInfo = _this3.listInfo.concat(res.data.data);
                 } else {
-                  _this2.listInfo = res.data.data;
+                  _this3.listInfo = res.data.data;
                 }
                 break;
               default:
                 if (res.data.data.list.length === 0) {
-                  _this2.isEnd = true;
+                  _this3.isEnd = true;
                   uni.showToast({
                     title: '没有更多数据了',
                     icon: 'none' });
 
-                  return;
                 }
-                if (_this2.index !== 0) {
-                  _this2.listInfo = _this2.listInfo.concat(res.data.data.list);
+                if (_this3.index !== 0) {
+                  _this3.listInfo = _this3.listInfo.concat(res.data.data.list);
                 } else {
-                  _this2.listInfo = res.data.data.list;
+                  _this3.listInfo = res.data.data.list;
                 }}
 
           }
@@ -39344,22 +40260,72 @@ define('pages/vipCenter/vipCenter.js',function(require, module, exports, window,
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   components: {
     uniIcon: uniIcon },
 
   data: function data() {
     return {
+      flag: false,
       userInfo: {},
       moneyList: [],
-      checkId: '' };
+      checkId: '',
+      form: {} };
 
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Member Center' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '会员中心' });
+
+    }
   },
   onLoad: function onLoad() {
     this.getUserInfo();
     this.getMoneyList();
   },
   methods: {
+    formSubmit: function formSubmit(e) {
+      console.log(e, " at pages\\vipCenter\\vipCenter.vue:113");
+    },
     //获取个人资料
     getUserInfo: function getUserInfo() {var _this = this;
       this.ajax({
@@ -39394,7 +40360,7 @@ define('pages/vipCenter/vipCenter.js',function(require, module, exports, window,
       this.checkId = val;
     },
     //充值操作
-    moneyAadd: function moneyAadd() {
+    moneyAadd: function moneyAadd() {var _this3 = this;
       if (!this.checkId) {
         uni.showToast({
           title: '请选择充值金额',
@@ -39409,10 +40375,8 @@ define('pages/vipCenter/vipCenter.js',function(require, module, exports, window,
 
         success: function success(res) {
           if (res.data.body === 'success') {
-            uni.showToast({
-              title: '充值成功',
-              icon: 'none' });
-
+            _this3.form = res.data.data;
+            _this3.flag = true;
           } else {
             uni.showToast({
               title: res.data.msg,
@@ -39455,6 +40419,31 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var m0 = _vm.$t("index")
+  var m1 = _vm.$t("index")
+  var m2 = _vm.$t("index")
+  var m3 = _vm.$t("index")
+  var m4 = _vm.$t("index")
+  var m5 = _vm.$t("index")
+  var m6 = _vm.$t("index")
+  var m7 = _vm.$t("index")
+  var m8 = _vm.$t("index")
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        m0: m0,
+        m1: m1,
+        m2: m2,
+        m3: m3,
+        m4: m4,
+        m5: m5,
+        m6: m6,
+        m7: m7,
+        m8: m8
+      }
+    }
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -39585,6 +40574,17 @@ define('pages/rechargeRecord/rechargeRecord.js',function(require, module, export
       isEnd: false,
       rechargeList: [] };
 
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Recharge Record' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '充值记录' });
+
+    }
   },
   onLoad: function onLoad() {
     this.getRechargeList();
@@ -39795,6 +40795,17 @@ define('pages/consumptionRecord/consumptionRecord.js',function(require, module, 
   onLoad: function onLoad() {
     this.getConumptionList();
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'consumption Record' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '消费记录' });
+
+    }
+  },
   onReachBottom: function onReachBottom() {var _this = this;
     if (this.isEnd) {
       return;
@@ -39981,7 +40992,7 @@ define('pages/pay/pay.js',function(require, module, exports, window, document, f
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -40061,10 +41072,22 @@ function getDate(type) {
       endDate: getDate('end') };
 
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'pay' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '支付' });
+
+    }
+  },
   methods: {
     bindDateChange: function bindDateChange(e) {
       this.date = e.target.value;
     } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),
 
@@ -40208,7 +41231,7 @@ define('pages/paySuccess/paySuccess.js',function(require, module, exports, windo
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -40225,8 +41248,19 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 var _default =
 {
-  name: 'paySuccess',
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Recharge Success' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '充值成功' });
+
+    }
+  },
   components: {} };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),
 
@@ -40380,7 +41414,28 @@ define('pages/evaluate/evaluate.js',function(require, module, exports, window, d
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var commentStarClass = function commentStarClass() {return __webpack_require__.e(/*! import() | components/comment/commentStarClass */ "components/comment/commentStarClass").then(__webpack_require__.bind(null, /*! ../../components/comment/commentStarClass.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\comment\\commentStarClass.vue"));};var startclass = function startclass() {return __webpack_require__.e(/*! import() | components/starclass */ "components/starclass").then(__webpack_require__.bind(null, /*! ../../components/starclass.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\starclass.vue"));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var commentStarClass = function commentStarClass() {return __webpack_require__.e(/*! import() | components/comment/commentStarClass */ "components/comment/commentStarClass").then(__webpack_require__.bind(null, /*! ../../components/comment/commentStarClass.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\comment\\commentStarClass.vue"));};var startclass = function startclass() {return __webpack_require__.e(/*! import() | components/starclass */ "components/starclass").then(__webpack_require__.bind(null, /*! ../../components/starclass.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\starclass.vue"));};var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -40396,10 +41451,87 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 {
-  name: 'evaluate',
   components: {
     commentStarClass: commentStarClass,
-    startclass: startclass } };exports.default = _default;
+    startclass: startclass },
+
+  data: function data() {
+    return {
+      order_id: '',
+      class_content: '',
+      class_star: '',
+      teacher_content: '',
+      teacher_star: '',
+      teacher_teach_star: '',
+      teacher_teach_mode_star: '',
+      teacher_teach_bearing_star: '' };
+
+  },
+  onLoad: function onLoad(obj) {
+    this.order_id = obj.classId;
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Evaluate' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '评价' });
+
+    }
+  },
+  onNavigationBarButtonTap: function onNavigationBarButtonTap(obj) {
+    this.ajax({
+      url: 'studentclass/user_assess',
+      data: {
+        order_id: this.order_id,
+        class_star: this.class_star,
+        class_content: this.class_content,
+        teacher_star: this.teacher_star,
+        teacher_content: this.teacher_content,
+        teacher_teach_bearing_star: this.teacher_teach_bearing_star,
+        teacher_teach_mode_star: this.teacher_teach_mode_star,
+        teacher_teach_star: this.teacher_teach_star },
+
+      success: function success(res) {
+        if (res.data.body === 'success') {
+          uni.showToast({
+            title: '评价成功',
+            icon: 'none' });
+
+        } else {
+          uni.showToast({
+            title: res.data.msg,
+            icon: 'none' });
+
+        }
+      } });
+
+  },
+  methods: {
+    getData1: function getData1(data) {
+      this.class_star = data * 2;
+    },
+    getData2: function getData2(data) {
+      this.teacher_star = data * 2;
+    },
+    getData3: function getData3(data) {
+      this.teacher_teach_star = data * 2;
+    },
+    getData4: function getData4(data) {
+      this.teacher_teach_mode_star = data * 2;
+    },
+    getData5: function getData5(data) {
+      this.teacher_teach_bearing_star = data * 2;
+    },
+    getContent1: function getContent1(data) {
+      this.class_content = data;
+    },
+    getContent2: function getContent2(data) {
+      this.teacher_content = data;
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),
 
@@ -40429,6 +41561,47 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var m0 = _vm.$t("index")
+  var m1 = _vm.$t("index")
+  var m2 = Number(40)
+  var m3 = Number(28)
+  var m4 = _vm.$t("index")
+  var m5 = _vm.$t("index")
+  var m6 = Number(28)
+  var m7 = Number(40)
+  var m8 = _vm.$t("index")
+  var m9 = Number(28)
+  var m10 = Number(40)
+  var m11 = _vm.$t("index")
+  var m12 = Number(28)
+  var m13 = Number(40)
+  var m14 = _vm.$t("index")
+  var m15 = Number(28)
+  var m16 = Number(40)
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        m0: m0,
+        m1: m1,
+        m2: m2,
+        m3: m3,
+        m4: m4,
+        m5: m5,
+        m6: m6,
+        m7: m7,
+        m8: m8,
+        m9: m9,
+        m10: m10,
+        m11: m11,
+        m12: m12,
+        m13: m13,
+        m14: m14,
+        m15: m15,
+        m16: m16
+      }
+    }
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -40598,6 +41771,17 @@ define('pages/classAdjustment/classAdjustment.js',function(require, module, expo
   },
   onLoad: function onLoad(obj) {
     this.classId = obj.classId;
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'class Adjustment' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '调课' });
+
+    }
   },
   methods: {
     toggleTab: function toggleTab(type) {
@@ -40874,6 +42058,17 @@ define('pages/lessonDetail/lessonDetail.js',function(require, module, exports, w
       lessonId: '' };
 
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Lesson Detail' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '课程详情' });
+
+    }
+  },
   onLoad: function onLoad(obj) {
     uni.setNavigationBarColor({
       frontColor: '#ffffff',
@@ -40975,11 +42170,23 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   var m0 = Number(_vm.musicIndexInfo.star)
+  var m1 = _vm.$t("index")
+  var m2 = _vm.$t("index")
+  var m3 = _vm.$t("index")
+  var m4 = _vm.$t("index")
+  var m5 = _vm.$t("index")
+  var m6 = _vm.$t("index")
   _vm.$mp.data = Object.assign(
     {},
     {
       $root: {
-        m0: m0
+        m0: m0,
+        m1: m1,
+        m2: m2,
+        m3: m3,
+        m4: m4,
+        m5: m5,
+        m6: m6
       }
     }
   )
@@ -41132,6 +42339,17 @@ define('pages/lessonCopy/lessonCopy.js',function(require, module, exports, windo
     this.musicId = obj.musicId;
     this.getMusicInfo(obj.musicId);
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Lesson Copy' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '课程类型' });
+
+    }
+  },
   onPullDownRefresh: function onPullDownRefresh() {
     this.getMusicInfo(this.musicId);
   },
@@ -41187,6 +42405,17 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var m0 = _vm.$t("index")
+  var m1 = _vm.$t("index")
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        m0: m0,
+        m1: m1
+      }
+    }
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -41333,6 +42562,17 @@ define('pages/teacherDetail/teacherDetail.js',function(require, module, exports,
       science: [] };
 
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Teacher details' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '教师详情' });
+
+    }
+  },
   onLoad: function onLoad(obj) {
     uni.setNavigationBarColor({
       frontColor: '#ffffff',
@@ -41352,6 +42592,7 @@ define('pages/teacherDetail/teacherDetail.js',function(require, module, exports,
         success: function success(res) {
           if (res.data.body === 'success') {
             var data = res.data.data;
+            console.log(data, " at pages\\teacherDetail\\teacherDetail.vue:63");
             _this.info = data.info;
             _this.courseList = data.list;
             _this.science = data.style;
@@ -41407,11 +42648,17 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   var m0 = Number(_vm.info.star)
+  var m1 = _vm.$t("index")
+  var m2 = _vm.$t("index")
+  var m3 = _vm.$t("index")
   _vm.$mp.data = Object.assign(
     {},
     {
       $root: {
-        m0: m0
+        m0: m0,
+        m1: m1,
+        m2: m2,
+        m3: m3
       }
     }
   )
@@ -41529,7 +42776,7 @@ define('pages/myCode/myCode.js',function(require, module, exports, window, docum
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -41549,9 +42796,19 @@ var _default =
 {
   data: function data() {
     return {};
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'My Code' });
 
+    } else {
+      uni.setNavigationBarTitle({
+        title: '我的邀请码' });
 
+    }
   } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),
 
@@ -41726,6 +42983,17 @@ var _default =
       code: '',
       reg: new RegExp('^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$') };
 
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'register' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '注册' });
+
+    }
   },
   methods: {
     //获取验证码
@@ -41969,9 +43237,7 @@ define('pages/classNotice/classNotice.js',function(require, module, exports, win
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var messageList = function messageList() {return __webpack_require__.e(/*! import() | components/item/messageList */ "components/item/messageList").then(__webpack_require__.bind(null, /*! ../../components/item/messageList.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\item\\messageList.vue"));};var _default =
-
-
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var messageList = function messageList() {return Promise.all(/*! import() | components/item/messageList */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/item/messageList")]).then(__webpack_require__.bind(null, /*! ../../components/item/messageList.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\item\\messageList.vue"));};var _default =
 
 
 
@@ -41987,6 +43253,17 @@ define('pages/classNotice/classNotice.js',function(require, module, exports, win
       index: 0,
       messageList: [] };
 
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Notice of adjustment' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '调整通知' });
+
+    }
   },
   onLoad: function onLoad() {
     this.getMessageList();
@@ -42225,6 +43502,17 @@ define('pages/codeSuccess/codeSuccess.js',function(require, module, exports, win
       content: '' };
 
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'code Success' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '打卡成功' });
+
+    }
+  },
   methods: {
     getVal: function getVal(s) {
       this.star = s;
@@ -42455,6 +43743,8 @@ define('pages/teacherLogin/teacherLogin.js',function(require, module, exports, w
 //
 //
 //
+//
+//
 var _default =
 {
   data: function data() {
@@ -42503,7 +43793,7 @@ var _default =
               data: res.data.type }),
 
             uni.reLaunch({
-              url: '/pages/tabbar/tabbar-1/tabbar-1' });
+              url: '/pages/tabbar/tabbar-2/tabbar-2?type=class' });
 
           } else {
             uni.showToast({
@@ -42745,6 +44035,8 @@ define('pages/addTeacher/addTeacher.js',function(require, module, exports, windo
 
 
 
+
+
 var _common = __webpack_require__(/*! ../../common/common.js */ "C:\\Users\\Administrator\\Desktop\\wemusic\\common\\common.js"); //
 //
 //
@@ -42828,9 +44120,21 @@ var _common = __webpack_require__(/*! ../../common/common.js */ "C:\\Users\\Admi
 //
 //
 //
-var _this = '';var wPicker = function wPicker() {return Promise.all(/*! import() | components/w-picker/w-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/w-picker/w-picker")]).then(__webpack_require__.bind(null, /*! @/components/w-picker/w-picker.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\w-picker\\w-picker.vue"));};var _default = { components: { wPicker: wPicker }, onLoad: function onLoad() {_this = this;}, data: function data() {return { title: '可工作开始时间', name: '', sex: '0', birthday: '', address: '', phone: '', emial: '', ABN: '', culture: '', card: '', gz_s_time: '', gz_d_time: '', j_photo: '', class: '1=2' };}, methods: { toggleTabDate: function toggleTabDate() {this.$refs.pickerDate.show();}, onConfirmDate: function onConfirmDate(val) {this.birthday = "".concat(val[0], "-").concat(val[1], "-").concat(val[2]);}, toggleTabDates: function toggleTabDates(type) {switch (type) {case 'startTime':this.title = '开始日期';this.$refs.pickerDates.show();break;default:this.title = '结束日期';this.$refs.pickerDates.show();}}, onConfirmDates: function onConfirmDates(val) {switch (this.title) {case '开始日期':this.gz_s_time = "".concat(val[0], "-").concat(val[1], "-").concat(val[2]);break;default:this.gz_d_time = "".concat(val[0], "-").concat(val[1], "-").concat(val[2]);}}, //选择文件
-    chooseImage: function chooseImage(e) {uni.chooseImage({ count: 1, success: function success(res) {_this.j_photo = res.tempFilePaths[0];uni.uploadFile({ url: _common.ApiUrl + 'index/photo_add', filePath: res.tempFilePaths[0], name: 'file', header: { role: 'student', Authorization: uni.getStorageSync('token') }, success: function success(res) {var info = JSON.parse(res.data);if (info.data === 'success') {_this.j_photo = info.body.photo;}} });}, fail: function fail(err) {console.log('chooseImage fail', err, " at pages\\addTeacher\\addTeacher.vue:163");} });}, //教师入驻
-    addTeacherInfo: function addTeacherInfo() {this.ajax({ url: 'index/teacher_registered', header: { role: 'teacher' },
+//
+//
+var _this = '';var wPicker = function wPicker() {return Promise.all(/*! import() | components/w-picker/w-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/w-picker/w-picker")]).then(__webpack_require__.bind(null, /*! @/components/w-picker/w-picker.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\w-picker\\w-picker.vue"));};var _default = { components: { wPicker: wPicker }, onLoad: function onLoad() {_this = this;}, data: function data() {return { title: '可工作开始时间', name: '', sex: '0', birthday: '', address: '', phone: '', emial: '', ABN: '', culture: '', card: '', gz_s_time: '', gz_d_time: '', j_photo: '', is_number: '0', class: '1=2' };}, onShow: function onShow() {if (uni.getStorageSync('langType') == 'en-US') {uni.setNavigationBarTitle({ title: 'add teacher' });} else {uni.setNavigationBarTitle({ title: '教师入驻' });}}, methods: { toggleTabDate: function toggleTabDate() {this.$refs.pickerDate.show();}, onConfirmDate: function onConfirmDate(val) {this.birthday = "".concat(val[0], "-").concat(val[1], "-").concat(val[2]);}, toggleTabDates: function toggleTabDates(type) {switch (type) {case 'startTime':this.title = '开始日期';this.$refs.pickerDates.show();break;default:this.title = '结束日期';this.$refs.pickerDates.show();}}, onConfirmDates: function onConfirmDates(val) {switch (this.title) {case '开始日期':this.gz_s_time = "".concat(val[0], "-").concat(val[1], "-").concat(val[2]);break;default:this.gz_d_time = "".concat(val[0], "-").concat(val[1], "-").concat(val[2]);}}, //选择文件
+    chooseImage: function chooseImage(e) {uni.chooseImage({ count: 1, success: function success(res) {_this.j_photo = res.tempFilePaths[0];uni.uploadFile({ url: _common.ApiUrl + 'index/photo_add', filePath: res.tempFilePaths[0], name: 'file', header: { role: 'student', Authorization: uni.getStorageSync('token') }, success: function success(res) {var info = JSON.parse(res.data);if (info.data === 'success') {_this.j_photo = info.body.photo;}} });},
+        fail: function fail(err) {
+          console.log('chooseImage fail', err, " at pages\\addTeacher\\addTeacher.vue:177");
+        } });
+
+    },
+    //教师入驻
+    addTeacherInfo: function addTeacherInfo() {
+      this.ajax({
+        url: 'index/teacher_registered',
+        header: {
+          role: 'teacher' },
 
         data: {
           name: this.name,
@@ -42842,6 +44146,7 @@ var _this = '';var wPicker = function wPicker() {return Promise.all(/*! import()
           ABN: this.ABN,
           culture: this.culture,
           card: this.card,
+          is_number: this.is_number,
           gz_s_time: new Date(this.gz_s_time).getTime() / 1000,
           gz_d_time: new Date(this.gz_d_time).getTime() / 1000,
           j_photo: this.j_photo,
@@ -43152,7 +44457,19 @@ var _common = __webpack_require__(/*! ../../common/common.js */ "C:\\Users\\Admi
 //
 //
 //
-var wPicker = function wPicker() {return Promise.all(/*! import() | components/w-picker/w-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/w-picker/w-picker")]).then(__webpack_require__.bind(null, /*! @/components/w-picker/w-picker.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\w-picker\\w-picker.vue"));};var neilModal = function neilModal() {return __webpack_require__.e(/*! import() | components/neil-modal/neil-modal */ "components/neil-modal/neil-modal").then(__webpack_require__.bind(null, /*! @/components/neil-modal/neil-modal.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\neil-modal\\neil-modal.vue"));};var uniIcon = function uniIcon() {return __webpack_require__.e(/*! import() | components/uni-icon/uni-icon */ "components/uni-icon/uni-icon").then(__webpack_require__.bind(null, /*! ../../components/uni-icon/uni-icon.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\uni-icon\\uni-icon.vue"));};var _default = { components: { wPicker: wPicker, neilModal: neilModal, uniIcon: uniIcon }, data: function data() {return { userInfo: {}, show: false, userImage: '', array: ['男', '女'], arrays: ['吃饭', '睡觉', '打豆豆'], index: '', indexs: 0, date: '', userName: '', sex: '', interest: '', address: '' };}, onLoad: function onLoad() {this.getUserInfo();}, onNavigationBarButtonTap: function onNavigationBarButtonTap(obj) {if (!this.userImage || !this.userName || !this.sex || !this.date || !this.interest || !this.address) {uni.showToast({ title: '请填写必填选项!', icon: 'none' });return;}this.ajax({ url: 'user/update_info', data: { photo: this.userImage, name: this.userName, sex: this.sex, birthday: new Date(this.date).getTime() / 1000, interest: this.interest, address: this.address }, success: function success(res) {if (res.data.body === 'success') {uni.showToast({ title: '个人信息修改成功', icon: 'none' });} else {
+var wPicker = function wPicker() {return Promise.all(/*! import() | components/w-picker/w-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/w-picker/w-picker")]).then(__webpack_require__.bind(null, /*! @/components/w-picker/w-picker.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\w-picker\\w-picker.vue"));};var neilModal = function neilModal() {return __webpack_require__.e(/*! import() | components/neil-modal/neil-modal */ "components/neil-modal/neil-modal").then(__webpack_require__.bind(null, /*! @/components/neil-modal/neil-modal.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\neil-modal\\neil-modal.vue"));};var uniIcon = function uniIcon() {return __webpack_require__.e(/*! import() | components/uni-icon/uni-icon */ "components/uni-icon/uni-icon").then(__webpack_require__.bind(null, /*! ../../components/uni-icon/uni-icon.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\uni-icon\\uni-icon.vue"));};var _default = { components: { wPicker: wPicker, neilModal: neilModal, uniIcon: uniIcon }, data: function data() {return { userInfo: {}, show: false, userImage: '', array: ['男', '女'], arrays: [], index: '', indexs: 0, date: '', userName: '', sex: '', interest: '', address: '' };}, onShow: function onShow() {if (uni.getStorageSync('langType') == 'en-US') {uni.setNavigationBarTitle({ title: 'Revision of personal data' });} else {uni.setNavigationBarTitle({ title: '修改个人资料' });}}, onLoad: function onLoad() {this.getInstertList();this.getUserInfo();}, onNavigationBarButtonTap: function onNavigationBarButtonTap(obj) {if (!this.userImage || !this.userName || !this.sex || !this.date || !this.interest || !this.address) {uni.showToast({ title: '请填写必填选项!', icon: 'none' });return;}this.ajax({ url: 'user/update_info', data: { photo: this.userImage, name: this.userName,
+        sex: this.sex,
+        birthday: new Date(this.date).getTime() / 1000,
+        interest: this.interest,
+        address: this.address },
+
+      success: function success(res) {
+        if (res.data.body === 'success') {
+          uni.showToast({
+            title: '个人信息修改成功',
+            icon: 'none' });
+
+        } else {
           uni.showToast({
             title: res.data.msg,
             icon: 'none' });
@@ -43162,26 +44479,38 @@ var wPicker = function wPicker() {return Promise.all(/*! import() | components/w
 
   },
   methods: {
+    //获取兴趣列表
+    getInstertList: function getInstertList() {var _this = this;
+      this.ajax({
+        url: '/index/savor',
+        method: 'get',
+        success: function success(res) {
+          res.data.data.map(function (item) {
+            _this.arrays.push(item.name);
+          });
+        } });
+
+    },
     //获取个人资料
-    getUserInfo: function getUserInfo() {var _this = this;
+    getUserInfo: function getUserInfo() {var _this2 = this;
       this.ajax({
         url: uni.getStorageSync('type') == 1 ? 'user/info' : 'teacherclass/info',
         success: function success(res) {
           if (res.data.body === 'success') {
-            _this.userInfo = res.data.data;
-            _this.index = _this.userInfo.sex;
-            switch (_this.userInfo.sex) {
+            _this2.userInfo = res.data.data;
+            _this2.index = _this2.userInfo.sex;
+            switch (_this2.userInfo.sex) {
               case '2':
-                _this.index = 1;
+                _this2.index = 1;
                 break;
               default:
-                _this.index = 0;}
+                _this2.index = 0;}
 
-            _this.indexs = _this.userInfo.interest || 0;
-            _this.userName = _this.userInfo.name;
-            _this.userImage = _this.userInfo.photo || _this.userInfo.j_photo;
-            _this.date = (0, _common.getDate)(_this.userInfo.birthday * 1000);
-            _this.address = _this.userInfo.address;
+            _this2.indexs = _this2.userInfo.interest || 0;
+            _this2.userName = _this2.userInfo.name;
+            _this2.userImage = _this2.userInfo.photo || _this2.userInfo.j_photo;
+            _this2.date = (0, _common.getDate)(_this2.userInfo.birthday * 1000);
+            _this2.address = _this2.userInfo.address;
           } else {
             uni.showToast({
               title: res.data.msg });
@@ -43211,7 +44540,7 @@ var wPicker = function wPicker() {return Promise.all(/*! import() | components/w
       this.interest = this.indexs;
     },
     //选择头像上传
-    updateUserImage: function updateUserImage() {var _this2 = this;
+    updateUserImage: function updateUserImage() {var _this3 = this;
       uni.chooseImage({
         count: 1,
         success: function success(res) {
@@ -43227,7 +44556,7 @@ var wPicker = function wPicker() {return Promise.all(/*! import() | components/w
             success: function success(res) {
               var info = JSON.parse(res.data);
               if (info.data === 'success') {
-                _this2.userImage = info.body.photo;
+                _this3.userImage = info.body.photo;
               }
             } });
 
@@ -43387,7 +44716,7 @@ define('pages/wagesDetail/wagesDetail.js',function(require, module, exports, win
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -43432,7 +44761,19 @@ var _default =
 {
   data: function data() {
     return {};
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Wages Detail' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '工资详情' });
+
+    }
   } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),
 
@@ -43618,7 +44959,18 @@ var _common = __webpack_require__(/*! ../../common/common.js */ "C:\\Users\\Admi
 //
 //
 //
-var _this = '';var _default = { data: function data() {return { approve_photo1: '', approve_photo2: '' };}, onLoad: function onLoad() {_this = this;}, methods: { chooseImage: function chooseImage(str) {uni.chooseImage({ count: 1, success: function success(res) {switch (str) {case 'approve_photo1':_this.approve_photo1 = res.tempFilePaths[0];
+var _this = '';var _default = { data: function data() {return { approve_photo1: '', approve_photo2: '' };}, onLoad: function onLoad() {_this = this;}, onShow: function onShow() {if (uni.getStorageSync('langType') == 'en-US') {uni.setNavigationBarTitle({ title: 'authentication' });} else {uni.setNavigationBarTitle({ title: '认证中心' });
+
+    }
+  },
+  methods: {
+    chooseImage: function chooseImage(str) {
+      uni.chooseImage({
+        count: 1,
+        success: function success(res) {
+          switch (str) {
+            case 'approve_photo1':
+              _this.approve_photo1 = res.tempFilePaths[0];
               break;
             default:
               _this.approve_photo2 = res.tempFilePaths[0];}
@@ -43855,6 +45207,17 @@ var _this = '';var _default = { data: function data() {return { data_photo: '' }
   onLoad: function onLoad() {
     _this = this;
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'upload file' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '资料上传' });
+
+    }
+  },
   methods: {
     chooseImage: function chooseImage(e) {
       uni.chooseImage({
@@ -43878,7 +45241,7 @@ var _this = '';var _default = { data: function data() {return { data_photo: '' }
 
         },
         fail: function fail(err) {
-          console.log('chooseImage fail', err, " at pages\\uploadFile\\uploadFile.vue:43");
+          console.log('chooseImage fail', err, " at pages\\uploadFile\\uploadFile.vue:54");
         } });
 
     },
@@ -43941,6 +45304,15 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var m0 = _vm.$t("index")
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        m0: m0
+      }
+    }
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -44072,6 +45444,7 @@ define('pages/finance/finance.js',function(require, module, exports, window, doc
 
   data: function data() {
     return {
+      time: '',
       index: 0,
       isEnd: false,
       financeList: [] };
@@ -44081,7 +45454,19 @@ define('pages/finance/finance.js',function(require, module, exports, window, doc
     this.toggleTab();
   },
   onLoad: function onLoad() {
+    this.time = new Date().getFullYear();
     this.getFinanceList();
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Financial Management' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '财务管理' });
+
+    }
   },
   onReachBottom: function onReachBottom() {var _this = this;
     if (this.isEnd) {
@@ -44101,13 +45486,15 @@ define('pages/finance/finance.js',function(require, module, exports, window, doc
       this.$refs.picker.show();
     },
     onConfirm: function onConfirm(val) {
-      console.log(val, " at pages\\finance\\finance.vue:47");
+      this.time = val[0];
+      this.getFinanceList();
     },
     //获取财务列表
     getFinanceList: function getFinanceList() {var _this2 = this;
       this.ajax({
         url: 'teacherclass/finance',
         data: {
+          time: this.time,
           list: this.index,
           val: 5 },
 
@@ -44120,7 +45507,7 @@ define('pages/finance/finance.js',function(require, module, exports, window, doc
                 title: '没有更多数据了',
                 icon: 'none' });
 
-              return;
+              // return;
             }
             if (_this2.index !== 0) {
               _this2.financeList = _this2.financeList.concat(res.data.data.list);
@@ -44319,12 +45706,40 @@ var _default =
 {
   data: function data() {
     return {
-      isTeacher: false };
+      isTeacher: false,
+      messageId: '',
+      messageDetail: {} };
 
   },
-  onLoad: function onLoad() {
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'adjustment Detail' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '调整详情' });
+
+    }
+  },
+  onLoad: function onLoad(obj) {
+    this.messageId = obj.messageId;
     uni.getStorageSync('type') == 1 ? this.isTeacher = false : this.isTeacher = true;
-  } };exports.default = _default;
+    this.getMesageDeatil();
+  },
+  methods: {
+    //获取调整详情
+    getMesageDeatil: function getMesageDeatil() {
+      this.ajax({
+        url: uni.getStorageSync('type') == 1 ? 'studentclass/message_info' : 'teacherclass/message_info',
+        data: {
+          message_id: this.messageId },
+
+        success: function success(res) {
+          console.log(res, " at pages\\adjustmentDetail\\adjustmentDetail.vue:75");
+        } });
+
+    } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),
@@ -44513,6 +45928,19 @@ define('pages/choiceTeacher/choiceTeacher.js',function(require, module, exports,
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 //授课方式
 var _default = {
   components: {
@@ -44545,16 +45973,20 @@ var _default = {
 
   },
   onLoad: function onLoad(obj) {
+    this.musicId = obj.musicId;
     this.classId = obj.musicSunId;
     this.getChoiseTeacherInfo(obj.musicSunId);
     this.getCourseInfo(obj.musicSunId);
   },
   onPullDownRefresh: function onPullDownRefresh() {
+    if (this.selectFlag) return;
     this.page = 0;
     this.getCourseInfo(this.classId);
     this.getChoiseTeacherInfo(this.classId);
   },
   onReachBottom: function onReachBottom() {
+    console.log(this.selectFlag, " at pages\\choiceTeacher\\choiceTeacher.vue:79");
+    if (this.selectFlag) return;
     this.page++;
     this.getChoiseTeacherInfo(this.classId, true);
   },
@@ -44566,7 +45998,12 @@ var _default = {
         } else {
           this.selectFlag = false;
         }
-      } else window.history.back(-1);
+      } else {
+        uni.redirectTo({
+          url: '/pages/lessonCopy/lessonCopy?musicId=' + this.musicId });
+
+        //window.history.back(-1);
+      }
     },
     select: function select(item) {
       this.teacherId = item.id;
@@ -44611,7 +46048,6 @@ var _default = {
           this.orderShow = data.value;
           this.request.music_sun_id = this.classId;
           this.request.teacher_id = this.teacherId;
-          this.request.class_list_id = this.request.class_list_id.join(',');
           this.getCoupomList();
           break;
         case 'coupomTitle':
@@ -44622,13 +46058,16 @@ var _default = {
           this.request.price = data.price;
           break;}
 
+
+      console.log(this.request, " at pages\\choiceTeacher\\choiceTeacher.vue:153");
     },
     /**获取优惠券*/
     getCoupomList: function getCoupomList() {var _this2 = this;
+      var class_id = this.request.class_list_id.join(',');
       this.ajax({
         url: 'studentclass/coupom_list',
         data: {
-          class_list_id: this.request.class_list_id },
+          class_list_id: class_id },
 
         success: function success(res) {
           if (res.data.body === 'success') {
@@ -44705,11 +46144,19 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   var m0 = Number(_vm.courseInfo.star)
+  var m1 = _vm.$t("index")
+  var m2 = _vm.$t("index")
+  var m3 = Number(_vm.classId)
+  var m4 = Number(_vm.classId)
   _vm.$mp.data = Object.assign(
     {},
     {
       $root: {
-        m0: m0
+        m0: m0,
+        m1: m1,
+        m2: m2,
+        m3: m3,
+        m4: m4
       }
     }
   )
@@ -44851,6 +46298,17 @@ define('pages/confirmComplete/confirmComplete.js',function(require, module, expo
   onLoad: function onLoad(obj) {
     this.getCourseInfo(1);
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'confirm Complete' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '提交作业' });
+
+    }
+  },
   methods: {
     homeBack: function homeBack() {
       uni.switchTab({
@@ -44865,7 +46323,7 @@ define('pages/confirmComplete/confirmComplete.js',function(require, module, expo
           music_id: classId },
 
         success: function success(res) {
-          console.log(res, " at pages\\confirmComplete\\confirmComplete.vue:39");
+          console.log(res, " at pages\\confirmComplete\\confirmComplete.vue:50");
           if (res.data.body === 'success') {
             _this.courseInfo.push(res.data.data.info);
           }
@@ -45057,6 +46515,17 @@ var progressBar = function progressBar() {return __webpack_require__.e(/*! impor
   onLoad: function onLoad() {
     _this = this;
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'add task' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '提交作业' });
+
+    }
+  },
   methods: {
     chooseImage: function chooseImage(e) {
       uni.chooseImage({
@@ -45080,7 +46549,7 @@ var progressBar = function progressBar() {return __webpack_require__.e(/*! impor
 
         },
         fail: function fail(err) {
-          console.log('chooseImage fail', err, " at pages\\addTask\\addTask.vue:52");
+          console.log('chooseImage fail', err, " at pages\\addTask\\addTask.vue:63");
         } });
 
     } },
@@ -45306,6 +46775,17 @@ var _default =
   onLoad: function onLoad() {
     var pages = getCurrentPages(); //当前页
     this.beforePage = pages[pages.length - 2]; //上个页面
+  },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Forget Password' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '找回密码' });
+
+    }
   },
   methods: {
     //获取验证码
@@ -45556,9 +47036,7 @@ define('pages/code/code.js',function(require, module, exports, window, document,
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var qrcode = function qrcode() {return Promise.all(/*! import() | components/qrcode/qrcode */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/qrcode/qrcode")]).then(__webpack_require__.bind(null, /*! ../../components/qrcode/qrcode.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\qrcode\\qrcode.vue"));};var _default =
-
-
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var qrcode = function qrcode() {return Promise.all(/*! import() | components/qrcode/qrcode */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/qrcode/qrcode")]).then(__webpack_require__.bind(null, /*! ../../components/qrcode/qrcode.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\qrcode\\qrcode.vue"));};var _default =
 
 
 
@@ -45587,7 +47065,19 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   onReady: function onReady() {
     this.$refs.qrcode.creatQrcode();
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'code' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '打卡' });
+
+    }
+  },
   methods: {} };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),
 
@@ -45765,6 +47255,8 @@ define('pages/registrationSuccess/registrationSuccess.js',function(require, modu
 
 
 
+
+
 {
   components: {
     startclass: startclass },
@@ -45777,6 +47269,17 @@ define('pages/registrationSuccess/registrationSuccess.js',function(require, modu
       courseInfo: {} };
 
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Registration Success' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '报名成功' });
+
+    }
+  },
   onLoad: function onLoad(obj) {
     this.getCourseInfo(obj.classId);
     this.way = obj.way;
@@ -45784,7 +47287,7 @@ define('pages/registrationSuccess/registrationSuccess.js',function(require, modu
   },
   methods: {
     goIndex: function goIndex() {
-      uni.switchTab({
+      uni.reLaunch({
         url: '/pages/tabbar/tabbar-1/tabbar-1' });
 
     },
@@ -45834,11 +47337,17 @@ var render = function() {
   var _c = _vm._self._c || _h
   var m0 = __webpack_require__(/*! ../../static/img/weixinpay@2x.png */ "C:\\Users\\Administrator\\Desktop\\wemusic\\static\\img\\weixinpay@2x.png")
 
+  var m1 = Number(_vm.courseInfo.star)
+  var m2 = _vm.$t("index")
+  var m3 = _vm.$t("index")
   _vm.$mp.data = Object.assign(
     {},
     {
       $root: {
-        m0: m0
+        m0: m0,
+        m1: m1,
+        m2: m2,
+        m3: m3
       }
     }
   )

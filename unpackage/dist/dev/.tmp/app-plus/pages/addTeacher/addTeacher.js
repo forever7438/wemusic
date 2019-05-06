@@ -94,6 +94,8 @@
 
 
 
+
+
 var _common = __webpack_require__(/*! ../../common/common.js */ "C:\\Users\\Administrator\\Desktop\\wemusic\\common\\common.js"); //
 //
 //
@@ -177,9 +179,21 @@ var _common = __webpack_require__(/*! ../../common/common.js */ "C:\\Users\\Admi
 //
 //
 //
-var _this = '';var wPicker = function wPicker() {return Promise.all(/*! import() | components/w-picker/w-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/w-picker/w-picker")]).then(__webpack_require__.bind(null, /*! @/components/w-picker/w-picker.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\w-picker\\w-picker.vue"));};var _default = { components: { wPicker: wPicker }, onLoad: function onLoad() {_this = this;}, data: function data() {return { title: '可工作开始时间', name: '', sex: '0', birthday: '', address: '', phone: '', emial: '', ABN: '', culture: '', card: '', gz_s_time: '', gz_d_time: '', j_photo: '', class: '1=2' };}, methods: { toggleTabDate: function toggleTabDate() {this.$refs.pickerDate.show();}, onConfirmDate: function onConfirmDate(val) {this.birthday = "".concat(val[0], "-").concat(val[1], "-").concat(val[2]);}, toggleTabDates: function toggleTabDates(type) {switch (type) {case 'startTime':this.title = '开始日期';this.$refs.pickerDates.show();break;default:this.title = '结束日期';this.$refs.pickerDates.show();}}, onConfirmDates: function onConfirmDates(val) {switch (this.title) {case '开始日期':this.gz_s_time = "".concat(val[0], "-").concat(val[1], "-").concat(val[2]);break;default:this.gz_d_time = "".concat(val[0], "-").concat(val[1], "-").concat(val[2]);}}, //选择文件
-    chooseImage: function chooseImage(e) {uni.chooseImage({ count: 1, success: function success(res) {_this.j_photo = res.tempFilePaths[0];uni.uploadFile({ url: _common.ApiUrl + 'index/photo_add', filePath: res.tempFilePaths[0], name: 'file', header: { role: 'student', Authorization: uni.getStorageSync('token') }, success: function success(res) {var info = JSON.parse(res.data);if (info.data === 'success') {_this.j_photo = info.body.photo;}} });}, fail: function fail(err) {console.log('chooseImage fail', err, " at pages\\addTeacher\\addTeacher.vue:163");} });}, //教师入驻
-    addTeacherInfo: function addTeacherInfo() {this.ajax({ url: 'index/teacher_registered', header: { role: 'teacher' },
+//
+//
+var _this = '';var wPicker = function wPicker() {return Promise.all(/*! import() | components/w-picker/w-picker */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/w-picker/w-picker")]).then(__webpack_require__.bind(null, /*! @/components/w-picker/w-picker.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\w-picker\\w-picker.vue"));};var _default = { components: { wPicker: wPicker }, onLoad: function onLoad() {_this = this;}, data: function data() {return { title: '可工作开始时间', name: '', sex: '0', birthday: '', address: '', phone: '', emial: '', ABN: '', culture: '', card: '', gz_s_time: '', gz_d_time: '', j_photo: '', is_number: '0', class: '1=2' };}, onShow: function onShow() {if (uni.getStorageSync('langType') == 'en-US') {uni.setNavigationBarTitle({ title: 'add teacher' });} else {uni.setNavigationBarTitle({ title: '教师入驻' });}}, methods: { toggleTabDate: function toggleTabDate() {this.$refs.pickerDate.show();}, onConfirmDate: function onConfirmDate(val) {this.birthday = "".concat(val[0], "-").concat(val[1], "-").concat(val[2]);}, toggleTabDates: function toggleTabDates(type) {switch (type) {case 'startTime':this.title = '开始日期';this.$refs.pickerDates.show();break;default:this.title = '结束日期';this.$refs.pickerDates.show();}}, onConfirmDates: function onConfirmDates(val) {switch (this.title) {case '开始日期':this.gz_s_time = "".concat(val[0], "-").concat(val[1], "-").concat(val[2]);break;default:this.gz_d_time = "".concat(val[0], "-").concat(val[1], "-").concat(val[2]);}}, //选择文件
+    chooseImage: function chooseImage(e) {uni.chooseImage({ count: 1, success: function success(res) {_this.j_photo = res.tempFilePaths[0];uni.uploadFile({ url: _common.ApiUrl + 'index/photo_add', filePath: res.tempFilePaths[0], name: 'file', header: { role: 'student', Authorization: uni.getStorageSync('token') }, success: function success(res) {var info = JSON.parse(res.data);if (info.data === 'success') {_this.j_photo = info.body.photo;}} });},
+        fail: function fail(err) {
+          console.log('chooseImage fail', err, " at pages\\addTeacher\\addTeacher.vue:177");
+        } });
+
+    },
+    //教师入驻
+    addTeacherInfo: function addTeacherInfo() {
+      this.ajax({
+        url: 'index/teacher_registered',
+        header: {
+          role: 'teacher' },
 
         data: {
           name: this.name,
@@ -191,6 +205,7 @@ var _this = '';var wPicker = function wPicker() {return Promise.all(/*! import()
           ABN: this.ABN,
           culture: this.culture,
           card: this.card,
+          is_number: this.is_number,
           gz_s_time: new Date(this.gz_s_time).getTime() / 1000,
           gz_d_time: new Date(this.gz_d_time).getTime() / 1000,
           j_photo: this.j_photo,

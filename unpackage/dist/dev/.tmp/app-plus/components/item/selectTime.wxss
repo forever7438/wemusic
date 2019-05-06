@@ -17,7 +17,7 @@
   -webkit-box-shadow: 0 8rpx 20rpx 4rpx rgba(179, 188, 198, 0.2);
           box-shadow: 0 8rpx 20rpx 4rpx rgba(179, 188, 198, 0.2);
   border-radius: 16rpx;
-  margin-bottom: 30rpx;
+  margin: 30rpx;
   padding: 30rpx;
 }
 ._ul ._li .date.data-v-449d515a {

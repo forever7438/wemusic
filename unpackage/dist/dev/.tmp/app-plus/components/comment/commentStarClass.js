@@ -41,9 +41,13 @@ var _default =
 
   data: function data() {
     return {
-      value: 3 };
+      body: '' };
 
-  } };exports.default = _default;
+  },
+  methods: {
+    changeData: function changeData() {
+      this.$emit('sendData', this.body);
+    } } };exports.default = _default;
 
 /***/ }),
 
@@ -73,6 +77,17 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var m0 = _vm.$t("index")
+  var m1 = _vm.$t("index")
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        m0: m0,
+        m1: m1
+      }
+    }
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

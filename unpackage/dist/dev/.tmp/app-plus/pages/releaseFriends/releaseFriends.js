@@ -33,6 +33,17 @@ var progressBar = function progressBar() {return __webpack_require__.e(/*! impor
       progress: 0 };
 
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Circle Friends' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '发布朋友圈' });
+
+    }
+  },
   onLoad: function onLoad() {
     _this = this;
   },
@@ -59,7 +70,7 @@ var progressBar = function progressBar() {return __webpack_require__.e(/*! impor
 
         },
         fail: function fail(err) {
-          console.log('chooseImage fail', err, " at pages\\releaseFriends\\releaseFriends.vue:52");
+          console.log('chooseImage fail', err, " at pages\\releaseFriends\\releaseFriends.vue:63");
         } });
 
     } },
@@ -90,6 +101,9 @@ var progressBar = function progressBar() {return __webpack_require__.e(/*! impor
           uni.showToast({
             title: '发布成功',
             icon: 'none' });
+
+          uni.navigateBack({
+            delta: 1 });
 
         } else {
           uni.showToast({

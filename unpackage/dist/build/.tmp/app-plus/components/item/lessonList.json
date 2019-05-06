@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "startclass": "/components/starclass",
-    "no-content": "/components/noContent"
-  },
-  "component": true
-}

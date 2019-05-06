@@ -8,7 +8,25 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var neilModal = function neilModal() {return __webpack_require__.e(/*! import() | components/neil-modal/neil-modal */ "components/neil-modal/neil-modal").then(__webpack_require__.bind(null, /*! @/components/neil-modal/neil-modal.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\neil-modal\\neil-modal.vue"));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uniIcon = function uniIcon() {return __webpack_require__.e(/*! import() | components/uni-icon/uni-icon */ "components/uni-icon/uni-icon").then(__webpack_require__.bind(null, /*! @/components/uni-icon/uni-icon.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\uni-icon\\uni-icon.vue"));};var neilModal = function neilModal() {return __webpack_require__.e(/*! import() | components/neil-modal/neil-modal */ "components/neil-modal/neil-modal").then(__webpack_require__.bind(null, /*! @/components/neil-modal/neil-modal.vue */ "C:\\Users\\Administrator\\Desktop\\wemusic\\components\\neil-modal\\neil-modal.vue"));};var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -149,10 +167,12 @@
 
 {
   components: {
+    uniIcon: uniIcon,
     neilModal: neilModal },
 
   data: function data() {
     return {
+      pathType: 'me',
       userImage: '../../../static/img/icon_touxiang02.png',
       isTeacher: false,
       userInfo: {},
@@ -160,16 +180,28 @@
       language: '中文' };
 
   },
-  onLoad: function onLoad() {
+  onLoad: function onLoad(obj) {
+    this.pathType = obj.type;
     this.getUserInfo();
     uni.getStorageSync('type') == 1 ? this.isTeacher = false : this.isTeacher = true;
-    uni.getStorageSync('langType') == 'zh-CN' ? this.language = '中文' : this.language = 'English';
+    uni.getStorageSync('langType') == 'en-US' ? this.language = 'English' : this.language = '中文';
+    if (uni.getStorageSync('type') == 2) {
+      uni.setNavigationBarColor({
+        frontColor: '#000000',
+        backgroundColor: '#fad42a' });
+
+    }
   },
   onPullDownRefresh: function onPullDownRefresh() {
     this.getUserInfo();
     uni.getStorageSync('type') == 1 ? this.isTeacher = false : this.isTeacher = true;
   },
   methods: {
+    goPath: function goPath(path, type) {
+      uni.redirectTo({
+        url: "".concat(path, "?type=").concat(type) });
+
+    },
     //获取个人资料
     getUserInfo: function getUserInfo() {var _this = this;
       this.ajax({
@@ -189,19 +221,19 @@
 
     //切换语言
     bindBtn: function bindBtn() {
-      if (uni.getStorageSync('langType') == 'zh-CN') {
-        this._i18n.locale = 'en-US';
-        this.language = 'English';
-        uni.setStorage({
-          key: 'langType',
-          data: 'en-US' });
-
-      } else {
+      if (uni.getStorageSync('langType') == 'en-US') {
         this._i18n.locale = 'zh-CN';
         this.language = '中文';
         uni.setStorage({
           key: 'langType',
           data: 'zh-CN' });
+
+      } else {
+        this._i18n.locale = 'en-US';
+        this.language = 'English';
+        uni.setStorage({
+          key: 'langType',
+          data: 'en-US' });
 
       }
     } },

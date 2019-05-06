@@ -128,6 +128,9 @@
 //
 //
 //
+//
+//
+//
 
 /**
  * 工具函数库
@@ -492,6 +495,7 @@ var DateTools = {
     },
     //选中日期
     onSelectDate: function onSelectDate(date) {var _this3 = this;
+      this.$emit('selectTime', date.dateObj);
       if (~this.type.indexOf('range') && this.checkeds.length == 2) this.checkeds = [];else
       if (!~this.type.indexOf('range') && this.checkeds.length) this.checkeds = [];
       this.checkeds.push(new Date(date.dateObj));
@@ -632,6 +636,15 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var m0 = _vm.$t("index")
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        m0: m0
+      }
+    }
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

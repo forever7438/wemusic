@@ -41,7 +41,7 @@
     selectTime: selectTime },
 
   props: {
-    classId: String,
+    classId: Number,
     lessonType: {
       type: String,
       default: '4' },
@@ -174,6 +174,31 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var m0 = _vm.$t("index")
+  var m1 = _vm.$t("index")
+  var m2 = _vm.$t("index")
+  var m3 = _vm.$t("index")
+  var m4 = _vm.$t("index")
+  var m5 = _vm.$t("index")
+  var m6 = _vm.$t("index")
+  var m7 = _vm.$t("index")
+  var m8 = _vm.$t("index")
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        m0: m0,
+        m1: m1,
+        m2: m2,
+        m3: m3,
+        m4: m4,
+        m5: m5,
+        m6: m6,
+        m7: m7,
+        m8: m8
+      }
+    }
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

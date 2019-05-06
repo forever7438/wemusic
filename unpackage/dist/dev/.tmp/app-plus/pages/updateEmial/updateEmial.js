@@ -35,6 +35,17 @@ var _default =
       reg: new RegExp('^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$') };
 
   },
+  onShow: function onShow() {
+    if (uni.getStorageSync('langType') == 'en-US') {
+      uni.setNavigationBarTitle({
+        title: 'Change Emial' });
+
+    } else {
+      uni.setNavigationBarTitle({
+        title: '修改邮箱' });
+
+    }
+  },
   methods: {
     //获取验证码
     getCode: function getCode() {

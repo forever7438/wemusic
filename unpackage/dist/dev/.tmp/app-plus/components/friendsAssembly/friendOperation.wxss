@@ -1,4 +1,4 @@
-.operation {
+.friend_operation {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10,9 +10,9 @@
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-  margin: 10rpx 0;
+  margin: 20rpx 0;
 }
-.operation view {
+.friend_operation .operation_items {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,11 +22,11 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.operation view image {
+.friend_operation .operation_items .items_image {
   width: 50rpx;
   height: 50rpx;
 }
-.operation view text {
+.friend_operation .operation_items text {
   margin-left: 10rpx;
   font-size: 36rpx;
   font-family: PingFangSC-Regular;

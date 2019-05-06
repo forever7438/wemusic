@@ -47,7 +47,15 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
     disabled: {
       type: Boolean,
-      default: true } },
+      default: true },
+
+    font_size: {
+      type: Number,
+      default: 24 },
+
+    star_padding: {
+      type: Number,
+      default: 4 } },
 
 
   data: function data() {
@@ -57,6 +65,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   },
   methods: {
     getVal: function getVal(val) {
+      this.value = val.value * 2;
       this.$emit('sendVal', val.value);
     } } };exports.default = _default;
 
