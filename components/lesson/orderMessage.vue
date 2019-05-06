@@ -103,10 +103,18 @@
 				this.$refs.mpvuePicker.show();
 			},
 			pay(classId) {
+				let data = {
+					class_list_id:this.request.class_list_id.join(','),
+					teacher_id:this.request.teacher_id,
+					music_sun_id:this.request.music_sun_id,
+					people_num:this.request.people_num,
+					coupon_id:this.request.coupon_id,
+				}
 				this.ajax({
 					url: 'userorder/add_order',
-					data: this.request,
+					data: data,
 					success: res => {
+						console.log(res)
 						if (res.data.body === 'success') {
 							uni.showToast({
 								title: 'Success',
