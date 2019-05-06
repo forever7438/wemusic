@@ -13,7 +13,7 @@
 			<p class="duration">{{$t('index').Duration_course}} {{item.time}} min</p>
 		</li>
 		<li v-if="!flag" class="add_time" @tap="toggleTab"><img src="/static/img/tianjiashichang@2x.png" /></li>
-		<w-picker mode="dateTime" :defaultVal="date" :startYear="date_" themeColor="#007AFF" @confirm="DateConfirm" ref="picker"></w-picker>
+		<w-picker mode="dateTime" :defaultVal="date" themeColor="#007AFF" @confirm="DateConfirm" ref="picker"></w-picker>
 		<mpvue-picker themeColor="#007AFF" ref="mpvuePicker" mode="selector" :titleInfo="$t('index').Duration_course" :deepLength="1"
 		 :pickerValueDefault="[0]" @onConfirm="TimeConfirm" @onCancel="onCancel" :pickerValueArray="timeList"></mpvue-picker>
 	</ul>
