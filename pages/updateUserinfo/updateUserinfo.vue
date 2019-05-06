@@ -155,6 +155,8 @@
 						if (res.data.body === 'success') {
 							this.userInfo = res.data.data;
 							this.index = this.userInfo.sex;
+							this.sex = this.userInfo.sex;
+							this.interest = this.userInfo.interest;
 							switch (this.userInfo.sex) {
 								case '2':
 									this.index = 1;
