@@ -113,22 +113,32 @@ export default {
 			});
 		},
 		timeDate(item) {
-			let date_s = new Date(item.start_time * 1000);
-			let date_e = new Date(item.stop_time * 1000);
-			date_s = date_s
-				.toJSON()
-				.substr(0, 19)
-				.replace('T', ' ');
-			date_e = date_e
-				.toJSON()
-				.substr(0, 19)
-				.replace('T', ' ');
-			item.date = date_s.substr(0, 4) + '年' + date_s.substr(5, 2) + '月' + date_s.substr(8, 2) + '日';
-			item.star = date_s.substr(11, 5);
-			item.end = date_e.substr(11, 5);
+			console.log(item)
+			let date_s = new Date(Math.round(item.start_time * 1000));
+			let date_e = new Date(Math.round(item.stop_time * 1000));
+
+// 			date_s = date_s
+// 				.toJSON()
+// 				.substr(0, 19)
+// 				.replace('T', ' ');
+// 			date_e = date_e
+// 				.toJSON()
+// 				.substr(0, 19)
+// 				.replace('T', ' ');
+// 				console.log(date_s)
+// 				console.log(date_e)
+			item.date = date_s.getFullYear() + '年' +this.number_((date_s.getMonth()+1))+ '月' + this.number_(date_s.getDate()) + '日';
+			item.star = this.number_(date_s.getHours())+':'+this.number_(date_s.getMinutes());
+			item.end  = this.number_(date_e.getHours())+':'+this.number_(date_e.getMinutes());
 			item.time = (item.stop_time - item.start_time) / 60;
 			item.isActive = true;
 			return item;
+		},
+		number_(num){
+			if(num < 10){
+				num = '0'+num
+			}
+			return num
 		}
 	},
 	created() {

@@ -67,6 +67,7 @@
 				this.$refs.picker.show();
 			},
 			DateConfirm(val) {
+				console.log(val)
 				let dateVal = val[0] + '-' + val[1] + '-' + val[2] + ' ' + val[3] + ':' + val[4] + ':00'
 				let timeVal = (new Date(dateVal).getTime()) / 1000
 				this.timeChecked.start_time = timeVal;
