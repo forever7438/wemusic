@@ -92,6 +92,9 @@ export default {
 						title: '发布成功',
 						icon: 'none'
 					});
+					uni.navigateTo({
+						url: '../circleFriends/circleFriends'
+					});
 				} else {
 					uni.showToast({
 						title: res.data.msg,

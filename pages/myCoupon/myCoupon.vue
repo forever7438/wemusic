@@ -10,6 +10,7 @@
 </template>
 
 <script>
+let _this = '';
 import couponList from '../../components/item/couponList.vue';
 import noContent from '../../components/noContent.vue';
 export default {
@@ -26,6 +27,7 @@ export default {
 		};
 	},
 	onLoad(obj) {
+		_this = this;
 		this.type = obj.type;
 		this.getCouponList(this.type);
 	},
@@ -53,6 +55,11 @@ export default {
 		this.index = 0;
 		this.getCouponList(this.type);
 	},
+	watch: {
+		type: (now, old) => {
+			_this.couponList = [];
+		}
+	},
 	methods: {
 		//获取优惠卷列表
 		getCouponList(type) {
@@ -74,7 +81,6 @@ export default {
 								title: '没有更多数据了',
 								icon: 'none'
 							});
-							return;
 						}
 						if (this.index !== 0) {
 							this.couponList = this.couponList.concat(res.data.data);
@@ -92,6 +98,7 @@ export default {
 <style lang="less">
 view {
 	.meun_list {
+		z-index: 99;
 		width: 100%;
 		position: fixed;
 		height: 90upx;

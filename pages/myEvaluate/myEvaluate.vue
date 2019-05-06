@@ -9,6 +9,7 @@
 </template>
 
 <script>
+let _this = '';
 import lessonList from '../../components/item/lessonList.vue';
 export default {
 	components: {
@@ -23,6 +24,7 @@ export default {
 		};
 	},
 	onLoad(obj) {
+		_this = this;
 		this.lessonType = obj.type;
 		this.getEvalutateList(this.lessonType);
 	},
@@ -50,10 +52,14 @@ export default {
 		this.index = 0;
 		this.getEvalutateList(this.lessonType);
 	},
+	watch: {
+		lessonType: (now, old) => {
+			_this.listInfo = [];
+		}
+	},
 	methods: {
 		//获取评价
 		getEvalutateList(type) {
-			this.listInfo = [];
 			this.lessonType = type;
 			this.ajax({
 				url: 'studentclass/my_assess',
@@ -71,7 +77,6 @@ export default {
 								title: '没有更多数据了',
 								icon: 'none'
 							});
-							return;
 						}
 						if (this.index !== 0) {
 							this.listInfo = this.listInfo.concat(res.data.data);
@@ -90,6 +95,7 @@ export default {
 .my_evaluate_content {
 	padding: 0 30upx;
 	.meun_list {
+		z-index: 99;
 		position: fixed;
 		width: 100%;
 		height: 90upx;

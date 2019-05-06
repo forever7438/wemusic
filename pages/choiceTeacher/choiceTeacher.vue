@@ -64,7 +64,6 @@ export default {
 		};
 	},
 	onLoad(obj) {
-		console.log(obj)
 		this.musicId = obj.musicId;
 		this.classId = obj.musicSunId;
 		this.getChoiseTeacherInfo(obj.musicSunId);
