@@ -1,18 +1,22 @@
 <template>
 	<div class="class">
 		<ul v-if="classList.length">
-			<li v-for="(item, index) in 6" :key="index">
+			<li v-for="(item, index) in classList" :key="index">
 				<div class="class_title">
-					<h3>吉他快速入门</h3>
-					<p>9:00 - 10:00</p>
-					<s>学生 姓名</s>
+					<h3>{{ item.class_name }}</h3>
+					<p>{{ (item.start_time * 1000) | classTime }} - {{ (item.stop_time * 1000) | classTime }}</p>
+					<s>{{ item.name }}</s>
 				</div>
 				<div class="class_operation">
-					<span v-if="isTeacher" @click="showCard(1)">{{$t('index').QR_code}}</span>
-					<span v-else @click="sendCard">{{$t('index').clock_in}}</span>
-					<span><navigator hover-class="none" url="/pages/addTask/addTask?classId=1">{{$t('index').task}}</navigator></span>
+					<span v-if="isTeacher" @click="showCard(item.class_id)">{{ $t('index').QR_code }}</span>
+					<span v-else @click="sendCard">{{ $t('index').clock_in }}</span>
+					<span>
+						<navigator hover-class="none" :url="'/pages/addTask/addTask?classId=' + item.class_id">{{ $t('index').task }}</navigator>
+					</span>
 				</div>
-				<navigator hover-class="none" url="/pages/classAdjustment/classAdjustment?classId=1"><div class="class_adjustment">{{$t('index').changing_courseAA}}</div></navigator>
+				<navigator hover-class="none" :url="'/pages/classAdjustment/classAdjustment?classId=' + item.class_id">
+					<div class="class_adjustment">{{ $t('index').changing_course }}</div>
+				</navigator>
 			</li>
 		</ul>
 		<noContent v-else :title="$t('index').No_data"></noContent>
@@ -32,6 +36,13 @@ export default {
 	},
 	onLoad() {
 		_this = this;
+	},
+	filters: {
+		classTime: time => {
+			return `${new Date(time).getHours() > 9 ? new Date(time).getHours() : '0' + new Date(time).getHours()}:${
+				new Date(time).getMinutes() > 9 ? new Date(time).getMinutes() : '0' + new Date(time).getMinutes()
+			}`;
+		}
 	},
 	methods: {
 		//开启扫码功能

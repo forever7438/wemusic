@@ -8,8 +8,6 @@
 				:value="value"
 				color="#FAD42A"
 				:show-tips="true"
-				:begin-text="'开始'"
-				:end-text="'结束'"
 				:show-seconds="true"
 				@confirm="onSelected"
 				@cancel="onSelected"
@@ -86,7 +84,7 @@ export default {
 	methods: {
 		getTime(data) {
 			this.title = `${new Date(data).getMonth() + 1}月${new Date(data).getDate()}日`;
-			this.time = new Date(data).getTime();
+			this.time = new Date(data.toLocaleDateString()).getTime();
 			this.getLessonList();
 		},
 		goPath(path, type) {
@@ -115,7 +113,7 @@ export default {
 			this.ajax({
 				url: uni.getStorageSync('type') == 1 ? 'studentclass/class_list' : 'teacherclass/class_list_time',
 				data: {
-					time: this.time
+					time: Math.round(this.time / 1000)
 				},
 				success: res => {
 					if (res.data.body === 'success') {

@@ -149,8 +149,6 @@ export default {
 					this.request.price = data.price;
 					break;
 			}
-			
-			console.log(this.request)
 		},
 		/**获取优惠券*/
 		getCoupomList() {

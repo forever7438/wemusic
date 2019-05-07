@@ -1,24 +1,24 @@
 <template>
 	<div class="lesson_content">
 		<view v-if="!orderShow">
-			<text class="teacher_class">{{$t('index').Choosing_Teaching_Mode}}</text>
-			<ul class="way_meun">
-				<li :class="{ active: request.people_num === 0 }" @click="changeWay(0)">{{$t('index').One_on_one}}</li>
-				<li :class="{ active: request.people_num === 1 }" @click="changeWay(1)">{{$t('index').A_pair_of_two}}</li>
-				<li :class="{ active: request.people_num === 2 }" @click="changeWay(2)">{{$t('index').A_pair_of_three}}</li>
-			</ul>
+			<text class="teacher_class">{{ $t('index').Choosing_Teaching_Mode }}</text>
+			<view class="way_meun">
+				<text :class="request.people_num === 0 ? 'active_meun' : ''" @click="changeWay(0)">{{ $t('index').One_on_one }}</text>
+				<text :class="request.people_num === 1 ? 'active_meun' : ''" @click="changeWay(1)">{{ $t('index').A_pair_of_two }}</text>
+				<text :class="request.people_num === 2 ? 'active_meun' : ''" @click="changeWay(2)">{{ $t('index').A_pair_of_three }}</text>
+			</view>
 			<p class="message">
 				<span></span>
-				<span class="info">{{$t('index').way_tip}}</span>
+				<span class="info">{{ $t('index').way_tip }}</span>
 			</p>
 			<p class="vipMessage">
-				<span>{{$t('index').vip_tip}}</span>
-				<span>{{$t('index').open_vip}}</span>
+				<span>{{ $t('index').vip_tip }}</span>
+				<span>{{ $t('index').open_vip }}</span>
 			</p>
-			<text class="teacher_class">{{$t('index').Duration_course}}</text>
+			<text class="teacher_class">{{ $t('index').Duration_course }}</text>
 		</view>
 		<selectTime :timeList="timeList" :flag="orderShow" :dateList="dateList" @selctTime="selctTime" @confirmTime="confirmTime"></selectTime>
-		<span v-if="!orderShow" class="sign_up" @click="createOrder">{{$t('index').next}}</span>
+		<span v-if="!orderShow" class="sign_up" @click="createOrder">{{ $t('index').next }}</span>
 	</div>
 </template>
 
@@ -113,32 +113,21 @@ export default {
 			});
 		},
 		timeDate(item) {
-			console.log(item)
+			console.log(item);
 			let date_s = new Date(Math.round(item.start_time * 1000));
 			let date_e = new Date(Math.round(item.stop_time * 1000));
-
-// 			date_s = date_s
-// 				.toJSON()
-// 				.substr(0, 19)
-// 				.replace('T', ' ');
-// 			date_e = date_e
-// 				.toJSON()
-// 				.substr(0, 19)
-// 				.replace('T', ' ');
-// 				console.log(date_s)
-// 				console.log(date_e)
-			item.date = date_s.getFullYear() + '年' +this.number_((date_s.getMonth()+1))+ '月' + this.number_(date_s.getDate()) + '日';
-			item.star = this.number_(date_s.getHours())+':'+this.number_(date_s.getMinutes());
-			item.end  = this.number_(date_e.getHours())+':'+this.number_(date_e.getMinutes());
+			item.date = date_s.getFullYear() + '年' + this.number_(date_s.getMonth() + 1) + '月' + this.number_(date_s.getDate()) + '日';
+			item.star = this.number_(date_s.getHours()) + ':' + this.number_(date_s.getMinutes());
+			item.end = this.number_(date_e.getHours()) + ':' + this.number_(date_e.getMinutes());
 			item.time = (item.stop_time - item.start_time) / 60;
 			item.isActive = true;
 			return item;
 		},
-		number_(num){
-			if(num < 10){
-				num = '0'+num
+		number_(num) {
+			if (num < 10) {
+				num = '0' + num;
 			}
-			return num
+			return num;
 		}
 	},
 	created() {
@@ -223,11 +212,11 @@ export default {
 	.way_meun {
 		margin: 0 30upx;
 		padding-top: 40upx;
-		.active {
+		.active_meun {
 			background: #fad42a;
 			color: rgba(51, 51, 51, 1);
 		}
-		li {
+		text {
 			display: inline;
 			background: rgba(229, 228, 228, 1);
 			border-radius: 40upx;
@@ -238,7 +227,7 @@ export default {
 			font-family: PingFangSC-Medium;
 			font-weight: 500;
 		}
-		li:first-child {
+		text:first-child {
 			margin: 0;
 		}
 	}

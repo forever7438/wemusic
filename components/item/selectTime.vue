@@ -44,7 +44,6 @@
 			]
 			this.date = container;
 			this.date_ = container[0].toString();
-			console.log(this.date_)
 		},
 		props: {
 			flag: Boolean, //事件开关

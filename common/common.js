@@ -93,6 +93,18 @@ function getDates(type) {
 	return `${year}.${month}`;
 }
 
+//时间格式化处理中文格式
+function getDatess(type) {
+	const date = new Date(type);
+	let year = date.getFullYear();
+	let month = date.getMonth() + 1;
+	let day = date.getDate();
+	month = month > 9 ? month : '0' + month;
+	day = day > 9 ? day : '0' + day;
+
+	return `${year}年${month}月${day}日`;
+}
+
 function getImgToBase64(url, callback) { //将图片转换为Base64
 	var canvas = document.createElement('canvas'),
 		ctx = canvas.getContext('2d'),
@@ -114,5 +126,6 @@ export {
 	errorImg01,
 	getDate,
 	getDates,
+	getDatess,
 	getImgToBase64
 }

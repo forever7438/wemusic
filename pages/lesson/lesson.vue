@@ -6,15 +6,18 @@
 			<text :class="lessonType == 1 ? 'active' : ''" @click="getLessonList('1')">待开课</text>
 			<text :class="lessonType == 2 ? 'active' : ''" @click="getLessonList('2')">已完成</text>
 		</view>
-		<lesson-list :lessonType="lessonType" :listInfo="listInfo"></lesson-list>
+		<lesson-list v-if="isShow" :lessonType="lessonType" :listInfo="listInfo"></lesson-list>
+		<teacherClessonList v-else :lessonType="lessonType" :listInfo="listInfo"></teacherClessonList>
 	</view>
 </template>
 
 <script>
 let _this = '';
+import teacherClessonList from '../../components/item/teacherClessonList.vue';
 import lessonList from '../../components/item/lessonList.vue';
 export default {
 	components: {
+		teacherClessonList,
 		lessonList
 	},
 	data() {

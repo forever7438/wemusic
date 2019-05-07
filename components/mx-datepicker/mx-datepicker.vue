@@ -86,7 +86,7 @@
 				</view> -->
 			</view>
 		</view>
-		
+
 		<!-- 时间选择器 -->
 		<view v-if="showTimePicker" class="picker">
 			<view class="picker-modal picker-time">
@@ -485,6 +485,11 @@ export default {
 		},
 		//选中日期
 		onSelectDate(date) {
+			let selectedTime = new Date(new Date(date.dateObj).toLocaleDateString()).getTime();
+			let newTime = new Date(new Date().toLocaleDateString()).getTime();
+			if (selectedTime < newTime) {
+				return;
+			}
 			this.$emit('selectTime', date.dateObj);
 			if (~this.type.indexOf('range') && this.checkeds.length == 2) this.checkeds = [];
 			else if (!~this.type.indexOf('range') && this.checkeds.length) this.checkeds = [];
