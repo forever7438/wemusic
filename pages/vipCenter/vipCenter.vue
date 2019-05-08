@@ -46,6 +46,8 @@
 			:src="
 				'/hybrid/html/pay.html?cmd=' +
 					form.cmd +
+					'&url=' +
+					form.url +
 					'&business=' +
 					form.business +
 					'&item_name=' +
@@ -54,7 +56,7 @@
 					form.item_number +
 					'&amount=' +
 					form.amount +
-					'$currency_code=' +
+					'&currency_code=' +
 					form.currency_code +
 					'&return=' +
 					form.return +

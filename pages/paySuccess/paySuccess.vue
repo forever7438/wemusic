@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="pay_success_contents">
-			<img class="pay_success_img" src="../../static/img/weixinpay@2x.png" />
+			<img class="pay_success_img" src="../../static/img/chenggong.png" />
 			<p class="pay_success_title">充值成功</p>
 			<p class="pay_success_content">成功充值 ￥ 100</p>
 			<p class="pay_success_time">2019年1月10日 9:30</p>

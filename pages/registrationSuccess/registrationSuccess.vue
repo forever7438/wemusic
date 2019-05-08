@@ -1,13 +1,13 @@
 <template>
 	<div>
 		<div class="pay_success_contents">
-			<img class="pay_success_img" src="../../static/img/weixinpay@2x.png" />
+			<img class="pay_success_img" src="../../static/img/chenggong.png" />
 			<p class="pay_success_title">报名成功</p>
 			<div class="pay_message">
 				<img class="pay_message_img" :src="courseInfo.photo || defaultImg" />
 				<div class="pay_class_ino">
 					<text>{{ courseInfo.name }}</text>
-					<startclass :size="13" :star="Number(courseInfo.star)" starColor="#666666"></startclass>
+					<startclass :size="16" :star="Number(courseInfo.star)" starColor="#666666"></startclass>
 					<text>{{ teacherNmae }} {{ way }}</text>
 				</div>
 			</div>

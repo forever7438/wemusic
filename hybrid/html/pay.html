@@ -4,8 +4,7 @@
 		<title>Paypal订单支付</title>
 	</head>
 	<body>
-		<form action="https://www.paypal.com/cgi-bin/webscr" method="POST" name="form_starPay">
-			<!-- // Live https://www.paypal.com/cgi-bin/webscr -->
+		<form action="" method="POST" name="form_starPay" id='form_starPay'>
 			<input type='hidden' name='cmd' value=""> <!-- //告诉paypal该表单是立即购买 -->
 			<input type='hidden' name='business' value=''> <!-- //卖家帐号 也就是收钱的帐号 -->
 			<input type='hidden' name='item_name' value=''> <!-- //商品名称 item_number -->
@@ -31,6 +30,7 @@
 			if (r != null) return unescape(r[2]);
 			return null;
 		}
+		document.querySelector("form[name='form_starPay']").action = getUrlParam('url');
 		document.querySelector("input[name='cmd']").value = getUrlParam('cmd');
 		document.querySelector("input[name='business']").value = getUrlParam('business');
 		document.querySelector("input[name='item_name']").value = getUrlParam('item_name');

@@ -122,7 +122,7 @@
 							});
 							uni.redirectTo({
 								url: '/pages/registrationSuccess/registrationSuccess?way=' + this.resultway + '&classId=' + classId +
-									'&teacherNmae=' + '教师名称'
+									'&teacherNmae=' + ''
 							});
 						}
 					}
