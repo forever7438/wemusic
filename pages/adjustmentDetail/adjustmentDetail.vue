@@ -72,7 +72,7 @@ export default {
 					message_id: this.messageId
 				},
 				success: res => {
-					console.log(res);
+					console.log(res.data.data);
 				}
 			});
 		}
