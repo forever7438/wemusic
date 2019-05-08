@@ -38,7 +38,7 @@ let zhCN = {
 	reasonsForAdjustment: '调整理由',
 	adjustmentClass: '申请调课',
 	code: '二维码打卡',
-	showCode: '请将二位向学生出示进行打卡',
+	showCode: '请向学生出示进行打卡',
 	successfulTyping: '打卡成功',
 	classTime: '上课时间',
 	remarks: '备注',
