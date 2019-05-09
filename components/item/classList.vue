@@ -57,7 +57,7 @@ export default {
 						success: res => {
 							if (res.data.body == 'success') {
 								uni.navigateTo({
-									url: '/pages/codeSuccess/codeSuccess?classId=' + classId
+									url: '/pages/codeSuccess/codeSuccess?classId=' + classId + '&punch_id=' + res.data.data.punch_id
 								});
 							} else {
 								uni.showToast({

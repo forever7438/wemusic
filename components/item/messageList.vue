@@ -36,14 +36,14 @@ export default {
 <style lang="less" scoped>
 .message_list_content {
 	ul {
-		width: 100%;
+		width: auto;
 		padding-left: 0;
 		display: flex;
 		text-align: left;
 		flex-direction: column;
 
 		li {
-			width: 100%;
+			width: auto;
 			display: flex;
 			flex-direction: column;
 			padding: 30upx 25upx;

@@ -45,7 +45,7 @@ export default {
 			flag: false,
 			classId: '',
 			classDetail: {},
-			punch_id: '5',
+			punch_id: '',
 			star: '',
 			content: '',
 			startTime: '',
@@ -54,6 +54,7 @@ export default {
 		};
 	},
 	onLoad(obj) {
+		this.punch_id = obj.punch_id;
 		this.classId = obj.classId;
 		this.getClassDetail();
 	},
@@ -138,6 +139,11 @@ export default {
 							title: '评价成功',
 							icon: 'none'
 						});
+						setTimeout(() => {
+							uni.reLaunch({
+								url: '/pages/tabbar/tabbar-2/tabbar-2?type=class'
+							});
+						}, 1500);
 					} else {
 						uni.showToast({
 							title: res.data.msg,

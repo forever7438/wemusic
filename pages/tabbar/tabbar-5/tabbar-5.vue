@@ -10,7 +10,7 @@
 							<navigator hover-class="none" url="/pages/updateUserinfo/updateUserinfo">
 								<text class="user_name">{{ userInfo.name || 'null' }}</text>
 							</navigator>
-							<uni-icon type="forward" size="18" style='vertical-align: initial;color: #ffe6be;'></uni-icon>
+							<uni-icon type="forward" size="18" style="vertical-align: initial;color: #ffe6be;"></uni-icon>
 						</view>
 						<text class="user_type">WeMusic会员</text>
 					</view>
@@ -99,10 +99,10 @@
 		</view>
 		<view v-else class="content_teacher">
 			<view class="teacher-message">
-				<image :src="userInfo.j_photo || userImage"></image>
+				<image :src="userInfo.photo || userImage"></image>
 				<navigator hover-class="none" url="/pages/updateUserinfo/updateUserinfo">
 					<text class="user_name">{{ userInfo.name || 'null' }}</text>
-					<uni-icon type="forward" size="18" style='vertical-align: initial;'></uni-icon>
+					<uni-icon type="forward" size="18" style="vertical-align: initial;"></uni-icon>
 				</navigator>
 			</view>
 			<view class="user_meun">
@@ -139,341 +139,341 @@
 			</view>
 		</view>
 		<view class="meun_list">
-			<view v-if="!isTeacher" @tap="goPath('/pages/tabbar/tabbar-1/tabbar-1','home')">
-				<image :src="pathType=='home'?'/static/img/tabbar/homeactive.png':'/static/img/tabbar/home.png'"></image>
+			<view v-if="!isTeacher" @tap="goPath('/pages/tabbar/tabbar-1/tabbar-1', 'home')">
+				<image :src="pathType == 'home' ? '/static/img/tabbar/homeactive.png' : '/static/img/tabbar/home.png'"></image>
 			</view>
-			<view @tap="goPath('/pages/tabbar/tabbar-2/tabbar-2','class')">
-				<image :src="pathType=='class'?'/static/img/tabbar/classactive.png':'/static/img/tabbar/class.png'"></image>
+			<view @tap="goPath('/pages/tabbar/tabbar-2/tabbar-2', 'class')">
+				<image :src="pathType == 'class' ? '/static/img/tabbar/classactive.png' : '/static/img/tabbar/class.png'"></image>
 			</view>
-			<view @tap="goPath('/pages/tabbar/tabbar-5/tabbar-5','me')">
-				<image :src="pathType=='me'?'/static/img/tabbar/meactive.png':'/static/img/tabbar/me.png'"></image>
+			<view @tap="goPath('/pages/tabbar/tabbar-5/tabbar-5', 'me')">
+				<image :src="pathType == 'me' ? '/static/img/tabbar/meactive.png' : '/static/img/tabbar/me.png'"></image>
 			</view>
 		</view>
 	</view>
 </template>
 
 <script>
-	import uniIcon from '@/components/uni-icon/uni-icon.vue';
-	import neilModal from '@/components/neil-modal/neil-modal.vue';
-	export default {
-		components: {
-			uniIcon,
-			neilModal
+import uniIcon from '@/components/uni-icon/uni-icon.vue';
+import neilModal from '@/components/neil-modal/neil-modal.vue';
+export default {
+	components: {
+		uniIcon,
+		neilModal
+	},
+	data() {
+		return {
+			pathType: 'me',
+			userImage: '../../../static/img/icon_touxiang02.png',
+			isTeacher: false,
+			userInfo: {},
+			show: false,
+			language: '中文'
+		};
+	},
+	onLoad(obj) {
+		this.pathType = obj.type;
+		this.getUserInfo();
+		uni.getStorageSync('type') == 1 ? (this.isTeacher = false) : (this.isTeacher = true);
+		uni.getStorageSync('langType') == 'en-US' ? (this.language = 'English') : (this.language = '中文');
+		if (uni.getStorageSync('type') == 2) {
+			uni.setNavigationBarColor({
+				frontColor: '#000000',
+				backgroundColor: '#fad42a'
+			});
+		}
+	},
+	onPullDownRefresh() {
+		this.getUserInfo();
+		uni.getStorageSync('type') == 1 ? (this.isTeacher = false) : (this.isTeacher = true);
+	},
+	methods: {
+		goPath(path, type) {
+			uni.redirectTo({
+				url: `${path}?type=${type}`
+			});
 		},
-		data() {
-			return {
-				pathType: 'me',
-				userImage: '../../../static/img/icon_touxiang02.png',
-				isTeacher: false,
-				userInfo: {},
-				show: false,
-				language: '中文'
-			};
-		},
-		onLoad(obj) {
-			this.pathType = obj.type;
-			this.getUserInfo();
-			uni.getStorageSync('type') == 1 ? (this.isTeacher = false) : (this.isTeacher = true);
-			uni.getStorageSync('langType') == 'en-US' ? (this.language = 'English') : (this.language = '中文');
-			if (uni.getStorageSync('type') == 2) {
-				uni.setNavigationBarColor({
-					frontColor: '#000000',
-					backgroundColor: '#fad42a'
-				})
-			}
-		},
-		onPullDownRefresh() {
-			this.getUserInfo();
-			uni.getStorageSync('type') == 1 ? (this.isTeacher = false) : (this.isTeacher = true);
-		},
-		methods: {
-			goPath(path, type) {
-				uni.redirectTo({
-					url: `${path}?type=${type}`
-				})
-			},
-			//获取个人资料
-			getUserInfo() {
-				this.ajax({
-					url: uni.getStorageSync('type') == 1 ? 'user/info' : 'teacherclass/info',
-					success: res => {
-						uni.stopPullDownRefresh();
-						if (res.data.body === 'success') {
-							this.userInfo = res.data.data;
-						} else {
-							uni.showToast({
-								title: res.data.msg
-							});
-						}
+		//获取个人资料
+		getUserInfo() {
+			this.ajax({
+				url: uni.getStorageSync('type') == 1 ? 'user/info' : 'teacherclass/info',
+				success: res => {
+					uni.stopPullDownRefresh();
+					if (res.data.body === 'success') {
+						this.userInfo = res.data.data;
+					} else {
+						uni.showToast({
+							title: res.data.msg
+						});
 					}
-				});
-			},
-
-			//切换语言
-			bindBtn() {
-				if (uni.getStorageSync('langType') == 'en-US') {
-					this._i18n.locale = 'zh-CN';
-					this.language = '中文';
-					uni.setStorage({
-						key: 'langType',
-						data: 'zh-CN'
-					});
-				} else {
-					this._i18n.locale = 'en-US';
-					this.language = 'English';
-					uni.setStorage({
-						key: 'langType',
-						data: 'en-US'
-					});
 				}
-			}
+			});
 		},
-		onNavigationBarButtonTap(obj) {
-			if (obj.index === 1) {
-				uni.navigateTo({
-					url: '/pages/setting/setting'
+
+		//切换语言
+		bindBtn() {
+			if (uni.getStorageSync('langType') == 'en-US') {
+				this._i18n.locale = 'zh-CN';
+				this.language = '中文';
+				uni.setStorage({
+					key: 'langType',
+					data: 'zh-CN'
 				});
 			} else {
-				// uni.navigateTo({
-				// 	url: '/pages/message/message'
-				// });
+				this._i18n.locale = 'en-US';
+				this.language = 'English';
+				uni.setStorage({
+					key: 'langType',
+					data: 'en-US'
+				});
 			}
 		}
-	};
+	},
+	onNavigationBarButtonTap(obj) {
+		if (obj.index === 1) {
+			uni.navigateTo({
+				url: '/pages/setting/setting'
+			});
+		} else {
+			// uni.navigateTo({
+			// 	url: '/pages/message/message'
+			// });
+		}
+	}
+};
 </script>
 
 <style lang="less">
-	//老师
-	.content_teacher {
-		.teacher-message {
-			height: 400upx;
-			display: flex;
-			align-items: center;
-			flex-direction: column;
-			background: rgba(250, 212, 42, 1);
+//老师
+.content_teacher {
+	.teacher-message {
+		height: 400upx;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		background: rgba(250, 212, 42, 1);
 
-			image {
-				margin: 100upx 0 50upx;
-				width: 152upx;
-				height: 152upx;
-				border-radius: 50%;
-				border: 4upx solid rgba(255, 255, 255, 1);
-			}
-
-			text {
-				font-size: 40upx;
-				font-family: PingFangSC-Medium;
-				font-weight: 500;
-				color: rgba(51, 51, 51, 1);
-			}
+		image {
+			margin: 100upx 0 50upx;
+			width: 152upx;
+			height: 152upx;
+			border-radius: 50%;
+			border: 4upx solid rgba(255, 255, 255, 1);
 		}
 
-		.user_meun {
-			padding: 40upx 15upx 0 15upx;
-			margin-bottom: 96upx;
-			view {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				line-height: 104upx;
-				border-bottom: 2upx solid #ddd;
-
-				:last-child {
-					border-bottom: 0;
-				}
-
-				text {
-					font-size: 32upx;
-					font-family: PingFangSC-Regular;
-					font-weight: 400;
-					color: rgba(51, 51, 51, 1);
-				}
-
-				image {
-					width: 44upx;
-					height: 44upx;
-				}
-			}
+		text {
+			font-size: 40upx;
+			font-family: PingFangSC-Medium;
+			font-weight: 500;
+			color: rgba(51, 51, 51, 1);
 		}
 	}
 
-	//学生
-	.content_student {
-		text-align: center;
-		// height: 445upx;
-		padding: 30upx 30upx 0 30upx;
+	.user_meun {
+		padding: 40upx 15upx 0 15upx;
 		margin-bottom: 96upx;
-		.messgae {
-			height: 285upx;
-			padding: 30upx;
-			background: linear-gradient(135deg, rgba(217, 179, 121, 1) 0%, rgba(162, 127, 74, 1) 100%);
-			border-radius: 16upx;
+		view {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			line-height: 104upx;
+			border-bottom: 2upx solid #ddd;
 
-			.user_info {
+			:last-child {
+				border-bottom: 0;
+			}
+
+			text {
+				font-size: 32upx;
+				font-family: PingFangSC-Regular;
+				font-weight: 400;
+				color: rgba(51, 51, 51, 1);
+			}
+
+			image {
+				width: 44upx;
+				height: 44upx;
+			}
+		}
+	}
+}
+
+//学生
+.content_student {
+	text-align: center;
+	// height: 445upx;
+	padding: 30upx 30upx 0 30upx;
+	margin-bottom: 96upx;
+	.messgae {
+		height: 285upx;
+		padding: 30upx;
+		background: linear-gradient(135deg, rgba(217, 179, 121, 1) 0%, rgba(162, 127, 74, 1) 100%);
+		border-radius: 16upx;
+
+		.user_info {
+			display: flex;
+			align-items: center;
+
+			image {
+				width: 92upx;
+				height: 92upx;
+				border: 4upx solid #fff;
+				border-radius: 50%;
+			}
+
+			view {
 				display: flex;
-				align-items: center;
+				flex-direction: column;
+				text-align: left;
+				margin-left: 18upx;
 
-				image {
-					width: 92upx;
-					height: 92upx;
-					border: 4upx solid #fff;
-					border-radius: 50%;
+				.view_name {
+					display: flex;
+					flex-direction: row;
+					align-items: baseline;
 				}
 
-				view {
-					display: flex;
-					flex-direction: column;
-					text-align: left;
-					margin-left: 18upx;
+				.user_name {
+					font-size: 36upx;
+					font-family: PingFangSC-Medium;
+					font-weight: 500;
+					color: rgba(255, 230, 190, 1);
+					display: inline-block;
+					padding-bottom: 22upx;
+				}
 
-					.view_name {
-						display: flex;
-						flex-direction: row;
-						align-items: baseline;
-					}
+				.user_type {
+					font-size: 20upx;
+					font-family: PingFangSC-Regular;
+					font-weight: 400;
+					color: rgba(255, 230, 190, 1);
+				}
+			}
+		}
 
-					.user_name {
-						font-size: 36upx;
-						font-family: PingFangSC-Medium;
-						font-weight: 500;
-						color: rgba(255, 230, 190, 1);
-						display: inline-block;
-						padding-bottom: 22upx;
-					}
+		.user_money {
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
 
-					.user_type {
+			.money_info {
+				display: flex;
+				flex-direction: column;
+				text-align: left;
+				margin-top: 40upx;
+
+				text {
+					&:nth-of-type(1) {
+						width: 120upx;
+						line-height: 28upx;
 						font-size: 20upx;
 						font-family: PingFangSC-Regular;
 						font-weight: 400;
 						color: rgba(255, 230, 190, 1);
 					}
-				}
-			}
 
-			.user_money {
-				display: flex;
-				align-items: flex-end;
-				justify-content: space-between;
-
-				.money_info {
-					display: flex;
-					flex-direction: column;
-					text-align: left;
-					margin-top: 40upx;
-
-					text {
-						&:nth-of-type(1) {
-							width: 120upx;
-							line-height: 28upx;
-							font-size: 20upx;
-							font-family: PingFangSC-Regular;
-							font-weight: 400;
-							color: rgba(255, 230, 190, 1);
-						}
-
-						&:nth-of-type(2) {
-							width: 200upx;
-							font-size: 46upx;
-							font-family: DINAlternate-Bold;
-							font-weight: bold;
-							color: rgba(255, 255, 255, 1);
-							line-height: 54upx;
-							padding-left: 8upx;
-						}
+					&:nth-of-type(2) {
+						width: 200upx;
+						font-size: 46upx;
+						font-family: DINAlternate-Bold;
+						font-weight: bold;
+						color: rgba(255, 255, 255, 1);
+						line-height: 54upx;
+						padding-left: 8upx;
 					}
 				}
-
-				.pay_btn {
-					display: inline-block;
-					width: 116upx;
-					line-height: 46upx;
-					background: rgba(255, 255, 255, 1);
-					border-radius: 24upx;
-					font-size: 28upx;
-					font-family: PingFangSC-Regular;
-					font-weight: 400;
-					color: rgba(173, 137, 83, 1);
-					cursor: pointer;
-				}
 			}
-		}
 
-		.class_list {
-			display: flex;
-			align-items: center;
-			justify-content: space-around;
-			margin-top: 60upx;
-
-			view {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-
-				image {
-					width: 68upx;
-					height: 68upx;
-					border-radius: 4upx;
-				}
-
-				text {
-					margin-top: 20upx;
-					font-size: 28upx;
-					font-family: PingFangSC-Medium;
-					font-weight: 600;
-					color: rgba(26, 26, 26, 1);
-					line-height: 28upx;
-				}
-			}
-		}
-
-		.user_meun {
-			padding: 60upx 15upx 0 15upx;
-
-			view {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				line-height: 104upx;
-				border-bottom: 2upx solid #ddd;
-
-				:last-child {
-					border-bottom: 0;
-				}
-
-				text {
-					font-size: 32upx;
-					font-family: PingFangSC-Regular;
-					font-weight: 400;
-					color: rgba(51, 51, 51, 1);
-				}
-
-				image {
-					width: 44upx;
-					height: 44upx;
-				}
+			.pay_btn {
+				display: inline-block;
+				width: 116upx;
+				line-height: 46upx;
+				background: rgba(255, 255, 255, 1);
+				border-radius: 24upx;
+				font-size: 28upx;
+				font-family: PingFangSC-Regular;
+				font-weight: 400;
+				color: rgba(173, 137, 83, 1);
+				cursor: pointer;
 			}
 		}
 	}
 
-	.meun_list {
-		position: fixed;
-		bottom: 0;
-		width: 100%;
+	.class_list {
 		display: flex;
-		height: 98upx;
-		background-color: #fff;
 		align-items: center;
 		justify-content: space-around;
-		border-top: 2upx solid #ddd;
+		margin-top: 60upx;
 
 		view {
-			flex: 1;
-			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 
 			image {
-				width: 48upx;
-				height: 48upx;
+				width: 68upx;
+				height: 68upx;
+				border-radius: 4upx;
+			}
+
+			text {
+				margin-top: 20upx;
+				font-size: 28upx;
+				font-family: PingFangSC-Medium;
+				font-weight: 600;
+				color: rgba(26, 26, 26, 1);
+				line-height: 28upx;
 			}
 		}
 	}
+
+	.user_meun {
+		padding: 60upx 15upx 0 15upx;
+
+		view {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			line-height: 104upx;
+			border-bottom: 2upx solid #ddd;
+
+			:last-child {
+				border-bottom: 0;
+			}
+
+			text {
+				font-size: 32upx;
+				font-family: PingFangSC-Regular;
+				font-weight: 400;
+				color: rgba(51, 51, 51, 1);
+			}
+
+			image {
+				width: 44upx;
+				height: 44upx;
+			}
+		}
+	}
+}
+
+.meun_list {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	height: 98upx;
+	background-color: #fff;
+	align-items: center;
+	justify-content: space-around;
+	border-top: 2upx solid #ddd;
+
+	view {
+		flex: 1;
+		text-align: center;
+
+		image {
+			width: 48upx;
+			height: 48upx;
+		}
+	}
+}
 </style>
