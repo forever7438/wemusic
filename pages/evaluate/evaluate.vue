@@ -85,7 +85,7 @@
 							icon: 'none'
 						});
 						setTimeout(function(){
-							uni.reLaunch({
+							uni.redirectTo({
 								url: '/pages/lesson/lesson?type=2'
 							});
 						},1500)
