@@ -30,7 +30,7 @@
 						<navigator hover-class="none" :url="'/pages/lessonCopy/lessonCopy?musicId=' + item.id" v-if="item.type === '1'">
 							<span class="go_pay">{{ $t('index').See }}</span>
 						</navigator>
-						<navigator hover-class="none" url="/pages/evaluate/evaluate" v-if="item.type === '2'">
+						<navigator hover-class="none" :url="'/pages/evaluate/evaluate?classId='+ item.order_id" v-if="item.type === '2'">
 							<span class="go_pay">{{ $t('index').To_evaluate }}</span>
 						</navigator>
 						<navigator hover-class="none" :url="'/pages/choiceTeacher/choiceTeacher?musicId=' + musicId + '&musicSunId=' + item.id"

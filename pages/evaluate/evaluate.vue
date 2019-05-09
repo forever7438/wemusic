@@ -84,6 +84,11 @@
 							title: '评价成功',
 							icon: 'none'
 						});
+						setTimeout(function(){
+							uni.reLaunch({
+								url: '/pages/lesson/lesson?type=2'
+							});
+						},1500)
 					} else {
 						uni.showToast({
 							title: res.data.msg,
