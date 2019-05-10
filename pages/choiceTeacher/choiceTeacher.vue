@@ -29,10 +29,10 @@
 </template>
 
 <script>
-import lessonHead from '../../components/lesson/lessonHead.vue';
+import lessonHead   from '../../components/lesson/lessonHead.vue';
 import orderMessage from '../../components/lesson/orderMessage.vue';
-import teacherList from '../../components/item/teacherList.vue';
-import teachingWay from '../../components/lesson/teachingWay.vue'; //授课方式
+import teacherList  from '../../components/item/teacherList.vue';
+import teachingWay  from '../../components/lesson/teachingWay.vue'; //授课方式
 export default {
 	components: {
 		lessonHead,

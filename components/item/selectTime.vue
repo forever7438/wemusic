@@ -12,7 +12,12 @@
 			<p class="duration">{{ $t('index').Duration_course }} {{ item.time }} min</p>
 		</li>
 		<li v-if="!flag" class="add_time" @tap="toggleTab"><img src="/static/img/tianjiashichang@2x.png" /></li>
-		<w-picker mode="dateTime" :defaultVal="date" startYear="2019" themeColor="#007AFF" @confirm="DateConfirm" ref="picker"></w-picker>
+		<w-picker 	mode="dateTime" 
+					:defaultVal="date" 
+					:startYear="(new Date().getFullYear()).toString()" 
+					themeColor="#007AFF" 
+					@confirm="DateConfirm" 
+					ref="picker"></w-picker>
 		<mpvue-picker
 			themeColor="#007AFF"
 			ref="mpvuePicker"
@@ -43,14 +48,13 @@ export default {
 	},
 	created() {
 		let myDate = new Date();
-		let container = [myDate.getFullYear(), myDate.getMonth(), myDate.getDate(), myDate.getHours(), myDate.getMinutes()];
+		let container = [0, myDate.getMonth(), myDate.getDate(), myDate.getHours(), myDate.getMinutes()];
 		this.date = container;
-		this.date_ = container[0].toString();
 	},
 	props: {
 		flag: Boolean, //事件开关
 		timeList: Array,
-		dateList: Array
+		dateList: Array,
 	},
 	methods: {
 		/**选中时间*/

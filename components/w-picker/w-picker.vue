@@ -122,6 +122,9 @@
 				this.initData();
 			}
 		},
+		created() {
+			console.log(this.defaultVal)
+		},
 		methods: {
 			maskTap() {
 				this.showPicker = false;
@@ -252,6 +255,8 @@
 						hour = data.hours[this.defaultVal[3]];
 						minute = data.minutes[this.defaultVal[4]];
 						this.checkArr = [year, month, day, hour, minute];
+						console.log(data)
+						console.log(this.checkArr)
 						break;
 					case 'time':
 						hour = data.hours[this.defaultVal[0]];

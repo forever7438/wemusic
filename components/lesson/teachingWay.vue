@@ -17,7 +17,12 @@
 			</p>
 			<text class="teacher_class">{{ $t('index').Duration_course }}</text>
 		</view>
-		<selectTime :timeList="timeList" :flag="orderShow" :dateList="dateList" @selctTime="selctTime" @confirmTime="confirmTime"></selectTime>
+		<selectTime :timeList="timeList" 
+					:flag="orderShow"
+					:year ="(new Date()).getFullYear()"
+					:dateList="dateList" 
+					@selctTime="selctTime" 
+					@confirmTime="confirmTime"></selectTime>
 		<span v-if="!orderShow" class="sign_up" @click="createOrder">{{ $t('index').next }}</span>
 	</div>
 </template>
