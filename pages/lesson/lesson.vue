@@ -2,9 +2,9 @@
 	<view class="my_lesson_content">
 		<view class="class_meun">
 			<text v-if="isShow" :class="lessonType == -1 ? 'active' : ''" @click="getLessonList('-1')">全部课程</text>
-			<text v-if="isShow" :class="lessonType == 0 ? 'active' : ''" @click="getLessonList('0')">待支付</text>
+			<!-- <text v-if="isShow" :class="lessonType == 0 ? 'active' : ''" @click="getLessonList('0')">待支付</text> -->
 			<text :class="lessonType == 1 ? 'active' : ''" @click="getLessonList('1')">待开课</text>
-			<text :class="lessonType == 2 ? 'active' : ''" @click="getLessonList('2')">已完成</text>
+			<text :class="lessonType == 3 ? 'active' : ''" @click="getLessonList('3')">已完成</text>
 		</view>
 		<lesson-list v-if="isShow" :lessonType="lessonType" :listInfo="listInfo"></lesson-list>
 		<teacherClessonList v-else :lessonType="lessonType" :listInfo="listInfo"></teacherClessonList>
