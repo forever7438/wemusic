@@ -100,6 +100,9 @@ export default {
 							});
 							return;
 						}
+						res.data.data.map(item => {
+							item.video = item.video.split(',');
+						});
 						if (this.index !== 0) {
 							this.friendsList = this.friendsList.concat(res.data.data);
 						} else {

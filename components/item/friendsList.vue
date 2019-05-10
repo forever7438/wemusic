@@ -3,7 +3,7 @@
 		<view class="fridend_content" v-for="(item, index) in friendsList" :key="index">
 			<friendHead :itemHead="item"></friendHead>
 			<friendContent :type="true" :content="item.body" :listId="item.id"></friendContent>
-			<image :src="item.video || userImage"></image>
+			<view class="img_list"><image :src="val || userImage" v-for="(val, index) in item.video" :key="index"></image></view>
 			<friendOperation
 				:message="item.message_num"
 				:is_forward="item.is_forward"
@@ -46,8 +46,8 @@ export default {
 				}
 			});
 		},
-		changeStatus(data){
-			this.$emit('forward_praise',data);
+		changeStatus(data) {
+			this.$emit('forward_praise', data);
 		}
 	}
 };
@@ -57,11 +57,13 @@ export default {
 .friend_list {
 	.fridend_content {
 		margin-bottom: 20upx;
-
-		image {
-			width: 100%;
-			height: 410upx;
-			border-radius: 12upx;
+		.img_list {
+			image {
+				width: 210upx;
+				height: 210upx;
+				margin: 0 30upx 30upx 0;
+				border-radius: 12upx;
+			}
 		}
 	}
 }

@@ -65,6 +65,9 @@ export default {
 			this.ajax({
 				url: 'music/index',
 				method: 'post',
+				header: {
+					
+				},
 				success: res => {
 					uni.stopPullDownRefresh();
 					if (res.data.body === 'success') {

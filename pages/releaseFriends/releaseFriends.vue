@@ -2,7 +2,7 @@
 	<view>
 		<progress-bar v-if="show" :progress="progress"></progress-bar>
 		<textarea placeholder="分享学习心得…" v-model="body" />
-		<view v-if="video" class="choose_images"><image :src="video"></image></view>
+		<view v-if="videos.length" class="choose_images"><image :src="item" v-for="(item, index) in videos" :key="index"></image></view>
 		<view v-else class="choose_image" @tap="chooseImage">照片/拍摄</view>
 	</view>
 </template>
@@ -18,6 +18,7 @@ export default {
 	data() {
 		return {
 			video: '',
+			videos: [],
 			body: '',
 			show: false,
 			progress: 0
@@ -39,28 +40,35 @@ export default {
 	},
 	methods: {
 		chooseImage: e => {
+			_this.videos = [];
 			uni.chooseImage({
-				count: 1,
+				count: 9,
 				success: res => {
-					_this.video = res.tempFilePaths[0];
-					uni.uploadFile({
-						url: ApiUrl + 'index/photo_add',
-						filePath: res.tempFilePaths[0],
-						name: 'file',
-						header: {
-							role: 'student',
-							Authorization: uni.getStorageSync('token')
-						},
-						success: res => {
-							const info = JSON.parse(res.data);
-							if (info.data === 'success') {
-								_this.video = info.body.photo;
-							}
-						}
+					_this.videos = res.tempFilePaths;
+					res.tempFilePaths.map((item, index) => {
+						_this.uploadFile(item, index);
 					});
 				},
 				fail: err => {
 					console.log('chooseImage fail', err);
+				}
+			});
+		},
+		uploadFile(file, index) {
+			_this.video = [];
+			uni.uploadFile({
+				url: ApiUrl + 'index/photo_add',
+				filePath: file,
+				name: `file`,
+				header: {
+					role: 'student',
+					Authorization: uni.getStorageSync('token')
+				},
+				success: res => {
+					const info = JSON.parse(res.data);
+					if (info.data === 'success') {
+						_this.video.push(info.body.photo);
+					}
 				}
 			});
 		}
@@ -84,7 +92,7 @@ export default {
 			url: 'friend/add_friend',
 			data: {
 				body: this.body,
-				video: this.video
+				video: this.video.toString()
 			},
 			success: res => {
 				if (res.data.body === 'success') {
@@ -93,8 +101,8 @@ export default {
 						icon: 'none'
 					});
 					uni.navigateBack({
-						delta:1
-					})
+						delta: 1
+					});
 				} else {
 					uni.showToast({
 						title: res.data.msg,
@@ -125,15 +133,17 @@ view {
 		font-weight: 500;
 	}
 	.choose_images {
-		width: 200upx;
-		line-height: 200upx;
-		text-align: center;
+		// width: 200upx;
+		// line-height: 200upx;
+		text-align: left;
 		font-size: 24upx;
 		font-family: PingFangSC-Medium;
 		font-weight: 500;
 		image {
-			width: 200upx;
-			height: 200upx;
+			width: 160upx;
+			height: 160upx;
+			margin-right: 10upx;
+			margin-bottom: 10upx;
 		}
 	}
 }

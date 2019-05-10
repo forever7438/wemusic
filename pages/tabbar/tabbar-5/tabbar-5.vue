@@ -47,7 +47,7 @@
 						<text>{{ $t('index').waitingForClass }}</text>
 					</view>
 				</navigator>
-				<navigator hover-class="none" url="/pages/lesson/lesson?type=2">
+				<navigator hover-class="none" url="/pages/lesson/lesson?type=3">
 					<view>
 						<image src="../../../static/img/group(2).png"></image>
 						<text>{{ $t('index').completed }}</text>
