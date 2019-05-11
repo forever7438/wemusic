@@ -40,15 +40,19 @@ const ajax = (opt) => {
 			uni.hideLoading();
 			opt.success(res);
 			if (['Token invalid', 'Token expired'].includes(res.data.msg)) {
-				uni.showToast({
-					title: "token过期,请重新登录!",
-					icon: "none"
-				})
-				setTimeout(() => {
-					uni.navigateTo({
-						url: '/pages/login/login'
-					})
-				}, 1500)
+				uni.showModal({
+					title: '提示',
+					content: '您还未登录,是否去登录?',
+					success: function(res) {
+						if (res.confirm) {
+							uni.navigateTo({
+								url: '/pages/login/login'
+							})
+						} else if (res.cancel) {
+							console.log('用户点击取消');
+						}
+					}
+				});
 			}
 			if (['role error'].includes(res.data.msg)) {
 				uni.showToast({

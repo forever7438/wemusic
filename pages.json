@@ -2,15 +2,6 @@
 	"pages": [
 		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/login/login",
-			"style": {
-				"app-plus": {
-					"titleNView": false,
-					"scrollIndicator":"none"
-				}
-			}
-		},
-		{
 			"path": "pages/tabbar/tabbar-1/tabbar-1",
 			"style": {
 				"navigationBarTitleText": "选课",
@@ -20,6 +11,15 @@
 						"backgroundColor": "#ffff",
 						"titleSize": "17px"
 					}
+				}
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"app-plus": {
+					"titleNView": false,
+					"scrollIndicator": "none"
 				}
 			}
 		},
@@ -199,8 +199,8 @@
 			"path": "pages/vipCenter/vipCenter",
 			"style": {
 				"navigationBarTitleText": "会员中心",
-				"navigationBarBackgroundColor":"#434445",
-				"navigationBarTextStyle":"white"
+				"navigationBarBackgroundColor": "#434445",
+				"navigationBarTextStyle": "white"
 			}
 		},
 		{

@@ -44,9 +44,6 @@
 				if (val === '/pages/login/login') {
 					//退出登录,移除token  type
 					uni.clearStorage();
-					uni.reLaunch({
-						url: val
-					})
 				}
 				uni.navigateTo({
 					url: val

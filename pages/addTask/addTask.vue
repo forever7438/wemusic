@@ -2,7 +2,7 @@
 	<view>
 		<progress-bar v-if="show" :progress="progress"></progress-bar>
 		<textarea placeholder="分享学习心得…" v-model="notes_content" />
-		<view v-if="notes_photo" class="choose_images"><image :src="notes_photo"></image></view>
+		<view v-if="notes_photos.length" class="choose_images"><image :src="item" v-for="(item, index) in notes_photos" :key="index"></image></view>
 		<view v-else class="choose_image" @tap="chooseImage">照片/拍摄</view>
 	</view>
 </template>
@@ -17,13 +17,16 @@ export default {
 	},
 	data() {
 		return {
-			notes_photo: '',
+			classId:'',
+			notes_photo: [],
+			notes_photos:[],
 			notes_content: '',
 			show: false,
 			progress: 0
 		};
 	},
-	onLoad() {
+	onLoad(obj) {
+		this.classId = obj.classId;
 		_this = this;
 	},
 	onShow() {
@@ -39,28 +42,36 @@ export default {
 	},
 	methods: {
 		chooseImage: e => {
+			_this.notes_photos =[];
 			uni.chooseImage({
-				count: 1,
+				count: 9,
 				success: res => {
-					_this.notes_photo = res.tempFilePaths[0];
-					uni.uploadFile({
-						url: ApiUrl + 'index/photo_add',
-						filePath: res.tempFilePaths[0],
-						name: 'file',
-						header: {
-							role: 'student',
-							Authorization: uni.getStorageSync('token')
-						},
-						success: res => {
-							const info = JSON.parse(res.data);
-							if (info.data === 'success') {
-								_this.notes_photo = info.body.photo;
-							}
-						}
+					_this.notes_photos = res.tempFilePaths;
+					res.tempFilePaths.map((item, index) => {
+						_this.uploadFile(item, index);
 					});
+					
 				},
 				fail: err => {
 					console.log('chooseImage fail', err);
+				}
+			});
+		},
+		uploadFile(file){
+			_this.notes_photo=[];
+			uni.uploadFile({
+				url: ApiUrl + 'index/photo_add',
+				filePath: file,
+				name: 'file',
+				header: {
+					role: 'student',
+					Authorization: uni.getStorageSync('token')
+				},
+				success: res => {
+					const info = JSON.parse(res.data);
+					if (info.data === 'success') {
+						_this.notes_photo.push(info.body.photo);
+					}
 				}
 			});
 		}
@@ -83,8 +94,8 @@ export default {
 		this.ajax({
 			url: 'studentclass/student_notes',
 			data: {
-				class_id: this.class_id,
-				notes_photo: this.notes_photo,
+				class_id: this.classId,
+				notes_photo: this.notes_photo.toString(),
 				notes_content: this.notes_content,
 				notes_video: ''
 			},
@@ -124,15 +135,15 @@ view {
 		font-weight: 500;
 	}
 	.choose_images {
-		width: 200upx;
-		line-height: 200upx;
-		text-align: center;
+		text-align: left;
 		font-size: 24upx;
 		font-family: PingFangSC-Medium;
 		font-weight: 500;
 		image {
-			width: 200upx;
-			height: 200upx;
+			width: 160upx;
+			height: 160upx;
+			margin-right: 10upx;
+			margin-bottom: 10upx;
 		}
 	}
 }

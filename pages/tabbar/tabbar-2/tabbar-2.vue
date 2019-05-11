@@ -6,10 +6,10 @@
 		</view>
 		<view class="class_arrange">
 			<h3>{{ title }}全部课程</h3>
-			<classList :classList="classList" :isTeacher="isTeacher"></classList>
+			<classList :classList="classList" :isStudent="isStudent"></classList>
 		</view>
 		<view class="meun_list">
-			<view v-if="!isTeacher" @tap="goPath('/pages/tabbar/tabbar-1/tabbar-1', 'home')">
+			<view v-if="isStudent" @tap="goPath('/pages/tabbar/tabbar-1/tabbar-1', 'home')">
 				<image :src="pathType == 'home' ? '/static/img/tabbar/homeactive.png' : '/static/img/tabbar/home.png'"></image>
 			</view>
 			<view @tap="goPath('/pages/tabbar/tabbar-2/tabbar-2', 'class')">
@@ -42,12 +42,16 @@
 				start_time: '',
 				end_time: '',
 				classList: [],
-				isTeacher: false
+				isStudent: true
 			};
 		},
 		onReady() {
 			this.onShowDatePicker('date');
-			uni.getStorageSync('type') == 1 ? (this.isTeacher = false) : (this.isTeacher = true);
+			if (uni.getStorageSync('type')) {
+				uni.getStorageSync('type') == 1 ? (this.isStudent = true) : (this.isStudent = false);
+			} else {
+				this.isStudent = true
+			}
 		},
 		onLoad(obj) {
 			this.pathType = obj.type;

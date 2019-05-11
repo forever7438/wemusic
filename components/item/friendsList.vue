@@ -61,7 +61,7 @@ export default {
 			image {
 				width: 210upx;
 				height: 210upx;
-				margin: 0 30upx 30upx 0;
+				margin: 0 20upx 20upx 0;
 				border-radius: 12upx;
 			}
 		}

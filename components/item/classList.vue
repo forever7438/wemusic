@@ -8,7 +8,7 @@
 					<s>{{ item.name }}</s>
 				</div>
 				<div class="class_operation">
-					<span v-if="isTeacher" @click="showCard(item.class_id)">{{ $t('index').QR_code }}</span>
+					<span v-if="!isStudent" @click="showCard(item.class_id)">{{ $t('index').QR_code }}</span>
 					<span v-else @click="sendCard(item.class_id)">{{ $t('index').clock_in }}</span>
 					<span>
 						<navigator hover-class="none" :url="'/pages/addTask/addTask?classId=' + item.class_id">{{ $t('index').task }}</navigator>
@@ -29,7 +29,7 @@ import noContent from '../noContent.vue';
 export default {
 	props: {
 		classList: Array,
-		isTeacher: Boolean
+		isStudent: Boolean
 	},
 	components: {
 		noContent
