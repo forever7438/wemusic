@@ -59,7 +59,8 @@ export default {
 				class_list_id: [],
 				coupon_id: '',
 				courseLen: 0,
-				coupomTitle: ''
+				coupomTitle: '',
+				teacherName:''
 			}
 		};
 	},
@@ -100,6 +101,7 @@ export default {
 			this.teacherId = item.id;
 			this.selectItem = [];
 			this.selectItem.push(item);
+			this.request.teacherName = item.name
 			this.selectFlag = true;
 		},
 		/**获取课程信息*/

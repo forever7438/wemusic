@@ -123,7 +123,7 @@
 							uni.redirectTo({
 								url: '/pages/registrationSuccess/registrationSuccess?way=' + this.resultway + '&code=' + res.data.data +
 									'&classId=' + classId +
-									'&teacherNmae=' + ''
+									'&teacherNmae=' + this.request.teacherName
 							});
 						}
 					}

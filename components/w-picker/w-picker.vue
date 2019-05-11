@@ -63,7 +63,8 @@
 <script>
 	import {
 		initPicker,
-		initDays
+		initDays,
+		forMatNum
 	} from '@/common/util.js';
 	import provinces from './city-data/province.js';
 	import citys from './city-data/city.js';
@@ -143,6 +144,37 @@
 				this.$emit('confirm', this.checkArr);
 				this.showPicker = false;
 			},
+			startDateTime(year,month,day,hour){
+				let startd = 1;
+				let starth = 0;
+				let startm = 0;
+				if(month == this.defaultVal[1] + 1){
+					startd = this.defaultVal[2];
+					if(day == this.defaultVal[2]){
+						starth = this.defaultVal[3]
+						if(hour == this.defaultVal[3]){
+							startm = this.defaultVal[4]
+						}
+					}
+					
+				}
+				let dates = [];
+				let hours = []
+				let mins  = []
+				let totalDays = new Date(year, month, 0).getDate();
+				for (let d = startd; d <= totalDays; d++) {
+					dates.push(forMatNum(d));
+				};
+				for (let d = starth; d <= 24; d++) {
+					hours.push(forMatNum(d));
+				};
+				for (let d = startm; d <= 60; d++) {
+					mins.push(forMatNum(d));
+				};
+				this.data.days 	  = dates;
+				this.data.minutes = mins;
+				this.data.hours   = hours;
+			},
 			bindChange(val) {
 				let arr = val.detail.value;
 				let year = '',
@@ -185,14 +217,15 @@
 						day = this.data.days[arr[2]];
 						hour = this.data.hours[arr[3]];
 						minute = this.data.minutes[arr[4]];
-						if (year != checkArr[0]) {
-							days = initDays(year, month);
-							this.data.days = days;
-						}
-						if (month != checkArr[1]) {
-							days = initDays(year, month);
-							this.data.days = days;
-						}
+// 						if (year != checkArr[0]) {
+// 							days = initDays(year, month);
+// 							this.data.days = days;
+// 						}
+// 						if (month != checkArr[1]) {
+// 							days = initDays(year, month);
+// 							this.data.days = days;
+// 						}
+						this.startDateTime(year,month,day,hour)
 						// this.checkArr = [year, month, day, hour, minute];
 						this.checkArr = `${year}/${month}/${day} ${hour}:${minute}`
 						break;
@@ -228,7 +261,7 @@
 				let mode = this.mode;
 				let year, month, day, hour, minute, province, city, area;
 				if (mode != 'region') {
-					data = initPicker(this.startYear, this.endYear, this.mode);
+					data = initPicker(this.startYear, this.endYear, this.mode,1,this.defaultVal);
 				} else {
 					data = {
 						provinces: provinces,

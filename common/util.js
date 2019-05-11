@@ -11,11 +11,11 @@ function initDays(year, month) {
 	return dates;
 }
 
-function initPicker(start, end, mode = "date", step = 1) {
+function initPicker(start, end, mode = "date", step = 1,statDateTime) {
 	let initstartDate = new Date(start);
 	let endDate = new Date(end);
 	let startYear = initstartDate.getFullYear();
-	let startMonth = initstartDate.getMonth();
+	let startMonth = statDateTime[1] + 1 || 1;
 	let endYear = endDate.getFullYear();
 	let years = [],
 		months = [],
@@ -26,7 +26,7 @@ function initPicker(start, end, mode = "date", step = 1) {
 	for (let s = startYear; s <= endYear; s++) {
 		years.push(s + '');
 	};
-	for (let m = 1; m <= 12; m++) {
+	for (let m = startMonth; m <= 12; m++) {
 		months.push(forMatNum(m));
 	};
 	for (let d = 1; d <= totalDays; d++) {
@@ -141,5 +141,6 @@ var dateUtils = {
 export {
 	initDays,
 	initPicker,
-	dateUtils
+	dateUtils,
+	forMatNum
 }
