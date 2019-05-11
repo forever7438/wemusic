@@ -213,8 +213,8 @@ view {
 		align-items: center;
 		justify-content: center;
 		position: absolute;
-		top: 10upx;
-		left: 10upx;
+		top: 20upx;
+		left: 20upx;
 		width: 64upx;
 		height: 64upx;
 		border-radius: 50%;
