@@ -104,24 +104,25 @@
 			},
 			pay(classId) {
 				let data = {
-					class_list_id:this.request.class_list_id.join(','),
-					teacher_id:this.request.teacher_id,
-					music_sun_id:this.request.music_sun_id,
-					people_num:this.request.people_num,
-					coupon_id:this.request.coupon_id,
+					class_list_id: this.request.class_list_id.join(','),
+					teacher_id: this.request.teacher_id,
+					music_sun_id: this.request.music_sun_id,
+					people_num: this.request.people_num,
+					coupon_id: this.request.coupon_id
+					// invite: ''
 				}
 				this.ajax({
 					url: 'userorder/add_order',
 					data: data,
 					success: res => {
-						console.log(res)
 						if (res.data.body === 'success') {
 							uni.showToast({
 								title: 'Success',
 								icon: 'none'
 							});
 							uni.redirectTo({
-								url: '/pages/registrationSuccess/registrationSuccess?way=' + this.resultway + '&classId=' + classId +
+								url: '/pages/registrationSuccess/registrationSuccess?way=' + this.resultway + '&code=' + res.data.data +
+									'&classId=' + classId +
 									'&teacherNmae=' + ''
 							});
 						}
