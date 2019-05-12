@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view v-if="show">
 		<lessonHead headType="lessonDetail" :star="Number(courseInfo.star)" :title="courseInfo.name" :mixTime="courseInfo.mix_time_type"
 		 :maxTime="courseInfo.max_time_type" :content="courseInfo.content || $t('index').NoIntroduction"></lessonHead>
 		<teacherList :listInfo="listInfo" :selectFlag="true" :title="$t('index').Choose_teacher" lessonType="lessonCopy"></teacherList>
@@ -24,7 +24,8 @@
 				coupomList: [],
 				classId: 0,
 				coupomTitle: '',
-				invite: ''
+				invite: '',
+				show:false
 			}
 		},
 		components: {
@@ -34,6 +35,9 @@
 			selectTime
 		},
 		onLoad(obj) {
+			uni.showLoading({
+				title: ''
+			});
 			this.invite = obj.code
 			this.ajax({
 				url: 'userorder/add_time',
@@ -41,7 +45,9 @@
 					invite: obj.code
 				},
 				success: res => {
-					if (res.data.body === 'success') {
+					if (res.data.data.is_invite === 1) {
+						this.show = true
+						uni.hideLoading();
 						this.courseInfo = res.data.data.class_info
 						let dateList = res.data.data.list
 						let center = {};

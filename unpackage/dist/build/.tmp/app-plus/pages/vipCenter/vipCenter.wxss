@@ -1,10 +1,10 @@
-.vip_center_content .vip_center_message.data-v-00e4e44c {
+.vip_center_content .vip_center_message.data-v-11cb86cb {
   width: auto;
   height: 176rpx;
   margin-bottom: 148rpx;
   background-color: #434445ff;
 }
-.vip_center_content .vip_center_message .vip_center_info.data-v-00e4e44c {
+.vip_center_content .vip_center_message .vip_center_info.data-v-11cb86cb {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,48 +22,48 @@
   height: 292rpx;
   border-radius: 18rpx;
 }
-.vip_center_content .vip_center_message .vip_center_info .vip_name.data-v-00e4e44c {
+.vip_center_content .vip_center_message .vip_center_info .vip_name.data-v-11cb86cb {
   font-size: 48rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   color: #ffe6be;
   text-shadow: 0rpx 2rpx 2rpx #8d6933;
 }
-.vip_center_content .vip_center_message .vip_center_info ._div.data-v-00e4e44c {
+.vip_center_content .vip_center_message .vip_center_info ._div.data-v-11cb86cb {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin-top: 40rpx;
 }
-.vip_center_content .vip_center_message .vip_center_info ._div ._span.data-v-00e4e44c:nth-of-type(1) {
+.vip_center_content .vip_center_message .vip_center_info ._div ._span.data-v-11cb86cb:nth-of-type(1) {
   margin-right: 114rpx;
 }
-.vip_center_content .vip_center_message .vip_center_info ._div ._span ._p.data-v-00e4e44c {
+.vip_center_content .vip_center_message .vip_center_info ._div ._span ._p.data-v-11cb86cb {
   font-size: 24rpx;
   font-family: PingFangSC-Light;
   font-weight: 300;
   color: #ffe2b6;
 }
-.vip_center_content .vip_center_message .vip_center_info ._div ._span ._s.data-v-00e4e44c {
+.vip_center_content .vip_center_message .vip_center_info ._div ._span ._s.data-v-11cb86cb {
   font-size: 48rpx;
   font-family: DINAlternate-Bold;
   font-weight: 500;
   color: #ffe6be;
   text-shadow: 0rpx 2rpx 2rpx #8d6933;
 }
-.vip_center_content .vip_recharge.data-v-00e4e44c {
+.vip_center_content .vip_recharge.data-v-11cb86cb {
   margin: 20rpx 0;
   padding: 0 30rpx;
 }
-.vip_center_content .vip_recharge ._h3.data-v-00e4e44c {
+.vip_center_content .vip_recharge ._h3.data-v-11cb86cb {
   font-size: 32rpx;
   font-family: PingFangSC-Medium;
   font-weight: 600;
   color: #333333;
   margin-bottom: 20rpx;
 }
-.vip_center_content .vip_recharge ._ul.data-v-00e4e44c {
+.vip_center_content .vip_recharge ._ul.data-v-11cb86cb {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -76,7 +76,7 @@
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
 }
-.vip_center_content .vip_recharge ._ul ._li.data-v-00e4e44c {
+.vip_center_content .vip_recharge ._ul ._li.data-v-11cb86cb {
   position: relative;
   text-align: center;
   width: 210rpx;
@@ -85,28 +85,28 @@
   margin-bottom: 30rpx;
   background: #fff3e1;
 }
-.vip_center_content .vip_recharge ._ul ._li .semicircle.data-v-00e4e44c {
+.vip_center_content .vip_recharge ._ul ._li .semicircle.data-v-11cb86cb {
   position: absolute;
   width: 210rpx;
   height: 46rpx;
   background-color: #ffe6c1;
   border-radius: 0 0 50% 50%;
 }
-.vip_center_content .vip_recharge ._ul ._li .item1.data-v-00e4e44c {
+.vip_center_content .vip_recharge ._ul ._li .item1.data-v-11cb86cb {
   margin: 40rpx 0 15rpx;
   font-size: 28rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;
   color: #8f6c38;
 }
-.vip_center_content .vip_recharge ._ul ._li .item2.data-v-00e4e44c {
+.vip_center_content .vip_recharge ._ul ._li .item2.data-v-11cb86cb {
   position: relative;
   font-size: 50rpx;
   font-family: DINAlternate-Bold;
   font-weight: bold;
   color: #8f6c38;
 }
-.vip_center_content .vip_recharge ._ul ._li .item2.data-v-00e4e44c:before {
+.vip_center_content .vip_recharge ._ul ._li .item2.data-v-11cb86cb:before {
   position: absolute;
   left: 48rpx;
   content: '$';
@@ -117,14 +117,14 @@
   font-weight: 400;
   color: #8f6c38;
 }
-.vip_center_content .vip_recharge ._ul ._li .item3.data-v-00e4e44c {
+.vip_center_content .vip_recharge ._ul ._li .item3.data-v-11cb86cb {
   margin-top: 15rpx;
   font-size: 24rpx;
   font-family: DINAlternate-Bold;
   font-weight: 600;
   color: #c9a166;
 }
-.vip_center_content .vip_recharge .vip_recharge_btn.data-v-00e4e44c {
+.vip_center_content .vip_recharge .vip_recharge_btn.data-v-11cb86cb {
   display: inline-block;
   width: 100%;
   line-height: 88rpx;
@@ -137,11 +137,11 @@
   font-weight: 400;
   margin-top: 20rpx;
 }
-.vip_center_content .vip_record.data-v-00e4e44c {
+.vip_center_content .vip_record.data-v-11cb86cb {
   padding: 0 30rpx;
   width: auto;
 }
-.vip_center_content .vip_record ._li.data-v-00e4e44c {
+.vip_center_content .vip_record ._li.data-v-11cb86cb {
   width: auto;
   height: 104rpx;
   display: -webkit-box;
