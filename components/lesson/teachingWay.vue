@@ -60,13 +60,6 @@
 			},
 			/**添加上课时间*/
 			addClassTime(request) {
-				if (request.start_time < new Date().getTime() / 1000) {
-					uni.showToast({
-						title: '开始时间不得小于当前时间哦',
-						icon: "none"
-					})
-					return
-				}
 				this.ajax({
 					url: 'userorder/add_class',
 					data: request,
