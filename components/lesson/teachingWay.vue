@@ -111,6 +111,8 @@
 				});
 			},
 			changeWay(val) {
+				if(this.dateList.length > 0)
+					return;
 				this.$emit('changeRequest', {
 					key: 'people_num',
 					value: val

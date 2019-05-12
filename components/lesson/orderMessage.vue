@@ -55,7 +55,8 @@
 		},
 		computed: {
 			resultway() {
-				switch (this.request.people_num) {
+				let people_num = Number(this.request.people_num)
+				switch (people_num) {
 					case 0:
 						return this.$t('index').One_on_one;
 						break;

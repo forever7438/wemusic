@@ -41,6 +41,13 @@
 							invite: this.code
 						},
 						success: res => {
+							if(res.data.body == undefined){
+								uni.showToast({
+									title: 'Invitation code expired',
+									icon: "none"
+								});
+								return false
+							}
 							if (res.data.data.is_invite === 1) {
 								uni.navigateTo({
 									url: '/pages/orderInfo/orderInfo?code=' + this.code
