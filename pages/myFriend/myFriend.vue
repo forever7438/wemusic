@@ -1,5 +1,5 @@
 <template>
-	<view class="fridend_content">
+	<view class="fridend_contents">
 		<friendsList :friendsList="friendsList" @forward_praise="forward_praise"></friendsList>
 	</view>
 </template>
@@ -111,7 +111,7 @@
 </script>
 
 <style lang="less">
-	.fridend_content {
+	.fridend_contents {
 		padding: 0 30upx;
 	}
 </style>

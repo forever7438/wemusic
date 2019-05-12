@@ -3,11 +3,11 @@
 		<view class="fridend_content" v-for="(item, index) in friendsList" :key="index">
 			<friendHead :itemHead="item"></friendHead>
 			<friendContent :type="true" :content="item.body" :listId="item.id"></friendContent>
-			<view class="img_list" v-if="Array.isArray(item.video)">
-				<image :src="val || userImage" v-for="(val, index) in item.video" :key="index"></image>
+			<view class="img_lists" v-if="Array.isArray(item.video)">
+				<image class="image" :src="val || userImage" v-for="(val, index) in item.video" :key="index"></image>
 			</view>
-			<view class="img_list" v-else>
-				<video :src="item.video" controls></video>
+			<view class="img_lists" v-else>
+				<video class="video" :src="item.video" controls></video>
 			</view>
 			<friendOperation :message="item.message_num" :is_forward="item.is_forward" :is_praise="item.is_praise" :praise="item.praise_num"
 			 :forward="item.forward_num" :listId="item.id" :index="index" @refreshData="getFriendList" @changeStatus="changeStatus"></friendOperation>
@@ -54,15 +54,16 @@
 		.fridend_content {
 			margin-bottom: 20upx;
 
-			.img_list {
-				image {
+			.img_lists {
+				.image {
 					width: 210upx;
 					height: 210upx;
 					margin: 0 20upx 20upx 0;
 					border-radius: 12upx;
 				}
-				video {
-					width: 690upx;
+
+				.video {
+					width: 100%;
 				}
 			}
 		}
