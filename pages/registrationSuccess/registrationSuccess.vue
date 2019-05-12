@@ -13,7 +13,7 @@
 			</div>
 		</div>
 		<ul>
-			<li>
+			<li v-if="invite">
 				<navigator hover-class="btn-hover" :url="'/pages/myCode/myCode?code='+code">{{ $t('index').viewInvitationCode }}</navigator>
 			</li>
 			<li @tap="goIndex">{{ $t('index').backHome }}</li>
@@ -33,7 +33,8 @@
 				way: '',
 				code: '',
 				teacherNmae: '',
-				courseInfo: {}
+				courseInfo: {},
+				invite:true
 			};
 		},
 		onShow() {
@@ -52,6 +53,9 @@
 			this.way = obj.way;
 			this.code = obj.code;
 			this.teacherNmae = obj.teacherNmae;
+			if(obj.wayNum == 0 ||  obj.invite){
+				this.invite = false 
+			}
 		},
 		methods: {
 			goIndex() {

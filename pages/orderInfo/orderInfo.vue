@@ -65,7 +65,8 @@
 						this.request = {
 							courseLen: dateList.length,
 							people_num: res.data.data.people_num,
-							price: price
+							price: price,
+							teacherName:res.data.data.teacher_info.name
 						}
 					} else {
 						uni.showToast({

@@ -128,6 +128,7 @@
 					url: 'userorder/add_order',
 					data: data,
 					success: res => {
+						console.log(this.request)
 						if (res.data.body === 'success') {
 							uni.showToast({
 								title: 'Success',
@@ -136,7 +137,14 @@
 							uni.redirectTo({
 								url: '/pages/registrationSuccess/registrationSuccess?way=' + this.resultway + '&code=' + res.data.data +
 									'&classId=' + classId +
-									'&teacherNmae=' + this.request.teacherName
+									'&teacherNmae=' + this.request.teacherName +
+									'&invite='+this.invite +
+									'&wayNum='+this.request.people_num
+							});
+						}else{
+							uni.showToast({
+								title: res.data.msg,
+								icon: 'none'
 							});
 						}
 					}
