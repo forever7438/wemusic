@@ -2,7 +2,7 @@
 	<view class="my_code">
 		<view class="code_option">
 			<input type="text" disabled="disabled" v-model="code" />
-			<text>复制</text>
+			<text @tap="setCode">复制</text>
 		</view>
 		<!-- <text class="send_btn">发送邀请</text> -->
 		<h4>邀请步骤</h4>
@@ -33,6 +33,14 @@
 				uni.setNavigationBarTitle({
 					title: '我的邀请码'
 				});
+			}
+		},
+		methods: {
+			//复制
+			setCode() {
+				uni.setClipboardData({
+					data: this.code
+				})
 			}
 		}
 	};

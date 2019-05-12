@@ -2,7 +2,7 @@
 	<view class="course_invitation">
 		<view class="invitation_content">
 			<text>{{ $t('index').InputInvitationCode }}</text>
-			<input type="text" v-model="code" />
+			<input type="text" v-model="code" @longpress="getCode" />
 		</view>
 		<text class="tips">{{ $t('index').codeContent }}</text>
 		<button hover-class="btn-hover" @tap="toPay()">{{ $t('index').determine }}</button>
@@ -28,20 +28,27 @@
 			}
 		},
 		methods: {
+			getCode() {
+				uni.getClipboardData({
+					success: res => {
+						this.code = res.data
+					}
+				})
+			},
 			toPay() {
 				if (!this.code) {
 					uni.showToast({
 						title: this.$t('index').invitation_code,
 						icon: "none"
 					})
-				}else{
+				} else {
 					this.ajax({
 						url: 'userorder/add_time',
 						data: {
 							invite: this.code
 						},
 						success: res => {
-							if(res.data.body == undefined){
+							if (res.data.body == undefined) {
 								uni.showToast({
 									title: 'Invitation code expired',
 									icon: "none"

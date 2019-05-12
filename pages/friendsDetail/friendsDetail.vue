@@ -1,6 +1,7 @@
 <template>
 	<view class="content">
-		<image :src="friendDetail.video[0]"></image>
+		<image v-if="Array.isArray(friendDetail.video)" :src="friendDetail.video[0]"></image>
+		<video v-else :src="friendDetail.video" controls></video>
 		<view class="parents">
 			<!-- <friendHead :itemHead="friendDetail"></friendHead> -->
 			<friendContent :type="false" :content="friendDetail.body"></friendContent>
@@ -86,7 +87,11 @@
 					},
 					success: res => {
 						if (res.data.body === 'success') {
-							res.data.data.video = res.data.data.video.split(',');
+							if (res.data.data.video.indexOf('mp4') != -1) {
+								res.data.data.video = res.data.data.video
+							} else {
+								res.data.data.video = res.data.data.video.split(',');
+							}
 							this.friendDetail = res.data.data;
 							if (res.data.data.list.length === 0) {
 								this.isEnd = true;
@@ -113,6 +118,12 @@
 <style lang="less">
 	.content {
 		image {
+			width: 100%;
+			height: 410upx;
+			// border-radius: 12upx;
+		}
+
+		video {
 			width: 100%;
 			height: 410upx;
 			// border-radius: 12upx;

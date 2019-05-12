@@ -3,68 +3,68 @@
 		<view class="fridend_content" v-for="(item, index) in friendsList" :key="index">
 			<friendHead :itemHead="item"></friendHead>
 			<friendContent :type="true" :content="item.body" :listId="item.id"></friendContent>
-			<view class="img_list"><image :src="val || userImage" v-for="(val, index) in item.video" :key="index"></image></view>
-			<friendOperation
-				:message="item.message_num"
-				:is_forward="item.is_forward"
-				:is_praise="item.is_praise"
-				:praise="item.praise_num"
-				:forward="item.forward_num"
-				:listId="item.id"
-				:index="index"
-				@refreshData="getFriendList"
-				@changeStatus="changeStatus"
-			></friendOperation>
+			<view class="img_list" v-if="Array.isArray(item.video)">
+				<image :src="val || userImage" v-for="(val, index) in item.video" :key="index"></image>
+			</view>
+			<view class="img_list" v-else>
+				<video :src="item.video" controls></video>
+			</view>
+			<friendOperation :message="item.message_num" :is_forward="item.is_forward" :is_praise="item.is_praise" :praise="item.praise_num"
+			 :forward="item.forward_num" :listId="item.id" :index="index" @refreshData="getFriendList" @changeStatus="changeStatus"></friendOperation>
 		</view>
 	</view>
 </template>
 
 <script>
-import friendHead from '../friendsAssembly/friendHead.vue';
-import friendContent from '../friendsAssembly/friendContent.vue';
-import friendOperation from '../friendsAssembly/friendOperation.vue';
-export default {
-	components: {
-		friendHead,
-		friendContent,
-		friendOperation
-	},
-	props: {
-		friendsList: Array
-	},
-	data() {
-		return {
-			userImage: '../../static/img/lf.jpg'
-		};
-	},
-	methods: {
-		//获取朋友圈列表
-		getFriendList() {
-			getCurrentPages().map(res => {
-				if (res.route == 'pages/circleFriends/circleFriends' || res.route == 'pages/myFriend/myFriend') {
-					res.getFriendList(0);
-				}
-			});
+	import friendHead from '../friendsAssembly/friendHead.vue';
+	import friendContent from '../friendsAssembly/friendContent.vue';
+	import friendOperation from '../friendsAssembly/friendOperation.vue';
+	export default {
+		components: {
+			friendHead,
+			friendContent,
+			friendOperation
 		},
-		changeStatus(data) {
-			this.$emit('forward_praise', data);
+		props: {
+			friendsList: Array
+		},
+		data() {
+			return {
+				userImage: '../../static/img/lf.jpg'
+			};
+		},
+		methods: {
+			//获取朋友圈列表
+			getFriendList() {
+				getCurrentPages().map(res => {
+					if (res.route == 'pages/circleFriends/circleFriends' || res.route == 'pages/myFriend/myFriend') {
+						res.getFriendList(0);
+					}
+				});
+			},
+			changeStatus(data) {
+				this.$emit('forward_praise', data);
+			}
 		}
-	}
-};
+	};
 </script>
 
 <style lang="less">
-.friend_list {
-	.fridend_content {
-		margin-bottom: 20upx;
-		.img_list {
-			image {
-				width: 210upx;
-				height: 210upx;
-				margin: 0 20upx 20upx 0;
-				border-radius: 12upx;
+	.friend_list {
+		.fridend_content {
+			margin-bottom: 20upx;
+
+			.img_list {
+				image {
+					width: 210upx;
+					height: 210upx;
+					margin: 0 20upx 20upx 0;
+					border-radius: 12upx;
+				}
+				video {
+					width: 690upx;
+				}
 			}
 		}
 	}
-}
 </style>

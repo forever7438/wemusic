@@ -3,7 +3,8 @@
 		<progress-bar v-if="show" :progress="progress"></progress-bar>
 		<textarea placeholder="分享学习心得…" v-model="body" />
 		<view v-if="videos.length" class="choose_images"><image :src="item" v-for="(item, index) in videos" :key="index"></image></view>
-		<view v-else class="choose_image" @tap="chooseImage">照片/拍摄</view>
+		<view v-if="files" class="choose_images"><video :src="files"></video></view>
+		<view v-else class="choose_image" @tap="chooseImage" @longtap="chooseVideo">照片/拍摄</view>
 	</view>
 </template>
 
@@ -19,9 +20,12 @@ export default {
 		return {
 			video: '',
 			videos: [],
+			file:'',
+			files:'',
 			body: '',
 			show: false,
-			progress: 0
+			progress: 0,
+			isVideo:false,
 		};
 	},
 	onShow() {
@@ -40,6 +44,7 @@ export default {
 	},
 	methods: {
 		chooseImage: e => {
+			_this.isVideo=false;
 			_this.videos = [];
 			uni.chooseImage({
 				count: 9,
@@ -54,7 +59,21 @@ export default {
 				}
 			});
 		},
-		uploadFile(file, index) {
+		chooseVideo: e => {
+			_this.isVideo=true;
+			_this.files = '';
+			uni.chooseVideo({
+				count: 1,
+				success: res => {
+					_this.files = res.tempFilePath;
+					_this.uploadFile(res.tempFilePath);
+				},
+				fail: err => {
+					console.log('chooseImage fail', err);
+				}
+			});
+		},
+		uploadFile(file) {
 			_this.video = [];
 			uni.uploadFile({
 				url: ApiUrl + 'index/photo_add',
@@ -67,7 +86,12 @@ export default {
 				success: res => {
 					const info = JSON.parse(res.data);
 					if (info.data === 'success') {
-						_this.video.push(info.body.photo);
+						if(!this.isVideo){
+							_this.video.push(info.body.photo);
+						}
+						else {
+							this.file = info.body.photo;
+						}
 					}
 				}
 			});
@@ -92,7 +116,7 @@ export default {
 			url: 'friend/add_friend',
 			data: {
 				body: this.body,
-				video: this.video.toString()
+				video: this.video.toString() || this.file
 			},
 			success: res => {
 				if (res.data.body === 'success') {
@@ -144,6 +168,10 @@ view {
 			height: 160upx;
 			margin-right: 10upx;
 			margin-bottom: 10upx;
+		}
+		video {
+			width: 280upx;
+			height: 160upx;
 		}
 	}
 }
