@@ -1,47 +1,33 @@
 <template>
 	<view>
-		<lessonHead headType="lessonDetail"
-					:star="Number(courseInfo.star)"
-					:title="courseInfo.name"
-					:mixTime="courseInfo.mix_time_type"
-					:maxTime="courseInfo.max_time_type"
-					:content="courseInfo.content || $t('index').NoIntroduction"></lessonHead>
-		<teacherList :listInfo="listInfo" 
-					 :selectFlag="true"
-					 :title="$t('index').Choose_teacher" 
-					 lessonType="lessonCopy"></teacherList>
-		<selectTime :flag="false" 
-					:addshow="false"
-					:year="(new Date()).getFullYear()" 
-					:dateList="dateList"></selectTime>
-		<orderMessage :request="request" 
-					  :invite="invite"
-					  :classId="Number(classId)" 
-					  :coupomTitle="coupomTitle"
-					  :coupomList="coupomList" 
-					  @changeRequest="changeRequest"></orderMessage>
+		<lessonHead headType="lessonDetail" :star="Number(courseInfo.star)" :title="courseInfo.name" :mixTime="courseInfo.mix_time_type"
+		 :maxTime="courseInfo.max_time_type" :content="courseInfo.content || $t('index').NoIntroduction"></lessonHead>
+		<teacherList :listInfo="listInfo" :selectFlag="true" :title="$t('index').Choose_teacher" lessonType="lessonCopy"></teacherList>
+		<selectTime :flag="false" :addshow="false" :year="(new Date()).getFullYear()" :dateList="dateList"></selectTime>
+		<orderMessage :request="request" :invite="invite" :classId="Number(classId)" :coupomTitle="coupomTitle" :coupomList="coupomList"
+		 @changeRequest="changeRequest"></orderMessage>
 	</view>
 </template>
 
 <script>
-	import lessonHead   from '../../components/lesson/lessonHead.vue';
+	import lessonHead from '../../components/lesson/lessonHead.vue';
 	import orderMessage from '../../components/lesson/orderMessage.vue';
-	import teacherList  from '../../components/item/teacherList.vue';
-	import selectTime   from '../../components/item/selectTime.vue';
+	import teacherList from '../../components/item/teacherList.vue';
+	import selectTime from '../../components/item/selectTime.vue';
 	export default {
 		data() {
 			return {
-				courseInfo:{},
-				listInfo:[],
-				dateList:[],
-				request:{},
-				coupomList:[],
-				classId:0,
-				coupomTitle:'',
-				invite:''
+				courseInfo: {},
+				listInfo: [],
+				dateList: [],
+				request: {},
+				coupomList: [],
+				classId: 0,
+				coupomTitle: '',
+				invite: ''
 			}
 		},
-		components:{
+		components: {
 			lessonHead,
 			orderMessage,
 			teacherList,
@@ -71,11 +57,11 @@
 						this.getCoupomList(ids)
 						this.listInfo.push(res.data.data.teacher_info)
 						this.request = {
-							courseLen:dateList.length,
-							people_num:res.data.data.people_num,
-							price:price
+							courseLen: dateList.length,
+							people_num: res.data.data.people_num,
+							price: price
 						}
-					}else{
+					} else {
 						uni.showToast({
 							title: this.$t('index').Invitation_Code_Error,
 							icon: "none"

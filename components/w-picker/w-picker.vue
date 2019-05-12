@@ -72,6 +72,7 @@
 	export default {
 		data() {
 			return {
+				defaultVal:[],
 				result: [],
 				data: {},
 				checkArr: [],
@@ -110,13 +111,13 @@
 				default () {
 					return new Date().getFullYear() + '';
 				}
-			},
-			defaultVal: {
-				type: Array,
-				default () {
-					return [0, 0, 0, 0, 0];
-				}
 			}
+			// defaultVal: {
+			// 	type: Array,
+			// 	default () {
+			// 		return [0, 0, 0, 0, 0];
+			// 	}
+			// }
 		},
 		watch: {
 			mode() {
@@ -124,7 +125,9 @@
 			}
 		},
 		created() {
-			// console.log(this.defaultVal)
+			let myDate = new Date();
+			let container = [0, myDate.getMonth(), myDate.getDate(), myDate.getHours(), myDate.getMinutes()];
+			this.defaultVal = container;
 		},
 		methods: {
 			maskTap() {

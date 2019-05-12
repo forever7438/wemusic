@@ -10,7 +10,7 @@
 					</span>
 					<span>
 						<p>{{ $t('index').My_points }}</p>
-						<s>{{ 0 }}</s>
+						<s>{{ userInfo.integral }}</s>
 					</span>
 				</div>
 			</div>
