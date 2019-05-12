@@ -108,13 +108,19 @@
 			},
 			pay(classId) {
 				let data = {}
-				data = {
-					class_list_id: this.request.class_list_id.join(','),
-					teacher_id: this.request.teacher_id,
-					music_sun_id: this.request.music_sun_id,
-					people_num: this.request.people_num,
-					coupon_id: this.request.coupon_id,
-					invite: this.invite || ''
+				if(this.invite){
+					data = {
+						coupon_id: this.request.coupon_id,
+						invite: this.invite
+					}
+				}else{
+					data = {
+						class_list_id: this.request.class_list_id.join(','),
+						teacher_id: this.request.teacher_id,
+						music_sun_id: this.request.music_sun_id,
+						people_num: this.request.people_num,
+						coupon_id: this.request.coupon_id,
+					}
 				}
 
 				this.ajax({
