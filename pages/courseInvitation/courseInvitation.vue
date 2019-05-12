@@ -35,8 +35,23 @@
 						icon: "none"
 					})
 				}else{
-					uni.navigateTo({
-						url: '/pages/orderInfo/orderInfo?code=' + this.code
+					this.ajax({
+						url: 'userorder/add_time',
+						data: {
+							invite: this.code
+						},
+						success: res => {
+							if (res.data.data.is_invite === 1) {
+								uni.navigateTo({
+									url: '/pages/orderInfo/orderInfo?code=' + this.code
+								});
+							} else {
+								uni.showToast({
+									title: this.$t('index').Invitation_Code_Error,
+									icon: "none"
+								});
+							}
+						}
 					});
 				}
 			}

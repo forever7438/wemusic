@@ -60,7 +60,7 @@
 			},
 			/**添加上课时间*/
 			addClassTime(request) {
-				if (request.start_time < new Date().getTime() / 1000) {
+				if ((request.start_time + 300) < new Date().getTime() / 1000) {
 					uni.showToast({
 						title: '开始时间不得小于当前时间哦',
 						icon: "none"
