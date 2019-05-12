@@ -215,15 +215,16 @@ view {
 		align-items: center;
 		justify-content: center;
 		position: absolute;
-		top: 20upx;
+		top: 60upx;
 		left: 20upx;
 		width: 64upx;
 		height: 64upx;
 		border-radius: 50%;
 		background-color: rgba(0, 0, 0, 0.5);
 		image {
-			width: 50upx;
-			height: 50upx;
+			width: 40upx;
+			height: 40upx;
+			margin-left: 10upx;
 		}
 	}
 	.sign_up {
