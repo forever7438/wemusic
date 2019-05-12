@@ -168,10 +168,10 @@
 				for (let d = startd; d <= totalDays; d++) {
 					dates.push(forMatNum(d));
 				};
-				for (let d = starth; d <= 24; d++) {
+				for (let d = starth; d < 24; d++) {
 					hours.push(forMatNum(d));
 				};
-				for (let d = startm; d <= 60; d++) {
+				for (let d = startm; d < 60; d++) {
 					mins.push(forMatNum(d));
 				};
 				this.data.days 	  = dates;
