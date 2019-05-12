@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "教师详情",
+  "titleNView": {
+    "type": "transparent"
+  },
+  "usingComponents": {
+    "teacher-head": "/components/lesson/teacherHead",
+    "lesson-list": "/components/item/lessonList",
+    "lesson-comment": "/components/lesson/lessonComment",
+    "lesson-science": "/components/lesson/lessonScience"
+  }
+}

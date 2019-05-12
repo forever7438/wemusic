@@ -1,0 +1,1 @@
+<view class="messgae_content _div" bind:__l="__l"><message-list messageList="{{messageList}}"></message-list></view>

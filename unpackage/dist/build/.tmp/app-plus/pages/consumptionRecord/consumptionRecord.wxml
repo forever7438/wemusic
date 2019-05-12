@@ -1,0 +1,1 @@
+<view bind:__l="__l"><recharge-list moneyList="{{consumptionList}}" type="consumption"></recharge-list></view>

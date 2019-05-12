@@ -1,4 +1,4 @@
-.class ._ul ._li.data-v-7403c839 {
+.class ._ul ._li.data-v-3c0beb45 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15,34 +15,34 @@
           box-shadow: 0rpx 8rpx 20rpx 4rpx rgba(179, 188, 198, 0.2);
   border-radius: 16rpx;
 }
-.class ._ul ._li.data-v-7403c839:last-child {
+.class ._ul ._li.data-v-3c0beb45:last-child {
   margin-bottom: 80rpx;
 }
-.class ._ul ._li .class_title.data-v-7403c839 {
+.class ._ul ._li .class_title.data-v-3c0beb45 {
   padding-left: 20rpx;
   padding-right: 80rpx;
 }
-.class ._ul ._li .class_title ._h3.data-v-7403c839 {
+.class ._ul ._li .class_title ._h3.data-v-3c0beb45 {
   text-align: left;
   font-size: 40rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   color: #333333;
 }
-.class ._ul ._li .class_title ._p.data-v-7403c839 {
+.class ._ul ._li .class_title ._p.data-v-3c0beb45 {
   margin: 20rpx 0 36rpx 0;
   font-size: 32rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   color: #333333;
 }
-.class ._ul ._li .class_title ._s.data-v-7403c839 {
+.class ._ul ._li .class_title ._s.data-v-3c0beb45 {
   font-size: 28rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;
   color: #999999;
 }
-.class ._ul ._li .class_operation.data-v-7403c839 {
+.class ._ul ._li .class_operation.data-v-3c0beb45 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -58,7 +58,7 @@
           justify-content: space-between;
   padding-left: 30rpx;
 }
-.class ._ul ._li .class_operation ._span.data-v-7403c839 {
+.class ._ul ._li .class_operation ._span.data-v-3c0beb45 {
   font-size: 28rpx;
   padding: 20rpx 40rpx;
   border-radius: 8rpx;
@@ -68,13 +68,13 @@
   color: #333333;
   text-align: center;
 }
-.class ._ul ._li .class_operation ._span.data-v-7403c839:nth-of-type(1) {
+.class ._ul ._li .class_operation ._span.data-v-3c0beb45:nth-of-type(1) {
   margin-bottom: 18rpx;
 }
-.class ._ul ._li .class_operation ._span.data-v-7403c839:nth-of-type(2) {
+.class ._ul ._li .class_operation ._span.data-v-3c0beb45:nth-of-type(2) {
   margin-top: 18rpx;
 }
-.class ._ul ._li .class_adjustment.data-v-7403c839 {
+.class ._ul ._li .class_adjustment.data-v-3c0beb45 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -98,7 +98,7 @@
   margin-right: 20rpx;
   margin-left: 10rpx;
 }
-.class .no_content.data-v-7403c839 {
+.class .no_content.data-v-3c0beb45 {
   height: 380rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -118,11 +118,11 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
-.class .no_content image.data-v-7403c839 {
+.class .no_content image.data-v-3c0beb45 {
   width: 216rpx;
   height: 244rpx;
 }
-.class .no_content text.data-v-7403c839 {
+.class .no_content text.data-v-3c0beb45 {
   font-size: 32rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;

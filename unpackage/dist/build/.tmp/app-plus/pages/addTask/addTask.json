@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "提交作业",
+  "titleNView": {
+    "buttons": [
+      {
+        "text": "提交",
+        "fontSize": "16px",
+        "fontWeight": "bold"
+      }
+    ]
+  },
+  "usingComponents": {
+    "progress-bar": "/components/progress"
+  }
+}

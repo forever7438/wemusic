@@ -1,0 +1,101 @@
+.comment_list {
+  margin-bottom: 70rpx;
+}
+.comment_list ._h3 {
+  text-align: left;
+  font-size: 48rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #222222;
+  margin: 10rpx 0;
+}
+.comment_list ._h3 ._span {
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #959595;
+}
+.comment_list ._ul {
+  padding-left: 0;
+}
+.comment_list ._ul ._li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20rpx;
+}
+.comment_list ._ul ._li .comment_title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100vw - 60rpx);
+}
+.comment_list ._ul ._li .comment_title image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+.comment_list ._ul ._li .comment_title ._span .comment_name {
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #666666;
+}
+.comment_list ._ul ._li .comment_title ._span .comment_time {
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #999999;
+}
+.comment_list ._ul ._li .comment_content {
+  width: calc(100vw - 60rpx);
+  margin-left: 180rpx;
+  text-align: left;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+}
+.comment_list .no_content {
+  height: 600rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.comment_list .no_content image {
+  width: 216rpx;
+  height: 244rpx;
+}
+.comment_list .no_content text {
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+}
+

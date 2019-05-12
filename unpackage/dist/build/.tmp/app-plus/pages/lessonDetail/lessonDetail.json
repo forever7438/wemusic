@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "课程详情",
+  "enablePullDownRefresh": true,
+  "titleNView": {
+    "type": "transparent"
+  },
+  "usingComponents": {
+    "lesson-head": "/components/lesson/lessonHead",
+    "lesson-teacher": "/components/lesson/lessonTeacher",
+    "lesson-desc": "/components/lesson/lessonDesc",
+    "lesson-comment": "/components/lesson/lessonComment",
+    "lesson-science": "/components/lesson/lessonScience"
+  }
+}

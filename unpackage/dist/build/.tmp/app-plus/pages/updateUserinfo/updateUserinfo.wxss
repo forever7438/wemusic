@@ -1,0 +1,81 @@
+.update_userinfo {
+  padding: 0 0 0 25rpx;
+}
+.update_userinfo .new_name {
+  margin: 0 40rpx;
+  padding-left: 10rpx;
+  line-height: 80rpx;
+}
+.update_userinfo ._ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 0;
+}
+.update_userinfo ._ul ._li {
+  width: 100%;
+  height: 120rpx;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+  border-bottom: 2rpx solid #e7e8ea;
+  padding-right: 30rpx;
+}
+.update_userinfo ._ul ._li .choose_date {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.update_userinfo ._ul ._li:nth-of-type(1) view image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.update_userinfo ._ul ._li:last-of-type {
+  border-bottom: none;
+}
+.update_userinfo ._ul ._li ._s {
+  text-decoration: none;
+  margin-left: 20rpx;
+}
+.update_userinfo .login_out {
+  text-align: center;
+  margin-top: 40rpx;
+  display: inline-block;
+  width: 100%;
+  line-height: 80rpx;
+  border-radius: 12rpx;
+  border: 2rpx solid #999999;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+}
+

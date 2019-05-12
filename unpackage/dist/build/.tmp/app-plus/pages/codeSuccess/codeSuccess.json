@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "打卡",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#333333",
+  "usingComponents": {
+    "comment-star-class": "/components/comment/commentStarClass",
+    "startclass": "/components/starclass"
+  }
+}

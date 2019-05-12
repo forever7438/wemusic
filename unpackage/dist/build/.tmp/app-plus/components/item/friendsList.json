@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "friend-head": "/components/friendsAssembly/friendHead",
+    "friend-content": "/components/friendsAssembly/friendContent",
+    "friend-operation": "/components/friendsAssembly/friendOperation"
+  },
+  "component": true
+}

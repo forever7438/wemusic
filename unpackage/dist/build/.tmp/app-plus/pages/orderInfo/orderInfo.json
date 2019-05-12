@@ -1,0 +1,11 @@
+{
+  "titleNView": {
+    "type": "transparent"
+  },
+  "usingComponents": {
+    "lesson-head": "/components/lesson/lessonHead",
+    "order-message": "/components/lesson/orderMessage",
+    "teacher-list": "/components/item/teacherList",
+    "select-time": "/components/item/selectTime"
+  }
+}

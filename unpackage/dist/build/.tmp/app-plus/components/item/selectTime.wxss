@@ -1,15 +1,15 @@
-._ul ._li.active.data-v-62ef7196 {
+._ul ._li.active.data-v-26203ae9 {
   border: 2rpx solid #fad42a;
 }
-._ul ._li.add_time.data-v-62ef7196 {
+._ul ._li.add_time.data-v-26203ae9 {
   text-align: center;
   padding: 80rpx 0;
 }
-._ul ._li.add_time ._img.data-v-62ef7196 {
+._ul ._li.add_time ._img.data-v-26203ae9 {
   width: 72rpx;
   height: 72rpx;
 }
-._ul ._li.data-v-62ef7196 {
+._ul ._li.data-v-26203ae9 {
   text-align: left;
   display: block;
   height: 232rpx;
@@ -20,29 +20,29 @@
   margin: 30rpx;
   padding: 30rpx;
 }
-._ul ._li .date.data-v-62ef7196 {
+._ul ._li .date.data-v-26203ae9 {
   font-size: 40rpx;
   font-weight: 500;
   color: #333333;
 }
-._ul ._li .price.data-v-62ef7196 {
+._ul ._li .price.data-v-26203ae9 {
   float: right;
   color: #fad42a;
   font-size: 60rpx;
 }
-._ul ._li .price ._span.data-v-62ef7196 {
+._ul ._li .price ._span.data-v-26203ae9 {
   font-size: 30rpx;
 }
-._ul ._li .time.data-v-62ef7196 {
+._ul ._li .time.data-v-26203ae9 {
   font-size: 32rpx;
   font-weight: 500;
   color: #333333;
   margin: 12rpx 0 30rpx 0;
 }
-._ul ._li .d.data-v-62ef7196 {
+._ul ._li .d.data-v-26203ae9 {
   font-size: 28rpx;
 }
-._ul ._li .duration.data-v-62ef7196 {
+._ul ._li .duration.data-v-26203ae9 {
   font-size: 28rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;

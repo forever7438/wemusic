@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的课程",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "teacher-clesson-list": "/components/item/teacherClessonList",
+    "lesson-list": "/components/item/lessonList"
+  }
+}

@@ -1,0 +1,72 @@
+input {
+  font-size: 24rpx;
+}
+.change_phone {
+  padding: 0 30rpx;
+}
+.change_phone ._ul {
+  margin-bottom: 40rpx;
+  padding-left: 0;
+}
+.change_phone ._ul ._li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2rpx solid #ddd;
+  padding: 30rpx 0;
+}
+.change_phone ._ul ._li .btn_code {
+  text-align: center;
+  width: 204rpx;
+  background-color: #fad42a;
+  font-size: 28rpx;
+  font-weight: 600;
+  padding: 8rpx;
+  color: #fff;
+  border-radius: 8rpx;
+}
+.change_phone ._ul ._li ._span {
+  display: inline-block;
+  width: 200rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.change_phone ._ul ._li input {
+  border: none;
+  margin-bottom: 0;
+}
+.change_phone ._s {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32rpx;
+  color: #aeaeae;
+  text-align: left;
+}
+.change_phone .btn {
+  margin-top: 100rpx;
+  height: 80rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 8rpx;
+  border: 2rpx solid #ddd;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 600;
+  color: #333333;
+}
+

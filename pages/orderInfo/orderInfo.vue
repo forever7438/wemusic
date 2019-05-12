@@ -65,7 +65,14 @@
 						uni.showToast({
 							title: this.$t('index').Invitation_Code_Error,
 							icon: "none"
-						})
+						});
+						setTimeout(function(){
+							uni.navigateBack({
+								delta: 1,
+								animationType: 'pop-out',
+								animationDuration: 200
+							});
+						},1500)
 					}
 				}
 			});

@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/login/login",
     "pages/tabbar/tabbar-1/tabbar-1",
+    "pages/login/login",
     "pages/tabbar/tabbar-2/tabbar-2",
     "pages/tabbar/tabbar-5/tabbar-5",
     "pages/circleFriends/circleFriends",
@@ -46,7 +46,8 @@
     "pages/addTask/addTask",
     "pages/forgetPass/forgetPass",
     "pages/code/code",
-    "pages/registrationSuccess/registrationSuccess"
+    "pages/registrationSuccess/registrationSuccess",
+    "pages/orderInfo/orderInfo"
   ],
   "subPackages": [],
   "window": {

@@ -1,0 +1,44 @@
+.course_invitation {
+  padding: 0 30rpx;
+}
+.course_invitation .invitation_content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 78rpx;
+  margin-bottom: 60rpx;
+}
+.course_invitation .invitation_content text {
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+}
+.course_invitation .invitation_content input {
+  width: 376rpx;
+  height: 88rpx;
+  margin-left: 30rpx;
+  padding-left: 10rpx;
+  border: 2rpx solid #333333;
+}
+.course_invitation .tips {
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #666666;
+  line-height: 36rpx;
+}
+.course_invitation button {
+  margin-top: 120rpx;
+  background: #fad42a;
+  color: #333333;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+}
+

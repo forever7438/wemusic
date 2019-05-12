@@ -1,0 +1,161 @@
+.code_success {
+  padding: 64rpx 30rpx 40rpx 30rpx;
+  background-color: #333;
+  height: 100vh;
+}
+.code_success .code_content {
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 12rpx;
+}
+.code_success .code_content image {
+  width: 120rpx;
+  height: 120rpx;
+  margin: 100rpx 288rpx 30rpx;
+}
+.code_success .code_content .code_title {
+  margin: 20rpx 0;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+}
+.code_success .code_content .code_class {
+  font-size: 34rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+}
+.code_success .code_content .code_teacher {
+  margin: 20rpx 220rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+.code_success .code_content .code_teacher text:nth-of-type(1) {
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+}
+.code_success .code_content .code_teacher text:nth-of-type(2) {
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+}
+.code_success .code_content .code_time {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  margin: 0 150rpx;
+}
+.code_success .code_content .code_time text:nth-of-type(1) {
+  width: 112rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
+}
+.code_success .code_content .code_time text:nth-of-type(2) {
+  width: 240rpx;
+  text-align: left;
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+}
+.code_success .code_content .code_message {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  margin: 20rpx 260rpx;
+}
+.code_success .code_content .code_message text:nth-of-type(1) {
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #000000;
+}
+.code_success .code_content .code_message text:nth-of-type(2) {
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 500;
+  color: #000000;
+}
+.code_success .code_content .code_comment {
+  padding: 0 32rpx;
+}
+.code_success .code_content .code_comment ._p {
+  text-align: left;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 20rpx;
+}
+.code_success .code_content .code_comment textarea {
+  text-align: left;
+  width: auto;
+  height: 262rpx;
+  background: #f9f9f9;
+  padding: 20rpx;
+  font-size: 28rpx;
+  font-weight: 400;
+  line-height: 40rpx;
+}
+.code_success .code_content .code_start {
+  text-align: left;
+  padding: 0 32rpx;
+}
+.code_success .code_content .code_btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 32rpx;
+}
+.code_success .code_content .code_btn text {
+  margin: 10rpx 0;
+  line-height: 70rpx;
+  background: #fad42a;
+  border-radius: 16rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333333;
+}
+.code_success .code_content .code_btn text:nth-of-type(2) {
+  background: #ffffff;
+}
+
