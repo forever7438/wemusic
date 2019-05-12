@@ -122,7 +122,9 @@ let enUS = {
 	You_have_forwarded:'You Have Forwarded This Content',
 	Praise_for_success:'Praise For Success',
 	Cancel_points:'Cancel Points',
-	No_more_data:'No More Data'
+	No_more_data:'No More Data',
+	invitation_code:'Please Enter The Invitation Code',
+	Invitation_Code_Error:'Invitation Code Error'
 }
 
 export {

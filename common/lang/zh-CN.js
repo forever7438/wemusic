@@ -122,7 +122,9 @@ let zhCN = {
 	You_have_forwarded:'您已转发过该内容',
 	Praise_for_success:'点赞成功',
 	Cancel_points:'取消点赞',
-	No_more_data:'没有更多数据了'
+	No_more_data:'没有更多数据了',
+	invitation_code:'请输入邀请码',
+	Invitation_Code_Error:'Invitation Code Error'
 }
 
 export {

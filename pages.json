@@ -426,7 +426,17 @@
 				"navigationBarTitleText": "报名成功"
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/orderInfo/orderInfo",
+            "style" : {
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
+			}
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "",

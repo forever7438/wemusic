@@ -55,6 +55,7 @@
 			confirmTime(obj) {
 				obj.teacher_id = this.teacherId;
 				obj.music_sun_id = this.classId;
+				obj.people_num = this.request.people_num
 				this.addClassTime(obj);
 			},
 			/**添加上课时间*/

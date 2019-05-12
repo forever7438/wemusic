@@ -12,7 +12,7 @@
 			<p class="time">{{ item.star + ' - ' + item.end }}</p>
 			<p class="duration">{{ $t('index').Duration_course }} {{ item.time }} min</p>
 		</li>
-		<li v-if="!flag" class="add_time" @tap="toggleTab"><img src="/static/img/tianjiashichang@2x.png" /></li>
+		<li v-if="!flag && addshow" class="add_time" @tap="toggleTab"><img src="/static/img/tianjiashichang@2x.png" /></li>
 		<w-picker mode="dateTime" :defaultVal="date" :startYear="(new Date().getFullYear()).toString()" themeColor="#007AFF"
 		 @confirm="DateConfirm" ref="picker"></w-picker>
 		<mpvue-picker themeColor="#007AFF" ref="mpvuePicker" mode="selector" :titleInfo="$t('index').Duration_course"
@@ -46,6 +46,10 @@
 			flag: Boolean, //事件开关
 			timeList: Array,
 			dateList: Array,
+			addshow:{
+				type:Boolean,
+				default:true
+			}
 		},
 		methods: {
 			/**选中时间*/

@@ -9,7 +9,7 @@
 				</li>
 				<li @click="coupomPicker && coupomList.length">
 					<span>{{ $t('index').Coupon }}</span>
-					<span>{{ request.coupomTitle }}</span>
+					<span>{{ coupomTitle }}</span>
 				</li>
 				<li>
 					<span>{{ $t('index').Teaching_methods }}</span>
@@ -42,12 +42,16 @@
 			request: Object,
 			coupomList: Array,
 			coupomTitle: String,
-			classId: Number
+			classId: Number,
+			invite:String
 		},
 		data() {
 			return {
 				way: []
 			};
+		},
+		created() {
+			console.log(this.request)
 		},
 		computed: {
 			resultway() {
@@ -103,14 +107,16 @@
 				this.$refs.mpvuePicker.show();
 			},
 			pay(classId) {
-				let data = {
+				let data = {}
+				data = {
 					class_list_id: this.request.class_list_id.join(','),
 					teacher_id: this.request.teacher_id,
 					music_sun_id: this.request.music_sun_id,
 					people_num: this.request.people_num,
-					coupon_id: this.request.coupon_id
-					// invite: ''
+					coupon_id: this.request.coupon_id,
+					invite: this.invite || ''
 				}
+
 				this.ajax({
 					url: 'userorder/add_order',
 					data: data,

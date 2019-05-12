@@ -31,14 +31,14 @@
 			toPay() {
 				if (!this.code) {
 					uni.showToast({
-						title: "请输入邀请码",
+						title: this.$t('index').invitation_code,
 						icon: "none"
 					})
-					return
+				}else{
+					uni.navigateTo({
+						url: '/pages/orderInfo/orderInfo?code=' + this.code
+					});
 				}
-				uni.navigateTo({
-					url: '/pages/choiceTeacher/choiceTeacher?code=' + this.code
-				})
 			}
 		}
 	};
