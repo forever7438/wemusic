@@ -43,7 +43,10 @@
 			coupomList: Array,
 			coupomTitle: String,
 			classId: Number,
-			invite:String
+			invite:{
+				type:String,
+				default:''
+			}
 		},
 		data() {
 			return {

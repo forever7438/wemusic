@@ -53,7 +53,10 @@
 			this.way = obj.way;
 			this.code = obj.code;
 			this.teacherNmae = obj.teacherNmae;
-			if(obj.wayNum == 0 ||  obj.invite){
+			if(obj.wayNum == 0 
+			|| obj.invite == '-1' 
+			|| obj.invite == 'undefined'
+			|| obj.invite == undefined){
 				this.invite = false 
 			}
 		},

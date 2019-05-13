@@ -22,6 +22,7 @@
 						:teacherId="teacherId"></teachingWay>
 		<orderMessage 	v-if="orderShow" 
 						:request="request" 
+						:coupomTitle="coupomTitle"
 						:classId="Number(classId)" 
 						:coupomList="coupomList" 
 						@changeRequest="changeRequest"></orderMessage>
@@ -53,6 +54,7 @@ export default {
 			classId: 0,
 			teacherId: 0,
 			coupomList: [],
+			coupomTitle:'',
 			request: {
 				price: 0,
 				people_num: 0,
@@ -89,6 +91,9 @@ export default {
 					this.orderShow = false;
 				} else {
 					this.selectFlag = false;
+					uni.navigateTo({
+						url: '/pages/choiceTeacher/choiceTeacher'
+					});
 				}
 			} else {
 				uni.redirectTo({
@@ -165,8 +170,10 @@ export default {
 						if (res.data.data.length > 0) {
 							this.coupomList = res.data.data;
 							this.request.coupomTitle = '选择优惠券';
+							this.coupomTitle = '选择优惠券';
 						} else {
 							this.request.coupomTitle = '暂无优惠券';
+							this.coupomTitle = '暂无优惠券';
 						}
 					}
 				}
