@@ -240,9 +240,9 @@
 					url: '/pages/setting/setting'
 				});
 			} else {
-				// uni.navigateTo({
-				// 	url: '/pages/message/message'
-				// });
+				uni.navigateTo({
+					url: '/pages/message/message'
+				});
 			}
 		}
 	};

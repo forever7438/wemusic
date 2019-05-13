@@ -12,15 +12,15 @@
 			<div class="lesson_date">
 				<h3>{{ $t('index').adjustDate }}</h3>
 				<span @tap="toggleTab('date')">{{ date }}</span>
-				<w-picker mode="date" title="选择日期" :defaultVal="[0, 0, 0]" startYear="2014" @confirm="onConfirmDate" ref="pickerDate"></w-picker>
+				<w-picker mode="date" title="选择日期" :defaultVal="nowDate" :startYear="nowYear" @confirm="onConfirmDate" ref="pickerDate"></w-picker>
 				<p>原始日期 {{ originalDate }}</p>
 			</div>
 			<div class="lesson_time">
 				<h3>{{ $t('index').adjustClassTime }}</h3>
 				<span @tap="toggleTab('startTime')">{{ startTime }}</span>
 				~
-				<span @tap="toggleTab('endTime')">{{ endTime }}</span>
-				<w-picker mode="time" :title="title" :defaultVal="[0, 0, 0]" startYear="2014" @confirm="onConfirmTime" ref="pickerTime"></w-picker>
+				<span @tap="toggleTab('startTime')">{{ endTime }}</span>
+				<w-picker mode="time" :title="title" :defaultVal="[0, 0, 0]" startYear="2019" @confirm="onConfirmTime" ref="pickerTime"></w-picker>
 				<!-- <p>该教师当天已预约时间段 8:00 ~ 9:00 10:00 ~ 11:00</p> -->
 			</div>
 			<div class="adjustment_reason">
@@ -55,10 +55,18 @@
 				originalDate: '',
 				startTime: '',
 				endTime: '',
-				body: ''
+				body: '',
+				nowDate:[],
+				nowYear:'2019',
+				time:'',
+				is_change:false,
+				init:{}
 			};
 		},
 		onLoad(obj) {
+			let myDate = new Date();
+			this.nowDate = [0, myDate.getMonth(), myDate.getDate()];
+			this.nowYear = (myDate.getFullYear()).toString();
 			this.classId = obj.classId;
 			this.getClassDetail();
 		},
@@ -91,28 +99,37 @@
 					success: res => {
 						this.flag = true;
 						this.classDetail = res.data.data;
-						this.date = getDatess(this.classDetail.class_sun.start_time * 1000);
-						this.originalDate = getDatess(this.classDetail.class_sun.start_time * 1000);
+						let start = this.classDetail.class_sun.start_time * 1000
+						let end   = this.classDetail.class_sun.stop_time * 1000
+						this.date = getDatess(start);
+						this.originalDate = getDatess(start);
+						/**课程时长*/
+						this.time = (end - start) / 60000
+						this.dates = `${new Date(start).getFullYear()}-${this.forMatNum(new Date(start).getMonth() + 1)}-${this.forMatNum(new Date(start).getDate())}`;
 						this.startTime =
 							`${
-						new Date(this.classDetail.class_sun.start_time * 1000).getHours() > 9
-							? new Date(this.classDetail.class_sun.start_time * 1000).getHours()
-							: '0' + new Date(this.classDetail.class_sun.start_time * 1000).getHours()
-					}:${
-						new Date(this.classDetail.class_sun.start_time * 1000).getMinutes() > 9
-							? new Date(this.classDetail.class_sun.start_time * 1000).getMinutes()
-							: '0' + new Date(this.classDetail.class_sun.start_time * 1000).getMinutes()
-					}`;
+								new Date(start).getHours() > 9
+									? new Date(start).getHours()
+									: '0' + new Date(start).getHours()
+							}:${
+								new Date(start).getMinutes() > 9
+									? new Date(start).getMinutes()
+									: '0' + new Date(start).getMinutes()
+							}`;
 						this.endTime =
 							`${
-						new Date(this.classDetail.class_sun.stop_time * 1000).getHours() > 9
-							? new Date(this.classDetail.class_sun.stop_time * 1000).getHours()
-							: '0' + new Date(this.classDetail.class_sun.stop_time * 1000).getHours()
-					}:${
-						new Date(this.classDetail.class_sun.stop_time * 1000).getMinutes() > 9
-							? new Date(this.classDetail.class_sun.stop_time * 1000).getMinutes()
-							: '0' + new Date(this.classDetail.class_sun.stop_time * 1000).getMinutes()
-					}`;
+								new Date(end).getHours() > 9
+									? new Date(end).getHours()
+									: '0' + new Date(end).getHours()
+							}:${
+								new Date(end).getMinutes() > 9
+									? new Date(end).getMinutes()
+									: '0' + new Date(end).getMinutes()
+							}`;
+							
+						this.init.dates = this.dates
+						this.init.startTime = this.startTime
+						console.log(this.init)
 					}
 				});
 			},
@@ -132,18 +149,56 @@
 			},
 			onConfirmDate(val) {
 				this.date = `${val[0]}年${val[1]}月${val[2]}日`;
-				this.dates = `${val[0]}-${val[1]}-${val[2]}`;
+				let dates = `${val[0]}-${val[1]}-${val[2]}`;
+				if(dates != this.init.dates){
+					this.dates = dates
+					this.is_change = true
+				}else{
+					if(this.startTime == this.init.startTime){
+						this.is_change = false
+					}
+				}
 			},
 			onConfirmTime(val) {
 				switch (this.title) {
 					case '开始时间':
 						this.startTime = `${val[0]}:${val[1]}`;
+						
+						let hour = 0;
+						let min = 0;
+						if(this.time > 60){
+							 hour = this.time / 60;
+							 min  = this.time - (hour * 60)
+						}else{
+							 min  = this.time
+						}
+						hour = Number(val[0]) + hour;
+						min  = Number(val[1]) + min;
+						this.endTime = `${hour}:${min}`;
 						break;
 					default:
 						this.endTime = `${val[0]}:${val[1]}`;
 				}
 			},
+			forMatNum(num) {
+				return num < 10 ? '0' + num : num + '';
+			},
+			changeStatus(){
+				if(this.dates != this.init.dates 
+				|| this.startTime != this.init.startTime){
+					this.is_change = true
+				}else{
+					this.is_change = false
+				}
+			},
 			adjustment() {
+				if(!this.is_change){
+					uni.showToast({
+						title: '未作任何更改',
+						icon: 'none'
+					});
+					return;
+				}
 				if (!this.dates) {
 					uni.showToast({
 						title: '请调整日期',
@@ -164,6 +219,12 @@
 						icon: 'none'
 					});
 					return;
+				}
+				let data={
+					class_id: this.classId,
+					start_time: new Date(`${this.dates} ${this.startTime}`).getTime() / 1000,
+					end_time: new Date(`${this.dates} ${this.endTime}`).getTime() / 1000,
+					body: this.body
 				}
 				this.ajax({
 					url: 'studentclass/revision_class',
