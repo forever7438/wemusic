@@ -71,7 +71,7 @@
 						<image src="../../../static/img/coupon@2x.png"></image>
 					</view>
 				</navigator>
-				<navigator hover-class="none" url="/pages/myEvaluate/myEvaluate?type=0">
+				<navigator hover-class="none" url="/pages/myEvaluate/myEvaluate?type=2">
 					<view>
 						<text>{{ $t('index').MyEvaluation }}</text>
 						<image src="../../../static/img/evaluate@2x.png"></image>

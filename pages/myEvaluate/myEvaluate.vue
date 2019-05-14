@@ -1,8 +1,8 @@
 <template>
 	<div class="my_evaluate_content">
 		<view class="meun_list">
-			<text :class="lessonType == 0 ? 'active' : ''" @click="getEvalutateList('0')">待评价</text>
-			<text :class="lessonType == 1 ? 'active' : ''" @click="getEvalutateList('1')">已评价</text>
+			<text :class="lessonType == 2 ? 'active' : ''" @click="getEvalutateList('2')">待评价</text>
+			<text :class="lessonType == 3 ? 'active' : ''" @click="getEvalutateList('3')">已评价</text>
 		</view>
 		<lesson-list :lessonType="lessonType" :listInfo="listInfo"></lesson-list>
 	</div>
