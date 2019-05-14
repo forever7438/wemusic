@@ -77,6 +77,7 @@ let zhCN = {
 	money: '金额',
 	Apply: '申请',
 	Students: '学生数',
+	Student:'学生',
 	System_notification: '系统通知',
 	Order_information: '订单信息',
 	course: '课程',

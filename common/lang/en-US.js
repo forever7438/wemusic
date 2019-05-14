@@ -77,6 +77,7 @@ let enUS = {
 	money:'Money',
 	Apply:'Apply',
 	Students:'Students',
+	Student:'Student',
 	System_notification:'System notification',
 	Order_information:'Order information',
 	course:'Course',

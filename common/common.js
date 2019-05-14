@@ -11,10 +11,13 @@ const errorImg01 = 'this.src="/static/img/wemusic.jpg"';
 
 //封装网络请求
 const ajax = (opt) => {
-	uni.showLoading({
-		title: ''
-	});
 	opt = opt || {};
+	opt.tip = opt.tip === false ? false : true;
+	if(opt.tip){
+		uni.showLoading({
+			title: ''
+		});
+	}
 	opt.url = opt.url || '';
 	opt.data = opt.data || null;
 	opt.method = opt.method || 'POST';
@@ -37,7 +40,9 @@ const ajax = (opt) => {
 		header: opt.header,
 		dataType: 'json',
 		success: function(res) {
-			uni.hideLoading();
+			if(opt.tip){
+				uni.hideLoading();
+			}
 			opt.success(res);
 			if (['Token invalid', 'Token expired'].includes(res.data.msg)) {
 				uni.showModal({

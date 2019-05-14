@@ -12,7 +12,10 @@
 			</view>
 			<view class="code_time">
 				<text>{{ $t('index').classTime }}</text>
-				<text>{{ originalDate }} {{ startTime }} ~ {{ endTime }}</text>
+				<text>
+					{{ originalDate }} 
+					<p>{{ startTime }} ~ {{ endTime }}</p>
+				</text>
 			</view>
 			<view class="code_message">
 				<text>{{ $t('index').remarks }}</text>
@@ -190,21 +193,26 @@ export default {
 			color: rgba(51, 51, 51, 1);
 		}
 
-		.code_teacher {
-			margin: 20upx 220upx;
+				.code_teacher {
+			margin: 20upx 0;
 			display: flex;
 			align-items: center;
 			justify-content: space-around;
-
 			text {
 				&:nth-of-type(1) {
+					width: 50%;
 					font-size: 28upx;
 					font-family: PingFangSC-Regular;
 					font-weight: 400;
 					color: rgba(51, 51, 51, 1);
+					text-align: right;
+					padding-right: 15upx;
 				}
-
+		
 				&:nth-of-type(2) {
+					text-align: left;
+					padding-left: 15upx;
+					width: 50%;
 					font-size: 28upx;
 					font-family: PingFangSC-Medium;
 					font-weight: 500;
@@ -212,48 +220,56 @@ export default {
 				}
 			}
 		}
-
+		
 		.code_time {
 			display: flex;
 			align-items: baseline;
 			justify-content: space-around;
-			margin: 0 150upx;
-
 			text {
 				&:nth-of-type(1) {
-					width: 112upx;
+					width: 50%;
 					font-size: 28upx;
 					font-family: PingFangSC-Regular;
 					font-weight: 400;
 					color: rgba(51, 51, 51, 1);
+					text-align: right;
+					padding-right: 15upx
 				}
-
+		
 				&:nth-of-type(2) {
-					width: 240upx;
+					width: 50%;
 					text-align: left;
+					padding-left: 15upx;
 					font-size: 28upx;
 					font-family: PingFangSC-Medium;
 					font-weight: 500;
 					color: rgba(51, 51, 51, 1);
+					
 				}
 			}
 		}
-
+		
 		.code_message {
 			display: flex;
 			align-items: center;
 			justify-content: space-around;
-			margin: 20upx 260upx;
-
+			margin: 20upx 0;
+		
 			text {
 				&:nth-of-type(1) {
+					width: 50%;
 					font-size: 28upx;
 					font-family: PingFangSC-Regular;
 					font-weight: 400;
 					color: rgba(0, 0, 0, 1);
+					text-align: right;
+					padding-right: 15upx
 				}
-
+		
 				&:nth-of-type(2) {
+					text-align: left;
+					padding-left: 15upx;
+					width: 50%;
 					font-size: 28upx;
 					font-family: PingFangSC-Regular;
 					font-weight: 500;

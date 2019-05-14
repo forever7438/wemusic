@@ -23,6 +23,10 @@ export default {
 	},
 	onLoad(obj) {
 		this.classId = obj.classId;
+		let _this = this
+		setTimeout(function(){
+			_this.searchStatus(this.classId)
+		},2000);
 	},
 	onReady() {
 		this.$refs.qrcode.creatQrcode();
@@ -38,7 +42,33 @@ export default {
 			});
 		}
 	},
-	methods: {}
+	methods: {
+		searchStatus(classId){
+			let _this = this
+			let timer = setInterval(function(){
+				_this.ajax({
+					tip:false,
+					url: 'teacherclass/puch_type',
+					data: {
+						class_id: classId,
+					},
+					success: res => {
+						if (res.data.body === 'success' && res.data.data.length > 0) {
+							let url = '/pages/codeSuccessTeach/codeSuccessTeach?classId='+_this.classId
+							for (let k in res.data.data) {
+								let value = data[k] != undefined ? data[k] : "";
+								url += `&${k}=${encodeURIComponent(value)}`;
+							 }
+							//clearInterval(timer);
+							uni.navigateTo({
+								url: url
+							});
+						}
+					}
+				});
+			},1200)
+		}
+	}
 };
 </script>
 
