@@ -3,7 +3,7 @@
 		<progress-bar v-if="show" :progress="progress"></progress-bar>
 		<textarea placeholder="分享学习心得…" v-model="body" />
 		<view v-if="videos.length" class="choose_images"><image :src="item" v-for="(item, index) in videos" :key="index"></image></view>
-		<view v-if="files" class="choose_images"><video :src="files"></video></view>
+		<view v-else-if="files" class="choose_images"><video :src="files"></video></view>
 		<view v-else class="choose_image" @tap="chooseImage" @longtap="chooseVideo">照片/拍摄</view>
 	</view>
 </template>
@@ -20,12 +20,12 @@ export default {
 		return {
 			video: '',
 			videos: [],
-			file:'',
-			files:'',
+			file: '',
+			files: '',
 			body: '',
 			show: false,
 			progress: 0,
-			isVideo:false,
+			isVideo: false
 		};
 	},
 	onShow() {
@@ -44,8 +44,9 @@ export default {
 	},
 	methods: {
 		chooseImage: e => {
-			_this.isVideo=false;
+			_this.isVideo = false;
 			_this.videos = [];
+			_this.files = '';
 			uni.chooseImage({
 				count: 9,
 				success: res => {
@@ -60,7 +61,8 @@ export default {
 			});
 		},
 		chooseVideo: e => {
-			_this.isVideo=true;
+			_this.isVideo = true;
+			_this.videos = [];
 			_this.files = '';
 			uni.chooseVideo({
 				count: 1,
@@ -86,10 +88,9 @@ export default {
 				success: res => {
 					const info = JSON.parse(res.data);
 					if (info.data === 'success') {
-						if(!this.isVideo){
+						if (!this.isVideo) {
 							_this.video.push(info.body.photo);
-						}
-						else {
+						} else {
 							this.file = info.body.photo;
 						}
 					}

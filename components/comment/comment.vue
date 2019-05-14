@@ -102,8 +102,8 @@ export default {
 			}
 
 			.comment_content {
-				width: calc(100vw - 60upx);
-				margin-left: 180upx;
+				// width: calc(100vw - 60upx);
+				margin-left: -470upx;
 				text-align: left;
 				font-size: 32upx;
 				font-family: PingFangSC-Regular;

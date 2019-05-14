@@ -60,7 +60,7 @@ export default {
 	},
 	onLoad(obj) {
 		this.order_id = obj.orderId;
-		this.classId = obj.class_id;
+		this.classId = obj.classId;
 		this.getLessonDetail();
 	},
 	onShow() {
@@ -95,7 +95,7 @@ export default {
 					});
 					setTimeout(function() {
 						uni.redirectTo({
-							url: '/pages/lesson/lesson?type=2'
+							url: '/pages/lesson/lesson?type=-1'
 						});
 					}, 1500);
 				} else {

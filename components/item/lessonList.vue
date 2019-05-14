@@ -22,7 +22,7 @@
 						</span>
 						<span v-else class="start_time">{{ item.start_time | timeDate }} {{ $t('index').Class_begins }}</span>
 						<navigator hover-class="none" :url="'/pages/evaluate/evaluate?classId=' + item.class_id + '&orderId=' + item.order_id"
-						 v-if="item.type === '3'">
+						 v-if="item.type === '3' || item.type === '2'">
 							<span class="go_pay">{{ $t('index').To_evaluate }}</span>
 						</navigator>
 						<navigator hover-class="none" :url="'/pages/evaluate/evaluate?classId=' + item.class_id + '&orderId=' + item.order_id"

@@ -17,9 +17,9 @@ export default {
 	},
 	data() {
 		return {
-			classId:'',
+			classId: '',
 			notes_photo: [],
-			notes_photos:[],
+			notes_photos: [],
 			notes_content: '',
 			show: false,
 			progress: 0
@@ -42,7 +42,7 @@ export default {
 	},
 	methods: {
 		chooseImage: e => {
-			_this.notes_photos =[];
+			_this.notes_photos = [];
 			uni.chooseImage({
 				count: 9,
 				success: res => {
@@ -50,15 +50,14 @@ export default {
 					res.tempFilePaths.map((item, index) => {
 						_this.uploadFile(item, index);
 					});
-					
 				},
 				fail: err => {
 					console.log('chooseImage fail', err);
 				}
 			});
 		},
-		uploadFile(file){
-			_this.notes_photo=[];
+		uploadFile(file) {
+			_this.notes_photo = [];
 			uni.uploadFile({
 				url: ApiUrl + 'index/photo_add',
 				filePath: file,
