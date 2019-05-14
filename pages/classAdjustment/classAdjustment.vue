@@ -148,16 +148,9 @@
 				}
 			},
 			onConfirmDate(val) {
-				this.date = `${val[0]}年${val[1]}月${val[2]}日`;
-				let dates = `${val[0]}-${val[1]}-${val[2]}`;
-				if(dates != this.init.dates){
-					this.dates = dates
-					this.is_change = true
-				}else{
-					if(this.startTime == this.init.startTime){
-						this.is_change = false
-					}
-				}
+				this.date  = `${val[0]}年${val[1]}月${val[2]}日`;
+				this.dates = `${val[0]}-${val[1]}-${val[2]}`;
+				this.changeStatus();
 			},
 			onConfirmTime(val) {
 				switch (this.title) {
@@ -174,7 +167,12 @@
 						}
 						hour = Number(val[0]) + hour;
 						min  = Number(val[1]) + min;
+						if(min > 60){
+							hour += 1;
+							min  -= 60;
+						}
 						this.endTime = `${hour}:${min}`;
+						this.changeStatus();
 						break;
 					default:
 						this.endTime = `${val[0]}:${val[1]}`;
