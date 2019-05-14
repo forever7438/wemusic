@@ -56,11 +56,11 @@
 				startTime: '',
 				endTime: '',
 				body: '',
-				nowDate:[],
-				nowYear:'2019',
-				time:'',
-				is_change:false,
-				init:{}
+				nowDate: [],
+				nowYear: '2019',
+				time: '',
+				is_change: false,
+				init: {}
 			};
 		},
 		onLoad(obj) {
@@ -100,12 +100,13 @@
 						this.flag = true;
 						this.classDetail = res.data.data;
 						let start = this.classDetail.class_sun.start_time * 1000
-						let end   = this.classDetail.class_sun.stop_time * 1000
+						let end = this.classDetail.class_sun.stop_time * 1000
 						this.date = getDatess(start);
 						this.originalDate = getDatess(start);
 						/**课程时长*/
 						this.time = (end - start) / 60000
-						this.dates = `${new Date(start).getFullYear()}-${this.forMatNum(new Date(start).getMonth() + 1)}-${this.forMatNum(new Date(start).getDate())}`;
+						this.dates =
+							`${new Date(start).getFullYear()}-${this.forMatNum(new Date(start).getMonth() + 1)}-${this.forMatNum(new Date(start).getDate())}`;
 						this.startTime =
 							`${
 								new Date(start).getHours() > 9
@@ -126,10 +127,10 @@
 									? new Date(end).getMinutes()
 									: '0' + new Date(end).getMinutes()
 							}`;
-							
+
 						this.init.dates = this.dates
 						this.init.startTime = this.startTime
-						console.log(this.init)
+						// console.log(this.init)
 					}
 				});
 			},
@@ -148,7 +149,7 @@
 				}
 			},
 			onConfirmDate(val) {
-				this.date  = `${val[0]}年${val[1]}月${val[2]}日`;
+				this.date = `${val[0]}年${val[1]}月${val[2]}日`;
 				this.dates = `${val[0]}-${val[1]}-${val[2]}`;
 				this.changeStatus();
 			},
@@ -156,20 +157,20 @@
 				switch (this.title) {
 					case '开始时间':
 						this.startTime = `${val[0]}:${val[1]}`;
-						
+
 						let hour = 0;
 						let min = 0;
-						if(this.time > 60){
-							 hour = this.time / 60;
-							 min  = this.time - (hour * 60)
-						}else{
-							 min  = this.time
+						if (this.time > 60) {
+							hour = this.time / 60;
+							min = this.time - (hour * 60)
+						} else {
+							min = this.time
 						}
 						hour = Number(val[0]) + hour;
-						min  = Number(val[1]) + min;
-						if(min > 60){
+						min = Number(val[1]) + min;
+						if (min > 60) {
 							hour += 1;
-							min  -= 60;
+							min -= 60;
 						}
 						this.endTime = `${hour}:${min}`;
 						this.changeStatus();
@@ -181,16 +182,16 @@
 			forMatNum(num) {
 				return num < 10 ? '0' + num : num + '';
 			},
-			changeStatus(){
-				if(this.dates != this.init.dates 
-				|| this.startTime != this.init.startTime){
+			changeStatus() {
+				if (this.dates != this.init.dates ||
+					this.startTime != this.init.startTime) {
 					this.is_change = true
-				}else{
+				} else {
 					this.is_change = false
 				}
 			},
 			adjustment() {
-				if(!this.is_change){
+				if (!this.is_change) {
 					uni.showToast({
 						title: '未作任何更改',
 						icon: 'none'
@@ -218,20 +219,15 @@
 					});
 					return;
 				}
-				let data={
+				let data = {
 					class_id: this.classId,
-					start_time: new Date(`${this.dates} ${this.startTime}`).getTime() / 1000,
-					end_time: new Date(`${this.dates} ${this.endTime}`).getTime() / 1000,
+					start_time: new Date(`${this.dates.replace(/-/g,'/')} ${this.startTime}`).getTime() / 1000,
+					end_time: new Date(`${this.dates.replace(/-/g,'/')} ${this.endTime}`).getTime() / 1000,
 					body: this.body
 				}
 				this.ajax({
 					url: 'studentclass/revision_class',
-					data: {
-						class_id: this.classId,
-						start_time: new Date(`${this.dates} ${this.startTime}`).getTime() / 1000,
-						end_time: new Date(`${this.dates} ${this.endTime}`).getTime() / 1000,
-						body: this.body
-					},
+					data: data,
 					success: res => {
 						if (res.data.body === 'success') {
 							uni.showToast({
