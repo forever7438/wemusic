@@ -52,15 +52,13 @@ export default {
 		this.data = obj
 		console.log(obj)
 		this.init(obj)
-		//this.punch_id = obj.punch_id;
-		//this.classId = obj.classId;
-		//this.getClassDetail();
+		this.classId = obj.classId;
 	},
 	onBackPress() {  
-	   uni.navigateTo({
-			url: '/pages/code/code?classId='+this.data.classId
-	  });
-	  return true
+		uni.navigateTo({
+			url: '/pages/code/code?classId=' + this.classId
+		});
+		return true
 	},  
 	onShow() {
 		if (uni.getStorageSync('langType') == 'en-US') {

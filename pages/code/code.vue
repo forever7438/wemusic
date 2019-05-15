@@ -35,6 +35,10 @@ export default {
 	},
 	onBackPress() {
 		this.flag = false;
+		uni.redirectTo({
+			url:'/pages/tabbar/tabbar-2/tabbar-2?type=class'
+		})
+		return true
 	},
 	onShow() {
 		if (uni.getStorageSync('langType') == 'en-US') {
