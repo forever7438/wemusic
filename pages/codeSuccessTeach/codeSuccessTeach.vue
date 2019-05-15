@@ -57,7 +57,10 @@ export default {
 		//this.getClassDetail();
 	},
 	onBackPress() {  
-	  return false
+	   uni.navigateTo({
+			url: '/pages/code/code?classId='+this.data.classId
+	  });
+	  return true
 	},  
 	onShow() {
 		if (uni.getStorageSync('langType') == 'en-US') {

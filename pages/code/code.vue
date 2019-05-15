@@ -22,15 +22,19 @@ export default {
 		};
 	},
 	onLoad(obj) {
+		console.log(obj)
 		this.classId = obj.classId;
 		let _this = this
 		setTimeout(function(){
-			_this.searchStatus(this.classId)
+			_this.searchStatus(_this.classId)
 		},2000);
 	},
 	onReady() {
 		this.$refs.qrcode.creatQrcode();
 	},
+	onBackPress() {  
+	  clearInterval();
+	},  
 	onShow() {
 		if (uni.getStorageSync('langType') == 'en-US') {
 			uni.setNavigationBarTitle({
@@ -44,6 +48,7 @@ export default {
 	},
 	methods: {
 		searchStatus(classId){
+			console.log(classId)
 			let _this = this
 			let timer = setInterval(function(){
 				_this.ajax({
@@ -53,13 +58,13 @@ export default {
 						class_id: classId,
 					},
 					success: res => {
-						if (res.data.body === 'success' && res.data.data.length > 0) {
-							let url = '/pages/codeSuccessTeach/codeSuccessTeach?classId='+_this.classId
+						 if (res.data.body === 'success' && res.data.data.length > 0) {
+							 let url = '/pages/codeSuccessTeach/codeSuccessTeach?classId='+_this.classId
 							for (let k in res.data.data) {
 								let value = data[k] != undefined ? data[k] : "";
 								url += `&${k}=${encodeURIComponent(value)}`;
 							 }
-							//clearInterval(timer);
+							clearInterval(timer);
 							uni.navigateTo({
 								url: url
 							});
