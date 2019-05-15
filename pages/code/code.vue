@@ -18,7 +18,8 @@ export default {
 	data() {
 		return {
 			classId: '',
-			qrsize: 174
+			qrsize: 174,
+			flag:true
 		};
 	},
 	onLoad(obj) {
@@ -33,7 +34,7 @@ export default {
 		this.$refs.qrcode.creatQrcode();
 	},
 	onBackPress() {  
-	  clearInterval();
+		this.flag = false
 	},  
 	onShow() {
 		if (uni.getStorageSync('langType') == 'en-US') {
@@ -51,6 +52,9 @@ export default {
 			console.log(classId)
 			let _this = this
 			let timer = setInterval(function(){
+				if(!_this.flag){
+					clearInterval(timer);
+				}
 				_this.ajax({
 					tip:false,
 					url: 'teacherclass/puch_type',
@@ -58,8 +62,10 @@ export default {
 						class_id: classId,
 					},
 					success: res => {
-						 if (res.data.body === 'success' && res.data.data.length > 0) {
+						 console.log(res.data.data)
+						 if (res.data.body === 'success' && res.data.data != '') {
 							 let url = '/pages/codeSuccessTeach/codeSuccessTeach?classId='+_this.classId
+							console.log(typeof res.data.data)
 							for (let k in res.data.data) {
 								let value = data[k] != undefined ? data[k] : "";
 								url += `&${k}=${encodeURIComponent(value)}`;
