@@ -25,7 +25,7 @@ export default {
 		this.toggleTab();
 	},
 	onLoad() {
-		this.time = new Date().getFullYear();
+		this.time = new Date().getTime() / 1000;
 		this.getFinanceList();
 	},
 	onShow() {
@@ -57,7 +57,7 @@ export default {
 			this.$refs.picker.show();
 		},
 		onConfirm(val) {
-			this.time = val[0];
+			this.time = new Date(`${val[0]}/01/01 00:00`).getTime() / 1000;
 			this.getFinanceList();
 		},
 		//获取财务列表
