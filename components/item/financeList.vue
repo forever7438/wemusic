@@ -1,7 +1,7 @@
 <template>
 	<view class="finance_list">
 		<view v-if="financeList.length" class="finance_list_item" v-for="(item, index) in financeList" :key="index">
-			<text class="finance_year">{{ (item.time * 1000) | getDateYear }} Year</text>
+			<text class="finance_year">{{ (item.time * 1000) | getDateYear }} 年</text>
 			<view class="finance_content">
 				<text class="finance_time">{{ (item.start_time * 1000) | formateTime }}-{{ (item.stop_time * 1000) | formateTime }}</text>
 				<view class="finance_money">
@@ -13,7 +13,7 @@
 			<view class="finance_option">
 				<view class="total_class">
 					<text>30</text>
-					<text style="margin-right: 60upx;">Total Hours</text>
+					<text style="margin-right: 60upx;">总时长</text>
 				</view>
 				<view class="total_student">
 					<text>5</text>
