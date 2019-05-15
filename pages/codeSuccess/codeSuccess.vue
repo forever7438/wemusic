@@ -13,7 +13,7 @@
 			<view class="code_time">
 				<text>{{ $t('index').classTime }}</text>
 				<text>
-					{{ originalDate }} 
+					{{ originalDate }}
 					<p>{{ startTime }} ~ {{ endTime }}</p>
 				</text>
 			</view>
@@ -137,16 +137,16 @@ export default {
 					content: this.content
 				},
 				success: res => {
-					if (res.data.body === 'success') {
-						uni.showToast({
-							title: '评价成功',
-							icon: 'none'
+					uni.showToast({
+						title: '评价成功',
+						icon: 'none'
+					});
+					setTimeout(() => {
+						uni.reLaunch({
+							url: '/pages/tabbar/tabbar-2/tabbar-2?type=class'
 						});
-						setTimeout(() => {
-							uni.reLaunch({
-								url: '/pages/tabbar/tabbar-2/tabbar-2?type=class'
-							});
-						}, 1500);
+					}, 1500);
+					if (res.data.body === 'success') {
 					} else {
 						uni.showToast({
 							title: res.data.msg,
@@ -193,7 +193,7 @@ export default {
 			color: rgba(51, 51, 51, 1);
 		}
 
-				.code_teacher {
+		.code_teacher {
 			margin: 20upx 0;
 			display: flex;
 			align-items: center;
@@ -208,7 +208,7 @@ export default {
 					text-align: right;
 					padding-right: 15upx;
 				}
-		
+
 				&:nth-of-type(2) {
 					text-align: left;
 					padding-left: 15upx;
@@ -220,7 +220,7 @@ export default {
 				}
 			}
 		}
-		
+
 		.code_time {
 			display: flex;
 			align-items: baseline;
@@ -233,9 +233,9 @@ export default {
 					font-weight: 400;
 					color: rgba(51, 51, 51, 1);
 					text-align: right;
-					padding-right: 15upx
+					padding-right: 15upx;
 				}
-		
+
 				&:nth-of-type(2) {
 					width: 50%;
 					text-align: left;
@@ -244,17 +244,16 @@ export default {
 					font-family: PingFangSC-Medium;
 					font-weight: 500;
 					color: rgba(51, 51, 51, 1);
-					
 				}
 			}
 		}
-		
+
 		.code_message {
 			display: flex;
 			align-items: center;
 			justify-content: space-around;
 			margin: 20upx 0;
-		
+
 			text {
 				&:nth-of-type(1) {
 					width: 50%;
@@ -263,9 +262,9 @@ export default {
 					font-weight: 400;
 					color: rgba(0, 0, 0, 1);
 					text-align: right;
-					padding-right: 15upx
+					padding-right: 15upx;
 				}
-		
+
 				&:nth-of-type(2) {
 					text-align: left;
 					padding-left: 15upx;

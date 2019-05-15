@@ -99,7 +99,7 @@ export default {
 		goPath(path, type) {
 			uni.redirectTo({
 				url: `${path}?type=${type}`
-			});
+			})
 		},
 		onShowDatePicker(type) {
 			//显示

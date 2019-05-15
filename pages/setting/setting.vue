@@ -19,79 +19,79 @@
 </template>
 
 <script>
-	import uniIcon from '../../components/uni-icon/uni-icon.vue';
-	export default {
-		components: {
-			uniIcon
-		},
-		data() {
-			return {};
-		},
-		onShow() {
-			if (uni.getStorageSync('langType') == 'en-US') {
-				uni.setNavigationBarTitle({
-					title: 'Setting'
-				});
-			} else {
-				uni.setNavigationBarTitle({
-					title: '设置'
-				});
-			}
-		},
-		methods: {
-			//跳转
-			goPath(val) {
-				if (val === '/pages/login/login') {
-					//退出登录,移除token  type
-					uni.clearStorage();
-				}
-				uni.navigateTo({
-					url: val
-				});
-			}
+import uniIcon from '../../components/uni-icon/uni-icon.vue';
+export default {
+	components: {
+		uniIcon
+	},
+	data() {
+		return {};
+	},
+	onShow() {
+		if (uni.getStorageSync('langType') == 'en-US') {
+			uni.setNavigationBarTitle({
+				title: 'Setting'
+			});
+		} else {
+			uni.setNavigationBarTitle({
+				title: '设置'
+			});
 		}
-	};
+	},
+	methods: {
+		//跳转
+		goPath(val) {
+			if (val === '/pages/login/login') {
+				//退出登录,移除token  type
+				uni.clearStorage();
+			}
+			uni.navigateTo({
+				url: val
+			});
+		}
+	}
+};
 </script>
 
 <style lang="less">
-	.setting_content {
-		padding: 0 30upx;
+.setting_content {
+	padding: 0 30upx;
 
-		ul {
-			display: flex;
-			align-items: center;
-			flex-direction: column;
-			padding-left: 0;
+	ul {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding-left: 0;
 
-			li {
-				width: 100%;
-				height: 104upx;
-				background: rgba(255, 255, 255, 1);
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				font-size: 32upx;
-				font-family: PingFangSC-Regular;
-				font-weight: 400;
-				color: rgba(51, 51, 51, 1);
-				border-bottom: 2upx solid #ddd;
-
-				&:last-of-type {
-					border-bottom: none;
-				}
-			}
-		}
-
-		.login_out {
-			text-align: center;
-			margin-top: 40upx;
-			display: inline-block;
+		li {
 			width: 100%;
-			line-height: 80upx;
-			border-radius: 12upx;
-			border: 2upx solid rgba(153, 153, 153, 1);
+			height: 104upx;
+			background: rgba(255, 255, 255, 1);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
 			font-size: 32upx;
 			font-family: PingFangSC-Regular;
+			font-weight: 400;
+			color: rgba(51, 51, 51, 1);
+			border-bottom: 2upx solid #ddd;
+
+			&:last-of-type {
+				border-bottom: none;
+			}
 		}
 	}
+
+	.login_out {
+		text-align: center;
+		margin-top: 40upx;
+		display: inline-block;
+		width: 100%;
+		line-height: 80upx;
+		border-radius: 12upx;
+		border: 2upx solid rgba(153, 153, 153, 1);
+		font-size: 32upx;
+		font-family: PingFangSC-Regular;
+	}
+}
 </style>
