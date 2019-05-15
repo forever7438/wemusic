@@ -13,7 +13,7 @@ const errorImg01 = 'this.src="/static/img/wemusic.jpg"';
 const ajax = (opt) => {
 	opt = opt || {};
 	opt.tip = opt.tip === false ? false : true;
-	if(opt.tip){
+	if (opt.tip) {
 		uni.showLoading({
 			title: ''
 		});
@@ -40,24 +40,26 @@ const ajax = (opt) => {
 		header: opt.header,
 		dataType: 'json',
 		success: function(res) {
-			if(opt.tip){
+			if (opt.tip) {
 				uni.hideLoading();
 			}
 			opt.success(res);
-			if (['Token invalid', 'Token expired'].includes(res.data.msg)) {
-				uni.showModal({
-					title: '提示',
-					content: '您还未登录,是否去登录?',
-					success: function(res) {
-						if (res.confirm) {
-							uni.navigateTo({
-								url: '/pages/login/login'
-							})
-						} else if (res.cancel) {
-							console.log('用户点击取消');
+			if (opt.url != 'teacherclass/puch_type') {
+				if (['Token invalid', 'Token expired'].includes(res.data.msg)) {
+					uni.showModal({
+						title: '提示',
+						content: '您还未登录,是否去登录?',
+						success: function(res) {
+							if (res.confirm) {
+								uni.navigateTo({
+									url: '/pages/login/login'
+								})
+							} else if (res.cancel) {
+								console.log('用户点击取消');
+							}
 						}
-					}
-				});
+					});
+				}
 			}
 			if (['role error'].includes(res.data.msg)) {
 				uni.showToast({
@@ -65,9 +67,9 @@ const ajax = (opt) => {
 					icon: "none"
 				})
 				setTimeout(() => {
-					uni.navigateBack({
-						delta: 2
-					});
+					uni.navigateTo({
+						url: '/pages/login/login'
+					})
 				}, 1500)
 			}
 		},
