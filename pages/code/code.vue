@@ -19,23 +19,23 @@ export default {
 		return {
 			classId: '',
 			qrsize: 174,
-			flag:true
+			flag: true
 		};
 	},
 	onLoad(obj) {
-		console.log(obj)
+		console.log(obj);
 		this.classId = obj.classId;
-		let _this = this
-		setTimeout(function(){
-			_this.searchStatus(_this.classId)
-		},2000);
+		let _this = this;
+		setTimeout(function() {
+			_this.searchStatus(_this.classId);
+		}, 2000);
 	},
 	onReady() {
 		this.$refs.qrcode.creatQrcode();
 	},
-	onBackPress() {  
-		this.flag = false
-	},  
+	onBackPress() {
+		this.flag = false;
+	},
 	onShow() {
 		if (uni.getStorageSync('langType') == 'en-US') {
 			uni.setNavigationBarTitle({
@@ -48,28 +48,25 @@ export default {
 		}
 	},
 	methods: {
-		searchStatus(classId){
-			console.log(classId)
-			let _this = this
-			let timer = setInterval(function(){
-				if(!_this.flag){
+		searchStatus(classId) {
+			let _this = this;
+			let timer = setInterval(function() {
+				if (!_this.flag) {
 					clearInterval(timer);
 				}
 				_this.ajax({
-					tip:false,
+					tip: false,
 					url: 'teacherclass/puch_type',
 					data: {
-						class_id: classId,
+						class_id: classId
 					},
 					success: res => {
-						 console.log(res.data.data)
-						 if (res.data.body === 'success' && res.data.data != '') {
-							 let url = '/pages/codeSuccessTeach/codeSuccessTeach?classId='+_this.classId
-							console.log(typeof res.data.data)
+						if (res.data.body === 'success' && res.data.data != '') {
+							let url = '/pages/codeSuccessTeach/codeSuccessTeach?classId=' + _this.classId;
 							for (let k in res.data.data) {
-								let value = data[k] != undefined ? data[k] : "";
+								let value = res.data.data[k] != undefined ? res.data.data[k] : '';
 								url += `&${k}=${encodeURIComponent(value)}`;
-							 }
+							}
 							clearInterval(timer);
 							uni.navigateTo({
 								url: url
@@ -77,7 +74,7 @@ export default {
 						}
 					}
 				});
-			},1200)
+			}, 1200);
 		}
 	}
 };
