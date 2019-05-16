@@ -3,7 +3,9 @@
 		<view class="fridend_content" v-for="(item, index) in friendsList" :key="index">
 			<friendHead :itemHead="item"></friendHead>
 			<friendContent :type="true" :content="item.body" :listId="item.id"></friendContent>
-			<view class="img_lists" v-if="Array.isArray(item.video)"><image class="image" :src="val || userImage" v-for="(val, index) in item.video" :key="index"></image></view>
+			<view class="img_lists" v-if="Array.isArray(item.video)">
+				<image class="image" @tap="previewImage(index, item.video)" :src="val || userImage" v-for="(val, index) in item.video" :key="index"></image>
+			</view>
 			<view class="img_lists" v-else><video class="video" id="video" :src="item.video" controls></video></view>
 			<friendOperation
 				:message="item.message_num"
@@ -49,6 +51,14 @@ export default {
 		},
 		changeStatus(data) {
 			this.$emit('forward_praise', data);
+		},
+		previewImage(index, video) {
+			uni.previewImage({
+				current: video[index],
+				indicator: 'number',
+				loop: 'true',
+				urls: video
+			});
 		}
 	}
 };

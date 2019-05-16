@@ -20,6 +20,7 @@
 					<text>{{ $t('index').Students }}</text>
 				</view>
 				<button hover-class="btn-hover" @tap="addFinance(item.id)">{{ $t('index').Apply }}</button>
+				<button hover-class="btn-hover" @tap="viewFinance(item.id)">{{ $t('index').See }}</button>
 			</view>
 		</view>
 		<noContent v-else title="暂无信息"></noContent>
@@ -65,6 +66,12 @@ export default {
 						});
 					}
 				}
+			});
+		},
+		//查看工资单
+		viewFinance(financeId) {
+			uni.navigateTo({
+				url: '/pages/wagesDetail/wagesDetail?financeId=' + financeId
 			});
 		}
 	}

@@ -11,10 +11,10 @@
 				<span></span>
 				<span class="info">{{ $t('index').way_tip }}</span>
 			</p>
-			<p class="vipMessage">
+			<!-- <p class="vipMessage">
 				<span>{{ $t('index').vip_tip }}</span>
 				<span>{{ $t('index').open_vip }}</span>
-			</p>
+			</p> -->
 			<text class="teacher_class">{{ $t('index').Duration_course }}</text>
 		</view>
 		<selectTime :timeList="timeList" :flag="orderShow" :year="(new Date()).getFullYear()" :dateList="dateList" @selctTime="selctTime"
