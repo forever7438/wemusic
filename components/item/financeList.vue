@@ -5,7 +5,7 @@
 			<view class="finance_content">
 				<text class="finance_time">{{ (item.start_time * 1000) | formateTime }}-{{ (item.stop_time * 1000) | formateTime }}</text>
 				<view class="finance_money">
-					<text>$2000.00</text>
+					<text>${{ item.money || 0.0 }}</text>
 					<text>{{ $t('index').money }}</text>
 				</view>
 				<text class="fun-tag"></text>
@@ -16,7 +16,7 @@
 					<text style="margin-right: 60upx;">总时长</text>
 				</view>
 				<view class="total_student">
-					<text>5</text>
+					<text>{{ item.student_num || 0 }}</text>
 					<text>{{ $t('index').Students }}</text>
 				</view>
 				<button hover-class="btn-hover" @tap="addFinance(item.id)">{{ $t('index').Apply }}</button>
@@ -128,7 +128,7 @@ export default {
 				position: absolute !important;
 				top: -40upx;
 				right: -82upx;
-				.global-fun-tag(80upx, #ff4040, '未发送');
+				.global-fun-tag(80upx, #ff4040, '未发放');
 			}
 		}
 
