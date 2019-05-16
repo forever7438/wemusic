@@ -18,7 +18,7 @@
 		<div class="vip_recharge">
 			<h3>{{ $t('index').recharge }}</h3>
 			<ul>
-				<li v-for="(item, index) in moneyList" :key="index" @tap="checked(item.id)">
+				<li v-for="(item, index) in moneyList" :key="index" @tap="checked(item.id)" :class="{ active: item.id == checkId }">
 					<view class="semicircle"></view>
 					<p class="item1">{{ $t('index').recharge }}</p>
 					<p class="item2">{{ item.full_money }}</p>
@@ -254,7 +254,19 @@ export default {
 			display: flex;
 			justify-content: space-between;
 			flex-wrap: wrap;
-
+			.active {
+				&:before {
+					position: absolute;
+					top: 10upx;
+					right: 10upx;
+					display: inline-block;
+					width: 30upx;
+					height: 30upx;
+					content: '';
+					z-index: 99;
+					background: url(../../static/img/chenggong.png) no-repeat center/100%;
+				}
+			}
 			li {
 				position: relative;
 				text-align: center;
@@ -263,7 +275,6 @@ export default {
 				border-radius: 16upx;
 				margin-bottom: 30upx;
 				background: rgba(255, 243, 225, 1);
-
 				.semicircle {
 					position: absolute;
 					width: 210upx;
