@@ -14,7 +14,7 @@
 				<image src="../../static/img/creame@2x.png"></image>
 			</view>
 		</view>
-		<button hover-class="btn-hover" @tap="addApprove">{{$t('index').submitCertification }}</button>
+		<button hover-class="btn-hover" v-if="!userInfo.approve_photo1&&!userInfo.approve_photo2" @tap="addApprove">{{$t('index').submitCertification }}</button>
 	</view>
 </template>
 
@@ -27,11 +27,13 @@
 		data() {
 			return {
 				approve_photo1: '',
-				approve_photo2: ''
+				approve_photo2: '',
+				userInfo: {}
 			};
 		},
 		onLoad() {
 			_this = this;
+			this.getUserInfo();
 		},
 		onShow() {
 			if (uni.getStorageSync('langType') == 'en-US') {
@@ -45,6 +47,23 @@
 			}
 		},
 		methods: {
+			//获取个人资料
+			getUserInfo() {
+				this.ajax({
+					url: uni.getStorageSync('type') == 1 ? 'user/info' : 'teacherclass/info',
+					success: res => {
+						if (res.data.body === 'success') {
+							this.userInfo = res.data.data;
+							this.approve_photo1 = res.data.data.approve_photo1;
+							this.approve_photo2 = res.data.data.approve_photo2;
+						} else {
+							uni.showToast({
+								title: res.data.msg
+							});
+						}
+					}
+				});
+			},
 			chooseImage(str) {
 				uni.chooseImage({
 					count: 1,
