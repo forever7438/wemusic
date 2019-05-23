@@ -7,6 +7,7 @@
 				format="yyyy/mm/dd hh:ii:ss"
 				:value="value"
 				color="#FAD42A"
+				:lessonTips="lessonTips"
 				:show-tips="true"
 				:show-seconds="true"
 				@confirm="onSelected"
@@ -52,7 +53,8 @@ export default {
 			start_time: '',
 			end_time: '',
 			classList: [],
-			isStudent: true
+			isStudent: true,
+			lessonTips: {}
 		};
 	},
 	onReady() {
@@ -68,6 +70,7 @@ export default {
 		this.time = new Date().getTime() / 1000;
 		this.title = `${new Date().getMonth() + 1}月${new Date().getDate()}日`;
 		this.getLessonList();
+		this.getLessonNum();
 	},
 	onShow() {
 		if (uni.getStorageSync('langType') == 'en-US') {
@@ -86,6 +89,19 @@ export default {
 		});
 	},
 	methods: {
+		getLessonNum() {
+			this.ajax({
+				url: uni.getStorageSync('type') == 1 ? 'studentclass/class_list_m' : 'teacherclass/class_list_m',
+				data: {
+					time: new Date().getTime() / 1000
+				},
+				success: res => {
+					res.data.data.forEach(item => {
+						this.lessonTips[item] = '有课';
+					});
+				}
+			});
+		},
 		getTime(data) {
 			this.title = `${new Date(data).getMonth() + 1}月${new Date(data).getDate()}日`;
 			this.time = Number(
@@ -99,7 +115,7 @@ export default {
 		goPath(path, type) {
 			uni.redirectTo({
 				url: `${path}?type=${type}`
-			})
+			});
 		},
 		onShowDatePicker(type) {
 			//显示
