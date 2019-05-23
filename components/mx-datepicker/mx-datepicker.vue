@@ -126,30 +126,42 @@
  * 工具函数库
  */
 const DateTools = {
+	//时间格式化处理
+	getDate(type) {
+		const date = new Date(type);
+		let year = date.getFullYear();
+		let month = date.getMonth() + 1;
+		let day = date.getDate();
+		month = month > 9 ? month : '0' + month;
+		day = day > 9 ? day : '0' + day;
+
+		return `${year}-${month}-${day}`;
+	},
 	/**
 	 * 获取公历节日
 	 * @param date Date对象
 	 */
-	getHoliday(date) {
-		let holidays = {
-			// '0101': '元旦',
-			// '0214': '情人',
-			// '0308': '妇女',
-			// '0312': '植树',
-			// '0401': '愚人',
-			// '0501': '劳动',
-			// '0504': '青年',
-			// '0601': '儿童',
-			// '0701': '建党',
-			// '0801': '建军',
-			// '0903': '抗日',
-			// '0910': '教师',
-			// '1001': '国庆',
-			// '1031': '万圣',
-			// '1224': '平安',
-			// '1225': '圣诞'
-		};
-		let value = this.format(date, 'mmdd');
+	getHoliday(date, holidays) {
+		// let holidays = {
+		// 	'0101': '元旦',
+		// 	'0214': '情人',
+		// 	'0308': '妇女',
+		// 	'0312': '植树',
+		// 	'0401': '愚人',
+		// 	'0501': '劳动',
+		// 	'0504': '青年',
+		// 	'0601': '儿童',
+		// 	'0701': '建党',
+		// 	'0801': '建军',
+		// 	'0903': '抗日',
+		// 	'0910': '教师',
+		// 	'1001': '国庆',
+		// 	'1031': '万圣',
+		// 	'1224': '平安',
+		// 	'1225': '圣诞'
+		// };
+		// let value = this.format(date, 'mmdd');
+		let value = this.getDate(date);
 		if (holidays[value]) return holidays[value];
 		return false;
 	},
@@ -306,6 +318,10 @@ export default {
 		endText: {
 			type: String,
 			default: '结束'
+		},
+		//显示当月课程
+		lessonTips: {
+			type: Object
 		}
 	},
 	data() {
@@ -419,7 +435,7 @@ export default {
 			});
 			//节假日或今日的日期标点
 			if (item.statusStyle.background != this.color) {
-				let holiday = this.showHoliday ? DateTools.getHoliday(item.dateObj) : false;
+				let holiday = this.showHoliday ? DateTools.getHoliday(item.dateObj, this.lessonTips) : false;
 				if (holiday || DateTools.isSameDay(new Date(), item.dateObj)) {
 					item.title = holiday || item.title;
 					item.dotStyle.background = this.color;
@@ -487,9 +503,9 @@ export default {
 		onSelectDate(date) {
 			let selectedTime = new Date(new Date(date.dateObj).toLocaleDateString()).getTime();
 			let newTime = new Date(new Date().toLocaleDateString()).getTime();
-			if (selectedTime < newTime) {
-				return;
-			}
+			// if (selectedTime < newTime) {
+			// 	return;
+			// }
 			this.$emit('selectTime', date.dateObj);
 			if (~this.type.indexOf('range') && this.checkeds.length == 2) this.checkeds = [];
 			else if (!~this.type.indexOf('range') && this.checkeds.length) this.checkeds = [];
