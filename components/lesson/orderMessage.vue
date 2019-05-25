@@ -164,6 +164,7 @@
 		font-family: PingFangSC-Regular;
 		font-weight: 400;
 		color: rgba(51, 51, 51, 1);
+		margin-bottom: 120upx;
 
 		.text_l {
 			font-size: 48upx;
@@ -211,7 +212,9 @@
 		text-align: left;
 		border-top: 2upx solid rgba(231, 232, 234, 1);
 		margin: 0;
-
+		position: fixed;
+		bottom: 0;
+		background:#fff;
 		span {
 			font-size: 28upx;
 			font-weight: 500;

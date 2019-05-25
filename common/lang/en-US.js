@@ -125,7 +125,12 @@ let enUS = {
 	Cancel_points:'Cancel Points',
 	No_more_data:'No More Data',
 	invitation_code:'Please Enter The Invitation Code',
-	Invitation_Code_Error:'Invitation Code Error'
+	Invitation_Code_Error:'Invitation Code Error',
+	Tips:'Tips',
+	Switching:'Switching the teaching mode will re-select the time',
+	Start_time_should:'Start time should not be less than the current time Oh',
+	The_teacher_is_busy:'The Teacher Is Busy During This Time',
+	Please_choose_the_teaching_time:'Please Choose The Teaching Time.'
 }
 
 export {

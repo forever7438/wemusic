@@ -125,7 +125,12 @@ let zhCN = {
 	Cancel_points:'取消点赞',
 	No_more_data:'没有更多数据了',
 	invitation_code:'请输入邀请码',
-	Invitation_Code_Error:'Invitation Code Error'
+	Invitation_Code_Error:'Invitation Code Error',
+	Tips:'提示',
+	Switching:'切换授课方式将重新选择时间',
+	Start_time_should:'开始时间不得小于当前时间哦',
+	The_teacher_is_busy:'这段时间老师很忙',
+	Please_choose_the_teaching_time:'请选择授课时间'
 }
 
 export {

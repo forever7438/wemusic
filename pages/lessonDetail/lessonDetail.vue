@@ -1,17 +1,19 @@
 <template>
 	<view>
-		<lessonHead
-			headType="lessonDetail"
-			:star="Number(musicIndexInfo.star)"
-			:title="musicIndexInfo.name"
-			:maxTime="musicIndexInfo.max_time_type"
-			:mixTime="musicIndexInfo.mix_time_type"
-			:content="musicIndexInfo.content || $t('index').NoIntroduction"
-		></lessonHead>
-		<lessonTeacher :teacherList="teacherList"></lessonTeacher>
-		<lessonDesc :title="$t('index').courseIntroduction" :content="musicIndexInfo.content || $t('index').NoIntroduction"></lessonDesc>
-		<lessonComment :title="$t('index').Curr_evaluation" :comment="comment"></lessonComment>
-		<lessonScience :title="$t('index').Teaching_environment" :science="scienceImg"></lessonScience>
+		<view style="margin-bottom: 116px;">
+			<lessonHead
+				headType="lessonDetail"
+				:star="Number(musicIndexInfo.star)"
+				:title="musicIndexInfo.name"
+				:maxTime="musicIndexInfo.max_time_type"
+				:mixTime="musicIndexInfo.mix_time_type"
+				:content="musicIndexInfo.content || $t('index').NoIntroduction"
+			></lessonHead>
+			<lessonTeacher :teacherList="teacherList"></lessonTeacher>
+			<lessonDesc :title="$t('index').courseIntroduction" :content="musicIndexInfo.content || $t('index').NoIntroduction"></lessonDesc>
+			<lessonComment :title="$t('index').Curr_evaluation" :comment="comment"></lessonComment>
+			<lessonScience :title="$t('index').Teaching_environment" :science="scienceImg"></lessonScience>
+		</view>
 		<span class="sign_up">{{ $t('index').sign_up }}</span>
 	</view>
 </template>
@@ -128,7 +130,6 @@ export default {
 view {
 	.sign_up {
 		text-align: center;
-		margin-top: 166upx;
 		display: inline-block;
 		width: 100%;
 		line-height: 100upx;
@@ -137,6 +138,8 @@ view {
 		font-family: PingFangSC-Medium;
 		font-weight: 500;
 		color: rgba(51, 51, 51, 1);
+		position: fixed;
+		bottom: 0;
 	}
 }
 </style>

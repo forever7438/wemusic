@@ -126,12 +126,16 @@ export default {
 			});
 		},
 		changeRequest(data) {
+
 			switch (data.key) {
 				case 'people_num':
 					this.request.people_num = data.value;
 					break;
 				case 'class_list_id':
 					let index = this.request.class_list_id.indexOf(data.value);
+					if(data.change_index == 0){
+						this.request.price = 0;
+					}
 					if (index > -1) {
 						this.request.class_list_id.splice(index, 1);
 						this.request.price -= data.price;
@@ -154,6 +158,9 @@ export default {
 				case 'coupon_id':
 					this.request.coupon_id = data.value;
 					this.request.price = data.price;
+					break;
+				case 'clear_class_id':
+					this.request.class_list_id = [];
 					break;
 			}
 		},
@@ -215,7 +222,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 view {
 	.top {
 		display: flex;

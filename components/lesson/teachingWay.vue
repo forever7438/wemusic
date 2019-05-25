@@ -17,9 +17,17 @@
 			</p> -->
 			<text class="teacher_class">{{ $t('index').Duration_course }}</text>
 		</view>
-		<selectTime :timeList="timeList" :flag="orderShow" :year="(new Date()).getFullYear()" :dateList="dateList" @selctTime="selctTime"
-		 @confirmTime="confirmTime"></selectTime>
-		<span v-if="!orderShow" class="sign_up" @click="createOrder">{{ $t('index').next }}</span>
+		<view style="margin-bottom: 200px;">
+			<selectTime :timeList="timeList" 
+						:flag="orderShow" 
+						:year="(new Date()).getFullYear()" 
+						:dateList="dateList" 
+						@selctTime="selctTime"
+						@confirmTime="confirmTime"></selectTime>
+		</view>
+		<span v-if="!orderShow" 
+				class="sign_up" 
+				@click="createOrder">{{ $t('index').next }}</span>
 	</div>
 </template>
 
@@ -41,13 +49,14 @@
 			title: String,
 			teacherId: String,
 			request: Object,
-			orderShow: Boolean
+			orderShow: Boolean,
 		},
 		data() {
 			return {
 				image: '../../static/img/demo.jpg',
 				timeList: [],
-				dateList: []
+				dateList: [],
+				bottomTop: 0
 			};
 		},
 		methods: {
@@ -59,10 +68,10 @@
 				this.addClassTime(obj);
 			},
 			/**添加上课时间*/
-			addClassTime(request) {
+			addClassTime(request, change_index = -1) {
 				if ((request.start_time + 300) < new Date().getTime() / 1000) {
 					uni.showToast({
-						title: '开始时间不得小于当前时间哦',
+						title: this.$t('index').Start_time_should,
 						icon: "none"
 					})
 					return
@@ -73,16 +82,21 @@
 					success: res => {
 						if (res.data.body === 'success') {
 							let timeItem = this.timeDate(res.data.data);
-							this.dateList.push(timeItem);
+							if (change_index > -1) {
+								Vue.set(this.dateList, change_index, newValue)
+							} else {
+								this.dateList.push(timeItem);
+							}
 							let change = {
 								key: 'class_list_id',
 								value: timeItem.id,
-								price: timeItem.price
+								price: timeItem.price,
+								change_index:change_index
 							};
 							this.$emit('changeRequest', change);
 						} else {
 							uni.showToast({
-								title: 'The teacher is busy during this time',
+								title: this.$t('index').The_teacher_is_busy,
 								icon: 'none'
 							});
 						}
@@ -93,7 +107,7 @@
 				/**是否选择时间*/
 				if (this.request.class_list_id == '' || this.request.class_list_id == 'underfid') {
 					uni.showToast({
-						title: '请选择授课时间',
+						title: this.$t('index').Please_choose_the_teaching_time,
 						icon: 'none'
 					});
 				} else {
@@ -111,12 +125,27 @@
 				});
 			},
 			changeWay(val) {
-				if(this.dateList.length > 0)
-					return;
 				this.$emit('changeRequest', {
 					key: 'people_num',
 					value: val
 				});
+				if (this.dateList.length > 0) {
+					/**清除request class_id*/
+					this.$emit('changeRequest', {
+						key: 'clear_class_id'
+					});
+					let key;
+					let change_request = {
+						teacher_id:this.teacherId,
+						music_sun_id:this.classId,
+						people_num:this.request.people_num
+					}
+					for (key in this.dateList) {
+						change_request.start_time = this.dateList[key].start_time
+						change_request.end_time   = this.dateList[key].stop_time
+						this.addClassTime(change_request, key)
+					}
+				}
 			},
 			/**获取时长*/
 			getTimeList(classId) {
@@ -135,8 +164,9 @@
 			timeDate(item) {
 				let date_s = new Date(Math.round(item.start_time * 1000));
 				let date_e = new Date(Math.round(item.stop_time * 1000));
-				item.date = date_s.getFullYear() + '年' + this.number_(date_s.getMonth() + 1) + '月' + this.number_(date_s.getDate()) +
-					'日';
+				item.date = date_s.getFullYear() + this.$t('index').year + this.number_(date_s.getMonth() + 1) + this.$t('index').month +
+					this.number_(date_s.getDate()) +
+					this.$t('index').day;
 				item.star = this.number_(date_s.getHours()) + ':' + this.number_(date_s.getMinutes());
 				item.end = this.number_(date_e.getHours()) + ':' + this.number_(date_e.getMinutes());
 				item.time = (item.stop_time - item.start_time) / 60;
@@ -152,6 +182,13 @@
 		},
 		created() {
 			this.getTimeList(this.classId);
+			/**获取可视窗口*/
+			uni.getSystemInfo({
+				success: function (res) {
+					this.bottomTop = res.windowHeight - 50
+					console.log(this.bottomTop)
+				}
+			});
 		}
 	};
 </script>
@@ -160,7 +197,7 @@
 	.lesson_content {
 		.sign_up {
 			text-align: center;
-			margin-top: 40upx;
+			//margin-top: 40upx;
 			display: inline-block;
 			width: 100%;
 			line-height: 100upx;
@@ -169,6 +206,8 @@
 			font-family: PingFangSC-Medium;
 			font-weight: 500;
 			color: rgba(51, 51, 51, 1);
+			position: fixed;
+			bottom: 0;
 		}
 
 		.teacher_class {
