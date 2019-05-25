@@ -11,23 +11,17 @@
 				<span></span>
 				<span class="info">{{ $t('index').way_tip }}</span>
 			</p>
-			<!-- <p class="vipMessage">
+			<p v-if='isVip==1' class="vipMessage">
 				<span>{{ $t('index').vip_tip }}</span>
 				<span>{{ $t('index').open_vip }}</span>
-			</p> -->
+			</p>
 			<text class="teacher_class">{{ $t('index').Duration_course }}</text>
 		</view>
 		<view style="margin-bottom: 200px;">
-			<selectTime :timeList="timeList" 
-						:flag="orderShow" 
-						:year="(new Date()).getFullYear()" 
-						:dateList="dateList" 
-						@selctTime="selctTime"
-						@confirmTime="confirmTime"></selectTime>
+			<selectTime :timeList="timeList" :flag="orderShow" :year="(new Date()).getFullYear()" :dateList="dateList"
+			 @selctTime="selctTime" @confirmTime="confirmTime"></selectTime>
 		</view>
-		<span v-if="!orderShow" 
-				class="sign_up" 
-				@click="createOrder">{{ $t('index').next }}</span>
+		<span v-if="!orderShow" class="sign_up" @click="createOrder">{{ $t('index').next }}</span>
 	</div>
 </template>
 
@@ -40,6 +34,7 @@
 			selectTime
 		},
 		props: {
+			isVip: String,
 			classId: Number,
 			lessonType: {
 				type: String,
@@ -91,7 +86,7 @@
 								key: 'class_list_id',
 								value: timeItem.id,
 								price: timeItem.price,
-								change_index:change_index
+								change_index: change_index
 							};
 							this.$emit('changeRequest', change);
 						} else {
@@ -136,13 +131,13 @@
 					});
 					let key;
 					let change_request = {
-						teacher_id:this.teacherId,
-						music_sun_id:this.classId,
-						people_num:this.request.people_num
+						teacher_id: this.teacherId,
+						music_sun_id: this.classId,
+						people_num: this.request.people_num
 					}
 					for (key in this.dateList) {
 						change_request.start_time = this.dateList[key].start_time
-						change_request.end_time   = this.dateList[key].stop_time
+						change_request.end_time = this.dateList[key].stop_time
 						this.addClassTime(change_request, key)
 					}
 				}
@@ -184,7 +179,7 @@
 			this.getTimeList(this.classId);
 			/**获取可视窗口*/
 			uni.getSystemInfo({
-				success: function (res) {
+				success: function(res) {
 					this.bottomTop = res.windowHeight - 50
 					console.log(this.bottomTop)
 				}
