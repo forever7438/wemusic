@@ -1,8 +1,8 @@
 <template>
 	<view>
-		<view class="top" @click="backEvent">
+		<!-- <view class="top" @click="backEvent">
 			<image src="/static/img/nav_back_light.png"></image>
-		</view>
+		</view> -->
 		<lessonHead headType="lessonDetail" :star="Number(courseInfo.star)" :title="courseInfo.name" :mixTime="courseInfo.mix_time_type"
 		 :maxTime="courseInfo.max_time_type" :content="courseInfo.content || $t('index').NoIntroduction"></lessonHead>
 		<teacherList :listInfo="selectFlag ? selectItem : listInfo" :selectFlag="selectFlag" :title="$t('index').Choose_teacher"
@@ -53,6 +53,7 @@
 			};
 		},
 		onLoad(obj) {
+			console.log(obj)
 			this.musicId = obj.musicId;
 			this.classId = obj.musicSunId;
 			this.getChoiseTeacherInfo(obj.musicSunId);
@@ -70,6 +71,22 @@
 			if (this.selectFlag) return
 			this.page++
 			this.getChoiseTeacherInfo(this.classId, true)
+		},
+		onBackPress() {  
+			console.log(this.selectFlag)
+			console.log(this.orderShow)
+			if (this.selectFlag) {
+				if (this.orderShow) {
+					this.orderShow = false;
+				} else {
+					this.selectFlag = false;
+// 					console.log('open')
+// 					uni.navigateTo({
+// 						url: '/pages/choiceTeacher/choiceTeacher?musicId='+this.musicId+'&musicSunId='+this.musicSunId
+// 					});
+				}
+				return true
+			}
 		},
 		methods: {
 			//获取当前用户信息
@@ -90,7 +107,7 @@
 					} else {
 						this.selectFlag = false;
 						uni.navigateTo({
-							url: '/pages/choiceTeacher/choiceTeacher'
+							url: '/pages/choiceTeacher/choiceTeacher?musicId='+this.musicId+'&musicSunId='+this.musicSunId
 						});
 					}
 				} else {

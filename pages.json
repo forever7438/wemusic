@@ -387,7 +387,9 @@
 			"style": {
 				"enablePullDownRefresh": true,
 				"app-plus": {
-					"titleNView": false
+					"titleNView": {
+						"type": "transparent"
+					}
 				}
 			}
 		},

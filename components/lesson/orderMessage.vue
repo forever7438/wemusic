@@ -165,7 +165,6 @@
 		font-weight: 400;
 		color: rgba(51, 51, 51, 1);
 		margin-bottom: 120upx;
-
 		.text_l {
 			font-size: 48upx;
 			font-weight: 500;

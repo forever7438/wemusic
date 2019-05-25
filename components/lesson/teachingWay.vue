@@ -1,5 +1,5 @@
 <template>
-	<div class="lesson_content">
+	<div class="lesson_content" :class="{orderShow:!orderShow}">
 		<view v-if="!orderShow">
 			<text class="teacher_class">{{ $t('index').Choosing_Teaching_Mode }}</text>
 			<view class="way_meun">
@@ -17,7 +17,7 @@
 			</p>
 			<text class="teacher_class">{{ $t('index').Duration_course }}</text>
 		</view>
-		<view style="margin-bottom: 200px;">
+		<view>
 			<selectTime :timeList="timeList" :flag="orderShow" :year="(new Date()).getFullYear()" :dateList="dateList"
 			 @selctTime="selctTime" @confirmTime="confirmTime"></selectTime>
 		</view>
@@ -189,6 +189,9 @@
 </script>
 
 <style lang="less" scoped>
+	.orderShow{
+		padding-bottom: 120upx;
+	}
 	.lesson_content {
 		.sign_up {
 			text-align: center;
