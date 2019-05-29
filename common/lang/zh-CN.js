@@ -130,7 +130,8 @@ let zhCN = {
 	Switching:'切换授课方式将重新选择时间',
 	Start_time_should:'开始时间不得小于当前时间哦',
 	The_teacher_is_busy:'这段时间老师很忙',
-	Please_choose_the_teaching_time:'请选择授课时间'
+	Please_choose_the_teaching_time:'请选择授课时间',
+	Non_vip_only_one_class:'非vip会员只能预约一节课程'
 }
 
 export {

@@ -12,11 +12,26 @@
 			<p class="time">{{ item.star + ' - ' + item.end }}</p>
 			<p class="duration">{{ $t('index').Duration_course }} {{ item.time }} min</p>
 		</li>
-		<li v-if="!flag && addshow" class="add_time" @tap="toggleTab"><img src="/static/img/tianjiashichang@2x.png" /></li>
-		<w-picker mode="dateTime" :defaultVal="date" :startYear="(new Date().getFullYear()).toString()" themeColor="#007AFF"
-		 @confirm="DateConfirm" ref="picker"></w-picker>
-		<mpvue-picker themeColor="#007AFF" ref="mpvuePicker" mode="selector" :titleInfo="$t('index').Duration_course"
-		 :deepLength="1" :pickerValueDefault="[0]" @onConfirm="TimeConfirm" @onCancel="onCancel" :pickerValueArray="timeList"></mpvue-picker>
+		<li v-if="!flag && addshow" 
+			class="add_time" 
+			@tap="toggleTab">
+			<img src="/static/img/tianjiashichang@2x.png" />
+		</li>
+		<w-picker 	mode="dateTime" 
+					:defaultVal="date" 
+					:startYear="(new Date().getFullYear()).toString()" 
+					themeColor="#007AFF"
+					@confirm="DateConfirm" 
+					ref="picker"></w-picker>
+		<mpvue-picker 	themeColor="#007AFF" 
+						ref="mpvuePicker" 
+						mode="selector" 
+						:titleInfo="$t('index').Duration_course"
+						:deepLength="1" 
+						:pickerValueDefault="[0]" 
+						@onConfirm="TimeConfirm" 
+						@onCancel="onCancel" 
+						:pickerValueArray="timeList"></mpvue-picker>
 	</ul>
 </template>
 
@@ -43,6 +58,7 @@
 			this.date = container;
 		},
 		props: {
+			isVip: String,
 			flag: Boolean, //事件开关
 			timeList: Array,
 			dateList: Array,
@@ -65,6 +81,13 @@
 					.replace('T', ' ');
 			},
 			toggleTab() {
+				if(this.isVip == '1' && this.dateList.length > 0){
+					uni.showToast({
+						title: this.$t('index').Non_vip_only_one_class,
+						icon: 'none'
+					});
+					return
+				}
 				this.$refs.picker.show();
 			},
 			DateConfirm(val) {
