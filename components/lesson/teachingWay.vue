@@ -31,6 +31,7 @@
 </template>
 
 <script>
+	import Vue from 'vue'
 	import startclass from '../starclass.vue';
 	import selectTime from '../item/selectTime.vue';
 	export default {
@@ -83,7 +84,8 @@
 						if (res.data.body === 'success') {
 							let timeItem = this.timeDate(res.data.data);
 							if (change_index > -1) {
-								Vue.set(this.dateList, change_index, newValue)
+								Vue.set(this.dateList, change_index, timeItem)
+								console.log(this.dateList)
 							} else {
 								this.dateList.push(timeItem);
 							}
@@ -99,6 +101,38 @@
 								title: this.$t('index').The_teacher_is_busy,
 								icon: 'none'
 							});
+						}
+					}
+				});
+			},
+			delClass(){
+				var data = {
+					class_id:this.request.class_list_id.join(',')
+				}
+				console.log(this.request)
+				this.ajax({
+					url: 'userorder/delete_class',
+					data: data,
+					success: res => {
+						console.log(res)
+						if (res.data.body === 'success') {
+							/**清除request class_id*/
+							this.$emit('changeRequest', {
+								key: 'clear_class_id'
+							});
+							let key;
+							let change_request = {
+								teacher_id: this.teacherId,
+								music_sun_id: this.classId,
+								people_num: this.request.people_num
+							}
+							for (key in this.dateList) {
+								change_request.start_time = this.dateList[key].start_time
+								change_request.end_time = this.dateList[key].stop_time
+								this.addClassTime(change_request, key)
+							}
+						} else {
+							console.log('1111')
 						}
 					}
 				});
@@ -130,21 +164,7 @@
 					value: val
 				});
 				if (this.dateList.length > 0) {
-					/**清除request class_id*/
-					this.$emit('changeRequest', {
-						key: 'clear_class_id'
-					});
-					let key;
-					let change_request = {
-						teacher_id: this.teacherId,
-						music_sun_id: this.classId,
-						people_num: this.request.people_num
-					}
-					for (key in this.dateList) {
-						change_request.start_time = this.dateList[key].start_time
-						change_request.end_time = this.dateList[key].stop_time
-						this.addClassTime(change_request, key)
-					}
+					this.delClass();
 				}
 			},
 			/**获取时长*/

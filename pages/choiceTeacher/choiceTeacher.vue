@@ -67,14 +67,11 @@
 			this.getChoiseTeacherInfo(this.classId)
 		},
 		onReachBottom() {
-			console.log(this.selectFlag)
 			if (this.selectFlag) return
 			this.page++
 			this.getChoiseTeacherInfo(this.classId, true)
 		},
 		onBackPress() {  
-			console.log(this.selectFlag)
-			console.log(this.orderShow)
 			if (this.selectFlag) {
 				if (this.orderShow) {
 					this.orderShow = false;
@@ -141,7 +138,7 @@
 				});
 			},
 			changeRequest(data) {
-
+				console.log(data)
 				switch (data.key) {
 					case 'people_num':
 						this.request.people_num = data.value;
@@ -178,6 +175,7 @@
 						this.request.class_list_id = [];
 						break;
 				}
+				console.log(this.request)
 			},
 			/**获取优惠券*/
 			getCoupomList() {
