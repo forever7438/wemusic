@@ -43,6 +43,7 @@
 		</ul>
 		<web-view
 			v-if="flag"
+			style="display: flex;top:0"
 			:src="
 				'/hybrid/html/pay.html?cmd=' +
 					form.cmd +

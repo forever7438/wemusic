@@ -27,8 +27,55 @@
 			</span>
 			<span type="button" class="pay-btn" @click="pay(classId)">支付</span>
 		</p>
-		<mpvue-picker themeColor="#007AFF" ref="mpvuePicker" mode="selector" titleInfo="选择优惠券" :deepLength="1"
-		 :pickerValueDefault="[0]" @onConfirm="onConfirm" @onCancel="onCancel" :coupomfalg="true" :pickerValueArray="coupomList"></mpvue-picker>
+		<mpvue-picker 	themeColor="#007AFF" 
+						ref="mpvuePicker" 
+						mode="selector" 
+						titleInfo="选择优惠券" 
+						:deepLength="1"
+						:pickerValueDefault="[0]" 
+						@onConfirm="onConfirm"
+						@onCancel="onCancel" 
+						:coupomfalg="true" 
+						:pickerValueArray="coupomList"></mpvue-picker>
+						
+		<web-view
+			style="display: fixed;top: 0;"
+			v-if="flag"
+			:src="
+				'/hybrid/html/pay.html?cmd=' +
+					form.cmd +
+					'&url=' +
+					form.url +
+					'&business=' +
+					form.business +
+					'&item_name=' +
+					form.item_name +
+					'&item_number=' +
+					form.item_number +
+					'&amount=' +
+					form.amount +
+					'&currency_code=' +
+					form.currency_code +
+					'&return=' +
+					form.return +
+					'&notify_url=' +
+					form.notify_url +
+					'&cancel_return=' +
+					form.cancel_return +
+					'&invoice=' +
+					form.invoice +
+					'&charset=' +
+					form.charset +
+					'&no_shipping=' +
+					form.no_shipping +
+					'&no_note=' +
+					form.no_note +
+					'&rm=' +
+					form.rm
+			"
+			@message="getMessage"
+		></web-view>
+		
 	</div>
 </template>
 
@@ -51,7 +98,9 @@
 		},
 		data() {
 			return {
-				way: []
+				way: [],
+				flag:false,
+				form: {}
 			};
 		},
 		created() {
@@ -122,10 +171,8 @@
 					success: res => {
 						console.log(this.request)
 						if (res.data.body === 'success') {
-							uni.showToast({
-								title: 'Success',
-								icon: 'none'
-							});
+							this.form = res.data.data;
+							this.flag = true;
 						}else{
 							uni.showToast({
 								title: res.data.msg,
