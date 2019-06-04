@@ -3,14 +3,30 @@
 		<!-- <view class="top" @click="backEvent">
 			<image src="/static/img/nav_back_light.png"></image>
 		</view> -->
-		<lessonHead headType="lessonDetail" :star="Number(courseInfo.star)" :title="courseInfo.name" :mixTime="courseInfo.mix_time_type"
-		 :maxTime="courseInfo.max_time_type" :content="courseInfo.content || $t('index').NoIntroduction"></lessonHead>
-		<teacherList :listInfo="selectFlag ? selectItem : listInfo" :selectFlag="selectFlag" :title="$t('index').Choose_teacher"
-		 @selectFunction="select" lessonType="lessonCopy"></teacherList>
-		<teachingWay v-if="selectFlag" :orderShow="orderShow" :classId="Number(classId)" :request="request" @changeRequest="changeRequest"
-		 :teacherId="teacherId" :isVip='isVip'></teachingWay>
-		<orderMessage v-if="orderShow" :request="request" :coupomTitle="coupomTitle" :classId="Number(classId)" :coupomList="coupomList"
-		 @changeRequest="changeRequest"></orderMessage>
+		<lessonHead headType="lessonDetail" 
+					:star="Number(courseInfo.star)" 
+					:title="courseInfo.name" 
+					:mixTime="courseInfo.mix_time_type"
+					:maxTime="courseInfo.max_time_type" 
+					:content="courseInfo.content || $t('index').NoIntroduction"></lessonHead>
+		<teacherList :listInfo="selectFlag ? selectItem : listInfo" :selectFlag="selectFlag" 
+					 :title="$t('index').Choose_teacher"
+					 @selectFunction="select" 
+					 lessonType="lessonCopy"></teacherList>
+		<teachingWay v-if="selectFlag" 
+					 :orderShow="orderShow" 
+					 :classId="Number(classId)" 
+					 :request="request" 
+					 @changeRequest="changeRequest"
+					 :teacherId="teacherId" 
+					 :isVip='isVip'></teachingWay>
+		<orderMessage v-if="orderShow" 
+					  :isVip='isVip'
+					  :request="request" 
+				      :coupomTitle="coupomTitle" 
+					  :classId="Number(classId)" 
+					  :coupomList="coupomList"
+					  @changeRequest="changeRequest"></orderMessage>
 	</view>
 </template>
 

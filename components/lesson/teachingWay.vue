@@ -132,7 +132,10 @@
 								this.addClassTime(change_request, key)
 							}
 						} else {
-							console.log('1111')
+							uni.showToast({
+								title: 'Network Error',
+								icon: 'none'
+							});
 						}
 					}
 				});

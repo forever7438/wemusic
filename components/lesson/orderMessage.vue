@@ -39,6 +39,7 @@
 			mpvuePicker
 		},
 		props: {
+			isVip: String,
 			request: Object,
 			coupomList: Array,
 			coupomTitle: String,
@@ -110,7 +111,34 @@
 				console.log(this.coupomList);
 				this.$refs.mpvuePicker.show();
 			},
+			noVipPay(){
+				/*非会员单独支付一节课*/
+				let data = {
+					class_list_id: this.request.class_list_id.join(','),
+				}
+				this.ajax({
+					url: 'userorder/one_add_order',
+					data: data,
+					success: res => {
+						console.log(this.request)
+						if (res.data.body === 'success') {
+							uni.showToast({
+								title: 'Success',
+								icon: 'none'
+							});
+						}else{
+							uni.showToast({
+								title: res.data.msg,
+								icon: 'none'
+							});
+						}
+					}
+				});
+			},
 			pay(classId) {
+				if(this.isVip == '1'){
+					return this.noVipPay();
+				}
 				let data = {}
 				if(this.invite){
 					data = {
