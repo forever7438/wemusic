@@ -260,11 +260,12 @@
 					url: '/pages/setting/setting'
 				});
 			}
-			// else {
-			// 	uni.navigateTo({
-			// 		url: '/pages/message/message'
-			// 	});
-			// }
+			else {
+				
+				uni.navigateTo({
+					url: '/pages/message/message'
+				});
+			}
 		}
 	};
 </script>

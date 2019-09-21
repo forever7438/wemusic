@@ -8,7 +8,8 @@ const ApiUrl = '/api/';
 const ApiUrl = 'http://wemusic.ikenweb.com/api/';
 // #endif
 const errorImg01 = 'this.src="/static/img/wemusic.jpg"';
-
+//图片加载url
+const imgUrl = 'http://wemusic.ikenweb.com';
 //封装网络请求
 const ajax = (opt) => {
 	opt = opt || {};
@@ -132,6 +133,7 @@ function getImgToBase64(url, callback) { //将图片转换为Base64
 	img.src = url;
 }
 export {
+	imgUrl,
 	ApiUrl,
 	ajax,
 	errorImg01,

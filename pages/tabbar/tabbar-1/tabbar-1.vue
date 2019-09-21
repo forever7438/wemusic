@@ -2,7 +2,8 @@
 	<view class="class_list">
 		<navigator hover-class="none" style="height: 268upx;margin-bottom: 30upx;" v-for="(item, index) in musicList" :key="index"
 		 :url="'/pages/lessonCopy/lessonCopy?musicId=' + item.id">
-			<image src="../../../static/img/wemusic.jpg"></image>
+			<image v-if="item.photo" :src="item.photo | imgformat"></image>
+			<image v-else src="../../../static/img/wemusic.jpg"></image>
 		</navigator>
 		<!-- <navigator url="/pages/myCode/myCode">我的邀请码</navigator>
 		<navigator url="/pages/tabbar/tabbar-5/tabbar-5">工资详情</navigator>

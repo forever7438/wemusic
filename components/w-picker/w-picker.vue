@@ -103,7 +103,7 @@
 			startYear: {
 				type: String,
 				default () {
-					return '1970';
+					return '1930';
 				}
 			},
 			endYear: {

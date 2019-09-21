@@ -1,6 +1,6 @@
 <template>
 	<view class="lesson_copy">
-		<lessonHead v-if="flag" :title="musicInfo.info.name" headType="lessonCopy" :content="musicInfo.info.content || $t('index').NoIntroduction"></lessonHead>
+		<lessonHead v-if="flag" :photo="musicInfo.info.photo" :title="musicInfo.info.name" headType="lessonCopy" :content="musicInfo.info.content || $t('index').NoIntroduction"></lessonHead>
 		<view class="all_lesson">
 			<view v-if="flag">
 				<text class="lesson_tips">{{ $t('index').allCourses }}</text>

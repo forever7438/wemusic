@@ -1,5 +1,5 @@
 <template>
-	<view class="lesson_contentss">
+	<view class="lesson_contentss" :style="`background-image:url(http://wemusic.ikenweb.com${photo})`">
 		<view class="lesson_shade">
 			<text class="lesson_name">{{ title }}</text>
 			<view style="margin-top: 10upx;"><text class="lesson_names" v-if="headType === 'lessonCopy'">Guitar</text></view>
@@ -25,6 +25,7 @@
 			star: Number,
 			headType: String,
 			title: String,
+			photo: String,
 			content: String,
 			maxTime: String,
 			mixTime: String
@@ -41,7 +42,7 @@
 	.lesson_contentss {
 		width: 100%;
 		height: 500upx;
-		background: url('../../static/img/demo.jpg') no-repeat center/100%;
+		background: no-repeat center/cover;
 
 		.lesson_shade {
 			width: 100%;

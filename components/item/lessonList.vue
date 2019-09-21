@@ -3,9 +3,9 @@
 		<ul v-if="listInfo.length">
 			<li v-for="(item, index) in listInfo" :key="index">
 				<navigator hover-class="none" v-if="lessonType === 'lessonCopy'" :url="'/pages/lessonDetail/lessonDetail?lessonId=' + item.id">
-					<image :src="item.class_photo || image"></image>
+					<image :src="item.photo || image"></image>
 				</navigator>
-				<image v-else :src="item.class_photo || image"></image>
+				<image v-else :src="item.photo || image"></image>
 				<div class="lesson_messgae">
 					<p class="lesson_title">{{ item.class_name || item.name }}</p>
 					<startclass :star="Number(item.star)" starColor="#666666" v-if="lessonType === 'lessonCopy' || lessonType === 'teacherDetail'"></startclass>
