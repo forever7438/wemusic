@@ -46,9 +46,14 @@ export default {
 	},
 	created() {
 		let myDate = new Date();
-		let container = [myDate.getFullYear(), myDate.getMonth() + 1, myDate.getDate(), myDate.getHours(), myDate.getMinutes()];
+		let container = [
+			myDate.getFullYear().toString(),
+			myDate.getMonth() + 1 < 10 ? `0${myDate.getMonth() + 1}` : (myDate.getMonth() + 1).toString(),
+			myDate.getDate() < 10 ? `0${myDate.getDate()}` : myDate.getDate().toString(),
+			myDate.getHours() < 10 ? `0${myDate.getHours()}` : myDate.getHours().toString(),
+			myDate.getMinutes() < 10 ? `0${myDate.getMinutes()}` : myDate.getMinutes().toString()
+		];
 		this.date = container;
-		console.log(this.date);
 	},
 	props: {
 		isVip: String,
