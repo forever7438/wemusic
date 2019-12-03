@@ -71,7 +71,7 @@
 
 <style lang="less" scoped>
 	.lesson_content {
-		padding-top: 60upx;
+		// padding-top: 60upx;
 
 		ul {
 			li {

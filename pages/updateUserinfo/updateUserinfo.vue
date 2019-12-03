@@ -19,9 +19,8 @@
 			<li>
 				<span>性别</span>
 				<view class="choose_date">
-					<picker @change="bindPickerChangeSex" :value="index" :range="array">
-						<text>{{ array[index] }}</text>
-					</picker>
+					<text @tap="toggleTabSex">{{ sex }}</text>
+					<w-picker mode="selector" :defaultVal="[sex]" @confirm="onConfirmSex" ref="pickerSex" :selectList="array"></w-picker>
 					<uni-icon type="forward" size="20"></uni-icon>
 				</view>
 			</li>
@@ -36,9 +35,8 @@
 			<li>
 				<span>兴趣</span>
 				<view class="choose_date">
-					<picker @change="bindPickerChangeInterest" :value="indexs" :range="arrays">
-						<text>{{ arrays[indexs] }}</text>
-					</picker>
+					<text @tap="toggleTabInterest">{{ interest }}</text>
+					<w-picker mode="selector" :defaultVal="[interest]" @confirm="onConfirmInterest" ref="pickerInterest" :selectList="arrays"></w-picker>
 					<uni-icon type="forward" size="20"></uni-icon>
 				</view>
 			</li>
@@ -46,8 +44,8 @@
 				<span>住址</span>
 				<view class="choose_date">
 					<text @click="toggleTabAdress">{{ address }}</text>
-					<uni-icon type="forward" size="20"></uni-icon>
 					<w-picker mode="region" title="选择住址" @confirm="onConfirmAdress" ref="pickerAdress"></w-picker>
+					<uni-icon type="forward" size="20"></uni-icon>
 				</view>
 			</li>
 		</ul>
@@ -70,14 +68,12 @@ export default {
 			userInfo: {},
 			show: false,
 			userImage: '',
-			array: ['男', '女'],
-			arrays: [],
-			index: '',
-			indexs: 0,
+			array: [{ label: '男', value: 0 }, { label: '女', value: 1 }],
+			arrays: [{ label: '吃饭', value: 1 }, { label: '睡觉', value: 2 }, { label: '斗地主', value: 3 }, { label: '打豆豆', value: 4 }],
 			date: '',
 			userName: '',
-			sex: '',
-			interest: '',
+			sex: [0],
+			interest: [1],
 			address: ''
 		};
 	},
@@ -154,17 +150,8 @@ export default {
 				success: res => {
 					if (res.data.body === 'success') {
 						this.userInfo = res.data.data;
-						this.index = this.userInfo.sex;
 						this.sex = this.userInfo.sex;
 						this.interest = this.userInfo.interest;
-						switch (this.userInfo.sex) {
-							case '2':
-								this.index = 1;
-								break;
-							default:
-								this.index = 0;
-						}
-						this.indexs = this.userInfo.interest || 0;
 						this.userName = this.userInfo.name;
 						this.userImage = this.userInfo.photo || this.userInfo.j_photo;
 						this.date = getDate(this.userInfo.birthday * 1000);
@@ -177,21 +164,30 @@ export default {
 				}
 			});
 		},
+
+		toggleTabSex() {
+			this.$refs.pickerSex.show();
+		},
+		onConfirmSex(val) {
+			this.sex = val.result;
+		},
+		toggleTabInterest() {
+			this.$refs.pickerInterest.show();
+		},
+		onConfirmInterest(val) {
+			this.interest = val.result;
+		},
 		toggleTabDate() {
 			this.$refs.pickerDate.show();
 		},
 		onConfirmDate(val) {
-			this.date = `${val[0]}-${val[1]}-${val[2]}`;
+			this.date = val.result;
 		},
 		toggleTabAdress() {
 			this.$refs.pickerAdress.show();
 		},
 		onConfirmAdress(val) {
-			this.address = `${val[0]}-${val[1]}-${val[2]}`;
-		},
-		bindPickerChangeSex: function(e) {
-			this.index = e.target.value;
-			e.target.value == 0 ? (this.sex = 1) : (this.sex = 2);
+			this.address = `${val.checkArr[0]}-${val.checkArr[1]}-${val.checkArr[2]}`;
 		},
 		bindPickerChangeInterest: function(e) {
 			this.indexs = e.target.value;

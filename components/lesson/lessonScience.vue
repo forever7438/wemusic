@@ -2,16 +2,22 @@
 	<view class="lesson_science">
 		<text class="teacher_class">{{ title }}</text>
 		<view class="lesson_image">
-			<image :src="science[1] || image"></image>
+			<image v-if="science[0]" :src="science[0] | imgformat"></image>
+			<image v-else :src="image"></image>
 			<view class="">
-				<image :src="science[2] || image"></image>
-				<image :src="science[3] || image"></image>
+				<image v-if="science[1]" :src="science[1] | imgformat"></image>
+				<image v-else :src="image"></image>
+				<image v-if="science[2]" :src="science[2] | imgformat"></image>
+				<image v-else :src="image"></image>
 			</view>
 		</view>
 		<view class="lesson_images">
-			<image :src="science[4] || image"></image>
-			<image :src="science[5] || image"></image>
-			<image :src="science[6] || image"></image>
+			<image v-if="science[3]" :src="science[3] | imgformat"></image>
+			<image v-else :src="image"></image>
+			<image v-if="science[4]" :src="science[4] | imgformat"></image>
+			<image v-else :src="image"></image>
+			<image v-if="science[5]" :src="science[5] | imgformat"></image>
+			<image v-else :src="image"></image>
 		</view>
 	</view>
 </template>

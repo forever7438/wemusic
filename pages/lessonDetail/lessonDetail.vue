@@ -5,6 +5,7 @@
 				headType="lessonDetail"
 				:star="Number(musicIndexInfo.star)"
 				:title="musicIndexInfo.name"
+				:photo="musicIndexInfo.photo"
 				:maxTime="musicIndexInfo.max_time_type"
 				:mixTime="musicIndexInfo.mix_time_type"
 				:content="musicIndexInfo.content || $t('index').NoIntroduction"
@@ -73,7 +74,7 @@ export default {
 			this.ajax({
 				url: 'music/index_info',
 				data: {
-					music_id: lessonId
+					class_id: lessonId
 				},
 				method: 'post',
 				success: res => {
@@ -93,7 +94,7 @@ export default {
 			this.ajax({
 				url: 'music/teacher_list',
 				data: {
-					music_id: musicSunId,
+					class_id: musicSunId,
 					list: 0,
 					val: 12
 				},
@@ -109,7 +110,7 @@ export default {
 				url: 'music/assess_list',
 				data: {
 					type: 0,
-					id: id,
+					class_id: id,
 					list: 0,
 					val: 12
 				},

@@ -11,7 +11,7 @@
 						 :key="index">
 				<view class="teacher-item">
 					<navigator hover-class="none" :url="'/pages/teacherDetail/teacherDetail?teacherId='+item.id" style="height: 120upx;">
-						<image :src="item.photo || image"></image>
+						<image :src="item.photo | imgformat"></image>
 					</navigator>
 					<text class="teacher_name">{{item.name}}</text>
 					<startclass :star="Number(item.star)" starColor="#666666"></startclass>
