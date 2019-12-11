@@ -8,10 +8,10 @@
 ._s {
 	text-decoration: none;
 }
-uni-image>._img {
+uni-image > ._img {
 	opacity: 1;
 }
-uni-tabbar__icon__diff{
+uni-tabbar__icon__diff {
 	width: 48rpx !important;
 	height: 48rpx;
 }

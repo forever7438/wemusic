@@ -187,6 +187,104 @@
   color: #ad8953;
   cursor: pointer;
 }
+.content_student .default_message {
+  height: 120rpx;
+  margin-bottom: 110rpx;
+  border-radius: 16rpx;
+  padding-top: 0rpx;
+}
+.content_student .default_message .user_info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.content_student .default_message .user_info image {
+  width: 92rpx;
+  height: 92rpx;
+  border: 4rpx solid #fff;
+  border-radius: 50%;
+}
+.content_student .default_message .user_info view {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  margin-left: 18rpx;
+}
+.content_student .default_message .user_info view .view_name {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+.content_student .default_message .user_info view .user_name {
+  font-size: 36rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #000000;
+  display: inline-block;
+  padding-bottom: 22rpx;
+}
+.content_student .default_message .user_info view .user_type {
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #666666;
+}
+.content_student .default_message .add_vip {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  height: 100rpx;
+  margin-top: 10rpx;
+  background: -o-linear-gradient(315deg, #d9b379 0%, #a27f4a 100%);
+  background: linear-gradient(135deg, #d9b379 0%, #a27f4a 100%);
+  border-radius: 16rpx;
+}
+.content_student .default_message .add_vip image {
+  width: 32rpx;
+  height: 30rpx;
+}
+.content_student .default_message .add_vip text {
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+}
+.content_student .default_message .add_vip text:nth-of-type(1) {
+  color: #4d3716;
+}
+.content_student .default_message .add_vip text:nth-of-type(2) {
+  margin-right: -40rpx;
+  color: #f5d4a4;
+}
 .content_student .class_list {
   display: -webkit-box;
   display: -webkit-flex;
@@ -199,7 +297,7 @@
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-  margin-top: 60rpx;
+  margin-top: 20rpx;
 }
 .content_student .class_list view {
   display: -webkit-box;
@@ -230,7 +328,7 @@
   line-height: 28rpx;
 }
 .content_student .user_meun {
-  padding: 60rpx 15rpx 0 15rpx;
+  padding: 10rpx 15rpx 0 15rpx;
 }
 .content_student .user_meun view {
   display: -webkit-box;

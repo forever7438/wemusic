@@ -88,7 +88,7 @@ export default {
 	ul {
 		li {
 			display: flex;
-			justify-content: space-around;
+			justify-content: start;
 			margin-top: 30upx;
 			margin-left: 15upx;
 			margin-right: 15upx;

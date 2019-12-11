@@ -47,9 +47,9 @@
     "pages/forgetPass/forgetPass",
     "pages/code/code",
     "pages/registrationSuccess/registrationSuccess",
-    "pages/orderInfo/orderInfo"
+    "pages/orderInfo/orderInfo",
+    "pages/codeSuccessTeach/codeSuccessTeach"
   ],
-  "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "",
@@ -59,11 +59,13 @@
   "networkTimeout": {
     "uploadFile": 86400000
   },
+  "nvueCompiler": "uni-app",
+  "renderer": "auto",
   "splashscreen": {
     "alwaysShowBeforeRender": true,
     "autoclose": false
   },
-  "appname": "weMusic",
-  "compilerVersion": "1.9.2",
+  "appname": "WeMusic",
+  "compilerVersion": "2.4.2",
   "usingComponents": {}
 }

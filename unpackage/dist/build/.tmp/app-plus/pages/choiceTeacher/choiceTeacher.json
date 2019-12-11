@@ -1,6 +1,8 @@
 {
   "enablePullDownRefresh": true,
-  "titleNView": false,
+  "titleNView": {
+    "type": "transparent"
+  },
   "usingComponents": {
     "lesson-head": "/components/lesson/lessonHead",
     "teacher-list": "/components/item/teacherList",

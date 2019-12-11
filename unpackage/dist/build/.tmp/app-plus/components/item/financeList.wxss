@@ -44,46 +44,33 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.finance_list .finance_list_item .finance_content .finance_money text:nth-of-type(1) {
-  margin-right: 30rpx;
-  font-size: 48rpx;
-  font-family: DINAlternate-Bold;
-  font-weight: bold;
-  color: #333333;
-}
-.finance_list .finance_list_item .finance_content .finance_money text:nth-of-type(2) {
-  font-size: 24rpx;
-  font-family: PingFangSC-Regular;
-  font-weight: 400;
-  color: #333333;
-}
-.finance_list .finance_list_item .finance_content .fun-tag {
+.finance_list .finance_list_item .finance_content .finance_money .fun-tag1 {
   position: absolute !important;
   top: -40rpx;
-  right: -82rpx;
+  right: -20rpx;
   position: relative;
   width: 0;
   height: 0;
   border-width: 0 80rpx 80rpx;
   border-style: solid;
-  border-color: transparent transparent #ff4040;
+  border-color: transparent transparent #FABE2A;
   /*透明 透明  灰*/
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-.finance_list .finance_list_item .finance_content .fun-tag::before {
+.finance_list .finance_list_item .finance_content .finance_money .fun-tag1::before {
   font-size: 24rpx;
   position: absolute;
   top: 14rpx;
   right: -14rpx;
   color: #fff;
-  content: '\672A\53D1\9001';
+  content: '\8FDB\884C\4E2D';
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
-.finance_list .finance_list_item .finance_content .fun-tag::after {
+.finance_list .finance_list_item .finance_content .finance_money .fun-tag1::after {
   position: absolute;
   top: -2rpx;
   right: -40rpx;
@@ -97,6 +84,142 @@
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
+}
+.finance_list .finance_list_item .finance_content .finance_money .fun-tag2 {
+  position: absolute !important;
+  top: -40rpx;
+  right: -20rpx;
+  position: relative;
+  width: 0;
+  height: 0;
+  border-width: 0 80rpx 80rpx;
+  border-style: solid;
+  border-color: transparent transparent #93E517;
+  /*透明 透明  灰*/
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.finance_list .finance_list_item .finance_content .finance_money .fun-tag2::before {
+  font-size: 24rpx;
+  position: absolute;
+  top: 14rpx;
+  right: -14rpx;
+  color: #fff;
+  content: '\5DF2\7ED3\6B3E';
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.finance_list .finance_list_item .finance_content .finance_money .fun-tag2::after {
+  position: absolute;
+  top: -2rpx;
+  right: -40rpx;
+  width: 0;
+  height: 0;
+  content: '';
+  border-width: 0 40rpx 40rpx;
+  border-style: solid;
+  border-color: transparent transparent #fff;
+  /*透明 透明  灰*/
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.finance_list .finance_list_item .finance_content .finance_money .fun-tag3 {
+  position: absolute !important;
+  top: -40rpx;
+  right: -20rpx;
+  position: relative;
+  width: 0;
+  height: 0;
+  border-width: 0 80rpx 80rpx;
+  border-style: solid;
+  border-color: transparent transparent #999999;
+  /*透明 透明  灰*/
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.finance_list .finance_list_item .finance_content .finance_money .fun-tag3::before {
+  font-size: 24rpx;
+  position: absolute;
+  top: 14rpx;
+  right: -14rpx;
+  color: #fff;
+  content: '\5DF2\62D2\7EDD';
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.finance_list .finance_list_item .finance_content .finance_money .fun-tag3::after {
+  position: absolute;
+  top: -2rpx;
+  right: -40rpx;
+  width: 0;
+  height: 0;
+  content: '';
+  border-width: 0 40rpx 40rpx;
+  border-style: solid;
+  border-color: transparent transparent #fff;
+  /*透明 透明  灰*/
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.finance_list .finance_list_item .finance_content .finance_money .fun-tag4 {
+  position: absolute !important;
+  top: -40rpx;
+  right: -20rpx;
+  position: relative;
+  width: 0;
+  height: 0;
+  border-width: 0 80rpx 80rpx;
+  border-style: solid;
+  border-color: transparent transparent #ff4040;
+  /*透明 透明  灰*/
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.finance_list .finance_list_item .finance_content .finance_money .fun-tag4::before {
+  font-size: 24rpx;
+  position: absolute;
+  top: 14rpx;
+  right: -14rpx;
+  color: #fff;
+  content: '\672A\7ED3\6B3E';
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.finance_list .finance_list_item .finance_content .finance_money .fun-tag4::after {
+  position: absolute;
+  top: -2rpx;
+  right: -40rpx;
+  width: 0;
+  height: 0;
+  content: '';
+  border-width: 0 40rpx 40rpx;
+  border-style: solid;
+  border-color: transparent transparent #fff;
+  /*透明 透明  灰*/
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.finance_list .finance_list_item .finance_content .finance_money text:nth-of-type(1) {
+  margin-right: 30rpx;
+  font-size: 48rpx;
+  font-family: DINAlternate-Bold;
+  font-weight: bold;
+  color: #333333;
+}
+.finance_list .finance_list_item .finance_content .finance_money text:nth-of-type(2) {
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #333333;
 }
 .finance_list .finance_list_item .finance_option {
   display: -webkit-box;
@@ -141,7 +264,7 @@
 .finance_list .finance_list_item .finance_option button {
   width: 128rpx;
   line-height: 44rpx;
-  margin-right: 0;
+  margin-right: 30rpx;
   font-size: 28rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;

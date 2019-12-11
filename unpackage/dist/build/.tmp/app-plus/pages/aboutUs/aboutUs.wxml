@@ -1,1 +1,1 @@
-<view class="about_us" bind:__l="__l"><block wx:if="{{photo}}"><image src="{{photo}}"></image></block><block wx:if="{{aboutContent}}"><text>{{aboutContent}}</text></block><block wx:else><no-content title="暂无介绍"></no-content></block></view>
+<view class="about_us"><block wx:if="{{photo}}"><image src="{{photo}}"></image></block><block wx:if="{{aboutContent}}"><text>{{aboutContent}}</text></block><block wx:else><no-content vue-id="1" title="暂无介绍" bind:__l="__l"></no-content></block></view>

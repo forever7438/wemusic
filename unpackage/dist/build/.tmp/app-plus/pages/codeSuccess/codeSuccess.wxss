@@ -28,7 +28,7 @@
   color: #333333;
 }
 .code_success .code_content .code_teacher {
-  margin: 20rpx 220rpx;
+  margin: 20rpx 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -42,12 +42,18 @@
           justify-content: space-around;
 }
 .code_success .code_content .code_teacher text:nth-of-type(1) {
+  width: 50%;
   font-size: 28rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;
   color: #333333;
+  text-align: right;
+  padding-right: 15rpx;
 }
 .code_success .code_content .code_teacher text:nth-of-type(2) {
+  text-align: left;
+  padding-left: 15rpx;
+  width: 50%;
   font-size: 28rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
@@ -65,18 +71,20 @@
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-  margin: 0 150rpx;
 }
 .code_success .code_content .code_time text:nth-of-type(1) {
-  width: 112rpx;
+  width: 50%;
   font-size: 28rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;
   color: #333333;
+  text-align: right;
+  padding-right: 15rpx;
 }
 .code_success .code_content .code_time text:nth-of-type(2) {
-  width: 240rpx;
+  width: 50%;
   text-align: left;
+  padding-left: 15rpx;
   font-size: 28rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
@@ -94,15 +102,21 @@
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-  margin: 20rpx 260rpx;
+  margin: 20rpx 0;
 }
 .code_success .code_content .code_message text:nth-of-type(1) {
+  width: 50%;
   font-size: 28rpx;
   font-family: PingFangSC-Regular;
   font-weight: 400;
   color: #000000;
+  text-align: right;
+  padding-right: 15rpx;
 }
 .code_success .code_content .code_message text:nth-of-type(2) {
+  text-align: left;
+  padding-left: 15rpx;
+  width: 50%;
   font-size: 28rpx;
   font-family: PingFangSC-Regular;
   font-weight: 500;

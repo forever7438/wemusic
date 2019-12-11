@@ -1,4 +1,4 @@
-.message_list_content ._ul.data-v-438e4fe6 {
+.message_list_content ._ul.data-v-20244a53 {
   width: auto;
   padding-left: 0;
   display: -webkit-box;
@@ -12,7 +12,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.message_list_content ._ul ._li.data-v-438e4fe6 {
+.message_list_content ._ul ._li.data-v-20244a53 {
   width: auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -27,7 +27,7 @@
   border-bottom: 2rpx solid #e7e8ea;
   font-weight: 500;
 }
-.message_list_content ._ul ._li ._p.data-v-438e4fe6 {
+.message_list_content ._ul ._li ._p.data-v-20244a53 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -38,20 +38,20 @@
           justify-content: space-between;
   margin-bottom: 20rpx;
 }
-.message_list_content ._ul ._li ._p ._span.data-v-438e4fe6 {
+.message_list_content ._ul ._li ._p ._span.data-v-20244a53 {
   font-weight: 600;
   font-size: 32rpx;
   font-family: PingFangSC-Medium;
   color: #333333;
   margin-bottom: 10rpx;
 }
-.message_list_content ._ul ._li ._p ._s.data-v-438e4fe6 {
+.message_list_content ._ul ._li ._p ._s.data-v-20244a53 {
   text-decoration: none;
   font-size: 24rpx;
   font-family: PingFangSC-Regular;
   color: #666666;
 }
-.message_list_content ._ul ._li .message_content.data-v-438e4fe6 {
+.message_list_content ._ul ._li .message_content.data-v-20244a53 {
   font-size: 28rpx;
   font-family: PingFangSC-Regular;
   color: #999999;

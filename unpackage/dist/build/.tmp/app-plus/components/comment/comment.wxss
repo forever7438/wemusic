@@ -60,8 +60,7 @@
   color: #999999;
 }
 .comment_list ._ul ._li .comment_content {
-  width: calc(100vw - 60rpx);
-  margin-left: 180rpx;
+  margin-left: -470rpx;
   text-align: left;
   font-size: 32rpx;
   font-family: PingFangSC-Regular;

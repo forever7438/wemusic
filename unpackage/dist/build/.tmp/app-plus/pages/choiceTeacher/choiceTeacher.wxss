@@ -1,4 +1,4 @@
-view .top {
+view .top.data-v-2dd40b53 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19,12 +19,12 @@ view .top {
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.5);
 }
-view .top image {
+view .top image.data-v-2dd40b53 {
   width: 40rpx;
   height: 40rpx;
   margin-left: 10rpx;
 }
-view .sign_up {
+view .sign_up.data-v-2dd40b53 {
   text-align: center;
   margin-top: 40rpx;
   display: inline-block;

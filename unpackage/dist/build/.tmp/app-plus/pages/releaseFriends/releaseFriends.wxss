@@ -27,4 +27,8 @@ view .choose_images image {
   margin-right: 10rpx;
   margin-bottom: 10rpx;
 }
+view .choose_images video {
+  width: 280rpx;
+  height: 160rpx;
+}
 

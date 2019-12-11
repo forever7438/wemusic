@@ -1,6 +1,5 @@
 view .sign_up {
   text-align: center;
-  margin-top: 166rpx;
   display: inline-block;
   width: 100%;
   line-height: 100rpx;
@@ -9,5 +8,7 @@ view .sign_up {
   font-family: PingFangSC-Medium;
   font-weight: 500;
   color: #333333;
+  position: fixed;
+  bottom: 0;
 }
 

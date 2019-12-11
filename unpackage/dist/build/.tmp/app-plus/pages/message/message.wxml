@@ -1,1 +1,1 @@
-<view class="messgae_content _div" bind:__l="__l"><message-list messageList="{{messageList}}"></message-list></view>
+<view class="messgae_content _div"><message-list vue-id="1" messageList="{{messageList}}" bind:__l="__l"></message-list></view>

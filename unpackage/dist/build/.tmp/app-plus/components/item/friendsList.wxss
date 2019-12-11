@@ -1,10 +1,13 @@
 .friend_list .fridend_content {
   margin-bottom: 20rpx;
 }
-.friend_list .fridend_content .img_list image {
+.friend_list .fridend_content .img_lists .image {
   width: 210rpx;
   height: 210rpx;
   margin: 0 20rpx 20rpx 0;
   border-radius: 12rpx;
+}
+.friend_list .fridend_content .img_lists .video {
+  width: 100%;
 }
 

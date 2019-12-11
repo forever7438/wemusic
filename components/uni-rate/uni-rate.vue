@@ -17,7 +17,7 @@
 </template>
 
 <script>
-	import uniIcons from "../uni-icons/uni-icons.vue";
+	import uniIcons from "../uni-icon/uni-icon.vue";
 	export default {
 		name: "UniRate",
 		components: {

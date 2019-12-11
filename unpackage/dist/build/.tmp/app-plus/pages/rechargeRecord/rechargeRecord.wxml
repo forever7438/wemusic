@@ -1,1 +1,1 @@
-<view bind:__l="__l"><recharge-list moneyList="{{rechargeList}}" type="recharge"></recharge-list></view>
+<view><recharge-list vue-id="1" moneyList="{{rechargeList}}" type="recharge" bind:__l="__l"></recharge-list></view>

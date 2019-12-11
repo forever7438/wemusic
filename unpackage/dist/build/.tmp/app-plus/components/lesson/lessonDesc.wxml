@@ -1,1 +1,1 @@
-<view class="lesson_desc" bind:__l="__l"><text class="teacher_class">{{title}}</text><view class="teacher_content">{{content}}</view></view>
+<view class="lesson_desc"><text class="teacher_class">{{title}}</text><view class="teacher_content">{{content}}</view></view>

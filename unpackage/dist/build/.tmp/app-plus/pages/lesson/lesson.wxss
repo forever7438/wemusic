@@ -1,7 +1,7 @@
-.my_lesson_content.data-v-030734fe {
+.my_lesson_content.data-v-605dc913 {
   padding: 0 15rpx;
 }
-.my_lesson_content .class_meun.data-v-030734fe {
+.my_lesson_content .class_meun.data-v-605dc913 {
   z-index: 99;
   position: fixed;
   width: 100%;
@@ -23,14 +23,14 @@
   background-color: #fff;
   height: 90rpx;
 }
-.my_lesson_content .class_meun text.data-v-030734fe {
+.my_lesson_content .class_meun text.data-v-605dc913 {
   font-size: 28rpx;
   font-family: PingFangSC-Medium;
   font-weight: 500;
   color: #333333;
   padding-bottom: 20rpx;
 }
-.my_lesson_content .class_meun .active.data-v-030734fe {
+.my_lesson_content .class_meun .active.data-v-605dc913 {
   border-bottom: 6rpx solid #000;
 }
 

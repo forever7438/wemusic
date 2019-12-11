@@ -5,7 +5,7 @@
     "iPad"
   ],
   "id": "__UNI__64D8055",
-  "name": "weMusic",
+  "name": "WeMusic",
   "version": {
     "name": "1.0.0",
     "code": "100"
@@ -29,7 +29,7 @@
   },
   "plus": {
     "useragent": {
-      "value": "uni-app appservice",
+      "value": "uni-app",
       "concatenate": true
     },
     "splashscreen": {
@@ -41,7 +41,9 @@
     "popGesture": "close",
     "launchwebview": {
       "render": "always",
-      "id": "1"
+      "id": "1",
+      "kernel": "WKWebview",
+      "uni-app": "auto"
     },
     "statusbar": {
       "immersed": "supportedDevice",
@@ -124,8 +126,13 @@
     },
     "allowsInlineMediaPlayback": true,
     "uni-app": {
-      "compilerVersion": "1.9.2",
-      "control": "v8"
+      "compilerVersion": "2.4.2",
+      "control": "v8",
+      "nvueCompiler": "uni-app",
+      "renderer": "auto",
+      "nvue": {
+        "flex-direction": "column"
+      }
     }
   }
 }
